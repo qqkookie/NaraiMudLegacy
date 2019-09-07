@@ -1,0 +1,174 @@
+The Wasteland~
+2199 15 2
+*
+D 0 2120 3 1  Door to Stone Shelter
+D 0 2140 1 1
+*
+D 0 2140 5 1  Grate under Stone Shelter
+D 0 2135 4 1
+*
+D 0 2113 5 1  Cover to Well
+D 0 2141 4 1
+*
+D 0 2128 0 1  Door to building with Harpies
+D 0 2145 2 1
+*
+D 0 2148 2 1  Door to the Gorgons
+D 0 2150 0 1
+*
+D 0 2155 0 1  Door to the cage
+D 0 2156 2 1
+*
+D 0 2130 5 1  The plate
+D 0 2165 4 1
+*
+D 0 2175 2 1  Door to the Lesser Gods
+D 0 2176 0 1
+*
+D 0 2187 0 1  Door to the Furies
+D 0 2187 4 2  Door to Olympus
+D 0 2188 2 1
+*
+D 0 2195 2 1  Door from Alcove to Field
+D 0 2194 0 1
+*
+D 0 2151 2 1  Curtain to Proserpina's Bath
+D 0 2160 0 1
+*
+D 0 2193 5 2  Grate to the Hydra
+D 0 2196 4 2
+*
+M 0 2102 30 2126
+M 0 2102 30 2126
+G 1 2101 1
+M 0 2102 30 2126
+G 1 2103 1
+M 0 2102 30 2126
+G 1 2105 1
+M 0 2102 30 2126
+G 1 2102 1
+M 0 2102 30 2126
+G 1 2104 1
+M 0 2102 30 2126
+G 1 2108 1
+M 0 2102 30 2126
+G 1 2106 1
+*
+M 0 2102 30 2115
+G 1 2109 1
+M 0 2102 30 2115
+G 1 2112 1
+M 0 2102 30 2115
+G 1 2110 1
+M 0 2102 30 2115
+*
+M 0 2102 30 2112
+G 1 2107 1
+M 0 2102 30 2112
+G 1 2111 1
+M 0 2102 30 2112
+G 1 2100 1
+M 0 2102 30 2112
+*
+M 0 2101 15 2128
+M 0 2101 15 2128
+M 0 2101 15 2128
+M 0 2101 15 2129
+M 0 2101 15 2129
+M 0 2101 15 2129
+M 0 2101 15 2130
+M 0 2101 15 2130
+M 0 2101 15 2130
+*
+M 0 2105 1 2149  Harpies
+E 1 2123 1 3      amulet
+M 0 2104 1 2149
+G 1 2139 1        candlestick
+M 0 2103 1 2149
+E 1 2121 1 12     brown cloak
+*
+M 0 2106 1 2142  Statue of Hades
+E 1 2120 1 16     fork
+*
+M 0 2109 1 2150 Gorgons
+E 1 2124 1 16
+E 1 2127 1 11		Shield of pallas
+M 0 2108 1 2150
+E 1 2125 1 3
+M 0 2107 1 2150
+E 1 2126 1 3
+*
+M 0 2110 1 2156 Monoceros
+G 1 2128 6
+*
+M 0 2113 1 2188 Furies
+E 1 2131 1 14
+M 0 2112 1 2188
+E 1 2130 1 14		serpentine bracelet
+M 0 2111 1 2188
+E 1 2129 1 8
+*
+M 0 2114 1 2176 The Lesser Gods
+E 1 2133 1 5
+M 0 2115 1 2176
+E 1 2132 1 16
+M 0 2116 1 2176
+E 1 2134 1 12
+*
+M 0 2117 8 2170 Hounds
+M 0 2117 8 2162
+M 0 2117 8 2158
+M 0 2117 8 2158
+M 0 2117 8 2158
+M 0 2117 8 2158
+M 0 2117 8 2158
+M 0 2117 8 2158
+*
+M 0 2118 1 2158 Hecate
+E 1 2135 1 1
+E 1 2150 1 16
+G 1 2138 1
+*
+M 0 2119 1 2151 Proserpina
+E 1 2147 1 7
+E 1 2148 1 5
+E 1 2149 1 8
+E 1 2151 1 13
+E 1 2122 1 1      emerald ring
+G 1 2153 2
+M 0 2121 6 2151 Eunuchs
+G 1 2137 4
+M 0 2121 6 2151
+G 1 2140 4
+M 0 2121 6 2151
+M 0 2121 6 2151
+*
+M 0 2122 1 2139 Hypnos
+E 1 2136 6 6
+G 1 2145 5
+G 1 2156 6
+G 1 2156 6
+*
+M 0 2120 1 2189 Hades
+E 1 2142 1 6
+E 1 2143 1 16
+E 1 2144 1 9
+E 1 2155 2 14
+E 1 2152 1 17   Black Key
+E 1 2155 2 15	wrist band
+G 1 1311 1      Totem
+M 0 2123 9 2189 Larger Hounds
+M 0 2123 9 2189
+M 0 2123 9 2189
+M 0 2123 9 2189
+M 0 2123 9 2189
+M 0 2123 9 2189
+*
+M 0 2124 1 2196 Hydra
+E 1 2154 1 10  brassard hydra
+E 1 2157 1 17
+E 1 2400 1 16  wooden Kal
+*
+O 0 2146 6 2160 Grapes in Proserpina's Chamber
+S
+$~

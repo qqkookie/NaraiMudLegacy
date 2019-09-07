@@ -1,0 +1,276 @@
+The Keep of Mahn-Tor~
+2999 30 2
+*
+M 0 2900 1 2907      Ethereal Knight
+E 1 2946 5 5         Ethereal Plate
+E 1 2947 5 6         Ethereal Helm
+E 1 2948 10 16       Ethereal Blade
+*
+M 0 2901 1 2914      Evil Treant
+*
+M 0 2902 1 2916      Cave Dweller
+*
+M 0 2903 4 2911      Rock Toad
+M 0 2903 4 2912
+M 0 2903 4 2913
+M 0 2903 4 2919
+*
+M 0 2904 1 2930      Weeping Willow
+G 1 2949 15          Willow Branch
+*
+M 0 2905 3 2932      Mistling
+M 0 2905 3 2937
+M 0 2905 3 2933
+*
+M 0 2906 1 2936      Swamp Wraith
+G 1 2984 20          Misty Potion
+*
+M 0 2907 5 2946      Ogre Villager
+E 1 2985 25 13       Belt Pouch
+M 0 2907 5 2943
+E 1 2985 25 13
+M 0 2907 5 2945
+M 0 2907 5 2948
+M 0 2907 5 2944
+*
+M 0 2908 4 2947      Ogre Warrior
+E 1 2986 25 16       Ogre Spear
+M 0 2908 4 2942 
+E 1 2986 25 16
+M 0 2908 4 2948
+E 1 2986 25 16
+M 0 2908 4 2946
+E 1 2986 25 16
+*
+M 0 2909 4 2948      Ogre Guard
+*E 0 2987 25 16       Ogre Club
+M 0 2909 4 2942 
+*E 0 2987 25 16
+M 0 2909 4 2941
+*E 0 2987 25 16
+M 0 2909 4 2941
+*
+M 0 2910 1 2949      Ogre Shaman
+*E 0 2988 20 12       Bearskin Cloak
+*E 0 2989 10 6        Feathered Earings
+*
+M 0 2911 1 2950      Ogre Chieftain
+E 1 2990 5 9         Gauntlets of Ogre Power
+E 1 2991 10 16       Massive Club
+*
+M 0 2912 3 2951      Plains Barbarian
+E 1 2992 20 4        Thick Fur Cape
+E 1 2993 20 5        Fur Lined Tunic
+E 1 2960 20 8        Fur Lined Boots 
+M 0 2912 3 2954
+E 1 2992 20 4        
+E 1 2993 20 5        
+E 1 2960 20 8         
+M 0 2912 3 2959 
+E 1 2992 20 4        
+E 1 2993 20 5        
+E 1 2960 20 8         
+*
+M 0 2913 3 2957        White Yeti
+E 1 2961 20 12         Pelt of the Yeti
+M 0 2913 3 2959
+E 1 2961 20 12
+M 0 2913 3 2955
+E 1 2961 20 12
+*
+M 0 2914 3 2952         White Ice Worm
+M 0 2914 3 2954
+M 0 2914 3 2956
+*
+M 0 2915 5 2963         Minotaur Citizen
+E 1 2962 35 16             Kopesh Sword
+M 0 2915 5 2967 
+E 1 2962 35 16
+M 0 2915 5 2965
+E 1 2962 35 16
+M 0 2915 5 2964
+E 1 2962 35 16
+M 0 2915 5 2970
+E 1 2962 35 16
+*
+M 0 2916 3 2968           Minotaur Guard
+E 1 2963 15 10               Steel Vambraces
+E 1 2964 15 7                Steel Greaves
+E 1 2965 10 16               Battle Axe
+M 0 2916 3 2966
+E 1 2963 15 10
+E 1 2964 15 7
+E 1 2965 10 16
+M 0 2916 3 2962
+E 1 2963 15 10
+E 1 2964 15 7
+E 1 2965 10 16
+*
+M 0 2917 3 2967            Minotaur Warrior
+E 1 2966 15 5                 Steel Plate
+E 1 2967 15 6                 Steel Helm
+E 1 2968 10 16                Huge Halberd
+M 0 2917 3 2976
+E 1 2966 15 5
+E 1 2967 15 6
+E 1 2968 10 16
+M 0 2917 3 2978
+E 1 2966 15 5
+E 1 2967 15 6
+E 1 2968 10 16
+*
+M 0 2918 1 2977              Minotaur GateKeeper
+G 100 2950 1                   Keep Key
+*
+M 0 2919 2 2980              Minotaur High Guard
+E 1 2969 15 6                 Blue Steel Visor
+E 1 2970 15 7                 Blue Steel Greaves
+E 1 2971 15 10                Blue Steel Vambraces
+E 1 2966 15 5                Steel Plate
+E 1 2972 10 16               Two-Handed Sword
+M 0 2919 2 2979
+E 1 2969 15 6                 
+E 1 2970 15 7
+E 1 2971 15 10
+E 1 2966 15 5
+E 1 2972 10 16
+*
+M 0 2920 2 2983               Minotaur Royal Guard
+E 1 2973 10 6                 Red Steel Visor
+E 1 2974 10 7                 Red Steel Greaves
+E 1 2975 10 10                Red Steel Vambraces
+E 1 2966 15 5                 Steel Plate
+E 1 2976 10 16                Glaive
+M 0 2920 2 2982
+E 1 2973 10 6
+E 1 2974 10 7
+E 1 2975 10 10
+E 1 2966 15 5
+E 1 2976 10 16     
+*
+M 0 2921 2 2985               Minotaur Elite Guard         
+E 1 2977 5 6                  Crimson Steel Visor
+E 1 2978 5 7                  Crimson Steel Greaves
+E 1 2979 5 10                 Crimson Steel Vambraces
+E 1 2966 15 5                 Steel Plate
+E 1 2980 5 16                 Morning Star
+M 0 2921 2 2985
+E 1 2977 5 6
+E 1 2978 5 7
+E 1 2979 5 10
+E 1 2966 15 5
+E 1 2980 5 16
+G 100 2959 1                     Royal Key
+*
+M 0 2922 5 2993                Harem Girl
+M 0 2922 5 2993
+M 0 2922 5 2993
+M 0 2922 5 2993
+M 0 2922 5 2993
+*
+M 0 2923 1 2995                Minotaur Butler
+*
+M 0 2924 1 2987                Minotaur Key Holder
+*E 0 2981 20 17                 Huge Spiked Seste
+E 1 2982 1 13                  Multi-Colored Key Ring (contains color keys)
+P 1 2951 1 2982                     Red Key
+P 1 2952 1 2982                     Black Key
+P 1 2953 1 2982                     White Key
+P 1 2954 1 2982                     Brown Key
+P 1 2955 1 2982                     Yellow Key
+P 1 2956 1 2982                     Maroon Key
+P 1 2957 1 2982                     Green Key
+P 1 2958 1 2982                     Grey Key
+E 1 2983 5 16                  Huge Maul
+*
+M 0 2925 1 2972                Gorak (Minotaur Warrior)
+E 1 2900 10 9                  Minotaur Combat Gloves
+E 1 2901 5 5                   Spiked Garde Armor
+E 1 2902 5 7                   Black Minotaur Greaves
+E 1 2903 5 10                  Black Minotaur Vambraces
+E 1 2904 3 16                  Rod of Weaponry
+*
+M 0 2926 1 2973                Darkoth (Minotaur Anti-Paladin)
+E 1 2905 20 12                 Pitch Black Cloak
+E 1 2906 15 4                  Black Plate Neckguard
+E 1 2907 5 9                   Spiked Gauntlets
+E 1 2908 10 11                 Shadow Shield
+E 1 2909 3 16                  NightBringer
+*
+M 0 2927 1 2974                Tyrgoth (Minotaur Paladin)
+E 1 2910 10 6                  Gold Helm and Visor
+E 1 2911 5 5                   Gilded Gold Breast Plate
+E 1 2912 15 4                  Billowing White Cape
+E 1 2913 20 11                 Huge Tower Shield
+E 1 2914 3 16                  DawnBringer
+*
+M 0 2928 1 2991                Amyrok (Minotaur Mage)
+E 1 2915 10 1                  Gold Rimmed Specs
+E 1 2916 5 2                   Banded Ring
+E 1 2917 5 12                  Minor Globe of Invulnerability
+E 1 2918 3 16                  Gnarled Magius Staff
+E 1 2919 10 13                 Girdle of Many Pouches
+*
+M 0 2929 1 2990                Sumaron (Minotaur Cleric)
+E 1 2920 15 12                 Heavy Woolen Robe
+*E 0 2921 5 3                   Broach of Life
+*E 0 2922 20 17                 Manual of Healing Arts
+E 1 2923 3 16                  Mithril Mace
+*E 0 2924 15 3                  Holy Symbol
+*
+M 0 2930 1 2994                Nasturn (Minotaur Druid)
+E 1 2925 10 1                  Marble Ring
+E 1 2926 10 15                 Marble Bracelet
+E 1 2927 10 8                  Boots of Striding
+E 1 2928 10 12                 Icy White Cloak
+E 1 2929 3 16                  Ice Staff
+*
+M 0 2931 1 2999                Belrak (Minotaur Ranger)
+E 1 2930 10 2                  Carved Wooden Ring
+*E 0 2931 20 17                 Horn of Life
+E 0 2932 10 13                 Belt of Life
+*E 0 2933 5 17                  Blood Red Stone
+E 1 2934 3 16                  Huge CrossBow
+*
+M 0 2932 1 2998                Dorgar (Minotaur Thief)
+E 1 2935 15 12                 Small Leather Pack
+E 1 2936 10 6                  Black Leather Hood
+E 1 2937 20 10                 Black Leather Sleeves
+E 1 2938 10 7                  Black Leather Pants
+E 1 2939 10 16                 Wicked Short Sword
+*
+M 0 2933 1 2996                Mahn-Tor (Minotaur King)
+E 1 2940 5 12                  Major Globe of Invulnerability
+E 1 2941 5 5                   Black Minotaur Chainmail
+E 1 2942 15 14                 Spiked Buckler
+E 1 2943 10 2                  Studded Ring
+E 1 2944 10 6                  Horned Minotaur Helm
+E 1 2945 1 16                  Mahn-Tor's Great Axe
+*
+D 0 2977 1 2                   Set Door States at Reset
+D 0 2979 3 2
+*
+D 0 2983 1 1
+*
+D 0 2985 1 2
+D 0 2986 3 2
+*
+D 0 2988 1 2
+D 0 2988 3 2
+*
+D 0 2989 1 2
+D 0 2989 3 2
+*
+D 0 2992 1 2
+D 0 2992 3 2
+*
+D 0 2997 1 2
+D 0 2998 3 2
+*
+D 0 2962 2 1
+*
+* Chris Boggs aka Skurge Ragnarok, High Lord of CHAOS
+* Summer, 1992
+*
+S
+$~

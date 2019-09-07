@@ -1,0 +1,2350 @@
+INFORMATION
+
+>> INFORMATION
+Following topics are available. To see, type "help <topic>".
+
+	command list, skill list, spell list, shops, social actions,
+	class, magic user, cleric, thief, warrior, savings, inn, god,
+	dice, guild, assassin, outlaw, police, experience, ac
+#
+"COMMAND LIST"
+
+>> INFORMATION
+Following topics are available. To see, type "help <topic>".
+
+	wimpy, look, open, close, lock, unlock, north, south, east,
+	west, up, down, eat, drink, sip, taste, who, give, save,
+	inventory, equipment, wear, wield, score, say, tell, whisper,
+	shout, ask, gtell, send, chat, kill, hit, cast, drop, order,
+	buy, sell, weather, read, remove, practice, exits, leave,
+	enter, time, quit, rent, get, take, put, examine, news, write,
+	post, sleep, wake, rest, sit, stand, pour, grab, hold, follow,
+	solo, flee, join, where, users, levels, brief, !, !!, consider,
+	group, quaff, recite, use, spells, plan
+#
+"SKILL LIST"
+
+>> INFORMATION
+Following topics are available. To see, type "help <topic>".
+
+	pick, sneak, hide, kick, multi kick, bash, rescue, double attack,
+	quadruple attack, octa attack, extra damaging, steal, backstab,
+	lightning move, flash, parry, disarm, throw object, temptation,
+	punch, shouryuken, spin bird kick, tornado
+#
+"SPELL LIST"
+
+>> INFORMATION
+Following topics are available. To see, type "help <topic>".
+
+	armor, teleport, far look, bless, blindness, clone, create food,
+	create water, create nectar, create golden nectar, cure blind,
+	cure critic, cause critic, cure light, cause light, curse,
+	detect evil, detect invisibility, recharger, enchant person,
+	enchant armor, pray for armor, enchant weapon, self heal,
+	restore move, heal, full heal, entire heal, invisibility,
+	locate object, poison, protection from evil, remove curse,
+	remove poison, sanctuary, love, death, reraise, mirror image,
+	infravision, sleep, strength, ventriloquate, word of recall,
+	identify, summon, reanimate, relocate, charm person, haste,
+	improved haste, sense life, magic missile, chill touch, burning hands,
+	shocking grasp, lightning bolt, color spray, energy drain, energy flow,
+	fireball, sunburst, corn of ice, disintergrate, earthquake, firestorm,
+	hand of god, dispel evil, call lightning, harm, preach, damage up,
+	crush armor, mana boost, vitalize, full fire, throw, trick,
+	spell block, reflect damage, dumb, holy shield, mana transfer,
+	heal the world, thunderbolt
+#
+PICK
+
+>> SKILL : THIEF
+For picking locks. Not all locks can be picked.
+
+EXAMPLE :
+	> pick door
+	> pick safe
+
+See also : OPEN, CLOSE, LOCK, UNLOCK
+#
+RULE PK "PLAYER KILLING" "KILL PLAYER"
+
+>> INFORMATION
+Only rule is you can't kill your guild member.
+#
+WIMPY
+
+>> COMMAND
+If you are in wimpy mode, you will flee when you see message 'BLEEDING'.
+You can toggle your wimpy-mode, and also you can set your wimpy time.
+
+EXAMPLE :
+    > wimpy
+    You are wimpy now.
+    > wimpy 1000
+    Set your wimpy time to 1000, now.
+#
+SNEAK
+
+>> SKILL : THIEF
+Used for sneaking (moving in and out of rooms without anyone taking notice).
+When you type sneak, there is no way to know if you actually sneak. If you
+sucessfully sneak, then you'll continue to sneak for a little while.
+
+EXAMPLE :
+	> sneak
+
+See also : HIDE
+#
+HIDE
+
+>> SKILL : THIEF
+When you type hide there is a chance that you hide in the room. If hidden
+you can only be "sensed" by the "sense life" spell. Even if sensed your
+identity will remain hidden. Hide is broken by pressing return, regardless
+of wherther you typed a command or not.
+
+EXAMPLE :
+	> hide
+	Ok.
+	>  (you wait for ex. 5 mins and remain hidden for 5 mins)
+	>  (You pressed enter and no longer hide)
+#
+LOOK
+
+>> COMMAND
+For studying your surroundings.
+
+EXAMPLE :
+	look
+	look AT the angel
+	look IN the bag
+	look to the south   (or just: look south)
+
+Note that if you LOOK AT CORPSE you will not see its inventory.
+To see what's inside a container (e.i. Corpse) use LOOK IN <OBJECT>.
+
+See also : EXAMINE, READ
+#
+OPEN CLOSE LOCK UNLOCK
+
+>> COMMAND
+Open, close, lock, unlock door or gate, etc.
+
+EXAMPLE :
+	> open portal
+	> open portal south (if there's more than one to choose from)
+#
+NORTH SOUTH EAST WEST UP DOWN.
+
+>> COMMAND
+To walk in a given direction.
+#
+EAT DRINK SIP TASTE
+
+>> COMMAND
+If you're hungry or thirsty.
+
+EXAMPLE :
+	> eat hamburger
+#
+WHO
+
+>> COMMAND
+Lists the people currently in the game.
+Some people may choose to remain unseen.
+
+EXAMPLE :
+	> who -n   - shows people with level <= n
+	> who =n   - shows people with level == n
+	> who +n   - got the idea?
+	or
+	> who  *   - for a list of people in the area (why * ??)
+#
+GIVE
+
+>> COMMAND
+If you feel benevolent, you may give some stuff to someone in need.
+
+EXAMPLE :
+	> give bread to the beggar
+#
+SAVE
+
+>> COMMAND
+Save your person. This includes experience points, strength, gold, etc.
+Any equipment you may have gathered is also saved.
+#
+STRING
+
+>> WIZ COMMAND
+For changing the text-strings associated with objects and characters.
+The format is : string <type> <name> <field> [<string> | <keyword>]
+
+	type is either 'obj' or 'char'.
+	field is one of the following (the names may be abbreviated) :
+	name (the call-name of an obj/char - kill giant)
+	short (for inventory lists (obj's) and actions (char's))
+	long (for when obj/character is seen in room)
+	title (for players)
+	description (For look at. For obj's, must be followed by a keyword)
+	delete-description (only for obj's. Must be followed by keyword)
+
+Where a string is expected as the last argument, a newline will make you enter
+a string mode, and the game will prompt you for new lines to the string until
+you exceed the maximum length for the string or you end a line with a '@'.
+#
+LOAD
+
+>> WIZ COMMAND
+For loading new objects or characters from the database.
+The format is : load <type> <number>
+
+	type is either 'obj' or 'char'.
+	number is the number of the object or character you wish to create.
+#
+INVENTORY
+
+>> COMMAND
+If you're uncertain about what you're carrying, or simply want to check
+that no thieves have got to your backpack.
+
+See also : EQUIPMENT
+#
+EQUIPMENT
+
+>> COMMAND
+When you want to know what armor, weapon, charms etc. you're wearing.
+
+See also : INVENTORY
+#
+WEAR
+
+>> COMMAND
+If you want to wear some clothes, armor or the likes.
+
+EXAMPLE :
+	> wear boots
+	> wear all
+
+See also : REMOVE, EQUIPMENT, WIELD
+#
+WIELD
+
+>> COMMAND
+When you get tired of bashing monsters with your fists, you might consider
+wielding a weapon.
+
+EXAMPLE :
+	> wield sword
+
+See also : REMOVE, EQUIPMENT, UNWIELD
+#
+SCORE
+
+>> COMMAND
+Whenever you want to check whether you're still alive and healthy
+or simply want to see how much money you have left.
+#
+SAY TELL WHISPER SHOUT ASK GTELL SEND CHAT
+
+>> COMMAND
+If you consider communicating with other beings, you might be understood
+better if you start your sentences with either say,tell,whisper or shout.
+
+EXAMPLE :
+	> say I'm a jerk
+	> tell unclesam You're dead meat - sucker!
+
+You can use ' as a shorthand for say.
+
+gtell is abbreviation of group tell. if you gtell <something>, all your 
+group will hear what you told.
+
+Chat is abbreviation of MUD World. if you chat <something>, all player 
+will hear what you told except nochat player.
+you can chat even when you are sleeping, but.. if you want chat, then you
+must get level higher than 15.  Good luck to you.
+#
+QUI SHUTDOW
+
+>> COMMAND
+Just to prevent accidental quittings and/or shutdowns.
+This command doesn't DO anything, it simply is.
+#
+KILL HIT
+
+>> COMMAND
+A good way to start a fight.
+#
+KICK
+
+>> SKILL : WARRIOR
+The success of a kick depends upon how well you are learned and victim's ac.
+The higher level you reach the harder you kick. There is one small catch -
+whenever you kick (or miss) you will be unable to type any command for one
+round of 'violence' - so be sure that you do not need to flee!
+If your kick succeed and victim is player, then victim also unable to type
+any command for one round. Damage is depends on your level.
+If victim saves hit skill, damage will be half.
+
+See also : RESCUE, BASH, MULTI KICK
+#
+"MULTI KICK"
+
+>> SKILL : WARRIOR
+Do some kicks against victim. This skill will decrease your movement.
+Movement decreasing is depend on your level. You can't do anything for 1 round.
+Damage depends on your level. If any kick succeed, victim also can't do anything
+for 1 round. If victim saves hit skill, damage will be half.
+#
+BASH
+
+>> SKILL : WARRIOR
+The success of a bash depends upon how well you are learned. To bash someone
+is to attempt to 'knock' that person over. If you succeed you will inflict
+minor damage, and cause the victim to fall on it's rear. The victim will be
+unable to issue any commands for 2 rounds of violence. If you miss you loose
+your balance and fall.
+A bash makes you unable to type commands for 2 rounds of violence.
+Note that hitting a person who is resting/sitting will inflict 1.5 * damage.
+
+See also : RESCUE, KICK, MULTI KICK
+#
+RESCUE
+
+>> SKILL : WARRIOR
+A rescue is an attempt to make a monster hit you instead of the person being
+rescued. You can only 'turn' one monster for each attempt. This is highly
+useable when playing in groups.
+#
+"DOUBLE ATTACK"
+
+>> SKILL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+With this skill, you can attack two times per one round.
+
+See also : QUADRUPLE ATTACK
+#
+"QUADRUPLE ATTACK"
+
+>> SKILL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+With this skill, you can attack four times per one round.
+
+See also : OCTA ATTACK
+#
+"OCTA ATTACK"
+
+>> SKILL : WARRIOR
+
+With this skill, you can attack eight times per one round.
+#
+"EXTRA DAMAGING"
+
+>> SKILL : WARRIOR
+
+Randomly, your damage is multiplied by 2. You will get more change, if you are
+more learned.
+#
+STEAL
+
+>> SKILL : THIEF
+Use steal to steal gold or items from people. The chance of not getting
+caught depends on how well you have practiced steal, and if the person
+is asleep.
+
+EXAMPLE :
+	> steal gold drunk
+#
+BACKSTAB
+
+>> SKILL : THIEF
+Is a way to sneak up on a person, and attempt to place you dagger in his
+back, at exactly the point where it does most damage. A successful backstab
+gives a damage multiplier, depending on level.
+The chance of successfully backstabbing a person depends on how well you
+have practiced backstab and your level and dex.
+You can always backstab sleeping persons.
+
+See also : LIGHTNING MOVE
+#
+"LIGHTNING MOVE"
+
+>> SKILL : THIEF
+
+Thief can move like lightning during fight with this skill so monsters 
+can't find who was hitting themselves. This skill make attacker stop fighting
+this skill is useful for thief.
+
+See also : BACKSTAB
+#
+FLASH
+
+>> SKILL : THIEF
+
+Thief can hit monster many time like a flash. All your move points will be used
+for this skill.
+Damage depends on your move points and level.
+#
+PARRY
+
+>> SKILL : THIEF, WARRIOR
+With this skill, you can parry when fighting.
+#
+DISARM
+
+>> SKILL : THIEF, WARRIOR
+With this skill, you can make victim's weapon unequiped.
+#
+"THROW OBJECT"
+
+>> SKILL : THIEF
+You throw something to victim. Damage depends on object's value and your level.
+#
+CAST
+
+>> COMMAND
+If you want to throw a spell at someone or something.
+
+EXAMPLE :
+	> cast 'burning hands' <player>
+
+Note that the name of the spell must be enclosed by "'"s.
+
+See also : help on each individual spell, for example :
+	> help cure ligh
+	> help ventri
+	> help energy drain
+#
+DROP
+
+>> COMMAND
+If you lose interest in a carried item, you can drop it on the ground.
+
+EXAMPLE :
+	> drop bottle
+	If you feel like getting rid of all your earthly possessions, you may use
+	"drop all".
+
+See also : GET
+#
+PURGE
+
+>> WIZ COMMAND
+A way to make the world a little cleaner.
+
+USAGE :
+	purge                To empty a room of monsters and objects.
+	purge <character>    To remove a living thing. Kicks out a player.
+	purge <object>       Figure this one out yourself.
+#
+STAT
+
+>> WIZ COMMAND
+If you're interested in a person and want to find out about his/her/its
+skills, strength, mana, hitpoints etc.
+In addition, 'stat room' will give you useful information about the room
+you're in.
+In general, 'stat' is for item (possibly monster, player).
+
+See also : MSTAT, PSTAT
+#
+MSTAT
+
+>> WIZ COMMAND
+Just stat for monster.
+
+See also : STAT, PSTAT
+#
+PSTAT
+
+>> WIZ COMMAND
+Just stat for player
+
+See also : STAT, MSTAT
+#
+ORDER
+
+>> COMMAND
+You can order things to charmed monster.
+#
+BUY SELL
+
+>> COMMAND
+Commands for the shops - very useful too !
+#
+WEATHER
+
+>> COMMAND
+If you're uncertain whether the sun is shining or the rain is pouring down.
+#
+READ
+
+>> COMMAND
+When you want to read something.
+#
+REMOVE
+
+>> COMMAND
+If you tire of wearing some armor or wielding a weapon.
+
+EXAMPLE :
+	> remove sword
+	> remove all (remove all equiped item)
+#
+SHOPS
+
+>> INFORMATION
+You can buy or sell something in shop. Try "list", to see what is available.
+And, you can only buy listed things, but can sell not listed things.
+To sell, Each object to sell must be matched by object's type. (that is, you
+can sell weapon in weapon shop, but can't do it in armor shop, and vice versa)
+
+EXAMPLE :
+	> sell sword
+	> buy armor
+	> list
+
+See also : BUY, SELL, LIST
+#
+SOCIAL ACTIONS
+
+>> INFORMATION
+Commands mainly for social interaction :
+
+applaud, beg, bleed, blush, bounce, bow, burp, cackle,  chuckle, clap, comfort,
+cough,  cringe,  cry, cuddle,  curtsey,  dance,  daydream,  fart, flip, fondle,
+french, frown,  fume,  gasp, giggle,  glare, grin, groan, grope, grovel, growl,
+hiccup, hold,  hop, hug,  yawn,  kiss,  laugh, lick,  love, moan,  nibble, nod,
+nudge, pat, peer, point, poke, ponder, pout, puke, punch, purr, ruffle, scream,
+shake,  shiver,  shrug,  sigh, sing,  slap, smirk,  smile, snap, snarl, sneeze,
+snicker,  sniff,  snore, snuggle,  spank,  spit,  squeeze, stare, steam, strut,
+sulk,  tackle,  taunt,  thank,  think,  twiddle,  wave, whine, whistle, wiggle,
+wink, worship, yodel, hee, haha, jjup, hmm, brb, wow, bye
+#
+WIZNET
+
+>> WIZ COMMAND
+Like gtell. It regards all connected wiz's as a group
+#
+WIZHELP
+
+>> WIZ COMMAND
+A listing of the commands for immortals (should be unavailable for mortals)
+#
+CLASS
+
+>> INFORMATION
+In this world, there're four major class and four extended class.
+Major classes :
+	MAGIC USER, CLERIC, THIEF, WARRIOR
+Extended classes :
+	HIGH MAGIC USER, HIGH CLERIC, HIGH THIEF, HIGH WARRIOR
+For more information type "help <class name>".
+#
+WARRIOR
+
+>> INFORMATION
+Warriors are known to have more strength than the average player. This makes
+them better at hand-to-hand-combat, as they posess skills of violence and
+fighting unequaled by the members of any other class. However, they lack the
+ability to use magic.
+You can improve your skills by using the practice command.
+
+Characteristic :
+	Warrior can hold weapon. (so warrior is most powerful)
+	Warrior's extra damaging is best.
+	Warrior's hit points regeneration is best.
+	Warrior saves best in hit skill.
+	Warrior takes advantage of slash weapon.
+
+See also : PRACTICE, SAVINGS
+#
+THIEF
+
+>> INFORMATION
+Thiefs are known to have very special qualities, that no other class offers.
+Many of these qualities can come in handy in many situations, such as picking
+locks.
+You can improve you skills by using the practice command.
+
+Characteristic :
+	Thief's move points regeneration is best.
+	Thief saves best in para.
+	Thief takes advantage of pierce weapon.
+
+See also : PRACTICE, SAVINGS
+#
+CLERIC
+
+>> INFORMATION
+Clerics have an ancient belief in not carrying sharp weapons. Hence, they can
+only wield bludgeoning weapons. This class gives you the wisdom of peace,
+blessing and healing, though it is possible to learn more violent spells.
+You can improve your spells by using the practice command.
+
+Characteristic :
+	Cleric's hit, mana, move points regeneration is all good (not best).
+	Cleric saves best in spell.
+	Cleric takes advantage of pound weapon.
+
+See also : PRACTICE, SAVINGS
+#
+"MAGIC USER" MAGE
+
+>> INFORMATION
+This is the class of powerful and violent magic, but the magic user do not
+control the nature, and can therefore not bless and such. You can improve
+your spells by using the practice command.
+
+Characteristic :
+	Mage's mana points regeneration is best.
+	Mage takes advantage of pound weapon.
+
+See also : PRACTICE, SAVINGS
+#
+SAVINGS
+
+>> INFORMATION
+Currently defined savings are these :
+
+class \ type  : PARA       HIT SKILL  BREATH      SPELL
+MAGIC USER    : medium     medium     medium      good
+CLERIC        : medium     poor       good        very good
+THIEF         : very good  good       medium      poor
+WARRIOR       : bad        very good  medium      medium
+#
+PRACTICE PRACTISE
+
+>> COMMAND
+Practice is the way you improve your spells and skills. You must go to
+the guildmaster, Martha Smith, to let her help you improve.
+If you type practice, you will see which skills you can improve upon, and
+how good you already are at these.
+You can then use practice <skill>, to practice the appropriate skill.
+You can only practice a certain amount for each level you gain, and you
+do not have to save this, it can be accumulated.
+If you are not in practice room, practice will simply show you a list of your
+skills, and your ability at each.
+
+See also : GUILD
+#
+EXITS
+
+>> COMMAND
+Gives you a list of the obvious exits from your location. Of course, the less
+obvious ones won't show up here - you have to THINK in order to locate those.
+#
+LEAVE
+
+>> COMMAND
+If you feel claustrophobic, typing 'leave' will make you use the nearest
+obvious exit to the outside.
+#
+ENTER
+
+>> COMMAND
+If you type 'enter' while you are outdoors, you'll enter any nearby shelter.
+You can also follow 'enter' with an argument, for example, 'enter window'.
+#
+TIME
+
+>> COMMAND
+Gives you the current 'gametime'. Your initial reaction to the output of this
+command may be one of surprise, but you'll get used to it. You'll have to, at
+any rate, since certain things in the game depend on this particular notion
+of time; the opening hours of the shops, for example.
+#
+QUIT
+
+>> COMMAND
+When you get tired of playing, you can leave the game by typing 'quit'. Note
+that whatever stuff you might be carrying with you is simply left on the
+ground. If you wish to have your equipment put away until you are able to come
+back, you'll have to find an inn.
+
+See also : INN
+#
+INN INNS
+
+>> INFORMATION
+Inns are places where the weary traveler may rest while the innkeeper looks
+after his equipment and treasure. Specifically, you may use inns to store your
+gathered equipment while you are not playing the game (we all have to sleep
+sometimes, there is no shame in that).
+
+See also : RENT
+#
+RENT
+
+>> COMMAND
+For use in the receptions of inns. The command 'rent' will store
+the items and make you leave the game. The next time you enter, you'll start
+out in the reception where you left.
+
+See also : INN
+#
+GET TAKE
+
+>> COMMAND
+If you find something interesting on the ground, you may use 'get' to pick it
+up.
+
+EXAMPLE :
+	> get sword
+	> get all (get all things on the ground)
+	> get bread bag (get bread from the bag)
+
+See also : DROP PUT
+#
+PUT
+
+>> COMMAND
+For putting stuff in containers.
+
+EXAMPLE :
+	> put dagger bag (put the dagger in the bag)
+
+See also : GET
+#
+EXAMINE
+
+>> COMMAND
+May give you some valuable information about an item.
+
+See also : LOOK
+#
+NEWS
+
+>> COMMAND
+This command will show you the current edition of "the DikuMUD Herald", a
+publication dedicated to news and useful information about this world. It's a
+very good idea to check it out once in a while.
+
+See also : BOARD, WRITE, POST
+#
+BOARD
+
+>> INFOMATION
+If you find any bug or have something to tell to GOD, write on the board.
+
+See also : NEWS, WRITE, POST
+#
+WRITE POST
+
+>> COMMAND
+To write on the board, you must have a paper and a pen.
+If you have already those stuffs, first "write paper pen".
+After, you can post written paper on the board in board room.
+To post, type "post paper <title>".
+
+See also : NEWS, BOARD
+#
+SLEEP WAKE REST SIT STAND
+
+>> COMMAND
+For changing your position. If you feel tired, it's probably a good idea to sit
+and rest for awhile; or maybe even take a nap.
+#
+POUR
+
+>> COMMAND
+If you want to pour some liquid from one container to another.
+#
+GRAB HOLD
+
+>> COMMAND
+For getting a good grip on something; a torch, for example.
+
+See also : WEAR, WIELD, REMOVE
+#
+FOLLOW
+
+>> COMMAND
+If you happen to be going in the same direction as someone else, why not simply
+follow that person? For example, "Follow joe". If you are following someone
+and you wish to stop doing that, then all you've got to do is follow yourself,
+"follow <your name>".
+
+See also : GROUP, SOLO
+#
+SOLO
+
+>> COMMAND
+If you dislike someone follows you, just type "solo".
+It's a toggle command.
+
+See also : FOLLOW
+#
+FLEE
+
+>> COMMAND
+If you are in a fight and things are beginning to get a little uncomfortable
+(maybe your are dying), just type 'flee', and presto! you are out of harm's way
+- that is, IF there is a suitable exit nearby, and IF that exit doesn't simply
+bring you from the ashes to the fire... but then, who wants to live forever?
+When you flee, you lost some exp. If victim's level is higher than you, you'll
+lost more exp. (level difference effects on loss of exp significantly.)
+#
+IMPLEMENTOR GOD WIZARD
+
+>> INFORMATION
+The most powerful being in existence.
+#
+DICE
+
+>> INFORMATION
+dice(n, m) means n dices with m size(side). So, dice(3, 5) means average 9.
+#
+GUILD
+
+>> INFORMATION
+The Guildhouse is the place where mortals may go to escape the troubles and
+perils of a cruel world. Each guild is heavily guarded, so that only members
+may enter the building. Guilds are also the places where people come to
+learn and practice the skills of their trade.
+
+Currently following guilds are available :
+	ASSASSIN, OUTLAW, POLICE
+
+See also : ASSASSIN, OUTLAW, POLICE
+#
+ASSASSIN
+
+>> INFORMATION
+Assassin guild is a group of player who has evil mind. They earns money by PK.
+They like red aura, and dark mood. They always have cold face.
+
+See also : JOIN, SOLACE, SHADOW FIGURE, EVIL STRIKE, IMPROVED REFLECT DAMAGE
+#
+SOLACE
+
+>> ASSASSIN GUILD SKILL
+When you feel coming of death, you can return to guild immediately.
+
+See also : SHADOW FIGURE, EVIL STRIKE, IMPROVED REFLECT DAMAGE
+#
+"SHADOW FIGURE"
+
+>> ASSASSIN GUILD SKILL
+You can make yourself to shadow, and other player can't see your real face.
+And can't find where you are. When you make your shadow, your damage is
+doubled with some luck.
+
+See also : SOLACE, EVIL STRIKE, IMPROVED REFLECT DAMAGE
+#
+"EVIL STRIKE"
+
+>> ASSASSIN GUILD SKILL
+Your evil power makes critical damage on your victim. If victim is more evil
+than you, you can't get a chance of success well. Otherwise, you will get
+more change of success. Damage depends on your evil mind and level.
+If your strike succeed, victim can't do anything for 1 round.
+If you fail, your victim get some hit points.
+
+See also : SOLACE, SHADOW FIGURE, IMPROVED REFLECT DAMAGE
+#
+"IMPROVED REFLECT DAMAGE"
+
+>> ASSASSIN GUILD SKILL
+When you are affected by reflect damage, you will reflect
+dice(((level - 20) / 4 + 1), learned) more damage.
+
+See also : SOLACE, SHADOW FIGURE, IMPROVED REFLECT DAMAGE
+#
+OUTLAW
+
+>> INFORMATION
+Outlaw guild is a group of player who has chaotic mind. They usually drink,
+smoke, assault and do many harmful things to others.
+
+See also : JOIN, ANGRY YELL, ASSAULT, SMOKE, INJECT, CHARGE
+#
+"ANGRY YELL"
+
+>> OUTLAW GUILD SKILL
+With your angry yell, victim is frightened, and get damage.
+Damage depends on your con + str + dex - int - wis, level difference, and
+how much you learned. If succeed, you will damage victim and get some
+hit points of victim. But if fail, you will get some damage.
+
+See also : ASSAULT, SMOKE, INJECT, CHARGE
+#
+ASSAULT
+
+>> OUTLAW GUILD SKILL
+Just do it! And See What Happend!
+
+See also : ANGRY YELL, SMOKE, INJECT, CHARGE
+#
+SMOKE
+
+>> OUTLAW GUILD SKILL
+Sorry. Not implemented.
+
+See also : ANGRY YELL, ASSAULT, INJECT, CHARGE
+#
+INJECT
+
+>> OUTLAW GUILD SKILL
+Sorry. Not implemented.
+
+See also : ANGRY YELL, ASSAULT, SMOKE, CHARGE
+#
+CHARGE
+
+>> OUTLAW GUILD SKILL
+Charge is outlaw guild's most powerful skill. Damage depends on your
+hit + mana + move points. But if fails, you will be damaged as much as
+victim's move points. If succeed, you can't do anything for 2 round.
+If fail, you can't do anything for 1 round.
+
+See also : ANGRY YELL, ASSAULT, SMOKE, INJECT
+#
+POLICE
+
+>> INFORMATION
+Police guild is a group of player who has good mind. They caught bad guys.
+
+See also : JOIN, BROADCAST, SIMULTANEOUS, ARREST, POWER BASH
+#
+BROADCAST
+
+>> POLICE GUILD SKILL
+Broadcast is useful skill. When you broadcast, where the victim is is known
+to all police guild member. And victim is know as criminal person.
+Criminal person is attacked by all guard until he die.
+
+See also : SIMULTANEOUS, ARREST, POWER BASH
+#
+SIMULTANEOUS
+
+>> POLICE GUILD SKILL
+Simultaneous attack is most powerful skill for police guild. If simultaneous
+attack succeed, all police member in same room will attack victim. And attacker
+can't do anything for 1/3 round. So does victim. Damage depends on attacker's
+int and how much he learned.
+
+See also : BROADCAST, ARREST, POWER BASH
+#
+ARREST
+
+>> POLICE GUILD SKILL
+When victim is wounded, you can arrest him. And send him to prison.
+
+See also : BROADCAST, SIMULTANEOUS, POWER BASH
+#
+POWER BASH
+
+>> POLICE GUILD SKILL
+Like bash, but more powerful than bash. You and victim can't do anything for
+maximum 4 rounds.
+
+See also : BROADCAST, SIMULTANEOUS, ARREST
+#
+CANT
+
+>> GUILD COMMAND
+Like gtell, talk with all guild member.
+#
+JOIN
+
+>> COMMAND
+You can join any guild you want (with some level restriction).
+You can only use this command in front of guild entrance.
+To join any guild, type JOIN (capital letter).
+When you want to leave your guild, then type LEAVE (capital letter).
+#
+TRAIN
+
+>> GUILD COMMAND
+Like practice, but only to guild member.
+
+See also : PRACTICE
+#
+WHERE
+
+>> COMMAND
+Tells you the location of a monster, a player, a object (for GOD).
+
+EXAMPLE :
+	> where torch
+	> where dragon
+
+Mortals can only "where" monsters or players, and only from their own zone.
+Immortals may type 'where' without arguments to see where everybody is.
+#
+USERS
+
+>> COMMAND
+For mortals, show how many people are playing (and visible), and also
+the maximum number of players since last game restart.  For immortals,
+tells you who's logged on to the game, and where they are playing from.
+#
+LEVELS
+
+>> COMMAND
+Lists the levels of your class. 
+#
+BRIEF
+
+>> COMMAND
+Toggle "brief mode". When in brief mode, you don't see the descriptions of the
+room you are in; only the name of the room, and the people and objects in
+there. Unless you are very familiar with the area in which you travel, however,
+it is not advisable to use this command. Frequently, you will find small, but
+vital hints in the descriptions of the rooms: An extra peek at your
+surroundings could mean the difference between life and death!
+
+See also : COMPACT
+#
+! !!
+
+>> COMMAND
+Repeat the last command typed at the keyboard.
+You can also use like "!c" to repeat last c-first command.
+
+EXAMPLE :
+	> cast 'detect inv'
+	You lost your concentration!
+	> ! (!! or !c works also)
+	Ok.
+	Your eyes tingle.
+#
+CONSIDER
+
+>> COMMAND
+
+USAGE :
+	consider <monster>
+
+This command will compare your Level with the <monsters> level. You will then
+receive a rough estimate, which is by no means exact. Consider does not take
+hitpoints/special attacks/damage into accout.
+
+See also : QUERY
+#
+QUERY
+
+>>  GUILD COMMAND
+This command is better than consider but, you must join any guild to use this.
+#
+"ARMOR CLASS" AC
+
+>> INFORMATION
+In original diku, armor class is only related with hit or miss. But in this
+world, armor class is very significant. Armor class is related with hit or
+miss no more. Hit or miss is just depends on your class, level and dex.
+When you are hit, the lower ac, the less damage. Armor class has no limit.
+#
+EXPERIENCE XP
+
+>> INFORMATION
+Whenever you kill a monster or a player, you earn experience points. When
+enough experience points are earned, you raise a level.
+Things you should know about experience points:
+
+  * When damaging a monster, you get experience points.
+
+  * If you kill a monster of higher level than yourself, you get bonus
+    experience points. If killing a monster of lower level you'll gain
+    less experience points
+
+  * When you are in group, group's gaining XP is calculated like this.
+      mob's exp
+    + (number of "equivalent" level players in same room - 1) * mob's half exp 
+    --------------------------------------------------------------------------
+    = total exp
+
+      total exp
+    / number of group member
+    / highest level in group
+    ------------------------
+    = shared exp
+
+      shared exp
+    * one's level
+    -------------
+    = exp gained
+
+    "equivalent" level means difference with highest level is smaller than 5. 
+
+We encourage killing of other players, but the choice is yours.
+
+See Also : GROUP
+#
+GROUP
+
+>> COMMAND
+
+USAGE :
+	 group [player]
+
+If you are a group member, then you will share experience points for killing
+monsters equally among the group. Experience points will only be shared among
+group members that are in the same location, at the time of the killing
+blow. Sharing is regardless of wherther the group members have been
+participating in the fight.
+
+Group with no argument show a list of people with whom you are grouped.
+
+To make a group, a "leader" must be selected. All members of the group
+must then "follow" the leader using the follow command. The leader should
+NOT follow anyone at all! The leader can now toggle group membership for
+each player in the group, by using "group <player_name>". The leader
+should remember to include himself in the group.
+
+EXAMPLE :
+	Ares and Process wishes to group with Dragon.
+	Process> follow ares
+	Dragon> follow ares
+	(Ares should be following no one but himself)
+	Ares> group ares
+	Ares> group process
+	Ares> group dragon
+
+Later when Ares get upset at Process (because he is sleeping all the time)
+he types : "group process" to kick Process out of the group.
+
+See Also : XP EXPERIENCE
+#
+QUAFF POTION POTIONS
+
+>> COMMAND
+
+USAGE :
+	quaff <potion>
+
+Quaff is used to "drink" a (magical) potion.
+#
+RECITE SCROLL SCROLLS
+
+>> COMMAND
+
+USAGE :
+	recite <scroll> [target]
+
+Is used to "read" a magical scroll. Target can be an object, character or
+nothing (which may be yourself).
+#
+USE WAND STAFF STAFFS WANDS
+
+>> COMMAND
+USAGE :
+	use <staff>
+	use <wand> <target>
+
+Using staff's will automatically target everybody (or everything) in a
+room, execpt yourself. Therefore staff's are naturally very powerful, and
+yet may be very dangerous to use around other players.
+
+Using wands require that you point it at a target, which can be eihter a
+character or an object.
+
+Both staff's and wand's must be HELD in the hand prior to use! (Use the
+grab or hold commands). You must still supply the name of the staff or
+wand to avoid confusion.
+
+See also : HOLD
+#
+TEMPTATION
+
+>> SKILL : MAGIC USER, CLERIC, THIEF, WARRIOR
+Temptation is a skill for female. You seduce someone to do something.
+But, temptation has limit. Only below 33 level can be seduced.
+
+EXAMPLE :
+	> temp fido sleep
+#
+PUNCH
+
+>> SKILL : THIEF, WARRIOR
+Punch is powerful skill. Damage depends on how much you learned and level.
+After punch, you can't do anything for 1 round.
+#
+SHOURYUKEN
+
+>> SKILL : WARRIOR
+Male warrior's best attack skill. Damage depends on your level and damroll.
+If victim saves hit skill, damage will be half.
+
+See also : SPIN BIRD KICK
+#
+"SPIN BIRD KICK"
+
+>> SKILL : WARRIOR
+Female warrior's best attack skill. Damage depends on your level and damroll.
+If victim saves hit skill, damage will be half.
+
+See also : SHOURYUKEN
+#
+TORNADO
+
+>> SKILL : THIEF, WARRIOR
+By this skill, you can attack all mob in same room.
+Useful for group's leader or tanker.
+#
+SPELLS
+
+>> COMMAND
+You can see list of spells. You can get information of spell's name, minimum
+level, possible class, minimum mana use. Type spells <spell name>, to see
+only see a interesting spell.
+#PLAN
+
+>> COMMAND
+You can see god's plan. See it as frequent as possible.
+#
+ARMOR
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'armor' <victim>
+ACCUMULATIVE : No
+DURATION     : level / 2 hours
+
+The Armor spell will improve your AC by 20 + if (level > 30) (level - 30).
+#
+TELEPORT
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'teleport' [self]
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Teleport (with error) will instantly transfer you to another location
+in the world. This location is random, and thus there will always be
+a risk of landing in a fatal location.
+#
+"FAR LOOK"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'far look' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+You can see where victim is. But there's place where you can't see where
+victim is. And you can see shadowed person in only your guild's locker room.
+#
+BLESS
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'bless' <victim | object>
+ACCUMULATIVE : No
+DURATION     : 6 hours, permanent for objects.
+
+Bless on a victim will improve the victim's saving spell by -5 (this is better),
+and furthermore improve the hitroll by level / 2.
+Bless on an item currently has no defined action.
+#
+BLINDNESS
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'blindness' <victim>
+ACCUMULATIVE : No.
+DURATION     : 1 hours.
+
+Blindness will blind a victim. It fails if victim saves para.
+A blinded person will have level / 2 penalty to hitroll and 40 penalty to AC.
+#
+CLONE
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'clone' <victim | object>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Clone for object is not yet ready.
+Clone cast on a victim or object, will make a 'nearly' perfect copy.
+Clone has its limitations.
+#
+"CREATE FOOD"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'create food'
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell instantly creates an edible magic mushroom. The mushroom
+will filling for the next (5 + level) hours.
+
+See also : CREATE WATER
+#
+"CREATE WATER"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'create water' <drink container>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+Expect disaterous results if cast upon a drink container which contains
+another liquid than water. Empty or water containers will be filled
+depending on the level of the caster.
+
+Double amout of water will be created if it is raining (or worse).
+
+See also : CREATE FOOD
+#
+"CREATE NECTAR"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'create nectar' <drink container>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+Expect disaterous results if cast upon a drink container which contains
+another liquid than nectar. Empty or nectar containers will be filled
+depending on the level of the caster.
+If you drink nectar, it will be same as quaff cure critic potion.
+
+See also : CREATE GOLDEN NECTAR
+#
+"CREATE GOLDEN NECTAR"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'create golden nectar' <drink container>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+Expect disaterous results if cast upon a drink container which contains
+another liquid than golden nectar. Empty or golden nectar containers will be
+filled depending on the level of the caster.
+If you drink nectar, it will be same as quaff heal potion.
+
+See also : CREATE NECTAR
+#
+"CURE BLIND"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'cure blind' <victim>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+This spell will cure a person blinded by the "blindness" spell, it
+can not remove blindness caused by for example cursed items.
+Blindness also can be cured by heal.
+
+See also : HEAL, SELF HEAL, FULL HEAL, ENTIRE HEAL
+#
+"CURE CRITIC"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'cure critic' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell cures dice(level, 20) hitpoints of damage.
+
+See also : HEAL, SELF HEAL, FULL HEAL, ENTIRE HEAL
+#
+"CAUSE CRITIC"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'cause critic' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell damage victim by dice(level, 20). If victim saves spell damage will
+be half.
+#
+"CURE LIGHT"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'cure light' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell cures dice(level, 10) hitpoints of damage.
+
+See also : HEAL, SELF HEAL, FULL HEAL, ENTIRE HEAL
+#
+"CAUSE LIGHT"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'cause light' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell damage dice(level, 10) hit points of damage.
+#
+CURSE
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'curse' <victim | object>
+ACCUMULATIVE : No
+DURATION     : 7 hours, permanent on objects.
+
+Curse cast on a person that fails the saving para, will reduce the
+hitroll by caster's level / 2, and reduce the saving spell by caster's
+level / 2. 
+#
+"DETECT EVIL"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'detect evil' [self]
+ACCUMULATIVE : No
+DURATION     : 5 hours per level
+
+Detect evil will enable you to see the red aura surrounding evil persons and
+items.
+#
+"DETECT INVISIBILITY"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'detect invisibility' [self]
+ACCUMULATIVE : No
+DURATION     : 5 hours per level
+
+This spell enables you to see invisible items and players.
+#
+RECHARGER
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'recharger' <wand | staff>
+ACCUMULATIVE : No
+DURATION     : Instantaneos
+
+current_charge = MIN(max_charge, old_charge + 5)
+#
+"ENCHANT PERSON"
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'enchant person' [self]
+ACCUMULATIVE : No
+DURATION     : Permanent
+
+With some luck, you can increase your max hit, max mana, max move points.
+But you may lose your max hit, max mana, max move points also.
+#
+"ENCHANT ARMOR"
+
+>> SPELL : MAGIC USER 
+
+USAGE        : cast 'enchant armor' <armor>
+ACCUMULATIVE : No
+DURATION     : Permanent during playing
+
+This spell will enchant armors. Enchanted armor can't be rented!
+
+See also : ENCHANT WEAPON
+#
+"PRAY FOR ARMOR"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'pray for armor' <armor>
+ACCUMULATIVE : No
+DURATION     : Permanent during playing
+
+This spell will enchant armors. Enchanted armor can't be rented!
+#
+"ENCHANT WEAPON"
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'enchant weapon' <weapon>
+ACCUMULATIVE : No
+DURATION     : Permanent during playing
+
+This spell will enchant weapons. Enchanted weapon can't be rented!
+
+See also : ENCHANT ARMOR
+#
+"SELF HEAL"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'self heal' [self]
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+You can self heal by this spell. Blindness will also be cured by this.
+#
+"RESTORE MOVE"
+
+>> SPELL : THIEF
+
+USAGE        : cast 'restore move' [self]
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+You can restore move points by this spell. But if fail, you can't do anything
+for 3 round.
+#
+HEAL
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'heal' <victim>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+This spell heal dice(level, 50) points. A victim who is blinded will also
+be cured by the heal spell.
+
+See also : CURE BLINDNESS, SELF HEAL, FULL HEAL, ENTIRE HEAL
+#
+"FULL HEAL"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'heal' <victim>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+This spell heal dice(level, 100) points. A victim who is blinded will also
+be cured by the heal spell.
+
+See also : CURE BLINDNESS, HEAL, SELF HEAL, ENTIRE HEAL
+#
+"ENTIRE HEAL"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'heal' <victim>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+This spell will entire heal victim. A victim who is blinded will also
+be cured by the heal spell. But if fails, victim's hit points will be half.
+
+See also : CURE BLINDNESS, HEAL, SELF HEAL, FULL HEAL, ENTIRE HEAL
+#
+INVISIBILITY
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'invisibility' <victim | object>
+ACCUMULATIVE : No
+DURATION     : 24 hours, permanent on objects.
+
+Attacking while invisible will immediately break the spell. A victim's ac is
+improved by level.
+
+See also : DETECT INVISIBILITY
+#
+"LOCATE OBJECT"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'locate object' <object>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+If possible you will know exactly where an object is, or the name of the person
+using it. If more than one object by the same name exists, you will get a
+listing of several objects.
+#
+POISON
+
+>> SPELL : MAGIC USER, CLERIC, THIEF
+
+USAGE        : cast 'poison' <victim | food | drink>
+ACCUMULATIVE : Yes on persons.
+DURATION     : level / 5 + 1 hours, or permanent on food and drinks.
+
+Casting poison on food or drink (containers) will poison it.
+Eating poisoned food/drinks will poison the person eating or drinking.
+
+If victim saves para, poison can't be affected.
+A person who is poisoned will suffer some points of damage every hour,
+and gain less points than usual. And poisoned victim's strength is
+reduced.
+
+See also : REMOVE POISON
+#
+"PROTECTION FROM EVIL"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'protection from evil' [self]
+ACCUMULATIVE : No
+DURATION     : 24 hours
+
+If you are good and affected by protection from evil, mobiles which are evil
+and lower level than you and fail in his saving paralysis cannot attack you.
+#
+"REMOVE CURSE"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'remove curse' <victim | object>
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+Will remove a curse on carried objects or any persons in the room.
+#
+"REMOVE POISON"
+
+>> SPELL : CLERIC, THIEF
+
+USAGE        : cast 'remove poison' <victim | food | drink> 
+ACCUMULATIVE : No
+DURATION     : Instantaneous
+
+Will remove poison.
+
+See also : POISON
+#
+SANCTUARY
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'sanctuary' <victim>
+ACCUMULATIVE : No
+DURATION     : 5 hours + 1 (if level > 30) + 1 (if level > 35)
+
+When protected by sanctuary you receive half damage points in one strike.
+
+See also : LOVE, DEATH
+#
+LOVE
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'love' <victim>
+ACCUMULATIVE : No
+DURATION     : level / 2 hours
+
+When love spell is affected by, you will hit(not spell) 2 times harder,
+and receive 2 times (including spell) damage.
+
+See also : SANCTUARY, DEATH
+#
+DEATH
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'death' [self]
+ACCUMULATIVE : No
+DURATION     : 5 hours
+
+When death spell is affected by, you will hit (not spell) 4 times harder.
+And may not affected by any spell. After duration, you will die!
+
+See also : SANCTUARY, LOVE
+#
+RERAISE
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'reraise' [self]
+ACCUMULATIVE : No
+DURATION     : 1 hours
+
+You can free from death by this spell. But you will get less exp during
+affected by this spell.
+#
+"MIRROR IMAGE"
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'mirror image' [self]
+ACCUMULATIVE : No
+DURATION     : 3 hours + 1 (if level > 30) + 1 (if level > 35)
+
+When you are affected by mirror image, you have your image illusion and
+your enemy can be confused by your illusion.
+#
+INFRAVISION
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'infravision' [self]
+ACCUMULATIVE : No
+DURATION     : level * 2 hours
+
+You can see in dark with this spell.
+#
+SLEEP
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'sleep' <victim>
+ACCUMULATIVE : No
+DURATION     : 4 hours
+
+If victim fails saving para, the person will fall asleep.
+A person who is affected by sleep can only be awakened if attacked.
+#
+STRENGTH
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'strength' <victim>
+ACCUMULATIVE : Yes
+DURATION     : Level hours
+
+A person will gain 1 strength point per spell (2 points if level of
+caster is greater than 18). Maximum strength is 18/100.
+#
+VENTRILOQUATE
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'ventriloquate' <victim | object> <text>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+For all people in the same room as the caster that fail a saving
+throw, the spell will make the object or victim appear to say the
+text written. People saving will only notice that someone tired
+to make it sound that way, not who.
+
+EXAMPLE :
+	> cast 'vent' unclesam I've got 921,923 coins!
+#
+"WORD OF RECALL"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'word of recall' [self]
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+The caster will be transferred back to his sancturay (presently
+the Temple of Midgaard). If caster is joined any guild, then be transferred
+back to his guild entrance.
+#
+IDENTIFY
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'identify' <self | object> 
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+You can see the identify of yourself or stuffs.
+#
+SUMMON
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'summon' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Will summon a person of the name spoken. It is not possible to summon
+someone of same or higher levels than yourself. If victim saves spell, you fail.
+#
+REANIMATE
+
+>> SPELL : MAGIC USER
+
+
+USAGE        : cast 'reanimate' corpse
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Will transform a corpse into a (charmed) zombie.
+Zombie lost all which he got when he was corpse.
+#
+RELOCATE
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'relocate' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Will transport you to the player or monster in same zone. You can't always
+success to relocate. 
+#
+"CHARM PERSON"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'charm person' <victim>
+ACCUMULATIVE : No
+DURATION     : ??? hours
+
+It is not possible to charm anyone that is already charmed, if you're charmed
+yourself, or if the person is higher level than yourself. The person will get
+a saving throw versus "paralysation".
+
+A charmed person will follow you, and not be able to attack you, you can order
+charmed person using the order command.
+
+See also : FOLLOW, ORDER
+#
+HASTE
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'haste' [self]
+ACCUMULATIVE : No
+DURATION     : 5 hours
+
+If you are affected by haste, you will get two chance to hit your enemy.
+
+See also : IMPROVED HASTE
+#
+"IMPROVED HASTE"
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'improved haste' <victim>
+ACCUMULATIVE : No
+DURATION     : 3 hours
+
+If you are affected by improved haste, you will get three chances to 
+hit your enemy.
+
+See also : HASTE
+#
+"SENSE LIFE"
+
+>> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
+
+USAGE        : cast 'sense life' [self]
+ACCUMULATIVE : No
+DURATION     : 5 hours per level
+
+This spell will enable you to sense hidden life forms in a room.
+Invisible persons are also considered hidden.
+
+See also : HIDE
+#
+"MAGIC MISSILE"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'magic missile' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This is the least powerful offensive spell.
+If victim saves spell, damage will be half.
+#
+"CHILL TOUCH"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'chill touch' <victim>
+ACCUMULATIVE : Yes
+DURATION     : Instantaneous
+
+This spell is more powerful than the magic missile spell.
+If victim saves spell, damage will be half.
+Otherwise, in addition to damage, victim's strength will be reduced by 1.
+#
+"BURNING HANDS"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'burning hands' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is more powerful than the chill touch spell.
+If victim saves spell, damage will be half.
+
+See also : CHILL TOUCH
+#
+"SHOCKING GRASP"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'shocking grasp' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is more powerful than the burning hands spell.
+There is a small chance for victim to be stunned.
+If victim saves spell, damage will be half.
+
+See also : BURNING HANDS
+#
+"LIGHTNING BOLT"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'lightning bolt' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is more powerful than the shocking grasp spell.
+There is a chance for victim to be stunned.
+If victim saves spell, damage will be half.
+
+See also : SHOCKING GRASP
+#
+"COLOR SPRAY"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'color spray' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is more powerful than the lightning bolt spell.
+If victim saves spell, damage will be half.
+
+See also : LIGHTNING BOLT
+#
+"ENERGY DRAIN"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'energy drain' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell does not give much damage, but victim failing saving para will
+loose up to 40,000 XP points. You will gain a quarter of this XP.
+
+Beware that this spell is evil.
+
+See also : ENERGY FLOW
+#
+"ENERGY FLOW"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'energy flow' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell does dice(level, 30) + 200 damage. But, your experience will be
+decreased by damage * 4 * level.
+
+See also : ENERGY DRAIN
+#
+FIREBALL
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'fireball' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is more powerful than the color spray spell.
+If you are in outside, and weather is cloudless, damage is multiplied by level.
+If victim saves spell, damage will be half.
+
+See also : COLOR SPRAY
+#
+SUNBURST
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'sunburst' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is more powerful than fireball spell.
+With some luck, victim will be blinded.
+If victim saves spell, damage will be half.
+
+See also : FIREBALL
+#
+"CORN OF ICE"
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'corn of ice' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is more powerful than sunburst spell.
+If victim saves spell, damage will be half.
+
+See also : SUNBURST
+#
+DISINTERGRATE
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'disintergrate' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell damage is propotional to caster's level and victim's level.
+No affect by sanctuary. If victim saves spell damage will be less.
+#
+EARTHQUAKE
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'earthquake'
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell will damage everybody except the caster.
+
+See also : FIRESTORM
+#
+FIRESTORM
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'firestorm'
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell will damage everybody except the caster by dice(level / 2, level).
+
+See also : EARTHQUAKE, HAND OF GOD
+#
+"HAND OF GOD"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'hand of god'
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell will damage everybody except the caster by dice(level, level).
+
+See also : FIRESTORM
+#
+"DISPEL EVIL"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'dispel evil' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell will only affect evil creatures. An evil person of level equal or
+less than caster will be damaged. The more good alignment, the more damage.
+#
+"CALL LIGHTNING"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'call lightning' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell will use the "force of nature" to make a lightning
+strike the victim. It is therefore only possible to call lightning
+outside, and it has to be raining (or worse).
+
+The lightning will inflict dice(level, level) * (2 or 3) points of damage.
+#
+HARM
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'harm' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell removes all hit points from the victim. The maximum damage points
+are level * int. If a victim fails saving spell, you will not be attacked.
+If a victim saves spell, damage will be half moreover you will be attacked.
+#
+HELP
+
+Following help is available:
+
+HELP help       - This text.
+HELP            - List the available commands.
+
+Help searches for a partial match of the entered word, including any
+spaces that may follow the word.
+
+Example:
+ > 'help magic mis'
+    will find the help text for the magic missile spell.
+
+ > 'help mag '
+   will not match anything.
+
+ > 'help mag'
+   will match 'magic user' or 'magic missile' depending on first
+   occurence in the help file.
+#
+SPELL SPELLS
+
+Spells are cast by Clerics and Mages.  There are a lot of spells.
+See also : PRACTICE.
+
+type "spells"
+#
+ADVANCE
+Advances a player to a level higher than his/her present level.
+Must be done in a guild (when you have enough experience).
+#
+WIZHELP
+List the privileged commands available to you. Can only be used by immortals.
+#
+NOSHOUT
+Prevents you from (or allows you to) hearing shouts, if used with no arguments.
+Can be used with the name of a player, to prevent him/her from hearing shouts,
+as well as from shouting. Can only be used by certain more powerful beings.
+#
+RESTORE
+If used on a mortal, this command will reset that players mana and hit points.
+If used on an Immortal various values will be reset to their proper values.
+#
+LINK
+
+A lot of players have problems with their links to the game. This could be
+very dangerous to your health in the middle of a combat. But we have worked
+out a solution. There are two cases:
+
+  I.If your link is broken, you will automatically attempt to flee each
+    time someone attempts to hit you. If you manage to flee, then you
+    will be saved by divine forces, and put in a safe place until you
+    reconnect to the game.
+
+ II.If your link jams (freezes) you got a problem. The only solution we
+    can give, is that you break your link as quickly as possible. By
+    breaking the link you can hope that the above procedure is initiated.
+#
+COMPACT
+If you have a small display you might want to use this command. It turns off
+(or on) the extra newline after output to your screen.
+See also : BRIEF
+#
+NOAFFECT
+Usage: noaffect player
+This will remove all affects (most notably charm and sleep) from the
+player.
+#
+INVIS
+Usage: invis
+INVIS is a toggle that allows immortals to be invisible to mortals.  The
+spell "detect invisibility" will be ineffective against INVIS.
+#
+SHOOT
+Usage: shoot target
+Assuming you are HOLDing a loaded firing weapon, this command will shoot
+something (arrow, bullet, rock, etc.) at the target.
+See also : RELOAD
+#
+RELOAD
+Usage: reload weapon ammunition
+Assuming you have both the weapon and the appropriate ammunition in your
+inventory list, this command will cause the ammunition to be loaded.
+You can use EXAMINE to see how many shots a weapon has left.
+#
+PREACH
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'preach' <victim>
+ACCUMULATIVE : -
+DURATION     : Permanent
+
+This spell turns aggressive mobile to non-aggressive mobile. If victim saves
+para, spell fails.
+#
+"DAMAGE UP"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'damage up' <victim>
+ACCUMULATIVE : No
+DURATION     : 4 + level / 10 hours
+
+This spell increases victim's damroll by level / 10 + 1.
+#
+"CRUSH ARMOR"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'crush armor' <victim>
+ACCUMULATIVE : No
+DURATION     : level
+
+This spell crushes victim's armor magically.
+#
+"MANA BOOST"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'mana boost' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+ 
+Using victim's move, restore victim's mana points.
+#
+"VITALIZE"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'vitalize' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Using victim's move, restore victim's hit points.
+#
+"FULL FIRE"
+
+SPELL : MAGIC USER
+
+USAGE        : cast 'full fire' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell is the most powerful spell of mages. It concentrate all your
+mana and throw it to victim. damage of this spell is propotional to your
+level and current mana.
+
+Don't forget you cannot do anything 3 round after success of casting full fire.
+
+See Also : THROW
+#
+THROW
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'throw' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell throws your hit points. damage is propotional to your hit points.
+
+See Also : FULL FIRE
+#
+PHASE
+
+with this spell, you can phase out closed doors.
+
+#
+TRICK
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'trick' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+If you use 'trick' spell, then victim attacks another monster in his room.
+#
+"SPELL BLOCK"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'spell block' <victim>
+ACCUMULATIVE : No
+DURATION     : 4 hours
+
+Casting on person who is affected by spell block, almost fails.
+#
+"REFLECT DAMAGE"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'reflect damage' <victim>
+ACCUMULATIVE : No
+DURATION     : 5 hours
+
+Person who is affected by this spell will reflect hit (not magical) damage.
+But, you will have some ac penalties. Reflected damage is half of it.
+#
+DUMB
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'dumb' <victim>
+ACCUMULATIVE : No
+DURATION     : 2 hours
+
+Person who is dumb will almost fail to cast.
+#
+"HOLY SHIELD"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'holy shield' [self]
+ACCUMULATIVE : No
+DURATION     : level / 10 hours
+
+Like protection from evil, but more powerful. Aggressive monster can't attack
+a person affected by holy shield.
+#
+"MANA TRANSFER"
+
+>> SPELL : MAGIC USER, CLERIC
+
+USAGE        : cast 'mana transfer' <victim>
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Transfer caster's mana points to victim.
+#
+"HEAL THE WORLD"
+
+>> SPELL : CLERIC
+
+USAGE        : cast 'heal the world'
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+Entire heal all player. But needs 30000 mana points.
+#
+THUNDERBOLT
+
+>> SPELL : MAGIC USER
+
+USAGE        : cast 'thunderbolt'
+ACCUMULATIVE : -
+DURATION     : Instantaneous
+
+This spell produce magical weapon. But to make it succeed, it must rain or
+worse.
+#
+QUEST
+
+>> COMMAND
+You can contact with QM(Quest Manager) by this command. If you are over 10
+level, you should make quest to advance more level. QM proposes a quest to
+you, and he will give some quest item, if you make it.
+
+See also : REQUEST, HINT
+#
+REQUEST
+
+>> COMMAND
+If you can't make your quest proposed by QM, QM allows you to change your
+quest by this command. But it gives you some penalties.
+
+See alse : QUEST, HINT
+#
+HINT
+
+>> COMMAND
+QM gives some hint to your quest.
+
+See also : QUEST, REQUEST
+#
+SKILLED
+
+>> INFORMATION
+Attribute of skills and spells has 2 fields - learned and skilled. They
+mean How you learned and used the skill and the spell. The more SKILLED
+field makes it's skill more powerful.
+
+See also : BARE HAND
+#
+BARE HAND
+
+>> INFORMATION
+If you wield nothing, you will hit with your hand. If you are a warrior
+and you use bare hand, the damage of your bare hand increases.
+
+See also : SKILLED
+#~

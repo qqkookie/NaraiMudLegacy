@@ -1,0 +1,1000 @@
+#201
+The Castle Gates~
+  You are standing in front of the gates to the Aerial Castle.  It is rumored
+to be enchanted.  The rumors also say that there are magic portals to other
+dimensions contained within.
+~
+2 8 0
+D0
+You stand before the entrance to the castle
+~
+~
+0 -1 202
+D1
+~
+~
+0 -1 3500
+S
+#202
+The entryway to the castle~
+  You are standing just past the castle gates in the courtyard.  Before you
+stands the draw bridge of an enormous castle, while the courtyard continues to
+the east and west.  The sunlight is shining down on the castle in such a way 
+that it appears to glow.
+~
+2 8 0
+D0
+The draw bridge
+~
+~
+0 -1 203
+D2
+the castle gates
+~
+~
+0 -1 201
+D1
+the courtyard
+~
+~
+0 -1 204
+D3
+the courtyard
+~
+~
+0 -1 214
+S
+#203
+The Drawbridge~
+  You are on the drawbridge of the castle.  Below you is a moat with some
+type of bubbling liquid, however you cannot quite place it.  The castle is to
+the north, and the courtyard to the south.
+~
+2 8 0
+D0
+the castle entrance
+~
+~
+0 -1 223
+D2
+the courtyard
+~
+~
+0 -1 202
+S
+#204
+The Courtyard~
+  You are in the courtyard of a tremendous castle.  The south is bounded by
+the  castle wall, and the north by the moat.  The courtyard continues to the
+east, and west is the entrance to the castle.
+~
+2 8 0
+D1
+the corner of the courtyard
+~
+~
+0 -1 205
+D3
+the drawbridge
+~
+~
+0 -1 202
+S
+#205
+A Corner of the Courtyard~
+  You are in the corner of the courtyard.  There is a door to the east in
+the base of the southeast tower.
+~
+2 8 0
+D1
+a door
+~
+door~
+2 -1 221
+D0
+the courtyard
+~
+~
+0 -1 206
+D3
+the courtyard
+~
+~
+0 -1 204
+S
+#206
+The Courtyard~
+  You are in the courtyard on the east side of the castle.  The way eastward
+in blocked by the outer wall, and the way westward is bounded by the moat.
+To the north and south you can see the defensive towers of the castle.
+~
+2 8 0
+D0
+the corner of the courtyard
+~
+~
+0 -1 207
+D2
+the corner of the courtyard
+~
+~
+0 -1 205
+S
+#207
+A Corner of the Courtyard~
+  You are in the corner of the courtyard, at the base of the northeast tower.
+There is a door to the east leading into the tower.
+~
+2 8 0
+D1
+a door
+~
+door~
+2 -1 219
+D2
+the courtyard
+~
+~
+0 -1 206
+D3
+the courtyard
+~
+~
+0 -1 208
+S
+#208
+Along the northern wall~
+  You are on the northern side of the castle.  The way further northward is
+blocked by the outer wall, and the way southward is hindered by a moat.  The
+courtyard extends east and west.
+~
+2 8 0
+D1
+the corner of the courtyard
+~
+~
+0 -1 207
+D3
+the courtyard
+~
+~
+0 -1 209
+S
+#209
+Along the northern wall~
+  You are on the northern side of the castle.  The way further northward is
+blocked by the outer wall, and the way southward is hindered by a moat.  The
+courtyard extends east and west.
+~
+2 8 0
+D1
+the courtyard
+~
+~
+0 -1 208
+D3
+the courtyard
+~
+~
+0 -1 210
+S
+#210
+Along the northern wall~
+  You are on the northern side of the castle.  The way further northward is
+blocked by the outer wall, and the way southward is hindered by a moat.  The
+courtyard extends east and west.
+~
+2 8 0
+D1
+the courtyard
+~
+~
+0 -1 209
+D3
+the courtyard
+~
+~
+0 -1 211
+S
+#211
+A Corner of the Courtyard~
+  You are in the corner of the courtyard, at the base of the northeast tower.
+There is a door to the west leading into the tower.
+~
+2 8 0
+D3
+a door
+~
+door~
+2 -1 217
+D2
+the courtyard
+~
+~
+0 -1 212
+D1
+the courtyard
+~
+~
+0 -1 210
+S
+#212
+The Courtyard~
+  You are in the courtyard on the west side of the castle.  The way westward
+in blocked by the outer wall, and the way eastward is bounded by the moat.
+To the north and south you can see the defensive towers of the castle.
+~
+2 8 0
+D0
+the corner of the courtyard
+~
+~
+0 -1 211
+D2
+the corner of the courtyard
+~
+~
+0 -1 213
+S
+#213
+A Corner of the Courtyard~
+  You are in the corner of the courtyard, at the base of the southwest tower.
+There is a door to the west leading into the tower.
+~
+2 8 0
+D3
+a door
+~
+door~
+2 -1 215
+D0
+the courtyard
+~
+~
+0 -1 212
+D1
+the courtyard
+~
+~
+0 -1 214
+S
+#214
+The courtyard~
+  You are in the courtyard of a tremendous castle.  The south is bounded by
+the  castle wall, and the north by the moat.  The courtyard continues to the
+west, and eastward is the entrance to the castle.
+~
+2 8 0
+D3
+the corner of the courtyard
+~
+~
+0 -1 213
+D1
+the drawbridge
+~
+~
+0 -1 202
+S
+#215
+Under the tower~
+  You are under one of the corner watchtowers.  It is rather dark here, but
+still light enough to see.  There is a ladder leading upward in the middle of
+the room.
+~
+2 8 0
+D4
+the top of the tower
+~
+~
+0 -1 216
+D1
+a door
+~
+door~
+2 -1 213
+S
+#216
+On top of the watchtower~
+  You are standing on top of the corner watchtower.  From this positon you can
+see for kilometers, and you cant help but laugh at the tiny, ant-like figures
+moving around in Midgaard far below.  There is a catapult here, ready to defend
+the castle against any invasion.
+~
+2 8 0
+D5
+under the tower
+~
+~
+0 -1 215
+S
+#217
+Under the tower~
+  You are under one of the corner watchtowers.  It is rather dark here, but
+still light enough to see.  There is a ladder leading upward in the middle of
+the room.
+~
+2 8 0
+D4
+the top of the tower
+~
+~
+0 -1 218
+D1
+a door
+~
+door~
+2 -1 211
+S
+#218
+On top of the watchtower~
+  You are standing on top of the corner watchtower.  From this positon you can
+see for kilometers, and you cant help but laugh at the tiny, ant-like figures
+moving around in Midgaard far below.  There is a catapult here, ready to defend
+the castle against any invasion.
+~
+2 8 0
+D5
+under the tower
+~
+~
+0 -1 217
+S
+#219
+Under the tower~
+  You are under one of the corner watchtowers.  It is rather dark here, but
+still light enough to see.  There is a ladder leading upward in the middle of
+the room.
+~
+2 8 0
+D4
+the top of the tower
+~
+~
+0 -1 220
+D3
+a door
+~
+door~
+2 -1 207
+S
+#220
+On top of the watchtower~
+  You are standing on top of the corner watchtower.  From this positon you can
+see for kilometers, and you cant help but laugh at the tiny, ant-like figures
+moving around in Midgaard far below.  There is a catapult here, ready to defend
+the castle against any invasion.
+~
+2 8 0
+D5
+under the tower
+~
+~
+0 -1 219
+S
+#221
+Under the tower~
+  You are under one of the corner watchtowers.  It is rather dark here, but
+still light enough to see.  There is a ladder leading upward in the middle of
+the room.
+~
+2 8 0
+D4
+the top of the tower
+~
+~
+0 -1 222
+D3
+a door
+~
+door~
+2 -1 205
+S
+#222
+On top of the watchtower~
+  You are standing on top of the corner watchtower.  From this positon you can
+see for kilometers, and you cant help but laugh at the tiny, ant-like figures
+moving around in Midgaard far below.  There is a catapult here, ready to defend
+the castle against any invasion.
+~
+2 8 0
+D5
+under the tower
+~
+~
+0 -1 221
+S
+#223
+Castle entrance~
+  You are at the entrance to Clyde's castle.  The doors in front of you are
+ornately decorated with inscriptions and gargoyles and the like.  They doors
+are very beautiful and appear to made out of solid gold!  You notice that they
+are ajar, however you feel that perhaps you should not enter.
+~
+2 8 0
+D2
+the drawbridge
+~
+~
+0 -1 203
+D0
+the hall of armor
+~
+~
+0 -1 224
+S
+#224
+Hall of armor~
+  You are in the great hall of armor.  The walls are covered with ornately
+woven tapestries.  They remind you of the orient from wence they came.  There
+is an aroma of rich foods, reminding of just how hungry you are.
+~
+2 8 0
+D0
+further down the hall
+~
+~
+0 -1 225
+D2
+the castle entrance
+~
+~
+0 -1 223
+D1
+the dining room
+~
+~
+0 -1 227
+D3
+the castle armory
+~
+~
+0 -1 237
+S
+#225
+Hall of armor~
+  You are in the great hall of armor.  The walls are covered with ornately
+woven tapestries.  They remind you of the orient from wence they came.
+There are two suits of armor standing against the wall.
+~
+2 8 0
+D0
+the end of the hall
+~
+~
+0 -1 226
+D2
+the hall of armor
+~
+~
+0 -1 224
+D1
+the kitchen
+~
+~
+0 -1 228
+E
+armor~
+  This suit of armor is polished and looks very nice and new.  It is mounted
+on a pedestal of concrete.  The inscription says 'in memory of Brave Sir Robin'
+~
+S
+#226
+The end of the hall of Armor~
+  This is the end of the hall of armor.  There are tapestries and ornate
+markings on the walls reminding you of the orient.  The throne room is
+to the west, the castle cathedral to the north, and there are stairs to the
+east.  The hall extends to the south.
+~
+2 8 0
+D0
+castle cathedral
+~
+~
+0 -1 234
+D1
+stairway
+~
+~
+0 -1 240
+D2
+the hall of armor
+~
+~
+0 -1 225
+D3
+throne room
+~
+~
+0 -1 235
+S
+#227
+Dining room~
+  You are in the luxurious dining room of the castle.  The table is barren
+now, however you can smell the odor of scrumptions foods coming from the north.
+~
+2 8 0
+D0
+kitchen
+~
+~
+0 -1 228
+D3
+the hall of armor
+~
+~
+0 -1 224
+S
+#228
+Kitchen~
+  You are in the castle kitchen.  There are pots and pans of all shapes and
+sizes strewn about, as well as foodstuffs that are being prepared for the
+feast this evening.  There is a door to the north marked 'storage'.
+~
+2 8 0
+D0
+store room
+~
+door~
+2 -1 229
+D1
+hallway
+~
+~
+0 -1 231
+D2
+dining room
+~
+~
+0 -1 227
+D3
+hall of armor
+~
+~
+0 -1 226
+S
+#229
+Kitchen storeroom~
+  You are in the kitchen storeroom.  The walls are lined with shelves full of
+various foodstuffs for future consumption.  This room is kept at a lower
+temperature than the others to preserve the food stored here.
+~
+2 8 0
+D2
+kitchen
+~
+door~
+2 -1 228
+S
+#230
+Servants' quarters~
+  You are in one of the rooms devoted to housing the castle servants.  It is
+a rather large room, with beds lineing both walls.
+O'sonic says 'May I help you?'
+~
+2 8 0
+D0
+hallway
+~
+~
+0 -1 231
+S
+#231
+Hallway~
+  You are in a hallway.  The kitchen is to the west, and there are servants 
+quarters to the south and east.
+~
+2 8 0
+D1
+servants quarters
+~
+~
+0 -1 232
+D2
+servants quarters
+~
+~
+0 -1 230
+D3
+kitchen
+~
+~
+0 -1 228
+S
+#232
+Servants' quarters~
+  You are in one of the rooms devoted to housing the castle servants.  It is
+a rather large room, with beds lineing both walls.
+~
+2 8 0
+D3
+hallway
+~
+~
+0 -1 231
+S
+#233
+Altar~
+  You are standing before the chapel altar.   The ceiling is very high and
+ornately decorated, depiction the gods going through various stages of their
+lives and adventures.  There is a statue of the king behind the altar.
+~
+2 8 0
+D2
+chapel
+~
+~
+0 -1 234
+E
+statue~
+  The statue that stands before you was molded in the image of the king.  What
+strikes you as odd is that he has his hand streached out, as if he should be
+holding a cup.  Very peculiar.
+~
+E altar~
+  A huge marble altar, undoubtedly the site of many sacrafices and rituals.
+~
+S
+#234
+Chapel~
+  You are standing in the castle's chapel.  This is where the king prays to the
+Gods for protection from invaders.  You find yourself wondering what kind of
+invaders would attack a castle in the sky.  That particular though makes your
+skin crawl.
+~
+2 8 0
+D0
+chapel altar
+~
+~
+0 -1 233
+D2
+hall of armor
+~
+~
+0 -1 226
+S
+#235
+Throne room~
+  You are in the magnificant throne room.  Talk about riches!  The floor is 
+solid gold, as is the throne.  You are really beginning to drool over all the
+material posessions.  There is a huge throne set against the western wall.
+~
+2 8 0
+D1
+hall of armor
+~
+~
+0 -1 226
+D2
+guards quarters
+~
+~
+0 -1 236
+E
+throne~
+  The throne is carved out of solid gold and appears as it it must weigh 10
+tons!  It is covered with intricate descriptions and jewels of all sorts.
+~
+S
+#236
+Guards quarters~
+  You are in the living quarters of the king's elite royal guard.  Compared
+to the servants quarters, this is heaven.  There are several beds against
+the wall.
+~
+2 8 0
+D0
+throne room
+~
+~
+0 -1 235
+S
+#237
+Armory~
+  You are in the armor storage room.  There are suits of armor locked away
+in cases against each wall, and a large table in the middle of the room for
+working and fitting the armor.
+~
+2 8 0
+D1
+hall of armor
+~
+~
+0 -1 224
+S
+#240
+Stairway~
+  You are on a majestic stairway.  The stairs lead upward.  There is a smaller
+spiraling staircase that leads downward.
+~
+2 8 0
+D4
+~
+~
+0 -1 250
+D5
+~
+~
+0 -1 260
+D3
+The hall of armor
+~
+~
+0 -1 226
+S
+#250
+Stairway~
+  You are at a landing on the stairs.  This is the living floor for the royal
+family.  All of their rooms are located on this floor.
+~
+2 8 0
+D2
+hallway
+~
+~
+0 -1 251
+D5
+stairway
+~
+~
+0 -1 240
+D4
+stairway
+~
+~
+0 -1 270
+S
+#251
+Hallway~
+  You are in a hallway on the second floor of the castle.  The halway continues
+to the south.  There is a full size mirror mounted to the eastern wall.
+~
+2 8 0
+D0
+stairway
+~
+~
+0 -1 250
+D2
+hallway
+~
+~
+0 -1 252
+D3
+hallway
+~
+~
+0 -1 254
+E
+mirror~
+  Looking in the mirror, you realize that you are one ugly dude.  You also 
+notice that you can almost see through it, like there was another dimension
+on the other side.
+~
+S
+#252
+Royal bedroom~
+  You are in the royal bedroom.  There are many exquisite material possessions
+here, such as magnicent paintings of the royal family and even of midguaard
+when it was in its prime.
+~
+2 8 0
+D0
+hallway
+~
+~
+0 -1 251
+D1
+closet
+~
+~
+0 -1 253
+E
+bed~
+  This is an incredibly humongous bed.  It appears so comfortable.  Perhaps
+you should lie down and try it out?
+~
+S
+#253
+Closet~
+  You are standing in the royal closet.  There are robes and coverings on
+every wall!  The only problem is that they are all way to large to be used for
+armor.  They would be more of a hindrance than they are worth.
+~
+2 8 0
+D3
+bedroom
+~
+~
+0 -1 252
+S
+#254
+Hallway~
+  This is an extension of the hallway. To the north is the princess's room, and
+to the south is the prince's room.
+~
+2 8 0
+D0
+princess' bedroom
+~
+~
+0 -1 255
+D1
+hallway
+~
+~
+0 -1 251
+D2
+prince's bedroom
+~
+~
+0 -1 256
+S
+#255
+Princess' bedroom~
+  You are in the royal princess' bedroom.  You feel as though you should not
+be here, as she is sound asleep.  She is very beutiful indeed, as the pictures
+on the wall indicate.
+~
+2 8 0
+D2
+hallway
+~
+~
+0 -1 254
+S
+#256
+Prince's bedroom~
+  You are in the bedroom of the royal prince.  There are pictures of him on the
+wall, depictiong him as a well built and aggressive fellow not to be messed
+with.  Like Sonic the Hedgehog.
+~
+2 8 0
+D0
+hallway
+~
+~
+0 -1 254
+S
+#260
+Base of the stairs~
+     You are in the Dungeon.  You wonder what creatures are lurking in the
+depths of the dungeon.  There is a hallway to the north.
+~
+2 8 0
+D0
+a hallway
+~
+~
+0 -1 261
+D4
+stairway
+~
+~
+0 -1 240
+S
+#261
+Dungeon~
+     You are in the Dungeon.  There are cells to the north, west, and east. 
+From the east and west, you hear guttural noises.  From the north, nothing...
+~
+2 8 0
+D0
+cell
+~
+~
+2 927 262
+D1
+cell
+~
+~
+2 927 263
+D3
+cell
+~
+~
+2 927 264
+D2
+a hallway
+~
+~
+0 -1 260
+S
+#262
+Cell~
+     You are in a small, cramped, dirty cell.  It is a horrid place.
+~
+2 9 0
+D2
+hallway
+~
+~
+2 927 261
+S
+#263
+Cell~
+     You are in a small, cramped, dirty cell.  It is a horrid place.
+~
+2 9 0
+D3
+hallway
+~
+~
+2 927 261
+S
+#264
+Cell~
+     You are in a small, cramped, dirty cell.  It is a horrid place.
+~
+2 9 0
+D1
+hallway
+~
+~
+2 927 261
+S
+#270
+On the stairs~
+  You are climbing on a spiraling staircase.
+~
+2 8 0
+D4
+up the stairs
+~
+~
+0 -1 271
+D5
+on the stairs
+~
+~
+0 -1 250
+S
+#271
+On the stairs~
+  You are climbing on a spiraling staircase.
+~
+2 8 0
+D4
+up the stairs
+~
+~
+0 -1 272
+D5
+on the stairs
+~
+~
+0 -1 270
+S
+#272
+On the stairs~
+  You are on a spiraling staircase that goes up and down.  Above you is the
+entrance to the tower.
+~
+2 8 0
+D4
+tower
+~
+~
+0 -1 273
+D5
+stairs downward
+~
+~
+0 -1 271
+S
+#273
+Castle tower~
+  You are in the highest point of this castle.  This is where Merlin hangs out
+and does his stuff.  There are pipettes and beakers strewn about the table,
+indicating that he has been hard at work mixing potions.
+~
+2 8 0
+D5
+down the stairs
+~
+~
+0 -1 272
+S
+#99999
+$~

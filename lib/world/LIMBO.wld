@@ -1,0 +1,90 @@
+#0
+The Void~
+  You don't think that you are not floating in nothing.
+~
+0 8 1
+D4
+void~
+~
+0 -1 3001
+S
+#1
+Limbo~
+   You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness.
+~
+0 8 1
+D4
+void~
+~
+0 -1 3001
+S
+#2
+The Wizards Lounge~
+
+  Say!  Isn't this a nifty room?
+  There is a NOTE here.  You might want to "look note".
+
+~
+0 47246 0
+D5
+~
+~
+0 -1 3001
+E
+note~
+The note says:
+
+1. Do not help mortals gain experience, gold, nice toys, etc.
+2. Do not load expensive items (or leave them around).
+3. Don't bring aggressive monsters to town.
+4. Do not help or hinder mortals.
+5. Do not play mortal and immortal at the same time.
+   This also means don't use your immortal to HELP your mortal or
+   provide any service not available to ALL mortals.
+6. Do not retreive players' corpse or You will be DEMOTED.
+
+~
+S
+#12
+The Chat Room~
+   You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
+which twinkles happily in a warm fireplace.  There are no doors out.  Clearly
+the owner of this room needs none.
+~
+0 520 0
+S
+#27
+The Secret Room~
+   I guess it's no secret anymore?
+~
+0 6656 0
+D0
+~
+~
+0 -1 19001
+D1
+~
+~
+0 -1 19004
+D2
+~
+~
+0 -1 19006
+D3
+~
+~
+0 -1 19003
+D4
+~
+~
+0 -1 19012
+D5
+~
+~
+0 -1 19021
+S
+#99999
+$~

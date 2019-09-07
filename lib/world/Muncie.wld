@@ -1,0 +1,1071 @@
+#2300
+A dark passage~
+This a very old section of tunnel. It shows signs of recent use. The air
+here is quite musty and stale. It smells as if you have entered a 
+recently opened tomb.
+~
+23 13 5
+D4
+~
+~
+0 0 7432
+D5
+~
+~
+0 0 2301
+S
+#2301
+Entrance to the lost city of Loftwick~
+This is the entrance to the lost city of Loftwick.  The once beautiful 
+architecture has long since been destroyed.  Parts of the ceiling here
+has caved in and rubble lines the streets.  There appears to be footprints
+in the dust on the ground here.  Fresh ones......
+~
+23 13 3
+D1
+~
+~
+0 0 2302
+D3
+~
+~
+0 0 2303
+D4
+~
+~
+0 0 2300
+D2
+~
+~
+0 0 2305
+S
+#2302
+A small guard outpost~
+This room appears to once have been a guard room.  There are several chairs 
+smashed about the room.  A table lies on the floor, minus it's legs.  Against
+the south wall you notice what once was probably a weapons rack. There are 
+fresh footprints all around.
+~
+23 9 3
+D3
+~
+~
+0 0 2301
+S
+#2303
+A small guard outpost~
+This was once a guard post.  Amongst the rubble you see a broken pitcher
+along with several wooden cups.  A table stands in the center of the room.
+The door to the captain's chamber is ripped off of it's hinges and leans 
+against the far wall. The room seems recently used.
+~
+23 9 3
+D1
+~
+~
+0 0 2301
+D3
+~
+~
+0 0 2304
+S
+#2304
+The Captain's office~
+This room once housed the captain of the guard.  It seems a NEW captain has
+moved in!
+~
+23 9 3
+D1
+~
+~
+0 0 2303
+S
+#2305
+Check Point~
+This street leads into the city of loftwick.  Shops and homes have been
+carved from the stone surrounding the street.  The whole place looks to 
+be in horridshape. The devices that once provided perpetual light here 
+are gone, leaving this place in complete darkness, probably for some 
+time now.
+~
+23 9 3
+D0
+~
+~
+0 0 2301
+D1
+~
+~
+0 0 2306
+D3
+~
+~
+0 0 2321
+D2
+~
+~
+0 0 2310
+S
+#2306
+Jalpa Drive~
+An ordinary city street, except for the shape that it's in.  But then again,
+all the streets here are in pretty rough shape, so this could be normal. A
+pair of footprints can faintly be seen in the dust.
+~
+23 9 3
+D3
+~
+~
+0 0 2305
+D1
+~
+~
+0 0 2307
+S
+#2307
+Jalpa Drive~
+An ordinary city street, except for the shape that it's in.  But then again,
+all the streets here are in pretty rough shape, so this could be normal. A
+pair of footprints can faintly be seen in the dust.
+~
+23 9 3
+D3
+~
+~
+0 0 2306
+D1
+~
+~
+0 0 2308
+S
+#2308
+Jalpa Drive~
+An ordinary city street, except for the shape that it's in.  But then again,
+all the streets here are in pretty rough shape, so this could be normal. A
+pair of footprints can faintly be seen in the dust.
+~
+23 9 3
+D3
+~
+~
+0 0 2307
+D0
+~
+~
+0 0 2309
+S
+#2309
+Metal Smith~
+This was once the shop of an accomplished metal smith.  Various items lay
+scattered in the dust, rusted and ruined beyound all hope.  It appears as 
+though a battle took place in this room.  Whoever was defending the shop
+must have lost, for you see a skeleton with a spear shoved through it.
+~
+23 9 3
+D2
+~
+~
+0 0 2308
+S
+#2310
+Hokar Ave~
+This street is in an amazing state of repair.  Gone are the signs of decay
+and ruin.  This street probably leads to a section of town more used.
+The dust on the ground here is only along the sides of the street, as 
+though something big moves through here from time to time.
+~
+23 9 0
+D0
+~
+~
+0 0 2305
+D1
+~
+~
+0 0 2311
+D2
+~
+~
+0 0 2313
+D3
+~
+~
+0 0 2322
+S
+#2311
+Bank of Loftwick~
+This was once the bank of loftwick, where citizens stored thier fortunes.
+Against the far wall, behind the teller windows, you can vaguely make out
+the outlines of the vault door. The vault has been torn apart and is filled 
+with rubble. Oddly it looks as if something tore it's way OUT!?!?!
+~
+23 9 0
+D3
+~
+~
+0 0 2310
+S
+#2312
+Chapel~
+This chapel has been untouched by time.  Everything in this chapel is in 
+excellent condition.  All the pews are polished to a gleem.  To the far end
+you can just make out an altar.  There are numerous candles along the walls,
+all of which are lit and burning.  You sense a presence of Peace in this 
+room. You can barely make out the sounds of chanting here.
+~
+23 8 0
+D3
+~
+~
+0 0 2313
+S
+#2313
+Hokar Ave.~
+The sides of this street have been scraped clean as though something large
+moved this way.
+~
+23 9 0
+D0
+~
+~
+0 0 2310
+D1
+~
+~
+0 0 2312
+D2
+~
+~
+0 0 2314
+S
+#2314
+Hokar Ave~
+This is the end of the street.  To the west is the entrance to a grand arena.
+Looking to the west you notice a heavy metal gate blocking your entrance west.
+There are deep gouges from something passing this way many times.  A stench
+like that of a sewer assaults your nostrils.
+~
+23 13 0
+D0
+~
+~
+0 0 2313
+D3
+~
+~
+0 0 2315
+S
+#2315
+Arena Entrance~
+This is the entrance to a very large arena.  You can from here see that this
+building is different from all the others you have seen. As you get a little
+closer you can see that it is because the outside is covered with claw marks
+large and small from the ground to the roof.
+~
+23 9 0
+D1
+~
+~
+0 0 2314
+D0
+~
+~
+0 0 2316
+D3
+~
+~
+0 0 2318
+S
+#2316
+Concession Stand~
+This is what appears to have been the concession stand.  A sign still hangs 
+from rusty hinges.  All around this room are candy wrappers, as if something
+has been snacking between meals....  All candies have been eaten save for
+a Mars bar with a bite taken out of it.  The bite appears to have been spit
+back on the ground in disgust.
+~
+23 9 0
+D2
+~
+~
+0 0 2315
+D3
+~
+~
+0 0 2317
+S
+#2317
+Hall of Victors~
+This is a great hall dedicated to the gladiators that fought and won in the 
+arena.  The warriors here stand in death as they did in life.
+~
+23 8 0
+D1
+~
+~
+0 0 2316
+D2
+~
+~
+0 0 2318
+S
+#2318
+Arena Hallway~
+This hall leads to the great arena and the hall of victors.  The scratch
+marks on the wall here are enormous.  None of the creatures you've met so far
+could have done this.
+~
+23 9 0
+D0
+~
+~
+0 0 2317
+D1
+~
+~
+0 0 2315
+D3
+~
+~
+0 0 2319
+S
+#2319
+Arena Grounds~
+This is where the hero's and fell monsters fought.  Many a battle was fought
+here.  If you listen closely you can almost hear the sounds of battle.
+~
+23 9 0
+D1
+~
+~
+0 0 2318
+D0
+~
+~
+0 0 2320
+S
+#2320
+Arena Grounds~
+This section of the arena has been converted into a nursery for a dragon, 
+you think.  The size of the nest suggests a HUGE dragon would live here.
+However, the only thing you can see is an outline drawn on the wall of a
+a powerful and huge dragon.  Many bodies lay strewn about, half eaten.
+Wait.  The shadow moved!  It IS the dragon!
+~
+23 9 5
+D2
+~
+~
+0 0 2319
+S
+#2321
+Jalpa Drive~
+An ordinary city street, you see nothing of special interest.
+~
+23 9 5
+D1
+~
+~
+0 0 2305
+D3
+~
+~
+0 0 2326
+S
+#2322
+Royal Guard Headquarters~
+This the headquarters of the elite Githyanki guard of Loftwick.
+~
+23 9 5
+D1
+~
+~
+0 0 2310
+D3
+~
+~
+0 0 2323
+S
+#2323
+Jail~
+This is the jail of Loftwick.  Prisoners of old were kept just to the west of
+here in cells.  You can hear sounds from the west now...  To the west you
+see the cell door. It looks as if new residents have moved in.
+~
+23 9 5
+D1
+~
+~
+0 0 2322
+D3
+~
+~
+0 0 2324
+S
+#2324
+Jail Cell~
+This is the cell where people having committed minor crimes were kept.
+~
+23 9 5
+D1 
+~
+~
+0 0 2323
+D3
+~
+~
+0 0 2325
+S
+#2325
+Death Row~
+Only the most vile prisoners imaginable were kept here.  The walls and door
+have been scratched at by inmates serving thier last days in hopes of an
+escape.
+~
+23 9 5
+D1
+~
+~
+0 0 2324
+S
+#2326
+Jalpa Drive~
+An ordinary city street, you see nothing of special interest other than some
+footprints here.
+~
+23 9 5
+D1
+~
+~
+0 0 2321
+D3
+~
+~
+0 0 2327
+S
+#2327
+Jalpa Drive~
+An ordinary city street, you see nothing of special interest other than some
+footprints here.
+~
+23 9 5
+D1
+~
+~
+0 0 2326
+D3
+~
+~
+0 0 2328
+S
+#2328
+Jalpa Drive~
+An ordinary city street, you see nothing of special interest other than some
+footprints here.
+~
+23 9 5
+D1
+~
+~
+0 0 2327
+D2
+~
+~
+0 0 2329
+S
+#2329
+Farmer's Row~
+This street was the center of trading and business of the city.  To the 
+west is a small shop.  The street here is in very bad shape and littered 
+with rubble.
+~
+23 9 5
+D0
+~
+~
+0 0 2328
+D2
+~
+~
+0 0 2331
+D3
+~
+~
+0 0 2330
+S
+#2330
+Small Shop~
+This shop appears to have been a produce shop.  Goods were bought and sold
+here many years before you were born.  The shopkeeper, WHAT ?, tries to
+sell you long gone vegetables.
+~
+23 9 5
+D1
+~
+~
+0 0 2329
+S
+#2331
+Farmer's Row~
+This street was the center of trading and business of the city.
+The street here is in very bad shape and littered with rubble.
+~
+23 9 5
+D0
+~
+~
+0 0 2329
+D2
+~
+~
+0 0 2333
+D3
+~
+~
+0 0 2332
+S
+#2332
+Small Shop~
+This shop appears to have been a butchery.  Goods were bought and sold here
+many years before you were born.  The shopkeeper, WHAT ?, tries to sell you
+long rotted chunks of meat.  The smell here is horrible.
+~
+23 9 5
+D1
+~
+~
+0 0 2331
+S
+#2333
+Farmer's Row~
+This street was the center of trading and business of the city. 
+The street here is in very bad shape and littered with rubble.
+~
+23 9 5
+D0
+~
+~
+0 0 2331
+D1
+~
+~
+0 0 2335
+D2
+~
+~
+0 0 2340
+D3
+~
+~
+0 0 2334
+S
+#2334
+Small Shop~
+This shop was probably once the armoury.  Countless peices of armor were made
+here over time.  You see a figure that 'appears' to be working on something.
+He turns to you and tries to sell you some armor.
+~
+23 9 5
+D1
+~
+~
+0 0 2333
+S
+#2335
+Dark Alley~
+This is a very dark alley.  There is laughter and many sounds from
+the North.
+~
+23 9 5
+D3
+~
+~
+0 0 2333
+D0
+~
+~
+0 0 2336
+S
+#2336
+MoonMurg Bar~
+This was once a place to kick back and relax.  There are many card tables
+all about the room.  To your horror most of the card tables are full of
+Patrons.
+~
+23 9 5
+D2
+~
+~
+0 0 2335
+D0
+~
+~
+0 0 2337
+S
+#2337
+Sleazy Inn~
+This was once a pay by the hour inn according to the writing on the wall.
+~
+23 9 5
+D1
+~
+~
+0 0 2338
+D2
+~
+~
+0 0 2336
+S
+#2338
+A Brothel~
+This was once well....the name says it all.
+~
+23 9 5
+D3
+~
+~
+0 0 2337
+D4
+~
+~
+0 0 2339
+S
+#2339
+Lords Room~
+This was the Lord of the Citiesy's secret room.  You wonder what the 
+Lord of the City would have a room above the Brothel for?  
+Maybe you can ask the current occupant.
+~
+23 9 5
+D5
+~
+~
+0 0 2338
+S
+#2340
+Farmer's Row~
+This street was the center of trading and business of the city.
+The street here is in very bad shape and littered with rubble.
+~
+23 9 5
+D0
+~
+~
+0 0 2333
+D1
+~
+~
+0 0 2343
+D3
+~
+~
+0 0 2341
+S
+#2341
+Small Shop~
+This was once an alcemist shop.  Many broken vials lie scattered about the
+floor.  Alcemy equipment lies smashed about the room.  A withered old man
+offers to make you a love potion.
+~
+23 9 5
+D1
+~
+~
+0 0 2340
+D4
+~
+~
+0 0 2342
+S
+#2342
+Mage's Private Lab~
+You have entered a room filled with every type of test tube and glass pipe
+you can imagine. Some of it lies is pieces but others parts are inatact and 
+look fairly new. The room is filled with strange smells some pleasant and
+others vile.
+~
+23 9 0
+D5
+~
+~
+0 0 2341
+S
+#2343
+Bastro Road~
+This road is amazingly in great shape.
+~
+23 13 0
+D3
+~
+~
+0 0 2340
+D1
+~
+~
+0 0 2344
+S
+#2344
+Bastro Road~
+This road leads to a palace in the distance.
+~
+23 9 0
+D3
+~
+~
+0 0 2343
+D1 
+~
+~
+0 0 2346
+D5
+~
+~
+0 0 2345
+S
+#2345
+A tunnel under the street~
+You are in a tunnel under the street probably an ancient sewer. You see
+fresh footprints in the dust.
+~
+23 9 0
+D4
+~
+~
+0 0 2344
+D1
+~
+~
+0 0 2352
+S
+#2346
+Bastro Road~
+To the East you can see the palace of Loftwick.  To the north is a
+small shop.
+~
+23 9 0
+D3
+~
+~
+0 0 2344
+D0
+~
+~
+0 0 2347
+D1
+~
+~
+0 0 2350
+S
+#2347
+Library of Loftwick~
+There are literally hundreds of books lying here. They are surprisingly
+in good condition. After a brief search of the texts you learn that
+Loftwick was not only the founder of this city but was also the brother
+of Redferne the Grand Knight of Paladins. Loftwick left Midgaard after
+a bitter dispute with Redferne. He used vile magics in pursuit of
+immortality. Through his magics he met a race called the GITHYANKI that 
+offered to help him in exchange for a haven on this plane that they 
+could raid Midgaard from. Loftwick agreed but he didn't count on the 
+Githyanki turning his city into a realm of the living dead and a truly 
+EVIL place.
+~
+23 9 0
+D2
+~
+~
+0 0 2346
+S
+#2350
+Palace~
+This was the palace of Loftwick.  It is in excellent condition.  This is
+truly a home fit for a king.
+~
+23 9 0
+D3
+~
+~
+0 0 2346
+D4
+~
+~
+0 0 2351
+S
+#2351
+The Bedchamber~
+This is the bedroom of Loftwick.  A huge canopy bed rests in the middle of the
+floor.  A Picture of the God Karn is on the wall.  You begin to see where 
+Loftwick got the power of Darkness from.  The Bed appears to have been slept
+in only moments ago.  You sense a great anger as it becomes apparent 
+that for Karn to grant Loftwicks request, Loftwick had to murder his own wife
+to show dedication to Karn.
+~
+23 9 0
+D5
+~
+~
+0 0 2350
+S
+#2352
+The Catacombs~
+You have entered the catacombs. You feel very uneasy as if great evil is 
+all around you. You see movement in every shadow and jump at the sounds of 
+your own footsteps.
+~
+23 9 0
+D5
+~
+~
+0 0 2353
+D3
+~
+~
+0 0 2345
+S
+#2353
+The Catacombs~
+All around you lie the crypts of the long dead. All the crypts have been 
+clawed open. You hear a faint shuffling sound. It makes you very nervous.
+~
+23 9 0
+D4
+~
+~
+0 0 2352
+D5
+~
+~
+0 0 2354
+D1
+~
+~
+0 0 2301
+S
+#2354
+The Cavern~
+You have entered a Huge underground cavern. There are exits in several 
+directions.
+~
+23 13 0
+D4
+~
+~
+0 0 2353
+D0
+~
+~
+0 0 2355
+D1
+~
+~
+0 0 2356
+S
+#2355
+A lighted room~
+There is an ornate altar here stained by the blood of the many sacrifices 
+performed on it. You see a another section of the room filled with books 
+full of arcane writing and a comfortable reading desk. In the other corner 
+you see a bed fit for a God. You feel strangley relaxed, as if you will
+never leave this place. 
+
+		In fact you won't without MAGICAL HELP!!!!
+
+~
+23 12 0
+S
+#2356
+A Damp tunnel~
+You are in a damp tunnel it smells of death and decay. Sounds come from all 
+around you. Is it just an echo??
+~
+23 9 0
+D1
+~
+~
+0 0 2357
+D3
+~
+~
+0 0 2354
+S
+#2357
+A Damp tunnel~
+You are in a damp tunnel. You see an exit to the North.
+~
+23 9 0
+D3
+~
+~
+0 0 2356
+D0
+~
+~
+0 0 2358
+S
+#2358
+An ancient ruined hallway~
+You have entered what seems to be an ancient hallway of a long destroyed 
+castle. You can tell it was once a very great structure but now debris is 
+everywhere.
+~
+23 9 1
+D2
+~
+~
+0 0 2357
+D0
+~
+~
+0 0 2359
+S
+#2359
+A ruined Hallway~
+The debris thins out here and you sense a great evil ahead. It sends 
+shivers up your spine.
+~
+23 9 1
+D2
+~
+~
+0 0 2358
+D1
+~
+~
+0 0 2360
+S
+#2360
+A Grand Hall~
+You stand in an immense hall. There are long faded murals painted here of
+many vile deeds and sacrifices to Karn and Sinat. The pictures almost make 
+you sick.
+~
+23 9 1
+D3
+~
+~
+0 0 2359
+D1
+~
+~
+0 0 2361
+S
+#2361
+A Dining Hall~
+You stand now in a large room with a long table in the center. Many 
+skeletons lie slumped on the table as if they had been poisoned sitting at 
+the table. You can almost hear the laughter of the ones who were 
+responsible.
+~
+23 9 1
+D3
+~
+~
+0 0 2360
+D2
+~
+~
+0 0 2362
+S
+#2362
+The Kitchen~
+The stench here makes you gag. It smells of rotten flesh and filth you see 
+a door to the South.
+~
+23 9 1
+D0
+~
+~
+0 0 2361
+D2
+~
+~
+0 0 2363
+S
+#2363
+The Pantry~
+A room the size of a closet. Many long rotten foodstuffs are here.
+~
+23 9 1
+D0
+~
+~
+0 0 2362
+D5
+~
+~
+0 0 2364
+S
+#2364
+The Broken Stairs~
+This Staircase is in ruins you hope it will support your weight.
+~
+23 9 1
+D4
+~
+~
+0 0 2363
+D5
+~
+~
+0 0 2365
+S
+#2365
+A hallway~
+You are in a huge hallway to then north you see a bright light.
+~
+23 9 1
+D4
+~
+~
+0 0 2364
+D0
+~
+~
+0 0  2366
+S
+#2366
+The Grand Cathedral of Evil~
+You are in awe of this place. You cannot find words to describe the horrors
+potrayed on the walls here. The floor is covered with a slick substance it 
+looks like blood and entrails. As you enter a huge slab of stone seal the 
+only exit to this room. You are TRAPPED!
+~
+23 12 1
+S
+#2369
+Sinat's Library~
+You stand in a very comfortable library. The shelves of books run all
+the way to the ceiling. The room is filled with luxurious furniture and 
+items. In the corner is a large four posted bed. A large ornate desk sits 
+against North wall on the desk sits a strange object you have never seen, 
+an inscription on it says "AMIGA 2000 HD".
+~
+23 2560 0
+D2
+~
+~
+0 0 2370
+D4
+~
+~
+0 0 3054
+S
+#2370
+Karn's Sanctum~
+If you are here you better have been invited, or be mel :)
+There is a huge fireplace against the South wall. There is no fire but it 
+does give off heat. There is a huge canopy bed against the North wall. And 
+against the west wall is a very elaborate desk, and on this desk sits an 
+Amiga 2000 HD.
+~
+23 2560 0
+D2
+~
+~
+0 0 2369
+D4
+~
+~
+0 0 3054
+S
+#99999
+$~

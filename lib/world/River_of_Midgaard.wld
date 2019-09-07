@@ -1,0 +1,372 @@
+#3200
+Under the Bridge~
+   The arch under the bridge is covered by seaweed for one foot above the
+surface of the river.  The water gently flows through an opening in the lower
+part of the city wall.
+~
+32 0 7
+D1
+~
+~
+0 -1 3201
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  Looks pretty solid.
+~
+D3
+~
+~
+0 -1 9500
+S
+#3201
+On the River~
+   North of here you see the miserable buildings of the poor alley.  The
+river flows east from the bridge.  The riverbanks are too steep to climb.
+~
+32 0 7
+D1
+~
+~
+0 -1 3202
+D3
+~
+~
+0 -1 3200
+S
+#3202
+On the River~
+   North of here you see the dump.  The river flows from west to east.  The
+riverbanks are too steep to climb.
+~
+32 0 7
+D1
+~
+~
+0 -1 3203
+D2
+~
+~
+0 -1 2800
+D3
+~
+~
+0 -1 3201
+S
+#3203
+On the River~
+   The levee is directly north of here.  The river flows in a west to east
+direction.
+~
+32 12 7
+D0
+~
+~
+0 -1 3049
+D1
+~
+~
+0 -1 3204
+D2
+~
+~
+0 -1 5001
+D3
+~
+~
+0 -1 3202
+S
+#3204
+On the River~
+   You see the warehouse on the northern riverbank.  East of here you see the
+city wall.  The river flows east from the levee.
+~
+32 0 7
+D1
+~
+~
+0 -1 3205
+D3
+~
+~
+0 -1 3203
+S
+#3205
+On the River~
+   The river flows through the city here.
+~
+32 0 7
+D1
+~
+~
+0 -1 3206
+D3
+~
+~
+0 -1 3204
+S
+#3206
+On the River~
+   The river flows smoothly here.
+~
+32 0 7
+D1
+~
+~
+0 -1 3207
+D3
+~
+~
+0 -1 3205
+S
+#3207
+On the River~
+   The river continues.  
+~
+32 0 7
+D1
+~
+~
+0 -1 3208
+D3
+~
+~
+0 -1 3206
+S
+#3208
+On the River~
+   The river exhibits a little turbulence here.
+~
+32 0 7
+D1
+~
+~
+0 -1 3209
+D3
+~
+~
+0 -1 3207
+S
+#3209
+On the river~
+   From here, the river flows east to the ocean.  West of here is Midgaard.
+~
+32 0 7
+D1
+~
+~
+0 -1 3210
+D3
+~
+~
+0 -1 3208
+S
+#3210
+On the river~
+   From here, the river flows east to the ocean.
+~
+32 0 7
+D1
+~
+~
+0 -1 3211
+D3
+~
+~
+0 -1 3209
+S
+#3211
+On the river~
+   From here, the river flows east to the ocean. To the west is Midgaard.
+~
+32 0 7
+D1
+~
+~
+0 -1 3212
+D3
+~
+~
+0 -1 3210
+S
+#3212
+On the river~
+   From here, the river flows east to the ocean.  On the north bank is an old
+dock.  To the south you see a very large tree.
+~
+32 0 7
+D0
+~
+~
+0 -1 2100
+D1
+~
+~
+0 -1 3213
+D3
+~
+~
+0 -1 3211
+S
+#3213
+On the river~
+   From here, the river flows east to the ocean.  West of here is Midgaard.
+~
+32 0 7
+D1
+~
+~
+0 -1 3214
+D3
+~
+~
+0 -1 3212
+S
+#3214
+On the river~
+   From here, the river flows east to the ocean.
+~
+32 0 7
+D1
+~
+~
+0 -1 3215
+D2
+~
+~
+0 -1 23301
+D3
+~
+~
+0 -1 3213
+S
+#3215
+The Mouth of the River~
+   You are at the mouth of the river.  To the east, the river opens
+into the ocean.
+~
+32 0 7
+D1
+~
+~
+0 -1 3220
+D3
+~
+~
+0 -1 3214
+S
+#3220
+The Ocean~
+   You are on the ocean.  The mouth of the river is west of here.
+~
+32 0 7
+D1
+~
+~
+0 -1 4201
+D3
+~
+~
+0 -1 3215
+S
+#3221
+Entrance to OUTLAW guild~
+ 여기는 깡패파 아지트의 입구입니다.
+ 매우 살벌한 기운을 느낍니다.
+JOIN or LEAVE
+~
+30 4614 0
+D0
+~
+~
+0 -1 3222
+D2
+~
+~
+0 -1 3041
+S
+#3222
+Practice yard of OUTLAW guild~
+ 여기저기서 비명 소리가 들립니다.
+ 막대기,쇠망치,깨진병을 들고 깡패들이 싸움을 합니다.
+ 당신도 저 틈에 들어가 목숨을 걸고 살아나야 합니다.
+train or list
+~
+30 4614 0
+D0
+~
+~
+0 -1 3223
+D1
+~
+~
+0 -1 3224
+D2
+~
+~
+0 -1 3221
+D3
+~
+~
+0 -1 3225
+D4
+~
+~
+0 -1 3226
+S
+#3223
+Boss room of OUTLAW guild~
+ 빨간 카페트 건너편에 당신의 보스가 파이프를 빨며 앉아있습니다.
+ 긴 탁자에 둘러싼 부하들이 험상궂게 생겼군요.
+~
+30 4614 0
+D2
+~
+~
+0 -1 3222
+S
+#3224
+Secret room of OUTLAW guild~
+ 여기선 다른 사람에 관계없이 마음대로 행동할 수 있습니다.
+ 칸칸이 막힌 방마다 사람들이 들어가 뽕을 맞고 여자를 즐깁니다.
+ 당신도 즐기시렵니까?
+~
+30 37382 0
+D3
+~
+~
+0 -1 3222
+E
+sign
+~
+SAVE
+LOAD
+~
+S
+#3225
+ E X I T~
+ 비상구
+~
+30 4614 0
+D1
+~
+~
+0 -1 3222
+D3
+~
+~
+0 -1 3001
+S
+#3226
+ Board room of OUTLAW guild~
+ 보드에 청부받은 인간을 적는 모양입니다.
+ 그 결과도 적나보죠?
+~
+30 4102 0
+D5
+~
+~
+0 -1 3222
+S
+#99999
+$~

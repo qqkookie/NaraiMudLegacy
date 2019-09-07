@@ -1,0 +1,2820 @@
+#30001
+Pride land~
+당신의 눈 앞에는 너무나도 광활한 대지와 평야가 펼쳐지고 있습니다
+동물들이 평화롭게 노닐고 있으며 어디에선가 들리는 사자의 포효소리가 이채롭게 느 껴집니다..
+하지만 조심하십시오. 당신약할수록 덤벼드는 종족이 있으니깐. 
+~
+300 12 1
+D1
+~
+~
+0 -1 30002
+D3
+~
+~
+0 -1 30008
+S
+#30002
+Pride land~
+당신의 눈 앞에는 너무나도 광활한 대지와 평야가 펼쳐지고 있습니다
+동물들이 평화롭게 노닐고 있으며 어디에선가 들리는 사자의 포효소리가 이채롭게 느 껴집니다..
+하지만 조심하십시오. 당신약할수록 덤벼드는 종족이 있으니깐. 
+~
+300 12 1
+D1
+~
+~
+0 -1 30003
+D3
+~
+~
+0 -1 30001
+S
+#30003
+Pride land~
+당신의 눈 앞에는 너무나도 광활한 대지와 평야가 펼쳐지고 있습니다
+동물들이 평화롭게 노닐고 있으며 어디에선가 들리는 사자의 포효소리가 이채롭게 느 껴집니다..
+하지만 조심하십시오. 당신약할수록 덤벼드는 종족이 있으니깐. 
+~
+300 12 1
+D1
+~
+~
+0 -1 30004
+D3
+~
+~
+0 -1 30002
+S
+#30004
+Discussion Square~
+여러 종족들이 모여서 토의를 하는 장소 입니다.
+괸히 끼어들면 봉변을 당할 수 도 있지요.
+같 테어난 어린 영 주의 모습이 보입니다.
+~
+300 12 1
+D0
+~
+~
+0 -1 30006
+D1
+~
+~
+0 -1 30005
+D2
+~
+~
+0 -1 30004
+D3
+~
+~
+0 -1 30003
+S
+#30005
+Discussion Square~
+여러 종족들이 모여서 토의를 하는 장소 입니다.
+괸히 끼어들면 봉변을 당할 수 도 있지요.
+같 테어난 어린 영 주의 모습이 보입니다.
+~
+300 12 1
+D0
+~
+~
+0 -1 30007
+D1
+~
+~
+0 -1 30006
+D2
+~
+~
+0 -1 30005
+D3
+~
+~
+0 -1 30004
+S
+#30006
+Discussion Square~
+여러 종족들이 모여서 토의를 하는 장소 입니다.
+괸히 끼어들면 봉변을 당할 수 도 있지요.
+같 테어난 어린 영 주의 모습이 보입니다.
+~
+300 12 1
+D0
+~
+~
+0 -1 30006
+D1
+~
+~
+0 -1 30007
+D2
+~
+~
+0 -1 30004
+D3
+~
+~
+0 -1 30006
+S
+#30007
+Discussion Square~
+여러 종족들이 모여서 토의를 하는 장소 입니다.
+괸히 끼어들면 봉변을 당할 수 도 있지요.
+같 테어난 어린 영 주의 모습이 보입니다.
+~
+300 12 1
+D0
+~
+~
+0 -1 30007
+D1
+~
+~
+0 -1 30007
+D2
+~
+~
+0 -1 30005
+D3
+~
+~
+0 -1 30006
+S
+#30008
+Pride fantisia~
+당신은 여기서 부턴 그야 말로 환타지 한 경험을 합니다..
+생각만 해도 늘 해질 그런 경험이지요. 
+~
+300 12 1
+D0
+~
+~
+0 -1 30009
+D1
+~
+~
+0 -1 30001
+D2
+~
+~
+0 -1 30012
+D3
+~
+~
+0 -1 30008
+S
+#30009
+Pride fantisia~
+당신은 여기서 부턴 그야 말로 환타지 한 경험을 합니다..
+생각만 해도 늘 해질 그런 경험이지요. 
+~
+300 12 1
+D0
+~
+~
+0 -1 30010
+D2
+~
+~
+0 -1 30008
+S
+#30010
+Pride fantisia~
+당신은 여기서 부턴 그야 말로 환타지 한 경험을 합니다..
+생각만 해도 늘 해질 그런 경험이지요. 
+~
+300 12 1
+D1
+~
+~
+0 -1 30011
+S
+#30011
+Comic place~
+화끈한 경험을 유해 잠시 숨을 도리고, 다시 한번 도전 하곳..
+당신은 당신도 모르게 흥분되 있음을 발견합니다.
+~
+300 12 1
+D0
+~
+~
+0 -1 30011
+D1
+~
+~
+0 -1 30011
+D2
+~
+~
+0 -1 30014
+D3
+~
+~
+0 -1 30010
+S
+#30012
+A small bush~
+좁은 길을 지나야하는 군요.
+난 생각 보다 쪘다는 것이 여실히 증명되는 이길에서 그들을 만난다면 큰일일 텐데..
+가시덤 불을 해쳐서 앞으로 나갑시다.
+~
+300 12 1
+D0
+~
+~
+0 -1 30008
+D2
+~
+~
+0 -1 30013
+S
+#30013
+Comic Zone~
+겨우 힘들게 올아 온곳에서 당신은 시원한 바람을 느낄수 있습니다.
+상쾌하다는 기분에만 취해있기에는 너무나도 위험한곳이 아닐런지.
+~
+300 12 1
+D0
+~
+~
+0 -1 30012
+D1
+~
+~
+0 -1 30014
+D2
+~
+~
+0 -1 30013
+D3
+~
+~
+0 -1 30013
+S
+#30014
+Comic Zone~
+겨우 힘들게 올아 온곳에서 당신은 시원한 바람을 느낄수 있습니다.
+상쾌하다는 기분에만 취해있기에는 너무나도 위험한곳이 아닐런지.
+~
+300 12 1
+D0
+~
+~
+0 -1 30011
+D1
+~
+~
+0 -1 30014
+D2
+~
+~
+0 -1 30014
+D3
+~
+~
+0 -1 30013
+D4
+~
+~
+0 -1 3001
+S
+#31001
+The Way to KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+You can see some board here.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31002
+D1
+~
+~
+0 -1 3001
+E
+board~
+************************************
+* I(Nimp) am making zone..KAIST....*
+* Soon will be made for you........*
+************************************
+~
+S
+#31002
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31003
+D2
+~
+~
+0 -1 31001
+S
+#31003
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31004
+D2
+~
+~
+0 -1 31002
+S
+#31004
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31005
+D2
+~
+~
+0 -1 31003
+S
+#31005
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31006
+D2
+~
+~
+0 -1 31004
+D3
+You can see the auto gate to the west at the entrance of 3 ho-gwan.
+~
+auto~
+4 31001 31007
+S
+#31006
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31006
+D2
+~
+~
+0 -1 31071
+S
+#31007
+The Entrance of 3 ho-gwan~
+You,at last,reach the entrance of 3 ho-gwan in which exist Industrial Design,some chemical laboratory and some lecture room for mechanics & electronics.
+You now stand at the base of this building.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31008
+D1
+~
+auto~
+4 31001 31005
+D2
+~
+~
+0 -1 31009
+S
+#31008
+Small Way in the 3 ho-gwan~
+You are in the building of 3 ho-gwan.
+You can see many lecture room here.
+Some room is full of students and professor.
+Please be quite & don't fight because they have to study for our contry.
+~
+310 4610 1
+D0
+You can see lecture room to the north.
+~
+door~
+2 31002 31010
+D1
+~
+~
+0 -1 31011
+D2
+~
+~
+0 -1 31007
+D3
+~
+~
+0 -1 31012
+S
+#31009
+The Other block of 3 ho-gwan~
+Here is the other block of this building.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31007
+D2
+~
+~
+0 -1 31009
+S
+#31010
+Lecture room 3001~
+You are in the lecture room
+In real,there is no place like this room in KAIST but you are in the SS society.So you must feel somewhat other place.
+~
+310 4610 1
+D2
+door~
+~
+4 31002 31008
+S
+#31011
+Small way to the stairs~
+You are beside the stairs.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31008
+D4
+stair~
+~
+4 31010 31013
+S
+#31012
+Room~
+You are sucked by this room.
+There is no exit.
+Hahaha..
+~
+310 4610 128
+S
+#31013 
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D2
+~
+~
+0 -1 31016
+D3
+~
+~
+0 -1 31014
+D4
+panty~
+~
+4 31011 31033
+D5
+stair~
+~
+2 31010 31011
+S
+#31014
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D1
+~
+~
+0 -1 31013
+D3
+~
+~
+0 -1 31015
+S
+#31015
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31020
+D1
+~
+~
+0 -1 31014
+S
+#31016
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31013
+D1
+~
+~
+0 -1 31025
+D2
+~
+~
+0 -1 31017
+D3
+~
+~
+0 -1 31024
+S
+#31017 
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31016
+D2
+~
+~
+0 -1 31018
+S
+#31018
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31017
+D2
+~
+~
+0 -1 31019
+S
+#31019 
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31018
+S
+#31020
+Second floor of 3 ho-gwan~
+You are at the 2nd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31021
+D1
+~
+~
+0 -1 31023
+D2
+~
+~
+0 -1 31015
+D3
+~
+~
+0 -1 31022
+S
+#31021
+The Room 3201~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31020
+S
+#31022
+The Room 3202~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31020
+S
+#31023
+The Room 3203~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31020
+S
+#31024
+The Room 3204~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31016
+S
+#31025
+The Room 3205~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31016
+S
+#31033 
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D2
+~
+~
+0 -1 31036
+D3
+~
+~
+0 -1 31034
+D4
+two~
+~
+4 31012 31053
+D5
+panty~
+~
+2 31011 31013
+S
+#31034
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D1
+~
+~
+0 -1 31033
+D3
+~
+~
+0 -1 31035
+S
+#31035
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31040
+D1
+~
+~
+0 -1 31034
+S
+#31036
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31033
+D1
+~
+~
+0 -1 31045
+D2
+~
+~
+0 -1 31037
+D3
+~
+~
+0 -1 31044
+S
+#31037 
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31036
+D2
+~
+~
+0 -1 31038
+S
+#31038
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31037
+D2
+~
+~
+0 -1 31039
+S
+#31039 
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31038
+S
+#31040
+Third floor of 3 ho-gwan~
+You are at the 3rd floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31041
+D1
+~
+~
+0 -1 31043
+D2
+~
+~
+0 -1 31035
+D3
+~
+~
+0 -1 31042
+S
+#31041
+The Room 3301~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31040
+S
+#31042
+The Room 3302~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31040
+S
+#31043
+The Room 3303~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31040
+S
+#31044
+The Room 3304~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31036
+S
+#31045
+The Room 3305~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31036
+S
+#31053 
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D2
+~
+~
+0 -1 31056
+D3
+~
+~
+0 -1 31054
+D5
+two~
+~
+2 31012 31033
+S
+#31054
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D1
+~
+~
+0 -1 31053
+D3
+~
+~
+0 -1 31055
+S
+#31055
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31060
+D1
+~
+~
+0 -1 31054
+S
+#31056
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31053
+D1
+~
+~
+0 -1 31065
+D2
+~
+~
+0 -1 31057
+D3
+~
+~
+0 -1 31064
+S
+#31057 
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31056
+D2
+~
+~
+0 -1 31058
+S
+#31058
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31057
+D2
+~
+~
+0 -1 31059
+S
+#31059 
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31058
+D4
+prof~
+~
+4 31013 31066
+S
+#31060
+Fourth floor of 3 ho-gwan~
+You are at the 4th floor of this building.
+You can see more room & some ID student.
+Don't hurt their fleeings because they fight well.
+~
+310 4610 2 
+D0
+~
+~
+0 -1 31061
+D1
+~
+~
+0 -1 31063
+D2
+~
+~
+0 -1 31055
+D3
+~
+~
+0 -1 31062
+D5
+~
+~
+0 -1 3001
+S
+#31061
+The Room 3401~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31060
+S
+#31062
+The Room 3402~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31060
+S
+#31063
+The Room 3403~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31060
+S
+#31064
+The Room 3404~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31056
+S
+#31065
+The Room 3405~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31056
+S
+#31066
+Way in tower~
+You are going to the tower where small beautiful girl lives.
+She looks like an angel.
+You'd better be her friend for your festival or canival.
+~
+310 4610 1
+D4
+~
+~
+0 -1 31067
+D5
+prof~
+~
+2 31013 31059
+S
+#31067
+Way in tower~
+You are going to the tower where small beautiful girl lives.
+She looks like an angel.
+You'd better be her friend for your festival or canival.
+~
+310 4610 1
+D4
+~
+~
+0 -1 31068
+D5
+~
+~
+0 -1 31066
+S
+#31068
+Way in tower~
+You are going to the tower where small beautiful girl lives.
+She looks like an angel.
+You'd better be her friend for your festival or canival.
+~
+310 4610 1
+D4
+~
+~
+0 -1 31069
+D5
+~
+~
+0 -1 31067
+S
+#31069
+Way in tower~
+You are going to the tower where small beautiful girl lives.
+She looks like an angel.
+You'd better be her friend for your festival or canival.
+~
+310 4610 1
+D4
+~
+~
+0 -1 31070
+D5
+~
+~
+0 -1 31068
+S
+#31070
+Top of tower~
+You are standing in the top of tower.
+You can see a beautiful campus in front of you.
+You feels some warm feelings that you are to like this campus.
+~
+310 4610 1
+D5
+~
+~
+0 -1 31059
+S
+#31071
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledg.
+Here is the big way.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31072
+D4
+~
+~
+0 -1 31071
+S
+#31072
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31073
+D2
+~
+~
+0 -1 31071
+S
+#31073
+The Way in KAIST~
+You are in the way to the Korea Advanced Institute of Science & Technoledge.
+Here is the big way.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31072
+D3
+~
+~
+0 -1 31074
+S
+#31074
+Grass field~
+You are standing in the grass beside KAIST campus building.
+So peaceful and so beautiful.
+You feels that you are going to like this campus.
+You can see many flowers also.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31075
+D1
+~
+~
+0 -1 31076
+D2
+~
+~
+0 -1 31001
+D3
+~
+~
+0 -1 31006
+S
+#31075
+Grass field~
+You are standing in the grass beside KAIST campus building.
+So peaceful and so beautiful.
+You feels that you are going to like this campus.
+You can see many flowers also.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31075
+D1
+~
+~
+0 -1 31076
+D2
+~
+~
+0 -1 31074
+D3
+~
+~
+0 -1 31073
+S
+#31076
+Grass field~
+You are standing in the grass beside KAIST campus building.
+So peaceful and so beautiful.
+You feels that you are going to like this campus.
+You can see many flowers also.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31006
+D1
+~
+~
+0 -1 31076
+D2
+~
+~
+0 -1 31073
+D3
+~
+~
+0 -1 31077
+S
+#31077
+Grass field~
+You are standing in the grass beside KAIST campus building.
+So peaceful and so beautiful.
+You feels that you are going to like this campus.
+You can see many flowers also.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31009
+D1
+~
+~
+0 -1 31076
+D2
+~
+~
+0 -1 31078
+D3
+~
+~
+0 -1 31075
+S
+#31078
+Grass field~
+You are standing in the grass beside KAIST campus building.
+So peaceful and so beautiful.
+You feels that you are going to like this campus.
+You can see many flowers also.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31073
+D1
+~
+~
+0 -1 31076
+D2
+~
+~
+0 -1 31001
+D3
+~
+~
+0 -1 31079
+S
+#31079
+Entrance of 2 ho-gwan~
+At last,you reach the 2 ho-gwan.
+Electronics & satelite laboratory situated in this building.
+You can see the accent door to the north.
+~
+310 4610 1
+D0
+door~
+~
+4 31009 31080
+D1
+~
+~
+0 -1 31078
+S
+#31080
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31088
+D2
+~
+~
+0 -1 31079
+D3
+~
+~
+0 -1 31081
+S
+#31081
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1 
+~
+~
+0 -1 31080
+D2
+~
+~
+0 -1 31098
+D3
+~
+~
+0 -1 31082
+S
+#31082
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1 
+~
+~
+0 -1 31081
+D3
+~
+~
+0 -1 31083
+S
+#31083
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31097
+D1 
+~
+~
+0 -1 31082
+D3
+~
+~
+0 -1 31084
+S
+#31084
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1 
+~
+~
+0 -1 31083
+D2
+~
+~
+0 -1 31085
+S
+#31085
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31084
+D2
+~
+~
+0 -1 31086
+S
+#31086
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31085
+D1 
+~
+~
+0 -1 31092
+D2
+~
+~
+0 -1 31087
+S
+#31087
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31086
+D3
+~
+~
+0 -1 31094
+D4
+chueum~
+~
+4 31014 31100
+S
+#31088
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31096
+D2
+~
+~
+0 -1 31089
+D3
+~
+~
+0 -1 31080
+S
+#31089
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31088
+D1
+~
+~
+0 -1 31099
+D2
+~
+~
+0 -1 31090
+S
+#31090
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31089
+D2
+~
+~
+0 -1 31091
+S
+#31091
+First floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31090
+D3
+~
+~
+0 -1 31095
+S
+#31092
+Laboratory of Physics~
+You enter the laboratory of physics.
+Some equipment for physical experiments are here and there.
+Mass,Velocity,Accerarate..
+Are you good at solving this problems?
+~
+310 4610 1
+D2
+~
+~
+0 -1 31093
+D3
+~
+~
+0 -1 31086
+S
+#31093
+Laboratory of Physics~
+You enter the laboratory of physics.
+Some equipment for physical experiments are here and there.
+Mass,Velocity,Accerarate..
+Are you good at solving this problems?
+~
+310 4610 1
+D0
+~
+~
+0 -1 31092
+S
+#31094
+Lecture Room 2101~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31087
+S
+#31095
+Lecture room 2109~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31091
+S
+#31096
+Cash machine center~
+The cash machine from The Bank hanil equiped here.
+But someone else maybe break the machine.
+So there is big TONES of coins.
+Happy.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31088
+S
+#31097
+Service Room for Electronics~
+You are in front of the desk.
+At the desk,a beautiful girl stands for your issue.
+You are happy.
+Because you feel that she likes you.
+KUM KKAE!!
+~
+310 4610 1
+D2
+~
+~
+0 -1 31083
+S
+#31098
+Lecture room 2106~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31081
+S
+#31099
+Lecture room 2108~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31089
+S
+#31100
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31108
+D3
+~
+~
+0 -1 31101
+D5
+~
+~
+0 -1 31087
+S
+#31101
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1 
+~
+~
+0 -1 31100
+D2
+~
+~
+0 -1 31112
+D3
+~
+~
+0 -1 31102
+S
+#31102
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1 
+~
+~
+0 -1 31101
+D3
+~
+~
+0 -1 31103
+S
+#31103
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31112
+D1 
+~
+~
+0 -1 31102
+D3
+~
+~
+0 -1 31104
+S
+#31104
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1 
+~
+~
+0 -1 31103
+D2
+~
+~
+0 -1 31105
+D4
+duche~
+~
+4 31015 31119
+S
+#31105
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31104
+D2
+~
+~
+0 -1 31106
+D3
+~
+~
+0 -1 31113
+S
+#31106
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31105
+D1
+~
+~
+0 -1 31112
+D2
+~
+~
+0 -1 31107
+S
+#31107
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31106
+D5
+~
+~
+0 -1 31112
+S
+#31108
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31115
+D2
+~
+~
+0 -1 31109
+D3
+~
+~
+0 -1 31100
+S
+#31109
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0 
+~
+~
+0 -1 31108
+D2
+~
+~
+0 -1 31110
+D4
+~
+~
+0 -1 31112
+S
+#31110
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31109
+D1
+~
+~
+0 -1 31114
+D2
+~
+~
+0 -1 31111
+D3
+~
+~
+0 -1 31112
+S
+#31111
+Second floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31110
+D4
+~
+~
+0 -1 31010
+S
+#31112
+우 리 별 연 구 센 터~
+Maybe you heard of this project.
+We are all proud of this success.
+From now on we are going to the SPACE CENTRY.
+So we have to be the base stone of this campus.
+We have to believe students of KAIST.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31107
+D1
+~
+~
+0 -1 31116
+D2
+~
+~
+0 -1 31118
+D3
+~
+~
+0 -1 31106
+S
+#31113
+The Room 2202~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31105
+S
+#31114
+The Room 2207~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D3
+~
+~
+0 -1 31110
+S
+#31115
+The Room 2205~
+You are standing in the mid of lecture.
+So you disturb the lecture.
+Many students and professor are angry with you rude entrance.
+You'd better appalogize to them or flee.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31108
+S
+#31116
+우 리 별 연 구 센 터~
+Maybe you heard of this project.
+We are all proud of this success.
+From now on we are going to the SPACE CENTRY.
+So we have to be the base stone of this campus.
+We have to believe students of KAIST.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31110
+D2
+~
+~
+0 -1 31117
+D3
+~
+~
+0 -1 31112
+S
+#31117
+우 리 별 연 구 센 터~
+Maybe you heard of this project.
+We are all proud of this success.
+From now on we are going to the SPACE CENTRY.
+So we have to be the base stone of this campus.
+We have to believe students of KAIST.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31116
+D1
+~
+~
+0 -1 31109
+D3
+~
+~
+0 -1 31118
+S
+#31118
+우 리 별 연 구 센 터 ~
+Maybe you heard of this project.
+We are all proud of this success.
+From now on we are going to the SPACE CENTRY.
+So we have to be the base stone of this campus.
+We have to believe students of KAIST.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31112
+D1
+~
+~
+0 -1 31117
+D2
+~
+~
+0 -1 31117
+D3
+~
+~
+0 -1 31107
+S
+#31119
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31120
+D1
+~
+~
+0 -1 31129
+D2
+~
+~
+0 -1 31123
+D3
+~
+~
+0 -1 31126
+D5
+~
+~
+0 -1 31104
+S
+#31120
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31121
+D2
+~
+~
+0 -1 31119
+S
+#31121
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31122
+D2
+~
+~
+0 -1 31120
+S
+#31122
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31130
+D2
+~
+~
+0 -1 31121
+D3
+~
+~
+0 -1 31128
+S
+#31123
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31119
+D2
+~
+~
+0 -1 31122
+S
+#31124
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31125
+D4
+seche ~
+~
+4 31016 31131
+S
+#31125
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31124
+D1
+~
+~
+0 -1 31130
+D3
+~
+~
+0 -1 31128
+S
+#31126
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31119
+D3
+~
+~
+0 -1 31127
+S
+#31127
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31126
+D3
+~
+~
+0 -1 31128
+S
+#31128
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31122
+D1
+~
+~
+0 -1 31127
+D2
+~
+~
+0 -1 31125
+S
+#31129
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31130
+D3
+~
+~
+0 -1 31119
+S
+#31130
+Third floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31122
+D2
+~
+~
+0 -1 31125
+D3
+~
+~
+0 -1 31129
+S
+#31131
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31146
+D1
+~
+~
+0 -1 31138
+D3
+~
+~
+0 -1 31132
+S
+#31132
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31131
+D2
+~
+~
+0 -1 31133
+S
+#31133
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31132
+D2
+~
+~
+0 -1 31134
+D3
+~
+~
+0 -1 31143
+S
+#31134
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31133
+D1
+~
+~
+0 -1 31135
+D2
+~
+~
+0 -1 31151
+S
+#31135
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31136
+D2
+~
+~
+0 -1 31148
+D3
+~
+~
+0 -1 31134
+S
+#31136
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31137
+D3
+~
+~
+0 -1 31135
+S
+#31137
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31138
+D1
+~
+~
+0 -1 31139
+D2
+~
+~
+0 -1 31136
+S
+#31138
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31150
+D2
+~
+~
+0 -1 31137
+D3
+~
+~
+0 -1 31131
+S
+#31139
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31140
+D3
+~
+~
+0 -1 31137
+S
+#31140
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31141
+D3
+~
+~
+0 -1 31139
+S
+#31141
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31140
+D2
+~
+~
+0 -1 31142
+S
+#31142
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31141
+D2
+~
+~
+0 -1 31153
+S
+#31143
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31133
+D3
+~
+~
+0 -1 31144
+S
+#31144
+Top floor of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31145
+D1
+~
+~
+0 -1 31143
+S
+#31145
+Top of EE building~
+You are standing on the way in EE building know 2 ho-gwan.
+You can see EE students and professors.
+The future of Korea depends on this students.
+So don't disturb their study.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31152
+D2
+~
+~
+0 -1 31144
+S
+#31146
+Laboratory of Micro Wave~
+You are looking at prospective scientists here.
+They are working hard.
+You look some lader and some bread boards.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31131
+D3
+~
+~
+0 -1 31147
+S
+#31147
+Laboratory of Micro Wave~
+You are looking at prospective scientists here.
+They are working hard.
+You look some lader and some bread boards.
+~
+310 4610 1
+D1
+~
+~
+0 -1 31146
+S
+#31148
+Laboratory of Electonic Circuits~
+You are standing in the lab E.C.
+They are designing a new circut and making breadboard with chips.
+Resistor,Conductor,Capacitor..
+Are you familiar at this?
+~
+310 4610 1
+D0
+~
+~
+0 -1 31135
+D1
+~
+~
+0 -1 31149
+S
+#31149
+Laboratory of Electonic Circuits~
+You are standing in the lab E.C.
+They are designing a new circut and making breadboard with chips.
+Resistor,Conductor,Capacitor..
+Are you familiar at this?
+~
+310 4610 1
+D3
+~
+~
+0 -1 31148
+S
+#31150
+Laboratory of Communication System~
+You entered the new lab C.S.
+You can see some wonderful things.
+Telephone,Modem,Satellet Communication,Cellular phone..
+They are improving these.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31138
+S
+#31151
+Laboratory of Control System~
+You are standing in front of CS lab.
+You can see some robot arm.
+Maybe automation will be happen because here are the scientists.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31134
+S
+#31152
+Laboratory of Computer System~
+Are you heard of the 487 chip?
+Our proffesor invented that chip for the first time in our country.
+This chip is the basic element of pentium chip.
+~
+310 4610 1
+D2
+~
+~
+0 -1 31145
+S
+#31153
+Secret way to Electrical King~
+You are standing in the King Way.
+You are not a powerful player.
+You Are not a powerful player.
+You Are Not A Powerful Player.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31142
+D2
+computer~
+~
+4 31017 31154
+S
+#31154
+Secret way to Electrical King~
+You are standing in the King Way.
+You are not a powerful player.
+You Are not a powerful player.
+You Are Not a powerful player.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31153
+D2
+micro~
+~
+4 31018 31155
+S
+#31155
+Secret way to Electrical King~
+You are standing in the King Way.
+You are not a powerful player.
+You Are not a powerful player.
+You Are Not a powerful player.
+You Are Not A powerful player.
+You Are Not A Powerful player.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31154
+D2
+communication~
+~
+4 31019 31156
+S
+#31156
+Secret way to Electrical King~
+You are standing in the King Way.
+You are not a powerful player.
+You Are not a powerful player.
+You Are Not a powerful player.
+You Are Not A powerful player.
+You Are Not A Powerful player.
+You Are Not A Powerful Player.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31155
+D2
+circuit~
+~
+4 31020 31157
+S
+#31157
+Secret way to Electrical King~
+You are standing in the King Way.
+You are not a powerful player.
+You Are not a powerful player.
+You Are Not a powerful player.
+You Are Not A powerful player.
+You Are Not A Powerful player.
+You Are Not A Powerful Player.
+You are so weak a player.
+~
+310 4610 1
+D0
+~
+~
+0 -1 31156
+D2
+control~
+~
+4 31021 31158
+S
+#31158
+Electrical King Room~
+You'd better flee or cast spell 'word'
+Here is electrical king.
+HE IS POWERFUL THAN YOU.
+~
+310 4610 1
+D0
+~
+~
+310 -1 31157
+D5
+~
+~
+310 -1 3001
+S
+#99999
+$~

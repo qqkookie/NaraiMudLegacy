@@ -1,0 +1,7 @@
+
+MudName      VieMud
+
+ItemFile     tobj.obj
+ItemTempFile ietemp.obj
+
+AffBitVector 1

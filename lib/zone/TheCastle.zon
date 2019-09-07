@@ -1,0 +1,75 @@
+The castle~
+299 25 2
+*
+M 0 201 1 235	butler
+M 0 201 1 224	butler
+M 0 202 1 273 	merlin
+G 1 6109 1	blue potion
+E 1 9002 2 6 	mages hat
+M 0 203 20 230 	servant
+M 0 203 20 232 	servant
+M 0 203 20 230 	servant
+M 0 203 20 232	servant
+M 0 203 20 230	servant
+M 0 203 20 230	servant
+M 0 203 20 227	servant
+M 0 204 3 228	cook
+M 0 204 3 228	cook
+M 0 204 3 228	cook
+M 0 205 1 261	jailer
+E 1 5107 2 16	give him sixheaded whip
+M 0 206 1 233	clergyman
+E 1 2207 1 3	holy symbol
+M 0 207 1 235	king
+E 1 7203 1 5	purple cloak
+M 0 208 1 235	queen
+O 1 202 1 233	chalice
+M 0 209 3 262	prisoner
+M 0 209 3 263	prisoner
+M 0 209 3 264	prisoner
+M 0 210 20 201	guard
+M 0 210 20 203	guard
+M 0 210 20 204	guard
+M 0 210 20 223	guard
+M 0 210 20 227	guard
+M 0 210 20 236	guard
+M 0 210 20 236	guard
+M 0 210 20 236	guard
+M 0 210 20 260	guard
+M 0 210 20 260	guard
+M 0 210 20 251	guard
+M 0 211 10 213	peasant
+M 0 211 10 214	peasant
+M 0 211 10 211	peasant
+M 0 211 10 212	peasant
+M 0 211 10 209	peasant
+M 0 211 10 210	peasant
+M 0 211 10 207	peasant
+M 0 211 10 208	peasant
+M 0 211 10 206	peasant
+M 0 211 10 205	peasant
+*
+D 0 221 3 1
+D 0 205 1 1
+*
+D 0 219 3 1
+D 0 207 1 1
+*
+D 0 215 1 1
+D 0 213 3 1
+*
+D 0 217 1 1
+D 0 211 3 1
+*
+D 0 228 0 1
+D 0 229 2 1
+*
+O 0 201 1 237             glass cabinet
+P 1 3046 1 201
+P 1 3075 1 201
+P 1 3070 1 201
+P 1 3080 1 201
+P 1 3085 1 201
+*
+S
+$~

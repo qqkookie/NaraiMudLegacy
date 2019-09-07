@@ -1,0 +1,234 @@
+#1400
+Toot's Dwelling~
+  Toot's is a simple, yet exquisite abode.  The walls are painted a light
+gray, with one square window on the far wall.  Photos of her friends are
+neatly tacked up.  The delightful sounds of Rush echo through the room.
+A Golden Retriever, named Steph, lies curled up in a corner.  There is a
+pile of black hair under the bed where another dog obviously once lay.
+~
+14 2568 0
+D5
+~
+~
+0 -1 3031
+S
+#1402
+A House~
+  This house, being built by Norton, is under construction.
+~
+14 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#1403
+A Southern Mansion~
+   You are in the main room of a Southern mansion.  There is a huge roaring
+fire, a huge rug, simple country furniture, wine by the fire, old books
+in a bookcase, and Roo's dog Cinnamon is by the fire.
+~
+14 2568 0
+S
+#1404
+Elbo's House~
+  This is a modified A-frame Ranch House with immaculate rugs
+and solid wooden frame furniture built by her husband.
+You are most welcome here, you are our guest!
+~
+14 2568 0
+S
+#1407
+Pokerthief's hideout~
+  You are now standing on the roof top of the Grunting Boar.
+Around you are piles and piles of broken beer bottles and
+cigarette butts. As you can see, this place is where Poker
+spends most of his spare time.
+~
+14 2568 0
+D5
+~
+~
+0 -1 3007
+S
+#1416
+Syn's House~
+  This house is under construction.
+~
+14 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#1417
+Dave's House~
+  This house is done.
+~
+14 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#1419
+God's House~
+  This house is God's House.  I guess that says it all.
+~
+14 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#1425
+A Large Tree~
+  You have climbed up into a large tree.  There are big branches and
+lots of leaves here (hell, it's a tree...).
+~
+14 4 4
+D4
+~
+branch~
+1 0 1426
+D5
+~
+~
+0 -1 3112
+S
+#1426
+A Large Nest~
+  You are in a large nest, high atop a large tree.  Some large
+bird probably lives here.
+~
+14 2052 4
+D5
+~
+branch~
+1 0 1425
+S
+#1450
+The Office~
+  You see a large messy desk, papers scattered about, photos of second-rate
+singers, dancers, and low-life comedians cover the wall behind the desk.  It
+is here that the manager of the Club Safari, affectionately known south of
+the border as "El Tigre", does his work.
+~
+14 520 0
+D5
+~
+~
+0 -1 1451
+S
+#1451
+Club Safari~
+   You hear dance music in the air, it makes you want to get loose
+and dance your head off.  The dancefloor is brought to life with
+dancing light that ricochets of the surrounding mirrors. You are in
+the Club lounge, get comfortable, and let your problems drift away.
+There is a long bar east of here, stocked with the finest liquors.
+~
+14 520 0
+D0
+~
+~
+0 -1 1453
+D2
+~
+~
+0 -1 1452
+D3
+~
+~
+0 -1 1454
+S
+#1452
+Some Small Rooms~
+   There are a few cheaply furnished rooms here.  The accomodations are
+not Park Avenue quality, but customers who drink too much at the Club
+usually don't mind.
+~
+14 2568 0
+D0
+~
+~
+0 -1 1451
+S
+#1453
+The Entrance to the Club Safari~
+  You are in the lobby of the Club Safari.  It is decorated in a style
+that is vaguely art-deco, with a little glitz thrown in for good measure.
+There is a sign here.
+~
+14 520 0
+D0
+~
+~
+0 -1 3044
+D2
+~
+~
+0 -1 1451
+E
+sign~
+ You can enter here from 12 level
+      - TooToo
+~
+S
+#1454
+The Bar in the Club Safari~
+  You are at the bar.  There is a large mirror behind the bar.  In front
+of the mirror is an assortment of bottles containing various wonderful
+elixers.  You can probably buy things here.
+~
+14 520 0
+D1
+~
+~
+0 -1 1451
+S
+#1470
+The Robert Bell Building~
+  This is the Robert Bell Building.  How nice.  You ask
+yourself, 'Who's Robert Bell?'
+  Beware of AGGRESSIVE Labbies in Room 134.
+~
+14 520 0
+D1
+~
+~
+0 -1 1471
+D2
+~
+~
+0 -1 3044
+D3
+~
+~
+0 -1 1472
+S
+#1471
+Room 134~
+  This is one of the Labs in the famous Robert Bell Building.  There
+are lots of terminals around here.  Looks like some DEC salesman made
+a real killing.
+~
+14 520 0
+D3
+~
+~
+0 -1 1470
+S
+#1472
+A BSU Dorm~
+  This is Ball State dorm room.  It's a mess, it stinks, it's full
+of junk.  It's like any dorm room anywhere.
+~
+14 2568 0
+D1
+~
+~
+0 -1 1470
+S
+#99999
+$~

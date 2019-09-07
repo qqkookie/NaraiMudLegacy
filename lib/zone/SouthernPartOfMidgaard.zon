@@ -1,0 +1,105 @@
+Southern part of Midgaard~
+3199 20 2
+*
+D 0 3110 1 2          Lock door from HQ to road
+D 0 3111 3 2          Lock door from road to HQ
+D 0 3129 2 2          Lock graveyard from outside
+D 0 3400 0 2          Lock graveyard from inside
+*
+O 0 3134 3 3101       Bench 1 at promenade
+O 0 3134 3 3102       Bench 2 at promenade
+O 0 3134 3 3103       Bench 3 at promenade
+*
+M 0 3100 1 3106       Maid in Park Cafe
+G 1 3100 500             A cup of tea
+G 1 3101 500             A cup of coffee
+G 1 3102 500             A cup of water
+*
+M 0 3120 1 3106       Sexton in Park Cafe
+G 1 3121 2               A rusty old key (to graveyard)
+*
+M 0 3121 1 3114       Swan in Pond
+M 0 3122 1 3114       Duckling in Pond
+M 0 3123 1 3109       Sparrow in Park
+M 0 3123 1 3136       Sparrow
+M 0 3124 2 3113       Duck 1 in Park
+M 0 3124 2 3114       Duck 1 in Park
+M 0 3124 2 3115       Duck 2 in Park
+M 0 6006 3 3115	      Squirrel
+M 0 6006 3 3123	      Squirrel
+M 0 6006 3 3124	      Squirrel
+M 0 6006 3 3124	      Squirrel
+M 0 6008 3 3140       Mouse
+M 0 6008 3 3140       Mouse
+*
+M 0 3140 1 3110       Chief (guard) in H.Q.
+G 1 3122 2               Give chief A wooden key to the desk.
+M 0 3141 4 3110       Mad Guard in H.Q.
+M 1 3141 4 3110       Mad Guard in H.Q.
+M 1 3141 4 3110       Mad Guard in H.Q.
+M 1 3141 4 3110       Mad Guard in H.Q.
+*
+*R 0 3110 3130         Remove the desk (if any)
+*R 0 3110 3131         Remove the safe (if any)
+O 0 3130 1 3110       Load the desk
+P 1 3123 1 3130         Put brass key in desk
+O 0 3131 1 3110       Load the safe
+P 1 3132 1 3131       Put money in safe
+*
+M 0 3060 20 3111      CityGuard 1
+G 1 3120 2                 Has an iron key to H.Q.
+M 0 3060 20 3111      CityGuard 2
+M 0 3060 20 3111      CityGuard 3
+M 0 3060 20 3111      CityGuard 4
+*
+M 0 3142 1 3137       Secretary at town hall
+M 0 3143 1 3138       Mayor at town hall
+E 1 3133 1 17              Has the City Key
+M 0 3061 2 3138		Janitor to clean the Mayor's Office
+*
+M 0 3144 1 3120       Town Crier
+M 0 3126 1 3012	      massacre
+E 1 3025 7 16
+M 0 3127 1 3013	      extremely hard
+E 1 3025 7 16
+M 0 3128 1 3014	      hit hard
+E 1 3025 7 16
+M 0 3129 1 3015       hit
+E 1 3025 7 16
+M 0 3130 1 3025	      barely hit
+E 1 3025 7 16
+M 0 3131 1 3026	      tickle
+E 1 3025 7 16
+M 0 3132 1 3024	      miss
+E 1 3025 7 16
+M 0 3133 1 3030       Musashi
+E 1 3026 1 16
+M 0 3134 7 3035       bombard
+M 0 3135 1 3034       Super DeathCure
+E 1 1317 1 20			Anti deathcure
+M 0 3125 1 3016       DeathCure
+E 1 1605 1 11
+E 1 2224 1 6
+E 1 2223 1 13 
+E 1 2244 1 1		brass ring
+E 1 2222 1 7
+M 0 3145 1 3014       Mom
+E 1 1315 4 16		give her a broom
+E 1 1326 2 3		give her a pendant
+E 1 1302 2 8            give her a bangard boots
+E 1 1622 2 17		give her a shotgun
+M 0 3146 1 3044       Suzy
+E 1 1320 8 6		give her some shades
+M 0 3147 5 3014       Street Urchins
+M 0 3147 5 3024
+E 1 1330 3 6            baseball cap
+M 0 3147 5 3026
+M 0 8000 1 3025		Shredder : Bag lady
+*
+M 0 3151 1 3045		A Bogan
+*
+O 0 3135 1 3141       Fountain on Penny Lane
+O 0 3136 1 3141       20 coins on Penny Lane
+*
+S
+$~

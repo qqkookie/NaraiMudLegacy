@@ -1,0 +1,1007 @@
+#1700
+A dimly lit path~
+   You tread through the deep, dark forest on a dimly lit path.  Up ahead you
+can hear the faint sounds of a village.
+~
+17 0 3
+D0
+~
+~
+0 -1 1701
+D3
+~
+~
+0 -1 1799
+S
+#1701
+A dimly lit path~
+   You tread through the deep, dark forest on a dimly lit path.  Up ahead you
+can hear the faint sounds of a village.
+~
+17 0 3
+D2
+~
+~
+0 -1 1700
+D0
+~
+~
+0 -1 1702
+S
+#1702
+A dimly lit path~
+   You tread through the deep, dark forest on a dimly lit path.  The forest
+here seems less dense than to the south.  Northward you see the faint outline
+of a village.
+~
+17 0 3
+D2
+~
+~
+0 -1 1701
+D0
+~
+~
+0 -1 1703
+S
+#1703
+Entrance to the Shire~
+   You stand at the entrance to the Shire.  You see halflings, no more than
+wee tall, every which way you look. Bywater Road leads east and west.
+~
+17 0 1
+D2
+~
+~
+0 -1 1702
+D1
+~
+~
+0 -1 1704
+D3
+~
+~
+0 -1 1718
+S
+#1704
+Bywater Road~
+   You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west while to the north lies the general store.
+~
+17 0 1
+D3
+~
+~
+0 -1 1703
+D0
+~
+~
+0 -1 1705
+D1
+~
+~
+0 -1 1706
+S
+#1705
+The General Store~
+   You are inside the general store.  All sorts of goodies are stacked on the
+many shelves.  Your local friendly shopkeeper is smiling patiently, waiting to 
+serve you to the best of his abilities.  The only exit is to the south.
+~
+17 8 0
+D2
+~
+~
+0 -1 1704
+S
+#1706
+Bywater Road~
+   You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west.  To the north, steps lead to a friendly looking
+weaponry/armory while a nursery lies to the south.
+~
+17 0 1
+D3
+~
+~
+0 -1 1704
+D1
+~
+~
+0 -1 1709
+D0
+~
+~
+0 -1 1707
+D2
+~
+~
+0 -1 1708
+S
+#1707
+The House of Arms~
+   You are inside the finest weapons and armour shop in all of Shiredom.  The
+shopkeeper proudly displays his fine wares and humbly offers the best daggers
+that you have ever laid eyes on.
+~
+17 8 0
+D2
+~
+~
+0 -1 1706
+S
+#1708
+Kid'n Keep~
+   You are inside Kid'n Keep, the convenient one-stop nursery that maintains
+the youth of the Shire.  Toddlers run every which way while their nursemaids
+sigh in exasperation.  The only exit lies to the north.
+~
+17 8 0
+D0
+~
+~
+0 -1 1706
+S
+#1709
+A bend in the road~
+   Bywater Road continues west and south.  A large, imposing building lies
+to the east.
+~
+17 0 1
+D3
+~
+~
+0 -1 1706
+D2
+~
+~
+0 -1 1712
+D1
+~
+~
+0 -1 1710
+S
+#1710
+Shiriff Post of the Eastern Shire~
+   You are in the Shiriff Post which acts as the nucleus for the three shiriffs
+of the Eastern Shire.  As you examine the shiriffs on duty, you come to realize
+that the halflings of the Shire are not to be reckoned with.  You cower with 
+awe.  A door offers passage to the east.
+~
+17 8 0
+D3
+~
+~
+0 -1 1709
+D1
+~
+door~
+1 0 1711
+S
+#1711
+Thain's Office~
+   You stand inside the office of the Thain, the police protectorate of the
+great Shire.  The Thain has sworn to protect the Shire from all thieves and
+murderers with his life, and so eyes you suspiciously.  A door to the west
+leads to the Shiriff Post.
+~
+17 8 0
+D3
+~
+door~
+1 0 1710
+S
+#1712
+Bywater Road~
+   You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the north and south.  To the east you spy the training grounds for
+shiriffs in training.
+~
+17 0 1
+D0
+~
+~
+0 -1 1709
+D2
+~
+~
+0 -1 1713
+D1
+~
+~
+0 -1 1717
+S
+#1713
+Bywater Road~
+   You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the north.  The private residences of Shire inhabitants are to
+the east and west while to the south lies the Ivy Bush, second only to the
+Green Dragon for its hospitality and service.
+~
+17 0 1
+D0
+~
+~
+0 -1 1712
+D1
+~
+~
+0 -1 1715
+D2
+~
+~
+0 -1 1716
+D3
+~
+~
+0 -1 1714
+S
+#1714
+A smial~
+   You are inside a smial, a hole in the ground which serves as the proper
+dwelling place for halflings.  As you look around this private abode, you feel
+as if you were intruding and so quickly cover your eyes.  The only exit lies
+to the east.
+~
+17 8 0
+D1
+~
+~
+0 -1 1713
+S
+#1715
+A smial~
+   You are inside a smial, a hole in the ground which serves as the proper
+dwelling place for halflings.  As you look around this private abode, you feel
+as if you were intruding and so quickly cover your eyes.  The only exit lies
+to the west.
+~
+17 8 0
+D3
+~
+~
+0 -1 1713
+S
+#1716
+The Ivy Bush~
+   You are in the Ivy Bush, one of the most famous inns in all of Shiredom.
+Chique Shire urbanites and seasoned travelers fill the confines of the room
+with gay and lively talk.  A jovial innkeeper stops all that he is doing to
+await your command.  The only exit lies to the north.
+~
+17 8 0
+D0
+~
+~
+0 -1 1713
+S
+#1717
+Shiriff Training Grounds~
+   The sounds of mock battle and feigned death cries fill your ears.  Every
+which way you turn you see halfling trainees at the prime of their youth.  A
+wizened old battle instructor meets your gaze and asks if he may be of 
+service.  The only exit lies to the west.
+~
+17 0 0
+D3
+~
+~
+0 -1 1712
+S
+#1718
+Bywater Road~
+   You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west.  A large, imposing building lies to the south.
+You catch a glimpse of the Brandywine River to the north.
+~
+17 0 1
+D1
+To the east you see the entrance to the Shire.
+~
+~
+0 -1 1703
+D2
+~
+~
+0 -1 1719
+D3
+~
+~
+0 -1 1720
+S
+#1719
+Shiriff Post of the Bridge~
+   You are in the Shiriff Post which acts as the nucleus for the three shiriffs
+of the Bridge.  As you examine the shiriffs on duty, you come to realize that
+the halflings of the Shire are not to be reckoned with.  You cower with awe.
+The only exit is to the north.
+~
+17 8 0
+D0
+~
+~
+0 -1 1718
+S
+#1720
+Bywater Road~
+   You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west.  To the south you spy the Grocer's Delight,
+the premium grocer's shop in all the realm while to the north lies Brandywine
+Bridge.
+~
+17 0 1
+D0
+~
+~
+0 -1 1731
+D1
+~
+~
+0 -1 1718
+D2
+~
+~
+0 -1 1721
+D3
+~
+~
+0 -1 1722
+S
+#1721
+The Grocer's Delight~
+   You tremble with ecstasy as the tempting odors of freshly made pipeweed
+bread fill your lungs.  Rumor has it that the pipeweed bread sold here can
+restore vitality.  You look around but find no one to take your order.  
+You then peep over the counter and discover a friendly grocer who is too 
+short to be seen over the counter.  The only exit is to the north.
+~
+17 8 0
+D0
+~
+~
+0 -1 1720
+S
+#1722
+Bywater Road~
+   You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east.  A small hill lies to the west while you can see a
+watermill to the far south.  You catch a glimpse of the Brandywine River to
+the north.
+~
+17 0 1
+D1
+~
+~
+0 -1 1720
+D2
+~
+~
+0 -1 1723
+D3
+~
+~
+0 -1 1726
+S
+#1723
+Entrance to Watermill~
+   You stand at the entrance to a watermill.  You hear the bustle of busy
+workers and the sound of a creaking mill.  Bywater Road is to the north while
+the watermill continues to the south.
+~
+17 0 0
+D0
+~
+~
+0 -1 1722
+D2
+~
+~
+0 -1 1724
+S
+#1724
+The Watermill~
+   Halfling workers are scattered everywhere, busy at work.  You see the river
+to the west and get a compelling urge to grab the nearest worker and to toss
+him into the river.  The entrance stands to the north while a door offers
+passage to the south.
+~
+17 8 0
+D0
+~
+~
+0 -1 1723
+D2
+~
+door~
+1 0 1725
+S
+#1725
+Rear of watermill~
+   You stand in a damp, dimly lit room.  Mildew clings to the walls and it
+appears as if you were the first person to enter the room in ages.  A barely
+visible portal in the ground catches your eye.
+~
+17 8 0
+D0
+~
+~
+0 -1 1724
+D5
+~
+~
+0 -1 1746
+S
+#1726
+Took Hill~
+   You stand on top of Took Hill, named after the legendary Bandobras Took.
+You feel honored to be standing on a hill named after your hero.  From this
+vantage point you can see all of shiredom.  You get the feeling that with
+one stomp you could eliminate their great city.  You can see the outline of
+Midgaard to the far east.  Sounds of joyful celebration are heard from the
+fields west of here.  The Brandywine flows by lazily nearby.
+~
+17 0 4
+D1
+~
+~
+0 -1 1722
+D3
+~
+~
+0 -1 1728
+S
+#1727
+Northern end of grassy field~
+   You stand in a grassy field--nothing to get too excited about.  The field
+extends toward the south and the west.  To the east you see Took Hill.
+~
+17 0 2
+D1
+~
+~
+0 -1 1726
+D2
+~
+~
+0 -1 1728
+D3
+~
+~
+0 -1 1730
+S
+#1728
+A grassy field~
+   You stand in the center of a grassy field.  A great birthday party appears
+to be taking place.  Great tables of food are spread out and a young halfling
+beauty offers you welcome.  You are enticed by her generosity and suggestive
+winks.
+~
+17 0 2
+D0
+~
+~
+0 -1 1727
+D1
+~
+~
+0 -1 1726
+D2
+~
+~
+0 -1 1729
+D3
+~
+~
+0 -1 1730
+S
+#1729
+Southern end of grassy field~
+   You stand in a grassy field--nothing to get too excited about.  The field
+extends toward the north and the west.  To the east you see Took Hill.
+~
+17 0 2
+D0
+~
+~
+0 -1 1728
+D1
+~
+~
+0 -1 1726
+D3
+~
+~
+0 -1 1730
+S
+#1730
+Western end of grassy field~
+   You stand in a grassy field--nothing to get too excited about.  The field
+extends every which way but west.
+~
+17 0 2
+D0
+~
+~
+0 -1 1727
+D1
+~
+~
+0 -1 1728
+D2
+~
+~
+0 -1 1729
+S
+#1731
+Brandywine Bridge~
+   You stand on a solidly built bridge.  As you look down you spy gaily
+colored fish swimming with the current of Brandywine River.  The cool water
+looks invitingly refreshing and you get a sudden urge to strip and bathe in
+the river, but you hear the laughter of women nearby and so resist the urge.
+Delving Lane extends to the north while Bywater Road can be seen to the south.
+~
+17 0 1
+D0
+~
+~
+0 -1 1732
+D2
+~
+~
+0 -1 1720
+S
+#1732
+Delving Lane~
+   Delving Lane runs north and south in this small borough of the Shire.  To 
+the south stands Brandywine Bridge.  The Green Dragon, the undisputed leader
+in the art of innkeeping, offers rest and comfort to the east.  You hear the
+bray of horses from the west.
+~
+17 0 1
+D0
+~
+~
+0 -1 1733
+D2
+~
+~
+0 -1 1731
+D1
+~
+~
+0 -1 1744
+D3
+~
+~
+0 -1 1738
+S
+#1733
+Delving Lane~
+   Delving Lane runs north and south in this small borough of the Shire.  A 
+large, imposing building lies to the east.  You hear the bray of horses from
+the west.
+~
+17 0 1
+D0
+~
+~
+0 -1 1734
+D1
+~
+~
+0 -1 1745
+D2
+~
+~
+0 -1 1732
+D3
+~
+~
+0 -1 1738
+S
+#1734
+Delving Lane~
+   Delving Lane runs north and south in this small borough of the Shire. There
+is a small house to the west, nothing to the est, and up ahead you see a round
+door which leads to a rather impressive abode.
+~
+7 0 1
+D0
+~
+~
+1 -1 1735
+D2
+~
+~
+0 -1 1733
+S
+#1735
+Bag End~
+   You stand in a comfortably well-equipped house, a palace by humble halfling
+standards.  On the wall you see a banner which reads "Home Sweet Home".
+A solid oak door to the east leads to a pantry while you see a cozy bedroom
+to the west.
+~
+17 8 0
+D1
+~
+door~
+1 -1 1737
+D2
+~
+~
+0 -1 1734
+D3
+~
+~
+0 -1 1736
+S
+#1736
+Bedroom~
+   You stand in the private bedroom of Bag End.  There are two beds to the
+side, neither of which are made.  Portraits of halflings hang on the wall,
+and as you gaze upon them you come to the conclusion that the owner of
+Bag End comes from a long line of distinguished halflings.  A cozy fire
+in the fireplace keeps the room warm and comfortable.
+~
+17 8 0
+D1
+~
+~
+0 -1 1735
+S
+#1737
+Pantry~
+   You are inside the pantry.  Shelves filled with food and drink surround
+you on all sides.  You wonder why a halfling would need so much to eat.
+The presence of something unseen chills you to your bones.  On the floor
+you spy a trapdoor.
+~
+17 10 0
+D3
+~
+door~
+1 -1 1735
+D5
+~
+~
+0 -1 1756
+S
+#1738
+A grassy field~
+   You stand upon a grassy field.  A bull stands grazing not far away and
+out of the corner of your eye you can see him considering you.  The sound
+of animals fill the air from the north.  To the south you see a pig pen.
+~
+17 0 2
+D0
+~
+~
+0 -1 1742
+D1
+~
+~
+0 -1 1733
+D2
+~
+~
+0 -1 1739
+S
+#1739
+Pig pen~
+   You feel your boots sinking into the mud.  Numerous pigs roam about,
+oblivious to your company.  A grassy field is to the north while you see
+a small path winding to the west.
+~
+17 0 1
+D0
+~
+~
+0 -1 1738
+D3
+~
+~
+0 -1 1740
+S
+#1740
+A stony path~
+   You walk on a stony path which leads to a small residence to the north.
+>From the east you hear the noisy din of pigs.
+~
+17 0 1
+D0
+~
+~
+0 -1 1741
+D1
+~
+~
+0 -1 1739
+S
+#1741
+Gamgee Residence~
+   You stand inside a modest home.  You deduce that this is indeed the home
+of whomever owns the surrounding lands.  The air is somewhat musty and 
+the smell reminds you of a stable.  As you look around disdainfully, you
+think to yourself that this is more of a shack than a proper residence and
+you long for the urban riches of the Shire proper.
+~
+17 8 0
+D2
+~
+~
+0 -1 1740
+S
+#1742
+A barn~
+   Animals of every sort fill the small barn.  You feel the hot breath of
+horses and cows on your neck and you feel the sudden need for fresh air.
+Other than that, you feel cozy and protected and don't mind staying for a
+bit longer.  All the warmth and good vibes remind you of the days when your
+mother would hold you in her arms and sing you to sleep.  You find yourself
+wanting to cradle all the animals.
+~
+17 8 0
+D0
+~
+~
+0 -1 1743
+D2
+~
+~
+0 -1 1738
+S
+#1743
+A chicken coop~
+   You stand inside a rather crowded chicken coop.  The cackle of hens fill
+the air.  The only exit is to the south.
+~
+17 8 0
+D2
+~
+~
+0 -1 1742
+S
+#1744
+The Green Dragon~
+   Welcome to the Green Dragon, the undisputed leader in the art of
+innkeeping.  A rather charming and friendly hostess stands to the side,
+ready to offer you food and drink.  While most of the patrons are halfling
+locals, you spy an occasional human or two.  As you listen more closely
+to the conversations that fill the inn, you hear the tales of great and
+seasoned adventurers as well as the usual gossip.  You feel as if you've
+found your second home in the Green Dragon.  You see a stairway leading
+upwards.
+~
+17 8 0
+D3
+~
+~
+0 -1 1732
+D4
+~
+~
+0 -1 1757
+S
+#1745
+Shiriff Post of Delving Lane~
+   You are in the Shiriff Post which acts as the nucleus for the three shiriffs
+of Delving Lane.  As you examine the shiriffs on duty, you come to realize
+that the halflings of the Shire are not to be reckoned with.  You cower with
+awe.  The only exit is to the west.
+~
+17 8 0
+D3
+~
+~
+0 -1 1733
+S
+#1746
+A dark tunnel~
+   You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  You see light from a small
+hole in the ceiling while to the east you see nothing but darkness.
+~
+17 9 0
+D1
+~
+~
+0 -1 1747
+D4
+~
+~
+0 -1 1725
+S
+#1747
+A dark tunnel~
+   You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  The tunnel continues east and
+west.  All you can see is darkness.
+~
+17 9 0
+D1
+~
+~
+0 -1 1748
+D3
+~
+~
+0 -1 1746
+S
+#1748
+A dark tunnel~
+   You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  The tunnel continues east and
+west.  All you can see is darkness.
+~
+17 9 0
+D1
+~
+~
+0 -1 1749
+D3
+~
+~
+0 -1 1747
+S
+#1749
+A three way intersection~
+   You stand at an intersection.  The tunnel continues east and west while
+to the north you can barely make out a smaller trail.
+~
+17 9 0
+D0
+~
+~
+0 -1 1751
+D1
+~
+~
+0 -1 1750
+D3
+~
+~
+0 -1 1748
+S
+#1750
+End of a dark tunnel~
+   You stand at the end of a dark tunnel.  The underground tunnel continues
+to the west.  From a trapdoor in the ceiling you can hear the din of
+adventurers.
+~
+17 9 0
+D3
+~
+~
+0 -1 1749
+D4
+You hear the din of adventurers.
+~
+~
+0 -1 3001
+S
+#1751
+A dark tunnel~
+   You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  The tunnel continues north and
+south.  To the west you see a Shirriff Post while to the east lies a small
+home.  All you can see is darkness.
+~
+17 9 0
+D0
+~
+~
+0 -1 1752
+D1
+~
+~
+0 -1 1754
+D2
+~
+~
+0 -1 1749
+D3
+~
+~
+0 -1 1753
+S
+#1752
+A dark tunnel~
+   You stand inside a small underground tunnel.  The ceiling is so low that 
+you must crouch to avoid hitting your head.  The tunnel continues north and
+south.  To the west lies a small home.  All you can see is darkness.
+~
+17 9 0
+D0
+~
+~
+0 -1 1756
+D2
+~
+~
+0 -1 1751
+D3
+~
+~
+0 -1 1755
+S
+#1753
+Shiriff Post of the Lower Shire~
+   You are in the shiriff Post which acts as the nucleus for the three shiriffs 
+of the Lower Shire.  As you examine the shiriffs on duty, you come to realize
+that the halflings of the Shire are not to be reckoned with.  You cower with
+awe.  The only exit is to the east.
+~
+17 9 0
+D1
+~
+~
+0 -1 1751
+S
+#1754
+A halfling hole~
+   You stand inside a rather crudely built halfling hole.  The many passageways
+and winding paths remind you of a rodent's lair.  The air is musty and damp
+and you feel the need for fresh air.
+~
+17 9 0
+D3
+~
+~
+0 -1 1751
+S
+#1755
+A halfling hole~
+   You stand inside a rather crudely built halfling hole.  The many passageways
+and winding paths remind you of a rodent's lair.  The air is musty and damp
+and you feel the need for fresh air.
+~
+17 9 0
+D1
+~
+~
+0 -1 1752
+S
+#1756
+End of a dark tunnel~
+   You are at one end of a dark tunnel.  The tunnel continues to the south
+while on the ceiling you can make out a trapdoor.
+~
+17 9 0
+D2
+~
+~
+0 -1 1752
+D4
+~
+~
+0 -1 1737
+S
+#1757
+The Inn of the Green Dragon~
+  You are standing in the Inn of the Green dragon.  Large paintings of
+halflings at work, and  play adorn the walls.  Comfortable benches and 
+seats line the walls.  A stairway leads down.
+~
+17 24 0
+D5
+~
+~
+0 -1 1745
+S
+#1799
+Very Near the Shire~
+  You are now very near the shire.
+~
+17 24 0
+D0
+~
+~
+0 -1 6001
+D1
+~
+~
+0 -1 1701
+S
+#99999
+$~

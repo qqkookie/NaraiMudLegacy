@@ -1,0 +1,2071 @@
+#4201
+Entrance to the Aerie~
+     You are standing in a dark almost cavern like archway.  You can see the
+emense Aerie towering above you.  To the north are a set of great stone doors.
+ To the south is a dark path.
+~
+42 9 0
+D0
+~
+doors great~
+1 -1 4202
+D2
+~
+~
+0 -1 3203
+E
+doors great~
+     There are a pair of great stone doors here.  They stand over 15 feet tall.
+  There is some writing carved into the stone.  It reads: "the blood is the
+life"...
+~
+S
+#4202
+An empty room.~
+    There are passageways to the north, west and east.  To the south are a
+pair of great doors.  The room itself is empty of all but dust.
+~
+42 9 0
+D0
+~
+~
+0 -1 4210
+D1
+~
+~
+0 -1 4211
+D2
+~
+doors great~
+1 -1 4201
+D3
+~
+~
+0 -1 4203
+S
+#4203
+A dusty hallway~
+     Just a lot of dust here.  It is too dark to see much else.  The passage
+continues to the east and west.
+~
+42 9 0
+D1
+~
+~
+0 -1 4202
+D3
+~
+~
+0 -1 4204
+S
+#4204
+Base of a spiral stair.~
+     You see a large stone stairway that spirals up.  There are exits to the
+north and to the east.
+~
+42 9 0
+D0
+~
+~
+0 -1 4205
+D1
+~
+~
+0 -1 4203
+D4
+~
+~
+0 -1 4234
+E
+stairs~
+    It is a huge stone stairway that spirals upwards.
+~
+S
+#4205
+A dim passage.~
+     You are in a plain passageway that has been cut through solid stone.  The
+is a door to the north and another exit to the south.
+~
+42 9 0
+D0
+~
+door~
+1 -1 4206
+D2
+~
+~
+0 -1 4204
+S
+#4206
+In Boris' Den~
+     The room is decorated with many items from the ancient Wallachian and
+Romanian cultures.  There are manys books and scrolls all over the floor.
+There is a door to the east and another to the south.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4207
+D2
+~
+door~
+1 -1 4205
+S
+#4207
+A dim passage.~
+     You are in a plain passageway cut through solid stone.  There is a door
+to the west and an exit to the east.
+~
+42 9 0
+D1
+~
+~
+0 -1 4208
+D3
+~
+door~
+1 -1 4206
+S
+#4208
+An open room.~
+     You are in a large open room.  There are exits to the east, west, and
+south.  You feel exposed out in the open like this.  Could someone be watching
+you???
+~
+42 9 0
+D1
+~
+~
+0 -1 4209
+D2
+~
+door~
+0 -1 4210
+D3
+~
+door~
+0 -1 4207
+S
+#4209
+A dim passage.~
+     You are in a plain passageway cut through solid stone.  There are exits
+to the east and west.
+~
+42 9 0
+D1
+~
+~
+0 -1 4214
+D3
+~
+door~
+0 -1 4208
+S
+#4210
+A stuffy passage.~
+     The air is so thick here it is hard to breathe.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4208
+D2
+~
+door~
+0 -1 4202
+S
+#4211
+A dusty hallway~
+     Just a lot of dust here.  It is too dark to see much else.  The passage
+continues to the east and west.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4212
+D3
+~
+door~
+0 -1 4202
+S
+#4212
+A bedroom~
+     You are in a small bedroom.  There is a wide bed on top of a slightly
+raised platform.  The room is empty otherwise.  There are exits to the north
+and west, through what were once doorways.
+~
+42 9 0
+D0
+~
+~
+0 -1 4213
+D3
+~
+door~
+0 -1 4211
+S
+#4213
+A dim passage.~
+     You are in a plain passageway cut through solid stone.  There are
+exits to the north and south.
+~
+42 9 0
+D0
+~
+~
+0 -1 4214
+D2
+~
+door~
+0 -1 4212
+S
+#4214
+A corner room~
+     You are in a plain room.  There are a few tapestries hanging from the
+walls.  There are exits to the east and south.  There is a large trapdoor in
+the middle of the floor.
+~
+42 9 0
+D2
+~
+~
+0 -1 4213
+D3
+~
+door~
+0 -1 4209
+D5
+~
+trapdoor~
+1 -1 4215
+S
+#4215
+A storage room~
+     The room is full of many tapestries and wooden boxes.  There are many
+different items scattered about the room.  There is a door to the south, a
+passage to the west, and a ladder leading up to a trapdoor.
+~
+42 9 0
+D2
+~
+door~
+0 -1 4221
+D3
+~
+door~
+0 -1 4216
+D4
+~
+trapdoor~
+1 -1 4214
+S
+#4216
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4215
+D3
+~
+door~
+0 -1 4217
+S
+#4217
+A hot room~
+     It is very hot here.  Small holes in the walls and floor drip small beads
+of moisture.  There are doors to the east and south.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4216
+D2
+~
+door~
+0 -1 4218
+S
+#4218
+A small passage~
+     You are in a narrow passage.  There are doors only a few feet from you to
+the north and south.  It is very claustrophobic here.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4217
+D2
+~
+door~
+0 -1 4219
+S
+#4219
+Lair of the Blader beasts~
+     It is almost painfully hot here.  The smell is almost enough to make you
+nauseous.  The walls, floor, and ceiling are full of small holes.  There are
+doors to the north and east.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4218
+D1
+~
+door~
+0 -1 4220
+S
+#4220
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4222
+D3
+~
+door~
+0 -1 4219
+S
+#4221
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4215
+D2
+~
+~
+0 -1 4222
+S
+#4222
+A damp room~
+     The entire room is covered in a light moisture.  There are passages to
+the north and west.  There is a small stairway leading down.
+~
+42 9 0
+D0
+~
+~
+0 -1 4221
+D3
+~
+door~
+0 -1 4220
+D5
+~
+~
+0 -1 4223
+S
+#4223
+A small chamber~
+     You are in a small chamber with odd looking walls.  There are passages to
+the north and west.  There is a small stairway leading up.
+~
+42 9 0
+D0
+~
+~
+0 -1 4227
+D3
+~
+door~
+0 -1 4224
+D4
+~
+~
+0 -1 4222
+S
+#4224
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4223
+D3
+~
+door~
+0 -1 4225
+S
+#4225
+A Trog sleeping chamber~
+     The floor is covered with a straw like material.  The entire room is very
+dirty and dimly lit.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4226
+D1
+~
+door~
+0 -1 4224
+S
+#4226
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4230
+D2
+~
+door~
+0 -1 4225
+S
+#4227
+A dark passage~
+~
+42 9 0
+D0
+~
+door~
+0 -1 4228
+D2
+~
+~
+0 -1 4223
+S
+#4228
+A huge room~
+     The ceiling is very high in here.  And the is a large amount of floor
+space in comparison to the other romms you have seen.  There are doors to the
+south and west.
+~
+42 9 0
+D2
+~
+door~
+0 -1 4227
+D3
+~
+door~
+0 -1 4229
+S
+#4229
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4228
+D3
+~
+~
+0 -1 4230
+S
+#4230
+Entrance to the Vats~
+     The is a wide stairway leading down.  The smell that rises from that
+place is horrible.  There are passages to the east and south.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4229
+D2
+~
+~
+0 -1 4226
+D5
+~
+~
+0 -1 4231
+S
+#4231
+A workroom~
+     There are various chemicals in small vials all over this room.  There are
+many odd intruments spread about the several tables.  A wide stairway leads up.
+  There is a passage to the east, from which come odd deep bellowing sounds.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4232
+D4
+~
+~
+0 -1 4230
+S
+#4232
+A smelly passage~
+     This narrow passage REALLY stinks.  The passage opens into a room to the
+west.  There is a large door to the east.
+~
+42 9 0
+D1
+~
+iron door~
+1 -1 4233
+D3
+~
+~
+0 -1 4231
+S
+#4233
+The Vats~
+     There are many large wells of racid liquid in here.  Large creatures??
+float lazily within them.  The smell makes you want to vomit.
+~
+42 9 0
+D3
+~
+iron door~
+1 -1 4232
+S
+#4234
+Top of a spiral stair~
+     You see a large stairway spiraling down.  There are passages to the north
+and east.
+~
+42 9 0
+D0
+~
+~
+0 -1 4235
+D1
+~
+~
+0 -1 4241
+D5
+~
+~
+0 -1 4204
+S
+#4235
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4236
+D2
+~
+~
+0 -1 4234
+S
+#4236
+The bat nest~
+     This room has a large opening that goes outside.  Many bats hang from the
+ceiling.  There are passages to the east and south.
+~
+42 9 0
+D1
+~
+~
+0 -1 4237
+D2
+~
+~
+0 -1 4235
+S
+#4237
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4238
+D3
+~
+~
+0 -1 4236
+S
+#4238
+A dimly lit room~
+     This room is very rough in appearance.  Your light barely illuminates it.
+ Ther eare exits to the east, west and south.
+~
+42 8 0
+D1
+~
+~
+0 -1 4243
+D2
+~
+~
+0 -1 4239
+D3
+~
+~
+0 -1 4237
+S
+#4239
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4238
+D2
+~
+~
+0 -1 4240
+S
+#4240
+A Trog sleeping chamber~
+     The floor is covered with a straw like material.  The entire room is very
+dirty and dimly lit.
+~
+42 9 0
+D0
+~
+~
+0 -1 4239
+D1
+~
+~
+0 -1 4242
+D3
+~
+~
+0 -1 4241
+S
+#4241
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4240
+D3
+~
+~
+0 -1 4234
+S
+#4242
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4244
+D3
+~
+~
+0 -1 4240
+S
+#4243
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4246
+D3
+~
+~
+0 -1 4238
+S
+#4244
+A corner room~
+     You are in a small corner room.  There isnt much of interest here.
+However you feel as if you are being watched.  There are passages to the west
+and north.
+~
+42 9 0
+D0
+~
+~
+0 -1 4245
+D3
+~
+~
+0 -1 4242
+S
+#4245
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+1 -1 4246
+D2
+~
+~
+0 -1 4244
+S
+#4246
+Entrance to the Level Ferenczy~
+     The walls here are smooth yet they are still erie.  There is an ornate
+stairway leading up.  There are doors to the south and west.
+~
+42 8 0
+D2
+~
+door~
+1 -1 4245
+D3
+~
+door~
+1 -1 4243
+D4
+~
+~
+0 -1 4247
+S
+#4247
+On the Level Ferenczy~
+     There walls here are covered in ancient tapestries.  There are passages
+to the south and west.  There is a large ornate stairway leading down.
+~
+42 8 0
+D2
+~
+door~
+0 -1 4258
+D3
+~
+door~
+0 -1 4248
+D5
+~
+~
+0 -1 4246
+S
+#4248
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4247
+D3
+~
+door~
+0 -1 4249
+S
+#4249
+Ferenczys' Servants' chamber~
+     There is a large pile of cloth in a corner.  It looks to be the bed of a
+large animal.  There are passages to the east, west, and south.
+~
+42 8 0
+D1
+~
+~
+0 -1 4248
+D2
+~
+door~
+0 -1 4256
+D3
+~
+door~
+0 -1 4250
+S
+#4250
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4249
+D3
+~
+door~
+0 -1 4251
+S
+#4251
+Faethor's Chamber~
+     There is a large desk with many books in a corner.  The room is well
+lighted.  An enormous bed stands in the middle of the room.  There is a door
+to the east and a passage to the south.
+~
+42 8 0
+D1
+~
+door~
+0 -1 4250
+D2
+~
+~
+0 -1 4252
+S
+#4252
+A passage between rooms~
+     The walls are smooth and the floor is velvety in texture.  There are
+rooms to the north and south.
+~
+42 8 0
+D0
+~
+~
+0 -1 4251
+D2
+~
+~
+0 -1 4253
+S
+#4253
+Thibor's Chamber~
+     The walls are decorated with weapons of all kinds and ages.  There are
+great blazons and flags all about the room.  Who ever lives here must have
+been a great warrior.  Maybe you shouldnt be in here??!
+~
+42 8 0
+D0
+~
+~
+0 -1 4252
+D1
+~
+door~
+0 -1 4254
+S
+#4254
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4255
+D3
+~
+door~
+0 -1 4253
+S
+#4255
+A storage room~
+     There are many random items and boxes in here.  Nothing of any particular
+interest.  There are passages to the north, east and west.
+~
+42 8 0
+D0
+~
+~
+0 -1 4256
+D1
+~
+~
+0 -1 4257
+D3
+~
+door~
+0 -1 4254
+S
+#4256
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4249
+D2
+~
+~
+0 -1 4255
+S
+#4257
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4259
+D3
+~
+door~
+0 -1 4255
+S
+#4258
+A dark passage~
+~
+42 8 0
+D0
+~
+door~
+0 -1 4247
+D2
+~
+door~
+1 -1 4259
+S
+#4259
+Entrance to the Level of the Lower Lords~
+     There is a large stairway in the middle of the room that leads up.  There
+are doors to the north and west.
+~
+42 8 0
+D0
+~
+door~
+1 -1 4258
+D3
+~
+door~
+1 -1 4257
+D4
+~
+~
+0 -1 4260
+S
+#4260
+On the level of the Lower Lords~
+     The walls here are covered with odd paintings depicting great battles
+between many different creatures.  There are passages to the north and west.
+There is a stairway leading down.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4261
+D3
+~
+door~
+0 -1 4264
+D5
+~
+~
+0 -1 4259
+S
+#4261
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4262
+D2
+~
+~
+0 -1 4260
+S
+#4262
+A Trog sleeping chamber~
+     The floor is covered with a straw like material.  The entire room is very
+dirty and dimly lit.
+~
+42 9 0
+D2
+~
+~
+0 -1 4261
+D3
+~
+door~
+0 -1 4263
+S
+#4263
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4262
+D3
+~
+door~
+1 -1 4272
+S
+#4264
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4260
+D3
+~
+door~
+0 -1 4265
+S
+#4265
+In Grigis' study~
+     This room is conservatively decorated.  There is a bed against the far
+wall.  There are passages to the north, east, and west.
+~
+42 8 0
+D0
+~
+door~
+0 -1 4266
+D1
+~
+door~
+0 -1 4264
+D3
+~
+~
+0 -1 4267
+S
+#4266
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+1 -1 4272
+D2
+~
+door~
+0 -1 4265
+S
+#4267
+A lighted passage~
+     You are in a well lit passage.  There are rooms to the east and west.
+~
+42 8 0
+D1
+~
+door~
+0 -1 4265
+D3
+~
+~
+0 -1 4268
+S
+#4268
+In Menor's study~
+     There are many books on shelves all around the room.  There is a
+comfortable looking bed in the middle of the room.  There are passages to the
+north and east.
+~
+42 8 0
+D0
+~
+door~
+0 -1 4269
+D1
+~
+door~
+0 -1 4267
+S
+#4269
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4270
+D2
+~
+door~
+0 -1 4268
+S
+#4270
+Wamphyri lieutenants' chamber~
+     This room is in a relatively good order.  There are two small beds and a
+few other small items.
+~
+42 9 0
+D1
+~
+~
+0 -1 4271
+D2
+~
+door~
+0 -1 4269
+S
+#4271
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4272
+D3
+~
+door~
+0 -1 4270
+S
+#4272
+Entrance to the level of the Mid Lords~
+     This room is nicely decorated.  There are a few blazons painted on the
+walls.  Many show crushed bodys and wolves.  There is a stairway leading up.
+There are passages to the south, east, and west.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4263
+D2
+~
+door~
+1 -1 4266
+D3
+~
+door~
+1 -1 4271
+D4
+~
+~
+0 -1 4273
+S
+#4273
+On the level of the Mid Lords~
+     The walls here are covered in well made tapestries.  The floor is
+smoother then on the lower levels.  There are passages to the south, west and
+east.  There is a stairway leading down.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4274
+D2
+~
+~
+0 -1 4280
+D3
+~
+door~
+0 -1 4284
+D5
+~
+~
+0 -1 4272
+S
+#4274
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4275
+D3
+~
+door~
+0 -1 4273
+S
+#4275
+A Trog sleeping chamber~
+     The floor is covered with a straw like material.  The entire room is very
+dirty and dimly lit.
+~
+42 9 0
+D2
+~
+~
+0 -1 4276
+D3
+~
+door~
+0 -1 4274
+S
+#4276
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4275
+D2
+~
+door~
+1 -1 4277
+S
+#4277
+The Ferenc's lair~
+     This room looks as if it were made for a giant.  The bed in the room is
+larger then any you have ever seen.  There are passages to the north and west.
+~
+42 8 0
+D0
+~
+door~
+0 -1 4276
+D3
+~
+door~
+0 -1 4278
+S
+#4278
+A lighted passage~
+     You are in a well lit passage with smooth floors.  There are rooms to the
+east and west.
+~
+42 8 0
+D1
+~
+~
+0 -1 4277
+D3
+~
+~
+0 -1 4279
+S
+#4279
+By Volse's bath~
+     There is a huge bath with steaming water in the middle of the room.  The
+walls are covered with large mirrors.  There are passages to the north, east
+and west.
+~
+42 8 0
+D0
+~
+door~
+0 -1 4280
+D1
+~
+~
+0 -1 4278
+D3
+~
+door~
+0 -1 4281
+S
+#4280
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4273
+D2
+~
+door~
+0 -1 4279
+S
+#4281
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4279
+D3
+~
+door~
+0 -1 4282
+S
+#4282
+Wamphyri lieutenants' chamber~
+     This room is in a relatively good order.  There are two small beds and a
+few other small items.
+~
+42 9 0
+D0
+~
+~
+0 -1 4283
+D1
+~
+door~
+0 -1 4281
+S
+#4283
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+1 -1 4285
+D2
+~
+~
+0 -1 4282
+S
+#4284
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4273
+D3
+~
+door~
+1 -1 4285
+S
+#4285
+Entrance to the Flyer Stable~
+     There is a small stairway leading up from here.  There are passages to
+the east and south.  You can here strange sounds coming from above you.
+~
+42 8 0
+D1
+~
+door~
+1 -1 4284
+D2
+~
+door~
+1 -1 4283
+D4
+~
+~
+0 -1 4286
+S
+#4286
+On the level of the Flyer Stables~
+     Strange sounds echo off the walls.  The noise isnt very loud but it is
+continuous.  There are passages to the south and east.  A small stairway leads
+down.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4287
+D2
+~
+door~
+0 -1 4292
+D5
+~
+~
+0 -1 4285
+S
+#4287
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4288
+D3
+~
+door~
+0 -1 4286
+S
+#4288
+The Northern Stables~
+     You are in huge open room.  There is a large opening in the east wall
+that leads out into the sky.  There are pieces of meat all about the floor.
+There are passages to the west and south.
+~
+42 9 0
+D2
+~
+~
+0 -1 4289
+D3
+~
+door~
+0 -1 4287
+S
+#4289
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4288
+D2
+~
+~
+0 -1 4290
+S
+#4290
+The Southern Stables~
+     You are in a large open room.  There is an opening in the east wall that
+leads out in the sky.  There are small pieces of meat all about the floor.
+There are passages to the north and west.
+~
+42 9 0
+D0
+~
+~
+0 -1 4289
+D3
+~
+~
+0 -1 4291
+S
+#4291
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4290
+D3
+~
+door~
+1 -1 4293
+S
+#4292
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4286
+D2
+~
+door~
+1 -1 4293
+S
+#4293
+Entrance to the level of the High Lords~
+     This room is ornately decorated.  There are tapestreis and paintings of
+good quality on the walls.  A huge decorated stairway leads up.  There are
+doors to the north and east.
+~
+42 9 0
+D0
+~
+door~
+1 -1 4292
+D1
+~
+door~
+1 -1 4291
+D4
+~
+~
+0 -1 4294
+S
+#4294
+On the level of the High Lords~
+     This room is finely decorated.  There are a few chairs in one corner.
+There are passages to the north and east.
+~
+42 9 0
+D0
+~
+~
+0 -1 4302
+D1
+~
+door~
+0 -1 4295
+D5
+~
+~
+0 -1 4293
+S
+#4295
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4296
+D3
+~
+door~
+0 -1 4294
+S
+#4296
+A Trog sleeping chamber~
+     The floor is covered with a straw like material.  The entire room is very
+dirty and dimly lit.
+~
+42 9 0
+D0
+~
+~
+0 -1 4305
+D1
+~
+~
+0 -1 4297
+D3
+~
+door~
+0 -1 4295
+S
+#4297
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4298
+D3
+~
+door~
+0 -1 4296
+S
+#4298
+In Lesk's den of glutony~
+     Every know a glut?  This room is full of several rotting corpses of women
+Lesk 'took'.  The place smells horrid and looks just as bad.  There are
+passages to the north and west.
+~
+42 8 0
+D0
+~
+door~
+0 -1 4299
+D3
+~
+door~
+0 -1 4297
+S
+#4299
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4300
+D2
+~
+door~
+1 -1 4298
+S
+#4300
+Wamphyri lieutenants' chamber~
+     This room is in a relatively good order.  There are two small beds and a
+few other small items.
+~
+42 9 0
+D2
+~
+door~
+0 -1 4299
+D3
+~
+~
+0 -1 4301
+S
+#4301
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4300
+D3
+~
+door~
+1 -1 4306
+S
+#4302
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4303
+D2
+~
+~
+0 -1 4294
+S
+#4303
+In Lascula's Chamber~
+     You are in a elegant chamber.  The furniture is of the highest quality.
+There are passage to the east and south.
+~
+42 8 0
+D1
+~
+door~
+0 -1 4304
+D2
+~
+door~
+0 -1 4302
+S
+#4304
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4306
+D3
+~
+door~
+0 -1 4303
+S
+#4305
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+1 -1 4306
+D2
+~
+~
+0 -1 4296
+S
+#4306
+Entrance to the level of the Arch Lords~
+     This room is decorated in the finest tapestries you have yet to see.
+There is a large grandious stairway leading up.  There are handcarved doors to
+the south, west and east.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4301
+D2
+~
+door~
+1 -1 4305
+D3
+~
+door~
+1 -1 4304
+D4
+~
+~
+0 -1 4307
+S
+#4307
+On the level of the Arch Lords~
+     You are in a superbly decorated room.  The floor is covered in a fine
+soft fur.  There are passages to the south, east and west.  There is a large
+stairway leading down.
+~
+42 9 0
+D1
+~
+~
+0 -1 4309
+D2
+~
+~
+0 -1 4315
+D3
+~
+door~
+0 -1 4308
+D5
+~
+~
+0 -1 4306
+S
+#4308
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4307
+D3
+~
+door~
+1 -1 4319
+S
+#4309
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+door~
+0 -1 4310
+D3
+~
+door~
+0 -1 4307
+S
+#4310
+In Dramal's chamber~
+     You are in large but plain bedchamber.  It is well decorated but not
+overly.  There are passages to the south and west.
+~
+42 8 0
+D2
+~
+door~
+0 -1 4311
+D3
+~
+door~
+0 -1 4309
+S
+#4311
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+0 -1 4310
+D2
+~
+~
+0 -1 4312
+S
+#4312
+A Trog sleeping chamber~
+     The floor is covered with a straw like material.  The entire room is very
+dirty and dimly lit.
+~
+42 9 0
+D0
+~
+~
+0 -1 4311
+D3
+~
+~
+0 -1 4313
+S
+#4313
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4312
+D3
+~
+door~
+0 -1 4314
+S
+#4314
+Wamphyri lieutenants' chamber~
+     This room is in a relatively good order.  There are two small beds and a
+few other small items.
+~
+42 9 0
+D0
+~
+~
+0 -1 4315
+D1
+~
+~
+0 -1 4313
+D3
+~
+door~
+0 -1 4316
+S
+#4315
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+~
+0 -1 4307
+D2
+~
+~
+0 -1 4314
+S
+#4316
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D1
+~
+~
+0 -1 4314
+D3
+~
+door~
+0 -1 4317
+S
+#4317
+In Shaithis' Bedchamber~
+     You are in a overly decorated bedchamber.  Everything in here is
+obviously handmade and of the highest quality.  There are passages to the
+north and east.
+~
+42 8 0
+D0
+~
+door~
+0 -1 4318
+D1
+~
+door~
+0 -1 4316
+S
+#4318
+A dark passage~
+    You are in a dark passage.  The walls do not look like stone.  They almost
+appear to be skeletal in nature.
+~
+42 9 0
+D0
+~
+door~
+1 -1 4319
+D2
+~
+door~
+0 -1 4317
+S
+#4319
+Entrance to the upper levels~
+     You are in a plain room.  The walls are smooth and the floor is covered
+in a thin fur.  There is a stylish stairway leading up.  There are passages to
+the south and east.
+~
+42 9 0
+D1
+~
+door~
+1 -1 4308
+D2
+~
+door~
+1 -1 4318
+D4
+~
+~
+0 -1 4320
+S
+#4320
+An empty room~
+     The room is obviously empty.  There is a passage to the south and a
+stairway leads down.
+~
+42 9 0
+D2
+~
+door~
+0 -1 4321
+D5
+~
+~
+0 -1 4319
+S
+#4321
+A lighted passage~
+     You are in a well lit passage.  The floor is covered in a soft thick fur.
+ The wall s are very smooth.  The passage opens to the north and the south.
+~
+42 8 0
+D0
+~
+~
+0 -1 4320
+D2
+~
+~
+0 -1 4322
+S
+#4322
+A Trog sleeping chamber~
+     The floor is covered with a straw like material.  The entire room is very
+dirty and dimly lit.
+~
+42 8 0
+D0
+~
+~
+0 -1 4321
+D1
+~
+~
+0 -1 4323
+S
+#4323
+A lighted passage~
+     You are in a well lit passage.  The floor is covered in a soft thick fur.
+ The wall s are very smooth.  The passage opens to the east and the west.
+~
+42 8 0
+D1
+~
+~
+0 -1 4324
+D3
+~
+~
+0 -1 4322
+S
+#4324
+The Personal Guards' chamber~
+     You are in alarge open room.  The Lady Karen's personal warriors stand
+here guarding the entrance to her chamber.  A wide stairway leads up to a huge
+ornate doorway.
+~
+42 8 0
+D3
+~
+~
+0 -1 4323
+D4
+~
+door~
+1 -1 4325
+S
+#4325
+The Ante-Chamber~
+     You are in a small ante-chamber.  There is a large room to the east and a
+door to the west.
+~
+42 8 0
+D1
+~
+~
+0 -1 4326
+D5
+~
+door~
+1 -1 4324
+S
+#4326
+Lady Karen's Personal Chamber~
+     This room is utterly different from the rest of the aerie.  The walls are
+lighter in color and there isnt that repugnant stench.  The room is full of
+the finest furniture.  There is a large throne against the east wall.  There
+is a another room to the west.
+~
+42 8 0
+D1
+~
+throne~
+2 4228 4327
+D3
+~
+~
+0 -1 4325
+S
+#4327
+The treasure room~
+     LOTS of money!
+~
+42 8 0
+D3
+~
+throne~
+2 4228 4326
+S
+#99999
+$~

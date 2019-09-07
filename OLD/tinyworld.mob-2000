@@ -1,0 +1,8167 @@
+#1
+Puff~
+Puff~
+Puff the Fractal Dragon is here, contemplating a higher reality.
+~
+~
+9 0 1000
+C 43 6 9 6 4
+10000 4 8 F
+#2
+zombie~
+a zombie~
+A zombie is here, staring at nothing.
+~
+~
+10 4194304 -100
+O 1 9 10 11 8
+0 10 8 N
+#201
+butler~
+a butler~
+A butler is standing here, waiting to server his master.
+~
+The butler is a young and handsome man.  He is very well built and would like
+to have a word with whomever makes the accusation "the butler did it".
+~
+72 0 300
+W 5 12 17 20 17
+500 10 8 M
+#202
+Merlin~
+Merlin~
+Merlin is standing here, hard at work on his magic.
+~
+Merlin is the powerful wizard in the land.  It is rumored that he can 
+woop Looney's butt any day.
+~
+10 136 550
+M 30 3 7 4 12
+1000 5 8 M
+#203
+castle servant~
+the castle servant~
+A castle servant is busily working here.
+~
+The castle servant is just one of the many peons here in the castle.  Hardly
+worth mentioning.
+~
+72 0 0
+O 8 10 18 12 13
+0 4 8 M
+#204
+cook~
+A Cook~
+A cook is here, hard at work in tonight's meal.
+~
+This man looks as is he has been spending WAY too much time in the kitchen.
+~
+10 0 0
+C 11 7 13 10 11
+100 8 8 M
+#205
+jailer~
+The Jailer~
+The jailer is here, watching for intruders.
+~
+He looks as though he has spent alot of time underground, guarding the
+prisoners.
+~
+16394 0 0
+O 15 3 11 10 13
+200 10 8 M
+#206
+royal clergyman~
+The royal clergyman~
+The royal clergyman is here, deep in thought.          
+~
+A Royal Clergyman stands here, dressed in simple robes.
+~
+14 136 1000
+C 18 6 11 10 13
+400 10 8 M
+#207
+king~
+The King~
+The king is here, basking in his riches.
+~
+The king sits here on a golden throne.  He looks as though he is content, as he
+is being fed grapes. 
+~
+14 136 0
+W 29 5 14 3 4
+800 5 6 M
+#208
+queen~
+the Queen~
+The queen is sitting here, admiring her nails.
+~
+The queen is a very beautiful woman indeed.  You cannot help but be struck with
+awe as you admire her.
+~
+524302 0 0
+C 20 6 8 10 7
+5000 3 6 F
+#209
+castle prisoner~
+the castle prisoner~
+A castle prisoner is here.
+~
+This man was a castle servant, but commited a crime.
+~
+74 0 0
+O 8 10 16 10 13
+0 11 8 M
+#210
+guard castle~
+The castle guard~
+A castle guard stands here on the alert.
+~
+Obviously this man takes pride in his job, as you notice 
+his armor and equipment are very clean and organized.
+From the looks of his muscles, you can see why he was chosen
+to be a guard.
+~
+72 0 500
+W 14 3 12 10 13
+200 10 8 M
+#211
+peasant~
+the peasant~
+A peasant is busily working here.
+~
+The peasant is just one of the many peons here in the castle.  Hardly
+worth mentioning.
+~
+72 0 0
+W 9 9 20 10 12
+0 12 8 M
+#1000
+perhaps~
+Perhaps~
+Perhaps is proudly standing here.
+~
+자랑스럽게 깡패머드를 지키는 Perhaps가 요기 서있당.
+~
+11 190 2000
+C 43 16 11 6 20
+1 7 8 F
+#1300
+cat~
+the neighborhood alley cat~
+A lean, gray alley cat is here.
+~
+The cat is a lean, gray animal who probably has not had enough to eat.
+He has very sharp teeth and extremely sharp claws.  It seems doubtful
+that this cat was ever a kitten.
+~
+106 0 -250
+W 8 9 14 10 14
+25 11 8 N
+#1303
+ant~
+a fire ant~
+A nasty fire ant is here.
+~
+These ants are so aggressive that one rarely has a chance to examine them
+closely.  Hence this description is rather short.
+~
+106 0 -1
+W 1 11 10 10 8
+0 10 8 N
+#1305
+dragon white~
+The white dragon~
+An extremely large white dragon frowns at you.  You hear a thunderous
+roar and then...
+~
+He looks lonely.
+~
+8234 136 0
+W 43 3 10 4 12
+500 5 8 M
+#1307
+pan peter~
+Peter Pan~
+Peter Pan is here grinning at you.
+~
+You see a young lad who looks a bit elfish.  There is a sparkle in his
+eye, and a devilish twist to his smile.
+~
+74 136 1000
+W 35 6 13 8 9
+5000 10 6 M
+#1400
+Cinnamon~
+Cinnamon~
+The Soft-coated Wheaten Terrier, Cinnamon, is here.
+~
+Roo is VERY fond of Cinnamon.  You'd best leave her alone.
+~
+10 0 1000
+W 22 5 7 9 6
+0 3 5 F
+#1450
+bouncer~
+A Big Brawny Bouncer~
+The Big Brawny Bouncer regards you with suspicion.
+~
+~
+65610 8 700
+W 35 4 14 16 3
+1000 11 8 M
+#1454
+tootoo bartender~
+Tootoo the Bartender~
+Tootoo the Bartender is waiting for your order.
+~
+he seems very greedy and rude. he has infinite power.
+~
+4194378 136 1000
+C 40 6 15 9 17
+1000 11 8 M
+#1455
+Bob Dylan~
+Bob Dylan~
+Bob Dylan is here.
+~
+Bob frowns.
+~
+75 136 0
+W 20 3 17 11 7
+100 10 8 M
+#1460
+Grandma~
+Grandma~
+Grandma is here, knitting or something.
+~
+Grandma smiles at you.
+~
+14 50331656 -100
+C 30 3 19 7 7
+100 5 8 F
+#1465
+roy slade~
+Evil Roy Slade~
+Evil Roy Slade is here, fondling his gun.
+~
+Evil Roy is evil.
+~
+32810 24 -999
+W 37 6 9 7 4
+20000 4 8 M
+#1470
+labbie~
+The Labbie~
+The dumb looking Labbie is here, trying to kick you off the MUD.
+~
+The Labbie is a low-level lifeform found in the Computer Labs
+near Muncie, Indiana.
+~
+110 0 -999
+W 9 8 15 10 13
+1500 14 8 M
+#1501
+maid~
+Dirk's Maid~
+Dirk's Maid is here tidying up the place.
+~
+~
+204 128 200
+C 19 4 5 10 13
+2000 6 8 F
+#1502
+tiger hobbes~
+Hobbes~
+Hobbes the tiger is here.
+~
+Hobbes is Dirk's private pet.  He seems to have very sharp claws and is
+protected by the gods.
+~
+14 128 100
+W 20 3 4 9 18
+1000 6 8 M
+#1503
+dragon blue~
+The blue dragon~
+A sparkling blue dragon is standing here.
+~
+Energy crackles around his body makeing him glow in a soft blue light.
+~
+8234 24 -600
+M 25 3 20 8 11
+500 8 8 M
+#1504
+thug~
+A mean thug.~
+A mean thug is standing here.  You feel an urge to hide you pocketbook.
+~
+He is a tough mean looking character.
+~
+172 0 -500
+T 12 7 12 10 16
+2500 8 8 M
+#1550
+gobind singh guru sikhu~
+Gobind Singh~
+Gobind Singh, last of the Sikhu Gurus, is here meditating....
+~
+  Yes it is Gobind Singu, last guru of the Sikhism religion of 
+northern India.  He is a very fit and strong man with long dark hair
+dangling about his body.  Though he is a holy man in search of
+moksha, he is also a very powerful looking warrior.
+
+Gobind says 'I do not wish to harm you, but I will kill you if need be.'
+Gobind stares into your eyes....you now feel at peace with yourself.
+~
+4110 136 -200
+T 30 6 19 4 11
+30000 12 6 M
+#1551
+sikh disciple~
+A Sikh~
+A Sikh -- Sikhu disciple -- stands in line here...
+~
+  He is fit looking fellow.  Not the most powerful of the Sikhs, but
+he looks quite intimidating.  He seems more interested in entering
+the Gurdwara, then with what you are doing.  He is silent and does
+not want to partake in conversation.
+~
+4254 8 0
+T 22 3 7 10 10
+2000 4 8 M
+#1700
+elven wizard~
+the Elven Wizard~
+An Elven Wizard is here, creating fireworks for the festivities.
+~
+The Elven Wizard looks at you in a solemn sort of way.  His gaze seems
+penetrate through your innermost being.  He is wearing a silvery cloak
+and holding a multi-colored staff.  Although he appears to be older
+than the oldest man, he seems to have an inner strength which most mortals
+cannot overcome.
+~
+74 33554440 500
+M 25 5 12 6 7
+3000 8 8 M
+#1701
+ring keeper~
+the Keeper of the Ring~
+The Keeper of the Ring is here, guarding his treasure jealously.
+~
+The Ring Keeper is a rather big but short halfling.  His short stature and
+bulbous nose belie his true nature.  An elven sword that glows with a blue
+light hangs from his belt, and on his finger you see the One Ring.  Although
+usually a halfling of peace, he will fight you to the death if you attempt
+to take away that which belongs to him.
+~
+4170 10 0
+W 20 5 17 3 15
+2000 8 8 M
+#1702
+farmer gamgee~
+Farmer Gamgee~
+Farmer Gamgee sniffs the air, wondering if harvest time is near.
+~
+Farmer Gamgee is a short, stout halfling of thirty years.  His skin has
+been tanned from working the fields night and day.  He's quite a jolly
+chap, always ready to befriend an injured bunny rabbit.
+~
+74 0 350
+O 7 10 15 10 14
+500 12 5 M
+#1703
+toddler~
+a toddler~
+A toddler crawls about, looking for something to chew on.
+~
+The toddler is dressed in nothing but his birthday suit.  He crawls about
+for he hasn't learned to walk yet.  He peers up at you and asks "da da?"
+~
+222 0 1000
+T 2 8 11 9 11
+0 12 6 M
+#1704
+nursemaid~
+a nursemaid~
+A nursemaid wanders about, trying to keep track of all the toddlers.
+~
+The nursemaid looks rather tired and worn out.  Taking care of so many
+toddlers for too long has evidently taken its toll.  She looks to you and
+in her eyes you can see her longing for a better life.
+~
+74 0 100
+O 5 11 18 10 13
+300 12 8 F
+#1705
+cow~
+a cow~
+A cow is here, chewing her cud.
+~
+The cow looks like it hasn't been milked in quite some time.  Although she
+is past her prime, you see that she still has a lot of years left, and that
+if provoked, her rear kick can be quite deadly.
+~
+74 0 0
+O 4 9 11 11 10
+0 8 5 N
+#1706
+pig~
+a pig~
+A pig wallows in the mud and oinks in contentment.
+~
+The pig appears quite happy to be a pig.  He is oblivious to your presence
+and cares only for the care-free life that he leads.  It is enormously fat
+and consequently cannot move around very quickly.
+~
+74 0 0
+O 3 8 10 12 12
+0 12 5 N
+#1707
+chicken~
+a chicken~
+A chicken sits on her nest.
+~
+The chicken is bright and healthy.  She has no weapons but her beak.
+~
+74 0 0
+O 2 12 10 12 12
+0 10 6 F
+#1708
+bull~
+a bull~
+A bull scratches at the ground and lowers his head.
+~
+The bull is in top condition.  He looks like quite a fighter, nothing to be
+reckoned with.  With his horns and his hooves he can attack just about
+anything.
+~
+106 0 0
+W 6 10 18 10 12
+0 9 8 M
+#1709
+horse~
+a horse~
+A horse becomes frightened by your presence.
+~
+The horse looks at you and turns away.  You can tell that it is afraid of you.
+~
+74 0 0
+W 4 12 10 8 9
+0 9 8 N
+#1710
+shiriff~
+a shiriff~
+A shiriff of the Shire looks for signs of trouble.
+~
+The shiriff is over waist high, quite tall for a halfling.  His eyes are
+ever roaming, looking for signs of trouble from riff-raff like you.  In
+his belt is a thin dagger, and on his body he wears a suit of leather armor.
+This is one halfling you don't want to mess with.
+~
+74 0 150
+W 8 8 11 10 11
+50 12 6 M
+#1711
+shiriff~
+a shiriff~
+A shiriff of the Shire looks for signs of trouble.
+~
+The shiriff is over waist high, quite tall for a halfling.  His eyes are
+ever roaming, looking for signs of trouble from riff raff like you.  In
+his belt is a thin dagger, and on his body he wears a suit of leather armor.
+This is one halfling you don't want to mess with.
+~
+72 0 150
+W 8 8 11 10 11
+50 8 8 M
+#1712
+thain~
+the Thain~
+The Thain commands respect from all Shire folk.
+~
+A personable yet serious halfling, the Thain looks at you and yells a
+deep 'Hullo'.  He walks about comfortably, secure in the knowledge that
+as long as he's in office, the Shire will always remain a safe haven for
+Shire folk.
+~
+72 0 400
+W 14 3 12 10 12
+500 14 6 M
+#1713
+innkeeper~
+the Innkeeper~
+The Innkeeper stands here awaiting your order.
+~
+The Innkeeper is a jolly old halfling who spends his days eavesdropping on
+local gossip.  In his younger days, he was quite a seasoned traveller.
+~
+74 0 200
+C 12 7 12 10 11
+700 8 8 M
+#1714
+miller~
+the Miller~
+The Miller is here, overseeing his busy mill workers.
+~
+The Miller is an impatient young halfling, always trying to command more
+respect from his workers than he can get.  He looks like the type of person
+who deserves a spanking but never got one.
+~
+202 0 -350
+O 6 10 17 10 13
+200 14 8 M
+#1715
+mill worker~
+the mill worker~
+The mill worker runs to and fro.
+~
+The mill worker is in fine shape from the hard labor that he does at the
+mill.  He doesn't notice your presence, but he looks like he could break you
+in two without thinking about it.
+~
+74 0 0
+O 5 10 18 10 18
+50 12 8 M
+#1716
+elven warrior~
+the elven warrior~
+The elven warrior watches you solemnly.
+~
+The tall elven warrior is light and fair-skinned.  The expression that he wears
+on his countenance is solemn and tragic.  He cares not for this world any
+longer and wearies of it.
+~
+74 0 600
+W 17 3 9 10 10
+1000 4 6 M
+#1717
+dwarven prince~
+the dwarven prince~
+The dwarven prince sits here patiently for the return of his king.
+~
+Grim and cold, the dwarven prince is quite strong and bulky, even for the
+dwarves of his land.  His glowing eyes peer out of his bushy face and stare
+beyond your gaze.
+~
+74 0 200
+W 17 5 20 11 15
+1500 5 6 M
+#1718
+shopkeeper~
+the shopkeeper~
+the shopkeeper smiles and patiently waits for you to buy something.
+~
+The shopkeeper will fight like a madman to protect his store from riff-raff
+like you.
+~
+74 0 600
+C 21 6 10 12 3
+2000 4 8 M
+#1719
+grocer~
+the grocer~
+The grocer offers you the finest breads in all the land.
+~
+The grocer is a large, jovial halfling who knows how to enjoy his pipeweed.
+However, he also knows that it's worth protecting and so will do everything
+in his power to prevent riff-raff like you from stealing it.
+~
+74 0 600
+W 21 5 10 9 6
+1500 3 8 M
+#1720
+blacksmith~
+the blacksmith~
+The blacksmith bids you welcome to his humble store.
+~
+The blacksmith is a lean and mean fighting machine.  His knowledge of weapons
+and armour would certainly help him in any fight against riff-raff like you.
+~
+74 0 600
+W 40 5 6 10 6
+2000 4 8 M
+#1721
+battle master~
+the battle master~
+The battle master offers you the services of his fine trainees.
+~
+The battle master is a wizened fighter, with many scars to prove his worth.
+~
+74 0 350
+W 19 5 9 10 13
+1500 6 8 M
+#1722
+halfling youth~
+a halfling youth~
+A halfling youth stands here, waiting for nothing in particular.
+~
+The halfling youth is not yet quite in the prime of his youth.  He's knee
+high and you get the sudden urge to step on him.
+~
+204 0 0
+O 3 11 10 8 11
+20 8 8 M
+#1723
+seasoned adventurer~
+a seasoned adventurer~
+A seasoned adventurer sits here, telling tales of fame and fortune.
+~
+The seasoned adventurer has seen his share of glory days.  Although he is
+past his prime, he still looks like he could put up more than his share of
+a good fight.
+~
+74 0 100
+O 8 8 20 10 18
+170 12 6 M
+#1724
+local gossip~
+a local gossip~
+A local gossip asks you, "Have you heard the latest?"
+~
+The gossip is all talk and no action.  You're transfixed by her ability to
+talk so much so quickly.
+~
+206 0 0
+T 4 11 9 8 11
+25 12 6 F
+#1725
+halfling beauty~
+a halfling beauty~
+A halfling beauty stares dreamily into your eyes.
+~
+She is the most beautiful creature you've seen in quite some time.  As you
+stare at her, thoughts of all else vanish.  You get the sudden urge to grovel
+at her feet, hoping she'll take you in like a lost puppy.  You wouldn't dare
+harm a hair on her precious little head.
+~
+74 0 1000
+O 6 8 19 10 10
+75 6 8 F
+#1726
+trainee~
+a trainee~
+A trainee screams a death cry as he delivers the fatal blow to a dummy.
+~
+The trainee smiles smugly, aware of your interest in him.  He's a little
+fresh, but his enthusiasm and desire to please more than make up for what
+he lacks in skill.
+~
+10 0 0
+O 5 10 16 10 15
+30 9 8 M
+#1727
+chic urbanite~
+a chic urbanite~
+A chic urbanite sits here, enjoying his class status.
+~
+The urbanite seems very much at home in his surroundings.  His clothes are
+all of the latest fashions and his manners impeccable.  He offers you some
+coins if you'd be so good as to order a drink for him.
+~
+202 0 0
+O 4 11 8 11 9
+100 12 6 M
+#1728
+country bumpkin~
+a country bumpkin~
+A country bumpkin dreams of pipeweed and its many uses.
+~
+The country bumpkin snores noisily.
+~
+74 0 0
+O 5 9 18 10 17
+70 14 4 M
+#1730
+innkeeper~
+the Innkeeper~
+The Innkeeper stands here awaiting your order.
+~
+The Innkeeper is a jolly old halfling who spends his days eavesdropping on
+local gossip.  In his younger days, he was quite a seasoned traveller.
+~
+74 0 200
+C 12 7 12 10 9
+300 4 8 M
+#1731
+receptionist~
+the receptionist~
+The receptionist sits here, signing forms.
+~
+He is a very professional looking type.
+~
+74 0 200
+C 21 5 10 7 12
+17 6 8 M
+#1901
+guard gatekeeper~
+The Gatekeeper~
+The Gatekeeper is here, polishing his sword.
+~
+The Gatekeeper stands against the gate here.  He is very tall, with
+dark black hair, making him appear young, but as you look into his eyes
+you feel that this man is much older and wiser than he appears to be.
+~
+10 0 1000
+W 20 3 8 10 9
+2000 4 8 M
+#1902
+spider dynzee~
+The dynzee~
+A dynzee jumps at you from the trees.
+~
+The dynzee is a small, spider-like creature.  It's no taller
+than your knees, but its fangs make it a sizable opponent.
+~
+108 524296 -1000
+O 4 10 8 10 10
+0 8 8 N
+#1903
+zyekian scout~
+The Zyekian scout~
+A small Zyekian scout is here.
+~
+From the looks of him, he has been awake for days searching
+the woods for signs of trouble.
+~
+92 524296 150
+T 10 8 18 10 13
+50 10 8 M
+#1904
+guard zyekian~
+The Zyekian guard~
+A Zyekian guard stands here on the alert.
+~
+Obviously this man takes pride in his job, as you notice 
+his armor and equipment are very clean and organized.
+From the looks of his muscles, you can see why he was chosen
+to be a guard.
+~
+72 0 500
+W 15 5 11 10 12
+200 14 8 M
+#1905
+worker~
+The field worker~
+A field worker is here tending to his crop.
+~
+He was sewing the ground with small seeds, but as you
+look at him, he raises he hoe, leans upon it, and
+whips a small bead of sweat from his brow.
+~
+218 0 100
+T 8 9 10 10 11
+10 4 8 M
+#1906
+ox~
+The ox~
+An extremely large ox is resting here.
+~
+The ox is very large, and smells none to pleasant.
+~
+200 0 0
+W 13 5 16 3 8
+0 4 5 F
+#1907
+owl~
+The white owl~
+A large white owl is sitting on a branch here.
+~
+The owl is very beautiful, having large white feathers
+and midnight black eyes.  It is a very graceful creature.
+~
+88 8 400
+T 9 8 17 10 10
+0 6 6 F
+#1908
+owl grey~
+The grey owl~
+A small grey owl is resting on a fallen log here.
+~
+The grey owl is no larger than a small melon, but
+its talons make it a fierce survivor.
+~
+72 0 0
+W 6 11 14 11 12
+0 17 5 M
+#1909
+orak~
+Orak~
+Orak is here, feeding on small fish.
+~
+He has very large tusks protruding from his mouth, making you 
+feel a little uneasy, yet you find yourself facinated by this 
+beast.
+~
+74 8 -200
+W 21 6 8 10 3
+1000 4 8 M
+#1910
+zyekian cleric~
+The Zyekian cleric~
+A Zyekian cleric is studying a book he has picked up here.
+~
+Deep in study, he barely notices you, or simply, ignores you.
+~
+74 8 1000
+C 22 5 7 9 6
+1000 3 6 M
+#1911
+zyekian mage~
+The Zyekian mage~
+A Zyekian mage is here carving something into his staff.
+~
+He is covered only by a simple robe.  
+~
+74 10 450
+M 22 4 18 9 7
+500 6 8 M
+#1912
+king zyekian kalek~
+Kalek~
+The King is here, sitting on his throne.
+~
+He is dressed in fine clothing.  Clean shaven and well mannered, he
+looks at you with all knowing eyes.  A broad smile covers his
+face as he greets you.  He is the last survivor of the great 
+Jiran race.
+~
+74 136 1000
+W 32 5 11 5 7
+0 6 6 M
+#1913
+giant leech~
+The giant leech~
+A giant leech jumps from beneath the water at you.
+~
+You see large needle-like fangs come from an opening 
+underneath its bulging eyes.
+~
+108 1048584 -1000
+W 14 3 12 10 9
+1000 4 8 N
+#1914
+~
+something~
+Something rushes at you.
+~
+Oh yea, something got a hold of you.
+~
+108 1048584 -1000
+O 5 11 16 10 13
+0 11 8 N
+#1915
+thrag beastman~
+Thrag the beastman~
+Thrag the beastman is here glaring at you.
+~
+~
+174 0 -500
+W 12 8 12 10 10
+2000 4 8 N
+#1917
+queen zyekian~
+The Zyekian Queen~
+The Zyekian Queen is resting here.
+~
+She looks very peaceful.  Nothing could harm a hair
+on this beautiful beings head.
+~
+72 136 1000
+C 20 5 17 10 3
+0 4 6 M
+#1918
+servant~
+The servant~
+A servant is here carrying a tray.
+~
+She looks calm.  There is no hatred in hers eyes, only
+love.
+~
+24 0 600
+T 10 8 16 10 8
+0 6 8 F
+#1919
+cook~
+The cook~
+The castle cook is here preparing some gourmet foods.
+~
+He is very short and bald.  The only hair on his head is a 
+long mustache which curves upwards.  He claps his hands
+and a few servants start running in different directions.
+~
+74 0 500
+C 13 3 11 10 11
+143 14 8 M
+#1920
+young boy~
+The young boy~
+A young boy is playing here.
+~
+His face is covered with dirt and his clothes are dirty, but
+all he cares about is playing.  You see him act out a great battle
+of a knight fighting a dragon.
+~
+24 0 500
+T 6 11 16 10 12
+0 10 8 M
+#1921
+blue conger~
+The blue conger~
+A blue conger grabs onto your leg and starts gnawing away.
+~
+It is long and thin.  This eel-like creature loves the taste 
+of blood.
+~
+40 8 -1000
+O 9 8 18 10 10
+0 6 8 N
+#1922
+baby~
+The baby~
+A baby is crawling around on all fours.
+~
+Isn't he adorable?
+~
+72 0 1000
+O 2 11 10 12 9
+0 12 8 M
+#1923
+merchant~
+The merchant~
+A merchant is here trying to make a bargain.
+~
+He is finely dressed and smells of scented oils.
+~
+72 0 300
+W 20 4 8 10 5
+3000 6 8 M
+#1924
+ferryman charon~
+Charon~
+Charon awaits his payment.
+~
+He is covered in a pitch-black cloak.  Your knees give way to
+fear as you look at him.  Slowly he reaches a skeletal hand
+towards you.
+~
+74 8 -1000
+W 25 3 17 7 12
+3 13 8 M
+#1926
+dragon black~
+The black dragon~
+A large black dragon evolves from the water.
+~
+His fangs, like swords, his claws, daggers.  He bellows loudly.
+You have disturbed his rest.
+~
+110 8 -1000
+W 20 3 15 10 7
+1000 5 8 M
+#1927
+woolly bear~
+The giant woolly bear~
+A large woolly bear sits here watching for her young.
+~
+She has many legs, and is covered with large hairs.
+~
+12 0 0
+W 15 6 11 10 7
+1000 5 6 F
+#1928
+woolly bear~
+The baby woolly bear~
+A baby woolly bear is here gnawing on some wood.
+~
+Even though it is a baby, it is taller than your knees.
+~
+12 0 0
+T 6 10 19 10 12
+0 14 8 M
+#1930
+elk~
+The elk~
+A large elk is here.
+~
+It has very large antlers.
+~
+8 0 100
+W 12 7 12 10 9
+0 4 8 M
+#1931
+zyekian commander~
+The Zyekian commander~
+A Zyekian commander stands here.
+~
+He has extremely large muscles.
+~
+10 8 900
+W 25 5 10 7 6
+3000 3 8 M
+#1932
+zyekian sphen~
+Learned Sphen~
+Learned Sphen is here organizing his goods.
+~
+He is very old and feeble, yet with his obvious magical abilities, he
+would be a harsh foe in battle.
+~
+10 8 800
+W 33 4 13 11 7
+10000 13 8 M
+#1933
+zyekian warder lorin~
+Lorin~
+Lorin the Warder is standing here.
+~
+He has a smile on his face.  This man is a faithful servant to the king.
+~
+72 8 900
+W 25 4 11 7 5
+1000 5 8 M
+#1934
+Kalten~
+kalten~
+Kalten the Necromancer is resting here at his table.
+~
+Kalten is tall and old.  Staring at him, you become awed at the 
+knowledge he must possess.  Kalten is the Kings' advisor.
+~
+10 8 900
+W 29 6 14 4 5
+1452 6 5 M
+#1990
+brontosaurus bronto~
+Brontosaurus~
+An enormous lizard munches peacefully on ferns.
+~
+Huge and ancient, before you is the last Brontosaurus in existence.  
+Possibly the most magnificent specimen ever, this one weighs in at close to 
+60 tons!  WATCH THOSE FEET, HE'S MOVING!!!
+~
+1052698 5310464 0
+T 41 3 14 18 20
+0 10 8 M
+#1991
+gate keeper gatekeeper~
+The Bronto Saurus' Gatekeeper~
+A sharp Bronto Saurus' Gatekeeper is guarding the gate.
+~
+~
+10 136 1000
+W 35 5 16 15 9
+5000 8 8 M
+#1992
+어린 간호사~
+어린 간호사~
+어린 간호사가 놀이를 하고 있습니다.
+~
+아주 밝은 얼굴로 뛰어 놀고 있습니다. 다친 병사 들을 돕는군요.
+~
+524312 0 500
+T 6 11 14 10 12
+5 12 8 M
+#2000
+fighter~
+A fighter~
+A fighter is ready to fight you!
+~
+~
+32872 100663322 -1000
+W 40 5 7 5 17
+100000 15 8 M
+#2001
+paladin~
+A paladin~
+A paladin is ready to fight you!
+~
+~
+36968 100745370 -1000
+W 40 5 7 6 17
+100000 15 8 M
+#2002
+cleric~
+A cleric~
+A cleric is ready to heal him!
+~
+~
+32872 100745370 -1000
+C 40 5 8 6 16
+100000 15 8 M
+#2003
+mage~
+A mage~
+A mage is ready to full fire you!
+~
+~
+32808 167839770 -1000
+M 40 5 8 6 16
+100000 15 8 M
+#2004
+dragon~
+A dragon~
+A dragon is ready to fly!
+~
+~
+8296 33622042 -1000
+M 40 5 9 6 16
+100000 15 8 M
+#2005
+thief~
+A thief~
+A thief is ready to steal your gold coins!
+~
+~
+33020 37488778 -1000
+T 40 5 7 8 18
+100000 17 8 M
+#2006
+1st keeper~
+The 1st key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 7 14 4 15
+100000 16 8 M
+#2007
+2nd keeper~
+The 2nd key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 9 15 5 15
+100000 17 8 M
+#2008
+3rd keeper~
+The 3rd key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 10 15 6 16
+100000 17 8 M
+#2009
+4th keeper~
+The 4th key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 11 14 5 17
+100000 17 8 M
+#2010
+5th keeper~
+The 5th key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 12 15 5 17
+100000 18 8 M
+#2011
+6th keeper~
+The 6th key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 12 16 7 17
+100000 18 8 M
+#2101
+marauder~
+A marauder~
+A marauder is here.
+~
+The marauder looks desceptively human.  But there is no hint of
+intelligence - he is just a rapacious beast.
+~
+104 8 -999
+W 19 5 9 9 15
+400 9 8 M
+#2102
+hyena~
+A hyena~
+A snarling hyena is here.
+~
+The hyena is pack animal.  She is rather helpless alone, but can
+be trouble in a large group.
+~
+108 0 -999
+W 15 7 12 11 13
+200 12 8 F
+#2103
+Aello harpy~
+Aello, the First Harpy~
+Aello, the First Harpy, is here.
+~
+A harpy has the head and body of a woman, with the wings, legs, and
+talons of a bird of prey.
+~
+42 144 -999
+W 22 6 11 17 7
+5000 13 8 F
+#2104
+Ocypete harpy~
+Ocypete, the Second Harpy~
+Ocypete, the Second Harpy, is here.
+~
+A harpy has the head and body of a woman, with the wings, legs, and
+talons of a bird of prey.
+~
+42 144 -999
+M 22 5 11 17 7
+50000 13 8 F
+#2105
+Celeno harpy~
+Celeno, the Third Harpy~
+Celeno, the Third Harpy, is here.
+~
+A harpy has the head and body of a woman, with the wings, legs, and
+talons of a bird of prey.
+~
+524330 144 -999
+W 22 5 11 17 7
+5000 13 8 F
+#2106
+statue hades~
+The Statue of Hades~
+A lifelike statue of Hades, the ruler of the underworld, is here.
+~
+~
+10 0 -999
+W 23 5 11 10 10
+10000 10 8 M
+#2107
+Stheno gorgon~
+Stheno, the First Gorgon~
+Stheno, the First Gorgon, is here.
+~
+A gorgon is a creature with snakes for hair, and that is not the end
+of her charms.
+~
+42 24 -999
+M 25 5 11 8 8
+5000 12 8 F
+#2108
+Euryale gorgon~
+Euryale, the Second Gorgon~
+Euryale, the Second Gorgon, is here.
+~
+A gorgon is a creature with snakes for hair, and that is not the end
+of her charms.
+~
+524330 24 -999
+C 25 6 11 8 8
+6000 13 8 F
+#2109
+Medusa gorgon~
+Medusa, the Third Gorgon~
+Medusa, the Third Gorgon, is here.
+~
+A gorgon is a creature with snakes for hair, and that is not the end
+of her charms.
+~
+42 152 -999
+W 25 5 11 8 13
+7000 17 8 F
+#2110
+monoceros~
+the monoceros~
+The monoceros is here.
+~
+The monoceros is a close relative to the unicorn, and is a noble
+beast.
+~
+8 10 999
+W 20 5 13 10 16
+1000 16 8 M
+#2111
+Alecto fury~
+Alecto, the First Fury~
+Alecto, the First Fury, is here.
+~
+The furies where born of the blood of the wounded Uranus, attendants
+of Proserpina.  Their heads are wreathed with serpents.
+~
+42 24 -999
+W 23 5 13 8 14
+5000 11 8 F
+#2112
+Tisiphone fury~
+Tisiphone, the Second Fury~
+Tisiphone, the Second Fury, is here.
+~
+The furies where born of the blood of the wounded Uranus, attendants
+of Proserpina.  Their heads are wreathed with serpents.
+~
+42 24 -999
+M 23 8 13 8 13
+5000 12 8 F
+#2113
+Megaera fury~
+Megaera, the Third Fury~
+Megaera, the Third Fury, is here.
+~
+The furies where born of the blood of the wounded Uranus, attendants
+of Proserpina.  Their heads are wreathed with serpents.
+~
+524330 24 -999
+C 23 9 13 8 16
+5000 13 8 F
+#2114
+Aeacus~
+The Lesser God Aeacus~
+Aeacus, a lesser god of the underworld, is here.
+~
+During his earthly life, Aeacus was King of Aegina.
+~
+42 152 -999
+W 26 5 13 7 16
+7000 14 8 M
+#2115
+Radamanthus~
+The Lesser God Radamanthus~
+Radamanthus, a lesser god of the underworld, is here.
+~
+Radamanthus is a mystery.
+~
+42 152 -999
+M 26 5 13 7 16
+7000 14 8 M
+#2116
+Minos~
+The Lesser God Minos~
+Minos, a lesser god of the underworld, is here.
+~
+During his earthly life, Minos was the King of Crete.
+~
+524330 152 -999
+C 26 5 13 7 16
+7000 17 8 M
+#2117
+hound~
+a hound of Hades~
+One of the hounds of Hades is here, howling.
+~
+The hound is fearsome, with large teeth, and eyes that glow yellow.
+~
+40 0 -999
+W 10 7 15 11 15
+0 9 8 N
+#2118
+Hecate~
+Hecate~
+Hecate, the Goddess of Sorcery and Witchcraft, is here.
+~
+Hecate was rumored to be visible only to dogs.
+~
+42 26 -999
+M 28 18 9 14 9
+10000 15 8 F
+#2119
+Proserpina~
+Proserpina~
+Proserpina, the Queen of the Underworld, is wandering about.
+~
+Proserpina looks unhappy.  Perhaps because Hades abducted her from
+her garden and brought her to the Underworld?
+~
+42 1048728 500
+M 33 7 15 7 14
+25000 15 8 F
+#2120
+Hades King~
+Hades~
+Hades, the King of the Underworld, is standing here.
+~
+Hades fears nobody, save perhaps Zeus.
+~
+16430 1048728 -999
+W 40 14 11 13 9
+500 16 8 M
+#2121
+eunuch~
+a eunuch~
+A eunuch is milling about.
+~
+The eunuch was brought here to help (guard?) Proserpina.
+~
+524334 0 0
+C 15 3 11 10 12
+100 12 8 N
+#2122
+Hypnos~
+Hypnos~
+Hypnos, the God of Dreams, is here.
+~
+Hypnos may be kindest of the gods of the underworld.
+~
+74 10 600
+M 23 6 11 3 7
+1000 14 8 M
+#2123
+hound larger~
+a larger hound of Hades~
+One of the larger hounds of Hades is here, howling loudly.
+~
+The hound is fearsome, with huge teeth, and eyes that glow.
+~
+40 16 -999
+W 12 7 19 11 12
+0 12 8 N
+#2124
+hydra~
+The 50 Headed Hydra~
+The 50 Headed Hydra is here, gyrating, screaming, snorting, salivating...
+~
+It's a lot to look at.
+~
+8238 24 -999
+W 40 7 11 5 16
+0 13 8 N
+#2200
+hatchling dragon baby~
+The dragon hatchling~
+A Dragon Hatchling is here, chewing on a bone.
+~
+This small dragon hisses at you as you enter the room.  Although it is only a
+few feet long, its sharp teeth make you think twice about petting it.
+~
+8266 524800 -900
+W 20 9 19 18 12
+4000 14 8 N
+#2201
+draconian~
+The Draconian~
+The Draconian is standing here.
+~
+This horrible creature is a bizarre cross between a man and a dragon.  He 
+has black scales and a seven foot wingspan.  He scowls at you and hefts his 
+spear as you enter the room.
+~
+8238 8 -900
+W 30 6 15 8 13
+400 18 8 M
+#2202
+master dragon~
+The Dragon Master~
+The lord of this crypt is here.
+~
+He doesn't look happy to see you.
+~
+8238 1048712 -1000
+W 40 7 9 4 15
+1200 15 8 M
+#2203
+mage wizard~
+A Powerful Mage~
+A Man is here, studying some books.
+~
+A powerful looking mage is standing in this room studying his spells.  You are
+surprised at the fact that he is human, and realize that he must be very
+powerful to have been accepted by the creatures which live here.
+~
+42 138 -900
+M 38 6 15 4 15
+1000 16 8 M
+#2204
+cleric draconian~
+The Holy Draconian~
+A Draconian is here, deep in thought.          
+~
+A Draconian stands here, dressed in simple robes.  Around his neck you 
+notice a golden medallion in the shape of a five headed dragon.  
+~
+46 136 -900
+C 35 5 18 5 16
+800 16 8 F
+#2205
+king draconian~
+The Draconian King~
+A Draconian wearing fine clothes is here, pondering his greatness.          
+~
+The king of the draconians sits here on a golden throne.  He looks as 
+though he could crush your head with a single blow.  Yet, you sense that he 
+is controlled by a greater power. 
+~
+8206 136 -900
+W 40 5 12 9 16
+5000 16 8 M
+#2206
+concubine draconian~
+A Concubine~
+A concubine is resting here. 
+~
+This is a concubine of the king.  She is lounging here, wearing nothing at 
+all.  You find yourself strangely repulsed as she draws a knife and 
+prepares to defend herself. 
+~
+8202 0 -500
+W 25 10 13 9 13
+100 14 8 F
+#2207
+bodyguard draconian~
+A bodyguard~
+A bodyguard is here, staring at you menacingly. 
+~
+This creature has devoted its life to defending the king.  Your intrusion has
+not pleased it.
+~
+42 4 -800
+W 36 5 7 9 16
+500 16 8 M
+#2220
+tiamat dragon~
+Tiamat~
+A Five headed dragon hisses at you as you enter this room.
+~
+You see before you the master of this Tower, Tiamat.  She frowns at you as she
+prepares to make you pay for your insolence...with your lives!
+~
+8234 648 -1000
+W 41 17 7 13 13
+50000 18 8 F
+#2221
+dragon red~
+The Great Red Dragon~
+A Red Dragon is here, contemplating your existence. 
+~
+This huge red dragon dominates the chamber.  As you turn to flee, he grins at
+you and invites you to stay...forever! 
+~
+8238 520 -1000
+W 39 5 11 16 4
+2500 14 8 M
+#2222
+dragon black~
+The Great Black Dragon~
+A Black Dragon is here, laughing at your insolence. 
+~
+This huge black wyrm laughs at your puny weapons.  You realize that he is not
+going to roll over and die for you.
+~
+8238 520 -900
+W 39 5 11 18 9
+2500 16 8 M
+#2223
+dragon white~
+The Great White Dragon~
+A White Dragon is here, waiting for you. 
+~
+This dragon towers over you.  Recalling your previous experiences with white
+dragons, you are not afraid.  It smiles at you and says 'I think you will find
+me a greater challenge than my offspring.'
+~
+8238 520 -1000
+W 39 6 14 5 16
+2500 16 8 M
+#2225
+dragon green~
+The Ancient Green Dragon~
+A Green Dragon is here, looking distraught. 
+~
+This huge beast appears to be the most directly related to the draconians. 
+It looks at you with sorrow in its eyes and says 'You have slaughtered my 
+children.  Prepare to die.'
+~
+8238 520 -1000
+W 39 16 9 6 5
+2000 14 8 M
+#2226
+hydra~
+A large hydra~
+A Hydra is here, blocking the doorway. 
+~
+A hydra is here, guarding the entrance to a sealed vault.  You have the feeling
+it isn't happy to see you.
+~
+8238 520 -800
+W 37 7 15 7 9
+1000 14 8 N
+#2227
+slave human~
+A human slave~
+A Human slave is here, hard at work.          
+~
+He looks like he's under a lot of stress.  He would probably like it if you
+left him alone.
+~
+10 0 0
+W 25 13 13 10 15
+10 12 8 M
+#2240
+zombie draconian~
+A Zombie~
+A zombie is here, staring at nothing in particular.
+~
+This used to be one of the warriors of this tribe.  He was denied his final
+rest, however, and now guards this corridor tirelessly as a zombie.
+~
+10 0 -400
+W 26 10 12 13 17
+150 16 8 N
+#2241
+dragon phase~
+the phase dragon~
+A Phase Dragon is darting around the room.          
+~
+This small dragon looks like he's up to no good. 
+~
+8392 524288 -300
+W 27 9 13 10 11
+500 13 8 M
+#2242
+fool draconian~
+the draconian fool~
+A Fool is here, making fun of you.          
+~
+This dragon man looks VERY foolish, dressed in a green and blue striped 
+suit.  As you enter the room, he points at you and laughs. 
+~
+8264 0 0
+W 25 13 10 10 14
+50 16 8 M
+#2243
+queen draconian~
+the Draconian Queen~
+A Female Draconian sits, here, looking very important.          
+~
+This draconian looks VERY busy as she orders her slaves around.  You think 
+it might be a good idea to leave her alone. 
+~
+14 0 -600
+W 40 5 16 16 3
+1000 14 8 F
+#2301
+spectral minion~
+A spectral minion~
+A ghostly figure continues about his business, unaware that you are here.
+~
+You see an ancient figure that is still attempting to complete his life's
+task. Githyanki like to keep them around as trophies and entertainment.
+~
+10 8 1000
+W 30 5 14 16 11
+1000 13 8 N
+#2302
+slave human~
+A Human Slave~
+A Human Slave stands here drooling and calling mindlessly for his master.
+~
+A creature that once human stands here. He is gibbering incoherently and 
+calling for Githyanki master. He turns a blank stare upon you and drools on 
+his chest.
+~
+108 0 10
+W 16 11 16 10 18
+0 14 8 M
+#2303
+acolyte~
+An Acolyte of Yunin~
+An Acolyte of Yunin is here acting silly (like her goddess).
+~
+An Acolyte of Yunin is wondering why the HELL Yunin put her here. She runs 
+up to you and rubs against you asking for help, she seems to be carrying a 
+bag full of snowballs.
+~
+12 0 1000
+C 14 12 8 12 10
+30 12 8 F
+#2304
+wraith~
+A shadowy figure~
+A shadowy figure materializes from out of nowhere.
+~
+The wraith is not amused that you have disturbed him.
+~
+108 1572888 -1000
+W 35 3 14 5 6
+1000 9 8 M
+#2305
+baby shadow dragon~
+The shadow dragon~
+A small shadow dragon is here, looking around for it's mother.
+~
+You can barely make out the form of the shadow dragon.  It's wicked
+figure indicates that you might not be welcome.
+~
+40 1572888 -600
+O 25 5 15 10 12
+200 10 8 N
+#2306
+hatchling shadow dragon~
+The shadow dragon hatchling~
+A tiny shadow dragon is here, being nursed by it's mother.
+~
+~
+42 24 0
+W 23 9 12 8 9
+100 9 8 N
+#2307
+shadow dragon~
+The ancient shadow dragon~
+A huge shadow dragon was lying here nursing, until you entered....
+~
+This mother is angry!  You never should have distured her or her
+children.  This might have been a bad idea on your part....
+~
+8238 1048728 -1000
+W 36 3 15 5 10
+5000 8 8 F
+#2308
+dark stalker~
+The Dark Stalker~
+The Dark Stalker is here stalking YOU!
+~
+The Dark Stalker is a tall figure dressed in black bandages, black as if
+he is covered in the dried blood of his victims.
+~
+76 1048586 0
+T 36 4 13 5 8
+100 9 8 N
+#2309
+githyanki child~
+A Githyanki Child~
+A child is here screaming its head off WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
+~
+A small creature with an oversized mouth and throat is here. It 
+wails in torment...
+                   
+              WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!
+~
+108 1048600 1000
+T 24 3 15 13 8
+75 8 8 F
+#2310
+githyanki citizen~
+A Githyanki Citizen~
+A Githyanki Citizen is here going about his business.
+~
+A Githyanki Citizen walks about minding his own business, like buying 
+slaves, buying humans for dinner, pieces of mindflayers as jewelry etc.
+~
+204 0 -500
+W 28 7 15 10 7
+100 8 8 N
+#2311
+githyanki warrior~
+The Githyanki warrior~
+The Githyanki warrior leaps to attack you!
+~
+A defender of the Githyanki race, this creature looks very deadly.
+He screams I AM GITHYANKI! DIE DIE DIE DIE!
+~
+108 24 -550
+W 27 7 12 14 17
+300 13 8 M
+#2312
+githyanki sergeant~
+A Githyanki Sergeant~
+A Githyanki Sergeant stands here watching over his underlings.
+~
+A Githyanki Sergeant, known throughout the world and planes as the most 
+viscious creatures to ever exist, stands here glaring at you. Before you 
+can even think he screams "DIE ADVENTURER SCUM!!" and attacks you...
+~
+108 524312 -650
+W 27 5 12 13 11
+500 9 8 M
+#2313
+githyanki guard~
+A Githyanki Royal Guard~
+A Githyanki Royal Guard Stands here watching diligently.
+~
+The guard is dressed in what appears to be the finest Githyanki armor 
+bearing the symbol of Lofwick.
+~
+108 24 -351
+W 35 6 9 13 15
+600 16 8 M
+#2314
+githyanki lord~
+The GITHYANKI lord~
+As you enter the room, the Lord raises his sword to attack !
+~
+A figure that can only be described as impressive, the Githyanki Lord is 
+truly frightening. He licks his lips as he looks at you with hunger in his 
+eyes.
+~
+4142 152 -1000
+W 37 7 9 11 15
+1000 17 8 M
+#2315
+githyanki warlock~
+A Warlock~
+A Githyanki Warlock is here making strange gestures in your direction.
+~
+A Githyanki Warlock the most feared of all Githyanki stands here. He is 
+dressed in strange garb covered with arcane runes. As you enter his domain 
+he looks at you and begins gesturing....
+~
+46 1048730 -1000
+M 39 7 9 5 13
+1200 16 8 M
+#2316
+githyanki priest~
+A Priest~
+A Githyanki Priest is here praying to Sinat for his blessings.
+~
+A Githyanki Priest wearing the symbols of Sinat and Karn prays for someone 
+to work his ministrations of Magic, Mayhem, Chaos, Destruction, and Death 
+on. When you enter he states simply..."My prayers have been answered!".
+~
+46 1048730 -1000
+C 39 8 15 5 9
+1600 15 8 M
+#2317
+loftwick lich~
+Loftwick~
+A once powerful knight and brother of Redferne stands here.
+~
+This knight stands here in defiance to all that are living. He is a Lich of
+the greatest power. As you look at him a disembodied voice rasps....
+
+I am LOFTWICK THE LICH-KING of the GITHYANKI! Prepare to meet your gods...
+~
+4142 152 -1000
+W 41 7 6 12 9
+10000 14 8 M
+#2318
+mirissa wife~
+Mirissa Redferne~
+Mirissa the undead wife of Loftwick is sleeping here in eternal torment.
+~
+A beautiful female lies here on the bed. When she turns over you are 
+horrified to see that one half of her face has been ritually and
+methodically burned away, leaving horrible scars.
+~
+138 0 1000
+T 35 7 16 8 10
+100 16 4 F
+#2319
+dark creeper~
+A Dark Creeper~
+A Dark Creeper is here trying to hide in the shadows.
+~
+A small creature about the size of the dwarf is skulking here. He is 
+dressed from head to toe in dark and somber clothes.
+~
+76 524288 -500
+T 30 7 12 10 10
+100 9 8 N
+#2500
+Clerk Temporary~
+The Temporary Clerk~
+The Temporary Clerk is diligently working here.
+~
+~
+72 0 0
+O 1 9 8 8 11
+50 9 8 F
+#2501
+Clerk Experienced~
+The Experienced Clerk~
+The Experienced Clerk is here, looking very busy.
+~
+~
+72 0 0
+O 2 11 12 10 10
+100 15 8 F
+#2502
+Clerk Head~
+The Head Clerk~
+The Head Clerk is diligently working here.
+~
+~
+72 0 0
+O 3 10 8 12 9
+150 8 8 F
+#2507
+Bookkeeper Temporary~
+The Temporary Bookkeeper~
+The Temporary Bookkeeper is standing here.
+~
+~
+72 0 0
+O 2 12 10 8 9
+100 9 8 F
+#2508
+Bookkeeper Experienced~
+The Experienced Bookkeeper~
+The Experienced Bookkeeper is here, eyeing you suspiciously.
+~
+~
+72 0 0
+O 4 9 9 11 8
+300 6 8 F
+#2509
+Bookkeeper Head~
+The Head Bookkeeper~
+The Head Bookkeeper is standing here.
+~
+~
+72 0 0
+O 6 10 15 9 14
+400 12 8 F
+#2514
+Accountant Temporary~
+The Temporary Accountant~
+The Temporary Accountant is about to go to lunch.
+~
+~
+72 0 0
+O 4 10 12 10 12
+200 13 8 F
+#2515
+Accountant Experienced~
+The Experienced Accountant~
+The Experienced Accountant is standing here.
+~
+~
+72 0 0
+O 7 10 14 8 15
+550 9 8 F
+#2516
+Accountant Head~
+The Head Accountant~
+The Head Accountant is standing here.
+~
+~
+72 0 0
+O 10 9 18 7 15
+1000 11 8 F
+#2521
+Attorney Assistant~
+The Assistant Attorney~
+The Assistant Attorney is here, eyeing you suspiciously.
+~
+~
+72 0 0
+O 5 10 15 9 12
+250 11 8 M
+#2522
+Attorney Associate~
+The Associate Attorney~
+The Associate Attorney is here, eyeing you suspiciously.
+~
+~
+72 0 0
+O 8 10 14 8 14
+1200 8 8 M
+#2523
+Attorney Corporate~
+The Corporate Attorney~
+The Corporate Attorney is diligently working here.
+~
+~
+72 0 0
+O 11 8 15 7 17
+1350 14 8 M
+#2528
+Manager Branch~
+The Branch Manager~
+The Branch Manager is diligently working here.
+~
+~
+72 0 0
+O 9 9 20 8 19
+1150 12 8 F
+#2529
+Manager Regional~
+The Regional Manager~
+The Regional Manager is shuffling papers here.
+~
+~
+72 0 0
+O 12 8 15 7 15
+2000 11 8 F
+#2530
+Manager National~
+The National Manager~
+The National Manager is standing here.
+~
+~
+72 0 0
+O 15 7 16 7 18
+2250 12 8 M
+#2535
+Vice-president Junior~
+The Junior Vice-president~
+The Junior Vice-president is about to go to lunch.
+~
+~
+72 128 0
+O 16 4 14 6 16
+2800 8 8 F
+#2536
+Vice-president Senior~
+The Senior Vice-president~
+The Senior Vice-president is diligently working here.
+~
+~
+72 128 0
+O 19 6 17 4 18
+3050 14 8 M
+#2537
+Vice-president Executive~
+The Executive Vice-president~
+The Executive Vice-president is diligently working here.
+~
+~
+104 136 0
+O 22 4 14 6 15
+3200 13 8 F
+#2542
+President Former~
+The Former President~
+The Former President is here, looking very busy.
+~
+~
+104 136 0
+W 24 6 18 4 14
+3800 9 8 F
+#2543
+President Unpopular~
+The Unpopular President~
+The Unpopular President is shuffling papers here.
+~
+~
+104 136 0
+W 27 4 17 6 14
+4050 13 8 F
+#2544
+President Corporation~
+The Corporation President~
+The Corporation President is here, looking very busy.
+~
+~
+104 136 0
+W 30 6 18 4 17
+4500 11 8 F
+#2550
+Building Guard~
+The Building Guard~
+The Building Guard is here.
+~
+~
+72 8 1000
+W 23 4 20 8 18
+1000 14 8 M
+#2551
+director member~
+The Board Member~
+A Member of the Board of Directors is here, looking disgusted.
+~
+~
+110 136 0
+W 30 5 14 3 19
+5000 9 8 M
+#2552
+chairman boss~
+The Chairman of the Board~
+The Chairman of the Board is here, scowling.
+~
+~
+32874 136 0
+W 41 4 11 4 15
+20000 13 8 M
+#2553
+babe~
+The Righteous Babe~
+The Righteous Babe, companion to the Chairman, is here.
+~
+This is one righteous babe.
+~
+106 136 0
+W 41 5 11 5 13
+6000 14 8 F
+#2560
+newsboy paperboy~
+The Newsboy~
+The Newsboy is here, hawking papers.
+~
+~
+74 0 0
+O 12 11 12 10 9
+200 13 8 M
+#2561
+salesclerk clerk~
+The Salesclerk~
+The Salesclerk is here, ready to buy or sell.
+~
+~
+74 0 0
+O 12 12 17 12 11
+10000 4 8 M
+#2562
+chemist~
+The Chemist~
+The Chemist is here, doing research on new products.
+~
+The Chemist looks a lot like Cary Grant.
+~
+74 0 0
+M 15 5 11 10 12
+1000 11 8 M
+#2700
+bird~
+the big bird~
+A BIG bird.
+~
+It looks beautiful.
+~
+8 8 1000
+W 15 5 15 17 20
+2000 8 8 N
+#2701
+bird 새~
+고운 새~
+한마리의 고운 새가 날아 다닙니다.
+~
+아주 아름다운데요.
+~
+8 8 1000
+W 15 7 17 15 17
+2000 12 8 N
+#2801
+field soldier~
+Field soldier~
+Field soldier is here. He looks very hungry.
+~
+~
+104 24 -999
+W 28 5 5 15 19
+1000 14 8 M
+#2802
+castle soldier~
+Castle soldier~
+Castle soldier is here. He want to escape this terrible castle..
+~
+~
+104 24 -999
+W 33 6 3 15 17
+1250 14 8 M
+#2803
+secret soldier~
+Secret soldier~
+Secret soldier is here. He will going to bed soon..
+~
+~
+104 24 -999
+W 35 7 5 15 19
+1500 13 8 M
+#2817
+general jangbi~
+General jangbi~
+General jangbi is sleeping here. His dream is drink Makgolri..
+~
+~
+4138 16777360 -500
+W 38 15 14 10 18
+3000 13 4 M
+#2827
+general chowoon~
+General chowoon~
+The general chowoon is standing here. He looks very strong..
+~
+~
+4138 16777368 -700
+W 40 12 13 18 13
+4000 16 8 M
+#2828
+general macho~
+General macho~
+The general macho is standing here. He likes fighting..
+~
+~
+4138 16777368 -600
+W 40 13 20 17 13
+5000 10 8 M
+#2832
+general gwanwoo~
+general gwanwoo~
+The great general gwanwoo is standing here. He looks at you.
+~
+~
+4106 16779416 -800
+W 40 13 13 7 9
+10000 17 8 M
+#2833
+mosa gongmyung~
+Mosa gongmyung~
+The great mosa,gongmyung is here. He is angry at your rudeness..
+~
+~
+42 33556632 -500
+M 41 9 13 8 9
+15000 12 8 M
+#2834
+king yubi~
+King yubi~
+The king of chok-kingdom,yubi is here..He looks very weak..but...
+~
+~
+4106 33556632 500
+W 41 8 12 12 8
+30000 13 8 M
+#2835
+cleric hwata~
+Cleric hwata~
+The mysterious cleric hwata is here..He is making something.
+~
+~
+10 33556632 700
+C 41 7 12 7 6
+1000 9 8 M
+#2836
+secret guard~
+Secret guard~
+The secret guard of Chok is here..He is guarding VIP of Chok.
+~
+~
+1048586 34605208 700
+C 38 5 18 8 11
+1000 10 8 M
+#2900
+knight ethereal dark~
+The Dark Ethereal Knight~
+A dark ethereal knight hovers over the bloody clearing.
+~
+The ethereal knight is clad in shadowy black armor. It appears as though he
+was involved in the carnage that occured here. His soul is trapped here, as
+he waits for release.
+~
+10 136 -1000
+W 35 13 5 6 10
+25000 9 8 M
+#2901
+treant tree~
+The Old Treant~
+A huge, gnarled tree stands here, battered by age and nature.
+~
+The old tree looks as though the wind has battered and torn at it for years.
+Very few leaves remain. Its limbs are crooked and gnarled. It moans as the 
+wind pushes it back and forth.
+~
+10 0 250
+C 30 11 5 6 19
+5000 14 8 N
+#2902
+dweller cave~
+The Cave Dweller~
+A slimy, gross creature is here munching on a corpse.
+~
+The cave dweller looks like a mixture of several disgusting monsters. It has
+a bird's beak, huge white eyes, a furry body, and long clawed hands and feet.
+It sees you and snarls.
+~
+8234 33554432 0
+W 25 12 6 3 18
+2500 13 8 N
+#2903
+toad rock~
+The Rock Toad~
+A rather large rock toad sits here, croaking loudly.
+~
+A grey toad. Its about the size of a cow. Small horns grow all over its body.
+~
+10 1048576 250
+O 29 13 3 4 17
+2550 11 6 M
+#2904
+weeping willow tree~
+The Weeping Willow~
+A large willow tree stands here, weeping.
+~
+The weeping willow has long thins branches. These branches seem to droop in
+anguish and dismay. You hear a faint sound of crying.
+~
+10 136 1000
+M 35 11 4 5 11
+20000 9 8 F
+#2905
+mist mistling~
+The Mistling~
+A mistling emerges from the mist surrounding you.
+~
+It looks like a thin wisp of mist that has gained substance and size.
+~
+42 524298 0
+W 28 9 5 6 15
+1000 9 8 N
+#2906
+swamp wraith~
+The Swamp Wraith~
+A swamp wraith emerges from the mist here.
+~
+The swamp wraith is made of mist and is in the image of a great warrior. He
+appears to emerge from the mist. You feel the cold radiating from his form as
+he nears you.
+~
+46 1573002 -1000
+W 30 9 17 3 14
+25000 14 8 N
+#2907
+ogre villager~
+The Ogre Villager~
+The ogre villager is here, going about its chores.
+~
+You see a pitifully overworked ogre. It is dressed in rags and shuffles along
+with its head hung low. It sees you and cringes in mortal terror.
+~
+200 0 200
+W 20 9 4 5 17
+200 9 8 N
+#2908
+warrior ogre~
+The Ogre Warrior~
+The ogre warrior stands here, growling fiercely.
+~
+The ogre warrior is dressed in thick fur armor. He looks quite large and
+formidable.
+~
+236 0 -350
+W 25 8 6 3 18
+5000 9 8 M
+#2909
+guard ogre~
+The Ogre Guard~
+The ogre guard is here manning his post faithfully.
+~
+The ogre guard stands here manning his post. It appears as though he would
+fight to the death before abandoning his post.
+~
+110 0 -500
+W 29 8 3 4 16
+10000 9 8 M
+#2910
+shaman ogre~
+The Ogre Shaman~
+The ogre shaman is here chanting arcane words and waving his arms.
+~
+The ogre shaman is draped in thick fur cloaks and pelts. He has all types of
+charms and holy symbols draped about him. He looks at you and snarls.
+~
+238 136 -750
+T 30 9 4 5 19
+50000 9 8 M
+#2911
+chief chieftain ogre~
+The Ogre Chieftain~
+The ogre chieftain is here, observing his subjects.
+~
+This is the biggest ogre you have ever seen. He is heavily equipped and looks
+quite formiddable. He towers high above you and growls menacingly.
+~
+238 524424 -1000
+T 35 5 6 3 11
+50000 9 8 M
+#2912
+barbarian~
+The Plains Barbarian~
+A plains barbarian is here, clad in heavy furs.
+~
+The plains barbarian is clad in heavy furs. He seems used to the chilling cold
+and icy wastes.
+~
+238 1572864 0
+W 30 6 6 3 16
+3 9 3 N
+#2913
+yeti white~
+The White Yeti~
+The white yeti crouches here snarling.
+~
+The white yeti looks like a huge white snow ape. Its long arms end in long
+curved talons and its mouth is full of sharp teeth.
+~
+238 1572864 -350
+W 26 8 3 4 20
+1000 9 8 N
+#2914
+worm ice white iceworm~
+The Ice Worm~
+A huge ice worm burrows through the ice and snow here. It rears up and
+attacks!
+~
+The huge worm is almost 50 feet long. Its huge gaping mouth spews ice and snow
+as it charges directly at you.
+~
+110 1572864 3500
+W 30 5 7 4 15
+3500 9 8 M
+#2915
+citizen minotaur~
+The Minotaur Citizen~
+A minotaur citizen is here, hurrying through the icy streets.
+~
+You see a rather ragged and cold minotaur. It appears to be looking for a warm
+place to seek refuge from the cold.
+~
+206 0 500
+W 25 8 4 5 20
+10000 10 8 M
+#2916
+guard minotaur~
+The Minotaur Guard~
+A minotaur guard catches you trespassing and attacks!
+~
+The minotaur is clad in heavy furs. Beneath these furs, you see the gleam of
+his armor.
+~
+110 0 -330
+W 32 8 6 3 16
+25000 9 8 M
+#2917
+warrior minotaur~
+The Minotaur Warrior~
+A minotaur warrior is here looking for intruders.
+~
+You see a huge minotaur that is dressed in thick furs and armor. He has black
+fur and red eyes. He looks quite capable of protecting the city.
+~
+238 0 -330
+W 31 8 3 4 18
+25000 9 8 M
+#2918
+minotaur gatekeeper~
+The Minotaur GateKeeper~
+A minotaur is here guarding the Keep of Mahn-Tor.
+~
+The minotaur stands rigidly before the gates of the keep. It looks quite
+miserable standing in the driven snow and ice.
+~
+78 8 -330
+W 35 8 5 6 12
+25000 8 8 M
+#2919
+minotaur high guard~
+The High Minotaur Guard~
+The minotaur high guard is here guarding the Keep.
+~
+The high guard is dressed in blue plate armour. He looks quite dangerous and
+skilled.
+~
+110 8 -330
+W 35 8 5 6 11
+45000 8 8 M
+#2920
+minotaur royal guard~
+The Royal Minotaur Guard~
+The royal minotaur guard considers you an intruder and attacks!
+~
+The royal guard is quite huge. He is dressed in heavy red armor and wields a
+huge glaive. He looks quite capable of protecting the keep.
+~
+110 8 -330
+W 36 8 5 5 12
+50000 8 8 M
+#2921
+guard minotaur elite~
+The Elite Minotaur Guard~
+The elite minotaur guard sees you and attacks!
+~
+This minotaur wields a huge morningstar and is clad in heavy crimson plate and
+furs.
+~
+110 8 -250
+W 38 8 5 5 11
+75000 8 8 M
+#2922
+girl haremgirl harem slave~
+The Harem Girl~
+A harem girl cowers here in fear.
+~
+She looks quite attractive. Her low cut gown reveals why she was chosen to be
+in the harem.
+~
+206 0 1000
+W 22 9 3 4 19
+10 8 8 M
+#2923
+butler minotaur~
+The Minotaur Butler~
+A minotaur butler stands here rigidly, awaiting orders.
+~
+He looks quite regal and refined to be a minotaur.
+~
+206 0 250
+W 40 8 5 6 10
+5000 13 8 M
+#2924
+keeper minotaur ring-keeper~
+The Minotaur Ring-Keeper~
+3he minotaur ring-keeper stands guarding his post.
+~
+The ring-keeper is a huge minotaur. You notice a huge ring of multicolored
+keys hanging from his belt. He wears huge, spiked brass knuckles.
+~
+78 136 -300
+W 41 5 5 11 9
+50000 7 8 M
+#2925
+gorak minotaur warrior master~
+Gorak~
+Gorak, the Minotaur Master Warrior, is here practicing his skills.
+~
+Gorak is HUGE. His bulging muscles are confined beneath heavy armor. He is the
+master of the warrior guild of Mahn-Tor.
+~
+42 136 -300
+W 40 4 5 10 18
+100000 13 8 M
+#2926
+darkoth minotaur anti-paladin master~
+Darkoth~
+Darkoth, the minotaur anti-paladin, stands here grinning wickedly.
+~
+Darkoth is a living incarnation of evil. He radiates a dark aura and a cold
+chill runs down your spine. He is the master of the Mahn-Tor anti-paladins.
+~
+42 136 -1000
+W 40 5 6 7 19
+100000 13 8 M
+#2927
+tyrgoth minotaur paladin master~
+Tyrgoth~
+Tyrgoth, the minotaur paladin, is here worshipping silently.
+~
+Tyrgoth is the minotaur incarnation of good. You feel safe and at ease in his
+presence. He is the leader of the Mahn-Tor paladins.
+~
+10 136 1000
+W 40 6 8 7 17
+100000 13 8 M
+#2928
+amyrok minotaur mage master~
+Amyrok~
+Amyrok, the minotaur archmage, is here chanting arcane spells.
+~
+Amyrok is a small minotaur. He is clad in loose robes and emits an aura of
+power. He appears quite dangerous, despite his size. He is the leader of the
+mages of Mahn-Tor.
+~
+42 136 300
+M 40 3 9 9 16
+100000 13 8 M
+#2929
+sumaron minotaur cleric master~
+Sumaron~
+Sumaron, master cleric of Mahn-Tor, is here looking holy.
+~
+Sumaron is clad in white glowing robes. He is goodness incarnate. He is the
+master of all the clerics of Mahn-Tor.
+~
+42 136 1000
+C 40 5 9 7 16
+100000 13 8 M
+#2930
+nasturn minotaur druid master~
+Nasturn~
+Nasturn, the minotaur druid, is here studying the arts of nature.
+~
+Nasturn is quite a natural looking minotaur. He is dressed in leather and
+wears no metal of any type. He looks at you and smiles.
+~
+10 136 500
+W 40 6 7 8 18
+100000 15 8 M
+#2931
+belrak minotaur ranger master~
+Belrak~
+Belrak, the minotaur ranger, looks unhappy about having visitors.
+~
+Belrak is clad in green and brown leather. He looks quite agile and thin, when
+compared to the normal minotaur. He looks at you with a slight smirk.
+~
+42 136 500
+W 40 3 9 9 16
+100000 15 8 M
+#2932
+dorgar minotaur thief master~
+Dorgar~
+Dorgar, the minotaur thief, is here hiding in the shadows.
+~
+Dorgar is clad all in black. He is tall and slender, unlike most minotaurs. He
+appears to be quite a skilled thief.
+~
+46 1573000 -500
+T 40 5 9 7 18
+100000 13 8 M
+#2933
+mahn-tor minotaur grand master~
+Mahn-Tor~
+Mahn-Tor, the minotaur grand master, is here looking down at you.
+~
+Mahn-Tor towers above you. He is simply huge. Mahn-Tor is clad in the best of
+armor and robes. He wields the largest axe you have ever seen. You can see why
+Mahn-Tor is the leader of the minotaurs. He is awe-inspiring.
+~
+14 1573002 -500
+T 41 11 5 8 14
+100000 13 8 M
+#3000
+wizard al smith~
+Al Smith~
+Al, the wizard, Smith is here mumbling magical stuff to himself.
+~
+Al says '또 왔구나'
+~
+10 136 900
+M 40 11 4 5 15
+20000 9 8 M
+#3001
+baker bob wilson~
+Bob Wilson~
+Bob Wilson, the baker, is here, wiping flour from his face.
+~
+Bob says '안녕'
+~
+10 136 900
+C 40 15 7 3 6
+2000 9 8 M
+#3002
+grocer jed smith~
+Jed Smith~
+Jed Smith, Grocer, is here, tending to his store.
+~
+Jed says '안녕'
+~
+10 136 900
+C 40 12 17 4 15
+20000 12 8 M
+#3003
+weaponsmith walter smith~
+Walter Smith~
+Walter Smith, the weaponsmith, is here.
+~
+Walter says '잘 있었니'
+~
+10 136 900
+W 40 14 10 6 19
+20000 15 8 M
+#3004
+armourer fred wilson~
+Fred Wilson~
+Fred Wilson, the armourer, stands here.
+~
+Fred says '안녕'
+~
+10 136 900
+W 40 12 18 8 17
+2000 15 8 M
+#3005
+Doris Smith~
+Doris Smith~
+Doris Smith is here.
+~
+Doris says '안녕'
+~
+12 128 900
+O 13 7 4 7 11
+2000 8 8 F
+#3006
+captain john smith~
+Captain John Smith~
+Captain John Smith stands here, selling boats.
+~
+Captain John says '좋은 날인데?'
+~
+10 0 900
+W 40 11 8 8 17
+2000 15 8 M
+#3007
+sailor~
+the Sailor~
+A Sailor stands here, waiting to help you.
+~
+He looks like a strong, fit sailor.
+~
+10 0 900
+W 20 6 20 4 7
+2000 9 8 M
+#3020
+guildmaster Martha Smith~
+Martha Smith~
+Martha Smith, the guildmaster, is standing here.
+~
+Martha says '하하하'
+~
+10 0 1000
+W 40 11 18 14 19
+8794 18 8 F
+#3024
+Orville Wilson~
+Orville Wilson~
+Orville Wilson is here, guarding something.
+~
+Orville says 'Hello'
+~
+10 0 800
+W 23 4 5 7 9
+1000 8 8 M
+#3026
+Chester Wilson~
+Chester Wilson~
+Chester Wilson is here, combing his hair.
+~
+Chester says 'Hello'
+~
+10 0 800
+W 23 4 4 6 11
+2000 9 8 M
+#3040
+bartender~
+the Bartender~
+A Bartender watches you calmly, while he skillfully mixes a drink.
+~
+A tired looking Bartender who hates trouble in his bar.
+~
+10 0 900
+W 33 7 18 11 11
+2000 15 8 M
+#3042
+waiter ron~
+Ron the Waiter~
+Ron, the new waiter at the Mage's Bar, is here looking for tips.
+~
+His name is Ron and he hopes you have a nice day.
+~
+10 0 600
+W 23 7 4 7 12
+1000 9 8 M
+#3044
+kid clerk waiter~
+A high school kid~
+A high school kid wearing a McDonalds uniform is here.
+~
+~
+10 0 600
+W 40 17 6 3 15
+1000 15 8 M
+#3045
+carpenter~
+the Carpenter~
+A carpenter is here working on the new construction.
+~
+~
+10 0 600
+W 23 6 3 9 13
+1200 14 8 M
+#3046
+filthy~
+Filthy~
+Filthy is standing here, eager to serve you a special drink.
+~
+Filthy looks real, ehm, dirty. He likes to keep his costumers happy,
+but do not mess with him or else he'll get upset.
+~
+10 0 600
+W 40 12 6 6 16
+1000 15 8 M
+#3060
+cityguard guard~
+the Cityguard~
+A cityguard stands here.
+~
+A big, strong, helpful, trustworthy guard.
+~
+65736 0 1000
+W 10 8 18 11 12
+200 16 8 M
+#3061
+janitor 영구~
+the Janitor named 영구~
+A janitor named 영구 is walking around, cleaning up.
+~
+The janitor named 영구 does not appear to be enjoying his work.
+The janitor named 영구 turns away from you and spits.
+~
+9 0 900
+O 1 9 12 10 10
+34 9 8 M
+#3062
+fido dog ddaeng ddaeng-7 땡칠~
+the Beastly Ddaeng-7~
+아주 못 생긴 땡칠이가 있습니다.
+~
+땡칠 is a small dog that has a foul smell and pieces of rotted meat hanging
+around his teeth.
+~
+169 0 -200
+O 1 12 10 9 11
+10 8 8 M
+#3063
+mercenary~
+the Mercenary~
+A Mercenary waiting for a job.
+~
+He looks pretty mean.
+~
+12 0 -200
+O 5 11 14 10 13
+47 9 8 M
+#3064
+drunk 주정뱅이~
+the Drunk 주정뱅이~
+A singing, happy Drunk.
+~
+A drunk who seems to be too happy, and to carry too much money.
+~
+8 0 400
+O 2 11 8 8 8
+85 10 8 M
+#3065
+beggar 거지~
+the Beggar 거지~
+거지가 말합니다 '한푼만 줍쇼'.
+~
+The beggar looks like she is fed up with life.
+~
+10 0 400
+O 1 8 11 10 12
+0 10 8 F
+#3066
+odif yltsaeb~
+the Odif Yltsaeb~
+Odif Yltsaeb is here, walking backwards.
+~
+Odif is a small god that has been reversed by some dog.
+~
+169 0 -200
+O 1 9 11 11 9
+10 10 8 M
+#3067
+cityguard guard~
+the Cityguard~
+A cityguard is here, guarding the gate.
+~
+A big, strong, helpful, trustworthy guard.
+~
+65610 0 1000
+W 10 8 17 11 12
+200 16 8 M
+#3070
+cranky librarian~
+The Cranky Librarian~
+A Cranky Librarian snoozes with a copy of Mein Kampf.
+~
+Stretched out at her desk, before you snoozes the librarian feared most by 
+scholars everywhere!  She is the epitome of all the mean-spirited librarians
+you have know since childhood.  Wake her and suffer her wrath!  
+~
+42 128 0
+M 28 7 14 18 13
+2 14 4 F
+#3071
+furniture throne~
+A Vengeful Piece of Furniture~
+A Rickety, Wooden Throne sits on a dais.
+~
+The throne looks like its on its last legs literally. Hmm, did it just fidget?
+~
+42 1048576 200
+W 34 7 16 7 16
+0 18 8 M
+#3072
+grand mage archmage guildmaster~
+The Grand Archmage~
+The Grand Archmage sits on his wooden throne.
+~
+Before you sits the ancient Guildmaster of Mages.  Benign eyes peer at you
+from beneath silver-white brows and a grandfatherly smile greets your entrance.
+"And what would you learn today?"
+~
+43 128 1000
+M 36 13 14 15 7
+0 16 8 M
+#3090
+kitten 고양이~
+the Kitten 고양이~
+A small loyal Kitten is here.
+~
+The Kitten looks like a cute, little, fierce fighter.
+~
+14 0 400
+O 1 8 9 12 12
+0 11 8 N
+#3091
+puppy 강아지~
+the Puppy 강아지~
+A small loyal Puppy is here.
+~
+The Puppy looks like a cute, little, fierce fighter.
+~
+14 0 400
+O 1 10 8 10 11
+0 10 8 N
+#3092
+beagle~
+the Beagle~
+A small, quick, loyal Beagle is here.
+~
+The Beagle looks like a fierce fighter.
+~
+14 0 400
+O 1 9 12 12 10
+0 10 8 N
+#3093
+rottweiler~
+the Rottweiler~
+A large, loyal Rottweiler is here.
+~
+The Rottweiler looks like a strong, fierce fighter.
+~
+14 0 400
+O 1 10 11 9 12
+0 12 8 N
+#3094
+wolf 늑대~
+the Wolf 늑대~
+A large, trained Wolf is here.
+~
+The Wolf looks like a strong, fearless fighter.
+~
+14 0 0
+O 1 12 8 8 9
+0 8 8 N
+#3100
+maid~
+the Maid~
+The Maid is waiting for your order.
+~
+She is very beautiful with golden hair, and deep blue eyes. A good reason
+for coming here more often.
+~
+10 0 1000
+W 23 4 5 7 9
+200 6 8 F
+#3120
+sexton~
+the Sexton~
+A Sexton is sitting here, drinking hot tea.
+~
+The Sexton looks like he is relaxing after another gravedigging job.
+~
+10 0 800
+W 3 9 11 9 11
+13 12 6 M
+#3121
+swan~
+the Swan~
+A swan is swimming around in the pond.
+~
+The white swan is very elegant.
+~
+10 0 1000
+W 1 12 12 9 9
+0 9 8 N
+#3122
+duckling~
+the Duckling~
+A duckling is swimming around in the pond.
+~
+The duckling is adorable, it looks most of all like a tiny furball.
+~
+10 0 1000
+O 1 9 11 12 8
+0 9 8 N
+#3123
+sparrow~
+the Sparrow~
+A sparrow is flapping around on the ground.
+~
+The sparrow looks like it is enjoying life.
+~
+200 0 1000
+O 1 12 10 9 10
+0 9 8 N
+#3124
+duck~
+the Duck~
+A duck is here, quacking happily.
+~
+The duck is quite fat.  It looks like it is enjoying life.
+~
+72 0 1000
+O 1 10 12 8 10
+0 10 8 N
+#3125
+deathcure~
+DeathCure~
+DeathCure is here, looking your hit point ???
+~
+DeathCure is deciding your health . hmmmmm.... you killed or recreated .
+~
+9 2176 1000
+W 41 5 13 8 16
+10000 16 8 F
+#3126
+Massacre~
+The Massacre~
+A Massacre is here. 
+~
+Massacre hit you with massacre power !.
+~
+9 128 1000
+W 40 11 8 7 11
+20000 14 8 M
+#3127
+extremely hard~
+The Extremely Hard~
+A Extremely Hard is here .
+~
+Extremely Hard hit you with extremely power !.
+~
+9 128 1000
+W 40 12 8 7 15
+20000 15 8 M
+#3128
+hit hard~
+The Hit Hard~
+The Hit Hard is here .
+~
+The Hit Hard hit you with hit hard power !.
+~
+9 128 1000
+W 40 12 8 7 15
+20000 16 8 M
+#3129
+hit~
+The Hit~
+The Hit is here .
+~
+The Hit hit you with hit power !.
+~
+9 128 1000
+W 40 12 8 9 12
+20000 13 8 M
+#3130
+barely hit~
+The Barely Hit~
+The Barely Hit is here .
+~
+The Barely Hit hit you with Barely hit power !.
+~
+9 128 1000
+W 40 13 8 9 12
+20000 14 8 M
+#3131
+tickle~
+The Tickle~
+The Tickle is here .
+~
+The Tickle hit you with tickle power !.
+~
+9 128 1000
+W 40 11 10 9 15
+20000 14 8 M
+#3132
+miss~
+The Miss~
+The Miss is here.
+~
+The Miss hit you with miss power !.
+~
+9 128 1000
+W 40 13 15 9 15
+20000 18 8 M
+#3133
+musashi~
+Musashi~
+Musashi is here, dancing with his samurai sword.
+~
+Musashi is getting a little tired of the nonsense around here.
+~
+9 33556480 1000
+W 41 8 16 9 13
+10000 18 8 M
+#3134
+bombard~
+Bombard~
+Bombard is here, look at you .
+~
+ Bombard is the maker of Bombard Sword. But Laow broke the sword to
+seven particle. Laow is a brother of Gaiot. Laow gave that particles
+to his Mud Message Fighters. Bombard want to reget them to remake
+his Bombard Sword.
+Bombard can hit you with his bomabrd power .
+~
+11 0 1000
+W 35 11 9 8 13
+1000 9 8 M
+#3135
+super deathcure~
+Super DeathCure~
+Super DeathCure is here, looking your hit point ???
+~
+Super DeathCure is deciding your health . hmmmmm.... you killed or recreated .
+~
+9 128 1000
+W 40 9 3 8 13
+10000 15 8 F
+#3140
+chief~
+the Chief~
+The Chief Guard is looking very upset.
+~
+A very angry chief.
+~
+46 8 1000
+W 17 6 9 10 13
+1000 10 8 M
+#3141
+cityguard guard~
+the Cityguard~
+A cityguard stands here, looking very upset.
+~
+A big, strong, angry guard.
+~
+46 0 1000
+W 10 8 16 11 12
+0 12 8 M
+#3142
+secretary~
+the Secretary~
+A secretary is sitting at the desk, typing away on the typewriter.
+~
+She looks very busy.
+
+>
+The Secretary says 'Sorry, but the Mayor is extremely busy today.'
+The Secretary says 'Please sit down and have a seat in the meantime.'
+~
+10 0 900
+C 12 7 12 10 12
+100 12 8 F
+#3143
+mayor~
+the Mayor~
+The Mayor is sitting in his huge chair, snoring loudly.
+~
+He is a stocky, middle-aged man with thin, grey hair.
+~
+11 0 900
+C 23 11 6 7 18
+1000 13 4 M
+#3144
+crier~
+the Town Crier~
+The Town Crier is here, weeping quietly.
+~
+He is very good at his job - completely dissolved in tears.
+~
+136 0 900
+O 1 8 8 9 12
+34 8 8 M
+#3145
+mom~
+Mom~
+Mom is here, shaking her finger at you.
+~
+Mom is getting a little tired of the nonsense around here.
+~
+9 128 1000
+W 40 9 15 9 8
+4000 13 8 F
+#3146
+suzy~
+Suzy the Street Walker~
+Suzy, a seductive street walker, leans against the lamp post and smiles.
+~
+Suzy lights up a smoke and winks at you.
+~
+72 0 0
+T 12 8 12 10 19
+500 12 8 F
+#3147
+urchin~
+the street urchin~
+A dirty little street urchin is here, looking at your coins.
+~
+The little street urchin is a dirty, but quick, little bugger.
+~
+204 524298 -100
+T 5 12 17 13 16
+100 14 8 M
+#3148
+unarmed cityguard guard~
+the Unarmed Cityguard~
+An Unarmed Cityguard is here, yawning.
+~
+A very big, very strong, somewhat helpful, unarmed guard.
+~
+131144 8 1000
+W 23 4 18 11 9
+300 13 8 M
+#3149
+ranger forest~
+the Forest Ranger~
+A Forest Ranger is here, checking the ecology and all that.
+~
+A very dedicated Forest Ranger.
+~
+65610 10 1000
+W 23 4 15 8 13
+1000 14 8 M
+#3150
+security guard~
+The Security Guard~
+A Security Guard is here, hoping to go on lunch break soon.
+~
+The security guard is an ex-jock.
+~
+65610 8 1000
+W 20 4 20 8 13
+1000 9 8 M
+#3151
+bogan~
+A Bogan~
+A Bogan is here, looking for a Volvo to steal.
+~
+The Bogan is an ugly punk, with greasy hair, dirty clothes, and he's listening
+to some Heavy Metal music.
+~
+76 8 -900
+T 21 4 8 9 7
+10 9 8 M
+#3152
+examiner~
+The Bank Examiner~
+The Bank Examiner is here, making sure the bank isn't cheating you.
+~
+The Bank Examiner is a weak little guy.  Save him for a low level player.
+~
+10 0 100
+W 7 10 19 10 15
+250 13 6 M
+#3153
+president~
+The Bank President~
+The Bank President is here, scowling.
+~
+The Bank President is a large fellow, his pockets appear to be bulging.
+~
+10 0 100
+W 25 4 16 6 12
+500 10 6 M
+#3154
+undercover cop~
+The Undercover Cop~
+The Undercover Cop is sneaky and strong.
+~
+He says 'SCRAM!'.
+~
+65546 1048576 100
+W 27 5 15 3 13
+250 8 8 M
+#4000
+snake~
+the snake~
+A large dreadful snake.
+~
+It looks hungry.
+~
+43 8 -200
+O 11 6 10 13 15
+0 12 8 N
+#4001
+snake~
+the green snake~
+A small green snake.
+~
+It looks harmless.
+~
+11 0 -100
+O 7 8 20 12 14
+0 9 8 N
+#4002
+centipede~
+the centipede~
+A small centipede.
+~
+It looks complete harmless.
+~
+10 0 100
+O 3 11 12 11 10
+0 15 8 N
+#4003
+kobold~
+the kobold~
+A ugly kobold.
+~
+It looks ugly.
+~
+76 0 -100
+O 4 12 10 10 12
+0 10 8 N
+#4004
+orc~
+the orc~
+The orc walks around, looking for someone to kill.
+~
+You notice an evil look in his eyes
+~
+108 0 -400
+O 5 11 19 11 20
+10 16 8 M
+#4005
+orc~
+the orc~
+A large orc, really mean.
+~
+He looks dreadful.
+~
+76 0 -500
+O 7 9 17 13 14
+200 14 8 M
+#4050
+warrior~
+the warrior~
+A tall dangerous warrior. He has more scares than anyone you have
+seen before.
+~
+Well surely a strong, brainless fighter.
+~
+110 16 -300
+W 12 5 9 11 17
+100 9 8 M
+#4051
+warrior~
+the warrior~
+A tall warrior.
+~
+He seems to know his way with weapons.
+~
+108 16 -400
+W 7 10 12 11 19
+200 16 8 M
+#4052
+hobgoblin~
+the hobgoblin~
+A small hobgoblin stands here.
+~
+The hobgoblin looks quite lost.
+~
+76 0 -300
+O 6 10 12 13 13
+100 11 8 M
+#4053
+snake~
+the snake~
+A brown snake watches you.
+~
+The snake looks quite mean.
+~
+43 0 -600
+O 10 7 11 11 18
+0 6 8 N
+#4054
+centipede~
+the centipede~
+A white centipede is here.
+~
+The centipede doesn't really seem to notice you.
+~
+10 0 -100
+O 5 10 18 9 13
+0 14 8 N
+#4055
+hobgoblin~
+the hobgoblin~
+A large hobgoblin is here.
+~
+The hobgoblin looks quite dangerous.
+~
+76 0 -500
+O 10 7 16 10 13
+300 11 8 M
+#4056
+orc~
+the orc~
+An orc is here, looking for something (or perhaps someone ? ) to eat.
+~
+Well he doesn't seem to be friendly.
+~
+108 16 -800
+O 8 9 17 10 19
+150 12 8 M
+#4100
+mage~
+the Mage~
+A small intelligent looking mage is standing here. It looks like he
+knows his way with the magic. 
+~
+His IQ makes almost any dikumud player look stupid..
+~
+46 24 -100
+M 13 3 11 8 9
+500 4 8 M
+#4101
+troll~
+the troll~
+A large mean-looking troll is here.
+~
+Well looks dangerous.!
+~
+46 16 -800
+O 12 5 20 11 12
+500 10 8 M
+#4102
+snake~
+the snake~
+A large green snake, looks like a guardian for an evil force.
+~
+You see a evil creature.
+~
+47 0 -700
+O 10 7 9 13 15
+0 14 8 M
+#4103
+thief~
+the Thief~
+A thief, all dressed in black.
+~
+Well COUNT you money..!
+~
+76 0 100
+T 8 9 15 10 16
+100 10 8 M
+#4104
+orc~
+the orc~
+A ugly orc is standing here.
+~
+Yrkk..
+~
+236 0 -200
+O 7 10 17 10 19
+200 13 8 M
+#4105
+centipede~
+a centipede~
+A small harmless centipede is here.
+~
+Well it doesn't seem to pay any attention towards you.
+~
+10 0 300
+O 6 10 19 10 13
+0 13 8 N
+#4106
+warrior~
+the Warrior~
+A human warrior is here. He has a evil grin in his face.
+~
+He doesn't look friendly at all...
+~
+108 16 -300
+W 9 8 15 12 16
+100 8 8 M
+#4107
+kobold~
+the kobold~
+A green kobold is here.
+~
+It looks slimy..
+~
+108 0 -100
+O 7 7 17 10 12
+20 9 8 M
+#4200
+karen lady wamphyri~
+the Lady Karen~
+The Lady Karen stands here looking at you, with interest.
+~
+The Lady Karen looks unearthly beautiful.  She wears a silky white leather
+dress the fails to cover her body completely.  You cannot help but stare.
+She is wearing a gauntlet on her right hand that looks like a jumble of
+razors and hooks.  She will not kill you on sight for Harry has helped her
+control her Wamphyri desires.  However to attack her is to ask for death to
+come for you.
+~
+106 5767320 -1000
+W 41 18 10 4 7
+0 15 8 F
+#4201
+harry keogh~
+Harry Keogh~
+Harry Keogh stands here looking at you, with kindness in his eyes.
+~
+Harry Keogh is a tall dark man.  Is eyes gleam with yellow as do all Wamphyri,
+but there is no menace in them.  He is wearing a long black coat and a wide
+brimmed black hat.  In his hand is a scythe made of the purest silver.  He has
+completely conquered the Vampire within him.  He will not harm you, but never
+cross him or his.
+~
+1048650 5767320 1000
+W 40 6 10 8 16
+6000 15 8 M
+#4203
+dweller~
+the Dweller~
+The Dweller stands he looking at you, with some distrust.
+~
+It is hard to tell if the Dweller is man or wolf.  He is surely some of both.
+He has two distinct human hands where his front paws should be.  Most of his
+great human mind is gone to that of an animal.  He is now more wolf then man
+or Wamphyri.  He will not attack you.  In fact he shows you little interest.
+~
+74 5767176 -1000
+W 33 12 4 8 8
+5000 16 8 M
+#4204
+dramal doombody wamphyri~
+Dramal Doombody~
+Dramal Doombody is here glaring at you in rage.
+~
+Dramal Doombody is as hideous in appearance as he is in nature.  "Father" of
+the Lady Karen and builder of this aerie he will lash out at anyone who dares
+invade it.  Fear for your life, for this deseased creature will surely take it
+from you.
+~
+106 5767320 -1000
+W 33 5 4 9 16
+5000 13 8 M
+#4205
+shaithis wamphyri~
+Shaithis~
+Shaithis stands here peering into your soul, waiting to devour it.
+~
+The legends of Shaithis are such as need no embroidery.  Of all the Wamphyri
+Lords, he might appear one of the least imposing.  But his mind is ice, and
+every move he makes, has made or will make is calculated to an inch.  The
+Wamphyri might not greatly respect each other, but every one of them respects
+Shaithis...  To challenge him is to invite death.
+~
+106 5767320 -1000
+W 32 6 6 9 15
+5000 14 8 M
+#4206
+lascula longtooth wamphyri~
+Lascula Longtooth~
+Lascula Longtooth stands here with his lip curled over his dagger teeth.
+~
+Lascula Longtooth has so refined and concentrated his metamorphic powers that
+he can lengthen his jaws and teeth at will, on the spur of the moment, which
+he was wont to do habitually, like a man scratching his chin.  As he peers at
+you his teeth lengthen and his lips curl back.  His jaws are like that of a
+great sharks, and you look like a good fish to eat.
+~
+106 5767320 -1000
+W 32 8 10 4 15
+5000 15 8 M
+#4207
+lesk glut wamphyri~
+Lesk the Glut~
+Lesk the Glut stands here waiting to taste your flesh and blood.
+~
+Lesk the Glut was legended to have, in an attack of madness, commanded one of
+his own warriors to fight him to the death!  He ate his way through the
+creature and into its brain.  In the battle he lost an eye and half his face,
+where he now wears a huge leather patch stitched to his jaw and temple.  He
+regrew an eye on his right shoulder.  Yeech!
+~
+4202 5767320 -1000
+W 30 11 8 4 13
+5000 16 8 M
+#4208
+volse pinescu wamphyri~
+Volse Pinescu~
+Volse Pinescu stands here with puss oozing from his body.
+~
+Volse Pinescu deliberately fosters running sores and festoons of boils all
+over his face and body, so that his aspect will be that much more monstrous.
+You are almost over come with nausia as you look at him.
+~
+106 5767304 -1000
+M 28 5 15 16 10
+5000 13 8 M
+#4209
+fess ferenc wamphyri~
+Fess Ferenc~
+Fess Ferenc towers above you, he hungers for your flesh.
+~
+Fess Ferenc looks like a creature straight from the deepths of hell.  He
+stands over 8' tall.  He looks immensely powerful. He is equipped with fine
+clothing, and is his hands look like great talons.  Fear for your life, for
+surely he will tear it from you.
+~
+106 5767304 -1000
+W 28 7 6 9 15
+5000 14 8 M
+#4210
+menor maimbite wamphyri~
+Menor Maimbite~
+Menor Maimbite stands here glaring at you, with an evil gleam.
+~
+Menor Maimbite is one of the few powers among the lesser lords.  His blazon
+is a splinted skull between a pair of grinding jaws.  His head and the gape of
+his jaws are enormous even for a lord.
+~
+106 5767304 -1000
+W 23 8 9 3 16
+5000 15 8 M
+#4211
+grigis wamphyri~
+Grigis~
+Grigis stands here gloating over his own power.
+~
+Grigis is the least of the Wamphyri Lords.  He is of course true Wamphyri and
+awesome in aspect, but he is nothing special among the Lords.
+~
+4202 5767304 -1000
+W 23 11 3 5 14
+5000 16 8 M
+#4212
+faethor ferenczy wamphyri~
+Faethor Ferenczy~
+Faethor Ferenczy stands here glaring at, he hungers for your blood.
+~
+Faethor Ferenczy looks like evil incarnate.  He looks immensely powerful.
+He is equipped with fine clothing and a wide hat.  Faethor is the father of
+all vampires on earth.  Fear for your life, for surely he will take it
+from you.
+~
+4202 5767304 -1000
+W 20 5 4 7 10
+2000 13 8 M
+#4213
+thibor ferenczy wamphyri~
+Thibor Ferenczy~
+Thibor Ferenczy stands here glaring at, he hungers for your blood.
+~
+Thibor looks like evil incarnate.  He looks immensely powerful. He is equipped
+with fine clothing.  Fear for your life, for surely he will take it from you.
+~
+16490 5767304 -1000
+W 20 4 18 6 13
+3000 14 8 M
+#4214
+janos ferenczy wamphyri~
+Janos Ferenczy~
+Janos Ferenczy is here dreaming of new atrocities to commit.
+~
+Janos Ferenczy is the biological son of Faethor.  He is not true Wamphyri, but
+close enough to rip you apart and enjoy it.  His mind is as warped as his
+general appearance.
+~
+106 5767304 -1000
+W 20 6 8 7 14
+1500 14 8 M
+#4215
+boris dragonsani wamphyri~
+Boris Dragosani~
+Boris Dragonsani stands here dreaming of great conquests.
+~
+Boris Dragonsani is the egg son of Thibor.  He is a tall man of slavic desent.
+ He dreams of great conquests.  And right now, you are his next.
+~
+106 5767304 -1000
+W 16 7 10 6 4
+750 9 8 M
+#4216
+yulian bodescu wamphyri~
+Yulian Bodescu~
+Yulian Bodescu stands here pondering his great power.
+~
+Yulian Bodescu was infected by the taint of the Wamphyri before he was even
+born.  He has not reached the extent of his power, and will not tolerate
+attempts to pervent he from doing so.
+~
+106 5767304 -1000
+W 16 5 10 6 4
+750 9 8 M
+#4217
+jazz simmons~
+Jazz Simmons~
+Jazz Simmons stands here looking at you with interest.
+~
+Jazz Simmons is a great combatant.  He is a handsome man of good build.  He
+will do anything to destroy the Wamphyri.  He will not hesitate to kill you if
+you get in his way.
+~
+74 4194432 1000
+W 15 8 15 3 4
+500 9 8 M
+#4218
+lardis lidesci~
+Lardis Lidesci~
+Lardis Lidesci stands here staring at you in distrust.
+~
+Lardis Lidesci is a large man.  He has lived in the terrible shadow of the
+Wamphyri for many years.  He is a powerful and respected leader.  Even the
+Wamphyri show him respect.
+~
+74 4194432 1000
+W 15 9 20 9 9
+500 16 8 M
+#4219
+zek foener~
+Zek Foener~
+Zek Foener stands here looking at you in kindness.
+~
+Zek Foener is a true goddess.  She is slim with long blonde hair that falls on
+her shoulders.  Her jump suit nicely displays all her curves.  She radiates
+beauty and kindness.  She seems grossly out of place in this dark dismal
+nightmare of a place.  She is a much more powerful then she appears.
+~
+74 4194432 1000
+W 15 8 15 9 6
+500 14 8 M
+#4220
+warrior beast wamphyri~
+the Warrior Beast~
+A wamphyri warrior beast stares down at you, could you be lunch?
+~
+     The warrior beast stands close to twenty feet tall.  It has many heads
+and mouths full of razor teeth.  It has huge taloned tentacles sprouting from
+all parts of its body.  It could easily crush you, or tear you apart, or even
+swallow you whole.  Maybe you shouldn't be here?
+~
+110 4194440 -1000
+W 15 9 20 15 15
+500 16 8 N
+#4221
+blader beast wamphyri~
+the Blader Beast~
+A wamphyri blader beast floats here.
+~
+     The blader beast floats a few feet abve the ground.  It has no head or
+limbs that you can see.  It looks like a large ballon made of flesh.  It
+smells horrible.  Maybe you shouldnt mess with it.
+~
+8270 4194304 0
+W 15 8 4 11 14
+5000 12 8 N
+#4223
+trog male~
+the trog~
+A trog charges at you in defense of his master's home.
+~
+     The trog is a medium size humanoid.  He will serve his master to his
+dying breath.  He is not of the Wamphyri but his physical structure has been
+altered to serve his master better.
+~
+108 4194312 -250
+W 13 4 5 16 16
+100 16 8 M
+#4224
+trog female~
+the trog~
+A trog charges at you in defense of her master's home.
+~
+     The trog is a medium size humanoid.  She will serve her master to her
+dying breath.  She is not of the Wamphyri but her physical structure has
+been altered to serve her master better.
+~
+108 4194312 -250
+W 13 6 3 17 18
+100 17 8 F
+#4225
+flyer beast wamphyri~
+Flyer Beast~
+A Wamphyri Flyer Beast flops about here, looking at you with stupid eyes.
+~
+The Wamphyri Flyer Beast is a large flying beast that looks like a great manta
+ray.  It waddles about on hundreds of tiny little legs that are coiled like
+springs under it.  It looks very stupid but also very dangerous.
+~
+8270 4194312 0
+W 15 4 16 7 11
+500 14 8 N
+#4226
+siphoner beast wamphyri~
+Siphoner Beast~
+A Wamphyri Siphoner Beast hangs here without comprehension.
+~
+The Siphoner Beast defies description.  It viens form the pipes of this
+structure.  Its appearance makes you gasp.
+~
+8282 5243010 0
+T 12 8 4 16 18
+1000 16 8 N
+#4227
+cartilidge beast wamphyri~
+Cartilidge Beast~
+A Wamphyri Cartilidge Beast is part of the wall here.
+~
+The Cartilidge Beast's body makes up a section of the passage here.  You can
+see secments of bone and flesh grossly distorted and hardened.
+~
+90 5243010 0
+T 13 6 5 17 18
+1000 17 8 N
+#4228
+lieutenant wamphyri~
+Wamphyri Lieutenant~
+A Wamphyri Lieutenant flies at you in rage.
+~
+The Wamphyri Lieutenant is a large male, who is only part Wamphyri.  He wants
+to prove himself worthy of his masters egg.  Killing you will help him do that.
+~
+110 5767176 -1000
+W 25 9 7 19 9
+4000 15 8 M
+#4229
+wolf grey old~
+the Old Grey Wolf~
+An old grey wolf stands here ready to pounce on you.
+~
+The wolf is a deep grey in cooler and is obviously old.  He is a loyal servant
+to his masters.
+~
+110 5767176 -1000
+W 10 9 19 14 19
+0 18 8 M
+#4230
+bat giant~
+the Giant Bat~
+A giant bat hangs from the ceiling here.
+~
+The giant bat is a monsterous cousin of the average bat.  It is the eyes and
+ears of its Wamphyri masters.
+~
+78 5767176 -1000
+W 10 7 14 19 16
+0 15 8 M
+#5000
+dervish raggity~
+The dervish~
+The raggity dervish walks on aimlessly.
+~
+Dressed in loose fitting rags, this man looks like he could use
+some rest.
+~
+204 524288 900
+T 13 11 16 11 14
+70 13 8 M
+#5001
+dervish large~
+The dervish~
+The large dervish watches for signs of trouble.
+~
+Dressed in loose fitting rags, this man looks like he could use
+LOTS of rest.
+~
+104 524288 650
+O 17 9 14 11 18
+150 16 8 M
+#5002
+snake coral~
+The coral snake~
+A brightly colored snake slithers along the sands.
+~
+This relatively harmless snake has bright alternating bands of red, yellow
+and black.
+~
+72 0 -10
+W 14 8 9 11 11
+0 12 8 N
+#5003
+scorpion small~
+The small scorpion~
+A small, red scorpion scuttles away at your approach.
+~
+The little tail is mighty dangerous for such a small creature.
+~
+72 0 -50
+W 13 12 10 9 12
+0 12 8 N
+#5004
+worm giant~
+The giant, purple sand worm~
+A giant, purple sand worm thrusts up out of the sand and attacks!
+~
+He's big, mean, and purple. Watch out!
+~
+43 152 -100
+W 31 6 13 3 12
+0 11 8 N
+#5005
+dragon brass~
+The brass dragon~
+A very large brass dragon steps out of the darkess and says "Hello".
+Then adds to it, "Prepare to die, have a nice day!"
+~
+~
+8234 152 450
+W 30 7 7 3 10
+3000 9 8 F
+#5006
+nomad leader~
+The nomad leader~
+The nomad leader sits silently in prayer.
+~
+He is clad in silk robes lined with gold thread. At his side
+is a large, engraved cutlass. He has an especially haughty air
+about him.
+~
+200 0 950
+W 24 7 15 10 18
+150 15 6 M
+#5007
+nomad commander~
+The nomad commander~
+The nomad commander stands here staring suspiciously at you.
+~
+This is the nomad leader's second in command. His clothes are richly
+woven of silk and gold thread. A nasty cutlass hangs at his side.
+~
+200 0 900
+W 22 7 19 11 16
+100 16 8 M
+#5008
+nomad warrior~
+The nomad warrior~
+A proud nomad warrior stands here.
+~
+~
+10 0 700
+W 20 7 17 9 14
+60 12 8 M
+#5009
+slave young~
+The slave~
+A young slave sits here staring at you with pleading eyes.
+~
+~
+138 0 1000
+W 13 9 11 8 11
+0 9 5 F
+#5010
+dracolich lich~
+The dracolich~
+A pile of bones rises up to form a skeletal dracolich.
+~
+The dracolich is now only bone with pieces of flesh hanging from it.
+Obviously it no longer fears death.
+~
+16426 136 -1000
+W 35 6 18 4 14
+15000 12 8 F
+#5011
+drider drow~
+The drider~
+The drider looks at you viciously while it draws it's sword.
+~
+This half-spider, half-drow creature is a formidable opponent.
+~
+104 8 -1000
+W 18 9 15 11 15
+0 12 8 F
+#5012
+duergar dwarf~
+The dark dwarf~
+A duergar is here mining precious stones with his pick.
+~
+The duergar could crush your head as easily as it does those rocks.
+~
+104 8 -850
+W 15 11 10 10 17
+170 17 8 M
+#5013
+myconoid fungusman~
+The myconoid~
+A myconoid lumbers along peacefully.
+~
+The myconoid looks something like a giant mushroom (and probably
+has the same effect).
+~
+200 8 850
+W 16 10 19 10 18
+50 15 8 M
+#5014
+myconoid shaman~
+The myconoid shaman~
+A rather large myconoid stands here chanting in a strange tounge.
+~
+The shaman shoots spores into the air.
+~
+138 136 850
+W 18 4 7 5 11
+150 9 8 M
+#5015
+dustdigger~
+The dustdigger~
+A small oasis invites you to dive in.
+~
+~
+46 1048576 -200
+W 17 10 12 14 14
+450 13 8 N
+#5016
+nomad guard~
+The nomad guard~
+A nomad guard is here looking at you with suspicious eye.
+~
+~
+106 8 500
+W 25 4 8 8 11
+100 9 8 M
+#5017
+camel rabid~
+The rabid camel~
+A very dangerous rabid camel snorts at you.
+~
+Don't mess with this animal.
+~
+42 0 -351
+W 15 11 13 18 16
+27 9 8 N
+#5100
+goblin slave~
+The goblin slave~
+A goblin slave lies here asleep.
+~
+The defenseless goblin begs for mercy.
+~
+138 0 -450
+O 11 12 10 10 8
+0 9 4 M
+#5101
+Drow commoner~
+The Drow commoner~
+A drow commoner walks around n guard duty.
+~
+I doubt he is the type to give directions.
+~
+104 8 -1000
+W 20 9 19 9 17
+300 15 8 M
+#5102
+drow noble warrior~
+The drow warrior noble~
+The drow warrior noble stands here guarding his home.
+~
+He looks kind of p.o.ed!
+~
+42 8 -1000
+W 22 5 7 6 16
+200 15 8 M
+#5103
+drow noble mage~
+The drow mage noble~
+The drow mage noble is here protectng his home.
+~
+The mage prepares to cast a spell...at you!!
+~
+42 8 -1000
+M 25 6 7 6 9
+400 9 8 M
+#5104
+drow priestess~
+The drow priestess~
+The drow priestess is here shouting orders.
+~
+I wouldn't want go get on her bad side!
+~
+42 8 -1000
+C 27 5 7 6 9
+400 9 8 F
+#5105
+drow master~
+The drow master~
+The drow master stares at you angrily.
+~
+The drow master is ALWAYS ready for a fight.
+~
+42 24 -1000
+W 31 7 3 8 17
+500 14 8 M
+#5106
+drow weaponsmaster~
+The weaponsmaster~
+The drow weaponsmaster is here shadow boxing.
+~
+He definitely know his way around in combat.
+~
+42 24 -1000
+W 33 5 4 9 16
+1500 14 8 M
+#5107
+drow matron mother~
+The Matron Mother~
+The Matron Mother of the 2nd house is standing here.
+~
+She looks really p.o.ed!!!!
+~
+42 152 -1000
+W 34 5 4 5 11
+3000 12 8 F
+#5108
+drow matron mother~
+The Matron Mother~
+The Matron Mother of the 1st house is waiting for you.
+~
+She looks like she is about to rip your head of and eat it.
+~
+42 152 -1000
+W 34 5 9 5 13
+4000 15 8 F
+#5109
+yochlol~
+The yochlol~
+A yochlol forms out of a swirling mist.
+~
+The yochlol is not in a good mood.
+~
+42 152 -1000
+T 40 6 5 17 19
+46000 16 8 F
+#5112
+drow noble warrior~
+The drow warrior noble~
+The drow warrior noble stands here guarding his home.
+~
+He looks kind of p.o.ed!
+~
+42 8 -1000
+W 22 5 7 6 13
+200 13 8 M
+#5113
+drow noble mage~
+The drow mage noble~
+The drow mage noble is here protectng his home.
+~
+The mage prepares to cast a spell...at you!!
+~
+42 8 -1000
+M 25 5 7 6 9
+200 9 8 M
+#5114
+drow priestess~
+The drow priestess~
+The drow priestess is here shouting orders.
+~
+I wouldn't want go get on her bad side!
+~
+42 8 -1000
+C 27 4 7 5 9
+400 9 8 F
+#5122
+drow noble warrior~
+The drow warrior noble~
+The drow warrior noble stands here guarding his home.
+~
+He looks kind of p.o.ed!
+~
+42 8 -1000
+W 22 5 7 8 13
+100 11 8 M
+#5123
+drow noble mage~
+The drow mage noble~
+The drow mage noble is here protectng his home.
+~
+The mage prepares to cast a spell...at you!!
+~
+42 8 -1000
+M 25 6 7 3 9
+200 8 8 M
+#5124
+drow priestess~
+The drow priestess~
+The drow priestess is here shouting orders.
+~
+I wouldn't want go get on her bad side!
+~
+42 8 -1000
+C 27 5 7 6 9
+400 8 8 F
+#5127
+drow matron mother~
+The Matron Mother~
+The Matron Mother of the 3nd house is standing here.
+~
+She looks really p.o.ed!!!!
+~
+42 152 -1000
+W 34 9 15 7 9
+3000 13 8 F
+#5132
+drow noble warrior~
+The drow warrior noble~
+The drow warrior noble stands here guarding his home.
+~
+He looks kind of p.o.ed!
+~
+42 8 -1000
+W 22 4 7 9 13
+1000 13 8 M
+#5133
+drow noble mage~
+The drow mage noble~
+The drow mage noble is here protectng his home.
+~
+The mage prepares to cast a spell...at you!!
+~
+42 8 -1000
+M 25 4 7 4 11
+200 8 8 M
+#5134
+drow priestess~
+The drow priestess~
+The drow priestess is here shouting orders.
+~
+I wouldn't want go get on her bad side!
+~
+42 8 -1000
+C 27 6 7 3 9
+400 8 8 F
+#5137
+drow matron mother~
+The Matron Mother~
+The Matron Mother of the 4nd house is standing here.
+~
+She looks really p.o.ed!!!!
+~
+42 152 -1000
+C 34 9 17 13 9
+3000 14 8 F
+#5200
+beholder~
+The mighty beholder~
+You meet a beholder's deadly gaze!
+~
+It has a large central eye that projects an anti-magic ray and ten
+eyestalks atop the round body which can do anything from charm you
+to disintegrate you.  Beholders are not known for their personality.
+~
+170 136 -870
+W 30 16 3 3 7
+2850 10 8 N
+#5201
+lamia beast~
+The lamia~
+A strange lamia stands here waiting for her next meal. 
+~
+This is a creature with the upper torso of a beautiful woman, but the lower
+body of a four-legged beast. She licks her lips as she looks at you greedily.
+~
+108 0 -999
+O 15 5 9 6 10
+50 8 8 F
+#5202
+mimic chest~
+The mimic~
+A strong chest lies in one corner of the room.
+~
+A strong, wooden chest bound with iron straps and a heavy pad-lock on the
+front.
+~
+10 0 10
+O 18 5 5 6 9
+0 9 6 N
+#5203
+mimic boulder~
+The mimic~
+Two skeletons lie crushed under a large boulder.
+~
+~
+10 0 -10
+O 18 5 6 6 9
+0 9 6 N
+#5204
+mimic floor~
+The mimic~
+The stone floor of this house has been ripped apart.
+~
+~
+10 0 -140
+O 18 6 5 11 6
+0 8 6 N
+#5205
+mimic potery~
+The mimic~
+Some broken shards of potery lie strewn about the floor.
+~
+~
+10 0 200
+O 18 5 10 6 5
+0 7 6 N
+#5206
+mimic planks~
+The mimic~
+A few wooden planks lie stacked on a low shelf.
+~
+~
+10 0 0
+O 18 5 7 6 7
+0 7 6 N
+#5207
+lizard horned~
+The horned lizard~
+A small horned lizard flicks his tounge and slithers away.
+~
+A cute little lizard, that is, if you like reptiles!
+~
+136 0 0
+O 9 10 9 10 10
+0 9 8 N
+#5208
+golem stone~
+The stone golem~
+In the corner you see a large, stone golem faithfully standing watch.
+~
+It is a big chunk of rock that has been magically formed into a giant
+stone creature. He stands here still guarding the city.
+~
+10 0 600
+W 20 6 16 7 12
+0 10 8 N
+#6000
+john lumberjack~
+John the Lumberjack~
+John the Lumberjack is here, looking for some trees to chop down.
+~
+He is six feet tall and looks quite strong, muscles bulging under his heavy,
+chequered shirt.  His features are worn with hard work and his expression is
+one of a peaceful man leading a simple life.
+~
+72 0 350
+W 5 10 11 11 17
+50 4 8 M
+#6001
+rabbit~
+the cute rabbit~
+A cute rabbit is here.
+~
+It is a small, furry creature with long ears and big feet.
+~
+72 0 0
+O 1 8 11 12 8
+0 12 8 N
+#6002
+bear~
+the brown bear~
+A big, brown, angry-looking bear is here.
+~
+The bear is a big, brown, furry animal with very large claws and very sharp
+teeth.  It doesn't resemble those cute little thingies from toy shops at all.
+~
+104 0 -50
+O 8 9 14 10 15
+0 9 8 N
+#6003
+rabbit~
+the ferocious rabbit~
+A ferocious rabbit is here, glaring hungrily at you.
+~
+This small, furry creature with long ears and big feet has been attacked by
+the dreaded rabbit rabies, a horrible disease that turns helpless and innocent
+rabbits into ferocious and bloodthirsty monsters.
+~
+104 0 -150
+O 3 10 12 8 10
+0 8 8 N
+#6004
+deer~
+the fallow deer~
+A fallow deer is grazing peacefully here.
+~
+She is a graceful creature on long, slender legs, and with large, brown eyes
+looking back at you with an air of watchful interest.
+~
+90 8 350
+T 2 8 10 8 8
+0 8 8 F
+#6005
+fox~
+the brown fox~
+A brown fox is here, looking for some rabbits to chew up.
+~
+It is a large fox with beautiful, red-brown fur and a long, thick brush.
+~
+72 0 -50
+O 2 9 9 12 10
+0 8 8 N
+#6006
+squirrel~
+the gray squirrel~
+A gray squirrel is here, looking for nuts.
+~
+It is a healthy looking ordinary squirrel.
+~
+200 0 0
+O 1 8 9 9 12
+0 8 8 N
+#6007
+jim lumberjack~
+Learned Jim the Lumberjack~
+Learned Jim the Lumberjack, nasty big brother of John, is here.
+~
+He is seven feet tall and is extremely tough.
+~
+42 144 -500
+W 34 8 18 9 13
+5000 15 8 M
+#6008
+mouse~
+A mouse~
+A squeaky little mouse is running in circles.
+~
+A mouse is a mouse is a mouse.
+~
+136 0 0
+O 2 9 9 8 9
+0 8 8 F
+#6100
+warg vicious~
+the vicious warg~
+A vicious warg is here, snarling angrily at you.
+~
+It is an exceptionally large wolf with thick, black fur.  Saliva is dripping
+quickly from its long, white fangs.  It looks quite dangerous and very angry.
+~
+104 0 -350
+W 7 11 16 10 15
+0 16 8 N
+#6101
+warg ferocious~
+the ferocious warg~
+A ferocious warg is here, snarling angrily at you.
+~
+It is an exceptionally large wolf with thick, black fur.  Saliva is dripping
+quickly from its long, white fangs.  It looks quite dangerous and very angry.
+~
+104 0 -350
+W 7 11 12 10 16
+0 16 8 N
+#6102
+wolf grey~
+the large, grey wolf~
+A large, grey wolf is here, glaring hungrily at you.
+~
+The large, grey wolf eyes you with interest while licking its lips.
+~
+104 0 -150
+W 5 9 12 12 12
+0 14 8 N
+#6103
+wolf black~
+the large, black wolf~
+A large, black wolf is here, glaring hungrily at you.
+~
+The large, black wolf eyes you with interest while licking its lips.
+~
+104 0 -150
+W 5 10 10 9 11
+0 9 8 N
+#6110
+tree ancient~
+A huge, ancient tree~
+A huge, ancient tree towers above you.
+~
+Its roots are extremely big and large parts of them are above ground.
+
+>
+The enormous grey trunk shivers slightly, as if sighing deeply.
+~
+74 8 1000
+M 20 6 19 4 5
+0 9 8 F
+#6111
+tree ancient~
+A huge, ancient tree~
+A huge, ancient tree towers above you.
+~
+Its roots are extremely big and large parts of them are above ground.
+
+>
+The enormous grey trunk emits a deep, moaning sound.
+~
+74 8 1000
+W 20 3 17 5 6
+0 9 8 M
+#6112
+dragon green~
+the huge, green dragon~
+A huge green dragon is here, its narrow yellow eyes glowing with rage.
+~
+This enormous winged serpent has dark green scales covering most of its
+colossal body.  Numerous holes in its heavy wings tell of many fights as does
+the nicks in the horns on its head.  It smells as disgusting as only dragons
+do.
+~
+8298 152 -1000
+W 22 7 7 8 8
+0 9 8 N
+#6113
+spider poisonous~
+the huge, poisonous spider~
+A huge, poisonous spider is here.
+~
+This disgusting creature is at the size of a human crawling on all four.  It
+has eight hairy legs that gives it a tremendous speed on almost any surface and
+sharp poisonous fangs to paralyze or kill its prey.
+~
+91 0 -350
+T 8 9 14 10 14
+0 13 8 N
+#6114
+queen spider~
+the Queen Spider~
+The huge, bulky Queen Spider is here.
+~
+This disgusting creature is at the size of a small elephant.  It has eight
+huge, hairy legs that would give it a tremendous speed on almost any surface
+if it wasn't so immensely fat.  Its large, bulbous eyes stare back at you.
+~
+43 24 -1000
+W 15 6 11 10 12
+0 14 8 F
+#6115
+shargugh brownie~
+Shargugh~
+Shargugh the Forest Brownie is here, grinning broadly at you.
+~
+This little fellow is only three foot tall with wild matted brown hair and long
+tangled brown beard.  He wears ragged brown and green clothing and looks as if
+he is having great fun.
+~
+156 524298 1000
+T 10 5 12 14 8
+1000 11 8 M
+#6250
+bug~
+the computer bug~
+A little, hairy computer bug is here, trying to mess things up.
+~
+It is one of those irritating little creatures that like to infect innocent
+and defenceless programs, trying to make them act weird.  Programmers spend
+countless hours trying to eliminate them, but they are indeed very hardy.
+DikuMUD is known to be one of their favourite habitats.
+~
+72 0 -50
+W 1 10 8 8 9
+0 9 8 N
+#6500
+dwarven guard~
+dwarf guard~
+A dwarven guard is here.
+~
+The guard looks very tough and mean.
+~
+10 8 500
+W 20 4 7 7 13
+2000 5 8 M
+#6501
+dwarven worker~
+dwarf worker~
+A dwarven mining worker is here.
+~
+He is very dirty, and looks extremely over-worked.
+~
+72 0 900
+W 15 6 7 7 7
+700 7 8 M
+#6502
+wraith~
+a wraith~
+A wraith is awaiting your first move here.
+~
+A black, almost transparent wraith.
+~
+42 16777272 -900
+W 24 4 18 6 15
+3000 9 8 M
+#6503
+storekeeper~
+the Hide & Tooth storekeeper~
+There is the Hide & Tooth storekeeper standing here, waiting patiently.
+~
+The storekeeper is very rotund, but looks like a sharp guy.
+~
+10 0 900
+W 35 6 12 3 7
+15000 9 8 M
+#6504
+baker~
+Granite Head the baker~
+Granite Head, the baker, is waiting for a customer here.
+~
+Granite Head is covered with flour and grains.
+~
+10 0 900
+C 15 5 7 6 14
+1000 9 8 M
+#6505
+lizard~
+The giant lizard~
+A giant lizard is here.
+~
+This scaly creature looks like it is well adapted to it's underground
+habitat.  He looks very powerful.
+~
+72 8 100
+W 15 5 19 7 11
+200 10 8 M
+#6506
+giant~
+The giant~
+A giant is here.
+~
+The giant is about 8 feet tall, with arms of steel, and looks very
+strong.
+~
+72 0 0
+W 20 6 7 4 12
+2000 14 8 M
+#6507
+dwarf mineworker worker~
+A dwarven mineworker~
+A dwarven mineworker is here.
+~
+The mineworker is very tired, and very dirty, and he has bulging muscles.
+~
+10 0 0
+W 14 7 5 6 16
+40 13 8 M
+#6508
+mine leader~
+A dwarven mine leader~
+A dwarven mine leader is here.
+~
+The mine leader is very big and very strong.
+~
+10 0 0
+W 20 5 6 7 11
+3000 9 8 M
+#6509
+dwarven doctor~
+the dwarven doctor~
+The dwarven doctor is here.
+~
+He is a very skilled surgeon, with hands of steel.
+~
+10 136 1000
+C 15 5 6 3 17
+1500 12 8 M
+#6510
+dwarven peon~
+the dwarven peon~
+A dwarven peon is awaiting help here.
+~
+~
+10 0 500
+C 10 10 11 8 17
+75 13 8 M
+#6511
+dwarf~
+the dwarf~
+A grinning dwarf is here.
+~
+~
+10 0 500
+W 15 7 6 3 10
+125 9 8 M
+#6512
+unwanted son~
+the unwanted son~
+An unwanted son is here. You feel sorry for the guy.
+~
+~
+72 0 250
+W 12 9 19 10 18
+0 16 8 M
+#6513
+unwanted daughter~
+the unwanted daughter~
+An unwanted daughter is here. You feel sorry for her.
+~
+~
+72 0 250
+W 11 8 15 10 14
+0 13 8 M
+#6514
+barrack guard~
+the barrack's guard~
+A barrack guard is here.
+~
+~
+10 0 100
+W 23 6 6 3 12
+600 9 8 M
+#6515
+waiting man~
+the man in waiting~
+A man in waiting is here. He looks nervous and unsure of himself.
+~
+~
+10 0 300
+W 17 5 6 3 13
+69 12 8 M
+#6516
+mazekeeper~
+the mazekeeper~
+A mazekeeper is here.
+~
+He looks VERY tough.
+~
+42 128 -1000
+W 35 6 8 8 16
+8000 13 8 M
+#6517
+giant snake~
+the giant snake~
+There is a giant snake here.
+~
+~
+42 0 -1000
+W 25 5 6 7 8
+0 9 8 M
+#6910
+isha elf~
+Isha the Dark Elf~
+Isha the Dark Elf is here, observing you silently.
+~
+She is no less than beautiful, skin as dark as the night and hair shining like
+silver in the moonlight.  Her slender body is adorned with a sleeveless shirt
+and a short skirt made from black scales joined with silver threads.  Her back
+is covered by a large, hooded cloak as black as her skin and in her broad
+silver belt hangs a long, slender sword in a silver scabbard.
+~
+8 524296 -1000
+M 30 5 5 7 10
+5000 9 8 F
+#6999
+death reaper~
+Death~
+Death the Grim Reaper is observing you silently from empty eye sockets.
+~
+The dark-robed skeletal figure radiates an unendurable coldness.
+~
+10 524296 -1000
+W 30 4 17 6 13
+0 14 8 N
+#7000
+mud monster mudmonster~
+The horrifying Mudmonster~
+A horrifying Mudmonster is slowly evolving from the mud ...
+~
+It sure looks like something out of a horrormovie. It strongly resembles
+a huge figure made up from mud alone, and it sure looks like it had human 
+flesh for breakfast and is strongly intent on having the same for dinner
+- Perhaps you?
+~
+72 524288 -250
+W 12 7 12 10 12
+100 10 5 N
+#7001
+bat~
+The small bat~
+The small fierce-looking bat is hanging from the ceiling, obviously sleeping.
+~
+You have never in your entire life seen such a mean looking small creature,
+though it looks rather peaceful, hanging there, sleeping. The thought of 
+arousing this cruel creaturedoesn'
+~
+104 524288 -500
+O 5 11 9 8 10
+0 10 4 N
+#7002
+rat~
+The Great Sewer Rat~
+The Huge Hungry-looking Sewer Rat sits here
+~
+~
+40 0 -1000
+O 7 10 15 10 15
+0 13 8 M
+#7003
+spider~
+The small Spider~
+The small hairy Spider
+~
+~
+40 524288 -700
+O 4 12 8 11 11
+0 9 8 M
+#7004
+beetle~
+The giant earth beetle~
+The Giant Mean-looking Earth Beetle
+~
+~
+8 0 -300
+O 9 9 14 10 13
+1000 14 4 M
+#7005
+maggot~
+The maggot~
+The Giant Maggot
+~
+~
+8 0 300
+O 7 8 11 12 12
+0 16 8 M
+#7006
+snake~
+The slithering snake~
+The snake slithers towards you
+~
+~
+41 0 -500
+O 8 8 10 9 9
+0 8 8 N
+#7007
+wanderer~
+The evil wanderer~
+The evil wanderer stares at you
+~
+The evil wanderer is very thin. He is dressed in a grey cloak.
+~
+140 0 -1000
+O 13 7 17 10 13
+300 14 8 M
+#7008
+homonculus homo~
+the creature homonculous~
+The creature homonculous is here, looking at you with an evil look.
+~
+The Homonculous appers in a man-like form, about 18'' tall, have a
+greenish, reptilian skin, leathery wings, and a batlike mouth, with
+teeth passing on a venom.
+~
+8 8 -780
+O 11 7 16 10 13
+500 10 8 N
+#7009
+grand knight paladin~
+The Grand Knight of Paladins~
+The Grand Knight is standing here, waiting for someone to help.
+~
+The Knight is standing here, smiling at you. He is dressed all in
+white, blue and silver. He looks VERY strong, as he stands here, ready to
+help the innocent.
+~
+4168 8 1000
+W 41 8 9 9 16
+0 15 8 M
+#7010
+chr-eff'n chr~
+the evil chr-eff'n~
+The chr-eff'n are crawling here, looking around with it's yellow eyes.
+~
+The head and torso of a chr-eff'n is copper-covered, with yellow
+,glowing eyes. The lower body is in an orange shading.
+~
+140 524296 -830
+W 12 7 12 10 12
+1500 12 8 N
+#7011
+morkoth~
+the shadowy morkoth~
+The morkoth are standing here, waiting for someone to KILL!
+~
+It's a five feet tall, shadow monster. This has the shape between
+a human and a rat. It breaths very heavely, while it stares at you.
+~
+168 0 -900
+W 10 8 13 9 12
+0 11 8 N
+#7012
+esther madam~
+Madam Esther~
+Madam Esther is standing here, trying to sell dust.
+~
+She is very big standing here, smiling to you. She looks like the
+mother of the town, sometimes playing with the children, sometimes 
+helping the old people, with their daily work. All this in spite of
+her own hard work.
+~
+8 0 1000
+W 8 9 10 10 12
+6 9 8 F
+#7040
+red dragon~
+The red dragon~
+The Red fierce-looking dragon stares at you angrily
+~
+The red dragon stares at you, angrilly, as it wakes when you
+arrives.  It says 'Oh, human YOU woke me up...Hsssss', while
+it moves closer ,'Can one NEVER sleep in peace..Hssss'.
+~
+8234 136 -1000
+C 30 7 7 8 13
+1000 7 8 N
+#7041
+sea hag~
+The sea hag~
+The Sea Hag is swimming around here
+~
+The sea hag is so ghastly looking that you fell's the deepest
+fear: Big yellow eyes and sharp teeths. Its ears are very big,
+and it have small sharp horns. This type of monsters are one of
+the greatest haters of beauty (Next after Medusa).
+~
+40 0 -800
+W 14 5 12 10 12
+0 13 8 F
+#7042
+guardian naga~
+The guardian naga~
+The Guardian Naga looks kindly at you.
+~
+The naga are a snake-liked creature. She is covered in green-gold
+scale with silvery triangles along her back. Her eyes are golden.
+She notice that you look at her, and she says: 'Watch out. This way
+leads to some evil creatures'.
+~
+10 0 700
+W 12 7 12 10 12
+100 8 8 F
+#7043
+scaled basilisk~
+The scaled basilisk~
+The scaled Basilisk crawls towards you slowly.
+~
+The basilisk is a reptilian monster. It has eight legs, and a strong
+toothy jaws. It is dull brown with yellowish underbell. It's eyes are
+glowing pale green.
+~
+12 8 -250
+W 13 6 18 7 13
+350 13 8 N
+#7044
+lemure blob~
+The lemure~
+The lemure blob slithers terribly precisely towards you for an attack!
+~
+This looks like a vaguely human blob. Big black yellow eyes, and a
+mouth going a little bit out from the face. The lemure does not look
+interested in you at all, but anyway it attackes. It looks like it's
+mind has been burned out.
+~
+40 4194304 -500
+W 9 11 13 10 15
+0 14 8 N
+#7045
+jones cruncher ettin~
+Jones 'cruncher' the ettin~
+Jones is standing here glaring at you.
+~
+At the first sight you thought Jones was an Orc, but when it came
+closer you saw his second head. He wears an animal skinn dress,
+filthy and moth eaten. Jones really stinks...
+~
+12 0 -480
+W 10 8 13 10 12
+60 11 5 M
+#7046
+herald mouse killer ettin~
+Herald 'the mouse-killer' ettin~
+Herald is standing here looking confused at you.
+~
+When you look at Herald, you feel petty. His dress are really poor,
+and the one of his heads hangs down. At the rope around his stomach
+hangs dead mouses and rats. He does not smell good.
+~
+12 0 200
+W 8 10 18 11 12
+40 12 5 M
+#7200
+master mind mindflayer~
+The master mindflayer~
+The master mindflayer is here, looking at you with an evil look.
+~
+It's a seven foot tall humanoid dressed in a purple cloak, and swinging a
+black and purple rod above its head as if it was going to attack you any
+moment now. In the middle of its head are four tentacles with sharp points.
+~
+44 8 -800
+O 14 4 15 10 13
+0 10 8 N
+#7201
+senior mind mindflayer~
+The senior mindflayer~
+The senior mindflayer walks around here, looking for something useful.
+~
+This is a horrifying monster indeed, 6'6" high. Dressed in purple and black,
+and carrying a large mace in its hand. In the center of its head are four large
+tentacles with very sharp points.
+~
+12 8 -600
+O 8 9 14 10 18
+400 10 8 N
+#7202
+junior mind mindflayer~
+The junior mindflayer~
+The junior mindflayer is here, watching you carefully from the corner.
+~
+This mindflayer is six foot high. It has a small mace in its belt, and is
+dressed in purple and black cloth. It has four small tentacles in the 
+center of its head.
+~
+140 8 -350
+O 6 10 18 10 12
+200 13 8 N
+#7203
+wererat rat were~
+The ugly wererat~
+An ugly wererat is here, looking at you with a strange flick in his eyes.
+~
+The wererat is about four foot tall. It looks very much like rat, exept
+that it is standing.
+~
+108 0 -700
+O 6 10 17 10 14
+50 10 8 N
+#7204
+rat gigantic~
+The gigantic rat~
+There is a gigantic rat here, looking at you with a hungry look.
+~
+The gigantic rat is about ten foot long from head to tail and has claws
+the size of your head looking very nasty.
+~
+42 0 -800
+O 12 7 12 10 12
+2513 12 8 M
+#8000
+lady baglady~
+the Bag Lady~
+A Bag Lady is here, scrounging around, looking for almost anything.
+~
+She bears a vague resemblance to Mom.
+~
+72 0 500
+W 21 8 15 8 6
+1000 9 8 F
+#8006
+juggernaut~
+the Juggernaut~
+A Juggernaut a working its way methodically through this area.
+~
+It is _very_ large, some 10 yds in length, walking on several hundred 
+tiny legs. It is metallic-looking, with large spots of corrosion 
+marring its angular skin. On its sides are large signs, written in an 
+incomprehensible language. On its top, a small eye cluster swivels back 
+and forth continually. A number of tentacles sweeps the ground around 
+it.
+~
+92 0 400
+T 18 10 19 11 15
+100 16 8 N
+#8010
+cowboy~
+the cowboy~
+A hard-eyed cowboy is here, going about his business.
+~
+He is dressed in jeans, boots, a hat that shades his face so that it
+is hard to see, where he's looking. He is walking around purposefully,
+as if searching for something, occasionally getting down to one knee,
+making strange passes in the air, then picking up pieces of the ground 
+that are apparently not so solid now.
+~
+8 0 400
+W 15 11 13 17 16
+40 18 8 M
+#9001
+spider young~
+the young spider~
+The young spider is ballooning by you.
+~
+He looks freshly hatched and sprightly.  His young fangs are just
+growing in as of late.
+~
+76 8 0
+W 15 7 10 9 14
+100 12 8 F
+#9002
+dragon Yevaud~
+Yevaud~
+Yevaud the Usurper of Midgaard is here, grinning evilly at you.
+~
+Old, scaly, but still with a lot of bite in him left.
+~
+8270 8 -1000
+W 30 5 9 4 9
+2000 8 8 M
+#9003
+spider wolf~
+the Wolf Spider~
+The Wolf Spider is here, licking its bloody fangs.
+~
+The Wolf Spider is hairy, very hairy.
+~
+42 0 -300
+W 16 10 12 13 19
+1250 17 8 F
+#9004
+orc~
+the orc~
+The orc is stuck in the web and he can't get out.
+~
+You notice an evil look in his eyes.
+~
+10 0 -400
+W 15 11 18 11 16
+100 16 8 M
+#9005
+wasp queen~
+the Queen Wasp~
+The Queen Wasp is here, thinking that you would make a tasty offering
+to her master.
+~
+You notice a glazed look in her eyes.
+~
+42 0 -800
+W 24 5 12 10 12
+1500 8 8 F
+#9006
+spider drone~
+the drone spider~
+The drone spider walks around doing her master's bidding.
+~
+An ordinary drone spider.
+~
+76 0 -300
+W 16 10 12 13 13
+200 12 8 M
+#9007
+spider ethereal~
+the ethereal spider~
+The ethereal spider strides here, traveling to different worlds.
+~
+She winks in and out.
+~
+76 0 1000
+W 10 8 15 11 18
+1250 16 8 F
+#9008
+slave human~
+the slave of Arachnos~
+The slave works here relentlessly.
+~
+The slave does not mind you, but will fight like a warrior if attacked.
+~
+76 0 0
+W 12 6 9 11 19
+1000 8 8 M
+#9009
+quasit~
+the quasit~
+The quasit blinks in and out, grinning at you.
+~
+Demoniac in nature, but more mischievous.  He twiddles his thumbs
+and creates a magical treasure!
+~
+156 524298 1000
+T 10 6 14 15 8
+1000 8 8 M
+#9010
+spider bird~
+the Bird Spider~
+The Bird Spider snaps its powerful jaws.
+~
+The Bird Spider has very powerful jaws.
+~
+42 0 -800
+W 14 3 12 10 16
+1750 10 8 F
+#9011
+hermit~
+the Hermit~
+The Hermit sits here and warns, "Go back before it's too late!"
+~
+A dishevelled veteran warrior in disguise is what he is, but he
+means well.
+~
+14 8 -400
+W 7 10 12 11 19
+750 12 8 M
+#9012
+donjonkeeper~
+the Donjonkeeper~
+The Donjonkeeper eyes you and wonders how pure your soul is.
+~
+He delves deeper into you as you stare at him.
+~
+14 8 1000
+T 30 11 5 5 8
+2000 9 8 M
+#9013
+guardian~
+The guardian~
+The guardian is obviously not doing his job.
+~
+He looks like a lazy bum who sleeps half the time.
+~
+104 524288 250
+W 17 3 9 10 11
+600 10 4 M
+#9014
+spider empress arachnos~
+Arachnos~
+Arachnos the Empress of Spiders welcomes you with an evil smile.
+~
+She is a very attractive spider with an ornate gown.  She tempts you
+into being one of her many slaves.  She does not possess the venomous
+fangs of normal spiders, but then, as you realize, she does not need
+them.
+~
+14 1048584 -1000
+M 32 5 11 6 8
+10000 10 8 F
+#9015
+ki-rin~
+the Ki-Rin~
+The Ki-Rin smiles good-naturedly to you.
+~
+She is the last bastion of good in this realm.  Her mission is to
+someday free the slaves of the Empress.
+~
+4110 8 1000
+W 33 6 10 6 3
+12000 9 8 M
+#9016
+dragon wormkin young~
+the young dragon wormkin~
+A wormkin with no teeth plays here.
+~
+Rather small, you almost feel sad in killing it.
+~
+10 8 1000
+W 23 6 8 9 3
+1000 8 8 M
+#9017
+dragon wormkin elder~
+the elder dragon wormkin~
+A wormkin that has grown a bit stares at you inquisitively.
+~
+A medium-sized dragon--seems it hasn't killed anything yet by itself.
+~
+10 8 100
+W 23 6 8 9 4
+5000 9 8 M
+#9400
+reject guard~
+The reject guard~
+A Rejected Cityguard candidate is here, he looks like he is in a bad mood.
+~
+The reject does not look as tough as a regular guard but he certainly does
+not look like he is going to fall over and die for you.
+~
+12 8 1000
+O 4 12 5 11 9
+400 12 8 M
+#9405
+roland~
+The roland~
+A roland is here, shoveling something.
+~
+The roland is an ugly cuss.
+~
+24 0 -400
+T 2 10 8 11 11
+5 12 8 N
+#9410
+stingray~
+The stingray~
+A stingray is here, whining about something.
+~
+The stingray is a cute little fellow.
+~
+76 0 -400
+O 3 8 11 9 9
+20 9 8 M
+#9420
+arena guard~
+Guard~
+The Arena guard is here, looking grim.
+~
+The Arena guard looks like a very strong person, His job is to keep out lower
+level people if i was you i would not mess with him.
+~
+10 8 1000
+W 23 6 3 7 11
+3500 4 8 M
+#9425
+dj~
+The DJ~
+The DJ is here, looking pathetic, as usual.
+~
+The DJ is harmless, just noisy.
+~
+8 0 -400
+O 2 10 5 10 8
+10 9 8 M
+#9430
+ericol~
+the ericol~
+The ericol is here making sure you don't use any of his toys.
+~
+The ericol is a selfish little fellow.
+~
+8 0 -300
+O 1 9 4 10 8
+15 8 8 M
+#9501
+sura~
+The sura~
+A tough sura stands here training his own skills.
+~
+The sura looks very tough. he has his own skills for handling weapon. 
+he won many fights.
+~
+104 8 999
+W 25 4 7 7 7
+50 8 8 M
+#9502
+guru~
+The guru~
+A guru stands here advancing his own skills. 
+~
+The guru is training for becoming sura.
+~
+104 8 999
+W 20 6 3 17 11
+30 12 8 M
+#9503
+captain hook~
+The Captain Hook~
+A Captain Hook can't balance his body because of very refined rums.
+~
+The Captain Hook looks fool. he is one eyed but other one is tingle though. he has one metal leg and is wearing triangle cap.
+~
+42 128 -1000
+W 35 5 9 8 15
+500 13 8 M
+#9504
+pirate~
+The First class pirate~
+A First class pirate is dancing here like mad dog with holding rum.
+~
+~
+104 8 -999
+O 18 6 8 11 17
+60 15 8 M
+#9505
+pirate~
+The Second class pirate~
+A Second class pirate is cleaning bottom of ship.
+~
+~
+104 8 -999
+O 15 5 13 13 18
+50 12 8 M
+#9506
+sura candidate~
+The Sura Candidate~
+A Sura candidate is swing his shining brass golden covered double club.
+~
+~
+104 8 999
+W 23 6 8 9 10
+40 9 8 M
+#9507
+loser~
+A Loser~
+A loser stands here sighing deeply.
+~
+~
+10 8 999
+O 15 4 13 7 12
+5 12 8 M
+#9508
+sura zizon~
+The Zizon Sura~
+A Zizon Sura is sweeping his eyes here.
+A Zizon Sura glows with dark green aura!...he emits a faint humming sound!
+~
+~
+4138 128 999
+W 35 3 11 15 16
+500 18 4 M
+#9509
+laiger~
+Laiger~
+Laiger Laiger Laiger Laiger Lagier Lagier Laiger is here!
+~
+Laiger is brother of Hyobik. he is making his clones now. he won Laow some months ago. he can make many his illusion figures
+~
+1048586 2176 999
+W 40 9 6 17 16
+10000 14 8 M
+#9510
+hide sura~
+The hide sura~
+A hide sura is hiding in swamp.
+~
+he is hiding in swamp. how can you see him?
+~
+40 1048584 999
+W 27 5 7 7 7
+50 8 8 M
+#9511
+sand sura~
+The sand sura~
+A hide sand sura is trying to hide in sand.
+~
+~
+40 1048584 999
+W 26 4 8 7 8
+50 8 8 M
+#9512
+gatekeeper~
+The first Gatekeeper~
+A sharp first Gatekeeper is guarding the gate.
+~
+~
+42 136 1000
+W 33 15 5 9 6
+100 13 8 M
+#9513
+gatekeeper~
+The second Gatekeeper~
+A sharp second Gatekeeper is guarding the gate.
+~
+~
+42 136 1000
+W 33 14 5 9 5
+100 16 8 M
+#9514
+gatekeeper~
+The third Gatekeeper~
+A sharp third Gatekeeper is guarding the gate.
+~
+~
+42 136 1000
+W 33 13 5 8 6
+100 15 8 M
+#9515
+gatekeeper~
+The fourth Gatekeeper~
+A sharp fourth Gatekeeper is guarding the gate.
+~
+~
+42 136 1000
+W 33 16 5 5 7
+100 14 8 M
+#9516
+micro quadruplets quadruplet~
+Micro~
+Micro, fourth quadruplets, stands here dancing with his micro sword.
+~
+He is fourth brother of quadruplets of Geron. He is using very sharp micro sword. 
+~
+42 136 1000
+W 28 5 15 6 12
+5000 14 8 M
+#9517
+mili quadruplets quadruplet~
+Mili~
+Mili, third quadruplets, stands here breakdancing with his mili sword.
+~
+He is third brother of quadruplets of Geron. He is using his mili sword.
+~
+42 136 1000
+W 28 5 18 8 10
+6000 13 8 M
+#9518
+mega quadruplets quadruplet~
+Mega~
+Mega, second quadruplets, stands here dancing with his mega sword.
+~
+He is second brother of quadruplets of Geron. He is using his great mega sword.
+~
+42 136 1000
+W 28 5 19 10 12
+7000 13 8 M
+#9519
+giga quadruplets quadruplet~
+Giga~
+Giga, first quadruplets, stands here dancing with his Giga sword.
+~
+He is first brother of quadruplets of Geron. He is using his Huge Giga sword.
+~
+42 136 1000
+W 28 5 18 12 11
+8000 15 8 M
+#9520
+rainbow sura~
+The rainbow Sura~
+A Rainbow Sura trains here surrounded by Rainbow.
+~
+He is surrounded by beautiful rainbow.
+~
+42 136 1000
+W 32 7 9 5 6
+1000 9 8 M
+#9521
+month sura~
+The Month Sura~
+A Month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 32 8 9 4 6
+2000 9 8 M
+#9522
+learned sura~
+The learned sura~
+A learned sura trains here.
+~
+He looks very tough and learned. Don't look him..he will attack you.
+~
+42 136 1000
+W 32 10 4 6 7
+3000 9 8 M
+#9523
+master sura~
+The master sura~
+A master sura rests here.
+~
+He is trainer of suras. he is training to become najang.
+~
+42 136 1000
+W 32 5 5 6 9
+4000 9 8 M
+#9524
+sura knight~
+The Sura knight~
+A Sura knight stands here.
+~
+He is guarding Gaiot. you can see his big muscle.
+~
+4138 136 1000
+W 32 4 9 5 9
+1000 9 8 M
+#9525
+gaiot ruler najang~
+The Gaiot~
+Gaiot, The Ruller of DeathKingdom, sits on his comfortable throne.
+~
+He is surrounded by evil sal-ki. you can't balance your body.he seems extremely tough. he is first najang.
+~
+42 2184 1000
+W 42 8 18 18 18
+100000 19 8 M
+#9526
+hyobik najang~
+Hyobik~
+Hyobik,THe second najang, sits on his comfortable throne.
+~
+He is Laiger's brother. He is weaker than Laiger. though he is very tough.
+~
+42 136 1000
+W 40 9 13 9 8
+50000 16 8 M
+#9527
+geron najang~
+Geron~
+Geron,The third najang, sits on his uncomfortable throne.
+~
+He is third najang. baborer shaves him now. 
+~
+1048618 136 1000
+W 40 9 13 8 7
+30000 14 8 M
+#9528
+barbor~
+Barbor~
+Barbor is shaving Geron here.
+~
+He is shaving Geron with acurate effort.
+~
+524330 136 1000
+C 32 5 9 6 5
+1000 9 8 M
+#9529
+brop~
+Brop~
+Brop,The fourth najang, sits on his uncomfortable throne.
+~
+He is fourth najang. He has very Good and Tough children.
+~
+42 136 1000
+W 40 4 12 17 13
+10000 14 8 M
+#9530
+son adle first~
+The Brop's First Son~
+Adle,The first son of Brop, stands here.
+~
+He is first son of Brop. He admires his father Brop
+~
+42 136 1000
+W 38 8 11 6 3
+500 9 8 M
+#9531
+son adle second~
+The Brop's Second Son~
+Adle,The second son of Brop, stands here.
+~
+~
+42 136 1000
+W 36 4 9 6 14
+400 12 8 M
+#9532
+ddal daughter~
+The Brop's Daughter~
+Ddal,daughter of Brop, stands here.
+~
+She seems beautiful, but ugly really.
+~
+42 136 1000
+C 35 7 10 6 5
+300 8 8 F
+#9533
+first class sura~
+The First Class Sura~
+A First Class Sura is training here with woman.
+~
+He is tough tough tough guy.
+~
+104 8 999
+W 28 5 7 6 8
+75 9 8 M
+#9534
+maid sura~
+The Maid Sura~
+A Maid Sura is decorating herself with eager.
+~
+She is very beautiful. She is very charming.
+~
+10 33556608 999
+M 27 4 10 13 12
+1000 11 8 F
+#9535
+lady sura~
+The Lady Sura~
+A Lady Sura is trying to make you fall in love with her.
+~
+She is more beautiful than Maid Sura.
+~
+10 33556608 999
+M 33 3 9 9 8
+2000 9 8 F
+#9536
+trainer sura~
+The Trainer Sura~
+A Trainer Sura is training sura candidate here.
+~
+~
+42 136 1000
+W 30 5 9 6 7
+100 8 8 M
+#9537
+grand gatekeeper~
+The Grand Gatekeeper~
+A Grand Gatekeeper is guarding the gate.
+~
+He is best gatekeeper. Grand Gatekeeper he is. he is selected from many first class sura. 
+~
+42 136 1000
+W 32 4 9 5 7
+100 8 8 M
+#9538
+dragon platinum~
+The platinum dragon~
+An large platinum dragon frowns at you. You feel terrified suddenly.
+~
+He looks lonely.
+~
+8234 136 0
+W 40 4 7 5 10
+500 9 8 M
+#9542
+red rainbow sura~
+Red rainbow Sura~
+A Red rainbow Sura trains here surrounded by red aura.
+~
+He is surrounded by beautiful red aura.
+~
+42 136 1000
+W 35 5 4 6 12
+1000 8 8 M
+#9543
+orange rainbow sura~
+Orange rainbow Sura~
+A Orange rainbow Sura trains here surrounded by orange aura.
+~
+He is surrounded by beautiful orange aura.
+~
+42 136 1000
+W 33 6 10 5 7
+1000 8 8 M
+#9544
+yellow rainbow sura~
+Yellow rainbow Sura~
+A Yellow rainbow Sura trains here surrounded by yellow aura.
+~
+He is surrounded by beautiful yellow aura.
+~
+42 136 1000
+W 33 11 4 5 7
+1000 8 8 M
+#9545
+green rainbow sura~
+Green rainbow Sura~
+A Green rainbow Sura trains here surrounded by green aura.
+~
+He is surrounded by beautiful green aura.
+~
+42 136 1000
+W 33 5 4 6 10
+1000 9 8 M
+#9546
+blue rainbow sura~
+Blue rainbow Sura~
+A Blue rainbow Sura trains here surrounded by blue aura.
+~
+He is surrounded by beautiful blue aura.
+~
+42 136 1000
+W 33 6 6 9 6
+1000 9 8 M
+#9548
+violet rainbow sura~
+Violet rainbow Sura~
+A violet rainbow Sura trains here surrounded by violet aura.
+~
+He is surrounded by beautiful violet aura.
+~
+42 136 1000
+W 33 8 10 4 6
+1000 9 8 M
+#9550
+january month sura~
+January month Sura~
+A January month Sura trains here with his amethyst stone.
+~
+He is decorated with amethyst stone.
+~
+42 136 1000
+W 35 7 8 7 4
+2000 8 8 M
+#9551
+february month sura~
+February month Sura~
+A February month Sura trains here with his bloodstone.
+~
+He is decorated with bloodstone.
+~
+42 136 1000
+W 35 5 7 7 6
+2000 8 8 M
+#9552
+march month sura~
+March month Sura~
+A March month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 4 8 7 6
+2000 8 8 M
+#9553
+april month sura~
+April month Sura~
+A April month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 4 9 8 6
+2000 8 8 M
+#9554
+may month sura~
+May month Sura~
+A May month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 7 8 7 4
+2000 8 8 M
+#9555
+june month sura~
+June month Sura~
+A June month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 5 7 7 6
+2000 8 8 M
+#9556
+july month sura~
+July month Sura~
+A July month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 5 8 7 7
+2000 9 8 M
+#9558
+september month sura~
+September month Sura~
+A September month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 5 9 7 7
+2000 9 8 M
+#9559
+october month sura~
+October month Sura~
+A October month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 6 8 7 7
+2000 9 8 M
+#9561
+december month sura~
+December month Sura~
+A December month Sura trains here with his birth stone.
+~
+He is decorated with birth stone of his month.
+~
+42 136 1000
+W 35 5 7 7 8
+2000 9 8 M
+#9562
+yuria~
+Yuria~
+Yuria is in Laiger's arm.
+~
+She is beauty itself. she looks very happy. You can guess that reason.
+she loves Laiger!
+~
+524302 136 1000
+C 39 4 18 9 5
+100 9 8 M
+#9563
+horse black king~
+Black King~
+Horse named Black King is beside Gaiot.
+~
+This horse has dark black skin. it is much bigger than general horse.
+This horse has twin brother. It belongs to Laow.
+~
+46 33556616 1000
+M 40 5 11 4 16
+5000 13 8 M
+#9564
+master sura~
+The master sura~
+A master sura rests here.
+~
+He is trainer of suras. he is training to become najang.
+~
+42 136 1000
+W 39 6 5 6 11
+4000 10 8 M
+#9701
+poor mudder~
+A poor mudder~
+A poor mudder, who is lost in this place.
+~
+You will become him if you are not careful.
+~
+76 0 0
+W 4 10 10 12 11
+100 12 8 M
+#9702
+star~
+A beautiful star~
+A beautiful white star is smiling at you.
+~
+You can't tell what the star looks like, she is too bright!
+~
+74 0 500
+W 8 9 13 11 13
+500 4 8 F
+#9703
+nebula young~
+A young nebula~
+A young nebula, waiting to become a star.
+~
+It hasn't got a definite shape, it is just a cloud of mist.
+~
+72 0 200
+W 10 9 10 11 18
+100 16 8 F
+#9704
+comet speedy~
+A speedy comet~
+A speedy comet is waiting to crush your head in.
+~
+You see the offspring of Halley's comet, here just to wipe everything out.
+~
+108 0 -500
+W 10 9 17 12 18
+150 17 8 M
+#9705
+red supergiant~
+A red supergiant~
+An enormous,red supergiant is forced to protect the galaxy.
+~
+You notice the giant is not as tough as his name sounds...
+Still he can be very powerful.
+~
+202 0 0
+W 15 9 11 13 17
+200 15 4 M
+#9706
+white dwarf~
+A white dwarf~
+A tiny white dwarf is trying to sneak away from duty. 
+~
+Like the red giant,he is also appointed to stand guard for the galaxy.
+But somehow he manages to escape. Though tiny, it can take a lot of hits!
+~
+76 0 0
+W 15 7 8 8 16
+200 14 8 M
+#9707
+horsehead nebula~
+A horsehead nebula~
+A huge nebula is here,its shape resembles a horsehead.
+~
+You can only make out its shape from the darkness.He was cursed to stay in here and his face may never be seen by anyone again.
+~
+74 1048576 -1000
+W 23 7 6 8 12
+600 12 6 M
+#9708
+andromeda~
+The poor, yet pretty Andromeda~
+The poor Andromeda is chained to the wall, suffering...
+~
+She was once a princess of beauty. However, her beauty has led to a Goddess's
+jealousy and she has to suffer here endlessly, 'til the time when Perseus comes.
+~~
+90 128 1000
+W 28 5 13 13 15
+750 13 8 F
+#9709
+hercules~
+The mighty Hercules~
+The Mighty Hercules is working hard on his extra Labours for the Gods.
+~
+He has been put to do the Ten Labours-Ten immpossible tasks, by Hera, the queen goddess, who disliked him. But he finished them all and at the end was granted
+immortality. He is a very brave and strong fighter.
+~
+74 128 1000
+W 31 6 11 7 14
+750 14 8 M
+#9710
+pegasus~
+The wild Pegasus~
+The wild pegasus is grazing peacefully.
+~
+It is the legendary horse with wings on its back.
+~~
+202 0 300
+W 29 5 10 3 4
+500 5 8 N
+#9711
+orion~
+Orion the hunter~
+Orion is still hunting for Scorpio.
+~
+He is the lengendary hunter who almost defeated Taurus the bull, but got killed by Scorpio. The gods put them both up as constellations but one appears on one
+side of the sky and the other the other side so they will never meet. 
+~
+74 128 300
+W 31 9 15 5 8
+750 9 8 M
+#9712
+pleiades~
+The Pleiades~
+The Pleiades are here,weeping for the loss of their sisters.
+~
+These are the seven sisters of the Myths, and as for why they are here, no
+one knows; even the Gods themselves have forgotten.
+~
+74 0 300
+W 18 11 17 10 15
+300 13 8 F
+#9713
+head draco~
+The Head of the Draco~
+The gigantic Head of Draco lurks out from beneath and prepares to roast you.
+~
+This evil-looking head is even larger than a giant. He is the last guardian 
+before entering the inner galaxy. His neck is flexing in a random fashion so 
+hitting the head is certainly not easy.
+~
+8298 136 -1000
+W 20 6 10 6 6
+1500 8 8 N
+#9714
+baby draco~
+A baby draco~
+A baby draco is crawling on the Draco's body.
+~
+You see a tiny creature which looks like a dragon except that its body resembles a snake. Gosh, is this a draco, you wonder, is this the thing we are on now?
+~
+204 0 -700
+W 9 13 14 15 17
+400 16 8 N
+#9715
+aries zodiac~
+Aries~
+Aries is sitting here, welcoming you.
+~
+You see a white goat here, the first guardian of the Zodiac, 
+also the ruler of Spring. He looks as if he is expecting you.
+~
+74 128 700
+W 32 5 11 7 5
+1000 8 6 M
+#9716
+taurus zodiac~
+Taurus~
+Taurus wants to leave,but has been forced to stay as a guardian here.
+~
+You see a wild-looking bull with a bad temper. He is well-built and looks like 
+he can fight well..Indeed he has fought with Orion before and survived.
+~
+106 136 -100
+W 32 8 10 3 6
+1000 5 8 M
+#9717
+gemini zodiac~
+Gemini~
+Gemini is looking for his brother, have you seen him?
+~
+As soon as you see him you know that he is the most perfect man you have seen. 
+You can't find any imperfections on him.
+~
+74 128 1000
+W 32 10 5 5 8
+1000 7 8 M
+#9718
+gemini zodiac~
+Gemini~
+Gemini is hiding from his brother, grinning evilly at you.
+~
+As soon as you see him you see the most imperfect man you have ever seen.
+How can there be such a contrast? You wonder...
+~
+524526 1048712 -1000
+C 33 5 5 5 11
+500 8 8 M
+#9719
+cancer zodiac~
+Cancer~
+Cancer the crab is here,hoarding the treasure away from you.
+~
+You see a gigantic crab(YES, it is bigger than you!) with a crushed shell. 
+Legend is that he was crushed by Hercules when he was sent by Hera to kill him. So Hera made Cancer a constellation for his work. 
+~
+74 128 0
+W 32 8 11 4 4
+1200 9 8 M
+#9720
+leo zodiac~
+Leo~
+Leo the lion is roaring at you, he is ready for a strike!
+~
+His metallic skin means that he could be the one which was killed by Hercules 
+during his first Labour. His skin is so weapon-proof that Hercules had to use 
+his bare hands to tear the lion into two from its mouth!
+~
+106 136 -100
+W 33 7 11 3 4
+1000 8 8 M
+#9721
+virgo zodiac~
+Virgo~
+Virgo is sitting here, winking at you suggestively..You are alarmed!
+~
+From what you have seen, you now realize that legends are legends, and Virgo maynot be the maid of chastity and purity at all! But still she looks gorgeous and is waiting for your first move, whatever it is...
+~
+74 128 1000
+W 32 11 4 5 8
+1000 9 6 F
+#9722
+libra zodiac~
+Libra~
+Libra, the fair and just, is staring at you, weighing up the sins of your past.
+~
+He is a wise old man and can see people's thoughts through their eyes....
+Now all he can see from you is greed and bloodshed.
+~
+74 128 1000
+W 32 5 4 6 10
+1000 7 8 M
+#9723
+scorpio zodiac~
+Scorpio~
+Scorpio is moving his tail towards you, waiting to put an end to some mortals.
+~
+Ever since he killed Orion in the myths, he has been punished by having 
+Sagittarius' arrow aimed at his heart forever.
+~
+106 136 -200
+W 32 4 7 12 7
+1000 8 8 M
+#9724
+sagittarius zodiac~
+Sagittarius~
+Sagittarius the centaur is waiting to let go of his well aimed arrow...  
+~
+He is a centaur and a well trained archer. Noone can escape his arrows.
+~
+74 128 1000
+W 33 7 12 4 5
+1000 8 8 M
+#9725
+capricon zodiac~
+Capricon~
+Capricon is here, feeling bored..He wants a fight!
+~
+You see a mean-looking ram here. He used to be a fierce fighter in the ancient 
+war but now the gods have decided to put him here, to live out the rest of his 
+days in peace.
+~
+74 128 700
+W 32 10 5 4 6
+1000 8 8 M
+#9726
+aquarius zodiac~
+Aquarius~
+The beautiful Aquarius is standing here, holding THE vessel.
+~
+The pretty Water Bearer is smiling at you, you think you'd better give her a 
+hand with holding the vessel. 
+~
+74 128 1000
+W 32 7 5 6 12
+1000 12 8 F
+#9727
+pisces mermaid zodiac~
+Pisces the mermaid~
+Pisces the mermaid is sitting here, waiting for your help.
+~
+She has been forced to serve her husband, who had been cursed to turn into a 
+fish and she deserves your pity.
+~
+74 128 1000
+W 20 7 9 4 6
+1000 9 6 F
+#9728
+pisces fish zodiac~
+Pisces the fish~
+Pisces the fish,is jealous of your approach...
+~
+He was once a very handsome man but now has turned into an ugly big fish. So he becomes jealous of any living thing which is more handsome than him.
+~
+106 128 -1000
+W 22 10 4 5 8
+1000 9 8 M
+#9729
+bear ursa major~
+Ursa Major the bear~
+Ursa Major the bear is the last defence against any intruders..
+~
+The Huge Bear which resides in the northern skies is here. 
+You think you'd better turn back. At least you have got a chance of survival.
+~
+106 136 0
+W 33 5 10 5 7
+15000 8 8 N
+#9730
+cassiopeia queen~
+Cassiopeia the Queen~
+Cassiopeia, the queen of the Universe, is sitting on her throne.
+~
+She is the Queen of Dignity; facing her you feel that all your dignity has gone.
+~
+74 128 700
+W 33 4 5 6 10
+12000 6 6 F
+#9731
+cepheus king~
+Cepheus the King~
+Cephus, the king of the Universe, is sitting on his throne.
+~
+He is the King of Might as well as of the Universe. You suddenly feel very weak and useless in front of him.
+~
+74 128 700
+W 33 5 5 10 6
+12000 7 6 M
+#9732
+polaris polar star~
+Polaris, the polar star~
+Polaris,the polar star, who commands the whole Universe, stands before you!
+~
+He is the Master of the Universe, (NOT He-Man!), the most powerful!  
+Even the King and the Queen obey him. As you look at him you notice he is 
+actually a STAR, with dazzling bright light... 
+Maybe you shouldn't have come here at all?
+~
+74 138 1000
+W 23 5 11 6 8
+20000 8 8 M
+#9800
+imperial fighter~
+Imperial space fighter~
+A fast space fighter flies to you and SHOOTS you!!
+~
+This swift spacecraft has globular body and hexagonal wings. It looks
+like a white eyeball with metal wings.
+~
+40 40 -1000
+W 30 5 11 6 13
+100 12 8 N
+#9801
+imperial cruiser~
+Imperial cruiser~
+A huge triangular shaped space cruiser blocks your way and prepares for
+attack.
+~
+This huge spacecraft is almost 1000 feet in length and has more than
+40 large beam weapons. You feel terrified by its appearance.
+~
+40 168 -1000
+W 40 5 18 3 13
+1000 14 8 N
+#9802
+imperial guard~
+Imperial guard~
+A well armored imperial guard with his weapon is wandering around.
+~
+He is armored in a white metal suit and very strange-looking helmet.
+They looks somewhat clumbsy.
+~
+168 40 -1000
+W 28 5 6 3 12
+200 14 8 M
+#9803
+imperial commander~
+Imperial commander~
+Imperial commander is monitoring the situations in the Death
+Star.
+~
+This man doesn't seem to be armored well. But his appearance and pose
+reveal much more power than he seems to have. He commands several
+guards to attack you.
+~
+42 168 -1000
+W 35 5 7 6 17
+1000 13 8 M
+#9804
+imperial vice admiral~
+Imperial vice-admiral~
+Imperial vice-admiral is standing here.
+~
+This honored man contributed much in conquering many peaceful planets
+of allied force and wears many medals for his distinguished service to
+the dark empire. He directs many officers to operate his army properly.
+~
+42 168 -1000
+W 38 4 9 5 19
+2000 16 8 M
+#9805
+trash monster~
+Trash monster~
+Trashes are moving in a strange manner near you.
+~
+Large hairy arms emerge from the piles of trashes, grasping you. You
+see many arms attacking your companions. Terrible smell, toxic gas, and
+horrifying noise fills the entire room. PANIC!!!! You can't ESCAPE!!
+~
+24618 1048744 -1000
+W 39 5 7 5 11
+0 11 8 N
+#9806
+imperial admiral~
+Imperial admiral~
+Imperial admiral is planning the invasion of a peaceful planet.
+~
+You are overwhelmed by the solemness and unrevealed power when you see
+this admiral. He is at the supreme status in the strategic planning of
+the dark empire. He looks surprised by your sudden appearance.
+~
+42 16777384 -1000
+W 39 6 8 6 13
+1000 14 8 M
+#9807
+darth vader~
+Darth Vader, the evil Jedi~
+Darth Vader is standing here horrifying all residence in this room.
+~
+Darth Vader is the traitor of the Jedi knights. He now follows the dark
+emperor. He is receving commands from his master, the EVIL DARK
+EMPEROR.
+~
+42 16777384 -1000
+W 41 7 7 11 18
+100000 16 8 M
+#9808
+dark emperor~
+The dark emperor~
+The dark emperor is murmuring something.
+~
+The ruler of dark empire sits in his black throne. He wants to destroy
+those who are against him and spread his authority to the end of the
+universe. His grinning at you paralyses your thought and conscience.
+~
+42 16777384 -1000
+W 41 9 11 11 15
+100000 16 8 M
+#13784
+zeus god~
+Zeus~
+Zeus, ruler of the Gods, is standing here.
+~
+Zeus has a flowing white beard and is wearing gleaming white robes.
+When he looks at you, you see lightning in his eyes, and you tremble
+before his mighty presence.
+~
+1052746 136 1000
+W 41 5 13 18 12
+0 10 8 M
+#13785
+Aphrodite goddess~
+Aphrodite~
+Aphrodite, the goddess of love, is standing here.
+~
+This is the most beautiful woman you have ever seen.  She is wearing a
+very close fitting dress, ans as you look into her eyes you fill like
+melting like a lump of butter.
+~
+4174 136 1000
+W 30 10 18 15 17
+0 10 8 M
+#13787
+hera goddess~
+Hera~
+Hera, the wife of Zeus, is standing here.
+~
+This is one mean woman.  You better hope that she is not in a bad mood,
+otherwise she could really do some damage.  She his lines in her face
+that remind you of the stress Zeus places on her.
+~
+1048618 136 0
+M 30 10 9 9 14
+0 13 8 M
+#13789
+apollo~
+Apollo~
+Apollo, god of the sun, is standing here.
+~
+Apollo is wearing only a pair of white shorts.  He wears a crown made on
+fire and he is holding a whistle in his left hand.  His eyes glow fiery
+red and and you can see flames coming from his mouth.
+~
+10 136 0
+W 30 11 16 14 19
+0 16 8 M
+#13791
+dionysus god~
+Dionysus~
+Dionysus the god of wine is passing out here.
+~
+This man is really drunk, but he still looks like he could crush you if
+he desired.  He is holding a huge flagon that is constantly emptied and
+filled with wine.
+~
+4106 136 0
+W 30 7 17 15 18
+0 16 6 N
+#13793
+ares god~
+Ares~
+Ares, the god of war, is preparing for battle
+~
+Ares is surely the strongest of the gods.  He is the prefect example of
+a warrior.  He has bulging muscles and is fitted with the finest armor
+possible.
+~
+42 136 0
+W 35 7 17 15 19
+0 13 8 M
+#13795
+athena goddess~
+Athena~
+Athena, the goddess od wisdom, is standing here.
+~
+She is the wisest of all the gods and perhaps the most noble.  She is
+wearing very old armor and has a spear.  She smiles as you enter, but
+she knows why you have come here.
+~
+4106 136 0
+C 40 6 14 18 11
+0 16 8 M
+#13797
+hermes~
+Hermes~
+Hermes, the god of thievery, is standing here
+~
+Hermes is a teenager, and has very odd clothing.  He is only wearing a
+pair of boots, and a tunic that fall to his thighs.  He looks very fast,
+and clever.
+~
+4106 136 0
+W 40 3 14 19 8
+0 13 8 M
+#15001
+diamond robot~
+Diamond robot~
+Mine diamond robot is working hard..
+~
+로봇광산의 다이아몬드 로봇입니다..그는 이광산의 책임자랍니다..
+~
+42 152 500
+W 35 4 16 10 11
+1000 10 8 M
+#15002
+sapphire robot~
+Sapphire robot~
+Mine sapphire robot is working hard..
+~
+~
+42 24 500
+W 34 4 17 9 12
+1000 12 8 M
+#15003
+ruby robot~
+Ruby robot~
+Mine ruby robot is working hard..
+~
+~
+42 24 500
+W 34 4 14 9 12
+1000 12 8 F
+#15004
+gold robot~
+Gold robot~
+Mine gold robot is working hard..
+~
+~
+42 24 500
+W 34 4 14 9 13
+1000 12 8 M
+#15005
+silver robot~
+Silver robot~
+Mine silver robot is working hard..
+~
+~
+42 24 500
+W 34 4 19 9 13
+1000 15 8 M
+#15006
+copper robot~
+Copper robot~
+Mine copper robot is working hard..
+~
+~
+42 24 500
+W 34 4 16 9 16
+1000 15 8 M
+#15007
+iron robot~
+Iron robot~
+Mine iron robot is working hard..
+~
+~
+42 24 500
+W 33 5 19 9 17
+1000 16 8 M
+#15008
+coal robot~
+Coal robot~
+Mine coal robot is working hard..
+~
+~
+42 24 500
+W 33 7 14 9 18
+1000 15 8 M
+#15009
+mine robocop~
+Mine robocop~
+Mine robocop looks at you..
+~
+~
+10 24 500
+W 31 6 14 14 12
+3000 12 8 M
+#15010
+old robocop~
+Old robocop~
+The old robocop is here..He looks forward...
+~
+구형로보캅은 은퇴후의 앞날을 생각합니다..신형로보캅이 생산되기 시작함에
+따라 그는 곧 은퇴한답니다..
+~
+65608 8 500
+M 28 3 16 11 17
+500 15 8 M
+#15011
+new robocop~
+New robocop~
+The new robocop is standing here..He looks for criminal robot..
+~
+~
+65608 8 500
+W 30 4 13 7 12
+500 13 8 M
+#15012
+pentium computer~
+Pentium computer~
+The pentium computer is here..
+~
+팬티엄은 이타워의 가장 최신의 컴퓨터랍니다..그는 누구보다도 명석한 머리
+를 가지고 있답니다..
+~
+42 152 500
+W 39 3 16 13 17
+500 16 8 M
+#15013
+486 computer~
+486 computer~
+The 486 computer is standing here..
+~
+~
+42 24 500
+W 37 3 15 13 10
+500 12 8 M
+#15014
+386 computer~
+386 computer~
+The 386 computer is here..He calculating some data..
+~
+~
+42 24 500
+W 37 3 19 13 10
+500 11 8 M
+#15015
+at computer~
+AT computer~
+A at computer is here..He looks confused..
+~
+~
+42 24 500
+W 36 3 15 12 11
+500 12 8 M
+#15016
+xt computer~
+XT computer~
+A xt computer is here..He sighs loudly cuz his poor ability..
+~
+~
+42 24 500
+W 36 3 18 11 12
+500 12 8 M
+#15017
+msx computer~
+MSX computer~
+A msx computer is standing here..
+~
+~
+42 24 500
+W 35 3 17 10 13
+500 14 8 M
+#15018
+apple computer~
+Apple computer~
+A apple computer is here..He fixes own circuit to upgrade his body..
+~
+~
+42 24 500
+W 35 3 15 11 18
+500 14 8 M
+#15020
+computer robocop~
+Computer robocop~
+A computer robocop is standing here to watch out this compuer tower..
+~
+~
+10 152 500
+W 30 4 17 18 8
+500 13 8 M
+#15021
+robot jjippa~
+Robot jjippa~
+A small robot jjippa is here..
+~
+~
+108 0 500
+W 25 5 6 11 15
+10 9 8 M
+#15022
+ccangtong robot~
+Ccangtong robot~
+The ccangtong robot is standing here..
+~
+~
+108 0 500
+W 27 6 3 12 18
+10 11 8 M
+#15023
+teleport machine~
+Teleport machine~
+The teleport machine is here..It makes terrible noise..
+~
+~
+10 152 500
+M 30 3 15 11 14
+200 13 8 N
+#15024
+psycho robot~
+Psycho robot~
+Poor psycho robot is here..
+~
+~
+204 8 500
+T 19 4 5 6 13
+30 6 8 M
+#15025
+robot mechanic~
+Robot mechanic~
+The robot mechanic looks for robot who has problems..
+~
+~
+524360 24 500
+C 32 7 8 3 10
+1000 13 8 M
+#15035
+factory gate robot~
+Factory gate robot~
+The factory gate robot is standing here..He will go to bed soon..
+~
+~
+10 152 500
+W 37 5 16 17 8
+1000 9 8 M
+#15068
+ic robot~
+IC robot~
+IC robot is standing here..
+~
+안녕하세요..전 샤론여왕의 첫째 IC 라고해요..저랑 친하게 지내실래요??
+~
+10 16777352 500
+W 35 6 14 12 12
+2000 15 8 M
+#15082
+vlsi robot~
+VLSI robot~
+VLSI robot is standing here..
+~
+우아아아앙앙...엄마한테 데려다줘.....
+~
+10 16777352 500
+W 37 6 18 12 10
+2000 13 8 M
+#15083
+lsi robot~
+LSI robot~
+LSI robot is standing here..
+~
+뭘보나..경제를 살리자는데..
+~
+10 16777352 500
+W 36 6 19 12 11
+2000 11 8 M
+#15092
+sick robot~
+Sick robot~
+Sick robot sitting on the YOGANG.. He sffers from stomach upset..
+~
+AAAAAAAaaaaaaaaaeeeeeerrrrrrrrrrrrrr......shit!! why look at me????
+똥누는거 첨보나??
+~
+65546 24 500
+C 38 6 14 14 16
+2000 13 6 M
+#15094
+5th robocop~
+The 5th robocop~
+The 5th robocop stands here.
+~
+~
+65546 24 500
+W 31 6 15 18 11
+2000 16 8 M
+#15095
+4th robocop~
+The 4th robocop~
+The 4th robocop stands here.
+~
+~
+65578 24 500
+W 32 6 14 19 10
+2000 13 8 M
+#15096
+3rd robocop~
+The 3rd robocop~
+The 3rd robocop stands here.
+~
+~
+65578 24 500
+W 33 6 16 18 9
+2000 13 8 M
+#15097
+2nd robocop~
+The 2nd robocop~
+The 2nd robocop stands here.
+~
+~
+65578 24 500
+W 34 6 16 13 9
+2000 14 8 M
+#15098
+1st robocop~
+The 1st robocop~
+The 1st robocop stands here.
+~
+~
+65578 24 500
+W 35 6 17 12 8
+2000 11 8 M
+#15099
+head robocop~
+Head robocop~
+Head robocop stands here.
+~
+~
+98346 152 500
+W 39 7 12 14 15
+5000 16 8 M
+#15104
+factory president robot~
+President robot~
+The factory president robot stands here. 
+~
+~
+42 16777368 500
+W 38 4 11 5 6
+6000 9 8 M
+#15106
+producer robot~
+Producer robot~
+A producer robot products new robot at here.
+~
+~
+104 24 500
+W 36 5 13 11 9
+100 14 8 M
+#15107
+semi robot~
+Semi robot~
+A semi-robot is producted by producer robot.
+~
+~
+104 24 500
+W 35 4 13 11 7
+100 13 8 M
+#15110
+factory captain robot~
+Captain robot~
+A factory captain robot stands here.
+~
+~
+42 16777368 500
+W 37 3 12 17 8
+1000 9 8 M
+#15117
+super magnet~
+Super magnet~
+A super magnet is here..Do Not Touch Me...kuhahaha
+~
+~
+16554 17825944 500
+M 40 9 12 7 11
+5000 14 8 M
+#15126
+bar magnet~
+Bar magnet~
+A bar magnet walks on his magnetic field.
+~
+~
+104 152 500
+W 39 5 13 9 7
+1000 9 8 M
+#15127
+horseshoe magnet~
+Horseshoe magnet~
+A horseshoe magnet stands here.
+~
+~
+104 152 500
+W 35 5 14 13 9
+1000 9 8 M
+#15128
+electro magnet~
+Electro magnet~
+A electro magnet suffers from lack of electric power..He finds electric 
+socket.
+~
+~
+104 152 500
+W 30 3 14 20 14
+1000 16 8 M
+#15129
+cray computer~
+CRAY COMPUTER~
+The CRAY COMPUTER calculates something..
+~
+~
+4138 16844952 500
+W 41 7 15 16 16
+50000 18 8 M
+#15130
+programer robot~
+Programer robot~
+The programer robot stands here..
+~
+~
+2625578 16779416 500
+C 38 8 15 8 7
+0 10 8 M
+#15154
+mazinga~
+Mazinga~
+The mazinga stands here.
+~
+~
+4138 16777368 500
+W 41 7 13 11 13
+10000 16 8 M
+#15168
+super robocop~
+Super robocop~
+The super robocop stands hers..
+~
+~
+135178 16777368 500
+W 39 5 11 8 9
+1000 9 8 M
+#15176
+royal robocop~
+Royal robocop~
+A royal robocop is standing here.
+~
+~
+135272 152 500
+W 38 4 12 9 8
+500 8 8 M
+#15182
+great mazinga~
+Great mazinga~
+The great mazinga stands here..He upset by your ugly figure..
+~
+~
+4139 16844952 500
+W 41 7 16 11 12
+50000 18 8 M
+#15183
+queen sharon~
+Queen sharon~
+The queen of robot-city,sharon stands here..
+~
+~
+4138 33556632 500
+W 42 18 6 10 13
+100000 19 8 F
+#15190
+secret mechanic robot~
+Secret mechanic robot~
+A secret mechanic robot stands here.
+~
+~
+1572874 17827992 500
+C 38 3 12 12 6
+0 10 8 M
+#15193
+robot zzanga~
+Robot zzanga~
+The robot zzanga stands here.
+~
+~
+4138 16777368 500
+W 40 8 13 11 13
+8000 13 8 M
+#15194
+robot grandiser~
+Robot grandiser~
+The robot grandiser stands here.
+~
+~
+4138 16777368 500
+W 40 8 12 12 15
+9000 13 8 M
+#15208
+first husband~
+First husband~
+Sharon's first husband stands here.
+~
+~
+4168 16777368 500
+C 36 6 15 19 16
+1000 17 8 M
+#15216
+electron robot~
+Electron robot~
+The electron robot made by electron..He is very tough..
+~
+~
+4138 16777368 500
+W 36 4 11 8 15
+1000 16 8 M
+#15217
+second husband~
+Second husband~
+Sharon's second husband stands here.
+~
+~
+4138 16777368 500
+M 36 3 18 8 13
+1000 14 8 M
+#15221
+third husband~
+Third husband~
+Sharon's third husband stands here.
+~
+~
+4168 16777368 500
+W 36 5 10 10 13
+1000 13 8 M
+#15224
+proton robot~
+Proton robot~
+The proton robot made by proton..He is very very tough..
+~
+~
+4138 16777368 500
+W 37 3 11 8 14
+8500 14 8 M
+#15225
+quantum robot~
+Quantum robot~
+The extremely tough robot quantum stands here.
+~
+~
+4138 16777368 500
+W 38 6 11 8 13
+8500 12 8 M
+#15226
+human nipporica~
+Human nipporica~
+The ugly human,nipporica stands here..
+~
+~
+42 152 500
+M 38 9 12 19 6
+100 13 8 M
+#16001
+king chocho~
+Chocho~
+The king of wee-kingdom,ChoCho stands here..
+~
+~
+1052714 33556616 999
+W 41 9 11 11 7
+45000 12 8 M
+#16002
+son chovi~
+Chovi~
+The chocho's first son,chovi is here..
+~
+~
+4138 16779400 999
+W 40 3 9 11 8
+10000 8 8 M
+#16003
+mosa samaui~
+Samaui~
+The best mosa of wee-kingdom is standing here..
+~
+~
+10 16779400 999
+M 39 6 9 11 8
+5000 7 8 M
+#16004
+general hawoodon~
+Hawoodon~
+The general hawoodon is standing here..
+~
+~
+4138 16777368 999
+W 40 7 7 11 9
+5000 9 8 M
+#16005
+mosa seoseo~
+seoseo~
+The mosa seoseo stands here..He thinking about chok-kingdom..
+~
+~
+10 16777368 999
+M 39 9 7 11 14
+5000 15 8 M
+#16006
+general jangryo~
+Jangryo~
+The general jangryo stands here..
+~
+~
+4138 16777368 999
+W 39 6 7 11 9
+5000 12 8 M
+#16007
+general junwee~
+Junwee~
+The general junwee is sleeping here..
+~
+~
+4138 16777368 999
+W 38 5 7 11 13
+5000 14 4 M
+#16008
+general huju~
+Huju~
+The general huju is standing here..He look very tough..
+~
+~
+4138 16777368 999
+W 39 5 7 9 9
+100 8 8 M
+#16009
+boss yellow bandit jangkak~
+Jangkak~
+A boss of yellow-towel-bandits,jangkak stands here..
+~
+~
+4138 16777368 -999
+T 41 7 17 16 18
+20000 18 8 M
+#16010
+juji priest~
+juji~
+A juji of sorim temple is praying for the peace..
+~
+~
+2097162 152 999
+C 35 4 8 7 9
+0 5 8 M
+#16011
+statue sadang~
+Statue~
+A statue of sadang stands here..
+~
+~
+10 152 999
+M 35 5 10 7 9
+0 5 8 N
+#16012
+jwaja~
+Jwaja~
+A mysterious jwaja walks here..
+~
+~
+1048648 33556616 999
+M 37 6 16 16 7
+100 12 8 M
+#16013
+soldier drill drillmaster wee~
+Drillmaster~
+A drillmaster 조교가 당신을 노려보고 있습니다..
+~
+~
+104 0 200
+W 30 5 8 7 9
+100 9 8 M
+#16014
+head soldier wee~
+H-soldier~
+A head soldier 고참 병사가 길을 걷고 있습니다..
+~
+~
+104 0 200
+W 30 6 8 7 9
+100 8 8 M
+#16015
+soldier wee~
+Soldier~
+A soldier 병사가 이곳에 두리번 거리며 서있습니다..
+~
+~
+104 0 200
+W 28 6 7 3 11
+100 8 8 M
+#16016
+retired soldier wee~
+R-soldier~
+A retired soldier 은퇴한 병사가 힘없는 눈초리로 당신을 봅니다..
+~
+~
+104 0 250
+W 25 5 6 7 10
+100 7 8 M
+#16017
+training soldier wee~
+T-soldier~
+A training soldier 훈련병이 열심히 무술을 익히고 있습니다..
+~
+~
+104 0 200
+W 20 4 9 13 15
+100 9 8 M
+#16018
+port keeper portkeeper~
+Portkeeper~
+The portkeeper 항구경비원이 바다를 응시한체 서있습니다..
+~
+~
+65546 128 800
+W 25 4 7 8 10
+100 5 8 M
+#16019
+noble man wee~
+Noble man~
+A noble man 귀족이 우스꽝스러운 몸짓을 하며 길을 거닐고 있습니다..
+~
+~
+72 128 800
+W 20 6 8 11 13
+20000 12 8 M
+#16020
+wee citizen~
+Wee citizen~
+A wee citizen 위나라의 백성이 바쁘게 무언가를 찾고 있습니다..
+~
+~
+204 0 600
+W 18 5 10 12 20
+10 12 8 M
+#16021
+wee farmer~
+Wee farmer~
+A wee farmer 농부가 열심히 일을하고 있습니다..
+~
+~
+76 0 600
+W 18 5 10 12 18
+10 9 8 M
+#16022
+wee merchant~
+Wee merchant~
+A wee merchant 상인이 물건을 가지고 부산히 움직이고 있습니다..
+~
+~
+76 0 400
+W 18 5 8 12 11
+1000 13 8 M
+#16023
+wee pirate~
+Pirate~
+A pirate 해적이 이곳에 있습니다..당신의 목숨을 노리고 있습니다..
+~
+~
+104 0 -800
+W 20 4 9 13 16
+10 9 8 M
+#16024
+boss pirate wee~
+Boss pirate~
+A boss pirate 해적두목이 음흉한 미소를 지으며 당신에게 덤비려 합니다..
+~
+~
+42 128 -800
+W 30 4 8 7 7
+100 5 8 M
+#16025
+wee fisher~
+Wee fisher~
+A fisher 어부가 그물을 끌어 올리며 어기영차를 외치고 있습니다..
+~
+~
+72 0 500
+W 18 6 10 13 16
+10 13 8 M
+#16026
+sea dragon~
+Sea dragon~
+A sea dragon 해룡이 흉칙한 모습을 보이며 서있습니다..
+~
+~
+8296 0 -900
+W 25 6 7 8 10
+0 3 8 M
+#16027
+yellow towel bandit~
+Yellow bandit~
+A yellow-towel bandit 황건적이 당신의 돈을 노리고 있습니다..
+~
+~
+104 0 -700
+T 20 4 9 13 17
+0 13 8 M
+#16028
+wee pozol~
+Wee pozol~
+A wee pozol 포졸이 수상한 사람을 찾아 그의 쿤눈을 두리번 거립니다..
+~
+~
+65608 0 500
+W 20 4 8 11 12
+100 14 8 M
+#16029
+simmani~
+Simmani~
+A simmani 심마니가 산삼을 찾아 가파른 절벽을 오르고 있습니다..
+~
+~
+14 128 800
+T 30 5 5 5 12
+10 6 8 M
+#17001
+king sonkwun~
+SonKwun~
+King sonkwun 손권이 잠시 명상에 젖은듯 지긋이 눈을 감고 있습니다.
+~
+그는 오나라의 왕입니다.형인 손책의 뒤를 이어 오나라를 이끌어 나가고 
+있으나 그에겐 위나라와 촉나라의 존재가 무척신경이 쓰이나 봅니다.
+~
+1052714 33556616 0
+W 41 7 11 11 13
+10000 10 8 M
+#17002
+blue dragon~
+Blue Dragon~
+Blue dragon 청룡이 당신의 침입에 황급히 놀라 공격자세를 취하고 있습니다
+~
+~
+4286 17825944 0
+W 40 7 11 11 8
+100 14 8 M
+#17003
+general jutae~
+Jutae~
+The general Jutae 주태의 험상궂은 눈빛이 당신을 쏘아 봅니다.
+~
+~
+135178 16777368 0
+W 40 7 10 11 10
+1000 8 8 M
+#17004
+mosa jooyu~
+Jooyu~
+The mosa jooyu 주유가 하늘을 쳐다보며 오나라의 앞날을 걱정하고 있습니다.
+~
+~
+4168 16777368 0
+W 37 7 10 11 10
+10000 8 8 M
+#17005
+general yukson~
+Yukson~
+The genaral yukson 육손장군이 벽에 걸린 삼국의 지도를 보며 앞으로의 전세
+를 가늠하고 있습니다.
+~
+~
+4106 16777368 0
+W 37 7 10 11 10
+10000 9 8 M
+#17006
+general yeomong~
+Yeomong~
+The general yeomong 여몽장군이 병사들의 훈련모습을 지켜보고 있습니다.
+~
+~
+4296 152 0
+W 37 3 9 9 9
+1000 8 8 M
+#17007
+general gamnyung~
+Gamnyung~
+The general gamnyung 감녕장군이 위풍당당한 모습으로 길을 거닙니다.
+~
+~
+4168 152 0
+W 37 7 9 9 15
+1000 13 8 M
+#17008
+general taesaza~
+Taesaza~
+The general taesaza 태사자 장군이 오나라의 북문앞에 서서 통행인들을 감시
+하고 있습니다.
+~
+~
+4106 152 0
+W 35 4 7 10 4
+1000 8 8 M
+#17009
+ghost king sonkyun~
+Sonkyun~
+The ghost king sonkyun 손견의 혼령이 음흉한 미소를 지으며 당신을 봅니다.
+~
+~
+20488 1050776 0
+W 40 7 11 11 10
+500000 13 8 M
+#17010
+woogil sunin~
+Woogil~
+The woogil sunin 우길선인이 그의 긴수염을 쓰다듬으며 느릿한 몸짓으로 백
+성을 돌보고 있습니다.
+~
+~
+72 16777368 999
+M 38 14 11 11 9
+100 14 8 M
+#17011
+captain pozol~
+Captain pozol~
+The captain pozol 포도대장이 마당 한가운데를 돌아다니며 죄수들을 둘러보
+고 있습니다.
+~
+~
+65546 128 0
+W 33 4 11 7 5
+1000 9 8 M
+#17012
+pozol~
+Pozol~
+A pozol 포졸이 졸리운 눈으로 두리번 거립니다.
+~
+~
+65608 0 0
+W 30 3 18 7 9
+1000 12 8 M
+#17013
+east soldier~
+East soldier~
+A east soldier 병사가 성내를 순찰하고 있습니다.
+~
+~
+104 24 0
+W 33 6 11 3 8
+1000 7 8 M
+#17014
+west soldier~
+West soldier~
+A west soldier 서쪽성이 맘에 안드는지 병사가 터덜터덜 성내를 순찰합니다.
+~
+~
+104 24 0
+W 33 5 11 6 7
+1000 6 8 M
+#17015
+first soldier~
+1st soldier~
+A first soldier 일등병사가 그의 무공을 뽐내는듯 그의 창을 닦고 있습니다.
+~
+~
+104 0 0
+W 30 5 14 7 9
+100 9 8 M
+#17016
+second soldier~
+2nd soldier~
+A second soldier 이등병사가 힘찬 걸음으로 걷고 있습니다.
+~
+~
+104 0 0
+W 25 5 17 7 18
+100 9 8 M
+#17017
+training soldier~
+training soldier~
+A training soldier 훈련병이 교관의 지시대로 열심히 훈련하고 있습니다.
+~
+~
+104 0 0
+W 20 6 14 11 15
+100 12 8 M
+#17018
+jokyo soldier~
+Jokyo soldier~
+A jokyo soldier 훈련조교가 그들의 훈련병을 매섭게 훈련시키고 있습니다.
+~
+~
+104 0 0
+W 30 8 16 7 9
+100 8 8 M
+#17019
+third soldier~
+3rd soldier~
+A third soldier 삼등병사가 이곳저곳을 둘러보며 서있습니다.
+~
+~
+104 0 0
+W 20 6 14 11 15
+100 12 8 M
+#17020
+fourth soldier~
+4th soldier~
+A fourth soldier 사등병사가 불만스러운 표정으로 당신을 봅니다.
+~
+~
+104 0 0
+W 20 3 17 11 16
+100 11 8 M
+#17021
+fifth soldier~
+5th soldier~
+A fifth soldier 오등병사가 자신의 계급장을 가리며 부끄러운듯 서있습니다.
+~
+~
+104 0 0
+W 20 4 19 11 17
+100 13 8 M
+#17022
+citizen~
+Citizen~
+A citizen 허름한 옷차림의 백성이 당신을 보며 부러운듯 눈초리를 보냅니다.
+~
+~
+72 0 0
+O 20 5 11 11 13
+100 9 8 M
+#17023
+farmer~
+Farmer~
+A farmer 농부가 자신의 얼굴에 땀을 닦으며 잠시 휴식을 취하고 있습니다.
+~
+~
+72 0 0
+O 20 5 11 11 14
+1000 9 8 M
+#17024
+merchant~
+Merchant~
+A merchant 상인이 장터로 향해 가고 있습니다.
+~
+~
+72 0 0
+W 25 5 10 7 17
+20000 8 8 M
+#17025
+ware warehouse keeper~
+warehouse keeper~
+A warehouse keeper 창고지기가 당신을 위아래로 훑어 보고 있습니다.
+~
+~
+104 0 0
+W 30 5 18 7 9
+100000 9 8 M
+#17026
+child~
+Child~
+A child 아이가 즐겁게 뛰어 놀고 있습니다.
+~
+~
+72 0 0
+O 15 5 13 14 20
+10 9 8 M
+#17027
+anakne~
+Anakne~
+A anakne 아낙네가 그녀의 아이를 찾아 이리저리 두리번 거립니다.
+~
+~
+72 0 0
+W 17 6 11 17 17
+1000 13 8 F
+#17028
+jumo~
+Jumo~
+A jumo 짙은 화장을 한 주모가 눈웃음을 치며 당신을 맞이합니다.
+~
+~
+10 0 0
+W 35 3 11 4 7
+10000 8 8 F
+#18000
+chief JangSamBong~
+Chief JangSamBong~
+The chief of Mudang, JangSamBong is expertizing for Tae-kuk...
+~
+무당산의 석굴에서 장삼봉이 태극권의 원리를 연구하고 있습니다.
+갑작스러운 당신의 침입에 그는 매우 언짢은 것 같습니다.
+~
+1052714 34613400 500
+W 43 16 4 12 18
+30000 18 8 M
+#18001
+1st knight SongWonKyo~
+1st knight SongWonKyo~
+The 1st knight of Mudang, SongWonKyo is standing here.
+~
+무당칠협의 첫째인 송원교가 서 있습니다. 장삼봉의 뒤를 이어
+무당파를 중흥시켜야 하는 책임이 그에게 있습니다. 그래서 무당의
+모든 대소사는 그를 통해서 이루어지고 있답니다.
+~
+1052714 16844936 500
+W 40 13 9 6 12
+20000 15 8 M
+#18002
+2rd knight YuYeonJu~
+2rd knight YuYeonJu~
+The 2rd knight of Mudang, YuYeonJu is standing here.
+~
+무당칠협의 둘째인 유연주가 유대암의 상처를 걱정하고 있습니다.
+칠협중에서 마음이 가장 부드러운 그조차도 유대암을 암습한 괴한들에게
+복수를 다짐하고 있답니다.
+~
+1052714 16844936 500
+W 40 14 8 5 11
+15000 16 8 M
+#18003
+3nd knight YuDaeAm~
+3nd knight YuDaeAm~
+The 3nd knight of Mudang, YuDaeAm is sitting here.
+~
+무당칠협의 셋째인 유대암이 부상으로 쉬고 있습니다.
+그의 상처는 매우 깊어 쉽게 회복될것 같지 않습니다.
+~
+1052714 16844936 500
+W 40 5 8 4 15
+5000 15 8 M
+#18004
+4th knight JangSongGye~
+4th knight JangSongGye~
+The 4th knight of Mudang, JangSongGye is standing here.
+~
+무당칠협의 넸째인 장송계가 첫째인 송원교를 도와 무당의
+많은 일을 처리하고 있습니다. 칠협중에서 지모가 가장 뛰어나다는
+장송계... 누가 무엇 때문에 둘째형을 암습했는지 골똘히 생각하고 있습니다.
+~
+1052714 16844936 500
+W 40 6 7 6 14
+25000 14 8 M
+#18005
+5th knight JangChwiSan~
+5th knight JangChwiSan~
+The 5th knight of Mudang, JangChwiSan is standing here.
+~
+무당칠협의 다섯째인 장취산의 혼령이 여기 있습니다.
+아내인 은소소와 함께 아들을 바라보며 매우 걱정스러운듯이 서 있습니다.
+~
+1052714 16844936 500
+W 40 8 11 5 13
+25000 14 8 M
+#18006
+6th knight EunYiJeong~
+6th knight EunYiJeong~
+The 6th knight of Mudang, EunYiJeong is standing here.
+~
+무당칠협의 여섯째인 은이정이 약혼녀를 그리며 서있습니다.
+명교의 광명좌사 양소에게 유혹당해 결국은 멸절사태에게 죽어버린 기효부...
+그래서, 은이정은 명교에 속한 사람들만 보면 매우 잔인하게 대합니다.
+~
+1052714 16844936 500
+W 40 7 11 8 12
+18000 16 8 M
+#18007
+7th knight MakSeongGok~
+7th knight MakSeongGok~
+The 7th knight of Mudang, MakSeongGok is standing here.
+~
+무당칠협의 막내인 막성곡이 다섯째형인 장취산의 거취에 대해
+걱정하고 있습니다. 그의 시야에는 무림의 인물들이 올라오는게 보입니다.
+과연, 이들이 무엇때문에 오는지.......
+~
+1052714 16844936 500
+W 40 7 7 7 12
+16000 14 8 M
+#18008
+wife EunSoSo~
+Wife EunSoSO~
+The wife of JangChwiSan, EunSoSo is standing here.
+~
+~
+42 16844936 -200
+W 39 10 7 15 6
+10000 13 8 F
+#18009
+ghost GiHyoBu~
+Ghost GiHyoBu~
+The ghost of GiHyoBu is standing here.
+~
+~
+2097162 16844936 400
+W 39 10 10 14 7
+0 15 8 F
+#18010
+2nd apprenciate mudang SongCheongSeo~
+2nd apprenciate mudang SongCheongSeo~
+The 2nd apprenciate mudang SongCheongSeo is standing here.
+~
+무당파의 앞날을 이끌고갈 송청서가 2대제자들의 앞에서서
+그들을 지도하고 있습니다. 그의 눈에선 희망찬 내일의 모습을
+볼수가 있군요. 
+~
+104 33556632 450
+W 40 6 10 3 13
+10000 14 8 M
+#18011
+2nd apprenciate mudang~
+2nd apprenciate mudang~
+The 2nd apprenciate mudang is training MyeonJang.
+~
+무당파의 제2대제자가 면장을 열심히 익히고 있습니다.
+~
+104 33556632 450
+W 38 5 10 6 8
+5000 11 8 M
+#18012
+2nd apprenciate mudang~
+2nd apprenciate mudang~
+The 2nd apprenciate mudang is training Mudang-Sword theory.
+~
+무당파의 제2대제자가 무당검법을 열심히 익히고 있습니다.
+~
+104 33554584 450
+W 37 4 10 5 8
+5000 11 8 M
+#18013
+2nd apprenciate mudang~
+2nd apprenciate mudang~
+The 2nd apprenciate mudang is training Mudang-Gweon theory.
+~
+무당파의 제2대제자가 무당권법을 열심히 익히고 있습니다.
+~
+104 33554584 450
+W 35 4 12 5 8
+5000 10 8 M
+#18014
+3rd apprenciate mudang~
+3rd apprenciate mudang~
+The 3rd apprenciate mudang is being trained by 2nd apprenciate mudang.
+~
+무당파의 제3대제자가 2대제자로부터 무당파의 기본을 배우고 있습니다.
+~
+104 33554584 400
+W 35 4 12 4 7
+5000 10 8 M
+#18015
+3rd apprenciate mudang~
+3rd apprenciate mudang~
+The 3rd apprenciate mudang is studying basic theory of mudang.
+~
+무당파의 제3대제자가 무당파의 기본을 배우고 있습니다.
+~
+104 33554584 400
+W 33 4 13 3 9
+3000 10 8 M
+#18016
+guard mudang~
+Guard mudang~
+The guard of Mudang stands here on the alert.
+~
+~
+65640 33554584 400
+W 40 8 10 16 13
+3000 16 8 M
+#18020
+guest~
+Guest~
+The Guest of mudang is walking through training hall.
+~
+무당파를 구경하러 온 손님이 무당의 후기지수들이 수련하는 
+모습을 바라보고 있습니다. 무당의 젊은 인재들의 모습에서
+매우 강렬한 인상을 받았나 봅니다.
+~
+232 33554584 450
+T 35 5 12 7 9
+12000 7 8 M
+#18021
+servant~
+Servant~
+The servant of mudang is working at here.
+~
+무당파의 하인이 연무장을 청소하고 있습니다. 무당파에서 오랫동안
+일하다보니 그의 무공실력도 얕잡아볼수가 없군요.
+~
+200 8 300
+W 30 3 17 5 9
+1000 7 8 M
+#18022
+cook~
+Cook~
+The cook of mudang is cooking for dinner.
+~
+요리사가 오늘저녁을 위해서 요리를 하고 있습니다. 평범하게 보이지만
+그의 칼질하는 모습에선 문득문득 무당검법이 나타나곤 합니다.
+~
+44 8 300
+W 31 3 16 5 10
+2000 7 8 M
+#18023
+jumo~
+Jumo~
+The jumo is looking at guests.
+~
+주모가 손님들을 맞이하고 있습니다. 하지만 그녀의 눈빛에는
+언뜻 스쳐가는 강인한 모습이 보이는군요. 과연 그녀의 정체는......
+~
+10 136 400
+T 34 3 12 10 10
+1000 10 8 F
+#18024
+waiter~
+Waiter~
+The waiter is being ordered busily.
+~
+점소이가 손님들로부터 바쁘게 주문을 받고 있습니다. 무림의 많은 인물들을
+상대하다보니 그의 발걸음은 굉장히 빠르게 움직여야만 합니다.
+~
+172 8 200
+W 28 5 13 6 10
+0 11 8 M
+#18030
+tiger~
+Tiger~
+The white Tiger is running around here.
+~
+백호가 무당산의 여기저기를 휘저으며 달리고 있습니다.
+커다란 체구에 온산을 떠날듯이 울부짖는 포효는 산중의 왕으로 불릴만합니다.
+~
+65640 65672 50
+W 30 5 11 7 18
+0 16 8 M
+#18031
+serpent snake~
+Serpent snake~
+The large serpent snake is setting his heart on rising high to sky.
+~
+커다란 구렁이가 하늘 높이 오르기를 열망하고 있습니다. 하지만
+여의주가 없기에 용이 되지 못하고 땅을 기어다니고 있군요.
+~
+65640 65672 50
+W 26 5 12 6 16
+0 10 8 M
+#18032
+dragon yellow~
+Dragon yellow~
+The Yellow Dragon is flying over fall.
+~
+황룡이 폭포주위를 맴돌고 있습니다. 폭포안에 무슨 귀중한것이 있나 보군요.
+~
+8234 16779416 -100
+W 31 6 17 19 14
+50000 15 8 M
+#18033
+tiger~
+Tiger~
+The small tiger is running around here.
+~
+~
+65640 65672 50
+W 25 4 17 7 17
+0 14 8 M
+#18034
+thief black~
+Thief black~
+The black thief is looking at your inventory.
+~
+~
+204 524298 -500
+T 25 5 14 15 15
+0 16 8 M
+#18035
+bodyguard dragon guard~
+Bodyguard~
+The bodyguard of chief is guarding.
+~
+~
+8234 648 -1000
+W 39 3 11 13 14
+50000 12 8 F
+#18036
+dongulkeeper keeper~
+Dongulkeeper~
+The dongulkeeper is guarding.
+~
+~
+8234 648 -1000
+W 40 3 11 13 17
+50000 12 8 F
+#19000
+wang~
+Wang Comicky~
+멍텅하게 생긴 W.C.가 당신을 보고 있습니다.
+~
+찐따같이 생긴 W.C.가 당신을 보지만 두려워 마세요.그는 강하지 않으니깐요.
+하지만 사실은 당신 보다는 훨씬 괜찮아 보입니다. 너 이놈이 죽을라구...
+~
+10 33556632 700
+C 43 13 12 7 15
+1000 18 8 M
+#19001
+cap~
+Cap Comicky~
+상상을 초월하 생긴 C.C.가 당신을 보고 있습니다.
+~
+찐따같이 생긴 C.C.가 당신을 보니깐두려워하 세요.그는 강하지 않으니깐요.
+하지만 사실은 당신 보다는 훨씬 약해 보입니다. 너 이놈이 죽을라구...
+~
+10 33556632 700
+C 41 9 12 7 18
+1000 18 8 M
+#19002
+Mac~
+Mac Comicky~
+멍텅하게 생긴 M.C.가 당신을 보고 있습니다.
+~
+무서워서 두려움에 떨다보면 1234 를 볼수 있을런지.킬킬킬.
+~
+10 33556632 700
+C 41 9 12 7 14
+1000 14 8 M
+#19003
+id student~
+ID Student~
+An Industrial Design Student is working hard before the professor.
+~
+~
+72 0 0
+W 13 5 15 7 17
+1000 16 8 M
+#19004
+biri student~
+Biri student~
+A Biri Student plays with his Bibi friends.
+~
+~
+104 24 0
+W 18 6 12 8 8
+1000 15 8 M
+#19005
+bibi Student~
+Bibi Student~
+A Bibi student issue an command to Biri.
+~
+~
+72 24 0
+W 18 6 13 8 9
+1000 15 8 M
+#19006
+Boss Student~
+Boss Student~
+A Boss Student of Black circle sleeps before the Professor.
+~
+~
+104 0 0
+W 14 6 14 9 9
+100 14 8 M
+#19007
+takari~
+Takari~
+A Takari of Boss looks at Boss with eye asleep.
+~
+~
+72 0 0
+W 15 5 18 7 13
+100 14 8 M
+#19008
+female student~
+Female Student~
+A Female student winks you passionably.
+~
+~
+72 0 0
+C 10 10 18 11 19
+100 18 8 F
+#19009
+jokyo prof~
+Jokyo Prof~
+a Jokyo Prof teachs some boring text book.
+~
+~
+72 0 0
+W 20 5 16 7 12
+100 11 8 M
+#19010
+professor lee~
+Professor Lee~
+An Id Professor Lee teachs Id students.
+~
+~
+72 648 -1000
+W 38 5 11 13 13
+50000 15 8 M
+#19011
+auto keeper~
+Auto keeper~
+An auto keeper keeps the auto door with some sharp weapon.
+~
+~
+4170 10 0
+W 10 14 5 10 7
+2000 13 8 M
+#19012
+door keeper~
+Door keeper~
+An door keeper keeps the door.
+~
+~
+4170 10 0
+W 18 5 6 10 17
+2000 13 8 M
+#19013
+second zuzius~
+Second zuzius~
+A cute zuzius crys in the room looking for her girl friend.
+~
+~
+72 190 -1000
+W 20 4 11 18 13
+50000 16 8 M
+#19014
+takari surin~
+Takari surin~
+A sexy surin kisses zuzius passionalbly.
+~
+~
+65784 65776 0
+T 25 14 14 19 16
+2000 18 8 F
+#19015
+third zuzius~
+Third zuzius~
+A ugly zuzius grins you evily.
+You can feel some fear comes to you.
+~
+~
+72 190 -1000
+W 33 5 13 14 13
+50000 16 8 M
+#19016
+poor nimpus~
+Poor nimpus~
+You can see poor boy named nimpus.
+Some one says his IQ is lower than 2 digit.
+~
+~
+72 190 -1000
+W 33 5 13 19 13
+50000 14 8 M
+#19017
+queen designer~
+Queen Designer~
+The queen of industrial design block glares you.
+~
+~
+4138 33556632 500
+W 40 5 17 16 13
+100000 13 8 F
+#19018
+lover of id queen~
+Lover of id queen~
+He loves id queen so guarding id queen.  
+~
+~
+1572874 17827992 500
+C 38 5 11 11 17
+0 16 8 M
+#19019
+electrical queen~
+Electrical Queen~
+The Queen of Electrics guards king beside him.
+~
+~
+1572874 17827992 500
+C 38 9 10 14 13
+10000 16 8 M
+#19020
+ee student~
+EE student~
+An Electronic & Electrical Student is studying hard.
+~
+~
+72 0 0
+W 20 6 15 4 5
+1000 13 8 M
+#19021
+massmon~
+Massmon~
+You can see a mass monster which looks like a ball.
+~
+~
+65626 3260 500
+T 25 3 17 15 14
+10000 13 8 M
+#19022
+velomon~
+Velomon~
+You can see a Velomon which looks like a watch.
+~
+~
+1572874 17827992 500
+C 27 5 19 19 18
+10000 18 8 F
+#19023
+accelemon~
+Accelemon~
+You can see an Accelemon which looks like an unicorn.
+~
+~
+65626 3260 500
+T 27 3 14 18 17
+10000 18 8 F
+#19024
+super model~
+Super model~
+You are falling in love with her at first look at her.
+~
+~
+138 2236 1000
+T 26 4 16 15 17
+10000 17 8 M
+#19025
+cashmon~
+Cashmon~
+You can see cash monster which looks like an cash machine.
+~
+~
+65594 3260 500
+T 33 5 17 18 17
+1234567 18 8 F
+#19026
+chief student~
+Chief student~
+Chief looks like an poolish boy.
+~
+~
+104 0 0
+W 20 3 14 18 16
+10000 12 8 M
+#19027
+satteleton~
+Satteleton~
+You can see a body in the aura of black chips.
+~
+~
+65626 3260 1000
+T 31 5 19 8 13
+10000 11 8 M
+#19028
+controller~
+Controller~
+You can see some phase lag controller.
+~
+~
+65626 3260 0
+T 32 6 18 8 13
+10000 12 8 M
+#19029
+proffesor kim~
+Proffesor Kim~
+You can see proffesor kim who smiles you.
+~
+~
+65594 0 0
+T 35 4 12 8 19
+10000 16 8 F
+#19030
+doctor park~
+Doctor Park~
+Doctor park stands there.
+~
+~
+65594 0 0
+T 36 6 16 7 14
+10000 12 8 F
+#19031
+ph doctor~
+Ph Doctor~
+You can see a doctor like an einstein.
+~
+~
+65594 0 0
+T 37 4 16 7 14
+10000 13 8 M
+#19032
+computer~
+Computer~
+A computer keeps the key with digital eyes.
+~
+~
+90 220 0
+T 38 6 17 5 14
+1000 16 8 M
+#19033
+wave~
+Wave~
+A wave of micro looks at you.
+~
+~
+90 220 0
+T 38 4 16 19 15
+1000 18 8 M
+#19034
+phonemon~
+Phonemon~
+Phonemon is standing here~
+~
+90 220 0
+T 38 6 17 18 14
+1000 17 8 M
+#19035
+breadboard~
+Breadboard~
+A breadboard attacks you.
+~
+~
+90 220 0
+T 37 4 19 15 18
+1000 18 8 M
+#19036
+phase lag~
+Phase Lag~
+A Phase Lag kicks you and wanna your corpse.
+~
+~
+90 220 0
+T 38 6 15 17 13
+1000 13 8 M
+#19037
+partner male~
+Partner Male~
+You can see the male part of Campus Couple.
+You feel you wanna kill them.
+~
+~
+65720 220 0
+T 18 4 15 15 18
+1000 16 8 M
+#19038
+partner female~
+Partner Female~
+You can see the female part of Capus Couple.
+You feel you wanna her.
+~
+~
+65720 220 0
+T 17 6 12 15 14
+1000 16 8 F
+#19039
+Electrical king~
+Electrical King~
+The King of Electrics looks at you.
+~
+~
+4138 33556632 400
+W 41 4 15 17 15
+10000 16 8 M
+#19999
+super musashi~
+SUPER Musashi~
+SUPER Musashi is here, dancing with his samurai sword.
+~
+SUPER Musashi is getting a little tired of the nonsense around here.
+~
+9 33556480 1000
+W 43 18 18 9 19
+10000 19 8 M
+$

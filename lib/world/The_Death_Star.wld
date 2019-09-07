@@ -1,0 +1,808 @@
+#9800
+Worm hole~
+You can't feel anything in the singularity of the universe........
+~
+98 4110 5
+D0
+~
+~
+0 -1 9801
+S
+#9801
+Near the Death Star~
+You float in the void near a huge artificial globular object.
+Death Star overwhelms you with the rising terror and the energy
+of evil and darkness.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9802
+S
+#9802
+Near the Death Star~
+You float in the void near a huge artificial glubular object.
+Death Star overwhelms you with the rising terror and the energy
+of evil and darkness.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9803
+D2
+~
+~
+0 -1 9801
+S
+#9803
+Entrance of the Death Star~
+Many spaceships enter and exit the Death Star here. Some spaceships
+are forced to dock by the Imperial Navy.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9805
+D2
+~
+~
+0 -1 9802
+S
+#9804
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9808
+D1
+~
+~
+0 -1 9805
+S
+#9805
+Air buffer room~
+You entered a calm and clean room. You think you can rest here. Here is
+some air-pressure control facilities. A sign reads : Take off space
+suit after blue light turns on.
+~
+98 4110 5
+D0
+~
+~
+0 -1 9808
+D1
+~
+~
+0 -1 9806
+D2
+~
+~
+0 -1 9803
+D3
+~
+~
+0 -1 9804
+S
+#9806
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9808
+D3
+~
+~
+0 -1 9805
+S
+#9807
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9811
+D1
+~
+~
+0 -1 9808
+S
+#9808
+Main Engine room~
+You are surrounded with a vast amount of light and heat when you enter
+this room. A large power capsule emits intense light and dangerous gas
+to animate the Death Star.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9817
+D1
+~
+~
+0 -1 9812
+D2
+~
+~
+0 -1 9805
+D3
+~
+~
+0 -1 9811
+D4
+~
+~
+0 -1 9831
+D5
+~
+grate~
+1 9800 9820
+S
+#9809
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9812
+D3
+~
+~
+0 -1 9808
+S
+#9810
+Defence Control Center of the Death Star~
+The facilities of this room controls tremendous fires mounted on the
+surface of the Death Star.
+~
+98 4106 5
+D1
+~
+~
+0 -1 9811
+S
+#9811
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9814
+D1
+~
+~
+0 -1 9808
+D2
+~
+~
+0 -1 9807
+D3
+~
+~
+0 -1 9810
+S
+#9812
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9815
+D1
+~
+~
+0 -1 9813
+D2
+~
+~
+0 -1 9809
+D3
+~
+~
+0 -1 9808
+S
+#9813
+Defence Control Center of the Death Star~
+The facilities of this room controls tremendous fires mounted on the
+surface of the Death Star.
+~
+98 4106 5
+D3
+~
+~
+0 -1 9812
+S
+#9814
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D1
+~
+~
+0 -1 9808
+D2
+~
+~
+0 -1 9811
+S
+#9815
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D2
+~
+~
+0 -1 9812
+D3
+~
+~
+0 -1 9808
+S
+#9816
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D1
+~
+~
+0 -1 9817
+D2
+~
+~
+0 -1 9808
+S
+#9817
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9819
+D1
+~
+~
+0 -1 9818
+D2
+~
+~
+0 -1 9808
+D3
+~
+~
+0 -1 9816
+S
+#9818
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D2
+~
+~
+0 -1 9808
+D3
+~
+~
+0 -1 9817
+S
+#9819
+Defence Control Center of the Death Star~
+The facilities of this room controls tremendous fires mounted on the
+surface of the Death Star.
+~
+98 4106 5
+D2
+~
+~
+0 -1 9817
+S
+#9820
+Trash room~
+This large area is filled with all kinds of dirty trashes and polluted
+liquid. You hear some strange sound beneath the water.
+~
+98 4106 5
+D0
+~
+north door~
+1 9800 9821
+D1
+~
+east door~
+1 9800 9823
+D2
+~
+south door~
+1 9800 9824
+D3
+~
+west door~
+1 9800 9822
+D4
+~
+grate~
+1 9800 9808
+D5
+~
+down door~
+1 9800 9825
+S
+#9821
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D2
+~
+door~
+1 9800 9820
+S
+#9822
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D1
+~
+door~
+1 9800 9820
+S
+#9823
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D3
+~
+door~
+1 9800 9820
+S
+#9824
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+door~
+1 9800 9820
+S
+#9825
+Axis room of the Death Star~
+This room is at the spin-axis of the Death Star. Many pipes run to all
+direction to supply energy, materials and information. The office for a
+guard commander is within this room.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9826
+D1
+~
+~
+0 -1 9827
+D2
+~
+~
+0 -1 9828
+D3
+~
+~
+0 -1 9829
+D4
+~
+door~
+1 9800 9820
+D5
+~
+hatch~
+2 9800 9830
+S
+#9826
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D2
+~
+~
+0 -1 9825
+S
+#9827
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D3
+~
+~
+0 -1 9825
+S
+#9828
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9825
+S
+#9829
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D1
+~
+~
+0 -1 9825
+S
+#9830
+South Pole of the Death Star~
+This room seems to function as the defence control center of the Death
+Star. Many imperial officers control the facility to repel the
+infiltrators from the Galactic allied force.
+~
+98 4106 5
+D4
+~
+hatch~
+2 9800 9825
+S
+#9831
+Axis room of the Death Star~
+This room is at the spin-axis of the Death Star. Many pipes run to all
+direction to supply energy, materials and information. The office for a
+guard commander is within this room.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9832
+D1
+~
+~
+0 -1 9833
+D2
+~
+~
+0 -1 9834
+D3
+~
+~
+0 -1 9835
+D4
+~
+~
+0 -1 9844
+D5
+~
+~
+0 -1 9808
+S
+#9832
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9836
+D1
+~
+~
+0 -1 9837
+D2
+~
+~
+0 -1 9831
+D3
+~
+~
+0 -1 9843
+S
+#9833
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9837
+D1
+~
+~
+0 -1 9838
+D2
+~
+~
+0 -1 9839
+D3
+~
+~
+0 -1 9831
+S
+#9834
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9831
+D1
+~
+~
+0 -1 9839
+D2
+~
+~
+0 -1 9840
+D3
+~
+~
+0 -1 9841
+S
+#9835
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9843
+D1
+~
+~
+0 -1 9831
+D2
+~
+~
+0 -1 9841
+D3
+~
+~
+0 -1 9842
+S
+#9836
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D2
+~
+~
+0 -1 9832
+S
+#9837
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D2
+~
+~
+0 -1 9833
+D3
+~
+~
+0 -1 9832
+S
+#9838
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D3
+~
+~
+0 -1 9833
+S
+#9839
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9833
+D3
+~
+~
+0 -1 9834
+S
+#9840
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9834
+S
+#9841
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9835
+D1
+~
+~
+0 -1 9834
+S
+#9842
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D1
+~
+~
+0 -1 9835
+S
+#9843
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D1
+~
+~
+0 -1 9832
+D2
+~
+~
+0 -1 9835
+S
+#9844
+Axis room of the Death Star~
+This room is at the spin-axis of the Death Star. Many pipes run to all
+direction to supply energy, materials and information. The office for a
+guard commander is within this room.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9845
+D1
+~
+~
+0 -1 9846
+D2
+~
+~
+0 -1 9847
+D3
+~
+~
+0 -1 9848
+D4
+~
+~
+0 -1 9849
+D5
+~
+~
+0 -1 9831
+S
+#9845
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D2
+~
+~
+0 -1 9844
+S
+#9846
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D3
+~
+~
+0 -1 9844
+S
+#9847
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D0
+~
+~
+0 -1 9844
+S
+#9848
+Room~
+Nothing special except guards here.
+~
+98 4106 5
+D1
+~
+~
+0 -1 9844
+S
+#9849
+Security Guard room~
+This is a heavily guarded room for the safety of the dark empire. Many
+guards are forbidding arbitrary traffic.
+~
+98 4106 5
+D4
+~
+first door~
+2 9801 9850
+D5
+~
+~
+0 -1 9844
+S
+#9850
+Control Center of the Death Star~
+Enormous computers are working for the operation of the Death Star.
+Many officers and soldiers are working for computers and their admiral.
+~
+98 4106 5
+D4
+~
+second door~
+2 9802 9851
+D5
+~
+first door~
+2 9801 9849
+S
+#9851
+Sovereign room of dark emperor~
+Atmosphere of dark sovereignty presses all the residence into dooms.
+Calmness and smell of death arise from the evil throne of the dark
+emperor. A large screen shows the current situations of the war between
+the Galactic alliance and the Empire.
+~
+98 4106 5
+D5
+~
+second door~
+2 9802 9850
+S
+#99999
+$~

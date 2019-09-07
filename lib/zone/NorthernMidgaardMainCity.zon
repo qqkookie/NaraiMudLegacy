@@ -1,0 +1,192 @@
+Northern Midgaard Main City~
+3099 20 2
+*
+O 0 1000 4 3001    Sundew Machine
+O 0 1000 4 3097	   Sundew Machine of POLICE
+O 0 1001 4 3097    Altar in POLICE
+O 0 1001 4 3054    Temple Altar
+O 0 3099 5 3070    The Board
+O 0 3098 1 3071    The Mail Box
+O 0 3099 5 3071    The Board
+O 0 3099 5 3099	   The Police Board
+O 0 7999 1 3007    Slot Machine
+O 0 8000 1 3002    String Machine
+*
+D 0 3002 3 2
+D 0 3004 1 2
+*
+M 0 1000 1 3001    Perhaps the great God
+E 0 7924 1 5	   Wear 청잠바
+E 0 7925 1 6	   Wear 안경
+E 0 7926 1 7 	   Wear 청바지
+E 0 7929 1 8	   Wear 신발
+E 0 7927 1 12	   Wear 잠바
+E 0 7928 1 13	   Wear 벨트
+M 0 3152 1 3002    The Bank Examiner
+M 0 3153 1 3004    The Bank President
+M 0 3154 5 3004    The Undercover Cop
+M 0 3154 5 3004    The Undercover Cop
+M 0 3154 5 3004    The Undercover Cop
+M 0 3154 5 3004    The Undercover Cop
+M 0 3154 5 3004    The Undercover Cop
+M 0 3150 24 3003   Security Guard
+E 1 7923 2 18      bronze knee protecter
+M 0 1460 1 3003    Grandma
+G 1 1308 1
+*
+M 0 3000 1 3033    The Wizard Shop Keeper
+G 1 3050 500                Give scroll of identify 
+G 1 3051 500                Give potion of see invisible.
+G 1 3052 500                Give scroll of recall
+G 1 3053 500                Give wand of invisibility
+G 1 3137 500                Give scroll of recharge
+M 0 3150 24 3033
+*
+M 0 3003 1 3011       The weaponsmith
+G 1 3020 100
+G 1 3021 100
+G 1 3022 100
+G 1 3023 100
+G 1 3024 100
+*E 1 3022 100 16            wields a longsword
+M 0 3150 24 3011
+*
+M 0 3004 1 3020       The armourer
+G 1 3040 100
+G 1 3042 100
+G 1 3044 100
+G 1 3076 100
+G 1 3081 100
+G 1 3070 100
+G 1 3071 100
+G 1 3075 100
+G 1 3080 100
+G 1 3085 100
+G 1 3086 100
+G 1 3041 100
+G 1 3043 100
+G 1 3046 100
+G 1 7923 1
+G 1 7922 1
+*E 1 3022 100 16       wields a longsword
+M 0 3150 24 3020
+*
+M 0 3002 1 3010     The grocer
+G 1 3030 100
+G 1 3031 100
+G 1 3032 100
+G 1 3034 100
+G 1 3035 100
+*E 1 3022 100 16       wields a longsword
+M 0 3150 24 3010
+*
+M 0 3001 1 3009      The baker
+G 1 1313 500           a map
+G 1 3010 500
+G 1 3011 500
+*E 1 3022 100 16        wields a longsword
+M 0 3150 24 3009
+*
+M 0 3005 1 3008       Doris
+E 1 3022 100 16         wields a smallsword
+*
+M 0 3006 1 3049       A Captain (selling boats) at Levee
+G 1 3060 50              Give a raft to the captain
+G 1 3061 50              Give canoe to Captain
+M 0 3150 24 3049
+*
+M 0 3007 1 3050       Sailor selling stuff in the warehouse
+*
+M 0 3040 1 3007       The bartender
+G 1 3000 100
+G 1 3001 100
+*E 1 3022 100 16            wields a longsword
+*
+M 0 3042 1 3018       The Magic Users Waiter
+G 1 3005 100
+*E 1 3022 100 16            wields a longsword
+*
+M 0 3045 2 3021       A Carpenter
+E 1 1307 2 16            wields a hammer
+*
+M 0 3044 1 3027       The High School Kid
+G 1 3006 100            cheeseburger
+G 1 3007 100            large coke
+M 0 3150 24 3027
+*
+M 0 3046 1 3048       Filthy (bartender) in Grubby Inn
+G 1 3138 100
+G 1 1 100
+G 1 3003 100
+G 1 3004 100
+*E 1 3022 100 16            wields a longsword
+*
+M 0 3020 2 3019       The Magic Users Guildmaster
+*
+M 0 3024 1 3017       The Sorcerer Guard
+E 1 3022 100 16            wields a longsword
+*
+M 0 3060 10 3003      CityGuard 1
+*
+M 0 3060 10 3014      CityGuard 2
+*
+M 0 3060 10 3017      CityGuard 3
+*
+M 0 3060 10 3021      CityGuard 4
+*
+M 0 3060 10 3027      CityGuard 5
+*
+M 0 3067 10 3041      CityGuard at east gate
+E 1 3022 100 16            wields a longsword
+*
+M 0 3067 10 3040      CityGuard at west gate
+E 1 3022 100 16            wields a longsword
+*
+M 0 3148 10 3014	Unarmed Guard
+M 0 3148 10 3014	Unarmed Guard
+M 0 3148 10 3014	Unarmed Guard
+M 0 3148 10 3014	Unarmed Guard
+M 0 3148 10 3014	Unarmed Guard
+*
+M 0 3063 5 3026       A Mercenary (at Dark Alley)
+E 1 3021 100 16            wields a shortsword
+G 1 1322 10
+*
+M 0 3064 3 3007       A Happy Drunk (at Inn)
+M 0 3065 2 3044       A Beggar in poor alley
+M 0 3065 2 3048       A Beggar in Grubby Inn
+*
+M 0 3062 15 3024      The Cute Little Doggy Fido (at Poor Alley)
+M 0 3062 15 3025      The Cute Little Doggy Fido (at Common Square)
+M 0 3062 15 3016      The Cute Little Doggy Fido (at Main Street)
+M 0 3062 15 3012      The Cute Little Doggy Fido (at Main Street)
+M 0 3066 1 3026       The Cute Little Odif Yggod (at Dark Alley)
+*
+M 0 3061 5 3006       The Janitor (at Inn Entrance)
+*
+M 0 3090 1 3032       Kitten
+M 0 3091 1 3032       Puppy
+M 0 3092 1 3032       Beagle
+M 0 3093 1 3032       Rottweiler
+M 0 3094 1 3032       Wolf
+M 0 8006 1 3032       Juggernaut
+*
+D 0 3041 2 1          Force
+D 0 3090 0 1          Force
+*
+M 0 3070 1 3091        Librarian
+M 0 3071 1 3093        Throne of archmage
+G 1 6116 10
+M 0 3072 1 3093        Grand Archmage
+E 1 3090 1 5           Robe of archmage
+E 1 3091 1 17          Staff of archmage
+M 0 3072 2 3094        Internal use
+M 0 3134 7 3094       bombard
+M 0 3134 7 3094       bombard
+M 0 3134 7 3094       bombard
+M 0 3134 7 3094       bombard
+M 0 3134 7 3094       bombard
+M 0 3134 7 3094       bombard
+D 0 3054 1 1
+S
+$~

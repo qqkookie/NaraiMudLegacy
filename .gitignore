@@ -1,0 +1,48 @@
+#ignore file for Narai Mud and Unix
+i#
+# file types to ignore
+
+*.o
+*.log
+*.pid
+*.x.y
+
+# generic unix files
+
+*.tar
+*.txz
+*.zip
+
+*.core
+*.out
+*.a
+*.so
+*.tmp
+*.diff
+*.bak
+*.back
+*.[0-9]
+*.depend
+
+# directories to ignore
+
+bin/
+src/[Oo]bj/
+utils/TESTDATA
+[Tt]mp/
+log/
+
+lib/boards/
+lib/mboxes/
+lib/log/
+lib/stash/
+
+# files to ignore
+
+src/.depend
+lib/players*
+lib/stash*
+mud-narai*
+run-*
+
+# end of .gitignore

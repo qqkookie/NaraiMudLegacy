@@ -1,0 +1,197 @@
+#9400
+The Training arena entrance~
+This is the entrance to the training arena, to the south you can hear 
+the sounds of trainees fighting everything in sight, you also hear the
+occasional spell or two uttered. Something makes you think that this would
+be a great place to gain some experience and learn this great game!
+There is a SIGN here you might want to READ it.
+~
+94 12 0
+D0
+~
+~
+0 -1 3030
+D2
+~
+~
+0 -1 9405
+E
+sign~
+The sign says:
+This is the Training arena, it is for level 3 and below only. This does NOT
+mean you are  safe in  here you  CAN  die so be careful what you attack, the 
+monsters here are meant to be easy but not simple. There  ARE  some that are
+difficult and you may need  help  with them (the harder the monster the more
+XP points you get).
+                  
+                 THERE WILL BE NO PLAYER KILLING ALLOWED
+~
+S
+#9405
+The Arena~
+You have entered the training arena and something tells you that you had better
+be prepared to fight for your life!
+~
+94 512 1
+D0
+~
+~
+0 -1 9400
+D1
+~
+~
+0 -1 9410
+D2
+~
+~
+0 -1 9440
+D3
+~
+~
+0 -1 9445
+S
+#9410
+NE corner of the Arena~
+You are in the North East corner of the Arena.
+~
+94 512 1
+D2
+~
+~
+0 -1 9415
+D3
+~
+~
+0 -1 9405
+S
+#9415
+East wall of the Arena~
+You are  standing next to the East  wall of the arena. The bottom of the wall
+looks as if it has been burrowed through as there is a big hole in the bottom
+of it even  though it is not  quite big  enough to squeeze your body  through
+it is big enough to let in some unwanted visitors.
+~
+94 512 1
+D0
+~
+~
+0 -1 9410
+D2
+~
+~
+0 -1 9420
+D3
+~
+~
+0 -1 9440
+S
+#9420
+SE Corner~
+You have arrived in the south east corner of the arena. You can see what looks 
+like a slide leading up into the walls but they are to steep and slick to climb.
+Something  makes you  think  maybe you  had better not stand  here just  incase
+something big and nasty comes sliding down one of those slides.
+~
+94 512 1
+D0
+~
+~
+0 -1 9415
+D3
+~
+~
+0 -1 9425
+S
+#9425
+The far end of the Arena~
+This is the Far end of the Arena if you look to the north you can just make out
+the entrance.
+~
+94 512 1
+D0
+~
+~
+0 -1 9440
+D1
+~
+~
+0 -1 9420
+D3
+~
+~
+0 -1 9430
+S
+#9430
+The SW corner~
+This is the South West corner and it looks much the same as the South East
+corner with slides and all.
+~
+94 512 1
+D0
+~
+~
+0 -1 9435
+D1
+~
+~
+0 -1 9425
+S
+#9435
+The West wall~
+This wall looks like someone with a huge sledge hammer attacked it. There is a
+crack all the  way down it about 6 inches wide and you can hear strange sounds
+coming from within.
+~
+94 512 1
+D0
+~
+~
+0 -1 9445
+D1
+~
+~
+0 -1 9440
+D2
+~
+~
+0 -1 9430
+S
+#9440
+The middle of the Arena~
+Here is the center of the arena you can go anywhere you wish from here.
+~
+94 512 1
+D0
+~
+~
+0 -1 9405
+D1
+~
+~
+0 -1 9415
+D2
+~
+~
+0 -1 9425
+D3
+~
+~
+0 -1 9435
+S
+#9445
+The NW corner~
+Your are standing in the North West corner of the arena. There is not much here
+to interest you.
+~
+94 512 1
+D1
+~
+~
+0 -1 9405
+D2
+~
+~
+0 -1 9435
+S
+#99999
+$~

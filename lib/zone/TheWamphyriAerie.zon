@@ -1,0 +1,215 @@
+The Wamphyri Aerie~
+4330 30 2
+*
+M 0 4200 1 4326             the Lady Karen
+E 1 4200 1 16                 (wamphyri war gauntlet)
+E 1 4201 1 5                  (white leather dress)
+E 1 4228 1 17                 (key to throne)
+*
+M 0 4201 1 4326             Harry Keogh
+E 1 4202 1 16                 (silver sycthe)
+E 1 4203 1 12                 (long black coat)
+E 1 4204 1 6                  (widebrimmed black hat)
+E 1 6118 1 17	       Equip Vitalize wand to the harry 
+*
+M 0 4203 1 4325             the Dweller
+E 1 4206 1 3                  (blood talisman)
+G 1 4208 5                    (blood scroll)
+G 1 4208 5                    (blood scroll)
+*
+M 0 4204 1 4310             Dramal Doombody
+E 1 4209 1 1                  (ring of weakness)
+*
+M 0 4205 1 4317             Shaithis
+E 1 4210 2 3                  (bloodsoaked cloak)
+G 1 4207 1                    (the vacuous grimoire)
+*
+M 0 4206 1 4303             Lascula Longtooth
+E 1 4213 1 12                 (black cape)
+*
+M 0 4207 1 4298             Lesk the Glut
+E 1 4214 1 6                  (leather patch)
+E 1 4215 1 13                 (fine silk sash)
+*
+M 0 4208 1 4279             Volse Pinescu
+E 1 4216 1 10                 (spiked sleeves)
+*
+M 0 4209 1 4277             Fess Ferenc
+E 1 4217 1 11                 (warrior scale)
+*
+M 0 4210 1 4268             Menor Maimbite
+E 1 4218 1 7                  (smooth leggings)
+*
+M 0 4211 1 4265             Grigis
+G 1 4222 3                    (blood potion)
+G 1 4222 3                    (blood potion)
+G 1 4222 3                    (blood potion)
+G 1 4226 10                   (murky grey vial)
+*
+M 0 4212 1 4251             Faethor Ferenczy
+E 1 4219 1 3                  (ornate necklace)
+*
+M 0 4213 1 4253             Thibor Ferenczy
+E 1 4220 1 2                  (ring of delusion)
+*
+M 0 4214 1 4246             Janos Ferenczy
+E 1 4221 1 17                 (black urn)
+*   
+M 0 4215 1 4206             Boris Dragosani
+E 1 4223 1 9                  (white gloves)
+G 1 4226 10                   (murky grey vial)
+*
+M 0 4216 1 4212             Yulian Bodescu
+E 1 4224 1 16                 (bloody pickaxe)
+*
+M 0 4217 1 4217             Jazz Simmons
+E 1 4205 1 17                 (silver crucifix)
+*
+M 0 4218 1 4228             Lardis Lidesci
+E 1 4225 1 17                 (wooden spike)
+*
+M 0 4219 1 4231             Zek Foener
+E 1 4211 1 5                  (white jumpsuit)
+*
+M 0 4220 8 4233             warrior beast
+G 1 4226 10                   (murky grey vial)
+M 0 4220 8 4233             warrior beast
+M 0 4220 8 4233             warrior beast
+G 1 4212 2                    (warrior tusk)
+M 0 4220 8 4233             warrior beast
+M 0 4220 8 4324             warrior beast
+G 1 4226 10                   (murky grey vial)
+M 0 4220 8 4324             warrior beast
+M 0 4220 8 4324             warrior beast
+G 1 4212 2                    (warrior tusk)
+M 0 4220 8 4324             warrior beast
+*
+M 0 4221 2 4219             blader beast
+M 0 4221 2 4219             blader beast
+*
+M 0 4223 7 4225             male trog
+M 0 4223 7 4240             male trog
+M 0 4223 7 4262             male trog
+M 0 4223 7 4275             male trog
+G 1 4226 10                   (murky grey vial)
+M 0 4223 7 4296             male trog
+M 0 4223 7 4312             male trog
+M 0 4223 7 4322             male trog
+*
+M 0 4224 14 4225            female trog
+M 0 4224 14 4225            female trog
+M 0 4224 14 4240            female trog
+M 0 4224 14 4240            female trog
+G 1 4226 10                   (murky grey vial)
+M 0 4224 14 4262            female trog
+M 0 4224 14 4262            female trog
+M 0 4224 14 4275            female trog
+M 0 4224 14 4275            female trog
+M 0 4224 14 4296            female trog
+G 1 4226 10                   (murky grey vial)
+M 0 4224 14 4296            female trog
+M 0 4224 14 4312            female trog
+M 0 4224 14 4312            female trog
+M 0 4224 14 4322            female trog
+M 0 4224 14 4322            female trog
+*
+M 0 4225 4 4288             flyer beast
+M 0 4225 4 4288             flyer beast
+M 0 4225 4 4290             flyer beast
+M 0 4225 4 4290             flyer beast
+*
+M 0 4226 3 4255             siphoner beast
+M 0 4226 3 4244             siphoner beast
+M 0 4226 3 4324             siphoner beast
+*
+M 0 4227 10 4218            cartilidge beast
+M 0 4227 10 4224            cartilidge beast
+M 0 4227 10 4233            cartilidge beast
+M 0 4227 10 4257            cartilidge beast
+M 0 4227 10 4261            cartilidge beast
+M 0 4227 10 4284            cartilidge beast
+M 0 4227 10 4291            cartilidge beast
+M 0 4227 10 4301            cartilidge beast
+M 0 4227 10 4311            cartilidge beast
+M 0 4227 10 4321            cartilidge beast
+*
+M 0 4228 8 4270             wamphyri lieutenant
+M 0 4228 8 4270             wamphyri lieutenant
+G 1 4226 10                   (murky grey vial) 
+M 0 4228 8 4282             wamphyri lieutenant
+M 0 4228 8 4282             wamphyri lieutenant
+M 0 4228 8 4300             wamphyri lieutenant
+M 0 4228 8 4300             wamphyri lieutenant
+G 1 4226 10                   (murky grey vial)
+M 0 4228 8 4314             wamphyri lieutenant
+M 0 4228 8 4314             wamphyri lieutenant
+*
+M 0 4229 1 4249             old grey wolf
+G 1 4226 10                   (murky grey vial)
+*
+M 0 4230 7 4236             giant bat
+M 0 4230 7 4236             giant bat
+M 0 4230 7 4236             giant bat
+M 0 4230 7 4236             giant bat
+M 0 4230 7 4236             giant bat
+M 0 4230 7 4249             giant bat
+M 0 4230 7 4249             giant bat
+*
+O 0 4227 1 4327             treasure
+*
+D 0 4201 0 1                great doors
+D 0 4202 2 1
+*
+D 0 4205 0 1                boris' doors
+D 0 4206 2 1
+D 0 4206 1 1
+D 0 4207 3 1
+*
+D 0 4214 5 1                trapdoor to lowlevs
+D 0 4215 4 1
+*
+D 0 4232 1 1                door to vats
+D 0 4233 3 1
+*
+D 0 4243 1 1                entr to lev feren
+D 0 4246 3 1
+D 0 4246 2 1
+D 0 4245 0 1
+*
+D 0 4257 1 1                entr to lev lower
+D 0 4259 3 1
+D 0 4259 0 1
+D 0 4258 2 1
+*
+D 0 4271 1 1                entr to lev mid
+D 0 4272 3 1
+D 0 4272 2 1
+D 0 4272 1 1
+D 0 4263 3 1
+D 0 4266 0 1
+*
+D 0 4283 0 1                entr to flyer lev
+D 0 4285 2 1
+D 0 4285 1 1
+D 0 4284 3 1
+*
+D 0 4304 1 1                entr to lev high
+D 0 4306 3 1
+D 0 4306 2 1
+D 0 4306 1 1
+D 0 4315 0 1
+D 0 4301 3 1
+*
+D 0 4318 0 1                entr to upper levs
+D 0 4319 2 1
+D 0 4319 1 1
+D 0 4308 3 1
+*
+D 0 4324 4 1                entr to karens cham
+D 0 4325 5 1
+*
+D 0 4326 1 2                treasure room bh throne
+D 0 4327 3 2
+*
+S
+$~

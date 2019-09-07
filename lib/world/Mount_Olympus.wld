@@ -1,0 +1,418 @@
+#13780
+Ascent to Mt Olympus~
+The rocky path slowly disappears from sigh at you enter a huge bank of
+fog.  You stop for a minute and peer down the huge mountain in which you
+have been climbing.  The fog bank which you ignored, seems to be the
+clouds over Graecia.  What a sight!  You can see the entire lands of
+Graecia at your feet.  The trail continues to spiral upwards to a
+massive gate, and the trail disappears into the clouds below.
+~
+13780 0 4
+D4
+~
+~
+0 -1 13781
+D5
+~
+~
+0 -1 3001
+S
+#13781
+Gateway of the gods~
+You have arrived at the summit of Mount Olympus.  You are standing
+outside of the gates to the home of the Graecian gods.  A huge glowing
+gate has been left open, tempting you to enter the home of the gods.
+You can see a courtyard beyond the gates, and a small path descends
+Mount Olympus to the lands of Graecia.
+~
+13780 0 4
+D1
+~
+~
+0 -1 13782
+D5
+~
+~
+0 -1 13780
+S
+#13782
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the north and south.  There is a small chamber to the east,
+and the gateway to the gods is to the west.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13783
+D1
+~
+~
+0 -1 13784
+D2
+~
+~
+0 -1 13796
+D3
+~
+~
+0 -1 13781
+S
+#13783
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the east, west, and south.  There is a small chamber to the north.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13785
+D1
+~
+~
+0 -1 13786
+D2
+~
+~
+0 -1 13782
+D3
+~
+~
+0 -1 13792
+S
+#13784
+Zeus' Throne Room~
+You have entered the home of Zeus, ruler of all the gods in Graecia.
+The room is comfortable, but not extravagant.  The walls are constructed
+of solid electricity, and they radiate an aura of power.  There is no
+ceiling and the roof opens to a cloudy sky filled with all the
+constellations.  The most interesting part of his room is the huge table
+in the center of the room.  The table is a huge mirror which displays
+the lands of Graecia.  You can see everything happening in Graecia with
+a passing glance.
+~
+13780 4616 0
+D0
+~
+~
+0 -1 13786
+D1
+~
+~
+0 -1 13790
+D2
+~
+~
+0 -1 13794
+D3
+~
+~
+0 -1 13782
+D5
+The faint outline of a trapdoor is here~
+secret~
+2 13796 13798
+S
+#13785
+Aphrodite's Pleasure Room~
+This is the chamber of Aphrodite, the Graecian goddess of love and
+beauty.  Her room is furnished with mirror-like walls, ceiling, and
+floor.  There are hundreds, perhaps thousands, of flowers here, one of
+each type has taken root in the mirror floor.  There are also urns
+neatly stacked along the northern wall.  An erotic aroma issues from
+tiny holes holes in the urns, and your body tingles as the aroma
+penetrates your senses.
+~
+13780 4616 0
+D2
+~
+~
+0 -1 13783
+S
+#13786
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the east and west.  There are small chambers to the north
+and south.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13787
+D1
+~
+~
+0 -1 13788
+D2
+~
+~
+0 -1 13784
+D3
+~
+~
+0 -1 13783
+S
+#13787
+Hera's Vengeance Room~
+This is the room of Hera, wife of Zeus.  There seem to be no walls in
+this room, only open scenes of several events.  All of them are focussed
+on beautiful women.  In each of the scenes, the woman is being carefully
+trailed and watched by a shadowy figure.  Another scene catches your eye
+and it suddenly glows red.  Hera immediately looks at the scene and
+begins to tremble with anger.  The scene depicts Zeus and a young woman
+talking by a beautiful pond.  Suddenly Hera screams, turns towards you
+and looks as if she is going to take vengeance on YOU!
+~
+13780 4616 0
+D2
+~
+~
+0 -1 13786
+S
+#13788
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the north, south and west.  There is a small room to the
+east.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13796
+D1
+~
+~
+0 -1 13789
+D2
+~
+~
+0 -1 13790
+D3
+~
+~
+0 -1 13786
+S
+#13789
+The Sun Room~
+This room is as bright as the sun on a clear day.  Heat radiates from
+the fiery hot walls and ceiling.  The walls are glowing bright and
+occasionally you can see flames burst from the walls.  There is a
+fiery hot chariot here.  The wheels are made from fire and the seat
+looks hotter than flaming coals.  The horses are made form pure fire,
+and are awaitng the orders of their master, Apollo the Sun god.
+~
+13780 4616 0
+D3
+~
+~
+0 -1 13788
+S
+#13790
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the north and south.  There are small chambers to the east
+and west.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13788
+D1
+~
+~
+0 -1 13791
+D2
+~
+~
+0 -1 13792
+D3
+~
+~
+0 -1 13784
+S
+#13791
+Dionysus's Vinyards~
+You have entered a huge clearing in a massive vineyard.  There must by
+thousands of grape trees here, in perfect form.  There is a huge grape
+press that is carefully monitored by a group of slaves.  To your right
+you hear singing, and you see nymphs crushing grapes and making wine.
+The wine is then poured in huge kegs which flow into a huge basin in the
+middle of the chamber.  Sitting on the edge of the basin is Dionysus the
+Graecian god of wine.  He nods and gets another glass from the basin.
+~
+13780 4616 0
+D3
+~
+~
+0 -1 13790
+S
+#13792
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the north east, and west.  There is a small chamber to the
+south.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13790
+D1
+~
+~
+0 -1 13783
+D2
+~
+~
+0 -1 13793
+D3
+~
+~
+0 -1 13794
+S
+#13793
+Ares' Battlefield~
+You have arrived at the scene of a huge battle.  There are four
+different armies, one on each side, battling here.  The Graecian army is
+slowly creating havok on the battlefield under the careful guidance of
+Ares.  There are thousands of corpses here, and the trumpets from all
+four armies are sounding.  You can see hundreds of tattered banners
+scattered throughout the battlefield.  They remind you of the thousands
+that have died here.
+~
+13780 4616 0
+D0
+~
+~
+0 -1 13792
+S
+#13794
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the east and west.  There are small chambers to the north
+and south.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13784
+D1
+~
+~
+0 -1 13792
+D2
+~
+~
+0 -1 13795
+D3
+~
+~
+0 -1 13796
+S
+#13795
+Athena's Shrine~
+You have entered the humble shrine of Athena, goddess of wisdom.  The
+room is completely bare except for a stone altar in the middle of the
+room.  The walls are made of stone as well as the ceiling and floor.  On
+the altar rests a laurel wreath weaved from living leaves.  The wreath
+begins to glow as you enter the room.
+~
+13780 4616 0
+D0
+~
+~
+0 -1 13794
+S
+#13796
+Courtyard of the gods~
+You are on a crystal path leading through the garden of the gods.  The
+temperature is comfortable, and the plants are the most exotic you have
+ever seen.  There are various flowers growing gems of all sorts. The air
+is fresh and has the scent of spring.  There is also wildlife of all
+kinds here, enjoying the weather and beautiful garden.  The crystal path
+continues to the north, south, and east.  There is a small chamber to the
+west.
+~
+13780 8 0
+D0
+~
+~
+0 -1 13782
+D1
+~
+~
+0 -1 13794
+D2
+~
+~
+0 -1 13788
+D3
+~
+~
+0 -1 13797
+S
+#13797
+Hermes' Casino~
+You have entered a dark and mysterious room.  There are several figures
+crowded around hundreds of tables.  You can barely see the tables, by
+the constant sound of jingling coins reminds you that large transactions
+are present.  Occasionally, you hear a shout and see a shadowy figure
+leave a table in a hurry.  You also see a blur in the room, moving
+quickly towards you.  The blur transforms into a teenager which you
+recognize as Hermes, the god of gamblers.
+~
+13780 4616 0
+D1
+~
+~
+0 -1 13796
+S
+#13798
+Treasure Room~
+You have entered the treasure room of the Graecian gods.  There are many
+items scattered throughout the room, but you have the feeling that you
+are being watched.  You decide that is would be a good idea if you left
+in a hurry.
+~
+13780 8 0
+D4
+The faint outline of a trapdoor is here~
+secret~
+2 13796 13784
+S
+#99999
+$~

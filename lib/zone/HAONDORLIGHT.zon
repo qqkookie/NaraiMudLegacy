@@ -1,0 +1,41 @@
+HAON-DOR-LIGHT~
+6099 20 2
+* Mobiles & equipment
+M 0 6000 1 6009  John the Lumberjack
+E 1 6000 10 16     Axe Equipped (WIELD)
+E 1 6001 10 5      shirt Equipped (BODY)
+E 1 6002 10 8      boots Equipped (FEET)
+D 0 6009 0 1     Cabin door must be closed
+M 0 6007 1 6138	Jim the Lumberjack
+E 1 1306 4 16		wields a scythe
+E 1 5999 4 8		good boots
+M 0 6008 3 6013  Mouse
+M 0 6001 5 6012  Rabbit 1
+M 0 6001 5 6015         2
+M 0 6001 5 6017         3
+M 0 6001 5 6019         4
+M 0 6002 1 6022  Brown bear
+O 0 1330 2 6022    Tribe cap
+M 0 6004 1 6023  Fallow deer
+M 0 6005 3 6014  Brown fox
+M 0 6005 3 6015  Brown fox
+M 0 6005 3 6016  Brown fox
+M 0 6006 4 6023  Squirrel
+M 0 6006 4 6017
+M 0 6006 4 6016
+M 0 6006 4 6015
+M 0 6006 4 6014
+* Objects
+O 0 6003 1 6010  John's fireplace
+O 0 6004 1 6010  John's lantern
+O 0 6005 1 6010  John's wooden chest
+P 1 6007 1 6005    Coins (In chest)
+P 1 6006 1 6003  John's brass key (In fireplace)
+O 0 6013 3 6010  Water barrel
+O 0 6010 2 6023  Blackberries
+O 0 6011 3 6006  Mushroom 1
+O 0 6011 3 6013           2
+O 0 6011 3 6016           3
+O 0 6012 1 6000  The news sign
+S
+$~

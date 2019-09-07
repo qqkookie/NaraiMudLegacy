@@ -1,0 +1,92 @@
+-1 1 1 1 1 0
+No Spell~
+1 1 1 1 0 1
+Armor~
+2 1 1 1 1 1
+Teleport~
+3 1 1 1 0 1
+Bless~
+4 1 1 1 1 1
+Blindness~
+5 0 0 0 0 5
+Burning Hands~
+6 1 1 0 1 12
+Call Lightning~
+7 0 1 0 1 1
+Charm Person~
+8 0 0 0 0 3
+Chill Touch~
+9 1 1 1 0 1
+Clone~
+10 0 1 1 0 11
+Color Spray~
+11 0 0 0 0 1
+Control Weather~
+12 0 1 0 0 1
+Create Food~
+13 0 0 0 0 1
+Create Water~
+14 1 0 0 1 1
+Cure Blind~
+15 1 0 0 1 1
+Cure Critic~
+16 1 0 0 1 1
+Cure Light~
+17 1 1 0 1 1
+Curse~
+18 1 0 0 1 1
+Detect Evil~
+19 1 0 0 1 1
+Detect Invisible~
+20 1 0 0 1 1
+Detect Magic~
+21 1 1 0 0 1
+Detect Poison~
+22 1 1 1 1 10
+Dispel Evil~
+23 0 1 0 1 7
+Earthquake~
+24 0 1 0 0 1
+Enchant Weapon~
+25 1 1 1 1 13
+Energy Drain~
+26 0 1 1 0 15
+Fireball~
+27 1 0 0 1 15
+Harm~
+28 1 0 0 1 1
+Heal~
+29 1 1 1 1 1
+Invisible~
+30 0 1 1 0 9
+Lightning Bolt~
+31 0 0 0 0 1
+Locate Object~
+32 0 1 1 0 1
+Magic Missile~
+33 1 0 0 1 1
+Poison~
+34 1 1 1 1 1
+Protect from Evil~
+35 1 1 0 1 1
+Remove Curse~
+36 1 1 0 1 1
+Sanctuary~
+37 0 0 0 0 7
+Shocking Grasp~
+38 1 1 1 1 1
+Sleep~
+39 1 1 0 1 1
+Strength~
+40 0 0 0 0 1
+Summon~
+41 0 0 0 0 1
+Ventriloquate~
+42 1 1 1 1 1
+Word of Recall~
+43 1 0 0 1 1
+Remove Poison~
+44 1 0 0 1 1
+Sence Life~
+53 0 1 0 0 1
+Identify~

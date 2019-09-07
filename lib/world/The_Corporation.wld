@@ -1,0 +1,2225 @@
+#2500
+The Central Tower~
+  You are in the main hall on floor 1 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2501
+D1
+~
+~
+0 -1 2502
+D2
+~
+~
+0 -1 2503
+D3
+~
+~
+0 -1 2504
+D4
+~
+~
+0 -1 2505
+D5
+~
+~
+0 -1 2690
+S
+#2501
+A Meeting Room~
+  You are in a meeting room on floor 1 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2500
+S
+#2502
+A Modern Office~
+  You are in a modern office on floor 1 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2500
+S
+#2503
+A Storage Room~
+  You are in a storage room on floor 1 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2500
+S
+#2504
+A Large Office~
+  You are in a large office on floor 1 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2500
+S
+#2505
+The Central Tower~
+  You are in the main hall on floor 2 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2506
+D1
+~
+~
+0 -1 2507
+D2
+~
+~
+0 -1 2508
+D3
+~
+~
+0 -1 2509
+D4
+~
+~
+0 -1 2510
+D5
+~
+~
+0 -1 2500
+S
+#2506
+A Meeting Room~
+  You are in a meeting room on floor 2 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2505
+S
+#2507
+A Modern Office~
+  You are in a modern office on floor 2 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2505
+S
+#2508
+A Storage Room~
+  You are in a storage room on floor 2 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2505
+S
+#2509
+A Large Office~
+  You are in a large office on floor 2 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2505
+S
+#2510
+The Central Tower~
+  You are in the main hall on floor 3 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2511
+D1
+~
+~
+0 -1 2512
+D2
+~
+~
+0 -1 2513
+D3
+~
+~
+0 -1 2514
+D4
+~
+~
+0 -1 2515
+D5
+~
+~
+0 -1 2505
+S
+#2511
+A Meeting Room~
+  You are in a meeting room on floor 3 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2510
+S
+#2512
+A Modern Office~
+  You are in a modern office on floor 3 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2510
+S
+#2513
+A Storage Room~
+  You are in a storage room on floor 3 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2510
+S
+#2514
+A Large Office~
+  You are in a large office on floor 3 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2510
+S
+#2515
+The Central Tower~
+  You are in the main hall on floor 4 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2516
+D1
+~
+~
+0 -1 2517
+D2
+~
+~
+0 -1 2518
+D3
+~
+~
+0 -1 2519
+D4
+~
+~
+0 -1 2520
+D5
+~
+~
+0 -1 2510
+S
+#2516
+A Meeting Room~
+  You are in a meeting room on floor 4 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2515
+S
+#2517
+A Modern Office~
+  You are in a modern office on floor 4 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2515
+S
+#2518
+A Storage Room~
+  You are in a storage room on floor 4 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2515
+S
+#2519
+A Large Office~
+  You are in a large office on floor 4 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2515
+S
+#2520
+The Central Tower~
+  You are in the main hall on floor 5 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2521
+D1
+~
+~
+0 -1 2522
+D2
+~
+~
+0 -1 2523
+D3
+~
+~
+0 -1 2524
+D4
+~
+~
+0 -1 2525
+D5
+~
+~
+0 -1 2515
+S
+#2521
+A Meeting Room~
+  You are in a meeting room on floor 5 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2520
+S
+#2522
+A Modern Office~
+  You are in a modern office on floor 5 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2520
+S
+#2523
+A Storage Room~
+  You are in a storage room on floor 5 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2520
+S
+#2524
+A Large Office~
+  You are in a large office on floor 5 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2520
+S
+#2525
+The Central Tower~
+  You are in the main hall on floor 6 of a modern skyscraper.
+~
+25 4108 2
+D0
+~
+~
+0 -1 2526
+D1
+~
+~
+0 -1 2527
+D2
+~
+~
+0 -1 2528
+D3
+~
+~
+0 -1 2529
+D4
+~
+~
+0 -1 2530
+D5
+~
+~
+0 -1 2520
+S
+#2526
+A Meeting Room~
+  You are in a meeting room on floor 6 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2525
+S
+#2527
+A Modern Office~
+  You are in a modern office on floor 6 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2525
+S
+#2528
+A Storage Room~
+  You are in a storage room on floor 6 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2525
+S
+#2529
+A Large Office~
+  You are in a large office on floor 6 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2525
+S
+#2530
+The Central Tower~
+  You are in the main hall on floor 7 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2531
+D1
+~
+~
+0 -1 2532
+D2
+~
+~
+0 -1 2533
+D3
+~
+~
+0 -1 2534
+D4
+~
+~
+0 -1 2535
+D5
+~
+~
+0 -1 2525
+S
+#2531
+A Meeting Room~
+  You are in a meeting room on floor 7 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2530
+S
+#2532
+A Modern Office~
+  You are in a modern office on floor 7 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2530
+S
+#2533
+A Storage Room~
+  You are in a storage room on floor 7 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2530
+S
+#2534
+A Large Office~
+  You are in a large office on floor 7 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2530
+S
+#2535
+The Central Tower~
+  You are in the main hall on floor 8 of a modern skyscraper.
+There is a small sign here.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2536
+D1
+~
+~
+0 -1 2537
+D2
+~
+~
+0 -1 2538
+D3
+~
+~
+0 -1 2539
+D4
+~
+~
+0 -1 2540
+D5
+~
+~
+0 -1 2530
+E
+sign small~
+  Please come and see if you
+  are below than 16 level.
+          - Chemist 
+~
+S
+#2536
+A Meeting Room~
+  You are in a meeting room on floor 8 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2535
+S
+#2537
+A Modern Office~
+  You are in a modern office on floor 8 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2535
+S
+#2538
+A Laboratory~
+  You are in a modern chemical laboratory on the 8th floor of a
+modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2535
+S
+#2539
+A Large Office~
+  You are in a large office on floor 8 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2535
+S
+#2540
+The Central Tower~
+  You are in the main hall on floor 9 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2541
+D1
+~
+~
+0 -1 2542
+D2
+~
+~
+0 -1 2543
+D3
+~
+~
+0 -1 2544
+D4
+~
+~
+0 -1 2545
+D5
+~
+~
+0 -1 2535
+S
+#2541
+A Meeting Room~
+  You are in a meeting room on floor 9 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2540
+S
+#2542
+A Modern Office~
+  You are in a modern office on floor 9 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2540
+S
+#2543
+A Storage Room~
+  You are in a storage room on floor 9 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2540
+S
+#2544
+A Large Office~
+  You are in a large office on floor 9 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2540
+S
+#2545
+The Central Tower~
+  You are in the main hall on floor 10 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2546
+D1
+~
+~
+0 -1 2547
+D2
+~
+~
+0 -1 2548
+D3
+~
+~
+0 -1 2549
+D4
+~
+~
+0 -1 2550
+D5
+~
+~
+0 -1 2540
+S
+#2546
+A Meeting Room~
+  You are in a meeting room on floor 10 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2545
+S
+#2547
+A Modern Office~
+  You are in a modern office on floor 10 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2545
+S
+#2548
+A Storage Room~
+  You are in a storage room on floor 10 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2545
+S
+#2549
+A Large Office~
+  You are in a large office on floor 10 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2545
+S
+#2550
+The Central Tower~
+  You are in the main hall on floor 11 of a modern skyscraper.
+~
+25 4108 2
+D0
+~
+~
+0 -1 2551
+D1
+~
+~
+0 -1 2552
+D2
+~
+~
+0 -1 2553
+D3
+~
+~
+0 -1 2554
+D4
+~
+~
+0 -1 2555
+D5
+~
+~
+0 -1 2545
+S
+#2551
+A Meeting Room~
+  You are in a meeting room on floor 11 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2550
+S
+#2552
+A Modern Office~
+  You are in a modern office on floor 11 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2550
+S
+#2553
+A Storage Room~
+  You are in a storage room on floor 11 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2550
+S
+#2554
+A Large Office~
+  You are in a large office on floor 11 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2550
+S
+#2555
+The Central Tower~
+  You are in the main hall on floor 12 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2556
+D1
+~
+~
+0 -1 2557
+D2
+~
+~
+0 -1 2558
+D3
+~
+~
+0 -1 2559
+D4
+~
+~
+0 -1 2560
+D5
+~
+~
+0 -1 2550
+S
+#2556
+A Meeting Room~
+  You are in a meeting room on floor 12 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2555
+S
+#2557
+A Modern Office~
+  You are in a modern office on floor 12 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2555
+S
+#2558
+A Storage Room~
+  You are in a storage room on floor 12 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2555
+S
+#2559
+A Large Office~
+  You are in a large office on floor 12 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2555
+S
+#2560
+The Central Tower~
+  You are in the main hall on floor 13 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2561
+D1
+~
+~
+0 -1 2562
+D2
+~
+~
+0 -1 2563
+D3
+~
+~
+0 -1 2564
+D4
+~
+~
+0 -1 2565
+D5
+~
+~
+0 -1 2555
+S
+#2561
+A Meeting Room~
+  You are in a meeting room on floor 13 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2560
+S
+#2562
+A Modern Office~
+  You are in a modern office on floor 13 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2560
+S
+#2563
+A Storage Room~
+  You are in a storage room on floor 13 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2560
+S
+#2564
+A Large Office~
+  You are in a large office on floor 13 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2560
+S
+#2565
+The Central Tower~
+  You are in the main hall on floor 14 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2566
+D1
+~
+~
+0 -1 2567
+D2
+~
+~
+0 -1 2568
+D3
+~
+~
+0 -1 2569
+D4
+~
+~
+0 -1 2570
+D5
+~
+~
+0 -1 2560
+S
+#2566
+A Meeting Room~
+  You are in a meeting room on floor 14 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2565
+S
+#2567
+A Modern Office~
+  You are in a modern office on floor 14 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2565
+S
+#2568
+A Storage Room~
+  You are in a storage room on floor 14 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2565
+S
+#2569
+A Large Office~
+  You are in a large office on floor 14 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2565
+S
+#2570
+The Central Tower~
+  You are in the main hall on floor 15 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2571
+D1
+~
+~
+0 -1 2572
+D2
+~
+~
+0 -1 2573
+D3
+~
+~
+0 -1 2574
+D4
+~
+~
+0 -1 2575
+D5
+~
+~
+0 -1 2565
+S
+#2571
+A Meeting Room~
+  You are in a meeting room on floor 15 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2570
+S
+#2572
+A Modern Office~
+  You are in a modern office on floor 15 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2570
+S
+#2573
+A Storage Room~
+  You are in a storage room on floor 15 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2570
+S
+#2574
+A Large Office~
+  You are in a large office on floor 15 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2570
+S
+#2575
+The Central Tower~
+  You are in the main hall on floor 16 of a modern skyscraper.
+~
+25 4108 2
+D0
+~
+~
+0 -1 2576
+D1
+~
+~
+0 -1 2577
+D2
+~
+~
+0 -1 2578
+D3
+~
+~
+0 -1 2579
+D4
+~
+~
+0 -1 2580
+D5
+~
+~
+0 -1 2570
+S
+#2576
+A Meeting Room~
+  You are in a meeting room on floor 16 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2575
+S
+#2577
+A Modern Office~
+  You are in a modern office on floor 16 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2575
+S
+#2578
+A Storage Room~
+  You are in a storage room on floor 16 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2575
+S
+#2579
+A Large Office~
+  You are in a large office on floor 16 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2575
+S
+#2580
+The Central Tower~
+  You are in the main hall on floor 17 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2581
+D1
+~
+~
+0 -1 2582
+D2
+~
+~
+0 -1 2583
+D3
+~
+~
+0 -1 2584
+D4
+~
+~
+0 -1 2585
+D5
+~
+~
+0 -1 2575
+S
+#2581
+A Meeting Room~
+  You are in a meeting room on floor 17 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2580
+S
+#2582
+A Modern Office~
+  You are in a modern office on floor 17 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2580
+S
+#2583
+A Storage Room~
+  You are in a storage room on floor 17 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2580
+S
+#2584
+A Large Office~
+  You are in a large office on floor 17 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2580
+S
+#2585
+The Central Tower~
+  You are in the main hall on floor 18 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2586
+D1
+~
+~
+0 -1 2587
+D2
+~
+~
+0 -1 2588
+D3
+~
+~
+0 -1 2589
+D4
+~
+~
+0 -1 2590
+D5
+~
+~
+0 -1 2580
+S
+#2586
+A Meeting Room~
+  You are in a meeting room on floor 18 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2585
+S
+#2587
+A Modern Office~
+  You are in a modern office on floor 18 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2585
+S
+#2588
+A Storage Room~
+  You are in a storage room on floor 18 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2585
+S
+#2589
+A Large Office~
+  You are in a large office on floor 18 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2585
+S
+#2590
+The Central Tower~
+  You are in the main hall on floor 19 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2591
+D1
+~
+~
+0 -1 2592
+D2
+~
+~
+0 -1 2593
+D3
+~
+~
+0 -1 2594
+D4
+~
+~
+0 -1 2595
+D5
+~
+~
+0 -1 2585
+S
+#2591
+A Meeting Room~
+  You are in a meeting room on floor 19 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2590
+S
+#2592
+A Modern Office~
+  You are in a modern office on floor 19 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2590
+S
+#2593
+A Storage Room~
+  You are in a storage room on floor 19 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2590
+S
+#2594
+A Large Office~
+  You are in a large office on floor 19 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2590
+S
+#2595
+The Central Tower~
+  You are in the main hall on floor 20 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2596
+D1
+~
+~
+0 -1 2597
+D2
+~
+~
+0 -1 2598
+D3
+~
+~
+0 -1 2599
+D4
+~
+~
+0 -1 2600
+D5
+~
+~
+0 -1 2590
+S
+#2596
+A Meeting Room~
+  You are in a meeting room on floor 20 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2595
+S
+#2597
+A Modern Office~
+  You are in a modern office on floor 20 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2595
+S
+#2598
+A Storage Room~
+  You are in a storage room on floor 20 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2595
+S
+#2599
+A Large Office~
+  You are in a large office on floor 20 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2595
+S
+#2600
+The Central Tower~
+  You are in the main hall on floor 21 of a modern skyscraper.
+~
+25 4108 2
+D0
+~
+~
+0 -1 2601
+D1
+~
+~
+0 -1 2602
+D2
+~
+~
+0 -1 2603
+D3
+~
+~
+0 -1 2604
+D4
+~
+~
+0 -1 2605
+D5
+~
+~
+0 -1 2595
+S
+#2601
+A Meeting Room~
+  You are in a meeting room on floor 21 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2600
+S
+#2602
+A Modern Office~
+  You are in a modern office on floor 21 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2600
+S
+#2603
+A Storage Room~
+  You are in a storage room on floor 21 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2600
+S
+#2604
+A Large Office~
+  You are in a large office on floor 21 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2600
+S
+#2605
+The Central Tower~
+  You are in the main hall on floor 22 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2606
+D1
+~
+~
+0 -1 2607
+D2
+~
+~
+0 -1 2608
+D3
+~
+~
+0 -1 2609
+D4
+~
+~
+0 -1 2610
+D5
+~
+~
+0 -1 2600
+S
+#2606
+A Meeting Room~
+  You are in a meeting room on floor 22 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2605
+S
+#2607
+A Modern Office~
+  You are in a modern office on floor 22 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2605
+S
+#2608
+A Storage Room~
+  You are in a storage room on floor 22 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2605
+S
+#2609
+A Large Office~
+  You are in a large office on floor 22 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2605
+S
+#2610
+The Central Tower~
+  You are in the main hall on floor 23 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2611
+D1
+~
+~
+0 -1 2612
+D2
+~
+~
+0 -1 2613
+D3
+~
+~
+0 -1 2614
+D4
+~
+~
+0 -1 2615
+D5
+~
+~
+0 -1 2605
+S
+#2611
+A Meeting Room~
+  You are in a meeting room on floor 23 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2610
+S
+#2612
+A Modern Office~
+  You are in a modern office on floor 23 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2610
+S
+#2613
+A Storage Room~
+  You are in a storage room on floor 23 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2610
+S
+#2614
+A Large Office~
+  You are in a large office on floor 23 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2610
+S
+#2615
+The Central Tower~
+  You are in the main hall on floor 24 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2616
+D1
+~
+~
+0 -1 2617
+D2
+~
+~
+0 -1 2618
+D3
+~
+~
+0 -1 2619
+D4
+~
+~
+0 -1 2620
+D5
+~
+~
+0 -1 2610
+S
+#2616
+A Meeting Room~
+  You are in a meeting room on floor 24 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2615
+S
+#2617
+A Modern Office~
+  You are in a modern office on floor 24 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2615
+S
+#2618
+A Storage Room~
+  You are in a storage room on floor 24 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2615
+S
+#2619
+A Large Office~
+  You are in a large office on floor 24 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2615
+S
+#2620
+The Central Tower~
+  You are in the main hall on floor 25 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2621
+D1
+~
+~
+0 -1 2622
+D2
+~
+~
+0 -1 2623
+D3
+~
+~
+0 -1 2624
+D4
+~
+~
+0 -1 2625
+D5
+~
+~
+0 -1 2615
+S
+#2621
+A Meeting Room~
+  You are in a meeting room on floor 25 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2620
+S
+#2622
+A Modern Office~
+  You are in a modern office on floor 25 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2620
+S
+#2623
+A Storage Room~
+  You are in a storage room on floor 25 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2620
+S
+#2624
+A Large Office~
+  You are in a large office on floor 25 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2620
+S
+#2625
+The Central Tower~
+  You are in the main hall on floor 26 of a modern skyscraper.
+~
+25 4108 2
+D0
+~
+~
+0 -1 2626
+D1
+~
+~
+0 -1 2627
+D2
+~
+~
+0 -1 2628
+D3
+~
+~
+0 -1 2629
+D4
+~
+~
+0 -1 2630
+D5
+~
+~
+0 -1 2620
+S
+#2626
+A Meeting Room~
+  You are in a meeting room on floor 26 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2625
+S
+#2627
+A Modern Office~
+  You are in a modern office on floor 26 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2625
+S
+#2628
+A Storage Room~
+  You are in a storage room on floor 26 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2625
+S
+#2629
+A Large Office~
+  You are in a large office on floor 26 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2625
+S
+#2630
+The Central Tower~
+  You are in the main hall on floor 27 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2631
+D1
+~
+~
+0 -1 2632
+D2
+~
+~
+0 -1 2633
+D3
+~
+~
+0 -1 2634
+D4
+~
+~
+0 -1 2635
+D5
+~
+~
+0 -1 2625
+S
+#2631
+A Meeting Room~
+  You are in a meeting room on floor 27 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2630
+S
+#2632
+A Modern Office~
+  You are in a modern office on floor 27 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2630
+S
+#2633
+A Storage Room~
+  You are in a storage room on floor 27 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2630
+S
+#2634
+A Large Office~
+  You are in a large office on floor 27 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2630
+S
+#2635
+The Central Tower~
+  You are in the main hall on floor 28 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2636
+D1
+~
+~
+0 -1 2637
+D2
+~
+~
+0 -1 2638
+D3
+~
+~
+0 -1 2639
+D4
+~
+~
+0 -1 2640
+D5
+~
+~
+0 -1 2630
+S
+#2636
+A Meeting Room~
+  You are in a meeting room on floor 28 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2635
+S
+#2637
+A Modern Office~
+  You are in a modern office on floor 28 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2635
+S
+#2638
+A Storage Room~
+  You are in a storage room on floor 28 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2635
+S
+#2639
+A Large Office~
+  You are in a large office on floor 28 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2635
+S
+#2640
+The Central Tower~
+  You are in the main hall on floor 29 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2641
+D1
+~
+~
+0 -1 2642
+D2
+~
+~
+0 -1 2643
+D3
+~
+~
+0 -1 2644
+D4
+~
+~
+0 -1 2645
+D5
+~
+~
+0 -1 2635
+S
+#2641
+A Meeting Room~
+  You are in a meeting room on floor 29 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2640
+S
+#2642
+A Modern Office~
+  You are in a modern office on floor 29 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2640
+S
+#2643
+A Storage Room~
+  You are in a storage room on floor 29 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2640
+S
+#2644
+A Large Office~
+  You are in a large office on floor 29 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2640
+S
+#2645
+The Central Tower~
+  You are in the main hall on floor 30 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2646
+D1
+~
+~
+0 -1 2647
+D2
+~
+~
+0 -1 2648
+D3
+~
+~
+0 -1 2649
+D4
+~
+~
+0 -1 2650
+D5
+~
+~
+0 -1 2640
+S
+#2646
+A Meeting Room~
+  You are in a meeting room on floor 30 of a modern skyscraper.
+~
+25 4104 2
+D2
+~
+~
+0 -1 2645
+S
+#2647
+A Modern Office~
+  You are in a modern office on floor 30 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2645
+S
+#2648
+A Storage Room~
+  You are in a storage room on floor 30 of a modern skyscraper.
+~
+25 4104 2
+D0
+~
+~
+0 -1 2645
+S
+#2649
+A Large Office~
+  You are in a large office on floor 30 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2645
+S
+#2650
+The Central Tower~
+  You are in the main hall on floor 31 of a modern skyscraper.
+~
+25 4108 2
+D0
+~
+door~
+1 0 2651
+D1
+~
+~
+0 -1 2652
+D2
+~
+penthouse~
+1 0 2653
+D3
+~
+~
+0 -1 2654
+D5
+~
+~
+0 -1 2645
+S
+#2651
+The Board Room~
+  You are in the meeting room used by the board of directors.
+~
+25 4104 2
+D2
+~
+door~
+1 0 2650
+S
+#2652
+A Modern Office~
+  You are in a modern office on floor 31 of a modern skyscraper.
+~
+25 4104 2
+D3
+~
+~
+0 -1 2650
+S
+#2653
+A Penthouse Suite~
+  You are in a sumptuous penthouse suite.  There is a lot of dog hair
+on the rug.
+~
+25 6152 2
+D0
+~
+penthouse~
+1 0 2650
+D5
+~
+~
+0 -1 20000
+S
+#2654
+A Large Office~
+  You are in a large office on floor 31 of a modern skyscraper.
+~
+25 4104 2
+D1
+~
+~
+0 -1 2650
+S
+#2690
+The Ground Floor~
+  You are on the ground floor of a massive skyscraper.  The building
+is rumored to be the tallest structure in MUD history.
+~
+25 12 0
+D0
+~
+~
+0 -1 3021
+D1
+~
+~
+0 -1 2691
+D3
+~
+~
+0 -1 2692
+D4
+~
+~
+0 -1 2500
+S
+#2691
+The News Stand~
+  You are at the newsstand, ready to buy a newspaper.
+~
+25 12 0
+D3
+~
+~
+0 -1 2690
+S
+#2692
+The Polyester Place~
+  This is where they buy and sell all manner of cheap clothes.  So save
+your old polyester threads and bring it here.
+~
+25 12 0
+D1
+~
+~
+0 -1 2690
+S
+#99999
+$~

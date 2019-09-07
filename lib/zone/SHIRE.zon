@@ -1,0 +1,143 @@
+SHIRE~
+1799 25 2
+O 0 1702 1 1703		Sign
+M 0 1718 1 1705  	General Store Shopkeeper
+G 1 3032 999		bags
+G 1 6004 999		lanterns
+M 0 1720 1 1707		Blacksmith
+G 1 1305 5		Halberd
+G 1 7191 5		gold ring
+G 1 1911 10             backpack
+M 0 1704 2 1708		Nursemaids
+M 0 1704 2 1708
+M 0 1703 6 1708		Toddlers
+M 0 1703 6 1708
+M 0 1703 6 1708
+M 0 1703 6 1708
+M 0 1703 6 1708
+M 0 1703 6 1708
+M 0 1710 8 1710		Non-mobile shiriffs
+E 1 1709 3 16		Tiny dagger
+E 1 3043 110 5		Leather armour
+M 0 1710 8 1710
+E 1 3043 110 5
+M 0 1711 4 1711		Mobile shiriff
+E 1 3043 110 5
+M 0 1712 1 1711		Thain
+E 1 3022 110 16		Long sword
+E 1 1708 5 13
+M 0 1728 4 1714		Country bumpkin
+M 0 1728 4 1715		Country bumpkin
+M 0 1713 1 1716		Innkeeper - Ivy Bush
+G 1 1710 999		eggs
+G 1 3002 999		ale
+G 1 3100 999		cups
+M 0 1723 4 1716		Seasoned adventurers
+M 0 1723 4 1716
+M 0 1724 2 1716		Gossips
+M 0 1724 2 1716
+M 0 1727 7 1716		Chic urbanites
+M 0 1727 7 1716
+M 0 1727 7 1716
+M 0 1721 1 1717		Battle master
+M 0 1726 3 1717		Trainees
+E 1 3021 110 16		Small sword
+M 0 1726 3 1717
+E 1 3021 110 16
+M 0 1726 3 1717
+E 1 3021 110 16
+M 0 1710 8 1719		Non-mobile shiriffs
+E 1 1709 3 16		Tiny dagger
+E 1 3043 110 5
+M 0 1711 8 1719
+E 1 3043 110 5
+M 0 1711 4 1719		Mobile shiriff
+E 1 3043 110 5
+M 0 1719 1 1721		Grocer
+G 1 1703 999		pipeweed bread
+M 0 1715 6 1723		Mill workers
+M 0 1715 6 1723
+M 0 1715 6 1724
+M 0 1715 6 1724
+M 0 1715 6 1724
+M 0 1714 1 1724		Miller
+M 0 1715 6 1725		Mill workers
+M 0 1722 9 1727		Halfing youths
+M 0 1722 9 1727
+M 0 1722 9 1727
+M 0 1722 9 1729
+M 0 1722 9 1729
+M 0 1722 9 1729
+M 0 1722 9 1730
+M 0 1722 9 1730
+M 0 1722 9 1730
+M 0 1725 1 1728		Beauty
+M 0 1700 1 1728		Wizard
+E 1 1704 2 12		Silvery cloak
+E 1 1700 1 0		Rainbow staff
+M 0 1716 1 1736		Elven warrior
+E 1 1706 1 16		Elven bow
+E 1 3075 25 6		Bronze helmet 
+M 0 1717 1 1736		Dwarven prince
+E 1 1707 1 16		Mithril axe
+E 1 3046 11 5		Bronze breast plate
+M 0 1701 1 1737		Ring keeper
+E 1 1701 1 16		Sting
+E 1 1705 1 1		One ring
+E 1 3080 15 7		Bronze leggings
+M 0 1708 1 1738		Bull
+M 0 1706 5 1739		Pigs
+M 0 1706 5 1739
+M 0 1706 5 1739
+M 0 1706 5 1739
+M 0 1706 5 1739
+M 0 1702 1 1741		Farmer Gamgee
+M 0 1705 3 1742		Cows
+M 0 1705 3 1742
+M 0 1705 3 1742
+M 0 1709 4 1742		Horses
+M 0 1709 4 1742
+M 0 1709 4 1742
+M 0 1709 4 1742
+M 0 1707 6 1743		Chickens
+G 1 1710 110		egg
+M 0 1707 6 1743
+G 1 1710 110
+M 0 1707 6 1743
+G 1 1710 110
+M 0 1707 6 1743
+G 1 1710 110
+M 0 1707 6 1743
+G 1 1710 110
+M 0 1707 6 1743
+G 1 1710 110
+M 0 1730 1 1744		Innkeeper - Green Dragon
+G 1 1710 999		eggs
+G 1 3002 999		ale
+G 1 3100 999		tea
+M 0 1731 1 1757         receptionist - green dragon
+M 0 1723 6 1744		Seasoned adventurers
+M 0 1723 6 1744
+M 0 1723 6 1744
+M 0 1727 7 1744		Chic urbanites
+M 0 1727 7 1744
+M 0 1727 7 1744
+M 0 1727 7 1744
+M 0 1710 8 1745		Non-mobile shiriffs
+E 1 1709 3 16		Tiny daggers
+E 1 3043 110 5		Leather armour
+M 0 1711 8 1745
+E 1 3043 110 5
+M 0 1711 4 1745		Mobile shiriff
+E 1 3043 110 5
+M 0 1710 8 1753		Non-mobile shiriffs
+E 1 1709 3 16		Tiny daggers
+E 1 3043 110 5		Leather armour
+M 0 1710 8 1753
+E 1 3043 110 5
+M 0 1711 4 1753		Mobile shiriff
+E 1 3043 110 5
+M 0 1728 4 1754		Country bumpkin
+M 0 1728 4 1755		Country bumpkin
+S
+$~

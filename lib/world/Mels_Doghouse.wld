@@ -1,0 +1,53 @@
+#1301
+Mel's Dog House~
+    This is a nice little dog house, built for medium size dogs.  The floor
+is nice and soft.
+~
+13 8 0
+D3
+Wall Road.
+~
+~
+0 -1 3047
+D4
+The roof of the doghouse.
+~
+~
+0 -1 1302
+D5
+The hole under Mel's doghouse.
+~
+~
+0 -1 1303
+S
+#1302
+The Roof of Mel's Doghouse~
+    This is the roof of Mel's doghouse.  Not a lot of room up here.  The
+roof is made of cedar shingles.  They have been painted gray.  There are
+a few claw marks in the cedar.
+~
+13 8 0
+D0
+~
+window~
+1 0 2700
+D5
+Inside Mel's Doghouse.
+~
+~
+0 -1 1301
+S
+#1303
+A hole under Mel's doghouse~
+    This hole, obviously Mel's work, is pretty small.  It's also damp.
+Mel likes it down here.
+~
+13 8 0
+D4
+Inside Mel's Doghouse.
+~
+~
+0 -1 1301
+S
+#99999
+$~

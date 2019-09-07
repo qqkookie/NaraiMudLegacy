@@ -1,0 +1,61 @@
+Process' castle~
+2099 25 2
+*
+M 0 2000 30 2010 fighter
+E 1 2000 9 17 rifle
+M 0 2000 30 2012 fighter
+E 1 2000 9 17 rifle
+M 0 2000 30 2014 fighter
+E 1 2000 9 17 rifle
+M 0 2000 30 2016 fighter
+E 1 2000 9 17 rifle
+M 0 2000 30 2018 fighter
+E 1 2000 9 17 rifle
+M 0 2001 30 2014 paladin
+E 1 2000 9 17 rifle
+M 0 2001 30 2013 paladin
+E 1 2000 9 17 rifle
+M 0 2001 30 2015 paladin
+E 1 2000 9 17 rifle
+M 0 2001 30 2017 paladin
+E 1 2000 9 17 rifle
+M 0 2002 30 2018 cleric
+E 1 2000 9 17 rifle
+M 0 2002 30 2020 cleric
+E 1 2000 9 17 rifle
+M 0 2002 30 2022 cleric
+E 1 2000 9 17 rifle
+M 0 2002 30 2024 cleric
+E 1 2000 9 17 rifle
+M 0 2002 30 2026 cleric
+E 1 2000 9 17 rifle
+M 0 2002 30 2028 cleric
+E 1 2000 9 17 rifle
+M 0 2003 30 2011 mage
+E 1 2000 9 17 rifle
+M 0 2003 30 2013 mage
+E 1 2000 9 17 rifle
+M 0 2003 30 2015 mage
+M 0 2006 1 2026 1st keeper
+E 1 2091 1 17 1st key
+M 0 2004 10 2011 dragon
+M 0 2005 10 2029 thief
+*
+D 0 2000 0 1
+D 0 2030 3 1
+D 0 2038 4 2
+D 0 2040 3 1
+D 0 2045 4 2
+D 0 2050 3 1
+D 0 2051 4 2
+D 0 2054 4 2
+D 0 2060 3 1
+D 0 2062 4 2
+D 0 2070 3 1
+D 0 2073 4 2
+D 0 2080 3 1
+D 0 2081 4 2
+D 0 2090 3 1
+*
+S
+$~
