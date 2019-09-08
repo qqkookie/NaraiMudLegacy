@@ -1,5 +1,5 @@
-#ignore file for Narai Mud and Unix
-i#
+#	ignore file for Narai Mud and Unix
+#
 # file types to ignore
 
 *.o
@@ -11,24 +11,19 @@ i#
 
 *.tar
 *.txz
-*.zip
 
 *.core
 *.out
-*.a
-*.so
 *.tmp
 *.diff
-*.bak
-*.back
 *.[0-9]
 *.depend
 
 # directories to ignore
 
 bin/
+[Oo]bj/
 src/[Oo]bj/
-utils/TESTDATA
 [Tt]mp/
 log/
 
