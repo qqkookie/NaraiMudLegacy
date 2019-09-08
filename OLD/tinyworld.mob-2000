@@ -841,7 +841,7 @@ underneath its bulging eyes.
 W 14 3 12 10 9
 1000 4 8 N
 #1914
-something~
+~
 something~
 Something rushes at you.
 ~
@@ -3077,7 +3077,7 @@ Musashi is here, dancing with his samurai sword.
 Musashi is getting a little tired of the nonsense around here.
 ~
 9 33556480 1000
-W 40 8 16 9 13
+W 41 8 16 9 13
 10000 18 8 M
 #3134
 bombard~
@@ -4214,7 +4214,7 @@ C 27 6 7 3 9
 #5137
 drow matron mother~
 The Matron Mother~
-The Matron Mother of the 4th house is standing here.
+The Matron Mother of the 4nd house is standing here.
 ~
 She looks really p.o.ed!!!!
 ~
@@ -5309,7 +5309,7 @@ The sura looks very tough. he has his own skills for handling weapon.
 he won many fights.
 ~
 104 8 999
-W 33 4 7 7 7
+W 25 4 7 7 7
 50 8 8 M
 #9502
 guru~
@@ -5319,7 +5319,7 @@ A guru stands here advancing his own skills.
 The guru is training for becoming sura.
 ~
 104 8 999
-W 30 6 3 17 11
+W 20 6 3 17 11
 30 12 8 M
 #9503
 captain hook~
@@ -5356,7 +5356,7 @@ A Sura candidate is swing his shining brass golden covered double club.
 ~
 ~
 104 8 999
-W 31 6 8 9 10
+W 23 6 8 9 10
 40 9 8 M
 #9507
 loser~
@@ -5375,7 +5375,7 @@ A Zizon Sura glows with dark green aura!...he emits a faint humming sound!
 ~
 ~
 4138 128 999
-W 40 3 11 15 16
+W 35 3 11 15 16
 500 18 4 M
 #9509
 laiger~
@@ -5395,7 +5395,7 @@ A hide sura is hiding in swamp.
 he is hiding in swamp. how can you see him?
 ~
 40 1048584 999
-W 33 5 7 7 7
+W 27 5 7 7 7
 50 8 8 M
 #9511
 sand sura~
@@ -5404,7 +5404,7 @@ A hide sand sura is trying to hide in sand.
 ~
 ~
 40 1048584 999
-W 32 4 8 7 8
+W 26 4 8 7 8
 50 8 8 M
 #9512
 gatekeeper~
@@ -5490,7 +5490,7 @@ A Rainbow Sura trains here surrounded by Rainbow.
 He is surrounded by beautiful rainbow.
 ~
 42 136 1000
-W 38 7 9 5 6
+W 32 7 9 5 6
 1000 9 8 M
 #9521
 month sura~
@@ -5500,7 +5500,7 @@ A Month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 8 9 4 6
+W 32 8 9 4 6
 2000 9 8 M
 #9522
 learned sura~
@@ -5510,7 +5510,7 @@ A learned sura trains here.
 He looks very tough and learned. Don't look him..he will attack you.
 ~
 42 136 1000
-W 35 10 4 6 7
+W 32 10 4 6 7
 3000 9 8 M
 #9523
 master sura~
@@ -5520,7 +5520,7 @@ A master sura rests here.
 He is trainer of suras. he is training to become najang.
 ~
 42 136 1000
-W 39 5 5 6 9
+W 32 5 5 6 9
 4000 9 8 M
 #9524
 sura knight~
@@ -5530,7 +5530,7 @@ A Sura knight stands here.
 He is guarding Gaiot. you can see his big muscle.
 ~
 4138 136 1000
-W 37 4 9 5 9
+W 32 4 9 5 9
 1000 9 8 M
 #9525
 gaiot ruler najang~
@@ -5619,7 +5619,7 @@ A First Class Sura is training here with woman.
 He is tough tough tough guy.
 ~
 104 8 999
-W 33 5 7 6 8
+W 28 5 7 6 8
 75 9 8 M
 #9534
 maid sura~
@@ -5629,7 +5629,7 @@ A Maid Sura is decorating herself with eager.
 She is very beautiful. She is very charming.
 ~
 10 33556608 999
-M 30 4 10 13 12
+M 27 4 10 13 12
 1000 11 8 F
 #9535
 lady sura~
@@ -5639,7 +5639,7 @@ A Lady Sura is trying to make you fall in love with her.
 She is more beautiful than Maid Sura.
 ~
 10 33556608 999
-M 38 3 9 9 8
+M 33 3 9 9 8
 2000 9 8 F
 #9536
 trainer sura~
@@ -5648,7 +5648,7 @@ A Trainer Sura is training sura candidate here.
 ~
 ~
 42 136 1000
-W 34 5 9 6 7
+W 30 5 9 6 7
 100 8 8 M
 #9537
 grand gatekeeper~
@@ -5678,7 +5678,7 @@ A Red rainbow Sura trains here surrounded by red aura.
 He is surrounded by beautiful red aura.
 ~
 42 136 1000
-W 38 5 4 6 12
+W 35 5 4 6 12
 1000 8 8 M
 #9543
 orange rainbow sura~
@@ -5688,7 +5688,7 @@ A Orange rainbow Sura trains here surrounded by orange aura.
 He is surrounded by beautiful orange aura.
 ~
 42 136 1000
-W 38 6 10 5 7
+W 33 6 10 5 7
 1000 8 8 M
 #9544
 yellow rainbow sura~
@@ -5698,7 +5698,7 @@ A Yellow rainbow Sura trains here surrounded by yellow aura.
 He is surrounded by beautiful yellow aura.
 ~
 42 136 1000
-W 38 11 4 5 7
+W 33 11 4 5 7
 1000 8 8 M
 #9545
 green rainbow sura~
@@ -5708,7 +5708,7 @@ A Green rainbow Sura trains here surrounded by green aura.
 He is surrounded by beautiful green aura.
 ~
 42 136 1000
-W 38 5 4 6 10
+W 33 5 4 6 10
 1000 9 8 M
 #9546
 blue rainbow sura~
@@ -5718,7 +5718,7 @@ A Blue rainbow Sura trains here surrounded by blue aura.
 He is surrounded by beautiful blue aura.
 ~
 42 136 1000
-W 38 6 6 9 6
+W 33 6 6 9 6
 1000 9 8 M
 #9548
 violet rainbow sura~
@@ -5728,7 +5728,7 @@ A violet rainbow Sura trains here surrounded by violet aura.
 He is surrounded by beautiful violet aura.
 ~
 42 136 1000
-W 38 8 10 4 6
+W 33 8 10 4 6
 1000 9 8 M
 #9550
 january month sura~
@@ -5738,7 +5738,7 @@ A January month Sura trains here with his amethyst stone.
 He is decorated with amethyst stone.
 ~
 42 136 1000
-W 38 7 8 7 4
+W 35 7 8 7 4
 2000 8 8 M
 #9551
 february month sura~
@@ -5748,7 +5748,7 @@ A February month Sura trains here with his bloodstone.
 He is decorated with bloodstone.
 ~
 42 136 1000
-W 38 5 7 7 6
+W 35 5 7 7 6
 2000 8 8 M
 #9552
 march month sura~
@@ -5758,7 +5758,7 @@ A March month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 4 8 7 6
+W 35 4 8 7 6
 2000 8 8 M
 #9553
 april month sura~
@@ -5768,7 +5768,7 @@ A April month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 4 9 8 6
+W 35 4 9 8 6
 2000 8 8 M
 #9554
 may month sura~
@@ -5778,7 +5778,7 @@ A May month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 7 8 7 4
+W 35 7 8 7 4
 2000 8 8 M
 #9555
 june month sura~
@@ -5788,7 +5788,7 @@ A June month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 7 7 6
+W 35 5 7 7 6
 2000 8 8 M
 #9556
 july month sura~
@@ -5798,7 +5798,7 @@ A July month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 8 7 7
+W 35 5 8 7 7
 2000 9 8 M
 #9558
 september month sura~
@@ -5808,7 +5808,7 @@ A September month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 9 7 7
+W 35 5 9 7 7
 2000 9 8 M
 #9559
 october month sura~
@@ -5818,7 +5818,7 @@ A October month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 6 8 7 7
+W 35 6 8 7 7
 2000 9 8 M
 #9561
 december month sura~
@@ -5828,7 +5828,7 @@ A December month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 7 7 8
+W 35 5 7 7 8
 2000 9 8 M
 #9562
 yuria~
@@ -6314,356 +6314,6 @@ universe. His grinning at you paralyses your thought and conscience.
 42 16777384 -1000
 W 41 9 11 11 15
 100000 16 8 M
-#11101
-son ogong 손 오공 손오공~
-손오공~
-손오공(son ogong)이 즐겁게 웃으며 하늘을 쳐다보고 있습니다.
-~
-제가 삼장 법사를 모시고 천축까지 다녀온 손오공이랍니다.
-~
-1048651 50858152 800
-M 43 20 20 20 20
-1111100 20 8 M
-#11102
-storekeeper monkey 가게 주인~
-원숭이 마을 가게 주인~
-조그마한 원숭이(storekeeper)가 앉아 있습니다.
-~
-후아주 한잔 하실레요?
-~
-1048586 16777352 600
-W 38 12 12 10 17
-1000000 15 6 M
-#11103
-gorilla 고릴라~
-고릴라~
-화가난 고릴라가 가슴을 두들기며 서있습니다.
-~
-"나도 원숭이란 말야.." 라고 말합니다.
-~
-104 0 400
-W 36 16 5 7 17
-1200 16 8 M
-#11104
-monkey 원숭이~
-원숭이~
-원숭이가 바나나를 먹으며 서있습니다.
-~
-^_^
-~
-72 8 800
-W 34 13 10 10 12
-1800 11 8 M
-#11105
-wife monkey 원숭이 부인~
-원숭이 부인~
-원숭이 부인이 아기 원숭이들을 찾고 있습니다.
-~
-"밥 먹을 시간에는 밥을 먹어야지... 놀기만 하면 못 써요." 라고 말합니다.
-~
-524360 8 800
-C 33 13 9 8 7
-6500 9 8 F
-#11106
-baby monkey 아기 원숭이~
-아기 원숭이~
-아기 원숭이가 돌맹이를 주워서 던지며 놀고 있습니다.
-~
-"너 쎄니?" 라고 말합니다.
-~
-248 8 500
-W 32 6 7 8 12
-100 8 8 N
-#11111
-samjang bubsa 삼장 법사~
-삼장 법사~
-삼장 법사(samjang bubsa)가 수도를 하고 있습니다.
-~
-나무아미타불.
-~
-10 50331784 900
-C 43 20 20 14 12
-18000 14 6 M
-#11112
-mouse 쥐~
-대왕 쥐~
-거대한 쥐 한마리가 식사를 하고 있습니다.
-~
-"찍찍~~" 하고 말합니다.
-~
-42 17827978 450
-W 37 12 12 10 8
-12000 11 8 M
-#11113
-cow 소~
-대왕 소~
-거대한 소 한마리가 당신을 노려 보고 있습니다.
-~
-"음메~~" 하고 말합니다.
-~
-42 17827978 450
-W 37 14 8 10 18
-12000 13 8 M
-#11114
-tiger 범 호랑이~
-대왕 범~
-거대한 호랑이 한마리가 식사 꺼리를 찾고 있습니다.
-~
-"어흥~~" 하고 말합니다.
-~
-42 17827978 450
-W 37 11 12 10 18
-12000 14 8 M
-#11115
-rabbit 토끼~
-대왕 토끼~
-거대한 토끼 한마리가 쉬고 있습니다.
-~
-"애고고 이빨이 너무 길어졌다..." 라고 말하고 있습니다.
-~
-42 17827978 450
-W 37 12 11 15 8
-12000 10 8 M
-#11116
-dragon 용~
-대왕 용~
-거대한 용 한마리가 불을 품어 생선을 구워 먹고 있습니다.
-~
-"이것도 별미야~~" 라고 말합니다.
-~
-42 17827978 450
-W 38 10 12 12 16
-12000 12 8 M
-#11117
-snake 뱀~
-대왕 뱀~
-거대한 뱀 한마리가 자고 있습니다.
-~
-"잠자는 뱀의 피부를 건드리지 말라~~"
-~
-42 17827978 450
-W 38 11 12 10 13
-12000 12 8 M
-#11118
-horse 말~
-대왕 말~
-거대한 말이 쉬고 있습니다.
-~
-"히히잉~" 하고 말합니다.
-~
-42 17827978 450
-W 38 11 12 10 13
-12000 11 8 M
-#11119
-sheep 양~
-대왕 양~
-거대한 양이 자고 있습니다.
-~
-zzzz zzzz ZZZZZZZZZZZ
-~
-42 17827978 450
-W 38 12 12 10 8
-12000 10 8 M
-#11120
-monkey 원숭이~
-대왕 원숭이~
-거대한 원숭이 한마리가 심기가 불편한 듯 인상을 쓰고 앉아 있습니다.
-~
-"크크 쿠웩~~" 하고 말합니다.
-~
-42 17827978 450
-W 38 10 10 10 9
-12000 10 8 M
-#11121
-hen 닭~
-대왕 닭~
-거대한 닭 한마리가 무언가를 먹고 있습니다.
-~
-"꼬끼오~~" 하고 말합니다.
-~
-42 17827978 450
-W 39 10 16 10 9
-12000 10 8 M
-#11122
-dog 개~
-대왕 개~
-거대한 개 한마리가 웅크리고 앉아 있습니다.
-~
-"으르렁 멍멍, 하루 강아지가 범보다 무섭다." 하고 말합니다.
-~
-42 17827978 450
-W 39 10 10 12 15
-12000 11 8 M
-#11123
-pig 돼지~
-대왕 돼지~
-거대한 돼지가 열심히 먹고 있습니다.
-~
-"꿀꿀" 하고 말합니다.
-~
-42 17827978 450
-W 40 15 15 10 8
-12000 12 8 M
-#11126
-sa ojung 사 오정 사오정~
-사 오정~
-사오정(sa ojung)이 앉아서 밖을 보고 있습니다.
-~
-"음, 오늘도 열심히 수련을 하는 군" 하고 말합니다.
-~
-1048650 50858152 800
-T 41 16 13 13 13
-111100 13 8 M
-#11127
-ju palge 저 팔계 저팔계~
-저 팔계~
-저팔계(ju palge)가 한손에는 닭발을 한손에는 술병을 들고 먹고 마시고 있습니다.
-~
-"먹는 게 남는 거야~~" 라고 말합니다.
-~
-1048650 50858152 800
-W 41 20 8 9 20
-111100 15 8 M
-#11128
-juji~
-주지 스님~
-주지(juji) 스님이 목탁을 두들기며 염불을 외고 있습니다.
-~
-"나무아미타불" 하고 말합니다.
-~
-1048586 50333832 850
-W 41 15 14 10 13
-1100 14 6 M
-#11129
-first jangro 장로~
-제 1 장로~
-제 1 장로(first jangro)가 앉아서 고민을 하고 있습니다.
-~
-"나무아미타불" 하고 말합니다.
-~
-1572874 16777224 780
-W 40 13 12 10 13
-1100 13 6 M
-#11130
-second jangro 장로~
-제 2 장로~
-제 2 장로(second jangro)가 앉아서 고민하고 있습니다.
-~
-"나무아미타불" 하고 말합니다.
-~
-1572874 16777224 780
-W 40 13 12 8 15
-1100 13 6 M
-#11131
-third jangro 장로~
-제 3 장로~
-제 3 장로(third jangro)가 앉아서 고민하고 있습니다.
-~
-"나무아미타불" 하고 말합니다.
-~
-1572874 16777224 780
-W 39 13 12 10 13
-1100 13 6 M
-#11132
-fourth jangro 장로~
-제 4 장로~
-제 4 장로(fourth jangro)가 불상을 바라보고 있습니다.
-~
-"애고고 지겹다." 하고 말합니다.
-~
-1572875 16777224 780
-W 38 11 12 10 12
-1100 13 6 M
-#11133
-jygek dangju 지객당주 당주~
-지객당주~
-지객당주(jygek dangju)가 당신을 웃으며 반기고 있습니다.
-~
-"나무아미타불, 무슨 일이십니까?" 라고 묻습니다.
-~
-1572874 16777224 780
-W 38 14 12 10 11
-1100 13 8 M
-#11134
-geyul wonju 계율원주 원주~
-계율원주~
-무섭게 생긴 계율원주(geyul wonju)가 서 있습니다.
-~
-"나무아미타불" 하고 말합니다.
-~
-1572874 16777224 780
-W 38 11 11 12 18
-1100 15 8 M
-#11135
-janggyung gakju 장경각주 각주~
-장경각주~
-장경각주(janggyung gakju)가 앉아서 책을 보고 있습니다.
-~
-"나무아미타불" 하고 말합니다.
-~
-1572874 16777224 780
-W 38 13 12 10 12
-1100 13 6 M
-#11136
-gatekeeper~
-문지기~
-대림사의 문지기(gatekeeper)가 졸고 있습니다.
-~
-"쿨쿨"
-~
-10 16777224 540
-W 34 12 10 12 12
-1110 11 4 M
-#11137
-teacher 훈련교감 교감~
-훈련교감~
-훈련교감(teacher)이 돌아다니며 무승들의 훈련을 지도하고 있습니다.
-~
-"음, 열심히들 하는 군." 하고 말합니다.
-~
-1048648 524424 730
-W 36 11 9 12 18
-11101 13 8 M
-#11138
-musung 무승~
-무승~
-무승(musung)이 열심히 훈련을 하고 있습니다.
-~
-"으싸, 으싸." 라고 소리칩니다.
-~
-1048648 16777224 650
-W 34 12 10 11 13
-1100 12 8 M
-#11139
-sunim 스님~
-스님~
-목탁을 치며 스님(sunim)이 돌아다니고 있습니다.
-~
-"나무아미타불" 하고 말합니다.
-~
-1048648 2056 680
-W 32 13 8 9 9
-1020 10 8 M
-#11140
-gek 향화객 객~
-향화객~
-향화객(gek)이 절을 구경하고 있습니다.
-~
-"안녕하세요~" 라고 말합니다.
-~
-72 8 240
-W 30 11 6 8 12
-1203030 9 8 M
-#11141
-mirror son ogong~
-손오공 그림자~
-손오공이 즐겁게 웃으며 하늘을 쳐다보고 있습니다.
-~
-제가 삼장 법사를 모시고 천축까지 다녀온 손오공이랍니다.
-~
-1048618 50858152 800
-W 41 2 2 20 20
-100 20 8 M
 #13784
 zeus god~
 Zeus~
@@ -8514,518 +8164,4 @@ SUPER Musashi is getting a little tired of the nonsense around here.
 9 33556480 1000
 W 43 18 18 9 19
 10000 19 8 M
-#23301
-demon kaalm 악마 카암~
-악마성주(DEMON) 카암(KAALM)~
-악마성주(DEMON) 카암(KAALM)이 화가 나 있습니다.
-~
-"나는 전 세계 악의 지배자 카암이다."
-"누구도 나의 앞을 막을 수 없다."
-"..."
-~
-362 117459128 -999
-W 43 13 15 19 19
-9 19 8 M
-#23302
-statue satan 악마상~
-악마상(STATUE OF SATAN)~
-악마상(STATUE of SATAN)이 놓여 있습니다.
-~
-            _,.-----.,_
-         ,-~           ~-.
-       ,^___           ___^.
-      /~"   ~"   .   "~   "~\
-     Y  ,--._    I    _.--.  Y
-     | Y     ~-. | ,-~     Y |
-     | |        }:{        | |
-     j l       / | \       ! l
-  .-~  (__,.--" .^. "--.,__)  ~-.
- (           / / | \ \           )
-  \.____,   ~  \/"\/  ~   .____,/
-   ^.____                 ____.^
-      | |T ~\  !   !  /~ T| |
-      | |l   _ _ _ _ _   !| |
-      | l \/V V V V V V\/ j |
-      l  \ \|_|_|_|_|_|/ /  !
-       \  \[T T T T T TI/  /
-        \  `^-^-^-^-^-^'  /    "무섭지?"
-         \               /
-          \.           ,/
-            "^-.___,-^"
-
-~
-525386 67174458 -999
-C 40 5 8 8 9
-9 11 8 M
-#23303
-female saint lanessa 성녀 라네사~
-성녀(FEMALE SAINT) 라네사(LANESSA)~
-성녀(FEMALE SAINT) 라네사(LANESSA)가 조용히 누워 있습니다.
-~
-"신의 은총이 함께 하길..."
-~
-75 184 999
-W 43 2 4 4 2
-9 8 5 F
-#23304
-mirror female saint 성녀~
-성녀(FEMALE SAINT)~
-성녀(FEMALE SAINT)가 멍청히 서 있습니다.
-~
-"..."
-"..."
-"..."
-~
-75 56 850
-W 28 5 4 3 8
-9 4 8 F
-#23305
-dweller 주민~
-주민(DWELLER)~
-주민(DWELLER)이 열심히 청소를 하고 있습니다.
-~
-"마을 밖에는 무시무시한 괴물들이 우글우글 하데요..."
-"강 건너 성에 악마성주가 살고 있는데..."
-"그를 죽여야 평화가 온데요..."
-~
-72 0 600
-W 10 7 8 8 11
-5 9 8 M
-#23306
-dweller 주민~
-주민(DWELLER)~
-주민(DWELLER)이 열심히 일을 하고 있습니다.
-~
-"마법의 진은 성녀님이 만든거에요..."
-"성녀님만이 마법의 진을 나갈 수 있어요..."
-~
-72 0 600
-W 10 7 8 8 11
-5 9 8 M
-#23307
-child 아이~
-아이(CHILD)~
-아이(CHILD)가 돌맹이를 차며 놀고 있습니다.
-~
-"멋진 용사들이 나타나서 우리를 구해준다고 했어요..."
-"성녀님이 그랬거든요..."
-"물병에 종이를 넣어서 띄운 것도 성녀님이에요..."
-~
-72 0 750
-W 5 4 3 8 6
-5 4 8 M
-#23308
-child 아이~
-아이(CHILD)~
-아이(CHILD)가 돌맹이를 던지며 놀고 있습니다.
-~
-"성녀님이 바보가 되었어요..."
-"말을 못한데요..."
-"..."
-~
-72 0 750
-W 5 4 3 8 6
-5 4 8 M
-#23311
-cyclops 사이클로프스~
-사이클로프스(CYCLOPS)~
-외눈박이 거인 사이클로프스(CYCLOPS)가 두리번거리고 있습니다.
-~
-얼굴 한가운데에 있는 붉게 충혈된 눈으로 당신을 쳐다봅니다.
-
-"여기가 어딘지 알아?"
-"너, 착한 놈이지?"
-~
-360 67108920 -750
-W 38 8 4 5 19
-9 14 8 M
-#23312
-grab giant 그래브 자이언트~
-그래브 자이언트(GRAB GIANT)~
-그래브 자이언트(GRAB GIANT)가 커다란 가위손을 흔들며 서 있습니다.
-~
-'싹뚝 싹뚝' 가위질을 하며 당신을 쳐다봅니다.
-
-"내 가위 맛 좀 볼레?"
-"..."
-"쿠구르르."
-~
-362 67108920 -650
-W 35 8 5 13 19
-8 13 8 M
-#23313
-charon 캐론~
-캐론(CHARON)~
-사공 캐론(CHARON)이 다리를 막고 서 있습니다.
-~
-당신을 노려보며 통행세를 내라고 말하고 있습니다.
-
-"이곳은 지옥으로 통하는 다리야."
-"돌아가는게 좋을 걸."
-"너 같은 약한 녀석은 버티기 힘들거야... 흐."
-~
-362 100663480 -850
-W 42 6 11 9 18
-11 13 8 M
-#23314
-caveman 혈거인~
-혈거인(CAVEMAN)~
-혈거인(CAVEMAN)이 무언가를 찾고 있습니다.
-~
-"이상하네."
-"여기 어디서 잃어 버린 것 같은데..."
-"혹시 내 곤봉 본 적 없수?"
-~
-360 67108920 -750
-W 37 13 4 6 18
-8 15 8 M
-#23315
-barlog 발로그~
-발로그(BARLOG)~
-화가난 발로그(BARLOG)가 당신을 노려보고 있습니다.
-~
-"으..."
-"인간이 싫다..."
-"죽인다..."
-~
-360 83886136 -750
-W 38 9 5 9 17
-7 13 8 M
-#23316
-ant giant 거인 개미~
-거인 개미(ANT GIANT)~
-커다란 거인 개미(ANT GIANT)가 기어 다니고 있습니다.
-~
-"치크 치크..."
-~
-488 67108920 -750
-W 33 6 7 13 19
-7 18 8 M
-#23317
-ant lion 사자 개미~
-사자 개미(ANT LION)~
-커다란 사자 개미(ANT LION)가 기어 다니고 있습니다.
-~
-"추크 추크..."
-~
-488 67108920 -750
-W 33 5 6 14 18
-7 18 8 M
-#23318
-termite giant 터마이트 자이언트~
-터마이트 자이언트(TERMITE GIANT)~
-커다란 흰개미가 기어 다니고 있습니다.
-~
-"치이크 치이크..."
-~
-360 67108920 -350
-W 35 8 8 10 18
-8 17 8 M
-#23319
-chromatic dragon 크로매틱 드래곤~
-크로매틱 드래곤(CHROMATIC DRAGON)~
-크로매틱 드래곤(CHROMATIC DRAGON)이 5개의 머리를 빙글 돌리고 있습니다.
-~
-"넘 재미있다..."
-"그런데, 좀 어지러운걸..."
-"으, 심심해..."
-"조용히 좀 해 봐..."
-"..."
-~
-74090 117440696 -650
-W 43 17 13 12 17
-8 15 8 M
-#23320
-carpie dragonewt 드래곤뉴트~
-드래곤뉴트(DRAGONEWT) 카피(CARPIE)~
-사악한 드래곤뉴트(DRAGONEWT) 카피(CARPIE)가 생각에 잠겨 있습니다.
-~
-"세상에서 드래곤보다 쎈 것은 없다."
-"난 드래곤을 지배한다."
-"고로 내가 제일 쎄다... 흐흐."
-~
-491 69027896 -950
-T 43 8 15 8 13
-17 13 8 M
-#23321
-electric eel 전기 뱀장어~
-전기 뱀장어(ELECTRIC EEL)~
-파란 불빛의 꼬리를 가진 물고기가 헤엄쳐 당신에게 다가옵니다.
-~
-"찌르르르..."
-"찌르르르..."
-"찌르르르..."
-~
-362 67108920 -750
-W 39 8 7 7 19
-7 13 8 M
-#23322
-stone giant 바위 거인~
-바위 거인(STONE GIANT)~
-거대한 바위 거인(STONE GIANT)이 서 있습니다.
-~
-"오늘은 몸이 좀 무겁군..."
-"..."
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 M
-#23323
-iron golem 아이런 고렘~
-아이런 고렘(IRON GOLEM)~
-철로 만든 거대한 동상이 문을 막고 서 있습니다.
-~
-"나는야 문지기 아이런 고렘..."
-"..."
-"애구구..."
-"계속 서 있기만 하니깐 다리가 넘 아프다..."
-~
-362 100663480 -650
-W 43 14 6 6 17
-7 17 8 M
-#23324
-gray oozy 그레이 오즈~
-그레이 오즈(GRAY OOZY)~
-끈적 끈적한 액체가 구석에서 조금씩 움직이고 있습니다.
-~
-"난 슬라임(SLIME)이 아니라구..."
-"날 그런 녀석과 비교하면 곤란하지..."
-"한번 맛을 보면 알지. 나의 강력한 공격을."
-~
-16744 67108920 -750
-W 35 4 5 13 19
-8 15 8 M
-#23325
-were wolf 늑대 인간~
-늑대 인간(WERE-WOLF)~
-늑대 인간(WERE-WOLF)이 꾸부정한 허리를 펴며 운동을 하고 있습니다.
-~
-"애구구 허리야..."
-"맨날 구부리고만 다녔더니..."
-"으싸, 으싸..."
-~
-360 83886136 -650
-W 38 5 7 13 19
-7 14 8 M
-#23326
-first general baron 대장 바론~
-제1대장 바론(FIRST GENERAL BARON)~
-악마군 제1대장 바론(FIRST GENERAL BARON)이 앉아서 쉬고 있습니다.
-~
-"요즘, 녀석들이 너무 게을러진 것 같단말야..."
-"뺑뺑이를 돌려야겠군..."
-"하긴 바보같은 마을 녀석들 잡는거야 식은죽 먹기지만 말야..."
-~
-1048938 100665528 -850
-W 43 12 8 9 19
-17 17 5 M
-#23327
-second general zudra 대장 쥬드라~
-제2대장 쥬드라(SECOND GENERAL ZUDRA)~
-악마군 제2대장 쥬드라(SECOND GENERAL ZUDRA)가 명상에 빠져 있습니다.
-~
-"..."
-"^_^"
-~
-1048938 100679864 -850
-W 43 17 16 13 15
-9 13 5 M
-#23328
-third general olangenu 대장 오란게누~
-제3대장 오란게누(THIRD GENERAL OLANGENU)~
-악마군 제3대장 오란게누(THIRD GENERAL OLANGENU)가 서성이고 있습니다.
-~
-"라네사는 너무 사랑스러워..."
-"라네사는 너무 아름다워..."
-"아, 나의 사랑 라네사..."
-~
-1048938 100729016 -350
-W 43 12 13 19 18
-9 14 8 M
-#25060
-JuJiYak~
-주지약~
-주지약이 당신의 침입에 놀라며 공격합니다.
-~
-주지약이 장무기의 상처를 걱정스러운 눈빛으로 보고 있습니다.
-~
-1048938 100679864 -850
-W 43 17 16 13 15
-9 13 5 F  
-#25061
-무림지존 JangMuGi~
-지존 장무기~
-장무기가 자리에서 벌떡 일어나 당신을 공격합니다.
-~
-장무기가 막 내상을 치유하고 형형한 안광으로 당신을 노려봅니다.
-~
-362 117459128 999
-W 43 13 15 19 19
-9 19 8 M    
-#25062
-MyulJulSaTae~
-멸절사태~
-멸절사태가 애제자인 주지약을 잃어버리고 걱정하고 있습니다.
-~
-"아미파를 침입하다니."
-"용서할수 없다."
-~
-1048938 100665528 -850
-W 43 12 8 9 19
-17 17 5 F
-#25063
-JungHyunSaTae~
-정현사태~
-멸절사태의 수제자인 정현사태입니다.
-~
-~
-1048938 100729016 -350
-W 43 12 13 19 18
-9 14 8 F
-#25064
-JiSulSaTae~
-지설사태~
-멸절사태의 두번째 제자인 지설사태입니다.
-~
-~
-4138 33556632 400
-W 42 4 15 17 15
-10000 16 8 F
-#25065
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25066
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F
-#25067
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F
-#25068
-TaeSang jangro~
-아미 태상 장로~
-아미 태상장로가 아미파의 보물을 뒤로 숨기며 당신을 바라봅니다.
-~
-~
-1048586 50333832 850
-W 43 19 19 19 19
-1100 14 6 F  
-#25069
-Doctor Ami~
-아미 의사~
-아미파의 의사가 응급 처치할 준비를 하고 사태를 바라보고 있습니다.
-~
-~
-1572874 16777224 780
-W 40 13 12 10 13
-1100 13 6 F
-#25070
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25071
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25072
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25073
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25074
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F                    
-#25075
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F                    
-#25076
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F                    
-#25077
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F 
-#25078
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F      
-#25079
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F      
-#99999
 $
-~

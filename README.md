@@ -23,7 +23,7 @@ It is well reserved history of old ancestor of modern online game.
 
 There are few versions of the source.
 
-**VERSION COMMITTED NOW IS Legacy 2010 version**
+**VERSION COMMITTED NOW is merged version of Legacy 2010 and Legacy2003**
 
 ### Legacy 2003
 
