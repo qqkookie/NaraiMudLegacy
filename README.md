@@ -4,8 +4,9 @@ Narai Mud Legacy
 This is source repository of Narai text Mud.
 Narai is very old Korean text MUD, circa 1995.
 
-It is in lineage of KIT-MUD, which is precursor of
-modern Korean on-line RPG game, and direct heir of EVE MUD.
+It is in lineage of KIT-MUD, and its ancestor Diku-MUD, which is 
+precursor of modern Korean on-line RPG game.
+Narai is direct heir of EVE MUD, a version of KIT-MUD.
 
 It preserves tradition and history of old Korean text mud in the 1995 era.
 It has easy-going, anything-goes style of Korean on-line games.
@@ -23,6 +24,7 @@ It is well reserved history of old ancestor of modern online game.
 
 There are few versions of the source.
 
+
 **VERSION COMMITTED NOW is merged version of Legacy 2010 and Legacy2003**
 
 ### Legacy 2003
@@ -38,13 +40,12 @@ it can be easily ported back to BSD Unix varieties.
 
 ### Legacy 2010
 
-This version is nearly identical to 2003 version,
-with little update and bug fix.
+This version is nearly same as 2003 version, with little update and bug fix.
 It runs on modern FreeBSD Unix OS and is being played today.
 But it suffers from its old age, long neglect and poor maintenance.
 From the beginning, Narai code was written very poorly and hard to maintain. 
 For Linux machine, little Makefile editing is needed,
-due to difference between GNU make and BSD make syntax.
+due to difference between GNU `make` and BSD `make` syntax.
 
 ### Modern Legacy 2019
 
@@ -52,7 +53,7 @@ To preserve history and legacy of Korean text MUD and Narai,
 I revised it, based on Legacy 2010 version, for modern Unix
 including Linux and FreeBSD and did little code clean up and bug fix.
 It preserves same user expectation of 1995 era
-but improved for modern environment like Linux, gcc, GNU make,
+but improved for modern environment like Linux, `gcc`, GNU `make`,
 UTF-8 code and 64 bit CPU.
 
 This is on-going effort and work in progress, is in alpha stage.
@@ -60,7 +61,7 @@ This is on-going effort and work in progress, is in alpha stage.
 ### Classic 1998
 
 This is other fork of original Narai source around year 1998.
-The source code was extensively clean up and many improvements were made.
+The source code was extensively cleaned up and many improvements were made.
 It added many new features and improved quality of mud life,
 but preserves similar user experience of original Sun 3 days.
 
@@ -70,14 +71,14 @@ Not many people played it, so it become urban legend.
 
 ## Directories and contents
 
-`'src'` and `'include'` are C source code in old ANSI C.
-`'utils'` contains source code of tools and scripts
-for operation and game development.
-`'lib'` is directory where mud server actually run in, 
-containing all game data like zone, and player info and items.
-You will need `'bin'` and `'log'` directory for mud operation.
-`'OLD'` contains unused code and data like old version,
-back up, and left-overs collected here for history. 
+* `'src'` and `'include'` are source code written in old ANSI C.
+* `'utils'` contains source code of tools and scripts
+  for operation and game development.
+* `'lib'` is directory where mud server actually run in, 
+  containing all game data like zone, and player info and items.
+* You will need `'bin'` and `'log'` directory for mud operation.
+* `'OLD'` contains unused code and data like old version,
+  back up, and left-overs collected here for history. 
  
 ## Current Narai
 
