@@ -18,6 +18,8 @@
 #include "db.h"
 #include "spells.h"
 
+#include <sys/time.h>
+
 /* extern variables */
 extern char history[20][MAX_STRING_LENGTH];
 extern int his_start, his_end;
@@ -104,7 +106,23 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
 
     sprintf(buf, "%s shouts '%s'\n\r", GET_NAME(ch), argument);
     assert(his_end>=0&&his_end<20);
+    
+    /*
     sprintf(history[his_end], "%s", buf);
+		*/
+		struct tm* stt;
+		time_t tt;
+		time(&tt);
+		stt = localtime(&tt);
+
+		FILE *fp;
+		fp = fopen("lastchat", "a");
+		fprintf(fp, "%d.%02d.%02d %02d:%02d:%02d %s", stt->tm_year+1900,stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,stt->tm_sec,buf);
+		fclose(fp);
+
+		sprintf(history[his_end],"%02d.%02d %02d:%02d %s", stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,buf);
+		/* 20110117 by Moon */
+
     his_end++;
     if((his_end%20)==(his_start%20))
     {

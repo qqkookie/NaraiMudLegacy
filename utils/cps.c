@@ -326,7 +326,7 @@ int do_temp(char *str)
 		fread(&ch, sizeof(struct char_file_u), 1, fp);
 DEBUG("Name = %s\n", ch.name);
 DEBUG("\tAct = %d\n", ch.act);
-		if(ch.act & 1) ERROR("hmm.\n"); 
+		if(ch.act & 1) ERROR("hmm.\n");
 		/*
 DEBUG("\tNew Act = %d\n", ch.act);
 		fseek(fp, of, 0);
@@ -606,16 +606,33 @@ void doCommand(char *str)
 	}
 }
 
+//main(void)
+//{
+//	char str[256];
+//
+//	changed = 0;
+//	loaded = 0;
+//
+//	while(1){
+//		PROMPT;
+//		gets(str);
+//		if(!*str) continue;
+//
+//		doCommand(str);
+//	}
+//}
+
 main(void)
 {
 	char str[256];
+	FILE *fp;
 
 	changed = 0;
 	loaded = 0;
 
 	while(1){
 		PROMPT;
-		gets(str);
+		fgets(str,256,fp);
 		if(!*str) continue;
 
 		doCommand(str);

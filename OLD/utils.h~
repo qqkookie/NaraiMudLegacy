@@ -25,14 +25,12 @@ int hit_limit(struct char_data *ch);
 
 #define CAP(st)  (*(st) = UPPER(*(st)))
 
-/* Power */
-/* For Linux 1+sizeof(type), for BSD sizeof(type) */
 #define CREATE(result, type, number)  do {\
-  if (!((result) = (type *) calloc ((number), (1+sizeof(type)))))\
+  if (!((result) = (type *) calloc ((number), sizeof(type))))\
     { perror("malloc failure"); abort(); } } while(0)
-/* here same.. I added 1 */
+
 #define RECREATE(result,type,number) do {\
-  if (!((result) = (type *) realloc ((result), (sizeof(type) * (number))+1)))\
+  if (!((result) = (type *) realloc ((result), sizeof(type) * (number))))\
     { perror("realloc failure"); abort(); } } while(0)
 
 #define IS_SET(flag,bit)  ((flag) & (bit))
@@ -234,8 +232,8 @@ int hit_limit(struct char_data *ch);
 #define GET_QUEST_SOLVED(ch) (ch->quest.solved)
 
 /* skilled */
-#define GET_LEARNED(ch, sk_no)		((ch)->skills[(int)(sk_no)].learned)
-#define GET_SKILLED(ch, sk_no)		((ch)->skills[(int)(sk_no)].skilled)
+#define GET_LEARNED(ch, sk_no)		((ch)->skills[(sk_no)].learned)
+#define GET_SKILLED(ch, sk_no)		((ch)->skills[(sk_no)].skilled)
 
 /* defined in utility.c */
 void print_increased_skilled(struct char_data *ch, int sk_no);

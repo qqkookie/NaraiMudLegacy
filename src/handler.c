@@ -1106,7 +1106,7 @@ void extract_char(struct char_data *ch)
 	}
 	if (ch->desc) {
 		/* remove all affected by spell */
-		for(af = ch->affected; af; af = af->next)
+		for(af = ch->affected; af != NULL; af = af->next)
 			affect_remove(ch, af);
 		ch->desc->connected = CON_SLCT;
 		SEND_TO_Q(MENU, ch->desc);

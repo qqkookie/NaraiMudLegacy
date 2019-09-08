@@ -123,7 +123,7 @@ int get_quest(struct char_data *ch)
     263,		/* 50 */	/* 30 level */
     304,		/* 60 */	/* 32 level */
   };
-#define END_QUEST_MOBILE 538
+#define END_QUEST_MOBILE 509
   
   int low, high;
   int t;

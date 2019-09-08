@@ -1,5 +1,5 @@
 #include "structs.h"
-#include "limits.h"
+#include "limit.h"
 #include "guild_list.h"
 
 char *guild_names[] =

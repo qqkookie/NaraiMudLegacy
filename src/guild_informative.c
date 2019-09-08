@@ -17,7 +17,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
-#include "limits.h"
+#include "limit.h"
 #include "guild_list.h" /* process */
 /* extern variables */
 

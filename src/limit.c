@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "structs.h"
-#include "limits.h"
+#include "limit.h"
 #include "utils.h"
 #include "spells.h"
 #include "comm.h"
@@ -615,6 +615,7 @@ void point_update( void )
           next_thing2 = jj->next_content; /* Next in inventory */
           obj_from_obj(jj);
 	  
+	  /* keep items in PC's corpse, changed by jhpark */
 	  if((GET_ITEM_TYPE(j)==ITEM_CONTAINER) && (j->obj_flags.value[3]==2)) {
 	    if (j->in_obj)  obj_to_obj(jj,j->in_obj);
 	    else if (j->carried_by) obj_to_room(jj,j->carried_by->in_room);

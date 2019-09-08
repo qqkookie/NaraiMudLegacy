@@ -9,7 +9,7 @@ made by wdshin@eve.kaist.ac.kr
 #include "comm.h"
 #include "spells.h"
 #include "handler.h"
-#include "limits.h"
+#include "limit.h"
 #include "db.h"
 
 #include "guild_list.h"

@@ -23,11 +23,11 @@ It is well reserved history of old ancestor of modern online game.
 
 There are few versions of the source.
 
-**VERSION COMMITTED NOW IS Legacy 2003 version.**
+**VERSION COMMITTED NOW IS Legacy 2010 version**
 
 ### Legacy 2003
 
-The oldest one is version used around year 2000–2003.
+The oldest one is version used around year 2000-2003.
 It was run on MS Windows with CygWin system.
 To run it, you need CygWin DLL's,
 **"cygwin1.dll"** and **"cygcrypt-0.dll"**.
@@ -60,7 +60,7 @@ This is on-going effort and work in progress, is in alpha stage.
 ### Classic 1998
 
 This is other fork of original Narai source around year 1998.
-The source code was clean up and many improvements were made.
+The source code was extensively clean up and many improvements were made.
 It added many new features and improved quality of mud life,
 but preserves similar user experience of original Sun 3 days.
 

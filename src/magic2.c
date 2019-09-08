@@ -11,7 +11,7 @@
 #include "comm.h"
 #include "spells.h"
 #include "handler.h"
-#include "limits.h"
+#include "limit.h"
 #include "db.h"
 #include "magic_weapon.h"
 
@@ -1949,4 +1949,3 @@ void spell_clone(byte level, struct char_data *ch,
 		send_to_char("You may not clone THAT!\n\r",ch);
 	}
 }
-

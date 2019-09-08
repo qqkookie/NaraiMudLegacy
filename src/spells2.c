@@ -1475,7 +1475,12 @@ void cast_phase( byte level, struct char_data *ch, char *arg, int type,
 	case 'D': direction=5; break;
 	case 'u':
 	case 'U': direction=4; break;
-    case '\0': send_to_char("Phase to where?\n\r",ch); return;
+    /*
+    case NULL: send_to_char("Phase to where?\n\r",ch); return;
+    */
+    case 0x00: send_to_char("Phase to where?\n\r",ch); return;
+    case 0x20: send_to_char("Phase to where?\n\r",ch); return;
+    /* Compile error. by Moon */
     default : send_to_char("ashgjklasdghiaudsgthl\n\r",ch);return;
   }
   if (!world[ch->in_room].dir_option[direction]) {

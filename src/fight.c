@@ -245,6 +245,7 @@ void make_corpse(struct char_data *ch, int level)
   /* norent */
   corpse->obj_flags.extra_flags = ITEM_NORENT;
   
+  /* changed by jhpark */
   if (IS_NPC(ch))
     {
       corpse->obj_flags.timer = MAX_NPC_CORPSE_TIME;
@@ -1680,10 +1681,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
   dam = MAX(1, dam); 
   
   if (type == SKILL_BACKSTAB) {
-    if(IS_AFFECTED(ch,AFF_HIDE)) {
-      log("backstab+hide");
+    if(IS_AFFECTED(ch,AFF_HIDE))
       dam <<= 1;
-    }
     if(IS_NPC(ch)){
       dam *= backstab_mult[GET_LEVEL(ch) / 2];
     }

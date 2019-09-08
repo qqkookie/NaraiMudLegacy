@@ -29,7 +29,6 @@
 #include "interpreter.h"
 #include "handler.h"
 #include "db.h"
-#include "cygwin.h"
 
 #ifndef DFLT_DIR
 #define DFLT_DIR "lib"        /* default port */
@@ -69,7 +68,8 @@ int no_specials = 0; /* Suppress ass. of special routines */
 int boottime;
 
 /* reboot_time = 24 hour */
-u_long reboot_time = 86400;
+/* u_long reboot_time = 86400; */
+u_long reboot_time = 345600;
 
 int maxdesc, avail_descs;
 int tics = 0;        /* for extern checkpointing */
@@ -224,6 +224,7 @@ void transall(int room)
 			send_to_char(
 				"\n\r\n\r\n\r\n\rShutdown System has transferred you!\n\r\n\r",
 					pt->character);
+			send_to_all("MUD will be up in 65 seconds :p\n\r\n\r");
 			process_output(pt);
         }
     }
@@ -483,6 +484,7 @@ void zapper(void)      /* auto shutdown */
 	{
 		send_to_all("SHUTDOWN MESSAGE FROM SYSTEM!!!!!!\n\r\n\r\n\r");
 		send_to_all("Shutdown immediately!\n\r");
+		send_to_all("MUD will be up in 65 seconds :P\n\r\n\r");
 		shutdowngame=1;
 	}
 	if ( t > reboot_time && !flag )
@@ -490,6 +492,7 @@ void zapper(void)      /* auto shutdown */
 		flag = 1;
 		send_to_all("SHUTDOWN MESSAGE FROM SYSTEM!!!!!!\n\r\n\r\n\r");
 		send_to_all("Shutdown after 1 minute!\n\r");
+		send_to_all("MUD will be up in 65 seconds :P\n\r\n\r");
 	}
 }
 
@@ -1351,13 +1354,11 @@ void signal_setup(void)
   signal(SIGUSR2, shutdown_request);
   signal(SIGPIPE, SIG_IGN);
   signal(SIGALRM, logsig);
-#ifndef __CYGWIN__
   siginterrupt(SIGHUP , 1); signal(SIGHUP , hupsig);
   siginterrupt(SIGINT , 1); signal(SIGINT , hupsig);
   siginterrupt(SIGTERM, 1); signal(SIGTERM, hupsig);
 /*  siginterrupt(SIGSEGV, 1); signal(SIGSEGV, hupsig);
   siginterrupt(SIGBUS , 1); signal(SIGBUS , hupsig);*/
-#endif
 
   interval.tv_sec = 900;    /* 15 minutes */
   interval.tv_usec = 0;

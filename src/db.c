@@ -16,12 +16,10 @@
 #include "db.h"
 #include "comm.h"
 #include "handler.h"
-#include "limits.h"
+#include "limit.h"
 #include "spells.h"
 
 #include "mob_bal.c"
-
-#include "cygwin.h"
 
 #define KJHRENT      66666 /* kjh number to tell new rent format */
 #define SYPARKRENT   900176 /* sypark student id :) */
@@ -459,8 +457,6 @@ void boot_world(void)
 	      (zone ? zone_table[zone-1].top : -1)) {
 	    fprintf(stderr, "Room nr %d is below zone %d.\n",
 		    room_nr, zone);
-	    fprintf(stderr, "DEBUG: %ld, %s\n",
-		    world[room_nr].number, world[room_nr].name);
 	    exit(0);
 	  }
 	  while (world[room_nr].number > zone_table[zone].top)
@@ -841,7 +837,7 @@ void boot_zones(void)
 			}
 
 		zone_table[zon].name = check;
-		CREATE(zone_table[zon].filename,char, strlen(file_name));
+		CREATE(zone_table[zon].filename,char, strlen(file_name)); /* + 1 for Linux and no +1 for BSD? */
 		strcpy(zone_table[zon].filename,file_name);
 		fscanf(fl, " %d ", &zone_table[zon].top);
 		fscanf(fl, " %d ", &zone_table[zon].lifespan);
@@ -2681,7 +2677,7 @@ char *fread_string(FILE *fl)
 
   if (strlen(buf) > 0)
   {
-    CREATE(rslt, char, strlen(buf) + 1);
+    CREATE(rslt, char, strlen(buf)+1);
     strcpy(rslt, buf);
   }
   else

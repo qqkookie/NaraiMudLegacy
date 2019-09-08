@@ -15,7 +15,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
-#include "limits.h"
+#include "limit.h"
 
 #include "guild_list.h"
 
@@ -403,6 +403,7 @@ void do_rescue(struct char_data *ch, char *argument, int cmd)
 		return;
 	}
 
+	/* check same guild member, jhpark 	*/
 	if (victim->specials.fighting)
 	if ((!IS_NPC(victim->specials.fighting) && !IS_NPC(ch)) && (victim->specials.fighting->player.guild == ch->player.guild)){
 		act("You cannot rescue $M!", FALSE, ch, 0, victim, TO_CHAR);
@@ -563,6 +564,7 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
 	percent = ((300-GET_AC(victim)-GET_HITROLL(ch)-GET_SKILLED(ch, SKILL_PUNCH))>>4) + number(1, 101);
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 	if (percent > ch->skills[SKILL_PUNCH].learned ) {
+		INCREASE_SKILLED(ch, victim, SKILL_PUNCH);
 		send_to_char("You failed to punch him WHAT a DAMN!!!!!\n\r",ch);
 		act("$n failed to punch down $N!!!",TRUE,ch,0,victim,TO_ROOM);
 		return;

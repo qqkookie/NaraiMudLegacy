@@ -582,7 +582,8 @@ struct char_data {
   int nr;
   sh_int in_room;
   int magic_number;
-  unsigned long bank;
+//  unsigned long bank;
+	int bank;
   int life,regeneration;
 
   /* for mobile */

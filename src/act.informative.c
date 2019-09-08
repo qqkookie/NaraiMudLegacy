@@ -18,7 +18,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
-#include "limits.h"
+#include "limit.h"
 
 #include "guild_list.h" /* by process */
 
@@ -314,7 +314,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
     /* Show a character to another */
     
     if (GET_PLAYER_MAX_HIT(i) > 0)
-      percent = (100*GET_HIT(i))/GET_PLAYER_MAX_HIT(i);
+      percent = (float) GET_HIT(i) / GET_PLAYER_MAX_HIT(i) * 100;
     else
       percent = -1; /* How could MAX_HIT be < 1?? */
     

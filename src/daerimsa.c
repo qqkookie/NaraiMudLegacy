@@ -15,7 +15,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
-#include "limits.h"
+#include "limit.h"
 
 extern struct index_data *obj_index;
 extern struct room_data *world;

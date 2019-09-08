@@ -21,7 +21,7 @@ main()
 		ok = fread(&ch, sizeof(ch), 1, fp);
 		if (ok == FALSE)
 			break;
-/*		if (ch.level > 40) */
+		if (ch.level > 40)
 			printf("NAME:%s LEVEL: %d HP: %d GUILD: %d\n\r",
 				ch.name, ch.level, ch.points.max_hit, ch.guild);
 		a[ch.guild]++;	

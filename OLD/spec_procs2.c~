@@ -1474,34 +1474,25 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 	/* use meta ticket */
 	switch(obj_index[tmp_obj->item_number].virtual){
 	case 7991 : /* ticket for AC */
-	  k = GET_AC(ch);
 	  GET_AC(ch) -= number(2, 3);
 	  GET_EXP(ch) -= 250000000;
 	  if(GET_AC(ch) < -120) ch->quest.solved -= 15;
 	  else ch->quest.solved -= 7;
-	  sprintf(buf2, "Your AC changed from %d to %d!!!\r\n", k, GET_AC(ch));
-	  send_to_char(buf2, ch);
 	  break;
 	case 7992 : /* ticket for HR */
-	  k = GET_HITROLL(ch);
 	  GET_HITROLL(ch) += number(1, 2);
 	  GET_EXP(ch) -= 150000000;
 	  if(GET_HITROLL(ch) > 100) ch->quest.solved -= 10;
 	  else ch->quest.solved -= 6;
-	  sprintf(buf2, "Your HITROLL changed from %d to %d!!!\r\n", k, GET_HITROLL(ch));
-	  send_to_char(buf2, ch);
 	  break;
 	case 7993 : /* ticket for DR */
 	  /*
 	    GET_DAMROLL(ch) += number(1, 2);
 	    */
-	  k = GET_DAMROLL(ch);
 	  GET_DAMROLL(ch) ++;
 	  GET_EXP(ch) -= 250000000;
 	  if(GET_DAMROLL(ch) > 100) ch->quest.solved -= 15;
 	  else ch->quest.solved -= 8;
-	  sprintf(buf2, "You DAMROLL changed from %d to %d!!!\r\n", k, GET_DAMROLL(ch));
-	  send_to_char(buf2, ch);
 	  break;
 	default :
 	  send_to_char("I cannot understand your ticket.\n\r", ch);
@@ -1671,41 +1662,11 @@ int safe_house(struct char_data *ch, int cmd, char *arg)
   if(GET_LEVEL(ch) >= (IMO+2))
     return FALSE;
   switch (cmd) {
-//  case 25: 	/* kill */
-//  case 70:	/* hit */
-//  case 84:	/* cast Perhaps modified */
-//  case 87:	/* order */
-//  case 154:	/* backstab */
-//  case 156:	/* steal */
-//  case 157:	/* bash */
-//  case 159:	/* kick */
-//  case 172:	/* use */
-//  case 192:	/* shoot */
-//  case 207:	/* recite */
-//  case 234:	/* tornado */
-//  case 239:	/* flash */
-//  case 268:   /* disarm by chase*/
-//  case 269:   /* shouryuken by chase */
-//  case 270:   /* throw object */
-//  case 271:	/* punch */
-//  case 272:  /* assault by process*/
-//  case 280:
-//  case 281:
-//  case 282:
-//  case 283:
-//  case 284:
-//  case 287:
-//  case 288:
-//  case 289:
-//  case 290:
-//  case 292:
-//  case 293:
-//  case 298:	/* spin bird kick */
-  case 9: 	/* kill */
+  case 25: 	/* kill */
   case 70:	/* hit */
   case 84:	/* cast Perhaps modified */
   case 87:	/* order */
-  case 22:	/* backstab */
+  case 154:	/* backstab */
   case 156:	/* steal */
   case 157:	/* bash */
   case 159:	/* kick */
@@ -1713,7 +1674,7 @@ int safe_house(struct char_data *ch, int cmd, char *arg)
   case 192:	/* shoot */
   case 207:	/* recite */
   case 234:	/* tornado */
-  case 209:	/* flash */
+  case 239:	/* flash */
   case 268:   /* disarm by chase*/
   case 269:   /* shouryuken by chase */
   case 270:   /* throw object */
@@ -1731,7 +1692,6 @@ int safe_house(struct char_data *ch, int cmd, char *arg)
   case 292:
   case 293:
   case 298:	/* spin bird kick */
-/* by Moon */
     send_to_char("You cannot do that here.\n\r",ch);
     sprintf(buf,"%s attempts to misbehave here.\n\r",ch->player.name);
     send_to_room_except(buf,ch->in_room,ch);
@@ -1847,10 +1807,6 @@ int bank(struct char_data *ch, int cmd, char *arg)
         send_to_char("The banker says 'We don't make loans.'\n\r",ch);
         return(TRUE);
       }
-      if ( GET_GOLD(ch) + amt < GET_GOLD(ch) ){
-				send_to_char("Too much money! You can't afford so much money.\n\r",ch);
-				return(TRUE);
-			}
       GET_GOLD(ch)+=amt;
       ch->bank-=amt;
     }

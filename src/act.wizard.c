@@ -9,7 +9,6 @@
 #include <ctype.h>
 #include <assert.h>
 
-#include <time.h>
 #include <sys/time.h>
 #include <sys/resource.h>
 
@@ -20,7 +19,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
-#include "limits.h"
+#include "limit.h"
 
 /*   external vars  */
 
@@ -1318,9 +1317,7 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
   struct descriptor_data *i;
   struct char_data *victim;
   char buf[MAX_STRING_LENGTH];
-  char buf2[MAX_STRING_LENGTH];
   int j;
-  time_t t;
 
   extern int nochatflag;
 
@@ -1336,11 +1333,25 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
     return;
   if(strcmp(" /last",argument))
   {
-	time(&t);
-	strftime(buf2, 127, "%H:%M", localtime(&t));
-  	sprintf(buf,"[%s]%s> %s\n\r", buf2, ch->player.name, argument);
+  	sprintf(buf,"%s> %s\n\r",ch->player.name,argument);
 	assert(his_end>=0&&his_end<20);
+	
+	/*
 	sprintf(history[his_end],"%s",buf);
+	*/
+	struct tm* stt;
+	time_t tt;
+	time(&tt);
+	stt = localtime(&tt);
+
+	FILE *fp;
+	fp = fopen("lastchat", "a");
+	fprintf(fp, "%d.%02d.%02d %02d:%02d:%02d %s", stt->tm_year+1900,stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,stt->tm_sec,buf);
+	fclose(fp);
+
+	sprintf(history[his_end],"%02d.%02d %02d:%02d %s", stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,buf);
+	/* 20110117 by Moon */
+	
 	his_end++;
 	if((his_end%20)==(his_start%20))
 	{

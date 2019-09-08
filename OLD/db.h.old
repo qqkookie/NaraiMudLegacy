@@ -50,7 +50,7 @@ struct char_data *read_mobile(int nr, int type);
 /*
 #define MENU         \
 "\n\rGOOD luck to NaraiMUDDER\n\r\n\
-0) Get away from NaraiMUD.\n\r\
+0) Get away from NaraiMud.\n\r\
 1) Into the NaraiMUD.\n\r\
 2) Modify description.\n\r\
 3) Change secret key.\n\r\
@@ -60,7 +60,7 @@ struct char_data *read_mobile(int nr, int type);
 
 #define MENU         \
 "\n\rGOOD luck to NaraiMUDDER\n\r\n\
-0) Get away from NaraiMUD.\n\r\
+0) Get away from NaraiMud.\n\r\
 1) Into the NaraiMUD.\n\r\
 2) Modify description.\n\r\
 3) Change secret key.\n\r\
@@ -70,10 +70,10 @@ struct char_data *read_mobile(int nr, int type);
 
 #define GREETINGS \
 "\n\r\n\r\
-                           	NaraiMUD\n\r\n\r\
-                           A derivative of KITMUD\n\r\n\r\
+                           NaraiMUD,derived from\n\r\n\r\
+                                 KITMUD\n\r\n\r\
                              Continued from EVE\n\r\
-                         Restarted at 2010. 12. 20. .........\n\r\n\r"
+                 This MUD started 1998. 3. 3. .........\n\r\n\r"
 
 #define WELC_MESSG \
 "\n\rWelcome to the land of Kkang-PaeMUD. May your visit here be... Interesting.\

@@ -10,6 +10,7 @@ main()
 	char passwd[20];
 	long offset;
 	FILE *FL;
+	int num=0;
 
 	if( !(FL=fopen("players","r+") ) ) {
 		printf("Error open file");
@@ -25,6 +26,8 @@ main()
 
 	while(1) {
 		fread( &st , sizeof( struct char_file_u ) , 1 , FL );
+		printf("Processing #%d %s\n",num++,st.name);
+		st.name[0]=tolower(st.name[0]);
 		if(strcmp(name,st.name)==0) {
 			printf("found\n");
 

@@ -15,7 +15,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
-#include "limits.h"
+#include "limit.h"
 
 extern struct char_data *character_list;
 extern struct index_data *obj_index;
@@ -140,8 +140,10 @@ int gbisland_sea(struct char_data *ch, int cmd, char *arg)
 
 	/* cmd==2, "east" */
 	/* cmd==151, "flee" */
-	if(cmd != 2 && cmd != 151) return FALSE;
-
+	/* if(cmd != 2 && cmd != 151) return FALSE; */
+	/* cmd==112, "flee" by Moon */
+	if(cmd != 2 && cmd != 112) return FALSE;
+	
 	was_in = ch->in_room;
 
 	if(!IS_AFFECTED(ch, AFF_SNEAK)){

@@ -14,7 +14,7 @@
 #include "handler.h"
 #include "db.h"
 #include "spells.h"
-#include "limits.h"
+#include "limit.h"
 
 #include "guild_list.h" /* by process */
 /*   external vars  */
@@ -286,6 +286,7 @@ int locker_room(struct char_data *ch,int cmd,char *arg)
     return FALSE;
   }
   if ( cmd == 277 ) {/* SAVE */
+    return FALSE;
 #define COST	10000
     if(GET_GOLD(ch) < GET_LEVEL(ch)*GET_LEVEL(ch)*COST ) {
       sprintf(buf,"You need %d coins to SAVE your items.",

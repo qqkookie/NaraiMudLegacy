@@ -1,0 +1,132 @@
+#!/bin/sh
+#
+nmsBase=/narai
+
+cd $nmsBase
+
+nmspid=`cat nms.pid`
+
+if [ -f block.nms ]; then
+	exit
+fi
+
+runnms=`/bin/ps ax | grep $nmsBase/run.nms2 | wc -l`
+
+if [ ! -f run.check ]; then
+	/bin/cp -f /dev/null run.check
+fi
+
+if [ `expr $runnms \>= 4` = 1 ]; then
+	echo "====> Run.nms( by ps ) checkted at : `date +%y-%m-%d--%H:%M`"  >> run.check
+	exit
+fi
+
+for w in `/bin/ps $nmspid | grep nms2`
+do
+	if test "x$w" = "x$nmspid"; then
+		echo "====> Run.nms( by pid ) checkted at : `date +%y-%m-%d--%H:%M`"  >> run.check
+		exit
+	fi
+done
+
+if test "x$USER" != "x" ; then
+	echo "====> Run.nms is started by $USER at : `date +%y-%m-%d--%H:%M`"  >> run.check
+else
+	echo "====> Run.nms is started by CRON at : `date +%y-%m-%d--%H:%M`"  >> run.check
+fi
+
+curlog=$nmsBase/curlog
+runcount=0
+
+while [ `expr $runcount \< 1000` = 1 ]
+do
+	if [ -f block.nms ]; then
+		sleep 5
+		continue;
+	fi
+
+	if [ ! -f run.log ]; then
+		/bin/cp -f /dev/null run.log
+	fi
+
+	logfile="$nmsBase/log/`date +%y-%m-%d--%H:%M`"
+
+	if [ -f $curlog ]; then 
+		/bin/rm -f $curlog 
+	fi
+
+	#if [ -h $curlog ]; then
+	#	/bin/cp curlog log/lastlog
+	#	/bin/rm -f $curlog
+	#fi
+	if [ -h $curlog ]; then
+		/bin/rm -f $curlog
+	fi
+
+	/bin/cp -f /dev/null $logfile
+
+	/bin/ln -s $logfile $curlog
+
+	echo "Log file ==> $logfile" >> run.log
+
+	if [ -f lib/help_table.new ]; then
+		/bin/mv -f lib/help_table.new lib/help_table
+	fi
+
+	if [ -f bin/nms.new ]; then
+		echo "====> New version of MUD copied" >> run.log
+		/bin/mv -f bin/nms.new bin/nms2
+		/bin/chmod 700 bin/nms2
+	fi
+
+	for s in a b c d e f g h i j k l m n o p q r s t u v w x y z
+	do
+		stest=`/bin/ls lib/stash/$s/*.x.y 2> /dev/null|wc -l`
+		if [ $stest = 0 ]; then
+			continue;
+		fi
+
+		for i in lib/stash/$s/*.x.y
+		do
+			tmp=`/narai/nms.tmp 5002`
+			if [ ! -e $tmp.y ]; then
+				if [ ! -e $tmp ]; then
+					/bin/cp $i $tmp.y
+				fi
+			fi
+		done
+	done
+
+	echo "====> Mud restarted at : `date +%y-%m-%d--%H:%M`" >> run.log
+
+	sleep 65s
+	bin/nms2 2>> $logfile
+
+	cd $nmsBase/log
+
+    if [ -f mud.log.8 ]; then /bin/mv mud.log.8 mud.log.9; fi
+    if [ -f mud.log.7 ]; then /bin/mv mud.log.7 mud.log.8; fi
+    if [ -f mud.log.6 ]; then /bin/mv mud.log.6 mud.log.7; fi
+    if [ -f mud.log.5 ]; then /bin/mv mud.log.5 mud.log.6; fi
+    if [ -f mud.log.4 ]; then /bin/mv mud.log.4 mud.log.5; fi
+    if [ -f mud.log.3 ]; then /bin/mv mud.log.3 mud.log.4; fi
+    if [ -f mud.log.2 ]; then /bin/mv mud.log.2 mud.log.3; fi
+    if [ -f mud.log.1 ]; then /bin/mv mud.log.1 mud.log.2; fi
+    if [ -f lastlog ];   then /bin/mv lastlog mud.log.1; fi
+
+	cd $nmsBase
+
+	echo "====> Mud finished  at : `date +%y-%m-%d--%H:%M`" >> run.log
+	echo "====> Mud finished( $runcount ) with following messages..." >> run.log
+	tail -20 $logfile >> run.log
+	echo "=============================================" >> run.log
+
+	/bin/mv $logfile $nmsBase/log/lastlog
+
+#	/sbin/quota -v >> run.log
+#	echo "---------------------------------------------" >> run.log
+
+	runcount=`expr $runcount + 1`
+done
+
+echo "====> run.nms finished after $runcount loop........" >> run.check

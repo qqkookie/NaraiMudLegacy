@@ -1,5 +1,5 @@
 #include "structs.h"
-#include "limits.h"
+#include "limit.h"
 
 char *spell_wear_off_msg[] = {
   "RESERVED DB.C",

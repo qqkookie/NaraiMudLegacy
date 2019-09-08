@@ -306,7 +306,7 @@ int write_board(struct char_data *ch, struct board_data *cb, char *arg)
   while(*arg && isspace(*arg)) arg++;
   
   /* delete "board " */
-  while(*arg && !isspace(*arg)) arg++;
+  /* while(*arg && !isspace(*arg)) arg++; */ 
   while(*arg && isspace(*arg)) arg++;
   
   /* no title */
