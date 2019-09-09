@@ -1,6 +1,9 @@
 #include	<stdio.h>
+#include	<string.h>
+#include	<ctype.h>
+#include	<unistd.h>
 
-main(int argc,char *argv[])
+int main(int argc,char *argv[])
 {
 	int	i;
 	FILE	*f,*t;
@@ -8,7 +11,7 @@ main(int argc,char *argv[])
 	if(argc<2)
 	{
 		printf("usage: chstash <filename1> <filename2> ...\n");
-		return;
+		return 1;
 	}
 	for(i=1;i<argc;i++)
 	{
@@ -34,11 +37,11 @@ main(int argc,char *argv[])
 			{
 				str[strlen(str)-1] = 0;
 				fprintf(t,"%s -1 -1\n",str);
-				fprintf(t,str2);
+				fputs(str2, t);
 				fgets(str,255,f);
-				fprintf(t,str);
+				fputs(str, t);
 				fgets(str,255,f);
-				fprintf(t,str);
+				fputs(str, t);
 				fgets(str,255,f);
 				fgets(str2,255,f);
 			}

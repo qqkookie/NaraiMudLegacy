@@ -8,11 +8,15 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <sys/types.h>
-#ifndef HAVE_TERMIOS_H
-#include <termio.h>
-#else
+
+#ifdef __FreeBSD__
+#define HAVE_TERMIOS_H
 #include <termios.h>
+#else
+#include <termio.h>
+#include <crypt.h>
 #endif
+
 #include <sys/uio.h>
 #include <unistd.h>
 #include <sys/socket.h>
@@ -1078,7 +1082,7 @@ int command_interpreter(struct char_data *ch, char *argument)
 	REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
 
 	/* Find first non blank */
-	for (begin = 0 ; (*(argument + begin ) == ' ' ) ; begin++ );
+	for (begin = 0 ; argument[begin] == ' '; begin++ );
 	/* Find length of first word */
 	for (look_at = 0; ISLETTER( *(argument + begin + look_at )) ; look_at++) ;
 
@@ -1163,9 +1167,9 @@ int command_interpreter(struct char_data *ch, char *argument)
 
 void argument_interpreter(char *argument,char *first_arg,char *second_arg )
 {
-        int look_at, found, begin;
+        int look_at, /*found,*/ begin;
 
-        found = begin = 0;
+        /* found = */ begin = 0;
 
         do
         {
@@ -1226,9 +1230,9 @@ int is_number(char *str)
    primary argument, following the sub-arg                  */
 char *one_argument(char *argument, char *first_arg )
 {
-  int found, begin, look_at;
+  int /* found, */ begin, look_at;
 
-        found = begin = 0;
+        /* found = */ begin = 0;
 
         do
         {

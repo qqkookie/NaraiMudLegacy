@@ -114,7 +114,7 @@ void load_board(struct board_data *cb)
 			return;
         }
         fread(cb->head[ind], size, 1, cb->fp);
-        cb->head[ind][size] = NULL;
+        cb->head[ind][size] = NUL;
         fread(cb->writer[ind], WRITER_NAME_LEN, 1, cb->fp);
         fread(&size, sizeof(int), 1, cb->fp);
         cb->msgs[ind] = (char *)malloc(size + 1);
@@ -123,7 +123,7 @@ void load_board(struct board_data *cb)
 			return;
         }
         fread(cb->msgs[ind], size, 1, cb->fp);
-        cb->msgs[ind][size] = NULL;
+        cb->msgs[ind][size] = NUL;
     }
     fclose(cb->fp);
     return;

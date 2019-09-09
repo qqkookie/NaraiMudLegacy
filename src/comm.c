@@ -17,6 +17,7 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <string.h>
+#include <time.h>
 #include <sys/time.h>
 #include <fcntl.h>
 #include <signal.h>
@@ -32,10 +33,10 @@
 
 #ifndef DFLT_DIR
 #define DFLT_DIR "lib"        /* default port */
-#endif  DFLT_DIR
+#endif  // DFLT_DIR
 #ifndef DFLT_PORT
 #define DFLT_PORT 5001        /* default port */
-#endif  DFLT_PORT
+#endif  // DFLT_PORT
 
 #define MAX_NAME_LENGTH 15
 #define MAX_HOSTNAME 256
@@ -51,10 +52,12 @@ extern int top_of_world;            /* In db.c */
 extern struct time_info_data time_info;  /* In db.c */
 extern char help[];
 
-extern no_echo_telnet( struct descriptor_data *d );
-extern echo_telnet( struct descriptor_data *d );
-void no_echo_local(int fd);
-void weather_and_time(int mode);
+extern void no_echo_telnet( struct descriptor_data *d );
+extern void echo_telnet( struct descriptor_data *d );
+extern void no_echo_local(int fd);
+extern void weather_and_time(int mode);
+
+sigset_t __unmask;
 
 /* local globals */
 
@@ -132,7 +135,7 @@ void string_add(struct descriptor_data *d, char *str);
 void perform_violence(void);
 void stop_fighting(struct char_data *ch);
 void show_string(struct descriptor_data *d, char *input);
-void save_char(struct char_data *ch, sh_int load_room);
+void save_char(struct char_data *ch, int load_room);
 void do_assist(struct char_data *ch,char *argument,int cmd);
 
 /* *********************************************************************
@@ -144,13 +147,12 @@ int main(int argc, char **argv)
   int port;
   char buf[512];
   char *dir;
-  FILE *pidfp;
 
   close(0); close(1);
   port = DFLT_PORT;
   dir = DFLT_DIR;
-  strcpy(baddomain[0],"165.246.11.109");
-  baddoms=1;
+  // strcpy(baddomain[0],"165.246.11.109"); // In-ha univ.
+  baddoms=0;
   if (argc == 2) {
     if (!ISDIGIT(*argv[1])) {
       fprintf(stderr, "Usage: %s [ port # ]\n", argv[0]);
@@ -161,26 +163,21 @@ int main(int argc, char **argv)
     }
   }
 
-  sprintf(buf, "writing pid file");
-  log(buf);
-
-  if( pidfp = fopen( "nms.pid", "w+" ), !pidfp )
-  {
-        perror("ERROR: can't open pid file.");
+  // no more need to chdir to "lib"
+  if (chdir(dir) < 0) {
+    // perror("chdir");
+    // exit(0);
   }
-  else
-  {
-        fprintf( pidfp, "%ld\n", (long)getpid() );
-        fclose( pidfp );
+
+  srandom(boottime=time(0));
+  sprintf(buf, "mud-%d.pid", port);
+  if (access(buf, F_OK) == 0) {
+  	log("Port busy: pid file already exists.");
+	exit(port);
   }
 
   sprintf(buf, "Running game on port %d.", port);
   log(buf);
-  if (chdir(dir) < 0) {
-    perror("chdir");
-    exit(0);
-  }
-  srandom(boottime=time(0));
   run_the_game(port);
   return(0);
 }
@@ -198,6 +195,24 @@ void run_the_game(int port)
   s = init_socket(port);
 
   boot_db();
+
+  FILE *pidfp;
+  char pidfile[256];
+  sprintf(pidfile, "writing pid file: mud-%d.pid", port);
+  log(pidfile);
+
+  sprintf(pidfile, "mud-%d.pid", port);
+  pidfp = fopen( pidfile, "w+" );
+  if( !pidfp )
+  {
+	perror("ERROR: can't open pid file.");
+  }
+  else
+  {
+	fprintf( pidfp, "%ld\n", (long)getpid() );
+	fclose( pidfp );
+  }
+
   log("Entering game loop.");
   no_echo_local( s );
 
@@ -205,9 +220,11 @@ void run_the_game(int port)
   log("DOWN??????????SAVE ALL CHARS???????");
   transall(3001);
   saveallplayers();
+
   close_sockets(s);
   shutdown(s,2);
   
+  unlink(pidfile);
   log("Normal termination of game.");
 }
 
@@ -389,7 +406,7 @@ void game_loop(int s)
     for (point = descriptor_list; point; point = next_point) {
       next_point = point->next;
       xo=point;
-      if (FD_ISSET(point->descriptor, &output_set) && point->output.head)
+      if (FD_ISSET(point->descriptor, &output_set) && point->output.head) {
         if(process_output(point) < 0){
           FD_CLR(point->descriptor, &input_set);
           FD_CLR(point->descriptor, &output_set);
@@ -398,9 +415,11 @@ void game_loop(int s)
              move_stashfile(point->character->player.name);
           }
           close_socket(point);
-        } else
+        } 
+        else
           point->prompt_mode = 1;
-     }
+      }
+    }
     /* give the people some prompts */
     ++xoclock;
     if(xoclock == MAXOCLOCK) xoclock=0;
@@ -417,7 +436,7 @@ void game_loop(int s)
       if (point->prompt_mode) {
         if (point->str)
           write_to_descriptor(point->descriptor, "] ");
-        else if (!point->connected)
+        else if (!point->connected) {
           if (point->showstr_point)
             write_to_descriptor(point->descriptor,
               "*** Press return ***");
@@ -436,6 +455,7 @@ void game_loop(int s)
 				do_assist(point->character,"",0);
 			} */
           }
+        }
         point->prompt_mode = 0;
       }
     }
@@ -496,6 +516,7 @@ void zapper(void)      /* auto shutdown */
 	}
 }
 
+/*
 #define KAIST "143.248."
 #define POSTECH "141.223."
 #define HANA "128.134."
@@ -536,6 +557,7 @@ int more_than_20(struct descriptor_data *d)
   if(nooff>MAX_FOREIGN) return 1;
   else return 0;
 }
+*/
 
 extern char *connected_types[];
 
@@ -549,47 +571,55 @@ void record_player_number()
   t=time(0)+32400;        /* 86400 is a day */
   tod = (t%3600);
   if( tod > 3500 ){
-  line[0]=0;
-  for (d=descriptor_list;d;d=d->next) {
-    ++m;
-    if (d->original){
-      sprintf(line+strlen(line),"%3d%2d:",d->descriptor,
-          d->original->specials.timer);
-      sprintf(line+strlen(line), "%-14s%2d ",
-        GET_NAME(d->original),GET_LEVEL(d->original));
-    } else if (d->character){
-      sprintf(line+strlen(line),"%3d%2d:",d->descriptor,
-          d->character->specials.timer);
-      sprintf(line+strlen(line), "%-14s%2d ",
-        (d->connected==CON_PLYNG) ? GET_NAME(d->character) : "Not in game",
-        GET_LEVEL(d->character));
-    } else
-      sprintf(line+strlen(line), "%3d%9s%10s ",
-        d->descriptor,"  UNDEF  ",connected_types[d->connected]);
-    sprintf(line+strlen(line),"%-15s",d->host);
-    if(is_korean(d)) in_d++;
-    else out_d++;
-    if(!(n%2)){
-      strcat(line,"|");
-    } else {
-      log(line);
-      line[0]=0;
+    line[0]=0;
+    for (d=descriptor_list;d;d=d->next) {
+      ++m;
+      if (d->original){
+        sprintf(line+strlen(line),"%3d%2d:",d->descriptor,
+            d->original->specials.timer);
+        sprintf(line+strlen(line), "%-14s%2d ",
+          GET_NAME(d->original),GET_LEVEL(d->original));
+      } else if (d->character){
+        sprintf(line+strlen(line),"%3d%2d:",d->descriptor,
+            d->character->specials.timer);
+        sprintf(line+strlen(line), "%-14s%2d ",
+          (d->connected==CON_PLYNG) ? GET_NAME(d->character) : "Not in game",
+          GET_LEVEL(d->character));
+      } else
+        sprintf(line+strlen(line), "%3d%9s%10s ",
+          d->descriptor,"  UNDEF  ",connected_types[d->connected]);
+      sprintf(line+strlen(line),"%-15s",d->host);
+      //if(is_korean(d)) in_d++;
+      //else out_d++;
+      in_d++;
+#ifdef TIME_ADJUST
+      static bool adjust = FALSE;
+      if ( !adjust && reboot_time >= 259200 ) {
+	  reboot_time += (boottime%86400+reboot_time+t+TIME_ADJUST*60) % 86400 -86100;
+	  adjust = TRUE;
+      }
+#endif
+      if(!(n%2)){
+        strcat(line,"|");
+      } else {
+        log(line);
+        line[0]=0;
+      }
+      ++n;
     }
-    ++n;
-  }
-  if(n%2){
+    if(n%2){
+      log(line);
+    }
+  
+    if(m > most) most=m;
+    sprintf(line,"%s%d/%d active connections",
+      (n%2) ? "\n\r" : "",m,most);
     log(line);
-  }
-
-  if(m > most) most=m;
-  sprintf(line,"%s%d/%d active connections",
-    (n%2) ? "\n\r" : "",m,most);
-  log(line);
-  sprintf(line,"from korea: %d from abroad %d", in_d, out_d );
-  log(line);
-  t=30+time(0)-boottime;
-  sprintf(line,"Running time %d:%02d",t/3600,(t%3600)/60);
-  log(line);
+    sprintf(line,"from korea: %d from abroad %d", in_d, out_d );
+    log(line);
+    t=30+time(0)-boottime;
+    sprintf(line,"Running time %d:%02d",t/3600,(t%3600)/60);
+    log(line);
   }
 }
 /* ******************************************************************
@@ -715,7 +745,7 @@ int new_connection(int s)
 {
   struct sockaddr_in isa;
   /* struct sockaddr peer; */
-  int i;
+  unsigned int i;
   int t;
 
   i = sizeof(isa);
@@ -732,7 +762,8 @@ int new_descriptor(int s)
 {
   int desc;
   struct descriptor_data *newd;
-  int i,size;
+  int i;
+  unsigned int size;
   struct sockaddr_in sock;
 
   if ((desc = new_connection(s)) < 0)
@@ -1027,9 +1058,9 @@ void close_socket(struct descriptor_data *d)
 #else
       save_char(d->character, d->character->in_room);
 #endif
-#ifdef SYPARK
-	  stash_char(d->character);
-#endif
+      // #ifdef SYPARK
+	stash_char(d->character);
+      // #endif
       act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM);
       sprintf(buf, "Closing link to: %s.", GET_NAME(d->character));
       log(buf);
@@ -1044,9 +1075,9 @@ void close_socket(struct descriptor_data *d)
 #endif
 */
 /*
-#ifdef SYPARK
+         // #ifdef SYPARK
 	  stash_char(d->character);
-#endif
+         // #endif
 */
       log(buf);
       free_char(d->character);
@@ -1350,6 +1381,8 @@ void signal_setup(void)
 {
   struct itimerval itime;
   struct timeval interval;
+
+  sigemptyset(&__unmask);
 
   signal(SIGUSR2, shutdown_request);
   signal(SIGPIPE, SIG_IGN);

@@ -3,21 +3,21 @@
 #include <string.h>
 #include <ctype.h>
 #include <sys/types.h>
-#include "mobcreate.h"
+#include "mob_create.h"
 
 int  ask_question(void);
 long set_affected_by(void);
 long set_special_act(void);
 
-void main()
+int main()
 {
         struct char_data mob_data;
         FILE *mobfile;
-	int i,j;
+	int i /*,j */;
 	char buff_short[128], buff_long[256], buff_name[64];
 	char buff_mob_desc[10][128];
 	char *stringcheck;
-	int MAXLENGTH = 128;
+	// int MAXLENGTH = 128;
 
 	printf("Enter the mob number: ");
         scanf("%d", &mob_data.vnum);
@@ -68,7 +68,7 @@ void main()
 	do
 	{
         	printf("Enter the level(1 <= level <= 43): ");
-		scanf("%d", &mob_data.level);
+		scanf("%c", &mob_data.level);
 		getc(stdin);
 	}while((mob_data.level < 1) || (mob_data.level > 43));
 
@@ -103,14 +103,14 @@ void main()
 	do
 	{
         	printf("Enter the gold rating(0-20): ");
-		scanf("%d", &mob_data.gold);
+		scanf("%lld", &mob_data.gold);
 		getc(stdin);
 	}while((mob_data.gold < 0) || (mob_data.gold > 21));
 
 	do
 	{
         	printf("Enter the experice rating(0-20): ");
-		scanf("%d", &mob_data.xp);
+		scanf("%lld", &mob_data.xp);
 		getc(stdin);
 	}while((mob_data.xp < 0) || (mob_data.xp > 21));
 
@@ -119,7 +119,7 @@ void main()
 	do
 	{
 		printf("Choose Number: ");
-		scanf("%d", &mob_data.position);
+		scanf("%c", &mob_data.position);
 		getc(stdin);
 	}while((mob_data.position < 1) || (mob_data.position > 7));
 
@@ -206,11 +206,11 @@ void main()
 
 	fprintf(mobfile, "~\n");
 
-	fprintf(mobfile, "%d %d %d\n", mob_data.special_act, mob_data.affected_by, mob_data.alignment); 
+	fprintf(mobfile, "%ld %ld %d\n", mob_data.special_act, mob_data.affected_by, mob_data.alignment); 
 
 	fprintf(mobfile, "%c %d %d %d %d %d\n", mob_data.class, mob_data.level, mob_data.hitpoint,
 			mob_data.armor, mob_data.hr, mob_data.dr);
-	fprintf(mobfile, "%d %d %d %c\n", mob_data.gold, mob_data.xp, mob_data.position, mob_data.sex);
+	fprintf(mobfile, "%lld %lld %d %c\n", mob_data.gold, mob_data.xp, mob_data.position, mob_data.sex);
 
         fclose(mobfile);
 } 
@@ -331,7 +331,7 @@ long set_special_act()
 	if(answer)
 		special_act = special_act | ACT_SENTINEL;
 
-	printf("Scavenger(pick up staff lying around)??(y/n) ");
+	printf("Scavenger(pick up staff lying around)?? (y/n) ");
         answer = ask_question();
 	if(answer)
 		special_act = special_act | ACT_SCAVENGER;

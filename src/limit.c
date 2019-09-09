@@ -5,6 +5,7 @@
 ************************************************************************* */
 
 #include <stdio.h>
+#include <string.h>
 #include <assert.h>
 #include "structs.h"
 #include "limit.h"
@@ -398,7 +399,7 @@ void set_title(struct char_data *ch)
   if (GET_TITLE(ch))
     RECREATE(GET_TITLE(ch),char,strlen(READ_TITLE(ch))+1);
   else
-    CREATE(GET_TITLE(ch),char,strlen(READ_TITLE(ch)));
+    CREATE(GET_TITLE(ch),char,strlen(READ_TITLE(ch))+1);
   
   strcpy(GET_TITLE(ch), READ_TITLE(ch));
 }
@@ -511,7 +512,7 @@ void gain_condition(struct char_data *ch,int condition,int value)
 
 void check_idling(struct char_data *ch)
 {
-  if (++(ch->specials.timer) > 7)
+  if (++(ch->specials.timer) > 7) {
     if (ch->specials.was_in_room == NOWHERE && ch->in_room != NOWHERE) {
       ch->specials.was_in_room = ch->in_room;
       if (ch->specials.fighting) {
@@ -528,6 +529,7 @@ void check_idling(struct char_data *ch)
       if (ch->desc)
         close_socket(ch->desc);
     }
+  }
 }
 
 /* Update both PC's & NPC's and objects*/

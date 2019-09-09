@@ -134,7 +134,7 @@ struct {
 /* read and allocate space for a '~'-terminated string from a given file */
 char *fread_string(FILE *fl)
 {
-  char buf[MAX_STRING_LENGTH], tmp[500];
+  char buf[MAX_STRING_LENGTH], tmp[MAX_STRING_LENGTH];
   char *rslt;
   register char *point;
   int flag;
@@ -159,7 +159,7 @@ char *fread_string(FILE *fl)
 
     for (point = buf + strlen(buf) - 2; point >= buf && isspace(*point);
       point--);    
-    if (flag = (*point == '~'))
+    if ((flag = (*point == '~')))
       if (*(buf + strlen(buf) - 3) == '\n')
       {
         *(buf + strlen(buf) - 2) = '\r';
@@ -270,7 +270,7 @@ void BalanceMobile(FILE *fp)
 	char class, sex;
 	int level, hit, ac, hr, dr;
 	int exp, gold, pos;
-	int sum, over, below;
+	// int sum, over, below;
 
 	while(1){
 		fgets(tmp, 256, fp);
@@ -401,12 +401,12 @@ void PrintMobileQ(FILE *fp)
 	char class, sex;
 	int level, hit, ac, hr, dr;
 	int exp, gold, pos;
-	int sum, over, below;
+	// int sum, over, below;
 	int index[20000];
 
-	int num;
+	// int num;
 
-	num = 0;
+	// num = 0;
 
 	ReadIndex(index);
 
@@ -452,7 +452,7 @@ void PrintMobileQ(FILE *fp)
 	}
 }
 
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	FILE *fp;
 

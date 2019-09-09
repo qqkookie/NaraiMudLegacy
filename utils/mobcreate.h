@@ -120,8 +120,8 @@ struct char_data {
   int armor;
   int hr;
   int dr;
-  long gold;
-  long xp;
+  long long  gold;
+  long long xp;
   char position;
   char sex;
 };

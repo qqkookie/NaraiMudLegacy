@@ -855,7 +855,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 	    send_to_char("Say what?\n\r", ch);
 	}
 	else { /* Nothing was given as argument */
-	  if (spell_info[spl].targets < TAR_OBJ_INV)
+	  if (spell_info[spl].targets < TAR_OBJ_INV) {
 	    if(!IS_NPC(ch)) {
 	      send_to_char("Who should the spell ", ch);
 	      send_to_char("be cast upon?\n\r", ch);
@@ -865,6 +865,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 		send_to_char("What should the spell be ", ch);
 		send_to_char("cast upon?\n\r", ch);
 	      }
+	  }
 	}
 	return;
       }

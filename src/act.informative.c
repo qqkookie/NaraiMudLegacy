@@ -61,8 +61,8 @@ void list_obj_to_char(struct obj_data *list,struct char_data *ch, int mode,
 /* Procedures related to 'look' */
 
 void argument_split_2(char *argument, char *first_arg, char *second_arg) {
-  int look_at, found, begin;
-  found = begin = 0;
+  int look_at, /* found, */ begin;
+  /* found = */ begin = 0;
 
   /* Find first non blank */
   for ( ;*(argument + begin ) == ' ' ; begin++);
@@ -112,7 +112,7 @@ char *find_ex_description(char *word, struct extra_descr_data *list)
 void show_obj_to_char(struct obj_data *object, struct char_data *ch, int mode)
 {
   char buffer[MAX_STRING_LENGTH] ;
-  bool found;
+ // bool found;
 
   buffer[0] = '\0';
   if (mode < 0 || mode > 6) mode = 1;
@@ -145,22 +145,22 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch, int mode)
   }
 
   if (mode != 3) { 
-    found = FALSE;
+    // found = FALSE; 
     if (IS_OBJ_STAT(object,ITEM_INVISIBLE)) {
        strcat(buffer,"(invisible)");
-       found = TRUE;
+       // found = TRUE; 
     }
     if (IS_OBJ_STAT(object,ITEM_EVIL) && ch&&IS_AFFECTED(ch,AFF_DETECT_EVIL)) {
        strcat(buffer,"..It glows red!");
-       found = TRUE;
+       // found = TRUE; 
     }
     if (IS_OBJ_STAT(object,ITEM_GLOW)) {
       strcat(buffer,"..It has a soft glowing aura!");
-      found = TRUE;
+      // found = TRUE; 
     }
     if (IS_OBJ_STAT(object,ITEM_HUM)) {
       strcat(buffer,"..It emits a faint humming sound!");
-      found = TRUE;
+      // found = TRUE; 
     }
   }
 
@@ -698,7 +698,7 @@ void do_read(struct char_data *ch, char *argument, int cmd)
 void do_examine(struct char_data *ch, char *argument, int cmd)
 {
   char name[100], buf[100];
-  int bits;
+  // int bits;
   struct char_data *tmp_char;
   struct obj_data *tmp_object;
 
@@ -713,8 +713,8 @@ void do_examine(struct char_data *ch, char *argument, int cmd)
     return;
   }
 
-  bits = generic_find(name, FIND_OBJ_INV | FIND_OBJ_ROOM |
-         FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
+  /* bits = */ generic_find(name, FIND_OBJ_INV | FIND_OBJ_ROOM |
+        FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
 
   if (tmp_object) {
     if ((GET_ITEM_TYPE(tmp_object)==ITEM_DRINKCON) ||
@@ -746,15 +746,15 @@ void do_report(struct char_data *ch, char *argument, int cmd)
 void do_title(struct char_data *ch, char *argument, int cmd)
 {
   char buf[100];
-  if( *argument == NULL ) {
+  if( *argument == NUL ) {
     sprintf(buf, "You are %s %s\n\r", GET_NAME(ch), GET_TITLE(ch));
     send_to_char(buf, ch);
     return;
     }
   if (GET_TITLE(ch))
-    RECREATE(GET_TITLE(ch),char,strlen(argument));
+    RECREATE(GET_TITLE(ch),char,strlen(argument)+1);
   else
-    CREATE(GET_TITLE(ch),char,strlen(argument));
+    CREATE(GET_TITLE(ch),char,strlen(argument)+1);
 
   strcpy(GET_TITLE(ch), argument+1);
 }
@@ -773,20 +773,22 @@ void do_exits(struct char_data *ch, char *argument, int cmd)
 	  };
 
   *buf = '\0';
-  for (door = 0; door <= 5; door++)
-    if (EXIT(ch, door))
+  for (door = 0; door <= 5; door++) {
+    if (EXIT(ch, door)) {
       if (EXIT(ch, door)->to_room != NOWHERE &&
-          !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
+          !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
 		if (GET_LEVEL(ch) >= IMO) 
 		   sprintf(buf + strlen(buf), "%-5s - [%5d] %s\r\n",
 		       exits[door], world[EXIT(ch, door)->to_room].number,
 		       world[EXIT(ch, door)->to_room].name);
+	}
         else if (IS_DARK(EXIT(ch, door)->to_room) && !OMNI(ch))
           sprintf(buf + strlen(buf), "%s - Too dark to tell\n\r", exits[door]);
         else
           sprintf(buf + strlen(buf), "%s - %s\n\r", exits[door],
             world[EXIT(ch, door)->to_room].name);
-
+    }
+  }
 
   send_to_char_han("Obvious exits:\n\r", "명백한 출구는:\n\r",ch);
 
@@ -828,7 +830,7 @@ static char align_msg[13][44] = {
   "You are a devil.\n\r"
 };
 
-static char align_msg_han[13][44] = {
+static char align_msg_han[13][64] = {
   "당신은 성인 군자십니다.\n\r",
   "당신은 성이 군자가 되어가고 있습니다.\n\r",
   "당신은 선하십니다.\n\r",
@@ -979,9 +981,9 @@ void do_score(struct char_data *ch, char *argument, int cmd)
     send_to_char_han(buf, buf2, ch); 
     }
 
-  sprintf(buf,"You have scored %u exp, and have %u gold coins.\n\r",
+  sprintf(buf,"You have scored %lld exp, and have %lld gold coins.\n\r",
     GET_EXP(ch),GET_GOLD(ch));
-  sprintf(buf2,"당신은 %d 의 경험치와 %d 원의 돈을 가지고 있습니다.\n\r",
+  sprintf(buf2,"당신은 %lld 의 경험치와 %lld 원의 돈을 가지고 있습니다.\n\r",
     GET_EXP(ch),GET_GOLD(ch));
   send_to_char_han(buf, buf2, ch);
 
@@ -1003,9 +1005,9 @@ void do_score(struct char_data *ch, char *argument, int cmd)
       strcpy(buf2,"레벨을 올릴만큼 충분한 경험치가 쌓였습니다.\n\r");
       }
     else {
-      sprintf(buf,"You need %d experience to advance\n\r",
+      sprintf(buf,"You need %lld experience to advance\n\r",
        titles[GET_CLASS(ch)-1][GET_LEVEL(ch)+1].exp-GET_EXP(ch));
-      sprintf(buf2,"다음 레벨까지 %d 만큼의 경험치가 필요합니다.\n\r",
+      sprintf(buf2,"다음 레벨까지 %lld 만큼의 경험치가 필요합니다.\n\r",
        titles[GET_CLASS(ch)-1][GET_LEVEL(ch)+1].exp-GET_EXP(ch));
        }
     send_to_char_han(buf, buf2, ch);
@@ -1202,7 +1204,7 @@ void do_weather(struct char_data *ch, char *argument, int cmd)
       };
 
   one_argument(argument,buf2);
-  if ((GET_LEVEL(ch) > (IMO+2)) && buf2[0] != NULL )
+  if ((GET_LEVEL(ch) > (IMO+2)) && buf2[0] != NUL )
   {
 	if (strcmp(buf2,"cloud")==0)
 		weather_change(1);
@@ -1507,7 +1509,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
   char line[256], line2[256];
   struct descriptor_data *d;
   int m=0,n=0,flag,t;
-  static most=0;
+  static int most=0;
   extern int boottime;
 
   one_argument(argument,line);
@@ -1798,7 +1800,7 @@ void do_police(struct char_data *ch, char *argument, int cmd)
     return;
   target=atoi(name);
   for (d=descriptor_list;d;d=d->next){
-    sprintf(name,"%x",(unsigned int) d); log(name);
+    sprintf(name,"%p", d); log(name);
     if(target==d->descriptor){
       if((d->connected == CON_PLYNG)&&(d->character)){
         if(d->character->player.level < ch->player.level){
@@ -1878,7 +1880,8 @@ void do_data(struct char_data *ch, char *argument, int cmd)
   struct descriptor_data *d;
   struct char_data *victim;
   char buf[256],name[256],fmt[16];
-  int i=0, k, n = 0, t = 0, nc;
+  int i=0, k, t = 0, nc;
+  LONGLONG n = 0;
 
   one_argument(argument, name);
   if(strcmp(name,"exp")==0)
@@ -1903,10 +1906,10 @@ void do_data(struct char_data *ch, char *argument, int cmd)
     k=10;
   if((k==1)||(k==3)||(k==8)){
     nc=3;
-    strcpy(fmt,"%-15s%10d%s");
+    strcpy(fmt,"%-15s%10lld%s");
   } else {
     nc=4;
-    strcpy(fmt,"%-15s%4d%s");
+    strcpy(fmt,"%-15s%4lld%s");
   }
   for (d = descriptor_list; d; d = d->next) {
     if (!d->connected && CAN_SEE(ch, d->character)) {

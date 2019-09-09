@@ -386,9 +386,9 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 
 char *one_word(char *argument, char *first_arg )
 {
-  int found, begin, look_at;
+  int /* found, */ begin, look_at;
 
-  found = begin = 0;
+  /* found = */ begin = 0;
 
   do
   {

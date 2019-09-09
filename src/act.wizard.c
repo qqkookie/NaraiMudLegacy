@@ -9,6 +9,7 @@
 #include <ctype.h>
 #include <assert.h>
 
+#include <time.h>
 #include <sys/time.h>
 #include <sys/resource.h>
 
@@ -606,7 +607,7 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
       sprintf(buf, "AC: %d/10, Hitroll: %d, Damroll: %d, Regen: %d\n\r",
 	      GET_AC(k), k->points.hitroll, k->points.damroll, k->regeneration);
       strcat(page_buffer, buf);
-      sprintf(buf, "Gold: %d, Bank: %ld, Exp: %d\n\r",
+      sprintf(buf, "Gold: %lld, Bank: %lld, Exp: %lld\n\r",
 	      GET_GOLD(k), k->bank, GET_EXP(k));
       strcat(page_buffer, buf);
       
@@ -1333,9 +1334,8 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
     return;
   if(strcmp(" /last",argument))
   {
-  	sprintf(buf,"%s> %s\n\r",ch->player.name,argument);
-	assert(his_end>=0&&his_end<20);
-	
+  	char buf2[MAX_STRING_LENGTH]; 
+
 	/*
 	sprintf(history[his_end],"%s",buf);
 	*/
@@ -1351,6 +1351,10 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
 
 	sprintf(history[his_end],"%02d.%02d %02d:%02d %s", stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,buf);
 	/* 20110117 by Moon */
+
+	strftime(buf2, 127, "%H:%M", stt);
+	sprintf(buf,"[%s]%s> %s\n\r", buf2, ch->player.name, argument);
+	assert(his_end>=0&&his_end<20);
 	
 	his_end++;
 	if((his_end%20)==(his_start%20))
@@ -1525,8 +1529,8 @@ void do_set(struct char_data *ch, char *argument, int cmd)
     if(strcmp(buf,"reboot_time")==0){
       one_argument(buf2,buf3);
       if(*buf3)
-        reboot_time= atoi(buf3);
-      	sprintf(mess,"Reboot Time is %ld seconds after current boot time .\n\n",
+          reboot_time= atoi(buf3);
+      sprintf(mess,"Reboot Time is %ld seconds after current boot time .\n\n",
 		reboot_time);
       send_to_char(mess,ch);
       return;
@@ -1599,9 +1603,10 @@ void do_set(struct char_data *ch, char *argument, int cmd)
     else {
       half_chop(buf2,buf3,buf4);
       k=atoi(buf4);
+      LONGLONG kk=atoll(buf4);
       if((GET_LEVEL(ch) < (IMO+2))&&(strcmp(buf3,"gold"))) return;
       if(strcmp(buf3,"exp")==0 && (GET_LEVEL(ch) > (IMO+2)))
-        victim->points.exp=k;
+        victim->points.exp=kk;
       else if(strcmp(buf3,"skill")==0) {
         for(i=0;i<MAX_SKILLS;i++)
           victim->skills[i].learned=k;		/* clear skills */
@@ -1624,9 +1629,9 @@ void do_set(struct char_data *ch, char *argument, int cmd)
       else if(strcmp("move",buf3)==0)
 	victim->points.move=victim->points.max_move=k;
       else if(strcmp("bank",buf3)==0)
-        victim->bank=k;
+        victim->bank=kk;
       else if(strcmp("gold",buf3)==0)
-        victim->points.gold=k;
+        victim->points.gold=kk;
       else if(strcmp("align",buf3)==0)
         victim->specials.alignment=k;
       else if(strcmp("str",buf3)==0)
@@ -1886,7 +1891,7 @@ void do_sys(struct char_data *ch, char *argument, int cmd)
   getrusage(0,&xru);
   sprintf(buffer,
     "sys time: %ld secs\n\rusr time: %ld secs\n\rrun time: %ld secs\n\r",
-    xru.ru_stime.tv_sec,xru.ru_utime.tv_sec,time(0)-boottime);
+    (long) xru.ru_stime.tv_sec,(long) xru.ru_utime.tv_sec, (long) (time(0)-boottime));
   send_to_char(buffer,ch);
   if(GET_LEVEL(ch) >= (IMO+2)){
     nits=0;

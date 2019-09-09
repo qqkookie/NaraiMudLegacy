@@ -2,8 +2,14 @@
 #include <string.h>
 #include <ctype.h>
 
+#ifndef __FreeBSD__
+#include <crypt.h>
+#endif 
+#include <unistd.h>
+
 #include "structs.h"
-#include "spells_array"
+
+extern char *spells[];
 
 #define PROMPT			fprintf(stdout, "CHECK PLAYER >> ");
 
@@ -173,6 +179,7 @@ int do_affected(char *str)
 		printf("\t\tduration : %d,", ch.affected[i].duration);
 		printf("modifier : %d\n", ch.affected[i].modifier);
 	}
+	return 0;
 }
 
 int do_help(char *str)
@@ -189,6 +196,7 @@ int do_help(char *str)
 	printf("\t\tclass, level, hit, mana, move, hitroll, damroll, abilities, conditions \n");
 	printf("\tskill : \n");
 	printf("\tshow : \n");
+	return 0;
 }
 
 int do_bank(char *str)
@@ -208,6 +216,7 @@ int do_bank(char *str)
 
 	ch.bank = num;
 	changed = 1;
+	return 0;
 }
 
 int do_set(char *str)
@@ -309,11 +318,12 @@ int do_set(char *str)
 	else {
 		changed = 0;
 	}
+	return 0;
 }
 
 int do_temp(char *str)
 {
-	long of;
+	// long of;
 
 	fp = fopen("players", "r+");
 	if(!fp){
@@ -322,7 +332,7 @@ int do_temp(char *str)
 	}
 
 	while(!feof(fp)){
-		of = ftell(fp);
+		/* of = */ ftell(fp);
 		fread(&ch, sizeof(struct char_file_u), 1, fp);
 DEBUG("Name = %s\n", ch.name);
 DEBUG("\tAct = %d\n", ch.act);
@@ -340,7 +350,7 @@ DEBUG("\tNew Act = %d\n", ch.act);
 
 int do_find(char *str)
 {
-	int num;
+	// int num;
 
 	if(!*str){
 		ERROR("argument is needed.\n");
@@ -374,7 +384,7 @@ DEBUG("Name = %s\n", ch.name);
 
 int do_new(char *str)
 {
-	int num;
+	// int num;
 	FILE *fp2;
 	struct char_file_u ch2;
 
@@ -409,7 +419,7 @@ DEBUG("Name = %s\n", ch.name);
 
 int do_passwd(char *str)
 {
-	int num;
+	//  int num;
 
 	if(!loaded){
 		ERROR("not loaded\n");
@@ -420,7 +430,7 @@ int do_passwd(char *str)
 		ERROR("argument is needed.\n");
 	}
 
-	strcpy(ch.pwd, (char *)crypt(str, ch.name, 10));
+	strcpy(ch.pwd, (char *)crypt(str, ch.name));
 
 	changed = 1;
 
@@ -429,7 +439,7 @@ int do_passwd(char *str)
 
 int do_quit(char *str)
 {
-	int num;
+	// int num;
 
 	if(changed){
 		do_save(str);
@@ -461,7 +471,7 @@ int do_room(char *str)
 
 int do_save(char *str)
 {
-	int num;
+	// int num;
 
 	if(!loaded){
 		ERROR("not loaded\n");
@@ -485,7 +495,7 @@ int do_save(char *str)
 
 int do_skill(char *str)
 {
-	int num, i;
+	int /* num, */ i;
 
 	if(!loaded){
 		ERROR("not loaded\n");
@@ -543,8 +553,8 @@ int do_skill(char *str)
 
 int do_show(char *str)
 {
-	int num;
-	char buf[256];
+	// int num;
+	// char buf[256];
 
 	if(!loaded){
 		ERROR("not loaded\n");
@@ -554,8 +564,8 @@ int do_show(char *str)
 	fprintf(stdout, "Name      : %s\n", ch.name);
 	fprintf(stdout, "Title     : %s\n", ch.title);
 	fprintf(stdout, "Sex       : %c, Class : %c, Level : %d\n",
-			sex[ch.sex], class[ch.class - 1], ch.level);
-	fprintf(stdout, "Load Room : %d, Exp: %d, Bank : %d\n",
+			sex[(int)ch.sex], class[ch.class - 1], ch.level);
+	fprintf(stdout, "Load Room : %d, Exp: %lld, Bank : %lld\n",
 			ch.load_room, ch.points.exp, ch.bank);
 	fprintf(stdout, "Wimpyness : %d\n", ch.wimpyness);
 	fprintf(stdout, "Str: %d/%d Int:%d Wis %d Dex:%d Con:%d\n", 
@@ -571,7 +581,7 @@ int do_show(char *str)
 	if(ch.remortal & REMORTAL_THIEF) fprintf(stdout, "T");
 	if(ch.remortal & REMORTAL_WARRIOR) fprintf(stdout, "W");
 	fprintf(stdout,"\n");
-	fprintf(stdout, "Quest Solved : %d\n", ch.quest.solved);
+	fprintf(stdout, "Quest Solved : %ld\n", ch.quest.solved);
 
 	return 0;
 }
@@ -622,7 +632,7 @@ void doCommand(char *str)
 //	}
 //}
 
-main(void)
+int main(void)
 {
 	char str[256];
 	FILE *fp;
@@ -630,6 +640,7 @@ main(void)
 	changed = 0;
 	loaded = 0;
 
+	fp = stdin;
 	while(1){
 		PROMPT;
 		fgets(str,256,fp);
@@ -638,3 +649,136 @@ main(void)
 		doCommand(str);
 	}
 }
+
+// include "spells_array.c"
+// from src/spell_parser.c
+
+char *spells[]=
+{
+   "armor",               /* 1 */
+   "teleport",
+   "bless",
+   "blindness",
+   "burning hands",
+   "call lightning",
+   "charm person",
+   "chill touch",
+   "reanimate",
+   "color spray",
+   "relocate",     /* 11 */
+   "create food",
+   "create water",
+   "cure blind",
+   "cure critic",
+   "cure light",
+   "curse",
+   "detect evil",
+   "detect invisibility",
+   "recharger",
+   "preach",       /* 21 */
+   "dispel evil",
+   "earthquake",
+   "enchant weapon",
+   "energy drain",
+   "fireball",
+   "harm",
+   "heal",
+   "invisibility",
+   "lightning bolt",
+   "locate object",      /* 31 */
+   "magic missile",
+   "poison",
+   "protection from evil",
+   "remove curse",
+   "sanctuary",
+   "shocking grasp",
+   "sleep",
+   "strength",
+   "summon",
+   "ventriloquate",      /* 41 */
+   "word of recall",
+   "remove poison",
+   "sense life",         /* 44 */
+   "sunburst",
+   "clone",
+   "",
+   "",
+   "",
+   "",
+   "", /* 51 */
+   "",
+   "identify",
+   "",
+   "sneak",        /* 55 */
+   "hide",
+   "steal",
+   "backstab",
+   "pick",
+   "kick",         /* 60 */
+   "bash", /* 61 */
+   "rescue",
+   "double attack",
+   "quadruple attack",
+   "extra damaging",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "damage up", /* 71 */
+   "energy flow",
+   "mana boost",
+   "vitalize",
+   "full fire",
+   "throw",		/* 76 */
+   "firestorm",
+   "crush armor",
+   "full heal",
+   "trick",
+   "haste",      /* 81 */
+   "improved haste",
+   "far look",
+   "all heal",
+   "tornado",        /* 85  */
+   "lightning move",
+   "parry",
+   "flash",
+   "multi kick",
+   "enchant armor",  /* 90 */
+   "pray for armor", /* 91 */
+   "infravision",
+   "create nectar",
+   "create golden nectar",
+   "cone of ice",
+   "disintegrate",
+   "phase",
+   "mirror image",
+   "hand of god",
+   "cause light", /* 100 */
+   "cause critic", /* 101 */
+   "entire heal",
+   "octa attack",
+   "love",
+   "disarm", /* 105 */
+   "reraise",
+   "shouryuken", /* 107 */
+   "throw object", /* 108 */
+   "punch", /* 109 */
+   "death", /* 110 */
+   "enchant person", /* 111 */
+   "spell block", /* 112 */
+   "temptation", /* 113 */
+   "shadow figure", /* 114 */
+   "mana transfer",
+   "self heal",
+   "holy shield",
+   "restore move",
+   "heal the world",
+   "reflect damage",
+   "dumb",
+   "spin bird kick",
+   "thunderbolt",
+   "arrest",
+   "sanctuary cloud", /* 125 */
+   "\n"
+};

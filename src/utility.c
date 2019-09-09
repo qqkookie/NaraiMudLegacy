@@ -74,12 +74,14 @@ int str_cmp(char *arg1, char *arg2)
     return(!arg2 ? 0 : -1);
   else if(! arg2)
      return(1);
-  for (i = 0; *(arg1 + i) || *(arg2 + i); i++)
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+  for (i = 0; *(arg1 + i) || *(arg2 + i); i++) {
+    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
       if (chk < 0)
         return (-1);
       else 
         return (1);
+    }
+  }
   return(0);
 }
 
@@ -91,13 +93,14 @@ int strn_cmp(char *arg1, char *arg2, int n)
 {
   int chk, i;
 
-  for (i = 0; (*(arg1 + i) || *(arg2 + i)) && (n>0); i++, n--)
-    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+  for (i = 0; (*(arg1 + i) || *(arg2 + i)) && (n>0); i++, n--) {
+    if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
       if (chk < 0)
         return (-1);
       else 
         return (1);
-
+    }
+  }
   return(0);
 }
 
@@ -106,7 +109,7 @@ int strn_cmp(char *arg1, char *arg2, int n)
 /* writes a string to the log */
 void log(char *str)
 {
-  long ct;
+  time_t ct;
   char *tmstr;
   static int count = 0;
 
@@ -135,7 +138,7 @@ void sprintbit(long vektor, char *names[], char *result)
 
   for(nr=0; vektor; vektor>>=1)
   {
-    if (IS_SET(1, vektor))
+    if (IS_SET(1, vektor)) {
       if (*names[nr] != '\n') {
         strcat(result,names[nr]);
         strcat(result," ");
@@ -143,6 +146,7 @@ void sprintbit(long vektor, char *names[], char *result)
         strcat(result,"UNDEFINED");
         strcat(result," ");
       }
+    }
     if (*names[nr] != '\n')
       nr++;
   }

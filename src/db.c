@@ -27,8 +27,6 @@
 
 #define NEW_ZONE_SYSTEM
 
-#define STASH        "stash"
-
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
 ************************************************************************ */
@@ -302,6 +300,8 @@ void reset_time(void)
   else weather_info.sky = SKY_CLOUDLESS;
 }
 
+#pragma GCC diagnostic ignored "-Wunused-result"
+
 /* generate index table for the player file */
 void build_player_index(void)
 {
@@ -457,10 +457,12 @@ void boot_world(void)
 	      (zone ? zone_table[zone-1].top : -1)) {
 	    fprintf(stderr, "Room nr %d is below zone %d.\n",
 		    room_nr, zone);
+            fprintf(stderr, "DEBUG: %d, %s\n",
+                   world[room_nr].number, world[room_nr].name);
 	    exit(0);
 	  }
 	  while (world[room_nr].number > zone_table[zone].top)
-	    if (++zone > top_of_zone_table) {
+	    if (zone > top_of_zone_table) {
 	      fprintf(stderr, "Room %d is outside of any zone.\n",
 		      virtual_nr);
 	      exit(0);
@@ -502,6 +504,7 @@ void boot_world(void)
     
     free(temp);  /* cleanup the area containing the terminal $  */
     fclose(fl);
+    zone++;
   }
   
   fclose(all_files);
@@ -749,7 +752,7 @@ void load_zones(int zon)
 	/* read the command table */
 	cmd_no = 0;
 	for (expand = 1;;) {
-		if (expand)
+		if (expand) {
 			if (!cmd_no)
 				CREATE(zone_table[zon].cmd, struct reset_com, 1);
 			else
@@ -760,6 +763,7 @@ void load_zones(int zon)
 					perror(zone_table[zon].filename);
 					exit(0);
 				}
+		}
 		expand = 1;
 		fscanf(fl, " "); /* skip blanks */
 		fscanf(fl, "%c", &zone_table[zon].cmd[cmd_no].command);
@@ -837,7 +841,7 @@ void boot_zones(void)
 			}
 
 		zone_table[zon].name = check;
-		CREATE(zone_table[zon].filename,char, strlen(file_name)); /* + 1 for Linux and no +1 for BSD? */
+		CREATE(zone_table[zon].filename,char, strlen(file_name)+1); /* + 1 for Linux and no +1 for BSD? */
 		strcpy(zone_table[zon].filename,file_name);
 		fscanf(fl, " %d ", &zone_table[zon].top);
 		fscanf(fl, " %d ", &zone_table[zon].lifespan);
@@ -846,7 +850,7 @@ void boot_zones(void)
 		/* read the command table */
 		cmd_no = 0;
 		for (expand = 1;;) {
-			if (expand)
+			if (expand) {
 				if (!cmd_no)
 					CREATE(zone_table[zon].cmd, struct reset_com, 1);
 				else
@@ -857,6 +861,7 @@ void boot_zones(void)
 						perror(file_name);
 						exit(0);
 					}
+			}
 			expand = 1;
 			fscanf(fl, " "); /* skip blanks */
 			fscanf(fl, "%c", &zone_table[zon].cmd[cmd_no].command);
@@ -1805,7 +1810,7 @@ void zone_update(void)
 
 
 
-#ifdef NEW_ZONE_SYSTEM
+#ifndef OLD_ZONE_SYSTEM
 
 /*
 	index : real number
@@ -2034,7 +2039,7 @@ void reset_zone(int zone)
 
 #undef ZCMD
 
-#else
+#else	// OLD_ZONE_SYSTEM
 
 
 #define ZCMD zone_table[zone].cmd[cmd_no]
@@ -2534,7 +2539,7 @@ void save_char(struct char_data *ch, sh_int load_room)
     strcpy(mode, "r+");
   char_to_store(ch, &st);
   st.load_room = load_room;
-  if ( ch->desc->pwd )
+  if ( ch->desc->pwd[0] != NUL )
   	strcpy(st.pwd, ch->desc->pwd);
   if (!(fl = fopen(PLAYER_FILE, mode))) {
     perror("save char");
@@ -2632,7 +2637,7 @@ int compare(struct player_index_element *arg1, struct player_index_element
 /* read and allocate space for a '~'-terminated string from a given file */
 char *fread_string(FILE *fl)
 {
-  char buf[MAX_STRING_LENGTH], tmp[500];
+  char buf[MAX_STRING_LENGTH], tmp[MAX_STRING_LENGTH];
   char *rslt;
   register char *point;
   int flag;
@@ -2931,10 +2936,9 @@ void init_char(struct char_data *ch)
 	/* wimpyness */
 	ch->specials.wimpyness = 0;
 
-#ifdef RESTART_BONUS
+	// #ifdef RESTART_BOUNUS #endif
 	/* initial bonus */
 	ch->points.gold = 1000;
-#endif /* RESTART_BONUS */
 
 	for (i = 0; i <= MAX_SKILLS - 1; i++) {
 		if (GET_LEVEL(ch) < IMO + 3) {
@@ -3113,13 +3117,13 @@ void stash_contentsII(FILE *fp, struct obj_data *o, int wear_flag)
     for (i = 0; i < 2; i++)
       fprintf(fp, " %d %d", o->affected[i].location,
 	      o->affected[i].modifier);
-#ifdef SYPARK
+    // #ifdef SYPARK
     fprintf(fp," %d %d",o->obj_flags.extra_flags,o->obj_flags.gpd);
     fprintf(fp,"\n");
     fprintf(fp,"%s\n",o->name);
     fprintf(fp,"%s\n",o->short_description);
     fprintf(fp,"%s\n",o->description);
-#endif
+    // #endif
     fprintf(fp,"\n");
   }
   if ((oc = o->next_content))
@@ -3147,13 +3151,13 @@ void stash_contents(FILE *fl, struct obj_data *p, int wear_flag)
       fprintf(fl," %d",p->obj_flags.value[j]);
     for(j=0;j<2;j++)
       fprintf(fl," %d %d",p->affected[j].location,p->affected[j].modifier);
-#ifdef SYPARK
+    // #ifdef SYPARK
     fprintf(fl," %d %d",p->obj_flags.extra_flags,p->obj_flags.gpd);
     fprintf(fl,"\n");
     fprintf(fl,"%s\n",p->name);
     fprintf(fl,"%s\n",p->short_description);
     fprintf(fl,"%s\n",p->description);
-#endif
+    // #endif
   }
   
   if((pc=p->next_content))
@@ -3237,7 +3241,7 @@ void unstash_char(struct char_data *ch, char *filename)
       obj->affected[i].location=tmp[i*2];
       obj->affected[i].modifier=tmp[i*2+1];
     }
-#ifdef	SYPARK
+    // #ifdef	SYPARK
     fscanf(fl,"%d",&tmp[0]);
     if ( tmp[0] != -1 )
       obj->obj_flags.extra_flags = tmp[0];
@@ -3269,7 +3273,7 @@ void unstash_char(struct char_data *ch, char *filename)
       free(obj->description);
       obj->description = str;
     }
-#endif
+    // #endif
     while (stack_count && item_stack[stack_count - 1] < -1 &&
 	   item_stack[stack_count - 1] < where) {
       stack_count--;
@@ -3451,11 +3455,13 @@ void do_checkrent(struct char_data *ch,char *argument, int cmd)
     if(n > 99999) continue;
     ++j;
     sprintf(buf+i,"%5d%c",n,(j==10) ? '\n' : ' ');
-    if(j==10) j=0; i+=5;
-	fgets(str,255,fl);
-	fgets(str,255,fl);
-	fgets(str,255,fl);
-	fgets(str,255,fl);
+    if(j==10) 
+	j=0;
+    i+=5;
+    fgets(str,255,fl);
+    fgets(str,255,fl);
+    fgets(str,255,fl);
+    fgets(str,255,fl);
   }
   fclose(fl);
   strcat(buf,"\n\r");
@@ -3490,7 +3496,7 @@ void do_replacerent(struct char_data *ch,char *argument, int cmd)
 
 void do_rent(struct char_data *ch, int cmd, char *arg)
 {
-	sh_int save_room;
+	// sh_int save_room;
 	int i;
 	void wipe_obj(struct obj_data *obj);
 
@@ -3514,7 +3520,7 @@ void do_rent(struct char_data *ch, int cmd, char *arg)
 		}
 	wipe_obj(ch->carrying);
 	ch->carrying = 0;
-	save_room = ch->in_room;
+	// save_room = ch->in_room;
 	extract_char(ch);
 /*
 	ch->in_room = world[save_room].number;

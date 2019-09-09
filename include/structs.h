@@ -1,12 +1,17 @@
 #include <sys/types.h>
 #include <stdlib.h>
 
-typedef short sbyte;
-typedef unsigned char ubyte;
-typedef short sh_int;
-typedef unsigned short ush_int;
+// Changed all bytes and short to int or unsigned
+typedef int sbyte;
+typedef unsigned ubyte;
+typedef int sh_int;
+typedef unsigned ush_int;
 typedef char bool;
-typedef char byte;
+typedef int byte;
+
+typedef long long LONGLONG;
+
+#define IMO	41
 
 /*
 #define PULSE_MOBILE    41
@@ -51,7 +56,7 @@ typedef char byte;
 #define ITEM_MISSILE    7
 #define ITEM_TREASURE   8
 #define ITEM_ARMOR      9
-#define ITEM_POTION    10 
+#define ITEM_POTION    10
 #define ITEM_WORN      11
 #define ITEM_OTHER     12
 #define ITEM_TRASH     13
@@ -69,17 +74,17 @@ typedef char byte;
 
 /* Bitvector For 'wear_flags' */
 
-#define ITEM_TAKE              1 
+#define ITEM_TAKE              1
 #define ITEM_WEAR_FINGER       2
 #define ITEM_WEAR_NECK         4
 #define ITEM_WEAR_BODY         8
 #define ITEM_WEAR_HEAD        16
 #define ITEM_WEAR_LEGS        32
 #define ITEM_WEAR_FEET        64
-#define ITEM_WEAR_HANDS      128 
+#define ITEM_WEAR_HANDS      128
 #define ITEM_WEAR_ARMS       256
 #define ITEM_WEAR_SHIELD     512
-#define ITEM_WEAR_ABOUT     1024 
+#define ITEM_WEAR_ABOUT     1024
 #define ITEM_WEAR_WAISTE    2048
 #define ITEM_WEAR_WRIST     4096
 #define ITEM_WIELD          8192
@@ -176,7 +181,7 @@ struct obj_affected_type {
 struct obj_data
 {
   sh_int item_number;            /* Where in data-base               */
-  sh_int in_room;                /* In what room -1 when conta/carr  */ 
+  sh_int in_room;                /* In what room -1 when conta/carr  */
   struct obj_flag_data obj_flags;/* Object information               */
   struct obj_affected_type
       affected[MAX_OBJ_AFFECT];  /* Which abilities in PC to change  */
@@ -249,8 +254,8 @@ struct obj_data
 
 struct room_direction_data
 {
-  char *general_description;       /* When look DIR.                  */ 
-  char *keyword;                   /* for open/close                  */  
+  char *general_description;       /* When look DIR.                  */
+  char *keyword;                   /* for open/close                  */
   sh_int exit_info;                /* Exit info                       */
   sh_int key;                       /* Key's number (-1 for no key)    */
   sh_int to_room;                  /* Where direction leeds (NOWHERE) */
@@ -266,10 +271,10 @@ struct room_data
   char *description;           /* Shown when entered                 */
   struct extra_descr_data *ex_description; /* for examine/look       */
   struct room_direction_data *dir_option[6]; /* Directions           */
-  int room_flags;           /* DEATH,DARK ... etc                 */ 
+  int room_flags;           /* DEATH,DARK ... etc                 */
   byte light;                  /* Number of lightsources in room     */
   int (*funct)();              /* special procedure                  */
-         
+
   struct obj_data *contents;   /* List of items in room              */
   struct char_data *people;    /* List of NPC / PC in room           */
 };
@@ -331,7 +336,7 @@ struct room_data
 #define AFF_HOLY_SHIELD			32768
 #define AFF_SPELL_BLOCK       65536 /* by process */
 #define AFF_SLEEP             131072
-#define AFF_SHADOW_FIGURE     262144 /* by process */ 
+#define AFF_SHADOW_FIGURE     262144 /* by process */
 #define AFF_SNEAK             524288
 #define AFF_HIDE              1048576
 #define AFF_DEATH			  2097152
@@ -387,7 +392,7 @@ struct room_data
 #define CLASS_DRAGON      4 /* Then for example a weapon */
 #define CLASS_GIANT       5 /* of dragon slaying is pos. */
 #define CLASS_DEMON		  6
-#define CLASS_INSECT	  8 
+#define CLASS_INSECT	  8
 
 /* sex */
 #define SEX_NEUTRAL   0
@@ -495,25 +500,25 @@ struct char_player_data {
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct char_ability_data {
-  sbyte str; 
+  sbyte str;
   sbyte str_add;
   sbyte intel;
-  sbyte wis; 
-  sbyte dex; 
-  sbyte con; 
+  sbyte wis;
+  sbyte dex;
+  sbyte con;
 };
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct char_point_data {
-  int mana;         
+  int mana;
   int max_mana;     /* Not useable may be erased upon player file renewal */
-  int hit;   
+  int hit;
   int max_hit;      /* Max hit for NPC                         */
-  int move;  
+  int move;
   int max_move;     /* Max move for NPC                        */
   int armor;        /* Internal -100..100, external -10..10 AC */
-  unsigned int gold;            /* Money carried                           */
-  unsigned int exp;             /* The experience of the player            */
+  LONGLONG gold;            /* Money carried                           */
+  LONGLONG exp;             /* The experience of the player            */
   sbyte hitroll;       /* Any bonus or penalty to the hit roll    */
   sbyte damroll;       /* Any bonus or penalty to the damage roll */
 };
@@ -583,7 +588,7 @@ struct char_data {
   sh_int in_room;
   int magic_number;
 //  unsigned long bank;
-	int bank;
+  LONGLONG bank;
   int life,regeneration;
 
   /* for mobile */
@@ -637,19 +642,19 @@ struct char_file_u {
   char description[300];
   int pked_num;
   int no_of_change_guild;
-  byte guild; 
-  int pk_num; 
+  byte guild;
+  int pk_num;
   sh_int load_room;
   struct char_ability_data abilities;
   struct char_point_data points;
   struct char_skill_data skills[MAX_SKILLS];
   struct affected_type affected[MAX_AFFECT];
   struct quest_data quest;
-  ubyte spells_to_learn;  
-  int alignment;     
+  ubyte spells_to_learn;
+  int alignment;
   time_t last_logon;
   unsigned act;
-  unsigned long bank;
+  LONGLONG bank;
   char name[20];
   char pwd[11];
   int conditions[3];
@@ -698,7 +703,7 @@ struct txt_q {
 #define CON_IMOTD   19
 
 struct snoop_data {
-  struct char_data *snooping;  
+  struct char_data *snooping;
   struct char_data *snoop_by;
 };
 

@@ -318,6 +318,8 @@ void spell_sunburst(byte level, struct char_data *ch,
 	int dam;
 	void spell_blindness(byte level, struct char_data *ch,
 		struct char_data *victim, struct obj_data *obj);
+	char buf[MAX_STRING_LENGTH];
+
 	static int dam_each[] = 
 		{ 0,
 		  400,400,400,400,400, 400,400,400,400,400, 440,440,440,440,440,
@@ -333,6 +335,9 @@ void spell_sunburst(byte level, struct char_data *ch,
 		dam >>= 1;
 	if (number(1,15) == 1)
 		spell_blindness(level, ch, victim, 0);
+	sprintf(buf, "DEBUG: sunburst: %d\n", dam);
+	log(buf);
+
 	damage(ch, victim, dam, SPELL_SUNBURST);
 }
 

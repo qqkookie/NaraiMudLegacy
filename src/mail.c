@@ -65,7 +65,8 @@ struct mbox_data *init_a_mbox(struct char_data *ch)
 
     cr_mbox = (struct mbox_data *) malloc( sizeof( struct mbox_data ) );
     if( cr_mbox ){
-        bzero(cr_mbox,sizeof(cr_mbox));
+	// BUG FIX!!
+        bzero(cr_mbox,sizeof(*cr_mbox));
         cr_mbox->room_num = world[ch->in_room].number;
         sprintf( cr_mbox->bfile, "%s/%dmbox", 
             MBOARD_DIR, cr_mbox->room_num );
@@ -123,7 +124,7 @@ void load_mbox(struct mbox_data *cb )
             cb->m_num = m_num = ind;
         }
         fread(cb->head[ind],sizeof(char),size,cb->fp);
-        cb->head[ind][size] = NULL;
+        cb->head[ind][size] = NUL;
         fread(cb->sender[ind],sizeof(char),20,cb->fp);
         fread(cb->receiver[ind],sizeof(char),20,cb->fp);
         fread(&size,sizeof(int), 1, cb->fp);
@@ -133,7 +134,7 @@ void load_mbox(struct mbox_data *cb )
             cb->m_num = m_num = ind;
         }
         fread(cb->msgs[ind],sizeof(char),size,cb->fp);
-        cb->msgs[ind][size] = NULL;
+        cb->msgs[ind][size] = NUL;
     }
     fclose(cb->fp);
     return;
@@ -255,7 +256,7 @@ int get_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
             remove_mail(cb,i);
             letter = read_object(paper_num,REAL);
             obj_to_char(letter,ch);
-            CREATE(letter->action_description,char,strlen(buffer+1));
+            CREATE(letter->action_description,char,strlen(buffer)+1);
             strcpy( letter->action_description, buffer );
             send_to_char( "You got letter from mail box.\n\r", ch );
             return(TRUE);

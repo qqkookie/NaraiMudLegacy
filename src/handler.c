@@ -46,8 +46,9 @@ char *fname(char *namelist)
   static char holder[30];
   register char *point;
 
-  for (point = holder; isalpha(*namelist); namelist++, point++)
+  for (point = holder; isalpha(*namelist); namelist++, point++) {
     *point = *namelist;
+  }
 
   *point = '\0';
 
@@ -118,7 +119,7 @@ int isexactname(char *str, char *namelist)
 
 void affect_modify(struct char_data *ch, byte loc, short mod, long bitv, bool add)
 {
-  int maxabil;
+  // int maxabil;
 
   if (add) {
     SET_BIT(ch->specials.affected_by, bitv);
@@ -127,7 +128,7 @@ void affect_modify(struct char_data *ch, byte loc, short mod, long bitv, bool ad
     mod = -mod;
   }
 
-  maxabil = (IS_NPC(ch) ? 25:(GET_LEVEL(ch) >= (IMO+2)? 25 : 18));
+  // maxabil = (IS_NPC(ch) ? 25:(GET_LEVEL(ch) >= (IMO+2)? 25 : 18));
 
   switch(loc)
   {
@@ -361,7 +362,7 @@ void affect_remove( struct char_data *ch, struct affected_type *af )
 		}
 		if (af->type == SPELL_CHARM_PERSON) {
 			tmp = strstr(ch->player.short_descr, " CHARMED BY");
-			tmp[0] = NULL;
+			tmp[0] = NUL;
 			strcpy(buf, ch->player.short_descr);
 			if (ch->player.short_descr) {
 				free(ch->player.short_descr);
@@ -1049,10 +1050,12 @@ void extract_char(struct char_data *ch)
 		/* transfer ch's objects to room */
 		if (world[ch->in_room].contents)  /* room nonempty */ {
 			/* locate tail of room-contents */
+			// BUG FIX!!!
 			for (i = world[ch->in_room].contents; i->next_content; 
-				i = i->next_content);
-				/* append ch's stuff to room-contents */
-				i->next_content = ch->carrying;
+				i = i->next_content) {
+			    /* append ch's stuff to room-contents */
+			    i->next_content = ch->carrying;
+ 			}
 		}
 		else
 			world[ch->in_room].contents = ch->carrying;
@@ -1421,14 +1424,15 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
   }
 
   if (IS_SET(bitvector, FIND_OBJ_EQUIP)) {
-    for(found=FALSE, i=0; i<MAX_WEAR && !found; i++)
+    for(found=FALSE, i=0; i<MAX_WEAR && !found; i++) {
       if (ch->equipment[i] && str_cmp(name, ch->equipment[i]->name) == 0) {
         *tar_obj = ch->equipment[i];
         found = TRUE;
       }
-      if (found) {
-        return(FIND_OBJ_EQUIP);
-      }
+    }
+    if (found) {
+      return(FIND_OBJ_EQUIP);
+    }
   }
 
   if (IS_SET(bitvector, FIND_OBJ_INV)) {

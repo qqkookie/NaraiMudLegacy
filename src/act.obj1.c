@@ -327,7 +327,7 @@ void do_get(struct char_data *ch, char *argument, int cmd)
 
 void do_drop(struct char_data *ch, char *argument, int cmd) {
   char arg[MAX_STRING_LENGTH];
-  int amount;
+  LONGLONG amount;
   char buffer[MAX_STRING_LENGTH];
   struct obj_data *tmp_object;
   struct obj_data *next_obj;
@@ -335,7 +335,7 @@ void do_drop(struct char_data *ch, char *argument, int cmd) {
   
   argument=one_argument(argument, arg);
   if(is_number(arg)) {
-    amount = atoi(arg);
+    amount = atoll(arg);
     argument=one_argument(argument,arg);
     if (str_cmp("coins",arg) && str_cmp("coin",arg)) {
       send_to_char("Sorry, you can't do that (yet)...\n\r",ch);

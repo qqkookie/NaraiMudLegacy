@@ -75,7 +75,10 @@ void cast_all_heal( byte level, struct char_data *ch, char *arg, int si,
     struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_corn_of_ice( byte level, struct char_data *ch, char *arg, int si,
     struct char_data *tar_ch, struct obj_data *tar_obj);
-
+void cast_sanctuary( byte level, struct char_data *ch, char *arg, int si,
+    struct char_data *tar_ch, struct obj_data *tar_obj);
+void cast_haste( byte level, struct char_data *ch, char *arg, int si,
+    struct char_data *tar_ch, struct obj_data *tar_obj);
 
 
 /* ********************************************************************
@@ -246,9 +249,28 @@ else if(number(1,10)>9){
     return(0);
   }
 }
+
 int perhaps(struct char_data *ch,int cmd,char *arg)
 {
 	struct char_data *vict,*next;
+#ifdef 	MID_HELPER
+	static struct char_data *perhaps = NULL;
+	char buf[256];
+	while(*arg==' ') arg++;
+	if (cmd == 98 && strcasecmp(arg, MID_HELPER)==0 	// bow narai 
+		&& strcasecmp(GET_NAME(ch), MID_HELPER) != 0) { 
+            cast_sanctuary(GET_LEVEL(perhaps), perhaps, NULL, 
+		SPELL_TYPE_SPELL, ch, NULL);
+            cast_haste(GET_LEVEL(perhaps), perhaps, NULL, 
+		SPELL_TYPE_SPELL, ch, NULL);
+	    sprintf(buf, "%s님을 축복드립니다..." , GET_NAME(ch));
+            do_say(perhaps, buf, 0);
+            return 0;
+        }
+	if (perhaps == NULL && cmd == 0 && ch != NULL
+            && mob_index[ch->nr].virtual == 1000 ) 
+            perhaps  = ch;
+#endif
 	if(cmd) return(0); /* If void return */
 	if(!ch) return(0);
 	for(vict=world[ch->in_room].people;vict
@@ -1006,7 +1028,7 @@ int pet_shops(struct char_data *ch, int cmd, char *arg)
     for(pet = world[pet_room].people; pet; pet = pet->next_in_room) {
       /* can't buy PC */
       if(!IS_NPC(pet)) continue;
-      sprintf(buf, "%8d - %s\n\r",10*GET_EXP(pet), pet->player.short_descr);
+      sprintf(buf, "%8lld - %s\n\r",10*GET_EXP(pet), pet->player.short_descr);
       send_to_char(buf, ch);
     }
     return(TRUE);
@@ -1073,14 +1095,15 @@ int hospital(struct char_data *ch, int cmd, char *arg)
   extern struct descriptor_data *descriptor_list;
   extern struct player_index_element *player_table;
   struct descriptor_data *k;
-  int opt,lev,cost[6],c=0;
+  // BUG FIX!!!
+  int opt,/* lev, */ cost[7],c=0;
   int i;
   char *temp;
   char stash_file1[100];
   char stash_file2[100];
   char stash_name[30];
   
-  lev = GET_LEVEL(ch);
+  // lev = GET_LEVEL(ch);
   cost[0] = 100-(40-GET_LEVEL(ch));
   cost[1] = cost[0] * (GET_MAX_HIT(ch) - GET_HIT(ch)) ;
   cost[2] = cost[0] * (GET_MAX_MANA(ch) - GET_MANA(ch)) ;
@@ -1309,7 +1332,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
   char buf[MAX_STRING_LENGTH];
   char buf2[MAX_STRING_LENGTH];
   int k,opt;
-  int mult;
+  // int mult;
   long int cost=0;
   struct obj_data *tmp_obj;
   
@@ -1332,7 +1355,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
   else if (cmd==56) { /* Buy */
     half_chop(arg,buf,buf2);
     opt = atoi(buf); 
-    mult = 1 ;
+    // mult = 1 ;
     
     /*
       if (1 <= opt && opt <= 6) {
@@ -1804,7 +1827,7 @@ int finisher(struct char_data *ch, int cmd, char *arg)
 int bank(struct char_data *ch, int cmd, char *arg)
 {
   char buf[MAX_STRING_LENGTH];
-  int amt;
+  LONGLONG amt;
 
   if (IS_NPC(ch))
     return(FALSE);
@@ -1816,7 +1839,7 @@ int bank(struct char_data *ch, int cmd, char *arg)
     send_to_char("withdraw <amount>\n\r\n\r",ch);
     return(TRUE);
   } else if (cmd==227) { /* Balance */
-    sprintf(buf,"You have %ld coins in the bank.\n\r",ch->bank);
+    sprintf(buf,"You have %lld coins in the bank.\n\r",(LONGLONG)ch->bank);
     send_to_char(buf,ch);
     return(TRUE);
   } else if ((cmd==228)||(cmd==229)) {  /* deposit or withdraw */
@@ -1825,7 +1848,7 @@ int bank(struct char_data *ch, int cmd, char *arg)
       return(TRUE);
     }
     arg=one_argument(arg, buf);
-    amt=atoi(buf);
+    amt=atoll(buf);
     if(amt <= 0){
       send_to_char("The banker says 'Amount must be positive.'\n\r",ch);
       return(TRUE);

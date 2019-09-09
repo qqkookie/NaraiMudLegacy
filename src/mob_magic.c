@@ -5,6 +5,7 @@
 ************************************************************************* */
 
 #include <stdio.h>
+#include <string.h>
 #include <assert.h>
 #include "structs.h"
 #include "utils.h"
@@ -26,7 +27,7 @@ extern struct index_data *mob_index;
 void damage(struct char_data *ch, struct char_data *victim,
             int damage, int weapontype);
 bool saves_spell(struct char_data *ch, sh_int spell);
-char *strdup(char *source);
+// char *strdup(char *source);
 int dice(int number, int size);
 void hit(struct char_data *ch, struct char_data *victim, int type);
 void stop_fighting(struct char_data *ch);
@@ -75,7 +76,7 @@ void mob_punch_drop(struct char_data *ch, struct char_data *victim) {
   char buffer[MAX_STRING_LENGTH];
   struct obj_data *tmp_object;
   struct obj_data *next_obj;
-  bool test = FALSE;
+  // bool test = FALSE;
   
   /* punch out equipments  */
   for (i=0; i< MAX_WEAR; i++) {
@@ -110,7 +111,7 @@ void mob_punch_drop(struct char_data *ch, struct char_data *victim) {
 	    tmp_object, 0, TO_ROOM);
           obj_from_char(tmp_object);
           obj_to_room(tmp_object,ch->in_room);
-          test = TRUE;
+          // test = TRUE;
         }
       }
 }

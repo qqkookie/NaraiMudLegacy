@@ -5,6 +5,7 @@
 ************************************************************************* */
 
 #include <stdio.h>
+#include <string.h>
 #include <assert.h>
 #include "structs.h"
 #include "utils.h"
@@ -30,7 +31,7 @@ void damage(struct char_data *ch, struct char_data *victim,
             int damage, int weapontype);
 bool saves_spell(struct char_data *ch, int spell);
 void weight_change_object(struct obj_data *obj, int weight);
-char *strdup(char *source);
+// char *strdup(char *source);
 int dice(int number, int size);
 void do_look(struct char_data *ch, char *argument, int cmd);
 int number(int from, int to);
@@ -302,6 +303,8 @@ void spell_create_food(byte level, struct char_data *ch,
 	obj_to_room(tmp_obj,ch->in_room);
 
 	tmp_obj->item_number = -1;
+	// BUG FIX!! rent bug!
+	SET_BIT(tmp_obj->obj_flags.extra_flags, ITEM_NORENT);
 
 	act("$p suddenly appears.",TRUE,ch,tmp_obj,0,TO_ROOM);
 	act("$p suddenly appears.",TRUE,ch,tmp_obj,0,TO_CHAR);
@@ -542,7 +545,7 @@ void spell_curse(byte level, struct char_data *ch,
 		SET_BIT(obj->obj_flags.extra_flags, ITEM_NODROP);
 		if(obj->obj_flags.type_flag == ITEM_WEAPON)
 			obj->obj_flags.value[2] -= GET_LEVEL(ch) / 2;
-			act("$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
+		act("$p glows red.", FALSE, ch, obj, 0, TO_CHAR);
 	}
 	else {
 		if (saves_spell(victim, SAVING_PARA) ||
@@ -742,7 +745,7 @@ void spell_enchant_weapon(byte level, struct char_data *ch,
 		} /* by process */
 	}
 
-	if ((GET_ITEM_TYPE(obj) == ITEM_WEAPON)) {
+	if (GET_ITEM_TYPE(obj) == ITEM_WEAPON) {
 		INCREASE_SKILLED2(ch, ch, SPELL_ENCHANT_WEAPON);
 		SET_BIT(obj->obj_flags.extra_flags, ITEM_NORENT);
 		if (!IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {
@@ -779,7 +782,10 @@ void spell_enchant_weapon(byte level, struct char_data *ch,
 			if (number(0,1800) == 444) {
 				obj->obj_flags.value[1] *= (2 + number(0, 4));	
 				act("$p laughs evily. 'FU HA HA HA'",FALSE,ch,obj,0,TO_CHAR);
-				GET_HIT(ch) =- 3;
+				// BUG FIX?????
+				// GET_HIT(ch) =- 3;
+				GET_HIT(ch) = -3;
+
 			}
 			if (number(0,18000) == 888) {
 		/*	if (number(0,1800) == 888) {	*/
@@ -943,7 +949,7 @@ void spell_enchant_armor(byte level, struct char_data *ch,
 			return;
 		}
 	}
-	if ((GET_ITEM_TYPE(obj) == ITEM_ARMOR)) {
+	if (GET_ITEM_TYPE(obj) == ITEM_ARMOR) {
 		INCREASE_SKILLED2(ch, ch, SPELL_ENCHANT_ARMOR);
 		SET_BIT(obj->obj_flags.extra_flags,ITEM_NORENT);
 		if (!IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {
@@ -1046,7 +1052,7 @@ void spell_pray_for_armor(byte level, struct char_data *ch,
 			return;
 		}
 	}
-	if ((GET_ITEM_TYPE(obj) == ITEM_ARMOR)) {
+	if (GET_ITEM_TYPE(obj) == ITEM_ARMOR) {
 		INCREASE_SKILLED2(ch, ch, SPELL_PRAY_FOR_ARMOR);
 		SET_BIT(obj->obj_flags.extra_flags,ITEM_NORENT);
 		if (!IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {
@@ -1949,3 +1955,4 @@ void spell_clone(byte level, struct char_data *ch,
 		send_to_char("You may not clone THAT!\n\r",ch);
 	}
 }
+

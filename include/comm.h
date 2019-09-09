@@ -33,3 +33,11 @@ void write_to_q(char *txt, struct txt_q *queue);
 #define BADDOMS 16
 int baddoms;
 char baddomain[BADDOMS][32];
+
+// Kuldge to convert deprecated sigsetmask() call to sigprocmask() call
+
+#define __mask_mask mask
+#define __mask_0 __unmask
+extern sigset_t __unmask;
+#define sigsetmask(set) 	sigprocmask(SIG_SETMASK, (const sigset_t *) &(__mask_##set) , NULL)
+

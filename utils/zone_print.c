@@ -2,7 +2,7 @@
 	zone list program by atre@paradise.kaist.ac.kr
 	usage : zone [options] zone-file
 	options
-		-M -O, -G, -P, -R, -E, -D : diable display-command
+		-M -O, -G, -P, -R, -E, -D : disable display-command
 		-N : print mobile if maximum is 1
 */
 #include <stdio.h>
@@ -11,8 +11,15 @@
 #include <time.h>
 #include <stdlib.h>
 
-#include "../../structs.h"
-#include "../../utils.h"
+#include "structs.h"
+#include "utils.h"
+
+#undef log
+
+#define log(str) mylog(str)
+#define mylog(str) fprintf(stderr, str)
+
+char *fread_string(FILE *fl);
 
 int Mflag = 1;
 int Oflag = 1;
@@ -126,14 +133,15 @@ void PrintZone(char command, int if_flag, int arg1, int arg2, int arg3)
 void ReadZone(FILE *fp)
 {
 	char *name;
-	int lifespan, age, top;
+	int lifespan, /* age, */ top;
 	int reset_mode;
-	int zon = 0, cmd_no = 0, expand;
+	// int zon = 0, cmd_no = 0 , expand;
 	char command;
 	int arg1, arg2, arg3, if_flag;
-	char *check, buf[81];
-	char file_name[100];
-	int len;
+	// char *check, buf[81];
+	// char file_name[100];
+	// int len;
+	char buf[81];
 
 	name = fread_string(fp);
 
@@ -177,7 +185,7 @@ void ReadZone(FILE *fp)
 	}
 }
 
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int i;
 	char *filename;
@@ -234,3 +242,75 @@ void main(int argc, char **argv)
 
 	fclose(fp);
 }
+
+// ==============================================================
+
+
+/* clear char_data */
+void clear_char(struct char_data *ch)
+{
+  bzero(ch, sizeof(struct char_data));
+
+  ch->in_room = NOWHERE;
+  ch->specials.was_in_room = NOWHERE;
+  ch->specials.position = POSITION_STANDING;
+  ch->specials.default_pos = POSITION_STANDING;
+  GET_AC(ch) = 1; /* Basic Armor */
+}
+
+/* read and allocate space for a '~'-terminated string from a given file */
+char *fread_string(FILE *fl)
+{
+  char buf[MAX_STRING_LENGTH], tmp[MAX_STRING_LENGTH];
+  char *rslt;
+  register char *point;
+  int flag;
+
+  bzero(buf, MAX_STRING_LENGTH);
+  do
+  {
+    if (!fgets(tmp, MAX_STRING_LENGTH, fl))
+    {
+      log("fread_str");
+      exit(0);
+    }
+    if (strlen(tmp) + strlen(buf) > MAX_STRING_LENGTH)
+    {
+      log("fread_string: string too large (db.c)");
+      buf[70]=0;
+      fprintf(stderr,"%s\n",buf);
+      exit(0);
+    }
+    else
+      strcat(buf, tmp);
+
+    for (point = buf + strlen(buf) - 2; point >= buf && isspace(*point);
+      point--);    
+    if ((flag = (*point == '~')))
+      if (*(buf + strlen(buf) - 3) == '\n')
+      {
+        *(buf + strlen(buf) - 2) = '\r';
+        *(buf + strlen(buf) - 1) = '\0';
+      }
+      else
+        *(buf + strlen(buf) -2) = '\0';
+    else
+    {
+      *(buf + strlen(buf) + 1) = '\0';
+      *(buf + strlen(buf)) = '\r';
+    }
+  }
+  while (!flag);
+
+  /* do the allocate boogie  */
+
+  if (strlen(buf) > 0)
+  {
+    CREATE(rslt, char, strlen(buf) + 1);
+    strcpy(rslt, buf);
+  }
+  else
+    rslt = 0;
+  return(rslt);
+}
+

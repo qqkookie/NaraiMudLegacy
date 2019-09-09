@@ -1,750 +1,585 @@
-BIN 	= ../bin
-PROG 	=  $(BIN)/nms.new
-
-MAKE	= gmake	
-CC	= gcc 
-LD 	= $(CC)
-MKDEP	= makedepend
-
-
-INCLUDE	= -I../include -I/usr/include
-# DFLAGS	= -DHAVE_TERMIOS_H 
-#DFLAGS	= 
-
-# LFLAGS	= libdescrypt.a
-LFLAGS	= -lcrypt
-# LFLAGS 		= 
-
-OFLAGS	= -O -Wall -g -pipe
 #
-# MFLAGS: SYPARK RETURN_TO_QUIT RESTART_BONUS INIT_BARE_HAND GHOST
-#         OldMobileFormat New_STASH OLD_DAM_MESSAGE OLD_PARRY
-#         OLD_MIRROR_IMAGE RESET_ZONE_BY_WIZARD OldMobAct
+# Makefile for Narai MUD
 #
+# For GNU make only. For BSD make, use Makefile-bsdmake.
 
+PROG    = mud-narai
+INCDIR  = ../include
+UTLSRC  = ../utils
+OBJDIR  = ./obj
+INSTDIR = ../bin
+VPATH   = .:$(INCDIR):$(UTLSRC):
 
-MFLAGS	=  -DIMO=41 -DSYPARK -DRETURN_TO_QUIT -DRESTART_BONUS
+# CC    = cc
+CC      = gcc
+MAKE    = gmake
+LD      = $(CC)
 
-CFLAGS	= $(OFLAGS) $(MFLAGS) $(DFLAGS) $(INCLUDE)
+OFLAGS  = -Wall -g -pipe
 
-SRCS	= \
+INCLUDE = -I$(INCDIR)
+
+# MFLAGS: SYPARK RETURN_TO_QUIT INIT_BARE_HAND GHOST
+#         OldMobileFormat OLD_DAM_MESSAGE OLD_PARRY
+#         OLD_MIRROR_IMAGE OldMobAct
+#
+# MFLAGS    = -DIMO=41 -DRETURN_TO_QUIT
+#
+# MFLAGS are moved to include/db.h
+
+DFLAGS=
+
+CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)
+
+# LDFLAGS    = libdescrypt.a
+LDFLAGS  = -lcrypt -g
+
+SRCS    = \
 	act.comm.c act.informative.c act.movement.c act.obj1.c act.obj2.c \
 	act.offensive.c act.other.c act.social.c act.wizard.c board.c comm.c \
 	constants.c db.c fight.c guild_command.c guild_constant.c \
-	guild_informative.c guild_skills.c handler.c interpreter.c limits.c \
+	guild_informative.c guild_skills.c handler.c interpreter.c limit.c \
 	magic.c magic2.c magic3.c magic_weapon.c mail.c mob_magic.c mobact.c \
 	modify.c newcom.c quest.c shop.c spec_assign.c spec_procs.c \
 	spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c \
 	spells3.c utility.c version.c weather.c daerimsa.c gbisland.c
 
-OBJS 	= $(SRCS:%.c=../obj/%.o)
+UTILS       = change_level change_pass change_stashform check_pass \
+              check_player list_player mob_create mob_edit zone_item \
+              zone_list zone_print mob_balance
 
-# UTILS = list change_level check_pass change_pass cps
-SCRS = everun backup RESTART RUNME shutmud
+# SCRIPTS     = everun backup RESTART RUNME shutmud
+SCRIPTS     = runmud.sh
 
-ALL_SRCS = $(SRCS) Makefile
+OBJS        = $(SRCS:%.c=$(OBJDIR)/%.o)
+PROG_BIN    = $(OBJDIR)/$(PROG)
+U_BINS      = $(UTILS:%=$(OBJDIR)/%)
+CTAGS_SRC   = $(SRCS) $(INCDIR)/*.h
 
-../obj/%.o:  %.c
+$(OBJDIR)/%.o :  %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
-../bin/%:
-	$(CC) $(CFLAGS) $(LFLAGS) -o $@ $<
 
-default	: mud
+$(OBJDIR)/% :  %.o
+	$(LD) -o $@ $< $(LDFLAGS)
 
-all:	clean depend mud utils
+default :    objdir $(PROG_BIN) 
 
-mud :	$(PROG) 
+all:    $(PROG_BIN) utils
 
-depend	: 
-	$(MKDEP) -Y -p ../obj/ $(MFLAGS) $(DFLAGS) $(INCLUDE) $(SRCS) $(USRCS)
-	ctags $(SRCS) ../include/*.h 
+$(PROG_BIN) : $(OBJS)
+	$(LD) -o $@ $^ $(LDFLAGS)
 
-$(PROG) : $(OBJS) 
-	$(LD) -o $@ $^ $(LFLAGS)
+objdir:
+	if [ ! -d $(OBJDIR) ] ; then mkdir $(OBJDIR); fi
 
-utils : $(UPROGS) 
-	- /bin/cp -p $(SCRIPTS) $(BIN)
-	- /bin/ln -s $(UPROGS) ../users 
+utils : $(U_BINS)
 
-$(UPROGS) : $(USRCS)
+clean:
+	- /bin/rm -f $(OBJS) $(UTILS:%=$(OBJDIR)/%.o) tags core 
+	- /bin/rm -f $(PROG_BIN) $(U_BINS)
 
-install : $(PROG) utils
-	- /bin/mv -f $(PROG).run $(PROG).bak
-	- /bin/mv -f $(PROG) $(PROG).run
+install : $(PROG_BIN) $(U_BINS)
+	- if [ -x $(INSTDIR)/$(PROG).run ] ; then \
+	      /bin/mv -f $(INSTDIR)/$(PROG).run $(INSTDIR)/$(PROG).old ; fi
+	/bin/cp -p $(PROG_BIN) $(INSTDIR)/$(PROG).new
+	/bin/cp -p $(U_BINS) $(INSTDIR)
+	/bin/cp -p $(SCRIPTS:%=$(UTLSRC)/%) $(INSTDIR)
 
 uninstall :
+	- /bin/rm -f $(INSTDIR)/$(PROG).run $(INSTDIR)/$(PROG).old
+	- /bin/rm -f $(UTILS:%=$(INSTDIR)/%) $(SCRIPTS:%=$(INSTDIR)/%)
 
-clean	:
-	- /bin/rm -f $(OBJS) $(PROGNAME)
-	- /bin/rm -f Makefile.bak tags core tmp* 
+ctags :
+	- ctags $(CTAGS_SRC)
 
-print	: $(ALL_SRCS)
-	for f in $(ALL_SRCS) ; do \
-	if [ "$$f" -nt .pr-time ] ; then \
-		jjjps -F8 $$f | lpr ;\
-	fi ; done ;
-	date > .pr-time
+
+#======================================================================
 
 # DO NOT DELETE
 
-../obj/act.comm.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.comm.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.comm.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/act.comm.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/act.comm.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/act.comm.o: ../include/limits.h /usr/include/machine/types.h
-../obj/act.comm.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.comm.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.comm.o: /usr/include/sys/string.h /usr/include/assert.h
-../obj/act.comm.o: ../include/structs.h /usr/include/stdlib.h
-../obj/act.comm.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/act.comm.o: ../include/utils.h ../include/comm.h
-../obj/act.comm.o: ../include/interpreter.h ../include/handler.h
-../obj/act.comm.o: ../include/db.h /usr/include/errno.h
-../obj/act.comm.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/act.informative.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.informative.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.informative.o: /usr/include/machine/ieeefp.h
-../obj/act.informative.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
-../obj/act.informative.o: /usr/include/sys/lock.h /usr/include/sys/types.h
-../obj/act.informative.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/act.informative.o: /usr/include/machine/types.h
-../obj/act.informative.o: /usr/include/sys/features.h
-../obj/act.informative.o: /usr/include/sys/stdio.h /usr/include/sys/cdefs.h
-../obj/act.informative.o: /usr/include/string.h /usr/include/sys/string.h
-../obj/act.informative.o: /usr/include/ctype.h /usr/include/time.h
-../obj/act.informative.o: /usr/include/machine/time.h /usr/include/errno.h
-../obj/act.informative.o: /usr/include/sys/errno.h /usr/include/stdlib.h
-../obj/act.informative.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/act.informative.o: ../include/structs.h ../include/utils.h
-../obj/act.informative.o: ../include/comm.h ../include/interpreter.h
-../obj/act.informative.o: ../include/handler.h ../include/db.h
-../obj/act.informative.o: ../include/spells.h ../include/guild_list.h
-../obj/act.movement.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.movement.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.movement.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/act.movement.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/act.movement.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/act.movement.o: ../include/limits.h /usr/include/machine/types.h
-../obj/act.movement.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.movement.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.movement.o: /usr/include/sys/string.h ../include/structs.h
-../obj/act.movement.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/act.movement.o: /usr/include/alloca.h ../include/utils.h
-../obj/act.movement.o: ../include/comm.h ../include/interpreter.h
-../obj/act.movement.o: ../include/handler.h ../include/db.h
-../obj/act.movement.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/act.movement.o: ../include/spells.h ../include/guild_list.h
-../obj/act.obj1.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.obj1.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.obj1.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/act.obj1.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/act.obj1.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/act.obj1.o: ../include/limits.h /usr/include/machine/types.h
-../obj/act.obj1.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.obj1.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.obj1.o: /usr/include/sys/string.h ../include/structs.h
-../obj/act.obj1.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/act.obj1.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/act.obj1.o: ../include/interpreter.h ../include/handler.h
-../obj/act.obj1.o: ../include/db.h /usr/include/errno.h
-../obj/act.obj1.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/act.obj2.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.obj2.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.obj2.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/act.obj2.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/act.obj2.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/act.obj2.o: ../include/limits.h /usr/include/machine/types.h
-../obj/act.obj2.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.obj2.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.obj2.o: /usr/include/sys/string.h /usr/include/assert.h
-../obj/act.obj2.o: ../include/structs.h /usr/include/stdlib.h
-../obj/act.obj2.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/act.obj2.o: ../include/utils.h ../include/comm.h
-../obj/act.obj2.o: ../include/interpreter.h ../include/handler.h
-../obj/act.obj2.o: ../include/db.h /usr/include/errno.h
-../obj/act.obj2.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/act.offensive.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.offensive.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.offensive.o: /usr/include/machine/ieeefp.h
-../obj/act.offensive.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
-../obj/act.offensive.o: /usr/include/sys/lock.h /usr/include/sys/types.h
-../obj/act.offensive.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/act.offensive.o: /usr/include/machine/types.h
-../obj/act.offensive.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.offensive.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.offensive.o: /usr/include/sys/string.h ../include/structs.h
-../obj/act.offensive.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/act.offensive.o: /usr/include/alloca.h ../include/utils.h
-../obj/act.offensive.o: ../include/comm.h ../include/interpreter.h
-../obj/act.offensive.o: ../include/handler.h ../include/db.h
-../obj/act.offensive.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/act.offensive.o: ../include/spells.h ../include/guild_list.h
-../obj/act.other.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.other.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.other.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/act.other.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/act.other.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/act.other.o: ../include/limits.h /usr/include/machine/types.h
-../obj/act.other.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.other.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.other.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/act.other.o: ../include/structs.h /usr/include/stdlib.h
-../obj/act.other.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/act.other.o: ../include/utils.h ../include/comm.h
-../obj/act.other.o: ../include/interpreter.h ../include/handler.h
-../obj/act.other.o: ../include/db.h /usr/include/errno.h
-../obj/act.other.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/act.other.o: ../include/guild_list.h
-../obj/act.social.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.social.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.social.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/act.social.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/act.social.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/act.social.o: ../include/limits.h /usr/include/machine/types.h
-../obj/act.social.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.social.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.social.o: /usr/include/sys/string.h ../include/structs.h
-../obj/act.social.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/act.social.o: /usr/include/alloca.h ../include/utils.h
-../obj/act.social.o: ../include/comm.h ../include/interpreter.h
-../obj/act.social.o: ../include/handler.h ../include/db.h
-../obj/act.social.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/act.social.o: ../include/spells.h
-../obj/act.wizard.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/act.wizard.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/act.wizard.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/act.wizard.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/act.wizard.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/act.wizard.o: ../include/limits.h /usr/include/machine/types.h
-../obj/act.wizard.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/act.wizard.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/act.wizard.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/act.wizard.o: /usr/include/assert.h /usr/include/time.h
-../obj/act.wizard.o: /usr/include/machine/time.h /usr/include/sys/time.h
-../obj/act.wizard.o: /usr/include/sys/resource.h ../include/structs.h
-../obj/act.wizard.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/act.wizard.o: /usr/include/alloca.h ../include/utils.h
-../obj/act.wizard.o: ../include/comm.h ../include/interpreter.h
-../obj/act.wizard.o: ../include/handler.h ../include/db.h
-../obj/act.wizard.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/act.wizard.o: ../include/spells.h
-../obj/board.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/board.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/board.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/board.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/board.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/board.o: ../include/limits.h /usr/include/machine/types.h
-../obj/board.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/board.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/board.o: /usr/include/sys/string.h /usr/include/fcntl.h
-../obj/board.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
-../obj/board.o: /usr/include/time.h /usr/include/machine/time.h
-../obj/board.o: /usr/include/ctype.h ../include/structs.h
-../obj/board.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/board.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/board.o: ../include/db.h /usr/include/errno.h /usr/include/sys/errno.h
-../obj/comm.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/comm.o: /usr/include/sys/reent.h /usr/include/_ansi.h
-../obj/comm.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/comm.o: /usr/include/machine/ieeefp.h /usr/include/sys/_types.h
-../obj/comm.o: /usr/include/sys/lock.h /usr/include/stdio.h
-../obj/comm.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/comm.o: ../include/limits.h /usr/include/machine/types.h
-../obj/comm.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/comm.o: /usr/include/sys/cdefs.h /usr/include/ctype.h
-../obj/comm.o: /usr/include/sys/socket.h /usr/include/features.h
-../obj/comm.o: /usr/include/cygwin/socket.h /usr/include/stdint.h
-../obj/comm.o: /usr/include/asm/socket.h /usr/include/cygwin/if.h
-../obj/comm.o: /usr/include/cygwin/sockios.h /usr/include/sys/uio.h
-../obj/comm.o: /usr/include/sys/time.h /usr/include/sys/wait.h
-../obj/comm.o: /usr/include/sys/resource.h /usr/include/cygwin/wait.h
-../obj/comm.o: /usr/include/netinet/in.h /usr/include/cygwin/in.h
-../obj/comm.o: /usr/include/asm/byteorder.h /usr/include/arpa/inet.h
-../obj/comm.o: /usr/include/netdb.h /usr/include/string.h
-../obj/comm.o: /usr/include/sys/string.h /usr/include/fcntl.h
-../obj/comm.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
-../obj/comm.o: /usr/include/time.h /usr/include/machine/time.h
-../obj/comm.o: /usr/include/signal.h /usr/include/sys/signal.h
-../obj/comm.o: /usr/include/setjmp.h /usr/include/machine/setjmp.h
-../obj/comm.o: /usr/include/unistd.h /usr/include/sys/unistd.h
-../obj/comm.o: ../include/structs.h /usr/include/stdlib.h
-../obj/comm.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/comm.o: ../include/utils.h ../include/comm.h ../include/interpreter.h
-../obj/comm.o: ../include/handler.h ../include/db.h ../include/cygwin.h
-../obj/comm.o: /usr/include/sys/ioctl.h
-../obj/constants.o: ../include/structs.h /usr/include/sys/types.h
-../obj/constants.o: /usr/include/_ansi.h /usr/include/newlib.h
-../obj/constants.o: /usr/include/sys/config.h /usr/include/machine/ieeefp.h
-../obj/constants.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/constants.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/constants.o: /usr/include/machine/types.h /usr/include/sys/features.h
-../obj/constants.o: /usr/include/stdlib.h /usr/include/sys/reent.h
-../obj/constants.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/db.o: /usr/include/stdio.h /usr/include/_ansi.h /usr/include/newlib.h
-../obj/db.o: /usr/include/sys/config.h /usr/include/machine/ieeefp.h
-../obj/db.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
-../obj/db.o: /usr/include/sys/lock.h /usr/include/sys/types.h
-../obj/db.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/db.o: /usr/include/machine/types.h /usr/include/sys/features.h
-../obj/db.o: /usr/include/sys/stdio.h /usr/include/sys/cdefs.h
-../obj/db.o: /usr/include/unistd.h /usr/include/sys/unistd.h
-../obj/db.o: /usr/include/string.h /usr/include/sys/string.h
-../obj/db.o: /usr/include/ctype.h /usr/include/time.h
-../obj/db.o: /usr/include/machine/time.h /usr/include/signal.h
-../obj/db.o: /usr/include/sys/signal.h ../include/structs.h
-../obj/db.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/db.o: /usr/include/alloca.h ../include/utils.h ../include/db.h
-../obj/db.o: /usr/include/errno.h /usr/include/sys/errno.h ../include/comm.h
-../obj/db.o: ../include/handler.h ../include/spells.h mob_bal.c
-../obj/db.o: ../include/cygwin.h
-../obj/fight.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/fight.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/fight.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/fight.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/fight.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/fight.o: ../include/limits.h /usr/include/machine/types.h
-../obj/fight.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/fight.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/fight.o: /usr/include/sys/string.h /usr/include/assert.h
-../obj/fight.o: ../include/structs.h /usr/include/stdlib.h
-../obj/fight.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/fight.o: ../include/utils.h ../include/comm.h ../include/handler.h
-../obj/fight.o: ../include/interpreter.h ../include/db.h /usr/include/errno.h
-../obj/fight.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/fight.o: ../include/guild_list.h
-../obj/guild_command.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/guild_command.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/guild_command.o: /usr/include/machine/ieeefp.h
-../obj/guild_command.o: /usr/include/sys/reent.h /usr/include/sys/_types.h
-../obj/guild_command.o: /usr/include/sys/lock.h /usr/include/sys/types.h
-../obj/guild_command.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/guild_command.o: /usr/include/machine/types.h
-../obj/guild_command.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/guild_command.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/guild_command.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/guild_command.o: ../include/structs.h /usr/include/stdlib.h
-../obj/guild_command.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/guild_command.o: ../include/utils.h ../include/comm.h
-../obj/guild_command.o: ../include/interpreter.h ../include/handler.h
-../obj/guild_command.o: ../include/db.h /usr/include/errno.h
-../obj/guild_command.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/guild_command.o: ../include/guild_list.h
-../obj/guild_constant.o: ../include/structs.h /usr/include/sys/types.h
-../obj/guild_constant.o: /usr/include/_ansi.h /usr/include/newlib.h
-../obj/guild_constant.o: /usr/include/sys/config.h
-../obj/guild_constant.o: /usr/include/machine/ieeefp.h
-../obj/guild_constant.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/guild_constant.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/guild_constant.o: /usr/include/machine/types.h
-../obj/guild_constant.o: /usr/include/sys/features.h /usr/include/stdlib.h
-../obj/guild_constant.o: /usr/include/sys/reent.h
-../obj/guild_constant.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/guild_constant.o: ../include/guild_list.h
-../obj/guild_informative.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/guild_informative.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/guild_informative.o: /usr/include/machine/ieeefp.h
-../obj/guild_informative.o: /usr/include/sys/reent.h
-../obj/guild_informative.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/guild_informative.o: /usr/include/sys/types.h
-../obj/guild_informative.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/guild_informative.o: /usr/include/machine/types.h
-../obj/guild_informative.o: /usr/include/sys/features.h
-../obj/guild_informative.o: /usr/include/sys/stdio.h /usr/include/sys/cdefs.h
-../obj/guild_informative.o: /usr/include/string.h /usr/include/sys/string.h
-../obj/guild_informative.o: /usr/include/ctype.h /usr/include/time.h
-../obj/guild_informative.o: /usr/include/machine/time.h /usr/include/assert.h
-../obj/guild_informative.o: ../include/structs.h /usr/include/stdlib.h
-../obj/guild_informative.o: /usr/include/machine/stdlib.h
-../obj/guild_informative.o: /usr/include/alloca.h ../include/utils.h
-../obj/guild_informative.o: ../include/comm.h ../include/interpreter.h
-../obj/guild_informative.o: ../include/handler.h ../include/db.h
-../obj/guild_informative.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/guild_informative.o: ../include/spells.h ../include/guild_list.h
-../obj/guild_skills.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/guild_skills.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/guild_skills.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/guild_skills.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/guild_skills.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/guild_skills.o: ../include/limits.h /usr/include/machine/types.h
-../obj/guild_skills.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/guild_skills.o: /usr/include/sys/cdefs.h /usr/include/assert.h
-../obj/guild_skills.o: ../include/structs.h /usr/include/stdlib.h
-../obj/guild_skills.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/guild_skills.o: ../include/utils.h ../include/comm.h
-../obj/guild_skills.o: ../include/spells.h ../include/handler.h
-../obj/guild_skills.o: ../include/db.h /usr/include/errno.h
-../obj/guild_skills.o: /usr/include/sys/errno.h ../include/guild_list.h
-../obj/handler.o: /usr/include/string.h /usr/include/_ansi.h
-../obj/handler.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/handler.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/handler.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/handler.o: /usr/include/sys/string.h /usr/include/stdio.h
-../obj/handler.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/handler.o: ../include/limits.h /usr/include/machine/types.h
-../obj/handler.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/handler.o: /usr/include/sys/cdefs.h /usr/include/ctype.h
-../obj/handler.o: /usr/include/assert.h ../include/structs.h
-../obj/handler.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/handler.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/handler.o: ../include/db.h /usr/include/errno.h
-../obj/handler.o: /usr/include/sys/errno.h ../include/handler.h
-../obj/handler.o: ../include/spells.h ../include/guild_list.h
-../obj/interpreter.o: /usr/include/string.h /usr/include/_ansi.h
-../obj/interpreter.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/interpreter.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/interpreter.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/interpreter.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/interpreter.o: /usr/include/stdio.h /usr/include/sys/types.h
-../obj/interpreter.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/interpreter.o: /usr/include/machine/types.h
-../obj/interpreter.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/interpreter.o: /usr/include/sys/cdefs.h /usr/include/termio.h
-../obj/interpreter.o: /usr/include/sys/termio.h /usr/include/sys/termios.h
-../obj/interpreter.o: /usr/include/sys/uio.h /usr/include/unistd.h
-../obj/interpreter.o: /usr/include/sys/unistd.h /usr/include/sys/socket.h
-../obj/interpreter.o: /usr/include/features.h /usr/include/cygwin/socket.h
-../obj/interpreter.o: /usr/include/stdint.h /usr/include/asm/socket.h
-../obj/interpreter.o: /usr/include/cygwin/if.h /usr/include/cygwin/sockios.h
-../obj/interpreter.o: /usr/include/sys/time.h /usr/include/netinet/in.h
-../obj/interpreter.o: /usr/include/cygwin/in.h /usr/include/asm/byteorder.h
-../obj/interpreter.o: /usr/include/arpa/inet.h /usr/include/arpa/telnet.h
-../obj/interpreter.o: ../include/structs.h /usr/include/stdlib.h
-../obj/interpreter.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/interpreter.o: ../include/comm.h ../include/interpreter.h
-../obj/interpreter.o: ../include/db.h /usr/include/errno.h
-../obj/interpreter.o: /usr/include/sys/errno.h ../include/utils.h
-../obj/limits.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/limits.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/limits.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/limits.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/limits.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/limits.o: ../include/limits.h /usr/include/machine/types.h
-../obj/limits.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/limits.o: /usr/include/sys/cdefs.h /usr/include/assert.h
-../obj/limits.o: ../include/structs.h /usr/include/stdlib.h
-../obj/limits.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/limits.o: ../include/utils.h ../include/spells.h ../include/comm.h
-../obj/limits.o: ../include/guild_list.h
-../obj/magic.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/magic.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/magic.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/magic.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/magic.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/magic.o: ../include/limits.h /usr/include/machine/types.h
-../obj/magic.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/magic.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/magic.o: /usr/include/sys/string.h /usr/include/assert.h
-../obj/magic.o: ../include/structs.h /usr/include/stdlib.h
-../obj/magic.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/magic.o: ../include/utils.h ../include/comm.h ../include/spells.h
-../obj/magic.o: ../include/handler.h ../include/db.h /usr/include/errno.h
-../obj/magic.o: /usr/include/sys/errno.h ../include/guild_list.h
-../obj/magic.o: ../include/magic_weapon.h
-../obj/magic2.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/magic2.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/magic2.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/magic2.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/magic2.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/magic2.o: ../include/limits.h /usr/include/machine/types.h
-../obj/magic2.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/magic2.o: /usr/include/sys/cdefs.h /usr/include/assert.h
-../obj/magic2.o: ../include/structs.h /usr/include/stdlib.h
-../obj/magic2.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/magic2.o: ../include/utils.h ../include/comm.h ../include/spells.h
-../obj/magic2.o: ../include/handler.h ../include/db.h /usr/include/errno.h
-../obj/magic2.o: /usr/include/sys/errno.h ../include/magic_weapon.h
-../obj/magic2.o: ../include/guild_list.h
-../obj/magic3.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/magic3.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/magic3.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/magic3.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/magic3.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/magic3.o: ../include/limits.h /usr/include/machine/types.h
-../obj/magic3.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/magic3.o: /usr/include/sys/cdefs.h /usr/include/assert.h
-../obj/magic3.o: ../include/structs.h /usr/include/stdlib.h
-../obj/magic3.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/magic3.o: ../include/utils.h ../include/comm.h ../include/spells.h
-../obj/magic3.o: ../include/handler.h ../include/db.h /usr/include/errno.h
-../obj/magic3.o: /usr/include/sys/errno.h ../include/guild_list.h
-../obj/magic_weapon.o: ../include/structs.h /usr/include/sys/types.h
-../obj/magic_weapon.o: /usr/include/_ansi.h /usr/include/newlib.h
-../obj/magic_weapon.o: /usr/include/sys/config.h
-../obj/magic_weapon.o: /usr/include/machine/ieeefp.h
-../obj/magic_weapon.o: /usr/include/machine/_types.h ../include/limits.h
-../obj/magic_weapon.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/magic_weapon.o: /usr/include/machine/types.h
-../obj/magic_weapon.o: /usr/include/sys/features.h /usr/include/stdlib.h
-../obj/magic_weapon.o: /usr/include/sys/reent.h /usr/include/machine/stdlib.h
-../obj/magic_weapon.o: /usr/include/alloca.h ../include/comm.h
-../obj/magic_weapon.o: ../include/magic_weapon.h ../include/utils.h
-../obj/magic_weapon.o: ../include/spells.h
-../obj/mail.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/mail.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/mail.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/mail.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/mail.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/mail.o: ../include/limits.h /usr/include/machine/types.h
-../obj/mail.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/mail.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/mail.o: /usr/include/sys/string.h /usr/include/fcntl.h
-../obj/mail.o: /usr/include/sys/fcntl.h /usr/include/sys/stat.h
-../obj/mail.o: /usr/include/time.h /usr/include/machine/time.h
-../obj/mail.o: ../include/structs.h /usr/include/stdlib.h
-../obj/mail.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/mail.o: ../include/utils.h ../include/comm.h ../include/db.h
-../obj/mail.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/mail.o: ../include/handler.h ../include/interpreter.h
-../obj/mob_magic.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/mob_magic.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/mob_magic.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/mob_magic.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/mob_magic.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/mob_magic.o: ../include/limits.h /usr/include/machine/types.h
-../obj/mob_magic.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/mob_magic.o: /usr/include/sys/cdefs.h /usr/include/assert.h
-../obj/mob_magic.o: ../include/structs.h /usr/include/stdlib.h
-../obj/mob_magic.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/mob_magic.o: ../include/utils.h ../include/comm.h ../include/spells.h
-../obj/mob_magic.o: ../include/handler.h ../include/db.h /usr/include/errno.h
-../obj/mob_magic.o: /usr/include/sys/errno.h ../include/mob_magic.h
-../obj/mobact.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/mobact.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/mobact.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/mobact.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/mobact.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/mobact.o: ../include/limits.h /usr/include/machine/types.h
-../obj/mobact.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/mobact.o: /usr/include/sys/cdefs.h ../include/structs.h
-../obj/mobact.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/mobact.o: /usr/include/alloca.h ../include/db.h /usr/include/errno.h
-../obj/mobact.o: /usr/include/sys/errno.h ../include/comm.h
-../obj/mobact.o: ../include/spells.h ../include/utils.h
-../obj/modify.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/modify.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/modify.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/modify.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/modify.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/modify.o: ../include/limits.h /usr/include/machine/types.h
-../obj/modify.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/modify.o: /usr/include/sys/cdefs.h /usr/include/ctype.h
-../obj/modify.o: /usr/include/string.h /usr/include/sys/string.h
-../obj/modify.o: /usr/include/time.h /usr/include/machine/time.h
-../obj/modify.o: ../include/structs.h /usr/include/stdlib.h
-../obj/modify.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/modify.o: ../include/utils.h ../include/interpreter.h
-../obj/modify.o: ../include/handler.h ../include/db.h /usr/include/errno.h
-../obj/modify.o: /usr/include/sys/errno.h ../include/comm.h
-../obj/newcom.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/newcom.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/newcom.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/newcom.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/newcom.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/newcom.o: ../include/limits.h /usr/include/machine/types.h
-../obj/newcom.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/newcom.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/newcom.o: /usr/include/sys/string.h ../include/structs.h
-../obj/newcom.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/newcom.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/newcom.o: ../include/interpreter.h ../include/handler.h
-../obj/newcom.o: ../include/db.h /usr/include/errno.h
-../obj/newcom.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/quest.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/quest.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/quest.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/quest.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/quest.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/quest.o: ../include/limits.h /usr/include/machine/types.h
-../obj/quest.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/quest.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/quest.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/quest.o: /usr/include/time.h /usr/include/machine/time.h
-../obj/quest.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/quest.o: /usr/include/alloca.h ../include/structs.h ../include/utils.h
-../obj/quest.o: ../include/db.h /usr/include/errno.h /usr/include/sys/errno.h
-../obj/shop.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/shop.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/shop.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/shop.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/shop.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/shop.o: ../include/limits.h /usr/include/machine/types.h
-../obj/shop.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/shop.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/shop.o: /usr/include/sys/string.h ../include/structs.h
-../obj/shop.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/shop.o: /usr/include/alloca.h ../include/comm.h ../include/handler.h
-../obj/shop.o: ../include/db.h /usr/include/errno.h /usr/include/sys/errno.h
-../obj/shop.o: ../include/interpreter.h ../include/utils.h
-../obj/spec_assign.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spec_assign.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spec_assign.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spec_assign.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spec_assign.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spec_assign.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spec_assign.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spec_assign.o: /usr/include/sys/cdefs.h ../include/structs.h
-../obj/spec_assign.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/spec_assign.o: /usr/include/alloca.h ../include/db.h
-../obj/spec_assign.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/spec_assign.o: ../include/guild_list.h
-../obj/spec_procs.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spec_procs.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spec_procs.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spec_procs.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spec_procs.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spec_procs.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spec_procs.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spec_procs.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/spec_procs.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/spec_procs.o: ../include/structs.h /usr/include/stdlib.h
-../obj/spec_procs.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/spec_procs.o: ../include/utils.h ../include/comm.h
-../obj/spec_procs.o: ../include/interpreter.h ../include/handler.h
-../obj/spec_procs.o: ../include/db.h /usr/include/errno.h
-../obj/spec_procs.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/spec_procs2.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spec_procs2.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spec_procs2.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spec_procs2.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spec_procs2.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spec_procs2.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spec_procs2.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spec_procs2.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/spec_procs2.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/spec_procs2.o: ../include/structs.h /usr/include/stdlib.h
-../obj/spec_procs2.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/spec_procs2.o: ../include/utils.h ../include/comm.h
-../obj/spec_procs2.o: ../include/interpreter.h ../include/handler.h
-../obj/spec_procs2.o: ../include/db.h /usr/include/errno.h
-../obj/spec_procs2.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/spec_procs2.o: ../include/mob_magic.h
-../obj/spec_procs3.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spec_procs3.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spec_procs3.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spec_procs3.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spec_procs3.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spec_procs3.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spec_procs3.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spec_procs3.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/spec_procs3.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/spec_procs3.o: ../include/structs.h /usr/include/stdlib.h
-../obj/spec_procs3.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/spec_procs3.o: ../include/utils.h ../include/comm.h
-../obj/spec_procs3.o: ../include/interpreter.h ../include/handler.h
-../obj/spec_procs3.o: ../include/db.h /usr/include/errno.h
-../obj/spec_procs3.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/spec_procs3.o: ../include/mob_magic.h
-../obj/spell_parser.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spell_parser.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spell_parser.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spell_parser.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spell_parser.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spell_parser.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spell_parser.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spell_parser.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/spell_parser.o: /usr/include/sys/string.h /usr/include/assert.h
-../obj/spell_parser.o: ../include/structs.h /usr/include/stdlib.h
-../obj/spell_parser.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/spell_parser.o: ../include/utils.h ../include/comm.h ../include/db.h
-../obj/spell_parser.o: /usr/include/errno.h /usr/include/sys/errno.h
-../obj/spell_parser.o: ../include/interpreter.h ../include/spells.h
-../obj/spell_parser.o: ../include/handler.h
-../obj/spells1.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spells1.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spells1.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spells1.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spells1.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spells1.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spells1.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spells1.o: /usr/include/sys/cdefs.h ../include/structs.h
-../obj/spells1.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/spells1.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/spells1.o: ../include/db.h /usr/include/errno.h
-../obj/spells1.o: /usr/include/sys/errno.h ../include/interpreter.h
-../obj/spells1.o: ../include/spells.h ../include/handler.h
-../obj/spells1.o: ../include/guild_list.h
-../obj/spells2.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spells2.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spells2.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spells2.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spells2.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spells2.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spells2.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spells2.o: /usr/include/sys/cdefs.h ../include/structs.h
-../obj/spells2.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/spells2.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/spells2.o: ../include/db.h /usr/include/errno.h
-../obj/spells2.o: /usr/include/sys/errno.h ../include/interpreter.h
-../obj/spells2.o: ../include/spells.h ../include/handler.h
-../obj/spells2.o: ../include/guild_list.h
-../obj/spells3.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/spells3.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/spells3.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/spells3.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/spells3.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/spells3.o: ../include/limits.h /usr/include/machine/types.h
-../obj/spells3.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/spells3.o: /usr/include/sys/cdefs.h ../include/structs.h
-../obj/spells3.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/spells3.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/spells3.o: ../include/db.h /usr/include/errno.h
-../obj/spells3.o: /usr/include/sys/errno.h ../include/interpreter.h
-../obj/spells3.o: ../include/spells.h ../include/handler.h
-../obj/utility.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/utility.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/utility.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/utility.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/utility.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/utility.o: ../include/limits.h /usr/include/machine/types.h
-../obj/utility.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/utility.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/utility.o: /usr/include/sys/string.h /usr/include/assert.h
-../obj/utility.o: ../include/structs.h /usr/include/stdlib.h
-../obj/utility.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/utility.o: /usr/include/time.h /usr/include/machine/time.h
-../obj/utility.o: ../include/utils.h
-../obj/weather.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/weather.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/weather.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/weather.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/weather.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/weather.o: ../include/limits.h /usr/include/machine/types.h
-../obj/weather.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/weather.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/weather.o: /usr/include/sys/string.h ../include/structs.h
-../obj/weather.o: /usr/include/stdlib.h /usr/include/machine/stdlib.h
-../obj/weather.o: /usr/include/alloca.h ../include/utils.h ../include/comm.h
-../obj/weather.o: ../include/handler.h ../include/interpreter.h
-../obj/weather.o: ../include/db.h /usr/include/errno.h
-../obj/weather.o: /usr/include/sys/errno.h
-../obj/daerimsa.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/daerimsa.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/daerimsa.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/daerimsa.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/daerimsa.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/daerimsa.o: ../include/limits.h /usr/include/machine/types.h
-../obj/daerimsa.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/daerimsa.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/daerimsa.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/daerimsa.o: ../include/structs.h /usr/include/stdlib.h
-../obj/daerimsa.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/daerimsa.o: ../include/utils.h ../include/comm.h
-../obj/daerimsa.o: ../include/interpreter.h ../include/handler.h
-../obj/daerimsa.o: ../include/db.h /usr/include/errno.h
-../obj/daerimsa.o: /usr/include/sys/errno.h ../include/spells.h
-../obj/gbisland.o: /usr/include/stdio.h /usr/include/_ansi.h
-../obj/gbisland.o: /usr/include/newlib.h /usr/include/sys/config.h
-../obj/gbisland.o: /usr/include/machine/ieeefp.h /usr/include/sys/reent.h
-../obj/gbisland.o: /usr/include/sys/_types.h /usr/include/sys/lock.h
-../obj/gbisland.o: /usr/include/sys/types.h /usr/include/machine/_types.h
-../obj/gbisland.o: ../include/limits.h /usr/include/machine/types.h
-../obj/gbisland.o: /usr/include/sys/features.h /usr/include/sys/stdio.h
-../obj/gbisland.o: /usr/include/sys/cdefs.h /usr/include/string.h
-../obj/gbisland.o: /usr/include/sys/string.h /usr/include/ctype.h
-../obj/gbisland.o: ../include/structs.h /usr/include/stdlib.h
-../obj/gbisland.o: /usr/include/machine/stdlib.h /usr/include/alloca.h
-../obj/gbisland.o: ../include/utils.h ../include/comm.h
-../obj/gbisland.o: ../include/interpreter.h ../include/handler.h
-../obj/gbisland.o: ../include/db.h /usr/include/errno.h
-../obj/gbisland.o: /usr/include/sys/errno.h ../include/spells.h
+# act.comm.c act.informative.c act.movement.c act.obj1.c act.obj2.c act.offensive.c act.other.c act.social.c act.wizard.c board.c comm.c constants.c daerimsa.c db.c fight.c gbisland.c guild_command.c guild_constant.c guild_informative.c guild_skills.c handler.c interpreter.c limit.c mabact.c magic_weapon.c magic.c magic2.c magic3.c mail.c mob_bal.c mob_magic.c mobact.c modify.c newcom.c newshop.c quest.c shop.c spec_assign.c spec_procs.c spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c spells3.c utility.c version.c weather.c $(UTLSRC)/change_level.c $(UTLSRC)/change_pass.c $(UTLSRC)/change_stashform.c $(UTLSRC)/check_pass.c $(UTLSRC)/check_player.c $(UTLSRC)/list_player.c $(UTLSRC)/mob_balace.c $(UTLSRC)/mob_create.c $(UTLSRC)/mob_edit.c $(UTLSRC)/zone_item.c $(UTLSRC)/zone_list.c $(UTLSRC)/zone_print.c -I../include
+
+$(OBJDIR)/act.comm.o: act.comm.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h
+$(OBJDIR)/act.informative.o: act.informative.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h $(INCDIR)/guild_list.h
+$(OBJDIR)/act.movement.o: act.movement.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+$(OBJDIR)/act.obj1.o: act.obj1.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h
+$(OBJDIR)/act.obj2.o: act.obj2.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h
+$(OBJDIR)/act.offensive.o: act.offensive.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/act.other.o: act.other.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+$(OBJDIR)/act.social.o: act.social.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h
+$(OBJDIR)/act.wizard.o: act.wizard.c \
+    $(INCDIR)/structs.h $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h \
+    $(INCDIR)/limit.h
+$(OBJDIR)/board.o: board.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/db.h
+$(OBJDIR)/comm.o: comm.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/interpreter.h \
+    $(INCDIR)/handler.h $(INCDIR)/db.h
+$(OBJDIR)/constants.o: constants.c $(INCDIR)/structs.h \
+    $(INCDIR)/limit.h
+$(OBJDIR)/daerimsa.o: daerimsa.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h
+$(OBJDIR)/db.o: db.c \
+    $(INCDIR)/structs.h $(INCDIR)/utils.h \
+    $(INCDIR)/db.h $(INCDIR)/comm.h \
+    $(INCDIR)/handler.h $(INCDIR)/limit.h $(INCDIR)/spells.h mob_bal.c
+$(OBJDIR)/fight.o: fight.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/handler.h $(INCDIR)/interpreter.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/gbisland.o: gbisland.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h
+$(OBJDIR)/guild_command.o: guild_command.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/guild_constant.o: guild_constant.c $(INCDIR)/structs.h \
+    $(INCDIR)/limit.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/guild_informative.o: guild_informative.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h \
+    $(INCDIR)/limit.h $(INCDIR)/guild_list.h
+$(OBJDIR)/guild_skills.o: guild_skills.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/spells.h $(INCDIR)/handler.h $(INCDIR)/limit.h \
+    $(INCDIR)/db.h $(INCDIR)/guild_list.h
+$(OBJDIR)/handler.o: handler.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/db.h \
+    $(INCDIR)/handler.h $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+$(OBJDIR)/interpreter.o: interpreter.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/db.h \
+    $(INCDIR)/utils.h $(INCDIR)/limit.h
+$(OBJDIR)/limit.o: limit.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/limit.h \
+    $(INCDIR)/utils.h $(INCDIR)/spells.h $(INCDIR)/comm.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/mabact.o: mabact.c \
+    $(INCDIR)/utils.h $(INCDIR)/structs.h \
+    $(INCDIR)/db.h \
+    $(INCDIR)/comm.h $(INCDIR)/spells.h
+$(OBJDIR)/magic_weapon.o: magic_weapon.c $(INCDIR)/structs.h \
+    $(INCDIR)/comm.h \
+    $(INCDIR)/magic_weapon.h $(INCDIR)/utils.h $(INCDIR)/spells.h
+$(OBJDIR)/magic.o: magic.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/spells.h $(INCDIR)/handler.h \
+    $(INCDIR)/limit.h $(INCDIR)/db.h \
+    $(INCDIR)/guild_list.h $(INCDIR)/magic_weapon.h
+$(OBJDIR)/magic2.o: magic2.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/spells.h $(INCDIR)/handler.h \
+    $(INCDIR)/limit.h $(INCDIR)/db.h \
+    $(INCDIR)/magic_weapon.h $(INCDIR)/guild_list.h
+$(OBJDIR)/magic3.o: magic3.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/spells.h $(INCDIR)/handler.h \
+    $(INCDIR)/limit.h $(INCDIR)/db.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/mail.o: mail.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/db.h \
+    $(INCDIR)/handler.h $(INCDIR)/interpreter.h
+$(OBJDIR)/mob_bal.o: mob_bal.c
+$(OBJDIR)/mob_magic.o: mob_magic.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/spells.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h \
+    $(INCDIR)/mob_magic.h
+$(OBJDIR)/mobact.o: mobact.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/db.h \
+    $(INCDIR)/comm.h $(INCDIR)/spells.h \
+    $(INCDIR)/utils.h
+$(OBJDIR)/modify.o: modify.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/interpreter.h \
+    $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/comm.h
+$(OBJDIR)/newcom.o: newcom.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/interpreter.h $(INCDIR)/handler.h \
+    $(INCDIR)/db.h $(INCDIR)/spells.h
+$(OBJDIR)/newshop.o: newshop.c $(INCDIR)/structs.h \
+    $(INCDIR)/newshop.h
+$(OBJDIR)/quest.o: quest.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/db.h
+$(OBJDIR)/shop.o: shop.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/comm.h \
+    $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/utils.h
+$(OBJDIR)/spec_assign.o: spec_assign.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/db.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/spec_procs.o: spec_procs.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h
+$(OBJDIR)/spec_procs2.o: spec_procs2.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h \
+    $(INCDIR)/mob_magic.h
+$(OBJDIR)/spec_procs3.o: spec_procs3.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h $(INCDIR)/comm.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/handler.h $(INCDIR)/db.h \
+    $(INCDIR)/spells.h $(INCDIR)/limit.h \
+    $(INCDIR)/mob_magic.h
+$(OBJDIR)/spell_parser.o: spell_parser.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/db.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/spells.h $(INCDIR)/handler.h
+$(OBJDIR)/spells1.o: spells1.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/db.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/spells.h $(INCDIR)/handler.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/spells2.o: spells2.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/db.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/spells.h $(INCDIR)/handler.h \
+    $(INCDIR)/guild_list.h
+$(OBJDIR)/spells3.o: spells3.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/db.h \
+    $(INCDIR)/interpreter.h $(INCDIR)/spells.h $(INCDIR)/handler.h
+$(OBJDIR)/utility.o: utility.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h
+$(OBJDIR)/version.o: version.c
+$(OBJDIR)/weather.o: weather.c \
+    $(INCDIR)/structs.h \
+    $(INCDIR)/utils.h \
+    $(INCDIR)/comm.h $(INCDIR)/handler.h $(INCDIR)/interpreter.h \
+    $(INCDIR)/db.h
+$(OBJDIR)/change_level.o: $(UTLSRC)/change_level.c \
+    $(INCDIR)/structs.h
+$(OBJDIR)/change_pass.o: $(UTLSRC)/change_pass.c \
+    $(INCDIR)/structs.h
+$(OBJDIR)/change_stashform.o: $(UTLSRC)/change_stashform.c
+$(OBJDIR)/check_pass.o: $(UTLSRC)/check_pass.c \
+    $(INCDIR)/structs.h
+$(OBJDIR)/check_player.o: $(UTLSRC)/check_player.c \
+    $(INCDIR)/structs.h
+$(OBJDIR)/list_player.o: $(UTLSRC)/list_player.c \
+    $(INCDIR)/structs.h
+$(OBJDIR)/mob_balance.o: $(UTLSRC)/mob_balance.c
+$(OBJDIR)/mob_create.o: $(UTLSRC)/mob_create.c \
+    $(UTLSRC)/mob_create.h
+$(OBJDIR)/mob_edit.o: $(UTLSRC)/mob_edit.c \
+    $(UTLSRC)/mob_create.h
+$(OBJDIR)/zone_item.o: $(UTLSRC)/zone_item.c
+$(OBJDIR)/zone_list.o: $(UTLSRC)/zone_list.c
+$(OBJDIR)/zone_print.o: $(UTLSRC)/zone_print.c
+
+# ------------------------------------------------------------
+# OLD dependants
+#
+# $(OBJDIR)/act.comm.o: $(INCDIR)/limit.h
+# $(OBJDIR)/act.comm.o: $(INCDIR)/structs.h
+# $(OBJDIR)/act.comm.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/act.comm.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/act.comm.o: $(INCDIR)/db.h
+# $(OBJDIR)/act.comm.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/act.informative.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/act.informative.o: $(INCDIR)/structs.h $(INCDIR)/utils.h
+# $(OBJDIR)/act.informative.o: $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/act.informative.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/act.informative.o: $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+# $(OBJDIR)/act.movement.o: $(INCDIR)/limit.h
+# $(OBJDIR)/act.movement.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/act.movement.o:  $(INCDIR)/utils.h
+# $(OBJDIR)/act.movement.o: $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/act.movement.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/act.movement.o: $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+# $(OBJDIR)/act.obj1.o: $(INCDIR)/limit.h
+# $(OBJDIR)/act.obj1.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/act.obj1.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/act.obj1.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/act.obj1.o: $(INCDIR)/db.h
+# $(OBJDIR)/act.obj1.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/act.obj2.o: $(INCDIR)/limit.h
+# $(OBJDIR)/act.obj2.o: $(INCDIR)/structs.h
+# $(OBJDIR)/act.obj2.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/act.obj2.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/act.obj2.o: $(INCDIR)/db.h
+# $(OBJDIR)/act.obj2.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/act.offensive.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/act.offensive.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/act.offensive.o:  $(INCDIR)/utils.h
+# $(OBJDIR)/act.offensive.o: $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/act.offensive.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/act.offensive.o: $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+# $(OBJDIR)/act.other.o: $(INCDIR)/limit.h
+# $(OBJDIR)/act.other.o: $(INCDIR)/structs.h
+# $(OBJDIR)/act.other.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/act.other.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/act.other.o: $(INCDIR)/db.h
+# $(OBJDIR)/act.other.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/act.other.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/act.social.o: $(INCDIR)/limit.h
+# $(OBJDIR)/act.social.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/act.social.o:  $(INCDIR)/utils.h
+# $(OBJDIR)/act.social.o: $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/act.social.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/act.social.o: $(INCDIR)/spells.h
+# $(OBJDIR)/act.wizard.o: $(INCDIR)/limit.h
+# $(OBJDIR)/act.wizard.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/act.wizard.o:  $(INCDIR)/utils.h
+# $(OBJDIR)/act.wizard.o: $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/act.wizard.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/act.wizard.o: $(INCDIR)/spells.h
+# $(OBJDIR)/board.o: $(INCDIR)/limit.h
+# $(OBJDIR)/board.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/board.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/board.o: $(INCDIR)/db.h
+# $(OBJDIR)/comm.o: $(INCDIR)/limit.h
+# $(OBJDIR)/comm.o: $(INCDIR)/structs.h
+# $(OBJDIR)/comm.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/comm.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/constants.o: $(INCDIR)/structs.h
+# $(OBJDIR)/constants.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/db.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/db.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/db.o:  $(INCDIR)/utils.h $(INCDIR)/db.h
+# $(OBJDIR)/db.o:   $(INCDIR)/comm.h
+# $(OBJDIR)/db.o: $(INCDIR)/handler.h $(INCDIR)/spells.h mob_bal.c
+# $(OBJDIR)/db.o:
+# $(OBJDIR)/fight.o: $(INCDIR)/limit.h
+# $(OBJDIR)/fight.o: $(INCDIR)/structs.h
+# $(OBJDIR)/fight.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/handler.h
+# $(OBJDIR)/fight.o: $(INCDIR)/interpreter.h $(INCDIR)/db.h
+# $(OBJDIR)/fight.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/fight.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/guild_command.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/guild_command.o: $(INCDIR)/structs.h
+# $(OBJDIR)/guild_command.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/guild_command.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/guild_command.o: $(INCDIR)/db.h
+# $(OBJDIR)/guild_command.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/guild_command.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/guild_constant.o: $(INCDIR)/structs.h
+# $(OBJDIR)/guild_constant.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/guild_constant.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/guild_informative.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/guild_informative.o: $(INCDIR)/structs.h
+# $(OBJDIR)/guild_informative.o:  $(INCDIR)/utils.h
+# $(OBJDIR)/guild_informative.o: $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/guild_informative.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/guild_informative.o: $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+# $(OBJDIR)/guild_skills.o: $(INCDIR)/limit.h
+# $(OBJDIR)/guild_skills.o: $(INCDIR)/structs.h
+# $(OBJDIR)/guild_skills.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/guild_skills.o: $(INCDIR)/spells.h $(INCDIR)/handler.h
+# $(OBJDIR)/guild_skills.o: $(INCDIR)/db.h
+# $(OBJDIR)/guild_skills.o:  $(INCDIR)/guild_list.h
+# $(OBJDIR)/handler.o: $(INCDIR)/limit.h
+# $(OBJDIR)/handler.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/handler.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/handler.o: $(INCDIR)/db.h
+# $(OBJDIR)/handler.o:  $(INCDIR)/handler.h
+# $(OBJDIR)/handler.o: $(INCDIR)/spells.h $(INCDIR)/guild_list.h
+# $(OBJDIR)/interpreter.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/interpreter.o: $(INCDIR)/structs.h
+# $(OBJDIR)/interpreter.o: $(INCDIR)/comm.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/interpreter.o: $(INCDIR)/db.h
+# $(OBJDIR)/interpreter.o:  $(INCDIR)/utils.h
+# $(OBJDIR)/limit.o: $(INCDIR)/limit.h
+# $(OBJDIR)/limit.o: $(INCDIR)/structs.h
+# $(OBJDIR)/limit.o: $(INCDIR)/utils.h $(INCDIR)/spells.h $(INCDIR)/comm.h
+# $(OBJDIR)/limit.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/magic.o: $(INCDIR)/limit.h
+# $(OBJDIR)/magic.o: $(INCDIR)/structs.h
+# $(OBJDIR)/magic.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/spells.h
+# $(OBJDIR)/magic.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/magic.o:  $(INCDIR)/guild_list.h
+# $(OBJDIR)/magic.o: $(INCDIR)/magic_weapon.h
+# $(OBJDIR)/magic2.o: $(INCDIR)/limit.h
+# $(OBJDIR)/magic2.o: $(INCDIR)/structs.h
+# $(OBJDIR)/magic2.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/spells.h
+# $(OBJDIR)/magic2.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/magic2.o:  $(INCDIR)/magic_weapon.h
+# $(OBJDIR)/magic2.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/magic3.o: $(INCDIR)/limit.h
+# $(OBJDIR)/magic3.o: $(INCDIR)/structs.h
+# $(OBJDIR)/magic3.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/spells.h
+# $(OBJDIR)/magic3.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/magic3.o:  $(INCDIR)/guild_list.h
+# $(OBJDIR)/magic_weapon.o: $(INCDIR)/structs.h
+# $(OBJDIR)/magic_weapon.o:  $(INCDIR)/limit.h
+# $(OBJDIR)/magic_weapon.o:  $(INCDIR)/comm.h
+# $(OBJDIR)/magic_weapon.o: $(INCDIR)/magic_weapon.h $(INCDIR)/utils.h
+# $(OBJDIR)/magic_weapon.o: $(INCDIR)/spells.h
+# $(OBJDIR)/mail.o: $(INCDIR)/limit.h
+# $(OBJDIR)/mail.o: $(INCDIR)/structs.h
+# $(OBJDIR)/mail.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/db.h
+# $(OBJDIR)/mail.o: $(INCDIR)/handler.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/mob_magic.o: $(INCDIR)/limit.h
+# $(OBJDIR)/mob_magic.o: $(INCDIR)/structs.h
+# $(OBJDIR)/mob_magic.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/spells.h
+# $(OBJDIR)/mob_magic.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/mob_magic.o:  $(INCDIR)/mob_magic.h
+# $(OBJDIR)/mobact.o: $(INCDIR)/limit.h
+# $(OBJDIR)/mobact.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/mobact.o:  $(INCDIR)/db.h
+# $(OBJDIR)/mobact.o:  $(INCDIR)/comm.h
+# $(OBJDIR)/mobact.o: $(INCDIR)/spells.h $(INCDIR)/utils.h
+# $(OBJDIR)/modify.o: $(INCDIR)/limit.h
+# $(OBJDIR)/modify.o: $(INCDIR)/structs.h
+# $(OBJDIR)/modify.o: $(INCDIR)/utils.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/modify.o: $(INCDIR)/handler.h $(INCDIR)/db.h
+# $(OBJDIR)/modify.o:  $(INCDIR)/comm.h
+# $(OBJDIR)/newcom.o: $(INCDIR)/limit.h
+# $(OBJDIR)/newcom.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/newcom.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/newcom.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/newcom.o: $(INCDIR)/db.h
+# $(OBJDIR)/newcom.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/quest.o: $(INCDIR)/limit.h
+# $(OBJDIR)/quest.o:  $(INCDIR)/structs.h $(INCDIR)/utils.h
+# $(OBJDIR)/quest.o: $(INCDIR)/db.h
+# $(OBJDIR)/shop.o: $(INCDIR)/limit.h
+# $(OBJDIR)/shop.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/shop.o:  $(INCDIR)/comm.h $(INCDIR)/handler.h
+# $(OBJDIR)/shop.o: $(INCDIR)/db.h
+# $(OBJDIR)/shop.o: $(INCDIR)/interpreter.h $(INCDIR)/utils.h
+# $(OBJDIR)/spec_assign.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spec_assign.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/spec_assign.o:  $(INCDIR)/db.h
+# $(OBJDIR)/spec_assign.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/spec_procs.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spec_procs.o: $(INCDIR)/structs.h
+# $(OBJDIR)/spec_procs.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/spec_procs.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/spec_procs.o: $(INCDIR)/db.h
+# $(OBJDIR)/spec_procs.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/spec_procs2.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spec_procs2.o: $(INCDIR)/structs.h
+# $(OBJDIR)/spec_procs2.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/spec_procs2.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/spec_procs2.o: $(INCDIR)/db.h
+# $(OBJDIR)/spec_procs2.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/spec_procs2.o: $(INCDIR)/mob_magic.h
+# $(OBJDIR)/spec_procs3.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spec_procs3.o: $(INCDIR)/structs.h
+# $(OBJDIR)/spec_procs3.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/spec_procs3.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/spec_procs3.o: $(INCDIR)/db.h
+# $(OBJDIR)/spec_procs3.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/spec_procs3.o: $(INCDIR)/mob_magic.h
+# $(OBJDIR)/spell_parser.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spell_parser.o: $(INCDIR)/structs.h
+# $(OBJDIR)/spell_parser.o: $(INCDIR)/utils.h $(INCDIR)/comm.h $(INCDIR)/db.h
+# $(OBJDIR)/spell_parser.o: $(INCDIR)/interpreter.h $(INCDIR)/spells.h
+# $(OBJDIR)/spell_parser.o: $(INCDIR)/handler.h
+# $(OBJDIR)/spells1.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spells1.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/spells1.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/spells1.o: $(INCDIR)/db.h
+# $(OBJDIR)/spells1.o:  $(INCDIR)/interpreter.h
+# $(OBJDIR)/spells1.o: $(INCDIR)/spells.h $(INCDIR)/handler.h
+# $(OBJDIR)/spells1.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/spells2.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spells2.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/spells2.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/spells2.o: $(INCDIR)/db.h
+# $(OBJDIR)/spells2.o:  $(INCDIR)/interpreter.h
+# $(OBJDIR)/spells2.o: $(INCDIR)/spells.h $(INCDIR)/handler.h
+# $(OBJDIR)/spells2.o: $(INCDIR)/guild_list.h
+# $(OBJDIR)/spells3.o: $(INCDIR)/limit.h
+# $(OBJDIR)/spells3.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/spells3.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/spells3.o: $(INCDIR)/db.h
+# $(OBJDIR)/spells3.o:  $(INCDIR)/interpreter.h
+# $(OBJDIR)/spells3.o: $(INCDIR)/spells.h $(INCDIR)/handler.h
+# $(OBJDIR)/utility.o: $(INCDIR)/limit.h
+# $(OBJDIR)/utility.o: $(INCDIR)/structs.h
+# $(OBJDIR)/utility.o: $(INCDIR)/utils.h
+# $(OBJDIR)/weather.o: $(INCDIR)/limit.h
+# $(OBJDIR)/weather.o:  $(INCDIR)/structs.h
+# $(OBJDIR)/weather.o:  $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/weather.o: $(INCDIR)/handler.h $(INCDIR)/interpreter.h
+# $(OBJDIR)/weather.o: $(INCDIR)/db.h
+# $(OBJDIR)/daerimsa.o: $(INCDIR)/limit.h
+# $(OBJDIR)/daerimsa.o: $(INCDIR)/structs.h
+# $(OBJDIR)/daerimsa.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/daerimsa.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/daerimsa.o: $(INCDIR)/db.h
+# $(OBJDIR)/daerimsa.o:  $(INCDIR)/spells.h
+# $(OBJDIR)/gbisland.o: $(INCDIR)/limit.h
+# $(OBJDIR)/gbisland.o: $(INCDIR)/structs.h
+# $(OBJDIR)/gbisland.o: $(INCDIR)/utils.h $(INCDIR)/comm.h
+# $(OBJDIR)/gbisland.o: $(INCDIR)/interpreter.h $(INCDIR)/handler.h
+# $(OBJDIR)/gbisland.o: $(INCDIR)/db.h
+# $(OBJDIR)/gbisland.o:  $(INCDIR)/spells.h

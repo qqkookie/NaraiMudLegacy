@@ -169,7 +169,7 @@ void do_request(struct char_data *ch, char *arg, int cmd)
   if(ch->quest.type > 0){
     
 	/*	if error occur, can do request.	*/
-	if (ch->quest.data == NULL) {
+	if (ch->quest.data == NUL) {
 		ch->quest.type = 0;
 		return;
 	}
@@ -338,7 +338,7 @@ void init_quest(void)
     fscanf(fp, " %d ", &(QM[topQM].level));
     
     fgets(buf, MAX_STRING_LENGTH - 1, fp);
-    size = strlen(buf);
+    size = strlen(buf)+1;
     buf[size - 1] = 0;
     CREATE(QM[topQM].name, char, size);
     strcpy(QM[topQM].name, buf);

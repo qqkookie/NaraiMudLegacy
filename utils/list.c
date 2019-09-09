@@ -6,12 +6,12 @@
 #define FALSE 0
 #define TRUE 1
 
-main()
+int main()
 {
 	FILE *fp;
 	struct char_file_u ch;
 	int ok = TRUE;
-	char buf[256];
+	// char buf[256];
 	int count = 0;
 	static int a[4];
 	int dan_count = 0;
@@ -21,10 +21,10 @@ main()
 		ok = fread(&ch, sizeof(ch), 1, fp);
 		if (ok == FALSE)
 			break;
-		if (ch.level > 40)
+		// if (ch.level > 40)
 			printf("NAME:%s LEVEL: %d HP: %d GUILD: %d\n\r",
 				ch.name, ch.level, ch.points.max_hit, ch.guild);
-		a[ch.guild]++;	
+		a[(int)ch.guild]++;
 		count++;
 		if(ch.level == 40)
 			dan_count++;

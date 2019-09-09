@@ -5,6 +5,7 @@
 ************************************************************************* */
 
 #include <stdio.h>
+#include <string.h>
 
 #include "structs.h"
 #include "utils.h"
@@ -33,7 +34,7 @@ void damage(struct char_data *ch, struct char_data *victim,
 void say_spell( struct char_data *ch, int si );
 bool saves_spell(struct char_data *ch, sh_int spell);
 void add_follower(struct char_data *ch, struct char_data *victim);
-char *strdup(char *str);
+// char *strdup(char *str);
 void log(char *str);
 void do_look(struct char_data *ch, char *arg, int cmd);
 
@@ -1478,8 +1479,8 @@ void cast_phase( byte level, struct char_data *ch, char *arg, int type,
     /*
     case NULL: send_to_char("Phase to where?\n\r",ch); return;
     */
-    case 0x00: send_to_char("Phase to where?\n\r",ch); return;
-    case 0x20: send_to_char("Phase to where?\n\r",ch); return;
+    case NUL:
+    case ' ': send_to_char("Phase to where?\n\r",ch); return;
     /* Compile error. by Moon */
     default : send_to_char("ashgjklasdghiaudsgthl\n\r",ch);return;
   }

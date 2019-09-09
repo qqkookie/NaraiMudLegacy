@@ -4,6 +4,7 @@
 ************************************************************************* */
 
 #include <stdio.h>
+#include <string.h>
 #include <assert.h>
 #include "structs.h"
 #include "utils.h"
@@ -28,7 +29,7 @@ void damage(struct char_data *ch, struct char_data *victim,
             int damage, int weapontype);
 bool saves_spell(struct char_data *ch, int spell);
 void weight_change_object(struct obj_data *obj, int weight);
-char *strdup(char *source);
+// char *strdup(char *source);
 int dice(int number, int size);
 void do_look(struct char_data *ch, char *argument, int cmd);
 int number(int from, int to);

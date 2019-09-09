@@ -248,13 +248,13 @@ void do_open(struct char_data *ch, char *argument, int cmd)
   if (!*type)
     send_to_char("Open what?\n\r", ch);
   else if (generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM,
-    ch, &victim, &obj))
+    ch, &victim, &obj)) {
 
     /* this is an object */
 
     if (obj->obj_flags.type_flag != ITEM_CONTAINER)
       send_to_char("That's not a container.\n\r", ch);
-     else if (!IS_SET(obj->obj_flags.value[1], CONT_CLOSED))
+    else if (!IS_SET(obj->obj_flags.value[1], CONT_CLOSED))
       send_to_char("But it's already open!\n\r", ch);
     else if (!IS_SET(obj->obj_flags.value[1], CONT_CLOSEABLE))
       send_to_char("You can't do that.\n\r", ch);
@@ -266,7 +266,8 @@ void do_open(struct char_data *ch, char *argument, int cmd)
       send_to_char("Ok.\n\r", ch);
       act("$n opens $p.", FALSE, ch, obj, 0, TO_ROOM);
     }
-  else if ((door = find_door(ch, type, dir)) >= 0)
+  }
+  else if ((door = find_door(ch, type, dir)) >= 0) {
 
     /* perhaps it is a door */
 
@@ -304,6 +305,7 @@ void do_open(struct char_data *ch, char *argument, int cmd)
               EXIT(ch, door)->to_room);
           }             
     }
+  }
 }
 
 void do_close(struct char_data *ch, char *argument, int cmd)
@@ -318,7 +320,7 @@ void do_close(struct char_data *ch, char *argument, int cmd)
   if (!*type)
     send_to_char("Close what?\n\r", ch);
   else if (generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM,
-    ch, &victim, &obj))
+    ch, &victim, &obj)) {
 
     /* this is an object */
 
@@ -334,7 +336,8 @@ void do_close(struct char_data *ch, char *argument, int cmd)
       send_to_char("Ok.\n\r", ch);
       act("$n closes $p.", FALSE, ch, obj, 0, TO_ROOM);
     }
-  else if ((door = find_door(ch, type, dir)) >= 0)
+  }
+  else if ((door = find_door(ch, type, dir)) >= 0) {
 
     /* Or a door */
 
@@ -369,6 +372,7 @@ void do_close(struct char_data *ch, char *argument, int cmd)
                 EXIT(ch, door)->to_room);
           }             
     }
+  }
 }
 
 
@@ -402,7 +406,7 @@ void do_lock(struct char_data *ch, char *argument, int cmd)
   if (!*type)
     send_to_char("Lock what?\n\r", ch);
   else if (generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM,
-    ch, &victim, &obj))
+    ch, &victim, &obj)) {
 
     /* this is an object */
 
@@ -422,7 +426,8 @@ void do_lock(struct char_data *ch, char *argument, int cmd)
       send_to_char("*Cluck*\n\r", ch);
       act("$n locks $p - 'cluck', it says.", FALSE, ch, obj, 0, TO_ROOM);
     }
-  else if ((door = find_door(ch, type, dir)) >= 0)
+  }
+  else if ((door = find_door(ch, type, dir)) >= 0) {
 
     /* a door, perhaps */
 
@@ -451,6 +456,7 @@ void do_lock(struct char_data *ch, char *argument, int cmd)
           if (back->to_room == ch->in_room)
             SET_BIT(back->exit_info, EX_LOCKED);
     }
+  }
 }
 
 
@@ -468,7 +474,7 @@ void do_unlock(struct char_data *ch, char *argument, int cmd)
   if (!*type)
     send_to_char("Unlock what?\n\r", ch);
   else if (generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM,
-    ch, &victim, &obj))
+    ch, &victim, &obj)) {
 
     /* this is an object */
 
@@ -488,7 +494,8 @@ void do_unlock(struct char_data *ch, char *argument, int cmd)
       send_to_char("*Click*\n\r", ch);
       act("$n unlocks $p.", FALSE, ch, obj, 0, TO_ROOM);
     }
-  else if ((door = find_door(ch, type, dir)) >= 0)
+  }
+  else if ((door = find_door(ch, type, dir)) >= 0) {
 
     /* it is a door */
 
@@ -517,6 +524,7 @@ void do_unlock(struct char_data *ch, char *argument, int cmd)
           if (back->to_room == ch->in_room)
             REMOVE_BIT(back->exit_info, EX_LOCKED);
     }
+  }
 }
 
 
@@ -544,7 +552,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
   if (!*type)
     send_to_char("Pick what?\n\r", ch);
   else if (generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM,
-    ch, &victim, &obj))
+    ch, &victim, &obj)) {
 
     /* this is an object */
 	/* furfuri modify... God pick.. */
@@ -557,12 +565,13 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
       send_to_char("Odd - you can't seem to find a keyhole.\n\r", ch);
     else if (!IS_SET(obj->obj_flags.value[1], CONT_LOCKED))
       send_to_char("Oho! This thing is NOT locked!\n\r", ch);
-    else if (IS_SET(obj->obj_flags.value[1], CONT_PICKPROOF))
+    else if (IS_SET(obj->obj_flags.value[1], CONT_PICKPROOF)) {
 	  if (GET_LEVEL(ch) > IMO)
 		{send_to_char("Pickproof ---- \n\r",ch);
 		 goto for_god;
 		} 
       else send_to_char("It resists your attempts at picking it.\n\r", ch);
+    }
     else
     {
       REMOVE_BIT(obj->obj_flags.value[1], CONT_LOCKED);
@@ -570,7 +579,8 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
       send_to_char("*Click*\n\r", ch);
       act("$n fiddles with $p.", FALSE, ch, obj, 0, TO_ROOM);
     }
-  else if ((door = find_door(ch, type, dir)) >= 0)
+  }
+  else if ((door = find_door(ch, type, dir)) >= 0) {
     if (!IS_SET(EXIT(ch, door)->exit_info, EX_ISDOOR))
       send_to_char("That's absurd.\n\r", ch);
     else if (!IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
@@ -601,6 +611,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
           if (back->to_room == ch->in_room)
             REMOVE_BIT(back->exit_info, EX_LOCKED);
     }
+  }
 }
 
 

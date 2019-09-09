@@ -1,9 +1,10 @@
 
 #include <stdio.h>
+#include <string.h>
 
 #include "structs.h"
 
-main()
+int main()
 {
 	struct char_file_u st;
 	char name[20];
@@ -12,7 +13,7 @@ main()
 	FILE *FL;
 
 	if( !(FL=fopen("players","r+") ) ) {
-		printf("Error open file");
+		printf("Error open 'players' file\n");
 		exit(-1);
 	}
 

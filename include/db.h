@@ -4,6 +4,24 @@
 ************************************************************************* */
 
 #include <errno.h>
+
+// Makefile MFLAGS moved here.
+
+#define IMO	41
+#define RETURN_TO_QUIT
+#define MID_HELPER	"narai"
+
+#undef OLD_ZONE_SYSTEM
+#define TIMEADJUST	535
+
+/*
+ All flags used in souce code.
+
+# MFLAGS: SYPARK RETURN_TO_QUIT INIT_BARE_HAND GHOST
+#         OldMobileFormat OLD_DAM_MESSAGE OLD_PARRY
+#         OLD_MIRROR_IMAGE OldMobAct
+*/
+
 /* data files used by the game system */
 
 /*  default directory is defined in comm.c : usually lib */
@@ -24,6 +42,7 @@
 #define HELP_PAGE_FILE    "help"          /* for HELP <CR>              */
 #define PLAN_FILE         "plan"          /* for god's plan             */
 #define WIZARDS_FILE      "wizards"       /* for wizards command : cyb  */
+#define STASH             "stash"
 
 /* public procedures in db.c */
 

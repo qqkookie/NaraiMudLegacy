@@ -586,8 +586,9 @@ void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 {
   struct obj_data *wield;
   char *buf, *buf2;
-  int  msg_index ;
-  
+  int  msg_index ; 
+
+#ifdef UNUSED_CODE 
   static struct dam_weapon_type dam_weapons[] = {
     
     {"$n misses $N with $s #W.",                           /*    0    */
@@ -656,6 +657,7 @@ void dam_message(int dam, struct char_data *ch, struct char_data *victim,
       "YOU PROCESS $N into ---==<< V A C U U M >>==--- with your #W.",
       "$n PROCESSES YOU into ---==<< V A C U U M >>==--- with $s #W." }
   };
+#endif // UNUSED_CODE
   
   /* brief mode */
   static struct dam_weapon_type brief_dam_weapons[] = {
@@ -726,6 +728,7 @@ void dam_message(int dam, struct char_data *ch, struct char_data *victim,
       "$n ---==<< V A C U U M >>==--- YOU." }
   };
 
+#ifdef UNUSED_CODE 
   static struct dam_weapon_type han_weapons[] = {
     {"$n 님이 $N 님을 때리려다 빗나갔습니다.",        /*    0    */
      "당신은 $N 님을 때리지 못했습니다.",
@@ -791,6 +794,7 @@ void dam_message(int dam, struct char_data *ch, struct char_data *victim,
      "당신은 $N 님을 진공상태로 되도록 #W.",
      "$n 님이 당신을 진공상태가 되도록 #W."} 
   };
+#endif  // UNUSED_CODE
 
   /* brief mode */
   static struct dam_weapon_type brief_han_weapons[] = {
@@ -1416,13 +1420,13 @@ void damage(struct char_data *ch, struct char_data *victim,
 void hit(struct char_data *ch, struct char_data *victim, int type)
 {
   struct obj_data *wielded = 0;
-  struct obj_data *held = 0;
+  //  struct obj_data *held = 0;
   int w_type;
   int dam, prf;
   int parry_num;
   int miss;
   int limit_nodice, limit_sizedice;
-  char buffer[MAX_STRING_LENGTH];
+  // char buffer[MAX_STRING_LENGTH];
 
   extern int thaco[4][IMO+4];
   extern byte backstab_mult[];
@@ -1506,8 +1510,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     return;
 	}
   
-  if (ch->equipment[HOLD])
-    held = ch->equipment[HOLD];
+  // if (ch->equipment[HOLD])
+  //     held = ch->equipment[HOLD];
   
   if (ch->equipment[WIELD] &&
       (ch->equipment[WIELD]->obj_flags.type_flag == ITEM_WEAPON)) {
@@ -1681,8 +1685,10 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
   dam = MAX(1, dam); 
   
   if (type == SKILL_BACKSTAB) {
-    if(IS_AFFECTED(ch,AFF_HIDE))
+    if(IS_AFFECTED(ch,AFF_HIDE)) {
       dam <<= 1;
+      log("backstab+hide");
+    }
     if(IS_NPC(ch)){
       dam *= backstab_mult[GET_LEVEL(ch) / 2];
     }

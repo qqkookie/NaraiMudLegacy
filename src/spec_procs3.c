@@ -124,7 +124,7 @@ int helper(struct char_data *ch, int cmd, char *arg)
   for(vict=world[ch->in_room].people; vict; vict = next_victim ) {
     next_victim = vict->next_in_room ;
     if(IS_NPC(vict)) {
-      if (((float) GET_HIT(vict)/GET_PLAYER_MAX_HIT(vict) * 100) > 85)
+      if ((100 * GET_HIT(vict)/GET_PLAYER_MAX_HIT(vict)) > 85)
          continue ;
       else
          break;

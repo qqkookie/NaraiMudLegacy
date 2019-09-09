@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <string.h>
-
+#include <time.h>
 #include <assert.h>
 
 #include "structs.h"
@@ -106,7 +106,7 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
 
     sprintf(buf, "%s shouts '%s'\n\r", GET_NAME(ch), argument);
     assert(his_end>=0&&his_end<20);
-    
+
     /*
     sprintf(history[his_end], "%s", buf);
 		*/
@@ -311,7 +311,7 @@ void do_lastchat(struct char_data *ch, char *argument, int cmd)
   /*struct descriptor_data *i;
   struct char_data *victim;*/
   int j;
-  
+
   for(j=his_start;j!=his_end;j=(j+1)%20)
   {
     assert(history[j]);
@@ -338,7 +338,7 @@ void do_write(struct char_data *ch, char *argument, int cmd)
    	return;
 
     if (!*papername)  /* nothing was delivered */
-    {   
+    {
 	send_to_char(
             "Write? with what? ON what? what are you trying to do??\n\r", ch);
 	return;
@@ -359,7 +359,7 @@ void do_write(struct char_data *ch, char *argument, int cmd)
 	}
     }
     else  /* there was one arg.let's see what we can find */
-    {			
+    {
 	if (!(paper = get_obj_in_list_vis(ch, papername, ch->carrying)))
 	{
             sprintf(buf, "There is no %s in your inventory.\n\r", papername);
@@ -389,11 +389,11 @@ void do_write(struct char_data *ch, char *argument, int cmd)
 	    send_to_char("The stuff in your hand is invisible! Yeech!!\n\r", ch);
 	    return;
 	}
-		
+
 	if (pen) paper = ch->equipment[HOLD];
 	else pen = ch->equipment[HOLD];
     }
-			
+
     /* ok.. now let's see what kind of stuff we've found */
     if (pen->obj_flags.type_flag != ITEM_PEN)
     {
@@ -408,7 +408,7 @@ void do_write(struct char_data *ch, char *argument, int cmd)
     else
     {
 	/* we can write - hooray! */
-				
+
 	send_to_char("Ok.. go ahead and write.. end the note with a @.\n\r",
             ch);
 	act("$n begins to jot down a note.", TRUE, ch, 0,0,TO_ROOM);

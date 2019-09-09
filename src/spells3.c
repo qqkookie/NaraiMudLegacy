@@ -4,6 +4,7 @@
 ************************************************************************* */
 
 #include <stdio.h>
+#include <string.h>
 
 #include "structs.h"
 #include "utils.h"
@@ -33,7 +34,7 @@ int number(int from, int to);
 void say_spell( struct char_data *ch, int si );
 bool saves_spell(struct char_data *ch, sh_int spell);
 void add_follower(struct char_data *ch, struct char_data *victim);
-char *strdup(char *str);
+// char *strdup(char *str);
 void spell_spell_block(byte level,struct char_data *ch,struct char_data *tar_ch,
 struct obj_data *tar_obj);
 void spell_mana_transfer(byte level,struct char_data *ch,struct char_data *tar_ch,struct obj_data *tar_obj);

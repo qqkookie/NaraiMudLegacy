@@ -408,11 +408,12 @@ void do_group(struct char_data *ch, char *argument, int cmd)
       else
         k = ch;
 
-      if (k&&IS_AFFECTED(k, AFF_GROUP))
+      if (k&&IS_AFFECTED(k, AFF_GROUP)) {
         sprintf(buf,"  [ %5d/%5d %5d/%5d %5d/%5d ]   $N (Head of group)",
          GET_HIT(k),GET_PLAYER_MAX_HIT(k),GET_MANA(k),
          GET_PLAYER_MAX_MANA(k),GET_MOVE(k),GET_PLAYER_MAX_MOVE(k) );
-        act(buf,FALSE,ch, 0, k, TO_CHAR);
+      }
+      act(buf,FALSE,ch, 0, k, TO_CHAR);
 
       for(f=k->followers; f; f=f->next)
         if ( f->follower&&IS_AFFECTED(f->follower, AFF_GROUP)){
@@ -917,8 +918,8 @@ void do_shouryuken(struct char_data *ch,char *argument,int cmd)
 	struct char_data *victim;
 	char victim_name[240];
 	int percent;
-	int tmp;
-	int level_plus;
+	// int tmp;
+	// int level_plus;
 
     if ((GET_LEVEL(ch) == IMO) && (!IS_NPC(ch))) {
        return;
@@ -995,8 +996,8 @@ void do_shouryuken(struct char_data *ch,char *argument,int cmd)
 
 	if (percent < ch->skills[SKILL_SHOURYUKEN].learned) {
 		INCREASE_SKILLED(ch, victim, SKILL_SHOURYUKEN);
-		level_plus = 10 + (GET_LEVEL(ch) + GET_SKILLED(ch, SKILL_SHOURYUKEN)) / 8;
-		tmp = number(10, level_plus);
+		// level_plus = 10 + (GET_LEVEL(ch) + GET_SKILLED(ch, SKILL_SHOURYUKEN)) / 8;
+		// tmp = number(10, level_plus);
 		GET_MOVE(ch) -= (600 - GET_SKILLED(ch, SKILL_SHOURYUKEN));
 		GET_MANA(ch) -= (300 - GET_SKILLED(ch, SKILL_SHOURYUKEN));
 		/*

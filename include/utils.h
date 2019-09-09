@@ -3,6 +3,13 @@
 *  Usage: Utility macros                                                  *
 ************************************************************************* */
 
+// To avoid name conflict with built-in log(x) function
+#define log(s) mudlog(s)
+extern void log(char *str);
+
+// Don't use NULL pointer for null character ('\0')
+#define NUL '\0' 
+
 int hit_limit(struct char_data *ch);
 
 #define TRUE  1
@@ -25,14 +32,13 @@ int hit_limit(struct char_data *ch);
 
 #define CAP(st)  (*(st) = UPPER(*(st)))
 
-/* Power */
-/* For Linux 1+sizeof(type), for BSD sizeof(type) */
+
+// Removed +1 kuldge
 #define CREATE(result, type, number)  do {\
-  if (!((result) = (type *) calloc ((number), (1+sizeof(type)))))\
+  if (!((result) = (type *) calloc ((number), sizeof(type))))\
     { perror("malloc failure"); abort(); } } while(0)
-/* here same.. I added 1 */
 #define RECREATE(result,type,number) do {\
-  if (!((result) = (type *) realloc ((result), (sizeof(type) * (number))+1)))\
+  if (!((result) = (type *) realloc ((result), sizeof(type) * (number))))\
     { perror("realloc failure"); abort(); } } while(0)
 
 #define IS_SET(flag,bit)  ((flag) & (bit))
