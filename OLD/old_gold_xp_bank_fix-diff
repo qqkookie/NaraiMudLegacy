@@ -1,0 +1,2892 @@
+diff -wcr src-orig/act.informative.c src/act.informative.c
+*** src-orig/act.informative.c	2000-05-22 23:34:14.000000000 +0900
+--- src/act.informative.c	2019-05-21 23:45:11.000000000 +0900
+***************
+*** 61,68 ****
+  /* Procedures related to 'look' */
+  
+  void argument_split_2(char *argument, char *first_arg, char *second_arg) {
+!   int look_at, found, begin;
+!   found = begin = 0;
+  
+    /* Find first non blank */
+    for ( ;*(argument + begin ) == ' ' ; begin++);
+--- 61,68 ----
+  /* Procedures related to 'look' */
+  
+  void argument_split_2(char *argument, char *first_arg, char *second_arg) {
+!   int look_at, begin;
+!   begin = 0;
+  
+    /* Find first non blank */
+    for ( ;*(argument + begin ) == ' ' ; begin++);
+***************
+*** 112,118 ****
+  void show_obj_to_char(struct obj_data *object, struct char_data *ch, int mode)
+  {
+    char buffer[MAX_STRING_LENGTH] ;
+-   bool found;
+  
+    buffer[0] = '\0';
+    if (mode < 0 || mode > 6) mode = 1;
+--- 112,117 ----
+***************
+*** 145,166 ****
+    }
+  
+    if (mode != 3) { 
+-     found = FALSE;
+      if (IS_OBJ_STAT(object,ITEM_INVISIBLE)) {
+         strcat(buffer,"(invisible)");
+-        found = TRUE;
+      }
+      if (IS_OBJ_STAT(object,ITEM_EVIL) && ch&&IS_AFFECTED(ch,AFF_DETECT_EVIL)) {
+         strcat(buffer,"..It glows red!");
+-        found = TRUE;
+      }
+      if (IS_OBJ_STAT(object,ITEM_GLOW)) {
+        strcat(buffer,"..It has a soft glowing aura!");
+-       found = TRUE;
+      }
+      if (IS_OBJ_STAT(object,ITEM_HUM)) {
+        strcat(buffer,"..It emits a faint humming sound!");
+-       found = TRUE;
+      }
+    }
+  
+--- 144,160 ----
+***************
+*** 698,704 ****
+  void do_examine(struct char_data *ch, char *argument, int cmd)
+  {
+    char name[100], buf[100];
+-   int bits;
+    struct char_data *tmp_char;
+    struct obj_data *tmp_object;
+  
+--- 692,697 ----
+***************
+*** 713,719 ****
+      return;
+    }
+  
+!   bits = generic_find(name, FIND_OBJ_INV | FIND_OBJ_ROOM |
+           FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
+  
+    if (tmp_object) {
+--- 706,712 ----
+      return;
+    }
+  
+!   generic_find(name, FIND_OBJ_INV | FIND_OBJ_ROOM |
+           FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
+  
+    if (tmp_object) {
+***************
+*** 746,752 ****
+  void do_title(struct char_data *ch, char *argument, int cmd)
+  {
+    char buf[100];
+!   if( *argument == NULL ) {
+      sprintf(buf, "You are %s %s\n\r", GET_NAME(ch), GET_TITLE(ch));
+      send_to_char(buf, ch);
+      return;
+--- 739,745 ----
+  void do_title(struct char_data *ch, char *argument, int cmd)
+  {
+    char buf[100];
+!   if( *argument == '\0') {
+      sprintf(buf, "You are %s %s\n\r", GET_NAME(ch), GET_TITLE(ch));
+      send_to_char(buf, ch);
+      return;
+***************
+*** 776,782 ****
+    for (door = 0; door <= 5; door++)
+      if (EXIT(ch, door))
+        if (EXIT(ch, door)->to_room != NOWHERE &&
+!           !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
+  		if (GET_LEVEL(ch) >= IMO) 
+  		   sprintf(buf + strlen(buf), "%-5s - [%5d] %s\r\n",
+  		       exits[door], world[EXIT(ch, door)->to_room].number,
+--- 769,775 ----
+    for (door = 0; door <= 5; door++)
+      if (EXIT(ch, door))
+        if (EXIT(ch, door)->to_room != NOWHERE &&
+!           !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
+  		if (GET_LEVEL(ch) >= IMO)
+  		   sprintf(buf + strlen(buf), "%-5s - [%5d] %s\r\n",
+  		       exits[door], world[EXIT(ch, door)->to_room].number,
+***************
+*** 786,793 ****
+          else
+            sprintf(buf + strlen(buf), "%s - %s\n\r", exits[door],
+              world[EXIT(ch, door)->to_room].name);
+! 
+! 
+    send_to_char_han("Obvious exits:\n\r", "명백한 출구는:\n\r",ch);
+  
+    if (*buf)
+--- 779,785 ----
+          else
+            sprintf(buf + strlen(buf), "%s - %s\n\r", exits[door],
+              world[EXIT(ch, door)->to_room].name);
+! 	}
+    send_to_char_han("Obvious exits:\n\r", "명백한 출구는:\n\r",ch);
+  
+    if (*buf)
+***************
+*** 979,987 ****
+      send_to_char_han(buf, buf2, ch); 
+      }
+  
+!   sprintf(buf,"You have scored %u exp, and have %u gold coins.\n\r",
+      GET_EXP(ch),GET_GOLD(ch));
+!   sprintf(buf2,"당신은 %d 의 경험치와 %d 원의 돈을 가지고 있습니다.\n\r",
+      GET_EXP(ch),GET_GOLD(ch));
+    send_to_char_han(buf, buf2, ch);
+  
+--- 971,979 ----
+      send_to_char_han(buf, buf2, ch);
+      }
+  
+!   sprintf(buf,"You have scored %llu exp, and have %llu gold coins.\n\r",
+      GET_EXP(ch),GET_GOLD(ch));
+!   sprintf(buf2,"당신은 %llu 의 경험치와 %llu 원의 돈을 가지고 있습니다.\n\r",
+      GET_EXP(ch),GET_GOLD(ch));
+    send_to_char_han(buf, buf2, ch);
+  
+***************
+*** 1003,1011 ****
+        strcpy(buf2,"레벨을 올릴만큼 충분한 경험치가 쌓였습니다.\n\r");
+        }
+      else {
+!       sprintf(buf,"You need %d experience to advance\n\r",
+         titles[GET_CLASS(ch)-1][GET_LEVEL(ch)+1].exp-GET_EXP(ch));
+!       sprintf(buf2,"다음 레벨까지 %d 만큼의 경험치가 필요합니다.\n\r",
+         titles[GET_CLASS(ch)-1][GET_LEVEL(ch)+1].exp-GET_EXP(ch));
+         }
+      send_to_char_han(buf, buf2, ch);
+--- 995,1003 ----
+        strcpy(buf2,"레벨을 올릴만큼 충분한 경험치가 쌓였습니다.\n\r");
+        }
+      else {
+!       sprintf(buf,"You need %llu experience to advance\n\r",
+         titles[GET_CLASS(ch)-1][GET_LEVEL(ch)+1].exp-GET_EXP(ch));
+!       sprintf(buf2,"다음 레벨까지 %llu 만큼의 경험치가 필요합니다.\n\r",
+         titles[GET_CLASS(ch)-1][GET_LEVEL(ch)+1].exp-GET_EXP(ch));
+         }
+      send_to_char_han(buf, buf2, ch);
+***************
+*** 1202,1208 ****
+        };
+  
+    one_argument(argument,buf2);
+!   if ((GET_LEVEL(ch) > (IMO+2)) && buf2[0] != NULL )
+    {
+  	if (strcmp(buf2,"cloud")==0)
+  		weather_change(1);
+--- 1194,1200 ----
+        };
+  
+    one_argument(argument,buf2);
+!   if ((GET_LEVEL(ch) > (IMO+2)) && buf2[0] != '\0' )
+    {
+  	if (strcmp(buf2,"cloud")==0)
+  		weather_change(1);
+***************
+*** 1507,1513 ****
+    char line[256], line2[256];
+    struct descriptor_data *d;
+    int m=0,n=0,flag,t;
+!   static most=0;
+    extern int boottime;
+  
+    one_argument(argument,line);
+--- 1499,1505 ----
+    char line[256], line2[256];
+    struct descriptor_data *d;
+    int m=0,n=0,flag,t;
+!   static int most=0;
+    extern int boottime;
+  
+    one_argument(argument,line);
+***************
+*** 1798,1804 ****
+      return;
+    target=atoi(name);
+    for (d=descriptor_list;d;d=d->next){
+!     sprintf(name,"%x",(unsigned int) d); log(name);
+      if(target==d->descriptor){
+        if((d->connected == CON_PLYNG)&&(d->character)){
+          if(d->character->player.level < ch->player.level){
+--- 1790,1796 ----
+      return;
+    target=atoi(name);
+    for (d=descriptor_list;d;d=d->next){
+!     sprintf(name,"%lx", (unsigned long) d); log(name);
+      if(target==d->descriptor){
+        if((d->connected == CON_PLYNG)&&(d->character)){
+          if(d->character->player.level < ch->player.level){
+***************
+*** 1878,1884 ****
+    struct descriptor_data *d;
+    struct char_data *victim;
+    char buf[256],name[256],fmt[16];
+!   int i=0, k, n = 0, t = 0, nc;
+  
+    one_argument(argument, name);
+    if(strcmp(name,"exp")==0)
+--- 1870,1877 ----
+    struct descriptor_data *d;
+    struct char_data *victim;
+    char buf[256],name[256],fmt[16];
+!   int i=0, k, t = 0, nc;
+!   long long n = 0;
+  
+    one_argument(argument, name);
+    if(strcmp(name,"exp")==0)
+***************
+*** 1903,1912 ****
+      k=10;
+    if((k==1)||(k==3)||(k==8)){
+      nc=3;
+!     strcpy(fmt,"%-15s%10d%s");
+    } else {
+      nc=4;
+!     strcpy(fmt,"%-15s%4d%s");
+    }
+    for (d = descriptor_list; d; d = d->next) {
+      if (!d->connected && CAN_SEE(ch, d->character)) {
+--- 1896,1905 ----
+      k=10;
+    if((k==1)||(k==3)||(k==8)){
+      nc=3;
+!     strcpy(fmt,"%-15s%10lld%s");
+    } else {
+      nc=4;
+!     strcpy(fmt,"%-15s%4lld%s");
+    }
+    for (d = descriptor_list; d; d = d->next) {
+      if (!d->connected && CAN_SEE(ch, d->character)) {
+diff -wcr src-orig/act.movement.c src/act.movement.c
+*** src-orig/act.movement.c	2000-05-22 23:34:14.000000000 +0900
+--- src/act.movement.c	2019-05-19 18:01:14.000000000 +0900
+***************
+*** 266,272 ****
+        send_to_char("Ok.\n\r", ch);
+        act("$n opens $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0)
+  
+      /* perhaps it is a door */
+  
+--- 266,272 ----
+        send_to_char("Ok.\n\r", ch);
+        act("$n opens $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0) {
+  
+      /* perhaps it is a door */
+  
+***************
+*** 305,310 ****
+--- 305,311 ----
+            }             
+      }
+    }
++ }
+  
+  void do_close(struct char_data *ch, char *argument, int cmd)
+  {
+***************
+*** 334,340 ****
+        send_to_char("Ok.\n\r", ch);
+        act("$n closes $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0)
+  
+      /* Or a door */
+  
+--- 335,341 ----
+        send_to_char("Ok.\n\r", ch);
+        act("$n closes $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0) {
+  
+      /* Or a door */
+  
+***************
+*** 370,375 ****
+--- 371,377 ----
+            }             
+      }
+    }
++ }
+  
+  
+  int has_key(struct char_data *ch, int key)
+***************
+*** 422,428 ****
+        send_to_char("*Cluck*\n\r", ch);
+        act("$n locks $p - 'cluck', it says.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0)
+  
+      /* a door, perhaps */
+  
+--- 424,430 ----
+        send_to_char("*Cluck*\n\r", ch);
+        act("$n locks $p - 'cluck', it says.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0) {
+  
+      /* a door, perhaps */
+  
+***************
+*** 452,457 ****
+--- 454,460 ----
+              SET_BIT(back->exit_info, EX_LOCKED);
+      }
+    }
++ }
+  
+  
+  void do_unlock(struct char_data *ch, char *argument, int cmd)
+***************
+*** 488,494 ****
+        send_to_char("*Click*\n\r", ch);
+        act("$n unlocks $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0)
+  
+      /* it is a door */
+  
+--- 491,497 ----
+        send_to_char("*Click*\n\r", ch);
+        act("$n unlocks $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0) {
+  
+      /* it is a door */
+  
+***************
+*** 518,523 ****
+--- 521,527 ----
+              REMOVE_BIT(back->exit_info, EX_LOCKED);
+      }
+    }
++ }
+  
+  
+  
+***************
+*** 570,576 ****
+        send_to_char("*Click*\n\r", ch);
+        act("$n fiddles with $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0)
+      if (!IS_SET(EXIT(ch, door)->exit_info, EX_ISDOOR))
+        send_to_char("That's absurd.\n\r", ch);
+      else if (!IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
+--- 574,580 ----
+        send_to_char("*Click*\n\r", ch);
+        act("$n fiddles with $p.", FALSE, ch, obj, 0, TO_ROOM);
+      }
+!   else if ((door = find_door(ch, type, dir)) >= 0) {
+      if (!IS_SET(EXIT(ch, door)->exit_info, EX_ISDOOR))
+        send_to_char("That's absurd.\n\r", ch);
+      else if (!IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
+***************
+*** 602,607 ****
+--- 606,612 ----
+              REMOVE_BIT(back->exit_info, EX_LOCKED);
+      }
+    }
++ }
+  
+  
+  void do_enter(struct char_data *ch, char *argument, int cmd)
+diff -wcr src-orig/act.obj1.c src/act.obj1.c
+*** src-orig/act.obj1.c	2000-05-22 23:34:16.000000000 +0900
+--- src/act.obj1.c	2019-05-21 20:48:13.000000000 +0900
+***************
+*** 327,333 ****
+  
+  void do_drop(struct char_data *ch, char *argument, int cmd) {
+    char arg[MAX_STRING_LENGTH];
+!   int amount;
+    char buffer[MAX_STRING_LENGTH];
+    struct obj_data *tmp_object;
+    struct obj_data *next_obj;
+--- 327,333 ----
+  
+  void do_drop(struct char_data *ch, char *argument, int cmd) {
+    char arg[MAX_STRING_LENGTH];
+!   long long amount;
+    char buffer[MAX_STRING_LENGTH];
+    struct obj_data *tmp_object;
+    struct obj_data *next_obj;
+***************
+*** 335,341 ****
+    
+    argument=one_argument(argument, arg);
+    if(is_number(arg)) {
+!     amount = atoi(arg);
+      argument=one_argument(argument,arg);
+      if (str_cmp("coins",arg) && str_cmp("coin",arg)) {
+        send_to_char("Sorry, you can't do that (yet)...\n\r",ch);
+--- 335,341 ----
+    
+    argument=one_argument(argument, arg);
+    if(is_number(arg)) {
+!     amount = atoll(arg);
+      argument=one_argument(argument,arg);
+      if (str_cmp("coins",arg) && str_cmp("coin",arg)) {
+        send_to_char("Sorry, you can't do that (yet)...\n\r",ch);
+diff -wcr src-orig/act.other.c src/act.other.c
+*** src-orig/act.other.c	2000-05-22 23:34:18.000000000 +0900
+--- src/act.other.c	2019-05-19 19:39:08.000000000 +0900
+***************
+*** 412,417 ****
+--- 412,418 ----
+          sprintf(buf,"  [ %5d/%5d %5d/%5d %5d/%5d ]   $N (Head of group)",
+           GET_HIT(k),GET_PLAYER_MAX_HIT(k),GET_MANA(k),
+           GET_PLAYER_MAX_MANA(k),GET_MOVE(k),GET_PLAYER_MAX_MOVE(k) );
++ 
+        act(buf,FALSE,ch, 0, k, TO_CHAR);
+  
+        for(f=k->followers; f; f=f->next)
+***************
+*** 917,924 ****
+  	struct char_data *victim;
+  	char victim_name[240];
+  	int percent;
+- 	int tmp;
+- 	int level_plus;
+  
+      if ((GET_LEVEL(ch) == IMO) && (!IS_NPC(ch))) {
+         return;
+--- 918,923 ----
+***************
+*** 995,1002 ****
+  
+  	if (percent < ch->skills[SKILL_SHOURYUKEN].learned) {
+  		INCREASE_SKILLED(ch, victim, SKILL_SHOURYUKEN);
+! 		level_plus = 10 + (GET_LEVEL(ch) + GET_SKILLED(ch, SKILL_SHOURYUKEN)) / 8;
+! 		tmp = number(10, level_plus);
+  		GET_MOVE(ch) -= (600 - GET_SKILLED(ch, SKILL_SHOURYUKEN));
+  		GET_MANA(ch) -= (300 - GET_SKILLED(ch, SKILL_SHOURYUKEN));
+  		/*
+--- 994,1001 ----
+  
+  	if (percent < ch->skills[SKILL_SHOURYUKEN].learned) {
+  		INCREASE_SKILLED(ch, victim, SKILL_SHOURYUKEN);
+! 		// level_plus = 10 + (GET_LEVEL(ch) + GET_SKILLED(ch, SKILL_SHOURYUKEN)) / 8;
+! 		// tmp = number(10, level_plus);
+  		GET_MOVE(ch) -= (600 - GET_SKILLED(ch, SKILL_SHOURYUKEN));
+  		GET_MANA(ch) -= (300 - GET_SKILLED(ch, SKILL_SHOURYUKEN));
+  		/*
+diff -wcr src-orig/act.wizard.c src/act.wizard.c
+*** src-orig/act.wizard.c	2003-03-19 21:34:42.000000000 +0900
+--- src/act.wizard.c	2019-05-21 19:05:18.000000000 +0900
+***************
+*** 607,613 ****
+        sprintf(buf, "AC: %d/10, Hitroll: %d, Damroll: %d, Regen: %d\n\r",
+  	      GET_AC(k), k->points.hitroll, k->points.damroll, k->regeneration);
+        strcat(page_buffer, buf);
+!       sprintf(buf, "Gold: %d, Bank: %ld, Exp: %d\n\r",
+  	      GET_GOLD(k), k->bank, GET_EXP(k));
+        strcat(page_buffer, buf);
+        
+--- 607,613 ----
+        sprintf(buf, "AC: %d/10, Hitroll: %d, Damroll: %d, Regen: %d\n\r",
+  	      GET_AC(k), k->points.hitroll, k->points.damroll, k->regeneration);
+        strcat(page_buffer, buf);
+!       sprintf(buf, "Gold: %llu, Bank: %llu, Exp: %llu\n\r",
+  	      GET_GOLD(k), k->bank, GET_EXP(k));
+        strcat(page_buffer, buf);
+        
+***************
+*** 1515,1520 ****
+--- 1515,1521 ----
+        one_argument(buf2,buf3);
+        if(*buf3)
+          reboot_time= atoi(buf3);
++ 
+        sprintf(mess,"Reboot Time is %ld seconds after current boot time .\n\n",
+  		reboot_time);
+        send_to_char(mess,ch);
+***************
+*** 1588,1596 ****
+      else {
+        half_chop(buf2,buf3,buf4);
+        k=atoi(buf4);
+        if((GET_LEVEL(ch) < (IMO+2))&&(strcmp(buf3,"gold"))) return;
+        if(strcmp(buf3,"exp")==0 && (GET_LEVEL(ch) > (IMO+2)))
+!         victim->points.exp=k;
+        else if(strcmp(buf3,"skill")==0) {
+          for(i=0;i<MAX_SKILLS;i++)
+            victim->skills[i].learned=k;		/* clear skills */
+--- 1589,1598 ----
+      else {
+        half_chop(buf2,buf3,buf4);
+        k=atoi(buf4);
++       long long  kk = atoll(buf4);
+        if((GET_LEVEL(ch) < (IMO+2))&&(strcmp(buf3,"gold"))) return;
+        if(strcmp(buf3,"exp")==0 && (GET_LEVEL(ch) > (IMO+2)))
+!         victim->points.exp=kk;
+        else if(strcmp(buf3,"skill")==0) {
+          for(i=0;i<MAX_SKILLS;i++)
+            victim->skills[i].learned=k;		/* clear skills */
+***************
+*** 1613,1621 ****
+        else if(strcmp("move",buf3)==0)
+  	victim->points.move=victim->points.max_move=k;
+        else if(strcmp("bank",buf3)==0)
+!         victim->bank=k;
+        else if(strcmp("gold",buf3)==0)
+!         victim->points.gold=k;
+        else if(strcmp("align",buf3)==0)
+          victim->specials.alignment=k;
+        else if(strcmp("str",buf3)==0)
+--- 1615,1623 ----
+        else if(strcmp("move",buf3)==0)
+  	victim->points.move=victim->points.max_move=k;
+        else if(strcmp("bank",buf3)==0)
+!         victim->bank=kk;
+        else if(strcmp("gold",buf3)==0)
+!         victim->points.gold=kk;
+        else if(strcmp("align",buf3)==0)
+          victim->specials.alignment=k;
+        else if(strcmp("str",buf3)==0)
+***************
+*** 1875,1881 ****
+    getrusage(0,&xru);
+    sprintf(buffer,
+      "sys time: %ld secs\n\rusr time: %ld secs\n\rrun time: %ld secs\n\r",
+!     xru.ru_stime.tv_sec,xru.ru_utime.tv_sec,time(0)-boottime);
+    send_to_char(buffer,ch);
+    if(GET_LEVEL(ch) >= (IMO+2)){
+      nits=0;
+--- 1877,1883 ----
+    getrusage(0,&xru);
+    sprintf(buffer,
+      "sys time: %ld secs\n\rusr time: %ld secs\n\rrun time: %ld secs\n\r",
+!     (long) xru.ru_stime.tv_sec, (long) xru.ru_utime.tv_sec, (long)(time(0)-boottime));
+    send_to_char(buffer,ch);
+    if(GET_LEVEL(ch) >= (IMO+2)){
+      nits=0;
+diff -wcr src-orig/board.c src/board.c
+*** src-orig/board.c	2000-05-22 23:34:20.000000000 +0900
+--- src/board.c	2019-05-21 03:25:32.000000000 +0900
+***************
+*** 114,120 ****
+  			return;
+          }
+          fread(cb->head[ind], size, 1, cb->fp);
+!         cb->head[ind][size] = NULL;
+          fread(cb->writer[ind], WRITER_NAME_LEN, 1, cb->fp);
+          fread(&size, sizeof(int), 1, cb->fp);
+          cb->msgs[ind] = (char *)malloc(size + 1);
+--- 114,120 ----
+  			return;
+          }
+          fread(cb->head[ind], size, 1, cb->fp);
+!         cb->head[ind][size] = '\0';
+          fread(cb->writer[ind], WRITER_NAME_LEN, 1, cb->fp);
+          fread(&size, sizeof(int), 1, cb->fp);
+          cb->msgs[ind] = (char *)malloc(size + 1);
+***************
+*** 123,129 ****
+  			return;
+          }
+          fread(cb->msgs[ind], size, 1, cb->fp);
+!         cb->msgs[ind][size] = NULL;
+      }
+      fclose(cb->fp);
+      return;
+--- 123,129 ----
+  			return;
+          }
+          fread(cb->msgs[ind], size, 1, cb->fp);
+!         cb->msgs[ind][size] = '\0';
+      }
+      fclose(cb->fp);
+      return;
+diff -wcr src-orig/comm.c src/comm.c
+*** src-orig/comm.c	2009-06-09 23:48:24.000000000 +0900
+--- src/comm.c	2019-05-21 06:18:55.000000000 +0900
+***************
+*** 17,22 ****
+--- 17,23 ----
+  #include <arpa/inet.h>
+  #include <netdb.h>
+  #include <string.h>
++ #include <time.h>
+  #include <sys/time.h>
+  #include <fcntl.h>
+  #include <signal.h>
+***************
+*** 29,42 ****
+  #include "interpreter.h"
+  #include "handler.h"
+  #include "db.h"
+- #include "cygwin.h"
+  
+  #ifndef DFLT_DIR
+  #define DFLT_DIR "lib"        /* default port */
+! #endif  DFLT_DIR
+  #ifndef DFLT_PORT
+  #define DFLT_PORT 5001        /* default port */
+! #endif  DFLT_PORT
+  
+  #define MAX_NAME_LENGTH 15
+  #define MAX_HOSTNAME 256
+--- 30,42 ----
+  #include "interpreter.h"
+  #include "handler.h"
+  #include "db.h"
+  
+  #ifndef DFLT_DIR
+  #define DFLT_DIR "lib"        /* default port */
+! #endif
+  #ifndef DFLT_PORT
+  #define DFLT_PORT 5001        /* default port */
+! #endif
+  
+  #define MAX_NAME_LENGTH 15
+  #define MAX_HOSTNAME 256
+***************
+*** 52,59 ****
+  extern struct time_info_data time_info;  /* In db.c */
+  extern char help[];
+  
+! extern no_echo_telnet( struct descriptor_data *d );
+! extern echo_telnet( struct descriptor_data *d );
+  void no_echo_local(int fd);
+  void weather_and_time(int mode);
+  
+--- 52,59 ----
+  extern struct time_info_data time_info;  /* In db.c */
+  extern char help[];
+  
+! extern int no_echo_telnet( struct descriptor_data *d );
+! extern int echo_telnet( struct descriptor_data *d );
+  void no_echo_local(int fd);
+  void weather_and_time(int mode);
+  
+***************
+*** 143,154 ****
+  {
+    int port;
+    char buf[512];
+!   char *dir;
+    FILE *pidfp;
+  
+    close(0); close(1);
+    port = DFLT_PORT;
+!   dir = DFLT_DIR;
+    strcpy(baddomain[0],"165.246.11.109");
+    baddoms=1;
+    if (argc == 2) {
+--- 143,154 ----
+  {
+    int port;
+    char buf[512];
+!   // char *dir;
+    FILE *pidfp;
+  
+    close(0); close(1);
+    port = DFLT_PORT;
+!   // dir = DFLT_DIR;
+    strcpy(baddomain[0],"165.246.11.109");
+    baddoms=1;
+    if (argc == 2) {
+***************
+*** 176,185 ****
+--- 176,187 ----
+  
+    sprintf(buf, "Running game on port %d.", port);
+    log(buf);
++ /*
+    if (chdir(dir) < 0) {
+      perror("chdir");
+      exit(0);
+    }
++ */
+    srandom(boottime=time(0));
+    run_the_game(port);
+    return(0);
+***************
+*** 296,302 ****
+        last_time.tv_usec -= 1000000;
+        last_time.tv_sec++;
+      }
+!     sigsetmask(mask);
+      if(select(maxdesc+1, &input_set, &output_set, &exc_set, &null_time) < 0) {
+        perror("Select poll");
+        exit(0);
+--- 298,306 ----
+        last_time.tv_usec -= 1000000;
+        last_time.tv_sec++;
+      }
+!     // sigsetmask(mask);
+!     sigset_t oldmask;
+!     sigprocmask(SIG_SETMASK, (sigset_t *) &mask, &oldmask);
+      if(select(maxdesc+1, &input_set, &output_set, &exc_set, &null_time) < 0) {
+        perror("Select poll");
+        exit(0);
+***************
+*** 306,312 ****
+        exit(1);
+      }
+  
+!     sigsetmask(0);
+      /* Respond to whatever might be happening */
+      /* New connection? */
+       if (FD_ISSET(s, &input_set))
+--- 310,317 ----
+        exit(1);
+      }
+  
+!     // sigsetmask(0);
+!     sigprocmask(SIG_SETMASK, &oldmask, NULL);
+      /* Respond to whatever might be happening */
+      /* New connection? */
+       if (FD_ISSET(s, &input_set))
+***************
+*** 388,394 ****
+      for (point = descriptor_list; point; point = next_point) {
+        next_point = point->next;
+        xo=point;
+!       if (FD_ISSET(point->descriptor, &output_set) && point->output.head)
+          if(process_output(point) < 0){
+            FD_CLR(point->descriptor, &input_set);
+            FD_CLR(point->descriptor, &output_set);
+--- 393,399 ----
+      for (point = descriptor_list; point; point = next_point) {
+        next_point = point->next;
+        xo=point;
+!       if (FD_ISSET(point->descriptor, &output_set) && point->output.head) {
+          if(process_output(point) < 0){
+            FD_CLR(point->descriptor, &input_set);
+            FD_CLR(point->descriptor, &output_set);
+***************
+*** 400,405 ****
+--- 405,411 ----
+          } else
+            point->prompt_mode = 1;
+        }
++     }
+      /* give the people some prompts */
+      ++xoclock;
+      if(xoclock == MAXOCLOCK) xoclock=0;
+***************
+*** 416,422 ****
+        if (point->prompt_mode) {
+          if (point->str)
+            write_to_descriptor(point->descriptor, "] ");
+!         else if (!point->connected)
+            if (point->showstr_point)
+              write_to_descriptor(point->descriptor,
+                "*** Press return ***");
+--- 422,428 ----
+        if (point->prompt_mode) {
+          if (point->str)
+            write_to_descriptor(point->descriptor, "] ");
+!         else if (!point->connected) {
+            if (point->showstr_point)
+              write_to_descriptor(point->descriptor,
+                "*** Press return ***");
+***************
+*** 435,440 ****
+--- 441,447 ----
+  				do_assist(point->character,"",0);
+  			} */
+            }
++        }
+          point->prompt_mode = 0;
+        }
+      }
+***************
+*** 712,718 ****
+  {
+    struct sockaddr_in isa;
+    /* struct sockaddr peer; */
+!   int i;
+    int t;
+  
+    i = sizeof(isa);
+--- 719,725 ----
+  {
+    struct sockaddr_in isa;
+    /* struct sockaddr peer; */
+!   unsigned i;
+    int t;
+  
+    i = sizeof(isa);
+***************
+*** 729,735 ****
+  {
+    int desc;
+    struct descriptor_data *newd;
+!   int i,size;
+    struct sockaddr_in sock;
+  
+    if ((desc = new_connection(s)) < 0)
+--- 736,743 ----
+  {
+    int desc;
+    struct descriptor_data *newd;
+!   int i ;
+!   unsigned size;
+    struct sockaddr_in sock;
+  
+    if ((desc = new_connection(s)) < 0)
+***************
+*** 1024,1050 ****
+  #else
+        save_char(d->character, d->character->in_room);
+  #endif
+! #ifdef SYPARK
+  	  stash_char(d->character);
+- #endif
+        act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM);
+        sprintf(buf, "Closing link to: %s.", GET_NAME(d->character));
+        log(buf);
+        d->character->desc = 0;
+      } else {
+        sprintf(buf, "Losing player: %s.", GET_NAME(d->character));
+- /*
+- #ifdef  RETURN_TO_QUIT  
+- 	save_char(d->character,world[d->character->in_room].number);
+- #else
+-       save_char(d->character, d->character->in_room);
+- #endif
+- */
+- /*
+- #ifdef SYPARK
+- 	  stash_char(d->character);
+- #endif
+- */
+        log(buf);
+        free_char(d->character);
+      }
+--- 1032,1045 ----
+  #else
+        save_char(d->character, d->character->in_room);
+  #endif
+!       // SYPARK
+        stash_char(d->character);
+        act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM);
+        sprintf(buf, "Closing link to: %s.", GET_NAME(d->character));
+        log(buf);
+        d->character->desc = 0;
+      } else {
+        sprintf(buf, "Losing player: %s.", GET_NAME(d->character));
+        log(buf);
+        free_char(d->character);
+      }
+diff -wcr src-orig/db.c src/db.c
+*** src-orig/db.c	2003-03-13 23:58:42.000000000 +0900
+--- src/db.c	2019-05-21 02:57:44.000000000 +0900
+***************
+*** 21,30 ****
+  
+  #include "mob_bal.c"
+  
+- #include "cygwin.h"
+- 
+  #define KJHRENT      66666 /* kjh number to tell new rent format */
+- #define SYPARKRENT   900176 /* sypark student id :) */
+  #define KNIFE_RENT   77777 /* Equiped Rent by Knife */
+  
+  #define NEW_ZONE_SYSTEM
+--- 21,27 ----
+***************
+*** 304,309 ****
+--- 301,308 ----
+    else weather_info.sky = SKY_CLOUDLESS;
+  }
+  
++ #pragma GCC diagnostic ignored "-Wunused-result"
++ 
+  /* generate index table for the player file */
+  void build_player_index(void)
+  {
+***************
+*** 459,465 ****
+  	      (zone ? zone_table[zone-1].top : -1)) {
+  	    fprintf(stderr, "Room nr %d is below zone %d.\n",
+  		    room_nr, zone);
+! 	    fprintf(stderr, "DEBUG: %ld, %s\n",
+  		    world[room_nr].number, world[room_nr].name);
+  	    exit(0);
+  	  }
+--- 458,464 ----
+  	      (zone ? zone_table[zone-1].top : -1)) {
+  	    fprintf(stderr, "Room nr %d is below zone %d.\n",
+  		    room_nr, zone);
+! 	    fprintf(stderr, "DEBUG: %d, %s\n",
+  		    world[room_nr].number, world[room_nr].name);
+  	    exit(0);
+  	  }
+***************
+*** 753,759 ****
+  	/* read the command table */
+  	cmd_no = 0;
+  	for (expand = 1;;) {
+! 		if (expand)
+  			if (!cmd_no)
+  				CREATE(zone_table[zon].cmd, struct reset_com, 1);
+  			else
+--- 752,758 ----
+  	/* read the command table */
+  	cmd_no = 0;
+  	for (expand = 1;;) {
+! 		if (expand) {
+  			if (!cmd_no)
+  				CREATE(zone_table[zon].cmd, struct reset_com, 1);
+  			else
+***************
+*** 764,769 ****
+--- 763,769 ----
+  					perror(zone_table[zon].filename);
+  					exit(0);
+  				}
++ 		}
+  		expand = 1;
+  		fscanf(fl, " "); /* skip blanks */
+  		fscanf(fl, "%c", &zone_table[zon].cmd[cmd_no].command);
+***************
+*** 850,856 ****
+  		/* read the command table */
+  		cmd_no = 0;
+  		for (expand = 1;;) {
+! 			if (expand)
+  				if (!cmd_no)
+  					CREATE(zone_table[zon].cmd, struct reset_com, 1);
+  				else
+--- 850,856 ----
+  		/* read the command table */
+  		cmd_no = 0;
+  		for (expand = 1;;) {
+! 			if (expand) {
+  				if (!cmd_no)
+  					CREATE(zone_table[zon].cmd, struct reset_com, 1);
+  				else
+***************
+*** 861,866 ****
+--- 861,867 ----
+  						perror(file_name);
+  						exit(0);
+  					}
++ 			}
+  			expand = 1;
+  			fscanf(fl, " "); /* skip blanks */
+  			fscanf(fl, "%c", &zone_table[zon].cmd[cmd_no].command);
+***************
+*** 2636,2642 ****
+  /* read and allocate space for a '~'-terminated string from a given file */
+  char *fread_string(FILE *fl)
+  {
+!   char buf[MAX_STRING_LENGTH], tmp[500];
+    char *rslt;
+    register char *point;
+    int flag;
+--- 2637,2643 ----
+  /* read and allocate space for a '~'-terminated string from a given file */
+  char *fread_string(FILE *fl)
+  {
+!   char buf[MAX_STRING_LENGTH], tmp[MAX_STRING_LENGTH];
+    char *rslt;
+    register char *point;
+    int flag;
+***************
+*** 2935,2944 ****
+  	/* wimpyness */
+  	ch->specials.wimpyness = 0;
+  
+! #ifdef RESTART_BONUS
+  	/* initial bonus */
+  	ch->points.gold = 1000;
+- #endif /* RESTART_BONUS */
+  
+  	for (i = 0; i <= MAX_SKILLS - 1; i++) {
+  		if (GET_LEVEL(ch) < IMO + 3) {
+--- 2936,2944 ----
+  	/* wimpyness */
+  	ch->specials.wimpyness = 0;
+  
+! 	// RESTART_BONUS
+  	/* initial bonus */
+  	ch->points.gold = 1000;
+  
+  	for (i = 0; i <= MAX_SKILLS - 1; i++) {
+  		if (GET_LEVEL(ch) < IMO + 3) {
+***************
+*** 3079,3088 ****
+    sprintf(buf, "Stash : %s\n", stashfile);
+    log(buf);
+    
+!   sigsetmask(mask);
+    if (!(fl = fopen(stashfile, "w"))) {		/* remove all data if exist */
+      perror("saving PC's stash");
+!     sigsetmask(0);
+      return;
+    }
+    
+--- 3079,3091 ----
+    sprintf(buf, "Stash : %s\n", stashfile);
+    log(buf);
+  
+!   // sigsetmask(mask);
+!   sigset_t oldmask;
+!   sigprocmask(SIG_SETMASK, (sigset_t *) &mask, &oldmask);
+    if (!(fl = fopen(stashfile, "w"))) {		/* remove all data if exist */
+      perror("saving PC's stash");
+!     // sigsetmask(0);
+!     sigprocmask(SIG_SETMASK, &oldmask, NULL);
+      return;
+    }
+  
+***************
+*** 3097,3103 ****
+    
+    fflush(fl);
+    fclose(fl);
+!   sigsetmask(0);
+  }
+  
+  void stash_contentsII(FILE *fp, struct obj_data *o, int wear_flag)
+--- 3100,3107 ----
+  
+    fflush(fl);
+    fclose(fl);
+!   // sigsetmask(0);
+!   sigprocmask(SIG_SETMASK, &oldmask, NULL);
+  }
+  
+  void stash_contentsII(FILE *fp, struct obj_data *o, int wear_flag)
+***************
+*** 3117,3129 ****
+      for (i = 0; i < 2; i++)
+        fprintf(fp, " %d %d", o->affected[i].location,
+  	      o->affected[i].modifier);
+! #ifdef SYPARK
+      fprintf(fp," %d %d",o->obj_flags.extra_flags,o->obj_flags.gpd);
+      fprintf(fp,"\n");
+      fprintf(fp,"%s\n",o->name);
+      fprintf(fp,"%s\n",o->short_description);
+      fprintf(fp,"%s\n",o->description);
+! #endif
+      fprintf(fp,"\n");
+    }
+    if ((oc = o->next_content))
+--- 3121,3133 ----
+      for (i = 0; i < 2; i++)
+        fprintf(fp, " %d %d", o->affected[i].location,
+  	      o->affected[i].modifier);
+!     // SYPARK
+      fprintf(fp," %d %d",o->obj_flags.extra_flags,o->obj_flags.gpd);
+      fprintf(fp,"\n");
+      fprintf(fp,"%s\n",o->name);
+      fprintf(fp,"%s\n",o->short_description);
+      fprintf(fp,"%s\n",o->description);
+! 
+      fprintf(fp,"\n");
+    }
+    if ((oc = o->next_content))
+***************
+*** 3151,3163 ****
+        fprintf(fl," %d",p->obj_flags.value[j]);
+      for(j=0;j<2;j++)
+        fprintf(fl," %d %d",p->affected[j].location,p->affected[j].modifier);
+! #ifdef SYPARK
+      fprintf(fl," %d %d",p->obj_flags.extra_flags,p->obj_flags.gpd);
+      fprintf(fl,"\n");
+      fprintf(fl,"%s\n",p->name);
+      fprintf(fl,"%s\n",p->short_description);
+      fprintf(fl,"%s\n",p->description);
+- #endif
+    }
+    
+    if((pc=p->next_content))
+--- 3155,3166 ----
+        fprintf(fl," %d",p->obj_flags.value[j]);
+      for(j=0;j<2;j++)
+        fprintf(fl," %d %d",p->affected[j].location,p->affected[j].modifier);
+!     // SYPARK
+      fprintf(fl," %d %d",p->obj_flags.extra_flags,p->obj_flags.gpd);
+      fprintf(fl,"\n");
+      fprintf(fl,"%s\n",p->name);
+      fprintf(fl,"%s\n",p->short_description);
+      fprintf(fl,"%s\n",p->description);
+    }
+  
+    if((pc=p->next_content))
+***************
+*** 3202,3213 ****
+    for(i=0;name[i];++i)
+      if(isupper(name[i]))
+        name[i]=tolower(name[i]);
+!   sigsetmask(mask);
+    sprintf(stashfile,"%s/%c/%s.x.y",STASH,name[0],name);
+    if(!(fl=fopen(stashfile, "r"))){
+      sprintf(stashfile,"%s/%c/%s.x",STASH,name[0],name);
+      if(!(fl=fopen(stashfile, "r"))) {
+!       sigsetmask(0);
+        return;
+      }
+    }
+--- 3205,3219 ----
+    for(i=0;name[i];++i)
+      if(isupper(name[i]))
+        name[i]=tolower(name[i]);
+!   // sigsetmask(mask);
+!   sigset_t oldmask;
+!   sigprocmask(SIG_SETMASK, (sigset_t *) &mask, &oldmask);
+    sprintf(stashfile,"%s/%c/%s.x.y",STASH,name[0],name);
+    if(!(fl=fopen(stashfile, "r"))){
+      sprintf(stashfile,"%s/%c/%s.x",STASH,name[0],name);
+      if(!(fl=fopen(stashfile, "r"))) {
+!       // sigsetmask(0);
+!       sigprocmask(SIG_SETMASK, &oldmask, NULL);
+        return;
+      }
+    }
+***************
+*** 3218,3224 ****
+    fscanf(fl,"%d",&n);
+    if(n != KJHRENT) {
+      log("File format error in unstash_char. (db.c)");
+!     sigsetmask(0);
+      fclose(fl);
+      return;
+    }
+--- 3224,3231 ----
+    fscanf(fl,"%d",&n);
+    if(n != KJHRENT) {
+      log("File format error in unstash_char. (db.c)");
+!     // sigsetmask(0);
+!     sigprocmask(SIG_SETMASK, &oldmask, NULL);
+      fclose(fl);
+      return;
+    }
+***************
+*** 3241,3247 ****
+        obj->affected[i].location=tmp[i*2];
+        obj->affected[i].modifier=tmp[i*2+1];
+      }
+! #ifdef	SYPARK
+      fscanf(fl,"%d",&tmp[0]);
+      if ( tmp[0] != -1 )
+        obj->obj_flags.extra_flags = tmp[0];
+--- 3248,3255 ----
+        obj->affected[i].location=tmp[i*2];
+        obj->affected[i].modifier=tmp[i*2+1];
+      }
+! 
+!     // SYPARK
+      fscanf(fl,"%d",&tmp[0]);
+      if ( tmp[0] != -1 )
+        obj->obj_flags.extra_flags = tmp[0];
+***************
+*** 3273,3279 ****
+        free(obj->description);
+        obj->description = str;
+      }
+! #endif
+      while (stack_count && item_stack[stack_count - 1] < -1 &&
+  	   item_stack[stack_count - 1] < where) {
+        stack_count--;
+--- 3281,3287 ----
+        free(obj->description);
+        obj->description = str;
+      }
+! 
+      while (stack_count && item_stack[stack_count - 1] < -1 &&
+  	   item_stack[stack_count - 1] < where) {
+        stack_count--;
+***************
+*** 3293,3299 ****
+    }
+    
+    fclose(fl);
+!   sigsetmask(0);
+    
+    /*
+      sprintf(sf2,"%s/%c/%s.x.tmp",STASH,name[0],name);
+--- 3301,3307 ----
+    }
+  
+    fclose(fl);
+!   sigprocmask(SIG_SETMASK, &oldmask, NULL);
+  
+    /*
+      sprintf(sf2,"%s/%c/%s.x.tmp",STASH,name[0],name);
+***************
+*** 3455,3461 ****
+      if(n > 99999) continue;
+      ++j;
+      sprintf(buf+i,"%5d%c",n,(j==10) ? '\n' : ' ');
+!     if(j==10) j=0; i+=5;
+  	fgets(str,255,fl);
+  	fgets(str,255,fl);
+  	fgets(str,255,fl);
+--- 3463,3470 ----
+      if(n > 99999) continue;
+      ++j;
+      sprintf(buf+i,"%5d%c",n,(j==10) ? '\n' : ' ');
+!     if(j==10) j=0;
+!     i+=5;
+      fgets(str,255,fl);
+      fgets(str,255,fl);
+      fgets(str,255,fl);
+***************
+*** 3494,3500 ****
+  
+  void do_rent(struct char_data *ch, int cmd, char *arg)
+  {
+! 	sh_int save_room;
+  	int i;
+  	void wipe_obj(struct obj_data *obj);
+  
+--- 3503,3509 ----
+  
+  void do_rent(struct char_data *ch, int cmd, char *arg)
+  {
+! 	// sh_int save_room;
+  	int i;
+  	void wipe_obj(struct obj_data *obj);
+  
+***************
+*** 3518,3524 ****
+  		}
+  	wipe_obj(ch->carrying);
+  	ch->carrying = 0;
+! 	save_room = ch->in_room;
+  	extract_char(ch);
+  /*
+  	ch->in_room = world[save_room].number;
+--- 3527,3533 ----
+  		}
+  	wipe_obj(ch->carrying);
+  	ch->carrying = 0;
+! 	// save_room = ch->in_room;
+  	extract_char(ch);
+  /*
+  	ch->in_room = world[save_room].number;
+diff -wcr src-orig/fight.c src/fight.c
+*** src-orig/fight.c	2003-06-21 10:50:32.000000000 +0900
+--- src/fight.c	2019-05-21 03:24:12.000000000 +0900
+***************
+*** 587,592 ****
+--- 587,593 ----
+    char *buf, *buf2;
+    int  msg_index ;
+  
++ #if UNUSED
+    static struct dam_weapon_type dam_weapons[] = {
+  
+      {"$n misses $N with $s #W.",                           /*    0    */
+***************
+*** 655,660 ****
+--- 656,662 ----
+        "YOU PROCESS $N into ---==<< V A C U U M >>==--- with your #W.",
+        "$n PROCESSES YOU into ---==<< V A C U U M >>==--- with $s #W." }
+    };
++ #endif
+  
+    /* brief mode */
+    static struct dam_weapon_type brief_dam_weapons[] = {
+***************
+*** 725,730 ****
+--- 727,733 ----
+        "$n ---==<< V A C U U M >>==--- YOU." }
+    };
+  
++ #if UNUSED
+    static struct dam_weapon_type han_weapons[] = {
+      {"$n 님이 $N 님을 때리려다 빗나갔습니다.",        /*    0    */
+       "당신은 $N 님을 때리지 못했습니다.",
+***************
+*** 790,795 ****
+--- 793,799 ----
+       "당신은 $N 님을 진공상태로 되도록 #W.",
+       "$n 님이 당신을 진공상태가 되도록 #W."}
+    };
++ #endif
+  
+    /* brief mode */
+    static struct dam_weapon_type brief_han_weapons[] = {
+***************
+*** 1415,1427 ****
+  void hit(struct char_data *ch, struct char_data *victim, int type)
+  {
+    struct obj_data *wielded = 0;
+!   struct obj_data *held = 0;
+    int w_type;
+    int dam, prf;
+    int parry_num;
+    int miss;
+    int limit_nodice, limit_sizedice;
+!   char buffer[MAX_STRING_LENGTH];
+  
+    extern int thaco[4][IMO+4];
+    extern byte backstab_mult[];
+--- 1419,1431 ----
+  void hit(struct char_data *ch, struct char_data *victim, int type)
+  {
+    struct obj_data *wielded = 0;
+!   // struct obj_data *held = 0;
+    int w_type;
+    int dam, prf;
+    int parry_num;
+    int miss;
+    int limit_nodice, limit_sizedice;
+!   // char buffer[MAX_STRING_LENGTH];
+  
+    extern int thaco[4][IMO+4];
+    extern byte backstab_mult[];
+***************
+*** 1505,1512 ****
+      return;
+  	}
+    
+!   if (ch->equipment[HOLD])
+!     held = ch->equipment[HOLD];
+    
+    if (ch->equipment[WIELD] &&
+        (ch->equipment[WIELD]->obj_flags.type_flag == ITEM_WEAPON)) {
+--- 1509,1516 ----
+      return;
+  	}
+  
+!   // if (ch->equipment[HOLD])
+!   //   held = ch->equipment[HOLD];
+  
+    if (ch->equipment[WIELD] &&
+        (ch->equipment[WIELD]->obj_flags.type_flag == ITEM_WEAPON)) {
+diff -wcr src-orig/gbisland.c src/gbisland.c
+*** src-orig/gbisland.c	2000-05-22 23:34:28.000000000 +0900
+--- src/gbisland.c	2019-05-20 22:46:52.000000000 +0900
+***************
+*** 257,267 ****
+  
+  void gbisland_go_back(struct char_data *ch)
+  {
+! 	int was_in;
+  	char tmp[256];
+  	int dir;
+  
+! 	was_in = ch->in_room;
+  	dir = number(1, 4);
+  
+  	do_say(ch, "신의 은총이 함께하길...", 0);
+--- 257,267 ----
+  
+  void gbisland_go_back(struct char_data *ch)
+  {
+! 	// int was_in;
+  	char tmp[256];
+  	int dir;
+  
+! 	// was_in = ch->in_room;
+  	dir = number(1, 4);
+  
+  	do_say(ch, "신의 은총이 함께하길...", 0);
+diff -wcr src-orig/handler.c src/handler.c
+*** src-orig/handler.c	2000-05-22 23:34:30.000000000 +0900
+--- src/handler.c	2019-05-20 21:42:42.000000000 +0900
+***************
+*** 118,124 ****
+  
+  void affect_modify(struct char_data *ch, byte loc, short mod, long bitv, bool add)
+  {
+!   int maxabil;
+  
+    if (add) {
+      SET_BIT(ch->specials.affected_by, bitv);
+--- 118,124 ----
+  
+  void affect_modify(struct char_data *ch, byte loc, short mod, long bitv, bool add)
+  {
+!   // int maxabil;
+  
+    if (add) {
+      SET_BIT(ch->specials.affected_by, bitv);
+***************
+*** 127,133 ****
+      mod = -mod;
+    }
+  
+!   maxabil = (IS_NPC(ch) ? 25:(GET_LEVEL(ch) >= (IMO+2)? 25 : 18));
+  
+    switch(loc)
+    {
+--- 127,133 ----
+      mod = -mod;
+    }
+  
+!   // maxabil = (IS_NPC(ch) ? 25:(GET_LEVEL(ch) >= (IMO+2)? 25 : 18));
+  
+    switch(loc)
+    {
+***************
+*** 361,367 ****
+  		}
+  		if (af->type == SPELL_CHARM_PERSON) {
+  			tmp = strstr(ch->player.short_descr, " CHARMED BY");
+! 			tmp[0] = NULL;
+  			strcpy(buf, ch->player.short_descr);
+  			if (ch->player.short_descr) {
+  				free(ch->player.short_descr);
+--- 361,367 ----
+  		}
+  		if (af->type == SPELL_CHARM_PERSON) {
+  			tmp = strstr(ch->player.short_descr, " CHARMED BY");
+! 			tmp[0] = '\0';
+  			strcpy(buf, ch->player.short_descr);
+  			if (ch->player.short_descr) {
+  				free(ch->player.short_descr);
+Only in src-orig/include: cygwin.h
+diff -wcr src-orig/include/structs.h src/include/structs.h
+*** src-orig/include/structs.h	2000-05-22 23:20:42.000000000 +0900
+--- src/include/structs.h	2019-05-22 15:39:42.000000000 +0900
+***************
+*** 8,13 ****
+--- 8,16 ----
+  typedef char bool;
+  typedef char byte;
+  
++ #define RETURN_TO_QUIT
++ 
++ #define IMO		41
+  /*
+  #define PULSE_MOBILE    41
+  */
+***************
+*** 512,519 ****
+    int move;  
+    int max_move;     /* Max move for NPC                        */
+    int armor;        /* Internal -100..100, external -10..10 AC */
+!   unsigned int gold;            /* Money carried                           */
+!   unsigned int exp;             /* The experience of the player            */
+    sbyte hitroll;       /* Any bonus or penalty to the hit roll    */
+    sbyte damroll;       /* Any bonus or penalty to the damage roll */
+  };
+--- 515,522 ----
+    int move;  
+    int max_move;     /* Max move for NPC                        */
+    int armor;        /* Internal -100..100, external -10..10 AC */
+!   unsigned long long gold;            /* Money carried                           */
+!   unsigned long long exp;             /* The experience of the player            */
+    sbyte hitroll;       /* Any bonus or penalty to the hit roll    */
+    sbyte damroll;       /* Any bonus or penalty to the damage roll */
+  };
+***************
+*** 582,588 ****
+    int nr;
+    sh_int in_room;
+    int magic_number;
+!   unsigned long bank;
+    int life,regeneration;
+  
+    /* for mobile */
+--- 585,591 ----
+    int nr;
+    sh_int in_room;
+    int magic_number;
+!   unsigned long long bank;
+    int life,regeneration;
+  
+    /* for mobile */
+***************
+*** 648,654 ****
+    int alignment;     
+    time_t last_logon;
+    unsigned act;
+!   unsigned long bank;
+    char name[20];
+    char pwd[11];
+    int conditions[3];
+--- 651,657 ----
+    int alignment;     
+    time_t last_logon;
+    unsigned act;
+!   unsigned long long bank;
+    char name[20];
+    char pwd[11];
+    int conditions[3];
+Only in src/include: structs.h,v
+diff -wcr src-orig/include/utils.h src/include/utils.h
+*** src-orig/include/utils.h	2000-06-28 06:56:06.000000000 +0900
+--- src/include/utils.h	2019-05-21 02:16:12.000000000 +0900
+***************
+*** 5,10 ****
+--- 5,14 ----
+  
+  int hit_limit(struct char_data *ch);
+  
++ #define log(s) 	xlog(s)
++ void log(char *str);
++ #define _IGNORE(x) (void)((x)+1)
++ 
+  #define TRUE  1
+  
+  #define FALSE 0
+diff -wcr src-orig/interpreter.c src/interpreter.c
+*** src-orig/interpreter.c	2000-06-28 06:38:20.000000000 +0900
+--- src/interpreter.c	2019-05-21 04:02:36.000000000 +0900
+***************
+*** 13,20 ****
+--- 13,25 ----
+  #else
+  #include <termios.h>
+  #endif
++ #include <sys/ioctl.h>
+  #include <sys/uio.h>
++ #ifdef HAVE_CRYPT_H
++ #include <crypt.h>
++ #else
+  #include <unistd.h>
++ #endif
+  #include <sys/socket.h>
+  #include <netinet/in.h>
+  #include <arpa/inet.h>
+***************
+*** 848,856 ****
+  
+  void argument_interpreter(char *argument,char *first_arg,char *second_arg )
+  {
+!         int look_at, found, begin;
+  
+!         found = begin = 0;
+  
+          do
+          {
+--- 853,861 ----
+  
+  void argument_interpreter(char *argument,char *first_arg,char *second_arg )
+  {
+!         int look_at, begin;
+  
+!         begin = 0;
+  
+          do
+          {
+***************
+*** 911,919 ****
+     primary argument, following the sub-arg                  */
+  char *one_argument(char *argument, char *first_arg )
+  {
+!   int found, begin, look_at;
+  
+!         found = begin = 0;
+  
+          do
+          {
+--- 916,924 ----
+     primary argument, following the sub-arg                  */
+  char *one_argument(char *argument, char *first_arg )
+  {
+!   int begin, look_at;
+  
+!        begin = 0;
+  
+          do
+          {
+diff -wcr src-orig/limits.c src/limits.c
+*** src-orig/limits.c	2000-06-28 06:53:48.000000000 +0900
+--- src/limits.c	2019-05-20 22:26:06.000000000 +0900
+***************
+*** 5,10 ****
+--- 5,11 ----
+  ************************************************************************* */
+  
+  #include <stdio.h>
++ #include <string.h>
+  #include <assert.h>
+  #include "structs.h"
+  #include "limits.h"
+***************
+*** 511,517 ****
+  
+  void check_idling(struct char_data *ch)
+  {
+!   if (++(ch->specials.timer) > 7)
+      if (ch->specials.was_in_room == NOWHERE && ch->in_room != NOWHERE) {
+        ch->specials.was_in_room = ch->in_room;
+        if (ch->specials.fighting) {
+--- 512,518 ----
+  
+  void check_idling(struct char_data *ch)
+  {
+!   if (++(ch->specials.timer) > 7) {
+      if (ch->specials.was_in_room == NOWHERE && ch->in_room != NOWHERE) {
+        ch->specials.was_in_room = ch->in_room;
+        if (ch->specials.fighting) {
+***************
+*** 529,534 ****
+--- 530,536 ----
+          close_socket(ch->desc);
+      }
+    }
++ }
+  
+  /* Update both PC's & NPC's and objects*/
+  void point_update( void )
+diff -wcr src-orig/magic2.c src/magic2.c
+*** src-orig/magic2.c	2000-05-22 23:34:36.000000000 +0900
+--- src/magic2.c	2019-05-22 19:42:48.000000000 +0900
+***************
+*** 5,10 ****
+--- 5,11 ----
+  ************************************************************************* */
+  
+  #include <stdio.h>
++ #include <string.h>
+  #include <assert.h>
+  #include "structs.h"
+  #include "utils.h"
+***************
+*** 30,36 ****
+              int damage, int weapontype);
+  bool saves_spell(struct char_data *ch, int spell);
+  void weight_change_object(struct obj_data *obj, int weight);
+! char *strdup(char *source);
+  int dice(int number, int size);
+  void do_look(struct char_data *ch, char *argument, int cmd);
+  int number(int from, int to);
+--- 31,37 ----
+              int damage, int weapontype);
+  bool saves_spell(struct char_data *ch, int spell);
+  void weight_change_object(struct obj_data *obj, int weight);
+! // char *strdup(char *source);
+  int dice(int number, int size);
+  void do_look(struct char_data *ch, char *argument, int cmd);
+  int number(int from, int to);
+***************
+*** 302,307 ****
+--- 303,309 ----
+  	obj_to_room(tmp_obj,ch->in_room);
+  
+  	tmp_obj->item_number = -1;
++ 	SET_BIT(tmp_obj->obj_flags.extra_flags, ITEM_NORENT);
+  
+  	act("$p suddenly appears.",TRUE,ch,tmp_obj,0,TO_ROOM);
+  	act("$p suddenly appears.",TRUE,ch,tmp_obj,0,TO_CHAR);
+diff -wcr src-orig/mail.c src/mail.c
+*** src-orig/mail.c	2000-05-22 23:34:36.000000000 +0900
+--- src/mail.c	2019-05-20 22:31:30.000000000 +0900
+***************
+*** 65,71 ****
+  
+      cr_mbox = (struct mbox_data *) malloc( sizeof( struct mbox_data ) );
+      if( cr_mbox ){
+!         bzero(cr_mbox,sizeof(cr_mbox));
+          cr_mbox->room_num = world[ch->in_room].number;
+          sprintf( cr_mbox->bfile, "%s/%dmbox", 
+              MBOARD_DIR, cr_mbox->room_num );
+--- 65,71 ----
+  
+      cr_mbox = (struct mbox_data *) malloc( sizeof( struct mbox_data ) );
+      if( cr_mbox ){
+!         bzero(cr_mbox,sizeof(*cr_mbox));
+          cr_mbox->room_num = world[ch->in_room].number;
+          sprintf( cr_mbox->bfile, "%s/%dmbox", 
+              MBOARD_DIR, cr_mbox->room_num );
+***************
+*** 123,129 ****
+              cb->m_num = m_num = ind;
+          }
+          fread(cb->head[ind],sizeof(char),size,cb->fp);
+!         cb->head[ind][size] = NULL;
+          fread(cb->sender[ind],sizeof(char),20,cb->fp);
+          fread(cb->receiver[ind],sizeof(char),20,cb->fp);
+          fread(&size,sizeof(int), 1, cb->fp);
+--- 123,129 ----
+              cb->m_num = m_num = ind;
+          }
+          fread(cb->head[ind],sizeof(char),size,cb->fp);
+!         cb->head[ind][size] = '\0';
+          fread(cb->sender[ind],sizeof(char),20,cb->fp);
+          fread(cb->receiver[ind],sizeof(char),20,cb->fp);
+          fread(&size,sizeof(int), 1, cb->fp);
+***************
+*** 133,139 ****
+              cb->m_num = m_num = ind;
+          }
+          fread(cb->msgs[ind],sizeof(char),size,cb->fp);
+!         cb->msgs[ind][size] = NULL;
+      }
+      fclose(cb->fp);
+      return;
+--- 133,139 ----
+              cb->m_num = m_num = ind;
+          }
+          fread(cb->msgs[ind],sizeof(char),size,cb->fp);
+!         cb->msgs[ind][size] = '\0';
+      }
+      fclose(cb->fp);
+      return;
+diff -wcr src-orig/Makefile src/Makefile
+*** src-orig/Makefile	2003-02-18 12:36:20.000000000 +0900
+--- src/Makefile	2019-05-21 23:29:35.000000000 +0900
+***************
+*** 1,31 ****
+- BIN 	= ../bin
+- PROG 	=  $(BIN)/mud
+- 
+  MAKE	= gmake	
+  CC	= gcc 
+  LD 	= $(CC)
+  MKDEP	= makedepend
+  
+! 
+! INCLUDE	= -I../include -I/usr/include
+! DFLAGS	= -DHAVE_TERMIOS_H 
+! #DFLAGS	= 
+  
+  # LFLAGS	= libdescrypt.a
+  LFLAGS	= -lcrypt
+- # LFLAGS 		= 
+  
+! OFLAGS	= -O -Wall -g -pipe
+  #
+  # MFLAGS: SYPARK RETURN_TO_QUIT RESTART_BONUS INIT_BARE_HAND GHOST
+  #         OldMobileFormat New_STASH OLD_DAM_MESSAGE OLD_PARRY
+  #         OLD_MIRROR_IMAGE RESET_ZONE_BY_WIZARD OldMobAct
+  #
+  
+  
+! MFLAGS	=  -DIMO=41 -DSYPARK -DRETURN_TO_QUIT -DRESTART_BONUS
+! 
+! CFLAGS	= $(OFLAGS) $(MFLAGS) $(DFLAGS) $(INCLUDE)
+  
+  SRCS	= \
+  	act.comm.c act.informative.c act.movement.c act.obj1.c act.obj2.c \
+--- 1,32 ----
+  MAKE	= gmake
+  CC	= gcc
+  LD 	= $(CC)
+  MKDEP	= makedepend
+  
+! PROG 	= ../play/mud
+! INCDIR	= ./include
+! INCLUDE	= -I$(INCDIR)
+  
+  # LFLAGS	= libdescrypt.a
+  LFLAGS	= -lcrypt
+  
+! # OFLAGS	= -O -Wall -g -pipe --warn-conversion  -Wno-sign-conversion
+! OFLAGS	= -O -Wall -g -pipe -Werror 
+! 
+  #
+  # MFLAGS: SYPARK RETURN_TO_QUIT RESTART_BONUS INIT_BARE_HAND GHOST
+  #         OldMobileFormat New_STASH OLD_DAM_MESSAGE OLD_PARRY
+  #         OLD_MIRROR_IMAGE RESET_ZONE_BY_WIZARD OldMobAct
+  #
++ # MFLAGS	=  -DIMO=41 -DRETURN_TO_QUIT
+  
++ # for  BSD
++ # DFLAGS	= -DHAVE_TERMIOS_H
++ # for  Linux
++ # DFLAGS	= -DHAVE_CRYPT_H -Wno-unused-result 
++ DFLAGS	= -DHAVE_TERMIOS_H
+  
+! CFLAGS	= $(OFLAGS) $(DFLAGS) $(INCLUDE)
+  
+  SRCS	= \
+  	act.comm.c act.informative.c act.movement.c act.obj1.c act.obj2.c \
+***************
+*** 37,561 ****
+  	spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c \
+  	spells3.c utility.c version.c weather.c daerimsa.c gbisland.c
+  
+! OBJS 	= $(SRCS:%.c=../obj/%.o)
+! 
+! # UTILS = list change_level check_pass change_pass cps
+! SCRS = everun backup RESTART RUNME shutmud
+  
+! ALL_SRCS = $(SRCS) Makefile
+! 
+! ../obj/%.o:  %.c
+  	$(CC) -c $(CFLAGS) -o $@ $<
+! ../bin/%:
+! 	$(CC) $(CFLAGS) $(LFLAGS) -o $@ $<
+  
+  default	: mud
+  
+! all:	clean depend mud utils
+  
+  mud :	$(PROG) 
+  
+  depend	: 
+! 	$(MKDEP) -Y -p ../obj/ $(MFLAGS) $(DFLAGS) $(INCLUDE) $(SRCS) $(USRCS)
+! 	ctags $(SRCS) ../include/*.h 
+  
+  $(PROG) : $(OBJS) 
+  	$(LD) -o $@ $^ $(LFLAGS)
+  
+- utils : $(UPROGS) 
+- 	- /bin/cp -p $(SCRIPTS) $(BIN)
+- 	- /bin/ln -s $(UPROGS) ../users 
+- 
+- $(UPROGS) : $(USRCS)
+- 
+- install : $(PROG) utils
+- 	- /bin/mv -f $(PROG).run $(PROG).bak
+- 	- /bin/mv -f $(PROG) $(PROG).run
+  
+  uninstall :
+  
+  clean	:
+! 	- /bin/rm -f $(OBJS) $(PROGNAME)
+  	- /bin/rm -f Makefile.bak tags core tmp* 
+  
+- print	: $(ALL_SRCS)
+- 	for f in $(ALL_SRCS) ; do \
+- 	if [ "$$f" -nt .pr-time ] ; then \
+- 		jjjps -F8 $$f | lpr ;\
+- 	fi ; done ;
+- 	date > .pr-time
+  
+  # DO NOT DELETE
+  
+! ../obj/act.comm.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.comm.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/act.comm.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/act.comm.o: /usr/include/assert.h ../include/structs.h
+! ../obj/act.comm.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/act.comm.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/act.comm.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/act.comm.o: ../include/utils.h ../include/comm.h
+! ../obj/act.comm.o: ../include/interpreter.h ../include/handler.h
+! ../obj/act.comm.o: ../include/db.h /usr/include/errno.h ../include/spells.h
+! ../obj/act.informative.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.informative.o: /usr/include/sys/_types.h
+! ../obj/act.informative.o: /usr/include/machine/_types.h /usr/include/string.h
+! ../obj/act.informative.o: /usr/include/strings.h /usr/include/ctype.h
+! ../obj/act.informative.o: /usr/include/runetype.h /usr/include/time.h
+! ../obj/act.informative.o: /usr/include/sys/timespec.h /usr/include/errno.h
+! ../obj/act.informative.o: /usr/include/stdlib.h ../include/structs.h
+! ../obj/act.informative.o: /usr/include/sys/types.h
+! ../obj/act.informative.o: /usr/include/machine/endian.h
+! ../obj/act.informative.o: /usr/include/sys/select.h
+! ../obj/act.informative.o: /usr/include/sys/_sigset.h ../include/utils.h
+! ../obj/act.informative.o: ../include/comm.h ../include/interpreter.h
+! ../obj/act.informative.o: ../include/handler.h ../include/db.h
+! ../obj/act.informative.o: ../include/spells.h ../include/limits.h
+! ../obj/act.informative.o: ../include/guild_list.h
+! ../obj/act.movement.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.movement.o: /usr/include/sys/_types.h
+! ../obj/act.movement.o: /usr/include/machine/_types.h /usr/include/string.h
+! ../obj/act.movement.o: /usr/include/strings.h ../include/structs.h
+! ../obj/act.movement.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/act.movement.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/act.movement.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/act.movement.o: ../include/utils.h ../include/comm.h
+! ../obj/act.movement.o: ../include/interpreter.h ../include/handler.h
+! ../obj/act.movement.o: ../include/db.h /usr/include/errno.h
+! ../obj/act.movement.o: ../include/spells.h ../include/guild_list.h
+! ../obj/act.obj1.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.obj1.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/act.obj1.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/act.obj1.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/act.obj1.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/act.obj1.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/act.obj1.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/act.obj1.o: ../include/interpreter.h ../include/handler.h
+! ../obj/act.obj1.o: ../include/db.h /usr/include/errno.h ../include/spells.h
+! ../obj/act.obj2.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.obj2.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/act.obj2.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/act.obj2.o: /usr/include/assert.h ../include/structs.h
+! ../obj/act.obj2.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/act.obj2.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/act.obj2.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/act.obj2.o: ../include/utils.h ../include/comm.h
+! ../obj/act.obj2.o: ../include/interpreter.h ../include/handler.h
+! ../obj/act.obj2.o: ../include/db.h /usr/include/errno.h ../include/spells.h
+! ../obj/act.offensive.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.offensive.o: /usr/include/sys/_types.h
+! ../obj/act.offensive.o: /usr/include/machine/_types.h /usr/include/string.h
+! ../obj/act.offensive.o: /usr/include/strings.h ../include/structs.h
+! ../obj/act.offensive.o: /usr/include/sys/types.h
+! ../obj/act.offensive.o: /usr/include/machine/endian.h
+! ../obj/act.offensive.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/act.offensive.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/act.offensive.o: ../include/utils.h ../include/comm.h
+! ../obj/act.offensive.o: ../include/interpreter.h ../include/handler.h
+! ../obj/act.offensive.o: ../include/db.h /usr/include/errno.h
+! ../obj/act.offensive.o: ../include/spells.h ../include/limits.h
+! ../obj/act.offensive.o: ../include/guild_list.h
+! ../obj/act.other.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.other.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/act.other.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/act.other.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/act.other.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/act.other.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/act.other.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/act.other.o: /usr/include/stdlib.h ../include/utils.h
+! ../obj/act.other.o: ../include/comm.h ../include/interpreter.h
+! ../obj/act.other.o: ../include/handler.h ../include/db.h /usr/include/errno.h
+! ../obj/act.other.o: ../include/spells.h ../include/guild_list.h
+! ../obj/act.social.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.social.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/act.social.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/act.social.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/act.social.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/act.social.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/act.social.o: /usr/include/stdlib.h ../include/utils.h
+! ../obj/act.social.o: ../include/comm.h ../include/interpreter.h
+! ../obj/act.social.o: ../include/handler.h ../include/db.h
+! ../obj/act.social.o: /usr/include/errno.h ../include/spells.h
+! ../obj/act.wizard.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/act.wizard.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/act.wizard.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/act.wizard.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/act.wizard.o: /usr/include/assert.h /usr/include/sys/time.h
+! ../obj/act.wizard.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/act.wizard.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/act.wizard.o: /usr/include/sys/timespec.h /usr/include/time.h
+! ../obj/act.wizard.o: /usr/include/sys/resource.h ../include/structs.h
+! ../obj/act.wizard.o: /usr/include/stdlib.h ../include/utils.h
+! ../obj/act.wizard.o: ../include/comm.h ../include/interpreter.h
+! ../obj/act.wizard.o: ../include/handler.h ../include/db.h
+! ../obj/act.wizard.o: /usr/include/errno.h ../include/spells.h
+! ../obj/act.wizard.o: ../include/limits.h
+! ../obj/board.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/board.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/board.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/board.o: /usr/include/fcntl.h /usr/include/ctype.h
+! ../obj/board.o: /usr/include/runetype.h ../include/structs.h
+! ../obj/board.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/board.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/board.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/board.o: ../include/utils.h ../include/comm.h ../include/db.h
+! ../obj/board.o: /usr/include/errno.h
+! ../obj/comm.o: /usr/include/errno.h /usr/include/sys/cdefs.h
+! ../obj/comm.o: /usr/include/stdio.h /usr/include/sys/_types.h
+! ../obj/comm.o: /usr/include/machine/_types.h /usr/include/ctype.h
+! ../obj/comm.o: /usr/include/runetype.h /usr/include/sys/types.h
+! ../obj/comm.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/comm.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/comm.o: /usr/include/sys/socket.h /usr/include/machine/param.h
+! ../obj/comm.o: /usr/include/sys/wait.h /usr/include/netinet/in.h
+! ../obj/comm.o: /usr/include/netinet6/in6.h /usr/include/arpa/inet.h
+! ../obj/comm.o: /usr/include/netdb.h /usr/include/string.h
+! ../obj/comm.o: /usr/include/strings.h /usr/include/sys/time.h
+! ../obj/comm.o: /usr/include/time.h /usr/include/fcntl.h /usr/include/signal.h
+! ../obj/comm.o: /usr/include/sys/signal.h /usr/include/machine/signal.h
+! ../obj/comm.o: /usr/include/machine/trap.h /usr/include/setjmp.h
+! ../obj/comm.o: /usr/include/machine/setjmp.h /usr/include/unistd.h
+! ../obj/comm.o: /usr/include/sys/unistd.h ../include/structs.h
+! ../obj/comm.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/comm.o: ../include/interpreter.h ../include/handler.h ../include/db.h
+! ../obj/comm.o: ../include/cygwin.h /usr/include/sys/ioctl.h
+! ../obj/comm.o: /usr/include/sys/ttycom.h /usr/include/sys/ioccom.h
+! ../obj/comm.o: /usr/include/sys/filio.h /usr/include/sys/sockio.h
+! ../obj/constants.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/constants.o: /usr/include/sys/cdefs.h /usr/include/machine/endian.h
+! ../obj/constants.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/constants.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/constants.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/constants.o: ../include/limits.h
+! ../obj/db.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/db.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/db.o: /usr/include/unistd.h /usr/include/sys/types.h
+! ../obj/db.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/db.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/db.o: /usr/include/sys/unistd.h /usr/include/string.h
+! ../obj/db.o: /usr/include/strings.h /usr/include/ctype.h
+! ../obj/db.o: /usr/include/runetype.h /usr/include/time.h
+! ../obj/db.o: /usr/include/signal.h /usr/include/sys/signal.h
+! ../obj/db.o: /usr/include/machine/signal.h /usr/include/machine/trap.h
+! ../obj/db.o: ../include/structs.h /usr/include/stdlib.h ../include/utils.h
+! ../obj/db.o: ../include/db.h /usr/include/errno.h ../include/comm.h
+! ../obj/db.o: ../include/handler.h ../include/limits.h ../include/spells.h
+! ../obj/db.o: mob_bal.c ../include/cygwin.h
+! ../obj/fight.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/fight.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/fight.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/fight.o: /usr/include/assert.h ../include/structs.h
+! ../obj/fight.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/fight.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/fight.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/fight.o: ../include/utils.h ../include/comm.h ../include/handler.h
+! ../obj/fight.o: ../include/interpreter.h ../include/db.h /usr/include/errno.h
+! ../obj/fight.o: ../include/spells.h ../include/guild_list.h
+! ../obj/guild_command.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/guild_command.o: /usr/include/sys/_types.h
+! ../obj/guild_command.o: /usr/include/machine/_types.h /usr/include/string.h
+! ../obj/guild_command.o: /usr/include/strings.h /usr/include/ctype.h
+! ../obj/guild_command.o: /usr/include/runetype.h ../include/structs.h
+! ../obj/guild_command.o: /usr/include/sys/types.h
+! ../obj/guild_command.o: /usr/include/machine/endian.h
+! ../obj/guild_command.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/guild_command.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/guild_command.o: ../include/utils.h ../include/comm.h
+! ../obj/guild_command.o: ../include/interpreter.h ../include/handler.h
+! ../obj/guild_command.o: ../include/db.h /usr/include/errno.h
+! ../obj/guild_command.o: ../include/spells.h ../include/limits.h
+! ../obj/guild_command.o: ../include/guild_list.h
+! ../obj/guild_constant.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/guild_constant.o: /usr/include/sys/cdefs.h
+! ../obj/guild_constant.o: /usr/include/machine/endian.h
+! ../obj/guild_constant.o: /usr/include/sys/_types.h
+! ../obj/guild_constant.o: /usr/include/machine/_types.h
+! ../obj/guild_constant.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/guild_constant.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/guild_constant.o: ../include/limits.h ../include/guild_list.h
+! ../obj/guild_informative.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/guild_informative.o: /usr/include/sys/_types.h
+! ../obj/guild_informative.o: /usr/include/machine/_types.h
+! ../obj/guild_informative.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/guild_informative.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/guild_informative.o: /usr/include/time.h /usr/include/sys/timespec.h
+! ../obj/guild_informative.o: /usr/include/assert.h ../include/structs.h
+! ../obj/guild_informative.o: /usr/include/sys/types.h
+! ../obj/guild_informative.o: /usr/include/machine/endian.h
+! ../obj/guild_informative.o: /usr/include/sys/select.h
+! ../obj/guild_informative.o: /usr/include/sys/_sigset.h /usr/include/stdlib.h
+! ../obj/guild_informative.o: ../include/utils.h ../include/comm.h
+! ../obj/guild_informative.o: ../include/interpreter.h ../include/handler.h
+! ../obj/guild_informative.o: ../include/db.h /usr/include/errno.h
+! ../obj/guild_informative.o: ../include/spells.h ../include/limits.h
+! ../obj/guild_informative.o: ../include/guild_list.h
+! ../obj/guild_skills.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/guild_skills.o: /usr/include/sys/_types.h
+! ../obj/guild_skills.o: /usr/include/machine/_types.h /usr/include/assert.h
+! ../obj/guild_skills.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/guild_skills.o: /usr/include/machine/endian.h
+! ../obj/guild_skills.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/guild_skills.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/guild_skills.o: ../include/utils.h ../include/comm.h
+! ../obj/guild_skills.o: ../include/spells.h ../include/handler.h
+! ../obj/guild_skills.o: ../include/limits.h ../include/db.h
+! ../obj/guild_skills.o: /usr/include/errno.h ../include/guild_list.h
+! ../obj/handler.o: /usr/include/string.h /usr/include/sys/cdefs.h
+! ../obj/handler.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/handler.o: /usr/include/strings.h /usr/include/stdio.h
+! ../obj/handler.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/handler.o: /usr/include/assert.h ../include/structs.h
+! ../obj/handler.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/handler.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/handler.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/handler.o: ../include/utils.h ../include/comm.h ../include/db.h
+! ../obj/handler.o: /usr/include/errno.h ../include/handler.h
+! ../obj/handler.o: ../include/spells.h ../include/guild_list.h
+! ../obj/interpreter.o: /usr/include/string.h /usr/include/sys/cdefs.h
+! ../obj/interpreter.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/interpreter.o: /usr/include/strings.h /usr/include/ctype.h
+! ../obj/interpreter.o: /usr/include/runetype.h /usr/include/stdio.h
+! ../obj/interpreter.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/interpreter.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/interpreter.o: /usr/include/sys/timespec.h /usr/include/termios.h
+! ../obj/interpreter.o: /usr/include/sys/ttycom.h /usr/include/sys/ioccom.h
+! ../obj/interpreter.o: /usr/include/sys/ttydefaults.h /usr/include/sys/uio.h
+! ../obj/interpreter.o: /usr/include/unistd.h /usr/include/sys/unistd.h
+! ../obj/interpreter.o: /usr/include/sys/socket.h /usr/include/machine/param.h
+! ../obj/interpreter.o: /usr/include/netinet/in.h /usr/include/netinet6/in6.h
+! ../obj/interpreter.o: /usr/include/arpa/inet.h /usr/include/arpa/telnet.h
+! ../obj/interpreter.o: ../include/structs.h /usr/include/stdlib.h
+! ../obj/interpreter.o: ../include/comm.h ../include/interpreter.h
+! ../obj/interpreter.o: ../include/db.h /usr/include/errno.h ../include/utils.h
+! ../obj/interpreter.o: ../include/limits.h
+! ../obj/limits.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/limits.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/limits.o: /usr/include/assert.h ../include/structs.h
+! ../obj/limits.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/limits.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/limits.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/limits.o: ../include/limits.h ../include/utils.h ../include/spells.h
+! ../obj/limits.o: ../include/comm.h ../include/guild_list.h
+! ../obj/magic.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/magic.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/magic.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/magic.o: /usr/include/assert.h ../include/structs.h
+! ../obj/magic.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/magic.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/magic.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/magic.o: ../include/utils.h ../include/comm.h ../include/spells.h
+! ../obj/magic.o: ../include/handler.h ../include/limits.h ../include/db.h
+! ../obj/magic.o: /usr/include/errno.h ../include/guild_list.h
+! ../obj/magic.o: ../include/magic_weapon.h
+! ../obj/magic2.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/magic2.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/magic2.o: /usr/include/assert.h ../include/structs.h
+! ../obj/magic2.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/magic2.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/magic2.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/magic2.o: ../include/utils.h ../include/comm.h ../include/spells.h
+! ../obj/magic2.o: ../include/handler.h ../include/limits.h ../include/db.h
+! ../obj/magic2.o: /usr/include/errno.h ../include/magic_weapon.h
+! ../obj/magic2.o: ../include/guild_list.h
+! ../obj/magic3.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/magic3.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/magic3.o: /usr/include/assert.h ../include/structs.h
+! ../obj/magic3.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/magic3.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/magic3.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/magic3.o: ../include/utils.h ../include/comm.h ../include/spells.h
+! ../obj/magic3.o: ../include/handler.h ../include/limits.h ../include/db.h
+! ../obj/magic3.o: /usr/include/errno.h ../include/guild_list.h
+! ../obj/magic_weapon.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/magic_weapon.o: /usr/include/sys/cdefs.h /usr/include/machine/endian.h
+! ../obj/magic_weapon.o: /usr/include/sys/_types.h
+! ../obj/magic_weapon.o: /usr/include/machine/_types.h
+! ../obj/magic_weapon.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/magic_weapon.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/magic_weapon.o: ../include/comm.h ../include/magic_weapon.h
+! ../obj/magic_weapon.o: ../include/utils.h ../include/spells.h
+! ../obj/mail.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/mail.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/mail.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/mail.o: /usr/include/fcntl.h ../include/structs.h
+! ../obj/mail.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/mail.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/mail.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/mail.o: ../include/utils.h ../include/comm.h ../include/db.h
+! ../obj/mail.o: /usr/include/errno.h ../include/handler.h
+! ../obj/mail.o: ../include/interpreter.h
+! ../obj/mob_magic.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/mob_magic.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/mob_magic.o: /usr/include/assert.h ../include/structs.h
+! ../obj/mob_magic.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/mob_magic.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/mob_magic.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/mob_magic.o: ../include/utils.h ../include/comm.h ../include/spells.h
+! ../obj/mob_magic.o: ../include/handler.h ../include/limits.h ../include/db.h
+! ../obj/mob_magic.o: /usr/include/errno.h ../include/mob_magic.h
+! ../obj/mobact.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/mobact.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/mobact.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/mobact.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/mobact.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/mobact.o: /usr/include/stdlib.h ../include/db.h /usr/include/errno.h
+! ../obj/mobact.o: ../include/comm.h ../include/spells.h ../include/utils.h
+! ../obj/modify.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/modify.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/modify.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/modify.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/modify.o: /usr/include/time.h /usr/include/sys/timespec.h
+! ../obj/modify.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/modify.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/modify.o: /usr/include/sys/_sigset.h /usr/include/stdlib.h
+! ../obj/modify.o: ../include/utils.h ../include/interpreter.h
+! ../obj/modify.o: ../include/handler.h ../include/db.h /usr/include/errno.h
+! ../obj/modify.o: ../include/comm.h
+! ../obj/newcom.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/newcom.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/newcom.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/newcom.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/newcom.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/newcom.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/newcom.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/newcom.o: ../include/interpreter.h ../include/handler.h
+! ../obj/newcom.o: ../include/db.h /usr/include/errno.h ../include/spells.h
+! ../obj/newcom.o: ../include/limits.h
+! ../obj/quest.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/quest.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/quest.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/quest.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/quest.o: /usr/include/time.h /usr/include/sys/timespec.h
+! ../obj/quest.o: /usr/include/stdlib.h ../include/structs.h
+! ../obj/quest.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/quest.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/quest.o: ../include/utils.h ../include/db.h /usr/include/errno.h
+! ../obj/shop.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/shop.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/shop.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/shop.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/shop.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/shop.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/shop.o: /usr/include/stdlib.h ../include/comm.h ../include/handler.h
+! ../obj/shop.o: ../include/db.h /usr/include/errno.h ../include/interpreter.h
+! ../obj/shop.o: ../include/utils.h
+! ../obj/spec_assign.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spec_assign.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/spec_assign.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spec_assign.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/spec_assign.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/spec_assign.o: /usr/include/stdlib.h ../include/db.h
+! ../obj/spec_assign.o: /usr/include/errno.h ../include/guild_list.h
+! ../obj/spec_procs.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spec_procs.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/spec_procs.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/spec_procs.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/spec_procs.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spec_procs.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/spec_procs.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/spec_procs.o: /usr/include/stdlib.h ../include/utils.h
+! ../obj/spec_procs.o: ../include/comm.h ../include/interpreter.h
+! ../obj/spec_procs.o: ../include/handler.h ../include/db.h
+! ../obj/spec_procs.o: /usr/include/errno.h ../include/spells.h
+! ../obj/spec_procs.o: ../include/limits.h
+! ../obj/spec_procs2.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spec_procs2.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/spec_procs2.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/spec_procs2.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/spec_procs2.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spec_procs2.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/spec_procs2.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/spec_procs2.o: /usr/include/stdlib.h ../include/utils.h
+! ../obj/spec_procs2.o: ../include/comm.h ../include/interpreter.h
+! ../obj/spec_procs2.o: ../include/handler.h ../include/db.h
+! ../obj/spec_procs2.o: /usr/include/errno.h ../include/spells.h
+! ../obj/spec_procs2.o: ../include/limits.h ../include/mob_magic.h
+! ../obj/spec_procs3.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spec_procs3.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/spec_procs3.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/spec_procs3.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/spec_procs3.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spec_procs3.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/spec_procs3.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/spec_procs3.o: /usr/include/stdlib.h ../include/utils.h
+! ../obj/spec_procs3.o: ../include/comm.h ../include/interpreter.h
+! ../obj/spec_procs3.o: ../include/handler.h ../include/db.h
+! ../obj/spec_procs3.o: /usr/include/errno.h ../include/spells.h
+! ../obj/spec_procs3.o: ../include/limits.h ../include/mob_magic.h
+! ../obj/spell_parser.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spell_parser.o: /usr/include/sys/_types.h
+! ../obj/spell_parser.o: /usr/include/machine/_types.h /usr/include/string.h
+! ../obj/spell_parser.o: /usr/include/strings.h /usr/include/assert.h
+! ../obj/spell_parser.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spell_parser.o: /usr/include/machine/endian.h
+! ../obj/spell_parser.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/spell_parser.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/spell_parser.o: ../include/utils.h ../include/comm.h ../include/db.h
+! ../obj/spell_parser.o: /usr/include/errno.h ../include/interpreter.h
+! ../obj/spell_parser.o: ../include/spells.h ../include/handler.h
+! ../obj/spells1.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spells1.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/spells1.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spells1.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/spells1.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/spells1.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/spells1.o: ../include/db.h /usr/include/errno.h
+! ../obj/spells1.o: ../include/interpreter.h ../include/spells.h
+! ../obj/spells1.o: ../include/handler.h ../include/guild_list.h
+! ../obj/spells2.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spells2.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/spells2.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spells2.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/spells2.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/spells2.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/spells2.o: ../include/db.h /usr/include/errno.h
+! ../obj/spells2.o: ../include/interpreter.h ../include/spells.h
+! ../obj/spells2.o: ../include/handler.h ../include/guild_list.h
+! ../obj/spells3.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/spells3.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/spells3.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/spells3.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/spells3.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/spells3.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/spells3.o: ../include/db.h /usr/include/errno.h
+! ../obj/spells3.o: ../include/interpreter.h ../include/spells.h
+! ../obj/spells3.o: ../include/handler.h
+! ../obj/utility.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/utility.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/utility.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/utility.o: /usr/include/assert.h ../include/structs.h
+! ../obj/utility.o: /usr/include/sys/types.h /usr/include/machine/endian.h
+! ../obj/utility.o: /usr/include/sys/select.h /usr/include/sys/_sigset.h
+! ../obj/utility.o: /usr/include/sys/timespec.h /usr/include/stdlib.h
+! ../obj/utility.o: /usr/include/time.h ../include/utils.h
+! ../obj/weather.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/weather.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/weather.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/weather.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/weather.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/weather.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/weather.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/weather.o: ../include/handler.h ../include/interpreter.h
+! ../obj/weather.o: ../include/db.h /usr/include/errno.h
+! ../obj/daerimsa.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/daerimsa.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/daerimsa.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/daerimsa.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/daerimsa.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/daerimsa.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/daerimsa.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/daerimsa.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/daerimsa.o: ../include/interpreter.h ../include/handler.h
+! ../obj/daerimsa.o: ../include/db.h /usr/include/errno.h ../include/spells.h
+! ../obj/daerimsa.o: ../include/limits.h
+! ../obj/gbisland.o: /usr/include/stdio.h /usr/include/sys/cdefs.h
+! ../obj/gbisland.o: /usr/include/sys/_types.h /usr/include/machine/_types.h
+! ../obj/gbisland.o: /usr/include/string.h /usr/include/strings.h
+! ../obj/gbisland.o: /usr/include/ctype.h /usr/include/runetype.h
+! ../obj/gbisland.o: ../include/structs.h /usr/include/sys/types.h
+! ../obj/gbisland.o: /usr/include/machine/endian.h /usr/include/sys/select.h
+! ../obj/gbisland.o: /usr/include/sys/_sigset.h /usr/include/sys/timespec.h
+! ../obj/gbisland.o: /usr/include/stdlib.h ../include/utils.h ../include/comm.h
+! ../obj/gbisland.o: ../include/interpreter.h ../include/handler.h
+! ../obj/gbisland.o: ../include/db.h /usr/include/errno.h ../include/spells.h
+! ../obj/gbisland.o: ../include/limits.h
+--- 38,206 ----
+  	spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c \
+  	spells3.c utility.c version.c weather.c daerimsa.c gbisland.c
+  
+! OBJS 	= $(SRCS:%.c=./OBJ/%.o)
+  
+! ./OBJ/%.o:  %.c
+  	$(CC) -c $(CFLAGS) -o $@ $<
+! 
+! # ./home/%:
+! #	$(CC) $(CFLAGS) $(LFLAGS) -o $@ $<
+  
+  default	: mud
+  
+! all:	clean depend mud
+  
+  mud :	$(PROG)
+  
+  depend	:
+! 	$(MKDEP) -Y -p ./OBJ/ $(MFLAGS) $(DFLAGS) $(INCLUDE) $(SRCS)
+! 	ctags $(SRCS) $(INCDIR)/*.h
+  
+  $(PROG) : $(OBJS)
+  	$(LD) -o $@ $^ $(LFLAGS)
+  
+  
+  uninstall :
+  
+  clean	:
+! 	- /bin/rm -f $(OBJS) $(PROG)
+  	- /bin/rm -f Makefile.bak tags core tmp*
+  
+  
+  # DO NOT DELETE
+  
+! ./OBJ/act.comm.o: ./include/utils.h ./include/comm.h
+! ./OBJ/act.comm.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/act.comm.o: ./include/db.h
+! ./OBJ/act.informative.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/act.informative.o: ./include/handler.h ./include/db.h
+! ./OBJ/act.informative.o: ./include/spells.h ./include/limits.h
+! ./OBJ/act.informative.o: ./include/guild_list.h
+! ./OBJ/act.movement.o: ./include/utils.h ./include/comm.h
+! ./OBJ/act.movement.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/act.movement.o: ./include/db.h
+! ./OBJ/act.movement.o: ./include/spells.h ./include/guild_list.h
+! ./OBJ/act.obj1.o: ./include/structs.h
+! ./OBJ/act.obj1.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/act.obj1.o: ./include/db.h
+! ./OBJ/act.obj2.o: ./include/utils.h ./include/comm.h
+! ./OBJ/act.obj2.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/act.obj2.o: ./include/db.h
+! ./OBJ/act.offensive.o: ./include/utils.h ./include/comm.h
+! ./OBJ/act.offensive.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/act.offensive.o: ./include/db.h
+! ./OBJ/act.offensive.o: ./include/spells.h ./include/limits.h
+! ./OBJ/act.offensive.o: ./include/guild_list.h
+! ./OBJ/act.other.o: ./include/structs.h
+! ./OBJ/act.other.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/act.other.o: ./include/handler.h ./include/db.h
+! ./OBJ/act.other.o: ./include/spells.h ./include/guild_list.h
+! ./OBJ/act.social.o: ./include/structs.h
+! ./OBJ/act.social.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/act.social.o: ./include/handler.h ./include/db.h
+! ./OBJ/act.wizard.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/act.wizard.o: ./include/handler.h ./include/db.h
+! ./OBJ/act.wizard.o: ./include/limits.h
+! ./OBJ/board.o: ./include/utils.h ./include/comm.h ./include/db.h
+! ./OBJ/comm.o: ./include/interpreter.h ./include/handler.h ./include/db.h
+! ./OBJ/constants.o: ./include/structs.h
+! ./OBJ/constants.o: ./include/limits.h
+! ./OBJ/db.o: ./include/structs.h
+! ./OBJ/db.o: ./include/db.h
+! ./OBJ/db.o: ./include/handler.h ./include/limits.h ./include/spells.h
+! ./OBJ/db.o: mob_bal.c
+! ./OBJ/fight.o: ./include/utils.h ./include/comm.h ./include/handler.h
+! ./OBJ/fight.o: ./include/interpreter.h ./include/db.h
+! ./OBJ/fight.o: ./include/spells.h ./include/guild_list.h
+! ./OBJ/guild_command.o: ./include/utils.h ./include/comm.h
+! ./OBJ/guild_command.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/guild_command.o: ./include/db.h
+! ./OBJ/guild_command.o: ./include/spells.h ./include/limits.h
+! ./OBJ/guild_command.o: ./include/guild_list.h
+! ./OBJ/guild_constant.o: ./include/structs.h
+! ./OBJ/guild_constant.o: ./include/limits.h ./include/guild_list.h
+! ./OBJ/guild_informative.o: ./include/utils.h ./include/comm.h
+! ./OBJ/guild_informative.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/guild_informative.o: ./include/db.h
+! ./OBJ/guild_informative.o: ./include/spells.h ./include/limits.h
+! ./OBJ/guild_informative.o: ./include/guild_list.h
+! ./OBJ/guild_skills.o: ./include/structs.h
+! ./OBJ/guild_skills.o: ./include/utils.h ./include/comm.h
+! ./OBJ/guild_skills.o: ./include/spells.h ./include/handler.h
+! ./OBJ/guild_skills.o: ./include/limits.h ./include/db.h
+! ./OBJ/handler.o: ./include/utils.h ./include/comm.h ./include/db.h
+! ./OBJ/handler.o: ./include/spells.h ./include/guild_list.h
+! ./OBJ/interpreter.o: ./include/structs.h
+! ./OBJ/interpreter.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/interpreter.o: ./include/db.h
+! ./OBJ/interpreter.o: ./include/limits.h
+! ./OBJ/limits.o: ./include/limits.h ./include/utils.h ./include/spells.h
+! ./OBJ/limits.o: ./include/comm.h ./include/guild_list.h
+! ./OBJ/magic.o: ./include/utils.h ./include/comm.h ./include/spells.h
+! ./OBJ/magic.o: ./include/handler.h ./include/limits.h ./include/db.h
+! ./OBJ/magic.o: ./include/magic_weapon.h
+! ./OBJ/magic2.o: ./include/utils.h ./include/comm.h ./include/spells.h
+! ./OBJ/magic2.o: ./include/handler.h ./include/limits.h ./include/db.h
+! ./OBJ/magic2.o: ./include/guild_list.h
+! ./OBJ/magic3.o: ./include/utils.h ./include/comm.h ./include/spells.h
+! ./OBJ/magic3.o: ./include/handler.h ./include/limits.h ./include/db.h
+! ./OBJ/magic_weapon.o: ./include/structs.h
+! ./OBJ/magic_weapon.o: ./include/comm.h ./include/magic_weapon.h
+! ./OBJ/magic_weapon.o: ./include/utils.h ./include/spells.h
+! ./OBJ/mail.o: ./include/utils.h ./include/comm.h ./include/db.h
+! ./OBJ/mail.o: ./include/interpreter.h
+! ./OBJ/mob_magic.o: ./include/utils.h ./include/comm.h ./include/spells.h
+! ./OBJ/mob_magic.o: ./include/handler.h ./include/limits.h ./include/db.h
+! ./OBJ/mobact.o: ./include/structs.h
+! ./OBJ/mobact.o: ./include/comm.h ./include/spells.h ./include/utils.h
+! ./OBJ/modify.o: ./include/structs.h
+! ./OBJ/modify.o: ./include/utils.h ./include/interpreter.h
+! ./OBJ/modify.o: ./include/handler.h ./include/db.h
+! ./OBJ/modify.o: ./include/comm.h
+! ./OBJ/newcom.o: ./include/structs.h
+! ./OBJ/newcom.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/newcom.o: ./include/db.h
+! ./OBJ/newcom.o: ./include/limits.h
+! ./OBJ/quest.o: ./include/utils.h ./include/db.h
+! ./OBJ/shop.o: ./include/structs.h
+! ./OBJ/shop.o: ./include/db.h
+! ./OBJ/shop.o: ./include/utils.h
+! ./OBJ/spec_assign.o: ./include/structs.h
+! ./OBJ/spec_procs.o: ./include/structs.h
+! ./OBJ/spec_procs.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/spec_procs.o: ./include/handler.h ./include/db.h
+! ./OBJ/spec_procs.o: ./include/limits.h
+! ./OBJ/spec_procs2.o: ./include/structs.h
+! ./OBJ/spec_procs2.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/spec_procs2.o: ./include/handler.h ./include/db.h
+! ./OBJ/spec_procs2.o: ./include/limits.h ./include/mob_magic.h
+! ./OBJ/spec_procs3.o: ./include/structs.h
+! ./OBJ/spec_procs3.o: ./include/comm.h ./include/interpreter.h
+! ./OBJ/spec_procs3.o: ./include/handler.h ./include/db.h
+! ./OBJ/spec_procs3.o: ./include/limits.h ./include/mob_magic.h
+! ./OBJ/spell_parser.o: ./include/structs.h
+! ./OBJ/spell_parser.o: ./include/utils.h ./include/comm.h ./include/db.h
+! ./OBJ/spell_parser.o: ./include/spells.h ./include/handler.h
+! ./OBJ/spells1.o: ./include/structs.h
+! ./OBJ/spells1.o: ./include/db.h
+! ./OBJ/spells1.o: ./include/interpreter.h ./include/spells.h
+! ./OBJ/spells1.o: ./include/handler.h ./include/guild_list.h
+! ./OBJ/spells2.o: ./include/structs.h
+! ./OBJ/spells2.o: ./include/db.h
+! ./OBJ/spells2.o: ./include/interpreter.h ./include/spells.h
+! ./OBJ/spells2.o: ./include/handler.h ./include/guild_list.h
+! ./OBJ/spells3.o: ./include/structs.h
+! ./OBJ/spells3.o: ./include/db.h
+! ./OBJ/spells3.o: ./include/interpreter.h ./include/spells.h
+! ./OBJ/spells3.o: ./include/handler.h
+! ./OBJ/weather.o: ./include/structs.h
+! ./OBJ/weather.o: ./include/handler.h ./include/interpreter.h
+! ./OBJ/weather.o: ./include/db.h
+! ./OBJ/daerimsa.o: ./include/structs.h
+! ./OBJ/daerimsa.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/daerimsa.o: ./include/db.h
+! ./OBJ/daerimsa.o: ./include/limits.h
+! ./OBJ/gbisland.o: ./include/structs.h
+! ./OBJ/gbisland.o: ./include/interpreter.h ./include/handler.h
+! ./OBJ/gbisland.o: ./include/db.h
+! ./OBJ/gbisland.o: ./include/limits.h
+Only in src: Makefile.orig
+diff -wcr src-orig/mob_magic.c src/mob_magic.c
+*** src-orig/mob_magic.c	2000-05-22 23:34:38.000000000 +0900
+--- src/mob_magic.c	2019-05-20 22:32:48.000000000 +0900
+***************
+*** 75,81 ****
+    char buffer[MAX_STRING_LENGTH];
+    struct obj_data *tmp_object;
+    struct obj_data *next_obj;
+!   bool test = FALSE;
+    
+    /* punch out equipments  */
+    for (i=0; i< MAX_WEAR; i++) {
+--- 75,81 ----
+    char buffer[MAX_STRING_LENGTH];
+    struct obj_data *tmp_object;
+    struct obj_data *next_obj;
+!   // bool test = FALSE;
+    
+    /* punch out equipments  */
+    for (i=0; i< MAX_WEAR; i++) {
+***************
+*** 110,116 ****
+  	    tmp_object, 0, TO_ROOM);
+            obj_from_char(tmp_object);
+            obj_to_room(tmp_object,ch->in_room);
+!           test = TRUE;
+          }
+        }
+  }
+--- 110,116 ----
+  	    tmp_object, 0, TO_ROOM);
+            obj_from_char(tmp_object);
+            obj_to_room(tmp_object,ch->in_room);
+!           // test = TRUE;
+          }
+        }
+  }
+diff -wcr src-orig/modify.c src/modify.c
+*** src-orig/modify.c	2000-05-22 23:34:40.000000000 +0900
+--- src/modify.c	2019-05-20 22:33:40.000000000 +0900
+***************
+*** 386,394 ****
+  
+  char *one_word(char *argument, char *first_arg )
+  {
+!   int found, begin, look_at;
+  
+!   found = begin = 0;
+  
+    do
+    {
+--- 386,394 ----
+  
+  char *one_word(char *argument, char *first_arg )
+  {
+!   int begin, look_at;
+  
+!   begin = 0;
+  
+    do
+    {
+Only in src-orig/: obj
+Only in src: OBJ
+diff -wcr src-orig/quest.c src/quest.c
+*** src-orig/quest.c	2000-05-22 23:34:40.000000000 +0900
+--- src/quest.c	2019-05-20 22:34:12.000000000 +0900
+***************
+*** 169,175 ****
+    if(ch->quest.type > 0){
+      
+  	/*	if error occur, can do request.	*/
+! 	if (ch->quest.data == NULL) {
+  		ch->quest.type = 0;
+  		return;
+  	}
+--- 169,175 ----
+    if(ch->quest.type > 0){
+      
+  	/*	if error occur, can do request.	*/
+! 	if (ch->quest.data == '\0' ) {
+  		ch->quest.type = 0;
+  		return;
+  	}
+diff -wcr src-orig/shop.c src/shop.c
+*** src-orig/shop.c	2000-05-22 23:34:42.000000000 +0900
+--- src/shop.c	2019-05-20 22:35:10.000000000 +0900
+***************
+*** 65,71 ****
+    if (shop_index[shop_nr].open1>time_info.hours){
+      do_say(keeper, "Come back later!", 0);
+      return(FALSE);
+!   } else if (shop_index[shop_nr].close1<time_info.hours)
+      if (shop_index[shop_nr].open2>time_info.hours){
+        do_say(keeper, "Sorry, we have closed, but come back later.", 0);
+        return(FALSE);
+--- 65,71 ----
+    if (shop_index[shop_nr].open1>time_info.hours){
+      do_say(keeper, "Come back later!", 0);
+      return(FALSE);
+!   } else if (shop_index[shop_nr].close1<time_info.hours) {
+      if (shop_index[shop_nr].open2>time_info.hours){
+        do_say(keeper, "Sorry, we have closed, but come back later.", 0);
+        return(FALSE);
+***************
+*** 73,78 ****
+--- 73,79 ----
+        do_say(keeper, "Sorry, come back tomorrow.", 0);
+        return(FALSE);
+      };
++  }
+  
+    if(!(CAN_SEE(keeper,ch)))
+    {
+diff -wcr src-orig/spec_procs.c src/spec_procs.c
+*** src-orig/spec_procs.c	2000-05-22 23:34:44.000000000 +0900
+--- src/spec_procs.c	2019-05-20 22:37:00.000000000 +0900
+***************
+*** 208,213 ****
+--- 208,214 ----
+        tmp_char = tmp_char->next_in_room)
+        if (CAN_SEE_OBJ(tmp_char, k))
+          send_to_char(buf,tmp_char);
++       
+      value += k->obj_flags.cost ;
+      extract_obj(k);
+    }
+diff -wcr src-orig/spec_procs2.c src/spec_procs2.c
+*** src-orig/spec_procs2.c	2000-06-28 06:55:34.000000000 +0900
+--- src/spec_procs2.c	2019-05-21 19:17:04.000000000 +0900
+***************
+*** 1006,1012 ****
+      for(pet = world[pet_room].people; pet; pet = pet->next_in_room) {
+        /* can't buy PC */
+        if(!IS_NPC(pet)) continue;
+!       sprintf(buf, "%8d - %s\n\r",10*GET_EXP(pet), pet->player.short_descr);
+        send_to_char(buf, ch);
+      }
+      return(TRUE);
+--- 1006,1012 ----
+      for(pet = world[pet_room].people; pet; pet = pet->next_in_room) {
+        /* can't buy PC */
+        if(!IS_NPC(pet)) continue;
+!       sprintf(buf, "%8llu - %s\n\r",10*GET_EXP(pet), pet->player.short_descr);
+        send_to_char(buf, ch);
+      }
+      return(TRUE);
+***************
+*** 1073,1086 ****
+    extern struct descriptor_data *descriptor_list;
+    extern struct player_index_element *player_table;
+    struct descriptor_data *k;
+!   int opt,lev,cost[6],c=0;
+    int i;
+    char *temp;
+    char stash_file1[100];
+    char stash_file2[100];
+    char stash_name[30];
+    
+!   lev = GET_LEVEL(ch);
+    cost[0] = 100-(40-GET_LEVEL(ch));
+    cost[1] = cost[0] * (GET_MAX_HIT(ch) - GET_HIT(ch)) ;
+    cost[2] = cost[0] * (GET_MAX_MANA(ch) - GET_MANA(ch)) ;
+--- 1073,1086 ----
+    extern struct descriptor_data *descriptor_list;
+    extern struct player_index_element *player_table;
+    struct descriptor_data *k;
+!   int opt,cost[6],c=0;
+    int i;
+    char *temp;
+    char stash_file1[100];
+    char stash_file2[100];
+    char stash_name[30];
+    
+!   // lev = GET_LEVEL(ch);
+    cost[0] = 100-(40-GET_LEVEL(ch));
+    cost[1] = cost[0] * (GET_MAX_HIT(ch) - GET_HIT(ch)) ;
+    cost[2] = cost[0] * (GET_MAX_MANA(ch) - GET_MANA(ch)) ;
+***************
+*** 1309,1315 ****
+    char buf[MAX_STRING_LENGTH];
+    char buf2[MAX_STRING_LENGTH];
+    int k,opt;
+!   int mult;
+    long int cost=0;
+    struct obj_data *tmp_obj;
+    
+--- 1309,1315 ----
+    char buf[MAX_STRING_LENGTH];
+    char buf2[MAX_STRING_LENGTH];
+    int k,opt;
+!   // int mult;
+    long int cost=0;
+    struct obj_data *tmp_obj;
+    
+***************
+*** 1332,1338 ****
+    else if (cmd==56) { /* Buy */
+      half_chop(arg,buf,buf2);
+      opt = atoi(buf); 
+!     mult = 1 ;
+      
+      /*
+        if (1 <= opt && opt <= 6) {
+--- 1332,1338 ----
+    else if (cmd==56) { /* Buy */
+      half_chop(arg,buf,buf2);
+      opt = atoi(buf); 
+!     // mult = 1 ;
+      
+      /*
+        if (1 <= opt && opt <= 6) {
+***************
+*** 1764,1770 ****
+  int bank(struct char_data *ch, int cmd, char *arg)
+  {
+    char buf[MAX_STRING_LENGTH];
+!   int amt;
+  
+    if (IS_NPC(ch))
+      return(FALSE);
+--- 1764,1770 ----
+  int bank(struct char_data *ch, int cmd, char *arg)
+  {
+    char buf[MAX_STRING_LENGTH];
+!   long long amt;
+  
+    if (IS_NPC(ch))
+      return(FALSE);
+***************
+*** 1776,1782 ****
+      send_to_char("withdraw <amount>\n\r\n\r",ch);
+      return(TRUE);
+    } else if (cmd==227) { /* Balance */
+!     sprintf(buf,"You have %ld coins in the bank.\n\r",ch->bank);
+      send_to_char(buf,ch);
+      return(TRUE);
+    } else if ((cmd==228)||(cmd==229)) {  /* deposit or withdraw */
+--- 1776,1782 ----
+      send_to_char("withdraw <amount>\n\r\n\r",ch);
+      return(TRUE);
+    } else if (cmd==227) { /* Balance */
+!     sprintf(buf,"You have %llu coins in the bank.\n\r",ch->bank);
+      send_to_char(buf,ch);
+      return(TRUE);
+    } else if ((cmd==228)||(cmd==229)) {  /* deposit or withdraw */
+***************
+*** 1785,1791 ****
+        return(TRUE);
+      }
+      arg=one_argument(arg, buf);
+!     amt=atoi(buf);
+      if(amt <= 0){
+        send_to_char("The banker says 'Amount must be positive.'\n\r",ch);
+        return(TRUE);
+--- 1785,1791 ----
+        return(TRUE);
+      }
+      arg=one_argument(arg, buf);
+!     amt=atoll(buf);
+      if(amt <= 0){
+        send_to_char("The banker says 'Amount must be positive.'\n\r",ch);
+        return(TRUE);
+diff -wcr src-orig/spell_parser.c src/spell_parser.c
+*** src-orig/spell_parser.c	2000-05-22 23:34:46.000000000 +0900
+--- src/spell_parser.c	2019-05-20 22:42:32.000000000 +0900
+***************
+*** 855,861 ****
+  	    send_to_char("Say what?\n\r", ch);
+  	}
+  	else { /* Nothing was given as argument */
+! 	  if (spell_info[spl].targets < TAR_OBJ_INV)
+  	    if(!IS_NPC(ch)) {
+  	      send_to_char("Who should the spell ", ch);
+  	      send_to_char("be cast upon?\n\r", ch);
+--- 855,861 ----
+  	    send_to_char("Say what?\n\r", ch);
+  	}
+  	else { /* Nothing was given as argument */
+! 	  if (spell_info[spl].targets < TAR_OBJ_INV) {
+  	    if(!IS_NPC(ch)) {
+  	      send_to_char("Who should the spell ", ch);
+  	      send_to_char("be cast upon?\n\r", ch);
+***************
+*** 866,871 ****
+--- 866,872 ----
+  		send_to_char("cast upon?\n\r", ch);
+  	      }
+            }
++ 	}
+  	return;
+        }
+        else if (IS_NPC(ch) || GET_LEVEL(ch) < (IMO+3)) {
+Only in src-orig/: tags
+diff -wcr src-orig/utility.c src/utility.c
+*** src-orig/utility.c	2000-05-22 23:34:52.000000000 +0900
+--- src/utility.c	2019-05-20 22:46:08.000000000 +0900
+***************
+*** 75,85 ****
+    else if(! arg2)
+       return(1);
+    for (i = 0; *(arg1 + i) || *(arg2 + i); i++)
+!     if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+        if (chk < 0)
+          return (-1);
+        else 
+          return (1);
+    return(0);
+  }
+  
+--- 75,86 ----
+    else if(! arg2)
+       return(1);
+    for (i = 0; *(arg1 + i) || *(arg2 + i); i++)
+!     if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
+        if (chk < 0)
+          return (-1);
+        else 
+          return (1);
++     }
+    return(0);
+  }
+  
+***************
+*** 92,102 ****
+    int chk, i;
+  
+    for (i = 0; (*(arg1 + i) || *(arg2 + i)) && (n>0); i++, n--)
+!     if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i))))
+        if (chk < 0)
+          return (-1);
+        else 
+          return (1);
+  
+    return(0);
+  }
+--- 93,104 ----
+    int chk, i;
+  
+    for (i = 0; (*(arg1 + i) || *(arg2 + i)) && (n>0); i++, n--)
+!     if ((chk = LOWER(*(arg1 + i)) - LOWER(*(arg2 + i)))) {
+        if (chk < 0)
+          return (-1);
+        else 
+          return (1);
++     }
+  
+    return(0);
+  }
+***************
+*** 106,112 ****
+  /* writes a string to the log */
+  void log(char *str)
+  {
+!   long ct;
+    char *tmstr;
+    static int count = 0;
+  
+--- 108,114 ----
+  /* writes a string to the log */
+  void log(char *str)
+  {
+!   time_t ct;
+    char *tmstr;
+    static int count = 0;
+  
+***************
+*** 135,141 ****
+  
+    for(nr=0; vektor; vektor>>=1)
+    {
+!     if (IS_SET(1, vektor))
+        if (*names[nr] != '\n') {
+          strcat(result,names[nr]);
+          strcat(result," ");
+--- 137,143 ----
+  
+    for(nr=0; vektor; vektor>>=1)
+    {
+!     if (IS_SET(1, vektor)) {
+        if (*names[nr] != '\n') {
+          strcat(result,names[nr]);
+          strcat(result," ");
+***************
+*** 143,148 ****
+--- 145,151 ----
+          strcat(result,"UNDEFINED");
+          strcat(result," ");
+        }
++     }
+      if (*names[nr] != '\n')
+        nr++;
+    }

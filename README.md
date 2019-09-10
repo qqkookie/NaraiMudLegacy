@@ -1,7 +1,7 @@
 Narai Mud Legacy
 ======================
 
-This is source repository of Narai text Mud.
+This is source archive of Narai text Mud.
 Narai is very old Korean text MUD, circa 1995.
 
 It is in lineage of KIT-MUD, and its ancestor Diku-MUD, which is 
@@ -24,8 +24,9 @@ It is well reserved history of old ancestor of modern online game.
 
 There are few versions of the source.
 
-
-**VERSION COMMITTED NOW is merged version of Legacy 2010 and Legacy2003**
+**VERSION COMMITTED NOW is partially merged 2nd version of
+Legacy 2003 + 2010 + Modern Legacy 2019 (alpha) version**
+All files are totally accumulated, need to sorting out and clean up. 
 
 ### Legacy 2003
 
