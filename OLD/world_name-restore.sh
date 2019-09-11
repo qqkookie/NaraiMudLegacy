@@ -1,4 +1,6 @@
-mv MiDaeJun.wld   	A_Mi_Dae_Jun.wld
+cd world
+
+mv AMiDaeJun.wld   	A_Mi_Dae_Jun.wld
 # Arachnos.wld  Arachnos.wld
 # Arena.wld     Arena.wld
 # DaeRimSa.wld          DaeRimSa.wld
@@ -49,3 +51,20 @@ mv TheNeverLand.wld        The_Never_Land.wld
 mv TheTunnels.wld          The_tunnels.wld
 mv TheWamphyriAerie.wld    The_Wamphyri_Aerie.wld
 mv TheWasteland.wld        The_Wasteland.wld
+
+mv DummyZone.wld		Easy_world.wld
+
+mv world_files			world_files-camel
+mv world_files-ORIG		world_files			
+
+cd ../zone
+
+mv DirksCastle.zon		DirkSCastle.zon
+mv MelsDoghouse.zon		MelSDoghouse.zon
+mv RedfernesResidence.zon	RedferneSResidence.zon
+mv KingdomOfO.zon		OKingdom.zon
+
+mv DummyZone.zon			EasyZone.zon
+
+mv zone_files			zone_files-camel
+mv zone_files-ORIG		zone_files
