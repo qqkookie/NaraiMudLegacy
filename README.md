@@ -24,10 +24,9 @@ It is well reserved history of old ancestor of modern online game.
 
 There are few versions of the source.
 
-**VERSION COMMITTED NOW is totally merged 3nd version of
+**VERSION COMMITTED NOW is totally merged 4th stage  of
 Legacy 2003 + 2010 + Modern Legacy 2019 (alpha) version**
-All files are sorted and cleaned up. 
-Ready to rename world file name.
+All files are sorted and World file rename done.  Ready to clean up code.  
 
 ### Legacy 2003
 

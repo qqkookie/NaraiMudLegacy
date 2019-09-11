@@ -1,8 +1,8 @@
 zone/LIMBO.zon
 zone/TheCastle.zon
-zone/MelsDoghouse.zon
+zone/MelSDoghouse.zon
 zone/Houses.zon
-zone/DirksCastle.zon
+zone/DirkSCastle.zon
 zone/SHIRE.zon
 zone/TheJale.zon
 zone/TheLands.zon
@@ -31,7 +31,7 @@ zone/Sewer.zon
 zone/SecondSewer.zon
 zone/SEWERMAZE.zon
 zone/TheTunnels.zon
-zone/RedfernesResidence.zon
+zone/RedferneSResidence.zon
 zone/Arachnos.zon
 zone/Arena.zon
 zone/DeathKingdom.zon
@@ -41,10 +41,10 @@ zone/DaeRimSa.zon
 zone/MountOlympus.zon
 zone/RobotCity.zon
 zone/KingdomOfWee.zon
-zone/KingdomOfO.zon
-zone/DummyZone.zon
+zone/OKingdom.zon
+zone/Dummy.zon
 zone/MooDang.zon
 zone/GoodBadIsland.zon
-zone/AMiDaeJun.zon
+zone/A_Mi_Dae_Jun.zon
 zone/KAIST.zon
 $
