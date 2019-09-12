@@ -145,22 +145,22 @@ void show_obj_to_char(struct obj_data *object, struct char_data *ch, int mode)
   }
 
   if (mode != 3) { 
-    // found = FALSE; 
+    // found = FALSE;
     if (IS_OBJ_STAT(object,ITEM_INVISIBLE)) {
        strcat(buffer,"(invisible)");
-       // found = TRUE; 
+       // found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_EVIL) && ch&&IS_AFFECTED(ch,AFF_DETECT_EVIL)) {
        strcat(buffer,"..It glows red!");
-       // found = TRUE; 
+       // found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_GLOW)) {
       strcat(buffer,"..It has a soft glowing aura!");
-      // found = TRUE; 
+      // found = TRUE;
     }
     if (IS_OBJ_STAT(object,ITEM_HUM)) {
       strcat(buffer,"..It emits a faint humming sound!");
-      // found = TRUE; 
+      // found = TRUE;
     }
   }
 
@@ -314,7 +314,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch, int mode)
     /* Show a character to another */
     
     if (GET_PLAYER_MAX_HIT(i) > 0)
-      percent = (float) GET_HIT(i) / GET_PLAYER_MAX_HIT(i) * 100;
+      percent = (100 * GET_HIT(i)) / GET_PLAYER_MAX_HIT(i);
     else
       percent = -1; /* How could MAX_HIT be < 1?? */
     
@@ -830,7 +830,7 @@ static char align_msg[13][44] = {
   "You are a devil.\n\r"
 };
 
-static char align_msg_han[13][64] = {
+static char *align_msg_han[13] = {
   "당신은 성인 군자십니다.\n\r",
   "당신은 성이 군자가 되어가고 있습니다.\n\r",
   "당신은 선하십니다.\n\r",
@@ -1800,8 +1800,8 @@ void do_police(struct char_data *ch, char *argument, int cmd)
     return;
   target=atoi(name);
   for (d=descriptor_list;d;d=d->next){
-    sprintf(name,"%p", d); log(name);
     if(target==d->descriptor){
+      sprintf(name,"Policed: %d\n", d->descriptor); log(name);
       if((d->connected == CON_PLYNG)&&(d->character)){
         if(d->character->player.level < ch->player.level){
           stash_char(d->character);

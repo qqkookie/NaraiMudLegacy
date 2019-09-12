@@ -841,7 +841,7 @@ void boot_zones(void)
 			}
 
 		zone_table[zon].name = check;
-		CREATE(zone_table[zon].filename,char, strlen(file_name)+1); /* + 1 for Linux and no +1 for BSD? */
+		CREATE(zone_table[zon].filename,char, strlen(file_name)+1); // +1 is correct size.
 		strcpy(zone_table[zon].filename,file_name);
 		fscanf(fl, " %d ", &zone_table[zon].top);
 		fscanf(fl, " %d ", &zone_table[zon].lifespan);
@@ -2682,7 +2682,7 @@ char *fread_string(FILE *fl)
 
   if (strlen(buf) > 0)
   {
-    CREATE(rslt, char, strlen(buf)+1);
+    CREATE(rslt, char, strlen(buf) + 1);
     strcpy(rslt, buf);
   }
   else
@@ -2936,9 +2936,10 @@ void init_char(struct char_data *ch)
 	/* wimpyness */
 	ch->specials.wimpyness = 0;
 
-	// #ifdef RESTART_BOUNUS #endif
+	// #ifdef RESTART_BOUNUS
 	/* initial bonus */
 	ch->points.gold = 1000;
+	// #endif
 
 	for (i = 0; i <= MAX_SKILLS - 1; i++) {
 		if (GET_LEVEL(ch) < IMO + 3) {

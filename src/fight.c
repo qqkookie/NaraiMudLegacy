@@ -586,7 +586,7 @@ void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 {
   struct obj_data *wield;
   char *buf, *buf2;
-  int  msg_index ; 
+  int  msg_index ;
 
 #ifdef UNUSED_CODE 
   static struct dam_weapon_type dam_weapons[] = {
@@ -1686,8 +1686,8 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
   
   if (type == SKILL_BACKSTAB) {
     if(IS_AFFECTED(ch,AFF_HIDE)) {
-      dam <<= 1;
       log("backstab+hide");
+      dam <<= 1;
     }
     if(IS_NPC(ch)){
       dam *= backstab_mult[GET_LEVEL(ch) / 2];

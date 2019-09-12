@@ -44,12 +44,12 @@ SRCS    = \
 	spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c \
 	spells3.c utility.c version.c weather.c daerimsa.c gbisland.c
 
-UTILS       = change_level change_pass change_stashform check_pass \
+UTILS       = change_level change_pass chstashform unchstashform check_pass \
               check_player list_player mob_create mob_edit zone_item \
-              zone_list zone_print mob_balance
+              zone_list zone_print mob_balance check_god fix_noname
 
 # SCRIPTS     = everun backup RESTART RUNME shutmud
-SCRIPTS     = runmud.sh
+SCRIPTS     = runmud.sh rmpid.sh
 
 OBJS        = $(SRCS:%.c=$(OBJDIR)/%.o)
 PROG_BIN    = $(OBJDIR)/$(PROG)
@@ -84,6 +84,7 @@ install : $(PROG_BIN) $(U_BINS)
 	/bin/cp -p $(PROG_BIN) $(INSTDIR)/$(PROG).new
 	/bin/cp -p $(U_BINS) $(INSTDIR)
 	/bin/cp -p $(SCRIPTS:%=$(UTLSRC)/%) $(INSTDIR)
+	/bin/chmod 755 $(SCRIPTS:%=$(INSTDIR)/%)
 
 uninstall :
 	- /bin/rm -f $(INSTDIR)/$(PROG).run $(INSTDIR)/$(PROG).old
@@ -327,7 +328,8 @@ $(OBJDIR)/change_level.o: $(UTLSRC)/change_level.c \
     $(INCDIR)/structs.h
 $(OBJDIR)/change_pass.o: $(UTLSRC)/change_pass.c \
     $(INCDIR)/structs.h
-$(OBJDIR)/change_stashform.o: $(UTLSRC)/change_stashform.c
+$(OBJDIR)/chstashform.o: $(UTLSRC)/chstashform.c
+$(OBJDIR)/unchstashform.o: $(UTLSRC)/unchstashform.c
 $(OBJDIR)/check_pass.o: $(UTLSRC)/check_pass.c \
     $(INCDIR)/structs.h
 $(OBJDIR)/check_player.o: $(UTLSRC)/check_player.c \
@@ -342,6 +344,10 @@ $(OBJDIR)/mob_edit.o: $(UTLSRC)/mob_edit.c \
 $(OBJDIR)/zone_item.o: $(UTLSRC)/zone_item.c
 $(OBJDIR)/zone_list.o: $(UTLSRC)/zone_list.c
 $(OBJDIR)/zone_print.o: $(UTLSRC)/zone_print.c
+
+$(OBJDIR)/check_god.o: $(UTLSRC)/check_god.c $(INCDIR)/structs.h
+$(OBJDIR)/fix_noname.o: $(UTLSRC)/fix_noname.c $(INCDIR)/structs.h
+
 
 # ------------------------------------------------------------
 # OLD dependants

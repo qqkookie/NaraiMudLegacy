@@ -1,14 +1,15 @@
 #include	<stdio.h>
+#include	<unistd.h>
 
-main(int argc,char *argv[])
+int main(int argc,char *argv[])
 {
 	int	i;
 	FILE	*f,*t;
-	char	str[255],str2[255];
+	char	str[255]; //,str2[255];
 	if(argc<2)
 	{
 		printf("usage: inverse <filename1> <filename2> ...\n");
-		return;
+		return 1;
 	}
 	for(i=1;i<argc;i++)
 	{

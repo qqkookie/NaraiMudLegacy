@@ -143,7 +143,7 @@ int gbisland_sea(struct char_data *ch, int cmd, char *arg)
 	/* if(cmd != 2 && cmd != 151) return FALSE; */
 	/* cmd==112, "flee" by Moon */
 	if(cmd != 2 && cmd != 112) return FALSE;
-	
+
 	was_in = ch->in_room;
 
 	if(!IS_AFFECTED(ch, AFF_SNEAK)){

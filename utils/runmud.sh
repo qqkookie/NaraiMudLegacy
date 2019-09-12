@@ -200,8 +200,8 @@ do
     if [ $bgexit != 0 ] ; then exit $bgexit; fi
     if [ -f BLOCK.MUD ] ; then break; fi
 
-    #  Sleep 60 secs before next run to wait port to be freed.  
-    sleep 60
+    #  Sleep > 60 secs before next run to wait port to be freed.  
+    sleep 100
 
     COUNT="`expr $COUNT + 1 `"
 done 

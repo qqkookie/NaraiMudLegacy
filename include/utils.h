@@ -10,6 +10,8 @@ extern void log(char *str);
 // Don't use NULL pointer for null character ('\0')
 #define NUL '\0' 
 
+#define CARRY_WEIGHT_BASE	500
+
 int hit_limit(struct char_data *ch);
 
 #define TRUE  1
@@ -183,7 +185,7 @@ int hit_limit(struct char_data *ch);
 
 #define GET_OBJ_WEIGHT(obj) ((obj)->obj_flags.weight)
 
-#define CAN_CARRY_W(ch) (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w)
+#define CAN_CARRY_W(ch) (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w + CARRY_WEIGHT_BASE)
 
 #define CAN_CARRY_N(ch) (5+GET_DEX(ch)/2+GET_LEVEL(ch)/2)
 
