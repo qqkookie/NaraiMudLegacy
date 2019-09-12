@@ -256,6 +256,11 @@ int perhaps(struct char_data *ch,int cmd,char *arg)
 #ifdef 	MID_HELPER
 	static struct char_data *perhaps = NULL;
 	char buf[256];
+	char *blessings[3] = {
+		"%s님에게 신의 가호가 있기를...",
+		"%s님에게 축복을 드립니다...",
+		"%s님에게 신의 은총이 내리기를..." ,
+	};
 	while(*arg==' ') arg++;
 	if (cmd == 98 && strcasecmp(arg, MID_HELPER)==0 	// bow narai 
 		&& strcasecmp(GET_NAME(ch), MID_HELPER) != 0) { 
@@ -263,7 +268,9 @@ int perhaps(struct char_data *ch,int cmd,char *arg)
 		SPELL_TYPE_SPELL, ch, NULL);
             cast_haste(GET_LEVEL(perhaps), perhaps, NULL, 
 		SPELL_TYPE_SPELL, ch, NULL);
-	    sprintf(buf, "%s님을 축복드립니다..." , GET_NAME(ch));
+	   
+	    char *msg =  blessings[number(0,2)];
+	    sprintf(buf, msg , GET_NAME(ch));
             do_say(perhaps, buf, 0);
             return 0;
         }

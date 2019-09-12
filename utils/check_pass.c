@@ -34,7 +34,7 @@ int main()
 		printf("Processing #%d %s\n",num++,st.name);
 		st.name[0]=tolower(st.name[0]);
 		if(strcmp(name,st.name)==0) {
-			printf("Found and comparing password\n");
+			printf("Found and checking password of [%s] : ", st.name);
 			if(strncmp(st.pwd,(char *)crypt(passwd,st.pwd),10)==0) {
 				printf("Password Ok.\n");
 			} else {

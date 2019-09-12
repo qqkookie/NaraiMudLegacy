@@ -49,8 +49,8 @@ int check_stat(struct char_data *ch)
   
   /* check hit */
 	if(GET_LEVEL(ch) > 25){
-	  ratio = 6 * GET_HIT(ch) / hit_limit(ch) ;
-	  if(ratio < 3){
+	  ratio = (100 * GET_HIT(ch)) / hit_limit(ch) ;
+	  if(ratio < 50){
 	    success = GET_WIS(ch) + GET_INT(ch) + GET_LEVEL(ch);
 	    if(number(1, 100) < success){ /* heal */
 	      switch(GET_CLASS(ch)){

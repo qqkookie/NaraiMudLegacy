@@ -43,6 +43,7 @@
 #define PLAN_FILE         "plan"          /* for god's plan             */
 #define WIZARDS_FILE      "wizards"       /* for wizards command : cyb  */
 #define STASH             "stash"
+#define CHATLOG           "log/chatlog.log"
 
 /* public procedures in db.c */
 

@@ -7,12 +7,12 @@
 #define FALSE 0
 #define TRUE 1
 
-main()
+int main()
 {
 	FILE *old, *new;
 	struct char_file_u ch;
 	int ok = TRUE;
-	char buf[256];
+	// char buf[256];
 	int count = 0;
 	static int a[4];
 	int dan_count = 0;

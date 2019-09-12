@@ -1313,6 +1313,7 @@ void do_wiznet(struct char_data *ch, char *argument, int cmd)
     }
   send_to_char("Ok.\n\r",ch);
 }
+FILE *chatlogfp = NULL;
 void do_chat(struct char_data *ch, char *argument, int cmd)
 {
   struct descriptor_data *i;
@@ -1344,10 +1345,12 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
 	time(&tt);
 	stt = localtime(&tt);
 
-	FILE *fp;
-	fp = fopen("lastchat", "a");
-	fprintf(fp, "%d.%02d.%02d %02d:%02d:%02d %s", stt->tm_year+1900,stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,stt->tm_sec,buf);
-	fclose(fp);
+#ifdef CHATLOG
+	if (chatlogfp == NULL) 
+	    chatlogfp = fopen(CHATLOG, "a");
+	fprintf( chatlogfp, "%d.%02d.%02d %02d:%02d:%02d %s", stt->tm_year+1900,stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,stt->tm_sec,buf);
+	fflush(chatlogfp);
+#endif
 
 	sprintf(history[his_end],"%02d.%02d %02d:%02d %s", stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,buf);
 	/* 20110117 by Moon */

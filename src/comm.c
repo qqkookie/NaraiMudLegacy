@@ -135,7 +135,7 @@ void string_add(struct descriptor_data *d, char *str);
 void perform_violence(void);
 void stop_fighting(struct char_data *ch);
 void show_string(struct descriptor_data *d, char *input);
-void save_char(struct char_data *ch, int load_room);
+void save_char(struct char_data *ch, sh_int load_room);
 void do_assist(struct char_data *ch,char *argument,int cmd);
 
 /* *********************************************************************
@@ -223,7 +223,7 @@ void run_the_game(int port)
 
   close_sockets(s);
   shutdown(s,2);
-  
+
   unlink(pidfile);
   log("Normal termination of game.");
 }
@@ -1075,9 +1075,9 @@ void close_socket(struct descriptor_data *d)
 #endif
 */
 /*
-         // #ifdef SYPARK
+#ifdef SYPARK
 	  stash_char(d->character);
-         // #endif
+#endif
 */
       log(buf);
       free_char(d->character);
