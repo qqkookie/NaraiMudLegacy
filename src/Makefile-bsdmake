@@ -22,7 +22,7 @@ MAKE    = make
 MKDEP   = mkdep 
 LD      = $(CC)
 
-OFLAGS  = -O -Wall -g -pipe
+OFLAGS  = -O -g -Wall -pipe
 
 INCLUDE = -I../$(INCDIR)
 
@@ -34,6 +34,8 @@ INCLUDE = -I../$(INCDIR)
 #
 # MFLAGS are moved to include/db.h
 
+# gold amount for beta test
+# DFLAGS= -DRESTART_BONUS=10000000000L
 DFLAGS=
 
 CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)
@@ -54,7 +56,7 @@ UTILS       = change_level change_pass chstashform unchstashform check_pass \
               check_player list_player mob_create mob_edit zone_item \
               zone_list zone_print mob_balance check_god fix_noname
 
-SCRIPTS     = runmud.sh rmpid.sh
+SCRIPTS     = runmud.sh killmud.sh
 
 OBJS        = $(SRCS:S/.c$/.o/g)
 PROG_BIN    = $(PROG)

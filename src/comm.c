@@ -564,13 +564,21 @@ extern char *connected_types[];
 void record_player_number()
 {
   char line[256];
-  int t, tod, in_d=0, out_d=0;
+  int t, tod; // , in_d=0, out_d=0;
   struct descriptor_data *d;
   int m=0,n=0;
   static int most=0;
+  static int hour;
   t=time(0)+32400;        /* 86400 is a day */
   tod = (t%3600);
-  if( tod > 3500 ){
+
+  // zone period is about 48 sec, but rather irregular.
+#define A_DAY		86400
+#define MINUTES(m)	(60*(m))
+
+  int th = (t%A_DAY)/MINUTES(60);
+  if( tod < MINUTES(1) && hour != th){
+    hour = th;
     line[0]=0;
     for (d=descriptor_list;d;d=d->next) {
       ++m;
@@ -589,13 +597,12 @@ void record_player_number()
         sprintf(line+strlen(line), "%3d%9s%10s ",
           d->descriptor,"  UNDEF  ",connected_types[d->connected]);
       sprintf(line+strlen(line),"%-15s",d->host);
-      //if(is_korean(d)) in_d++;
-      //else out_d++;
-      in_d++;
+      // if(is_korean(d)) in_d++;
+      // else out_d++;
 #ifdef TIME_ADJUST
       static bool adjust = FALSE;
-      if ( !adjust && reboot_time >= 259200 ) {
-	  reboot_time += (boottime%86400+reboot_time+t+TIME_ADJUST*60) % 86400 -86100;
+      if ( !adjust && reboot_time >= A_DAY*3 ) {
+	  reboot_time += (boottime%A_DAY+reboot_time+t+MINUTES(TIME_ADJUST))%A_DAY-A_DAY+MINUTES(5));
 	  adjust = TRUE;
       }
 #endif
@@ -615,8 +622,8 @@ void record_player_number()
     sprintf(line,"%s%d/%d active connections",
       (n%2) ? "\n\r" : "",m,most);
     log(line);
-    sprintf(line,"from korea: %d from abroad %d", in_d, out_d );
-    log(line);
+    // sprintf(line,"from korea: %d from abroad %d", in_d, out_d );
+    // log(line);
     t=30+time(0)-boottime;
     sprintf(line,"Running time %d:%02d",t/3600,(t%3600)/60);
     log(line);

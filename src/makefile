@@ -15,7 +15,7 @@ CC      = gcc
 MAKE    = gmake
 LD      = $(CC)
 
-OFLAGS  = -O -g -Wall -pipe
+OFLAGS  = -O0 -g -Wall -pipe
 
 INCLUDE = -I$(INCDIR)
 
@@ -29,7 +29,7 @@ INCLUDE = -I$(INCDIR)
 
 # gold amount for beta test
 # DFLAGS= -DRESTART_BONUS=10000000000L
-DFLAGS=
+DFLAGS= -DRESTART_BONUS=10000000000L
 
 CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)
 
