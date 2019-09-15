@@ -8,7 +8,7 @@
 # $pidfile (like "mud-5001.pid") is used as port lock.
 
 PATH=/bin:/usr/bin/:/usr/local/bin:
-trap "" 1 2 3 13 14 
+trap "" 1 2 3 13 14
 
 port=5002	# port number
 
@@ -25,16 +25,17 @@ srcdir=$mudhome/src
 
 # belows are relative to $mudhome
 mudlink=run-mud
-loglink=run-log
-checklink=run-check 
+loglink=log-run
+lastlink=log-last
+checklink=log-check 
 # All logs, player files and stash files are saved in $usrdir 
 usrdir=lib
     
 # belows are relative to $usrdir
 pidfile=mud-$port.pid
 logdir=log
-logfile=$logdir/run-log 
-checkfile=$logdir/run-check 
+logfile=$logdir/run-log
+checkfile=$logdir/run-check
 
 datefmt="%Y-%m-%d %a %H:%M:%S %Z"
 
@@ -63,7 +64,6 @@ cd $usrdir || exit 2
 while expr $COUNT \< 100 > /dev/null
 do 
 	export TIMESTAMP="`date +%y-%m-%d_%H-%M`"
-	starttime=`env LC_ALL=C date +"$datefmt"`
 
 	if  [ -e BLOCK_MUD ] ; then break; fi
 	if  [ -e $pidfile ] ; then
@@ -73,7 +73,7 @@ do
 	(
 		#  run subshell in backgorund and all output goes to log file 
 		echo "==========    BEGIN   === Start of LOG Run No. $COUNT =========="
-		echo $starttime
+		env LC_ALL=C date +"$datefmt"
 
 		echo "----------    Backup players file"
 		if [ -f players.4 ] ; then /bin/mv -f players.4 players.5 ; fi
@@ -149,10 +149,10 @@ do
 		fi 
 		cat <<- CHKMSG
 		Mud: $check on port $port loop: $COUNT by [$acct] 
-		     Time: $starttime
 		     [$prog_run] in [$mudhome/$usrdir]
+		     Time: `env LC_ALL=C date +"$datefmt"`
+		Running.....
 		CHKMSG
-		echo ""
 	) >> $checkfile
 
 	runfail=0
@@ -168,12 +168,12 @@ do
 	fi
 
  	(
-		echo "----------------------------------------"
 		echo "Mud: run finished. loop: $COUNT"
 		if [ -s $logfile -a -f $pidfile ] ; then
+			echo "Killed or crashed: log ==> "
 			echo "----------------------------------------"
 			tail -20 $logfile
-			echo "Killed or crashed"
+			echo "----------------------------------------"
 		fi
 	) >> $checkfile
 
@@ -207,12 +207,17 @@ do
 
 	if [ -s $logfile ] ; then
 		tail -100 $logfile >> $logdir/CRASH-LOG
-		echo "Moving $logfile to $logdir/mud@$TIMESTAMP-$COUNT.log"  >> $checkfile
-		/bin/mv -f $logfile "$logdir/mud@$TIMESTAMP-$COUNT.log"
+
+		lastlog="$logdir/mud@$TIMESTAMP-$COUNT.log"
+		echo "Moving $logfile to $lastlog" >> $checkfile
+		/bin/mv -f $logfile $lastlog
+		rm -f $mudhome/$lastlink
+		ln -s $usrdir/$lastlog $mudhome/$lastlink
 	else
 		echo "No log"
 		runfail=7
 	fi
+	echo "" >> $checkfile
 
 	if [ $runfail != 0 ] ; then exit $runfail; fi
 	if [ $mudexit != 0 ] ; then exit $mudexit; fi

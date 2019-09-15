@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 
-// Don't use obsolute termio.h, use modern termios.h
+// Don't use obsolete termio.h, use modern termios.h
 #undef DONT_HAVE_TERMIOS_H
 
 #ifdef DONT_HAVE_TERMIOS_H

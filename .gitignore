@@ -36,7 +36,9 @@ lib/stash/
 src/.depend
 lib/players*
 lib/stash*
-mud-narai*
-run-*
+run-mud
+log-check
+log-run
+log-last
 
 # end of .gitignore

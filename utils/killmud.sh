@@ -11,7 +11,7 @@ pids="`ps -cux | grep $prog | cut -f 2 -w `"
 
 if [ "x$pids" != x ] ; then
 	echo "Killing mud PID: $pids"
-	kill -1  $pids
+	kill -TERM  $pids
 	sleep 1
 fi
 

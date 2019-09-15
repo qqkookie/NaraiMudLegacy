@@ -104,29 +104,13 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
     send_to_char("Ok.\n\r", ch);
     sprintf(buf1, "$n shouts '%s'", argument);
 
-    sprintf(buf, "%s shouts '%s'\n\r", GET_NAME(ch), argument);
+    // sprintf(buf, "%s shouts '%s'\n\r", GET_NAME(ch), argument);
+
+    time_t tt = time(NULL);
+    strftime(buf, 127, "%F %H:%M", localtime(&tt));
+    sprintf(buf + strlen(buf)," %s >> %s\n\r", GET_NAME(ch), argument);
     assert(his_end>=0&&his_end<20);
-
-    /*
-    sprintf(history[his_end], "%s", buf);
-		*/
-    struct tm* stt;
-    time_t tt;
-    time(&tt);
-    stt = localtime(&tt);
-
-#ifdef CHATLOG
-    extern FILE *chatlogfp;
-    if (chatlogfp == NULL)
-	chatlogfp = fopen(CHATLOG, "a");
-
-    fprintf(chatlogfp, "%d.%02d.%02d %02d:%02d:%02d %s", stt->tm_year+1900,stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,stt->tm_sec,buf);
-    fflush(chatlogfp);
-#endif
-
-    sprintf(history[his_end],"%02d.%02d %02d:%02d %s", stt->tm_mon+1,stt->tm_mday,stt->tm_hour,stt->tm_min,buf);
-    /* 20110117 by Moon */
-
+    strcpy(history[his_end], &buf[5]);		// omit year part
     his_end++;
     if((his_end%20)==(his_start%20))
     {
@@ -140,6 +124,16 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
       !IS_SET(i->character->specials.act, PLR_EARMUFFS))
         act(buf1, 0, ch, 0, i->character, TO_VICT);
 	}
+
+#ifdef CHATLOG
+    extern FILE *chatlogfp;
+    if (chatlogfp == NULL)
+	chatlogfp = fopen(CHATLOG, "a");
+    fputs(buf, chatlogfp);
+    fflush(chatlogfp);
+    /* 20110117 by Moon */
+#endif
+
   }
 }
 /* 얘기하기 */
