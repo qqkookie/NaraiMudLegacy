@@ -3,11 +3,12 @@
 # For debuging use only, not for production use
 #
 
-port=5002
+port=5002	# $usrdir/PORT is primary
+
 prog=mud-narai
 usrdir=$HOME/mud/lib
 
-pids="`ps -cux | grep $prog | cut -f 2 -w `"
+pids="`ps -cx | grep $prog | cut -c1-6 `"
 
 if [ "x$pids" != x ] ; then
 	echo "Killing mud PID: $pids"
@@ -16,6 +17,10 @@ if [ "x$pids" != x ] ; then
 fi
 
 cd $usrdir
+
+if [ -f PORT ] ; then
+	port=`cat PORT`
+fi
 
 rm -f mud-$port.pid
 rm -f $prog.run.core $prog.new.core

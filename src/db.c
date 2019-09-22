@@ -2937,8 +2937,9 @@ void init_char(struct char_data *ch)
 	ch->specials.wimpyness = 0;
 
 	/* initial bonus */
-#ifdef RESTART_BOUNUS
-	ch->points.gold = RESTART_BONUS;
+#ifdef BETA_TEST
+	ch->points.gold = 10000000000L;
+	ch->quest.solved = 100;
 #else
 	ch->points.gold = 1000;
 #endif

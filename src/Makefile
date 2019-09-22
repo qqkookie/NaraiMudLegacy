@@ -10,9 +10,12 @@ OBJDIR  = ./obj
 INSTDIR = ../bin
 VPATH   = .:$(INCDIR):$(UTLSRC):
 
-# CC    = cc
-CC      = gcc
-MAKE    = gmake
+# CC      = clang
+# CC      = gcc
+CC      = cc
+
+# MAKE    = gmake
+MAKE    = make
 LD      = $(CC)
 
 OFLAGS  = -O -g -Wall -pipe
@@ -25,10 +28,10 @@ INCLUDE = -I$(INCDIR)
 #
 # MFLAGS    = -DIMO=41 -DRETURN_TO_QUIT
 #
-# MFLAGS are moved to include/db.h
+# MFLAGS are moved to ../include/utils.h
 
-# gold amount for beta test
-# DFLAGS= -DRESTART_BONUS=10000000000L
+# Set initial gold and quest in "db.c"
+# DFLAGS= -DBETA_TEST
 DFLAGS=
 
 CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)

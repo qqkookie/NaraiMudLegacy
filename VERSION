@@ -1,11 +1,14 @@
-Narai Mud Legacy total merged BETA 1 version 
+Narai Mud Legacy total merged BETA 2 version 
 
-**VERSION COMMITTED NOW is totally merged BETA version
+**VERSION COMMITTED NOW is revised BETA-2 version
 Legacy 2003 + 2010 + Modern Legacy 2019**
+Moved config  parameters from "db.h" to "utils.h"
+Revised Makefile's for clang and BETA_TEST
+TIME_ADJUST is fixed as REBOOT_WHEN
+termios handling fixed for Linux
+Read port number from lib/PORT file
+Port killmud.sh for Linux ps
+runmud.sh goes background by itself
 
-5th and final stage of merge and code/file clean up.
-checking with Legacy 2003 done
-A Mi Dae Jun zone integration done.
-
-uploaded 2019.09.12 by Cookie
+uploaded 2019.09.23 by Cookie
 

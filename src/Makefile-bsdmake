@@ -16,8 +16,11 @@ INSTDIR     := ../$(INSTDIR)
 
 .PATH : $(UTLSRC)
 
-CC      = cc
+# CC      = clang
 # CC      = gcc
+CC      = cc
+
+# MAKE    = gmake
 MAKE    = make
 MKDEP   = mkdep 
 LD      = $(CC)
@@ -32,10 +35,10 @@ INCLUDE = -I../$(INCDIR)
 #
 # MFLAGS    = -DIMO=41 -DRETURN_TO_QUIT
 #
-# MFLAGS are moved to include/db.h
+# MFLAGS are moved to ../include/utils.h
 
-# gold amount for beta test
-# DFLAGS= -DRESTART_BONUS=10000000000L
+# Set initial gold and quest in "db.c"
+# DFLAGS= -DBETA_TEST
 DFLAGS=
 
 CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)

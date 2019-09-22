@@ -942,20 +942,20 @@ void echo_local(int fd)
 {
    struct termios io;
    
-   ioctl(fd, TIOCGETA, &io);
+   tcgetattr(fd, &io);
    io.c_lflag |= ECHO;
-   ioctl(fd, TIOCSETA, &io);
+   tcsetattr(fd, TCSANOW, &io);
 }
 
 void no_echo_local(int fd)
 {  
    struct termios io;
    
-   ioctl(fd, TIOCGETA, &io);
+   tcgetattr(fd, &io);
    io.c_cc[VMIN] = 1; 
    io.c_cc[VTIME] = 0;
    io.c_lflag &= ~ECHO;
-   ioctl(fd, TIOCSETA, &io);
+   tcsetattr(fd, TCSANOW, &io);
 }
 
 #endif

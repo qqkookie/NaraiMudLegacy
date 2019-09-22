@@ -72,7 +72,7 @@ int boottime;
 
 /* reboot_time = 24 hour */
 /* u_long reboot_time = 86400; */
-u_long reboot_time = 345600;
+u_long reboot_time = REBOOT_TIME;
 
 int maxdesc, avail_descs;
 int tics = 0;        /* for extern checkpointing */
@@ -599,13 +599,6 @@ void record_player_number()
       sprintf(line+strlen(line),"%-15s",d->host);
       // if(is_korean(d)) in_d++;
       // else out_d++;
-#ifdef TIME_ADJUST
-      static bool adjust = FALSE;
-      if ( !adjust && reboot_time >= A_DAY*3 ) {
-	  reboot_time += (boottime%A_DAY+reboot_time+t+MINUTES(TIME_ADJUST))%A_DAY-A_DAY+MINUTES(5));
-	  adjust = TRUE;
-      }
-#endif
       if(!(n%2)){
         strcat(line,"|");
       } else {
@@ -627,6 +620,15 @@ void record_player_number()
     t=30+time(0)-boottime;
     sprintf(line,"Running time %d:%02d",t/3600,(t%3600)/60);
     log(line);
+#ifdef REBOOT_WHEN
+    static bool adjust = FALSE;
+    if ( !adjust && reboot_time >= A_DAY*3 ) {
+	// reboot_time = (boottime+reboot_time+TIME_ZONE)/A_DAY*A_DAY
+	//   -boottime - TIME_ZONE + MINUTES(REBOOT_WHEN+5);
+	reboot_time += A_DAY - (boottime+reboot_time)%A_DAY - TIME_ZONE + MINUTES(REBOOT_WHEN-5);
+	adjust = TRUE;
+    }
+#endif
   }
 }
 /* ******************************************************************

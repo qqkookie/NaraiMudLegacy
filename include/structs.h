@@ -11,7 +11,7 @@ typedef int byte;
 
 typedef long long LONGLONG;
 
-#define IMO	41
+#define IMO		41
 
 /*
 #define PULSE_MOBILE    41

@@ -27,8 +27,6 @@ prog_new=$prog.new
 prog_run=$prog.run
 srcdir=$mudhome/src
 
-# GDB=/usr/local/bin/gdb
-
 # belows are relative to $mudhome
 mudlink=run-mud
 loglink=log-run
@@ -113,27 +111,31 @@ do
 		echo "************* NARAI-MUD BOOT --  Run No. $COUNT ****************"
 		echo ""
 
+		if [ "`uname`" = "Linux" ] ; then
 		# #----------------------------------------
 		#
-		# $GDB -q -cd=$mudhome/$usrdir -d $srcdir $prog_run <<- GDB_INPUT
-		#
-		#	handle SIGHUP nostop print pass
-		#	handle SIGINT nostop print pass
-		#	y
-		#	handle SIGPIPE nostop print pass
-		#	handle SIGALRM nostop print pass
-		#	handle SIGTERM nostop print pass
-		#	handle SIGUSR2 nostop print pass
-		#	handle SIGVTALRM nostop print pass
-		#	run $port
-		#	bt
-		#	quit
-		#	y
-		# GDB_INPUT
+		# gdb -q -cd=$mudhome/$usrdir -d $srcdir $prog_run <<- GDB_INPUT
+		lldb -f $prog_run <<- DBG_INPUT
+
+			process handle SIGHUP nostop print pass
+			process handle SIGINT nostop print pass
+			process handle SIGPIPE nostop print pass
+			process handle SIGALRM nostop print pass
+			process handle SIGTERM nostop print pass
+			process handle SIGUSR2 nostop print pass
+			process handle SIGVTALRM nostop print pass
+			run $port
+			bt
+			quit
+			y
+		DBG_INPUT
 		# #----------------------------------------
 
-		# run mud in the $usrdir
-		exec $prog_run $port
+		else
+		    # run mud in the $usrdir
+		    exec $prog_run $port
+		    exit
+		fi
 
 	) >> $logfile 2>&1 &
 

@@ -3,6 +3,26 @@
 *  Usage: Utility macros                                                  *
 ************************************************************************* */
 
+// Makefile MFLAGS moved here.
+
+#define RETURN_TO_QUIT
+#define MID_HELPER	"narai"
+
+#undef OLD_ZONE_SYSTEM
+
+#define REBOOT_TIME	(3*18400)
+
+#define TIME_ZONE	(9*3600)
+#define REBOOT_WHEN	(9*60-5)
+
+/*
+ All flags used in souce code.
+
+# MFLAGS: SYPARK RETURN_TO_QUIT INIT_BARE_HAND GHOST
+#         OldMobileFormat OLD_DAM_MESSAGE OLD_PARRY
+#         OLD_MIRROR_IMAGE OldMobAct
+*/
+
 // To avoid name conflict with built-in log(x) function
 #define log(s) mudlog(s)
 extern void log(char *str);
