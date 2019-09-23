@@ -1,14 +1,7 @@
-Narai Mud Legacy total merged BETA 2 version 
+Narai Mud Modern Legacy 2019 version RELEASE CANDIDATE
 
-**VERSION COMMITTED NOW is revised BETA-2 version
-Legacy 2003 + 2010 + Modern Legacy 2019**
-Moved config  parameters from "db.h" to "utils.h"
-Revised Makefile's for clang and BETA_TEST
-TIME_ADJUST is fixed as REBOOT_WHEN
-termios handling fixed for Linux
-Read port number from lib/PORT file
-Port killmud.sh for Linux ps
-runmud.sh goes background by itself
+**VERSION COMMITTED NOW is RELEASE CANDIDATE 1 **
+**Legacy 2003 + 2010 + Modern Legacy 2019**
+Released on 2019 09 23. as version 3.00 
 
 uploaded 2019.09.23 by Cookie
-

@@ -74,7 +74,7 @@ while expr $COUNT \< 100 > /dev/null
 do
 	export TIMESTAMP="`date +%y-%m-%d_%H-%M`"
 
-	if  [ -e BLOCK_MUD ] ; then break; fi
+	if  [ -e BLOCKMUD ] ; then break; fi
 	if  [ -e $pidfile ] ; then
 		echo Port $port lock file $pidfile already exists. >> $checkfile
 		exit 3
@@ -218,7 +218,7 @@ do
 	if [ -s $logfile ] ; then
 		tail -100 $logfile >> $logdir/CRASH-LOG
 
-		lastlog="$logdir/mud@$TIMESTAMP-$COUNT.log"
+		lastlog="$logdir/mud_$TIMESTAMP-$COUNT.log"
 		echo "Moving $logfile to $lastlog" >> $checkfile
 		/bin/mv -f $logfile $lastlog
 		rm -f $mudhome/$lastlink
@@ -231,7 +231,6 @@ do
 
 	if [ $runfail != 0 ] ; then exit $runfail; fi
 	if [ $mudexit != 0 ] ; then exit $mudexit; fi
-	if [ -f BLOCK_MUD ] ; then break; fi
 
 	#  Sleep > 60 secs before next run to wait port to be freed.
 	sleep 100

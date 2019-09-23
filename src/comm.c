@@ -568,7 +568,6 @@ void record_player_number()
   struct descriptor_data *d;
   int m=0,n=0;
   static int most=0;
-  static int hour;
   t=time(0)+32400;        /* 86400 is a day */
   tod = (t%3600);
 
@@ -576,6 +575,7 @@ void record_player_number()
 #define A_DAY		86400
 #define MINUTES(m)	(60*(m))
 
+  static int hour = -1;
   int th = (t%A_DAY)/MINUTES(60);
   if( tod < MINUTES(1) && hour != th){
     hour = th;

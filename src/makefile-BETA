@@ -18,8 +18,8 @@ CC      = cc
 MAKE    = make
 LD      = $(CC)
 
-# OFLAGS  = -O0 -g -Wall -pipe
-OFLAGS  = -O -g -Wall -pipe
+# OFLAGS  = -O -g -Wall -pipe
+OFLAGS  = -O0 -g -Wall -pipe
 
 INCLUDE = -I$(INCDIR)
 
@@ -33,7 +33,7 @@ INCLUDE = -I$(INCDIR)
 
 # Set initial gold and quest in "db.c"
 # DFLAGS= -DBETA_TEST
-DFLAGS=
+DFLAGS= -DBETA_TEST
 
 CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)
 

@@ -2859,6 +2859,8 @@ void init_char(struct char_data *ch)
 	if (top_of_p_table < 0) {
 		GET_EXP(ch) = 1;
 		GET_LEVEL(ch) = IMO + 3;
+		void set_title(struct char_data *ch); 
+		set_title(ch);
 	}
 	else
 		GET_LEVEL(ch) = 0;
@@ -2938,8 +2940,10 @@ void init_char(struct char_data *ch)
 
 	/* initial bonus */
 #ifdef BETA_TEST
-	ch->points.gold = 10000000000L;
-	ch->quest.solved = 100;
+	GET_GOLD(ch) = 10000000000L;
+	ch->quest.solved = 50;
+	ch->specials.damnodice = 10;
+	ch->specials.damsizedice = 10;
 #else
 	ch->points.gold = 1000;
 #endif
