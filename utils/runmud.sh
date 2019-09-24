@@ -16,6 +16,8 @@ fi
 PATH=/bin:/usr/bin/:/usr/local/bin:
 trap "" 1 2 3 13 14
 
+umask 0077
+
 port=5002	# $usrdir/PORT is primary
 
 # mud home and belows should be absolute path

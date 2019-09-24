@@ -12,13 +12,12 @@
 #include <ctype.h>
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <sys/wait.h>
+#include <sys/stat.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <string.h>
 #include <time.h>
-#include <sys/time.h>
 #include <fcntl.h>
 #include <signal.h>
 #include <setjmp.h>
@@ -175,6 +174,8 @@ int main(int argc, char **argv)
   	log("Port busy: pid file already exists.");
 	exit(port);
   }
+
+  umask(0077);
 
   sprintf(buf, "Running game on port %d.", port);
   log(buf);
@@ -623,8 +624,6 @@ void record_player_number()
 #ifdef REBOOT_WHEN
     static bool adjust = FALSE;
     if ( !adjust && reboot_time >= A_DAY*3 ) {
-	// reboot_time = (boottime+reboot_time+TIME_ZONE)/A_DAY*A_DAY
-	//   -boottime - TIME_ZONE + MINUTES(REBOOT_WHEN+5);
 	reboot_time += A_DAY - (boottime+reboot_time)%A_DAY - TIME_ZONE + MINUTES(REBOOT_WHEN-5);
 	adjust = TRUE;
     }

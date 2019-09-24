@@ -89,10 +89,10 @@ install : $(PROG_BIN) $(U_BINS)
 	/bin/cp -p $(PROG_BIN) $(INSTDIR)/$(PROG).new
 	/bin/cp -p $(U_BINS) $(INSTDIR)
 	/bin/cp -p $(SCRIPTS:%=$(UTLSRC)/%) $(INSTDIR)
-	/bin/chmod 755 $(SCRIPTS:%=$(INSTDIR)/%)
+	/bin/chmod 700 $(SCRIPTS:%=$(INSTDIR)/%)
 
 uninstall :
-	- /bin/rm -f $(INSTDIR)/$(PROG).run $(INSTDIR)/$(PROG).old
+	- /bin/rm -f $(INSTDIR)/$(PROG).new $(INSTDIR)/$(PROG).run $(INSTDIR)/$(PROG).old
 	- /bin/rm -f $(UTILS:%=$(INSTDIR)/%) $(SCRIPTS:%=$(INSTDIR)/%)
 
 ctags :
