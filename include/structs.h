@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 // Changed all bytes and short to int or unsigned
-typedef int sbyte;
+typedef short sbyte;
 typedef unsigned ubyte;
 typedef int sh_int;
 typedef unsigned ush_int;
 typedef char bool;
-typedef int byte;
+typedef unsigned short byte;
 
 typedef long long LONGLONG;
 
