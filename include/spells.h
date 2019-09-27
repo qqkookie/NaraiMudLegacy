@@ -3,8 +3,6 @@
 *  Usage : Spells                                                         *
 ************************************************************************* */
 
-#define MAX_BUF_LENGTH              240
-
 #define TYPE_UNDEFINED               -1
 #define SPELL_RESERVED_DBC            0  /* SKILL NUMBER ZERO */
 #define SPELL_ARMOR                   1

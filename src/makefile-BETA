@@ -12,7 +12,9 @@ VPATH   = .:$(INCDIR):$(UTLSRC):
 
 # CC      = clang
 # CC      = gcc
-CC      = cc
+# CC      = cc
+# CC      = clang-8
+CC      = gcc-9
 
 # MAKE    = gmake
 MAKE    = make

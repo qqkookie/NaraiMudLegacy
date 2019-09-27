@@ -412,8 +412,8 @@ void do_group(struct char_data *ch, char *argument, int cmd)
         sprintf(buf,"  [ %5d/%5d %5d/%5d %5d/%5d ]   $N (Head of group)",
          GET_HIT(k),GET_PLAYER_MAX_HIT(k),GET_MANA(k),
          GET_PLAYER_MAX_MANA(k),GET_MOVE(k),GET_PLAYER_MAX_MOVE(k) );
+        act(buf,FALSE,ch, 0, k, TO_CHAR);
       }
-      act(buf,FALSE,ch, 0, k, TO_CHAR);
 
       for(f=k->followers; f; f=f->next)
         if ( f->follower&&IS_AFFECTED(f->follower, AFF_GROUP)){

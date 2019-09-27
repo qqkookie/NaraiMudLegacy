@@ -1904,12 +1904,12 @@ void do_data(struct char_data *ch, char *argument, int cmd)
     k=9;
   else
     k=10;
-  if((k==1)||(k==3)||(k==8)){
+  if((k==1)||(k==3)||(k==7)||(k==8)){
     nc=3;
-    strcpy(fmt,"%-15s%10lld%s");
+    strcpy(fmt,"%-12s%13lld%s");
   } else {
     nc=4;
-    strcpy(fmt,"%-15s%4lld%s");
+    strcpy(fmt,"%-12s%6lld%s");
   }
   for (d = descriptor_list; d; d = d->next) {
     if (!d->connected && CAN_SEE(ch, d->character)) {

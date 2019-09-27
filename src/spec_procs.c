@@ -399,7 +399,7 @@ int snake(struct char_data *ch, int cmd, char *arg)
 
 void first_attack(struct char_data *ch, struct char_data *victim)
 {
-	char buf[80], sbuf[80];
+	char buf[80], sbuf[100];
 	int num;
 
 	sprintf(buf, "%s", GET_NAME(victim));

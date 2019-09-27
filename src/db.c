@@ -300,8 +300,6 @@ void reset_time(void)
   else weather_info.sky = SKY_CLOUDLESS;
 }
 
-#pragma GCC diagnostic ignored "-Wunused-result"
-
 /* generate index table for the player file */
 void build_player_index(void)
 {
@@ -3045,7 +3043,7 @@ int real_object(int virtual)
 }
 void move_stashfile(char *victim)	/* move file.x to file.x.y */
 {
-  char sf1[100],sf2[100],name[100];
+  char sf1[256],sf2[256],name[100];
   int i;
 
   strcpy(name,victim);
@@ -3060,12 +3058,12 @@ void move_stashfile(char *victim)	/* move file.x to file.x.y */
 void stash_char(struct char_data *ch)
 {
   struct obj_data *p;
-  char stashfile[100],name[100];
+  char stashfile[256],name[100];
   FILE *fl;
   int i;
   unsigned int mask;
   void stash_contents(FILE *fl, struct obj_data *p, int wear_flag);
-  char buf[256];
+  char buf[MAX_OUTPUT_LENGTH];
   
   mask = sigmask(SIGUSR1) | sigmask(SIGUSR2) | sigmask(SIGINT) |
     sigmask(SIGBUS ) | sigmask(SIGSEGV) |
@@ -3178,11 +3176,11 @@ void unstash_char(struct char_data *ch, char *filename)
 {
   void wipe_stash(char *filename);
   struct obj_data *obj;
-  char stashfile[100],name[100];
+  char stashfile[256],name[100];
   FILE *fl;
   int i, n, tmp[4];
   char	tmp_str[255],*str;
-  char buf[256];
+  char buf[MAX_OUTPUT_LENGTH];
   
   /* for Knife rent */
 #define MAX_RENT_ITEM 1000
@@ -3423,7 +3421,7 @@ void unstash_char(struct char_data *ch, char *filename)
 
 void wipe_stash(char *filename)		/* delete id.x and id.x.y */
 {
-  char stashfile[100],name[50];
+  char stashfile[256],name[50];
   int i;
   
   for(i=0;filename[i];++i)
@@ -3438,7 +3436,7 @@ void wipe_stash(char *filename)		/* delete id.x and id.x.y */
 
 void do_checkrent(struct char_data *ch,char *argument, int cmd)
 {
-  char stashfile[100],name[MAX_STRING_LENGTH],buf[MAX_STRING_LENGTH];
+  char stashfile[256],name[MAX_INPUT_LENGTH],buf[MAX_STRING_LENGTH];
   char str[255];
   FILE *fl;
   int i,j,n;
@@ -3478,7 +3476,7 @@ void do_checkrent(struct char_data *ch,char *argument, int cmd)
 }
 void do_extractrent(struct char_data *ch,char *argument, int cmd)
 {
-  char name[MAX_STRING_LENGTH],buf[MAX_STRING_LENGTH];
+  char name[MAX_INPUT_LENGTH],buf[MAX_OUTPUT_LENGTH];
 
   one_argument(argument,name);
   if(! *name)
@@ -3490,7 +3488,7 @@ void do_extractrent(struct char_data *ch,char *argument, int cmd)
 }
 void do_replacerent(struct char_data *ch,char *argument, int cmd)
 {
-  char name[MAX_STRING_LENGTH],buf[MAX_STRING_LENGTH];
+  char name[MAX_INPUT_LENGTH],buf[MAX_OUTPUT_LENGTH];
 
   one_argument(argument,name);
   if(! *name)

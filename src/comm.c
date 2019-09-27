@@ -18,6 +18,7 @@
 #include <netdb.h>
 #include <string.h>
 #include <time.h>
+#include <sys/time.h>
 #include <fcntl.h>
 #include <signal.h>
 #include <setjmp.h>
@@ -624,7 +625,7 @@ void record_player_number()
 #ifdef REBOOT_WHEN
     static bool adjust = FALSE;
     if ( !adjust && reboot_time >= A_DAY*3 ) {
-	reboot_time += A_DAY - (boottime+reboot_time)%A_DAY - TIME_ZONE + MINUTES(REBOOT_WHEN-5);
+	reboot_time += A_DAY - (boottime+reboot_time-1000)%A_DAY - 1000 - TIME_ZONE + MINUTES(REBOOT_WHEN);
 	adjust = TRUE;
     }
 #endif
@@ -1385,6 +1386,41 @@ void freaky(struct descriptor_data *d)
   log(buf);
 }
 
+#undef siginterrupt
+
+int siginterrupt(int sig, int flag)
+{
+    sigset_t __sigintr;
+    struct sigaction sa;
+
+    sigaction(sig, NULL, &sa);
+    sigemptyset(& __sigintr);
+    if (flag) {
+        sigaddset(&__sigintr, sig);
+        sa.sa_flags &= ~SA_RESTART;
+    } else {
+        sigdelset(&__sigintr, sig);
+        sa.sa_flags |= SA_RESTART;
+    }
+    return (sigaction(sig, &sa, NULL));
+}
+
+int sigsetmask(unsigned mask)
+{
+    sigset_t set;
+
+    if ( mask ) {
+	sigprocmask(SIG_SETMASK, NULL, &set);
+	for (int sig = 1; mask ; sig++, mask >>=1)
+	    if ( mask & 0x01 )
+		sigaddset(&set, sig);
+    }
+    else
+	sigemptyset(&set);
+
+    return sigprocmask(SIG_SETMASK, &set, NULL);
+}
+
 void signal_setup(void)
 {
   struct itimerval itime;
@@ -1436,10 +1472,12 @@ void hupsig(int sig)
   void saveallplayers();
   char s[MAX_STRING_LENGTH];
 
-  sprintf(s,"SIG: %d %s(%d) %s in %s(%d)",sig,GET_NAME(xo->character),
-    GET_LEVEL(xo->character), xo->host, world[xo->character->in_room].name,
-    xo->character->in_room) ;
-  log(s); 
+  if (xo && xo->character) {
+    sprintf(s,"SIG: %d %s(%d) %s in %s(%d)",sig,GET_NAME(xo->character),
+	GET_LEVEL(xo->character), xo->host, world[xo->character->in_room].name,
+	xo->character->in_room) ;
+    log(s); 
+  }
   saveallplayers();
   longjmp(env,-1);
 }

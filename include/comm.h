@@ -36,8 +36,7 @@ char baddomain[BADDOMS][32];
 
 // Kuldge to convert deprecated sigsetmask() call to sigprocmask() call
 
-#define __mask_mask mask
-#define __mask_0 __unmask
-extern sigset_t __unmask;
-#define sigsetmask(set) 	sigprocmask(SIG_SETMASK, (const sigset_t *) &(__mask_##set) , NULL)
+#define sigsetmask(m)	__mysigsetmask(m)
+
+int sigsetmask(unsigned mask);
 

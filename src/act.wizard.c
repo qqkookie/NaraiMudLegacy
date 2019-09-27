@@ -360,8 +360,8 @@ void do_stat(struct char_data *ch, char *argument, int cmd)
   extern char *spells[];
   struct affected_type *aff;
   char arg1[100];
-  char buf[1000];
-  char buf2[1000];
+  char buf[512];
+  char buf2[256];
   struct room_data *rm=0;
   struct char_data *k=0;
   struct obj_data  *j=0;
@@ -840,7 +840,7 @@ void do_force(struct char_data *ch, char *argument, int cmd)
 {
   struct descriptor_data *i;
   struct char_data *vict;
-  char name[100], to_force[100],buf[100]; 
+  char name[100], to_force[100],buf[200]; 
   int diff;
 
   if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO+3))
@@ -1883,8 +1883,8 @@ void do_sys(struct char_data *ch, char *argument, int cmd)
 
   getrusage(0,&xru);
   sprintf(buffer,
-    "sys time: %ld secs\n\rusr time: %ld secs\n\rrun time: %ld secs\n\r",
-    (long) xru.ru_stime.tv_sec,(long) xru.ru_utime.tv_sec, (long) (time(0)-boottime));
+    "sys time: %d secs\n\rusr time: %d secs\n\rrun time: %d secs\n\r",
+    (int) xru.ru_stime.tv_sec, (int) xru.ru_utime.tv_sec, (int) (time(0)-boottime));
   send_to_char(buffer,ch);
   if(GET_LEVEL(ch) >= (IMO+2)){
     nits=0;

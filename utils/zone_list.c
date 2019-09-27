@@ -15,7 +15,7 @@ int main(int argc,char *argv[])
 	FILE *fp;
 	char buf[81];
 	char zonename[81];
-	char zonefile[81];
+	char zonefile[100];
 	char chk,old_chk=0;
 	int flag,a1,a2,a3;
 	int a,b,c;

@@ -68,9 +68,9 @@ char buffer[MAX_STRING_LENGTH];
 
 void do_get(struct char_data *ch, char *argument, int cmd)
 {
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
-  char buffer[MAX_STRING_LENGTH];
+  char arg1[MAX_INPUT_LENGTH];
+  char arg2[MAX_INPUT_LENGTH];
+  char buffer[MAX_OUTPUT_LENGTH];
   struct obj_data *sub_object;
   struct obj_data *obj_object;
   struct obj_data *next_obj;
@@ -415,9 +415,9 @@ void do_drop(struct char_data *ch, char *argument, int cmd) {
 
 void do_put(struct char_data *ch, char *argument, int cmd)
 {
-  char buffer[MAX_STRING_LENGTH];
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
+  char buffer[MAX_OUTPUT_LENGTH];
+  char arg1[MAX_INPUT_LENGTH];
+  char arg2[MAX_INPUT_LENGTH];
   char *tmp;
   struct obj_data *obj_object;
   struct obj_data *sub_object;
@@ -637,9 +637,9 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 
 void do_reload(struct char_data *ch, char *argument, int cmd)
 {
-  char buffer[MAX_STRING_LENGTH];
-  char arg1[MAX_STRING_LENGTH];
-  char arg2[MAX_STRING_LENGTH];
+  char buffer[MAX_OUTPUT_LENGTH];
+  char arg1[MAX_INPUT_LENGTH];
+  char arg2[MAX_INPUT_LENGTH];
   struct obj_data *gun;
   struct obj_data *ammo;
   extern struct index_data *obj_index;

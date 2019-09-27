@@ -24,8 +24,9 @@ typedef long long LONGLONG;
 #define WAIT_SEC       4
 #define WAIT_ROUND     4
 
-#define MAX_STRING_LENGTH   3000
-#define MAX_INPUT_LENGTH      80
+#define MAX_STRING_LENGTH   2000
+#define MAX_OUTPUT_LENGTH    512
+#define MAX_INPUT_LENGTH     200
 #define MAX_MESSAGES          61
 #define MAX_ITEMS            153
 

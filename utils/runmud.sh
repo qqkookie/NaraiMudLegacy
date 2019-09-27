@@ -29,8 +29,6 @@ prog_new=$prog.new
 prog_run=$prog.run
 srcdir=$mudhome/src
 
-# GDB=/usr/local/bin/gdb
-
 # belows are relative to $mudhome
 mudlink=run-mud
 loglink=log-run
@@ -51,6 +49,11 @@ checkfile=$logdir/run-check
 
 datefmt="%Y-%m-%d %a %H:%M:%S %Z"
 
+# Set $DEBUGGER if you want post-mortem backtrace (Linux + gdb only)
+#
+# DEBUGGER="gdb -q -cd=$mudhome/$usrdir -d $srcdir $prog_run"
+# DEBUGGER=
+DEBUGGER="gdb -q -cd=$mudhome/$usrdir -d $srcdir $prog_run"
 #---------------------------------------------------------------
 
 cd $mudhome || exit 1
@@ -96,7 +99,7 @@ do
 		if [ -e stash.tar ] ; then
 			/bin/mv -f stash.tar stash.tar.old
 		fi
-		tar -cf stash.tar stash/*
+		tar -cf stash.tar players stash/*
 
 		if [ -f RUNME.sh ] ; then
 			echo "---------    Excute RUNME before reboot.... "
@@ -115,27 +118,31 @@ do
 		echo "************* NARAI-MUD BOOT --  Run No. $COUNT ****************"
 		echo ""
 
-		# #----------------------------------------
-		#
-		# $GDB -q -cd=$mudhome/$usrdir -d $srcdir $prog_run <<- GDB_INPUT
-		#
-		#	handle SIGHUP nostop print pass
-		#	handle SIGINT nostop print pass
-		#	y
-		#	handle SIGPIPE nostop print pass
-		#	handle SIGALRM nostop print pass
-		#	handle SIGTERM nostop print pass
-		#	handle SIGUSR2 nostop print pass
-		#	handle SIGVTALRM nostop print pass
-		#	run $port
-		#	bt
-		#	quit
-		#	y
-		# GDB_INPUT
-		# #----------------------------------------
-
-		# run mud in the $usrdir
-		exec $prog_run $port
+		if [ -n "$DEBUGGER" -a "`uname`" = "Linux" ] ; then
+			#----------------------------------------
+		
+			# lldb -f $prog_run <<- DBG_INPUT
+			$DEBUGGER <<- DBG_INPUT
+		
+			handle SIGHUP nostop print pass
+			# handle SIGINT nostop print pass
+			handle SIGPIPE nostop print pass
+			handle SIGALRM nostop print pass
+			# handle SIGTERM nostop print pass
+			handle SIGUSR2 nostop print pass
+			handle SIGVTALRM nostop print pass
+			run $port
+			backtrace
+			quit
+			y
+			DBG_INPUT
+			#----------------------------------------
+		
+		else
+			# run mud in the $usrdir
+			exec $prog_run $port
+			exit
+		fi
 
 	) >> $logfile 2>&1 &
 
@@ -181,6 +188,8 @@ do
 
 	(
 		echo "Mud: run finished. loop: $COUNT"
+		env LC_ALL=C date +"$datefmt" 
+
 		if [ -s $logfile -a -f $pidfile ] ; then
 			echo "Killed or crashed: log ==> "
 			echo "----------------------------------------"

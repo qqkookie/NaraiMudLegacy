@@ -140,8 +140,8 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
 void do_tell(struct char_data *ch, char *argument, int cmd)
 {
   struct char_data *vict;
-  char *s, name[100], message[MAX_STRING_LENGTH],
-  buf[MAX_STRING_LENGTH];
+  char *s, name[100], message[MAX_INPUT_LENGTH],
+  buf[MAX_OUTPUT_LENGTH];
 
   if(IS_SET(ch->specials.act,PLR_DUMB_BY_WIZ)&&GET_LEVEL(ch)<IMO+3)
   {
@@ -181,7 +181,7 @@ void do_reply(struct char_data *ch,char *argument,int cmd)
 void do_send(struct char_data *ch, char *argument, int cmd)
 {
   struct char_data *vict;
-  char *s, name[100], paint_name[100], message[200],
+  char *s, name[100], paint_name[300], message[200],
   buf[MAX_STRING_LENGTH], paint[MAX_STRING_LENGTH];
 
   if(IS_SET(ch->specials.act,PLR_DUMB_BY_WIZ)&&GET_LEVEL(ch)<IMO+3)
@@ -244,8 +244,8 @@ void do_gtell(struct char_data *ch, char *argument, int cmd)
 void do_whisper(struct char_data *ch, char *argument, int cmd)
 {
   struct char_data *vict;
-  char name[100], message[MAX_STRING_LENGTH],
-    buf[MAX_STRING_LENGTH];
+  char name[100], message[MAX_INPUT_LENGTH],
+    buf[MAX_OUTPUT_LENGTH];
 
   if(IS_SET(ch->specials.act,PLR_DUMB_BY_WIZ)&&GET_LEVEL(ch)<IMO+3)
   {
@@ -277,8 +277,8 @@ void do_whisper(struct char_data *ch, char *argument, int cmd)
 void do_ask(struct char_data *ch, char *argument, int cmd)
 {
   struct char_data *vict;
-  char name[100], message[MAX_STRING_LENGTH],
-    buf[MAX_STRING_LENGTH];
+  char name[100], message[MAX_INPUT_LENGTH],
+    buf[MAX_OUTPUT_LENGTH];
 
   if(IS_SET(ch->specials.act,PLR_DUMB_BY_WIZ)&&GET_LEVEL(ch)<IMO+3)
   {
@@ -324,7 +324,7 @@ void do_write(struct char_data *ch, char *argument, int cmd)
 {
     struct obj_data *paper = 0, *pen = 0;
     char papername[MAX_INPUT_LENGTH], penname[MAX_INPUT_LENGTH],
-	buf[MAX_STRING_LENGTH];
+	buf[MAX_OUTPUT_LENGTH];
 
 	if(IS_SET(ch->specials.act,PLR_DUMB_BY_WIZ)&&GET_LEVEL(ch)<IMO+3)
 	{

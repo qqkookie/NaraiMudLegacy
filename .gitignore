@@ -15,6 +15,7 @@
 *.core
 *.out
 *.tmp
+*.swp
 *.diff
 *.depend
 

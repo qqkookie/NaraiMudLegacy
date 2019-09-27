@@ -10,10 +10,12 @@
 
 #undef OLD_ZONE_SYSTEM
 
-#define REBOOT_TIME	(3*18400)
+#define REBOOT_TIME	(4*86400)
 
 #define TIME_ZONE	(9*3600)
 #define REBOOT_WHEN	(9*60-5)
+
+#pragma GCC diagnostic ignored "-Wunused-result"
 
 /*
  All flags used in souce code.

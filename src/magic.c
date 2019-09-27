@@ -705,7 +705,7 @@ void spell_identify(byte level, struct char_data *ch,
   struct char_data *victim, struct obj_data *obj)
 {
 	int ac_applicable(struct obj_data *obj_object) ;
-	char buf[256], buf2[256], bufh[256];
+	char buf[MAX_OUTPUT_LENGTH], buf2[256], bufh[MAX_OUTPUT_LENGTH];
 	int i;
 	bool found;
 

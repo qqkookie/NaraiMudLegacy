@@ -577,8 +577,8 @@ void add_follower(struct char_data *ch, struct char_data *leader)
 
 void say_spell( struct char_data *ch, int si )
 {
-  char buf[MAX_STRING_LENGTH], splwd[MAX_BUF_LENGTH];
-  char buf2[MAX_STRING_LENGTH];
+  char buf[100], splwd[256];
+  char buf2[MAX_OUTPUT_LENGTH];
   
   int j, offs;
   struct char_data *temp_char;
