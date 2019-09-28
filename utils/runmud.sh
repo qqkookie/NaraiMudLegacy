@@ -1,4 +1,6 @@
 #!/bin/sh
+# OR #!/home/mud/mud/bin/bash
+#
 #	Run MUD forever.
 #
 #	mudrun is script to run narai mud in contolled way.
@@ -49,7 +51,7 @@ checkfile=$logdir/run-check
 
 datefmt="%Y-%m-%d %a %H:%M:%S %Z"
 
-# Set $DEBUGGER if you want post-mortem backtrace (Linux + gdb only)
+# Set $DEBUGGER if you want post-mortem backtrace (BASH + gdb only)
 #
 # DEBUGGER="gdb -q -cd=$mudhome/$usrdir -d $srcdir $prog_run"
 # DEBUGGER=
@@ -118,11 +120,11 @@ do
 		echo "************* NARAI-MUD BOOT --  Run No. $COUNT ****************"
 		echo ""
 
-		if [ -n "$DEBUGGER" -a "`uname`" = "Linux" ] ; then
+		if [ -n "$DEBUGGER" ] ; then
 			#----------------------------------------
 		
 			# lldb -f $prog_run <<- DBG_INPUT
-			$DEBUGGER <<- DBG_INPUT
+			exec $DEBUGGER <<- DBG_INPUT
 		
 			handle SIGHUP nostop print pass
 			# handle SIGINT nostop print pass
@@ -136,6 +138,7 @@ do
 			quit
 			y
 			DBG_INPUT
+			exit
 			#----------------------------------------
 		
 		else

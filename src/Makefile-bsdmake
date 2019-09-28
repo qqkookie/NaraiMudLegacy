@@ -16,6 +16,7 @@ INSTDIR     := ../$(INSTDIR)
 
 .PATH : $(UTLSRC)
 
+# To use gdb, use gcc for Linux, cc (= clang) for FreeBSD
 # CC      = clang
 # CC      = gcc
 CC      = cc
