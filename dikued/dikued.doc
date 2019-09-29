@@ -1,0 +1,651 @@
+/*****************************************************************************
+*                                                                            *
+* Project : Diku-Mud-World-Creator (DikuEd)                                  *
+*                                                                            *
+* Program : Diku-Mud-Item-Editor (IEdit)                                     *
+* Version : 1.6                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Mobile-Editor (MEdit)                                   *
+* Version : 1.1                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Room-Editor (REdit)                                     *
+* Version : 1.1                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Zone-Editor (ZEdit)                                     *
+* Version : 1.0                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Style Command-Line Interface (DikuCli)                  *
+* Version : 1.0                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Style Simulator (DikuSim)                               *
+* Version : 1.0                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Code by: Georg Essl (essl@fstgds06.tu-graz.ac.at)                          *
+*     and: Kenneth Holmlund (holmlund@tp.umu.se)                             *
+*                                                                            *
+*****************************************************************************/
+
+
+                         DOCUMENTATION FOR -DIKUED-
+                         --------------------------
+        -DikuCli- & -DikuSim & -IEdit- & -MEdit- & -REdit- & -ZEdit-
+        ------------------------------------------------------------
+
+CONTENTS:
+
+1)      Preface
+
+2)      The Idea and concept
+
+3)      The DikuCli, IEdit, MEdit, REdit and ZEdit database
+3.1)     The ICONFIG.DEF
+3.2)     Textfile for IEDIT containing all object-types.
+3.3)     Textfile containing all wear-flags.
+3.4)     Textfile containing all extras-flags.
+3.5)     Textfile containing all liquid-types.
+3.6)     Textfile containing all container-types.
+3.7)     Textfile containing all AFF_* set via bitvector B.(VIEMUD)
+3.8)     Textfile containing all APPLY_* set via 'affected by' A.
+3.9)     Textfile containing special value[4] descriptions for types.
+3.10)    Textfile containing all spells and their information data.
+3.11)    Textfile containing all weapon-types.
+3.12)    Textfile for MEDIT containing all mobile-actions.
+3.13)    Textfile containing all classes.
+3.14)    Textfile containing all positions.
+3.15)    Textfile containing all sexes.
+3.16)	 Textfile for REDIT containing all door flags.
+3.17)    Textfile containing all room flags.
+3.18)    Textfile containing all section flags.
+3.19)    Textfile for ZEDIT containing all door states.
+3.20)    Textfile containing all reset-modes.
+3.21)    Textfile containing all wear-positions.
+
+4)      How to use...
+4.1)     The Diku-Cli
+4.2)     The IEdit
+4.2.1)    Modify an item
+4.2.2)    Clone an item
+4.2.3)    Delete an item
+4.3)     The MEdit
+4.4)     The REdit
+4.5)     The ZEdit
+4.6)     The DikuSim
+
+5)      Information for Coders
+
+6)      Bugs and Ideas
+
+7)      Notes
+
+
+_____________________________________________________________________________
+
+1) PREFACE:
+
+-Somehow I must be a Mudhead for spending my spare-time on building stuff for
+Muds, but I'm sure you, who reads this now, do have an even bigger Mudhead,
+than I have and do understand...-
+
+At this point I want to thank the beta-testers for their help, aspecially
+Krishna Simonse.
+
+I want to thank warmly Kenneth Holmlund for doing the REdit, which has been
+requested and wanted by so many DikuEd-Users, and for doing what DikuEd is
+meant for: Changing it for the Mud's special needs (here GrimneMud).
+
+Last not least I want to thank all the people who sent bug-reports and
+ideas so far.
+
+RELEASE NOTE: Release 3.0 Version 1.0 pl2
+
+This archive of DikuEd Release 3.0 V1.0 pl2 contains following files:
+
+  DIKUED.EXE    - MS-DOS executeable (Program) compiled for at least 80x86.
+
+  ICONFIG.DEF  - Textfile containing configurating information.
+
+  ITYPES.DEF   - Textfile for IEDIT containing all object-types.
+  IWEARS.DEF   - Textfile containing all wear-flags.
+  IEXTRAS.DEF  - Textfile containing all extras-flags.
+  ILIQUIDS.DEF - Textfile containing all liquid-types.
+  ICONTAIN.DEF - Textfile containing all container-types.
+  IPAFFECT.DEF - Textfile containing all AFF_* set via bitvector B.(VIEMUD)
+  IAPPLIES.DEF - Textfile containing all APPLY_* set via 'affected by' A.
+  ITVALS.DEF   - Textfile containing special value[4] descriptions for types.
+  ISPELLS.DEF  - Textfile containing all spells and their information data.
+  IWEAPONS.DEF - Textfile containing all weapon-types.
+  MACTIONS.DEF - Textfile for MEdit containing all mobile-actions.
+  MCLASS.DEF   - Textfile containing all classes.
+  MPOS.DEF     - Textfile containing all positions.
+  MSEX.DEF     - Textfile containing all sexes.
+  RDOORS.DEF   - Textfile for REdit containing all door flags.
+  RFLAGS.DEF   - Textfile containing all room flags.
+  RSECTS.DEF   - Textfile containing all section flags.
+  ZDOORS.DEF   - Textfile for ZEdit containing all door states.
+  ZRESETS.DEF  - Textfile containing all reset-modes.
+  ZWEARS.DEF   - Textfile containing all wear-positions.
+
+  DIKUCLI.HLP  - Help-File for the DikuCLI.
+
+  DIKUED.DOC   - This file...
+  COMPILE.DOC  - How to compile the thing.
+
+NOTE: The filenames of the Unix-Version are lowercase. The Unix-Version
+contains also a -MAKEFILE-.
+
+All this is NOT public domain, therefore you should please stick to the
+following rules:
+
+RULES:
+
+I declare this files to be freely distributeable, but you may not charge
+money for any parts of the archive, the sources or binaries, or the whole
+package, which includes the usual $5 charge for "sending the disk"
+or "just for the disk" etc.
+
+You may not give any parts of the sources or their compiled binaries/
+executeables to any person, only if it contains the information that
+this routines have been part of this release and have been created by me
+and you add this rules, then you may.
+
+The sources contain some routines from the original 'DikuMud' source.
+Therefore, for this parts, you also have to stick to the LICENSE.DOC as
+being part of the DikuMud-package.
+
+If you have any questions, send e-mail to: essl@fstgds06.tu-graz.ac.at
+
+_____________________________________________________________________________
+
+2) THE IDEA AND CONCEPT:
+
+The reason for me to start the DikuEd was, that i couldn't stand the classical
+way of creating items for Diku-Muds, having to look for the right values in
+the doc files to find the right Item-Type, to give it all necessary and
+wanted flags, to find  out, what a certain flag means when a type is used...
+The meaning of the values also changes from Diku to Diku, having eg different
+spells and types.
+So I tought of doing a Tool solving this problems... an Item-Editor (an
+Editor to modify a *.OBJ of the Diku-database...
+
+The basic concept idea is clear:
+1) The user should not need any knowledge of the values representing
+  nonnumerical settings of an Item.
+
+2) The editor should possibly work for all existing Diku-Muds, so the
+  database must be changeable.
+
+3) The editor is meant for off-line editing, so it should work on the machine
+  the builder uses at home (or in the university or whereever).
+
+To 1) DikuEd shows for ALL values being nonnumerical the verbose meaning
+  instead, and allows to select from these verboses.
+To 2) DikuEd has a external database allowing to modify its behavior for nearly
+  any Diku-Mud easily.
+To 3) DikuEd is coded in Ansi-C using only the standard libraries, so it
+  should run on any machine you find a Ansi-C compiler for.
+   (hmm... proof denied ;-) )
+
+_____________________________________________________________________________
+
+3) THE DIKUCLI ,IEDIT, MEDIT, REDIT AND ZEDIT DATABASE:
+
+The database of DikuCli ,IEdit, MEdit, REdit and ZEdit contains the following
+files:
+
+  iconfig.def  - Textfile containing configurating information.
+
+  itypes.def   - Textfile for IEDIT containing all object-types.
+  iwears.def   - Textfile containing all wear-flags.
+  iextras.def  - Textfile containing all extras-flags.
+  iliquids.def - Textfile containing all liquid-types.
+  icontain.def - Textfile containing all container-types.
+  ipaffect.def - Textfile containing all AFF_* set via bitvector B.(VIEMUD)
+  iapplies.def - Textfile containing all APPLY_* set via 'affected by' A.
+  itvals.def   - Textfile containing special value[4] descriptions for types.
+  ispells.def  - Textfile containing all spells and their information data.
+  iweapons.def - Textfile containing all weapon-types.
+
+  mactions.def - Textfile for MEdit containing all mobile-actions.
+  mclass.def   - Textfile containing all classes.
+  mpos.def     - Textfile containing all positions.
+  msex.def     - Textfile containing all sexes.
+  mhit.def     - Textfile containing all mob attack types.
+
+  rdoors.def   - Textfile for REdit containing all door flags.
+  rflags.def   - Textfile containing all room flags.
+  rsects.def   - Textfile containing all section flags.
+
+  zdoors.def   - Textfile for ZEdit containing all door states.
+  zresets.def  - Textfile containing all reset-modes.
+  zwears.def   - Textfile containing all wear-positions.
+
+  dikucli.hlp  - Help-File for the DikuCLI.
+
+
+
+3.1) THE ICONFIG.DEF:
+
+The iconfig.def - file gives the user the possibility to change some
+settings of the DikuCli ,the IEdit, MEdit, REdit and ZEdit.
+
+The format of the file is:
+
+%s %s
+
+eg.
+MudName XYZ-Mud
+
+Blank lines are ignored, as well as unknown keywords.
+
+Currently implemented keywords and their arguments are:
+
+MudName  <NameString>     - will be showed when starting the DikuEd.
+			    Default is none!
+
+ItemFile <[path]Filename> - sets the path and filename of the *.obj to edit.
+			    Default is: tobj.obj
+
+ItemTempFile <[path]Filename> - sets the path and name of the temp-file.
+				Default is: ietemp.obj
+
+MobileFile <[path]Filename> - sets the path and filename of the *.mob to edit.
+			    Default is: tmob.mob
+
+MobileTempFile <[path]Filename> - sets the path and name of the temp-file.
+				Default is: metemp.mob
+
+RoomFile <[path]Filename> - sets the path and filename of the *.wld to edit.
+			    Default is: twld.wld
+
+RoomTempFile <[path]Filename> - sets the path and name of the temp-file.
+				Default is: retemp.wld
+
+ZoneFile <[path]Filename> - sets the path and filename of the *.zon to edit.
+                            Default is: tzon.zon
+
+ZoneTempFile <[path]Filename> - sets the path and name of the temp-file.
+                                Default is: zetemp.zon
+
+DataBasePath <PrependString> - sets string to prepend on *.def files.
+			       Default is:
+
+AffBitVector <0|1> - sets or clears the usage of loading/saving the
+		     affect-bitvector. Default is: 0
+
+NOTE: The keywords are checked case-sensitive! The iconfig.def -file has
+to be in the current directory! If the configuration-file is not found,
+or a specific setting is not done within it, the default-values will be used.
+
+
+3.2) TEXTFILE CONTAINING ALL OBJECT-TYPES:
+
+The file contains the strings describing the object types as given in
+"structs.h" as ITEM_XXX.
+
+The format is:
+
+%d
+%s~
+%s~
+.
+.
+.
+
+eg.
+
+2
+None~
+Light~
+
+The integer value is the amount of entries, the first entry must be fiven and
+is an invalid type (obj->obj_flags.type_flag == 0).
+
+
+3.3) TEXTFILE CONTAINING ALL WEAR-FLAGS:
+
+The file contains the strings describing the wear types as given in
+"structs.h" as ITEM_XXX.
+
+The format is similar to the one described in 3.2).
+
+
+3.4) TEXTFILE CONTAINING ALL EXTRAS-FLAGS:
+
+The file contains the strings describing the extra types as given in
+"structs.h" as ITEM_XXX.
+
+The format is similar to the one described in 3.2).
+
+
+3.5) TEXTFILE CONTAINING ALL LIQUID-TYPES:
+
+The file contains the strings describing the liquid types as given in
+"structs.h" as LIQ_XXX.
+
+The format is similar to the one described in 3.2).
+
+
+3.6) TEXTFILE CONTAINING ALL CONTAINER-TYPES:
+
+The file contains the strings describing the container types as given in
+"structs.h" as CONT_XXX.
+
+The format is similar to the one described in 3.2).
+
+
+3.7) TEXTFILE CONTAINING ALL AFF_XXX SET VIA BITVECTOR B.(VIEMUD):
+
+The file contains the strings describing the affect_player flags as given in
+"structs.h" as AFF_XXX.
+
+The format is similar to the one described in 3.2).
+
+
+3.8) TEXTFILE CONTAINING ALL APPLY_XXX SET VIA 'AFFECTED BY' A:
+
+The file contains the strings describing the affected_by types as given in
+"structs.h" as APPLY_XXX.
+
+The format is similar to the one described in 3.2).
+
+
+3.9) TEXTFILE CONTAINING SPECIAL VALUE[4] DESCRIPTIONS FOR TYPES:
+
+The file contains information about the value[4]s.
+
+The format is:
+
+%d %d %d
+%s~
+.
+.
+.
+-1
+
+eg
+
+2 0 0
+Level of the spells:~
+-1
+
+The string %s~ describes the use of a value[].
+The first integer is the type the entry is refering to, the second is the
+value[].
+The third integer is if equal:
+
+0 - value[] is a value for the user.
+1 - value[] is a spell-type (read also 3.10)
+2 - value[] is a weapon-type (read also 3.11)
+3 - value[] is a liquid-type (read also 3.5)
+
+all others are not supported at the moment.
+
+
+
+3.10) TEXTFILE CONTAINING ALL SPELLS AND THEIR INFORMATION DATA:
+
+The file contains information about the spells and their use.
+
+The format is:
+
+%d %d %d %d %d %d
+%s~
+.
+.
+.
+
+eg
+
+-1 1 1 1 1 0
+No Spell~
+1 1 1 1 0 1
+Armor~
+
+The string %s~ is the name of the spell. The first integer must be the same
+as the refered spellnumber for value[]. The 2nd to 5th integer defines if
+the spell may be used for potion, scroll wand or staff (1=Yes / 0=No).
+The 6th integer gives the minimum level of the spell.
+
+
+3.11) TEXTFILE CONTAINING ALL WEAPON-TYPES:
+
+The file contains all valid weapon-types.
+
+The format is:
+
+%d
+%s~
+.
+.
+.
+-1
+
+eg
+
+2
+Slash ("whips")~
+3
+Slash ("slashes")~
+6
+Bludgeon ("crushes")~
+7
+Bludgeon ("pounds")~
+11
+Pierce ("pierces")~
+-1
+
+The integer gives the corresponding value[] integer of the weapon-type
+described by the string %s~.
+
+
+3.12) TEXTFILE FOR MEDIT CONTAINING ALL MOBILE-ACTIONS:
+
+The file contains the strings describing the mobile-actions as given in
+"structs.h".
+
+The format is similar to the one described in 3.2).
+
+
+3.13) TEXTFILE CONTAINSING ALL CLASSES:
+
+The file contains the strings describing the classes as given in
+"structs.h".
+
+The format is similar to the one described in 3.2).
+
+
+3.14) TEXTFILE CONTAINING ALL POSITIONS:
+
+The file contains the strings describing the positions as given in
+"structs.h".
+
+The format is similar to the one described in 3.2).
+
+
+3.15) TEXTFILE CONTAINING ALL SEXES:
+
+The file contains the strings describing the sexes as given in
+"structs.h".
+
+The format is similar to the one described in 3.2).
+
+3.17) TEXTFILE FOR REDIT CONTAINING ALL THE DOOR FLAGS: rdoors.def
+
+If the door is closed, locked, pick proof, etc etc etc..
+The format is similar to the one described in 3.2).
+
+3.17) TEXTFILE CONTAINING ALL THE ROOM FLAGS: rflags.def
+
+If the room is private, not for mobs, no magic, etc etc
+The format is similar to the one described in 3.2).
+
+3.18) TEXTFILE CONTAINING ALL THE SECTION FLAGS: rsects.def
+
+What kind of sector you are walking in. Rules whether you
+need a boat or have to swim, or how many moves it costs you
+to walk, etc..
+The format is similar to the one described in 3.2).
+
+3.19) TEXTFILE FOR ZEDIT CONTAINING ALL DOOR STATES.
+
+The file contains the strings descringing the door-states as
+used in the zone-file *.zon.
+
+The format is similar to the one described in 3.2).
+
+3.20) TEXTFILE CONTAINING ALL RESET-MODES.
+
+The file contains the strings describing the reset-modes as
+used in the zone-file *.zon.
+
+The format is similar to the one described in 3.2).
+
+3.21) TEXTFILE CONTAINING ALL WEAR-POSITIONS.
+
+The file contains the strings describing the wear-positions as
+used in the zone-file *.zon.
+
+_____________________________________________________________________________
+
+4) HOW TO USE...
+
+... this program? Well, if you haven't got a compiled version until now, maybe
+you should read the -compile.doc- file first. Otherwise read 4.1)
+
+4.1) THE DIKU-CLI
+
+DikuCli stands for: Diku - CommandLine Interpreter. It is the cover for
+the editor(s)... (IEdit, MEdit, REdit and Zone-compiler).
+The behavior of DikuCli is quite similar to the original Diku-Command-
+Interpreter. So I think the best would be to check out by trying...
+DikuCli offers (short!) online help for all available commands.
+Some commands do support wildcarded arguments like the following:
+
+The command IFIND:
+
+*** Syntax: IFIND SearchPattern
+
+IFIND searches for all items in the database which names (obj->name) fit the
+wildcard-pattern.
+
+WILDCARDS:
+  * .... Representing any amount of chars including zero.
+  ? .... Representing exactly one char.
+  [AB].. Compare with A and B for match
+  ! .... Next char is NOT a Wildcard.
+
+so eg:
+
+> ifind ?ag*
+
+might give as result:
+
+Obj-Nr  Name
+-----------------
+[3333] Dagger
+[4444] Lag-Creator
+[5555] Dagger Rusty
+
+
+
+4.2) THE IEDIT
+
+The IEdit is a integrated editor in the DikuCli. IEdit stands for Item-Editor.
+It gives you all possibilities to modify, clone or delete an item.
+
+4.2.1) MODIFY AN ITEM
+
+You can modify the various parameters of an item by invoking the IEdit
+(DikuCli-command: IEDIT WhichItem) and then follow the instructions given and
+enter what wanted...
+The only parameter, which has a non-modifying effect is the editing of the
+Item-Number...(see: 4.2.2)
+
+4.2.2) CLONE AN ITEM
+
+If you change the number of the item in IEdit you will CLONE the current item
+to a new item with this number.
+
+4.2.3) DELETE AN ITEM
+
+To delete an item invoke the IEdit and press Y for delete and tell the IEdit
+that you know what you're doing. (by hitting Y again, when being asked if ok.)
+Another possibility is to use the IPURGE command of the DikuCli.
+*** WARNING: Once deleted items CAN'T be restored!! .. so take care what you
+delete!
+
+4.3) THE MEDIT
+
+The MEdit is a integrated editor in the DikuCli. MEdit stands for Mobile-
+Editor. It gives you all possibilities to modify, clone or delete an mobiles.
+
+Its behavior is quite similar to the one of IEdit, so read section 4.2).
+
+
+4.4) THE REDIT
+
+The REdit is a integrated editor in the DikuCli. REdit stands for Room-
+Editor. It gives you all possibilities to modify, clone or delete a Room.
+
+Its behavior is quite similar to the one of IEdit, so read section 4.2).
+
+4.5) THE ZEDIT
+
+The ZEdit is a integrated editor in the DikuCli. ZEdit stands for Zone-
+Editor. It gives you all possibilities to modify, clone and delete a Zone.
+
+It works together with the DikuSim.
+
+4.6) THE DIKUSIM
+
+The DikuSim is a simulator using DikuCli. DikuSim stands for Diku-Simulator.
+It give you possibilities to simulate various commands of the DikuMud,
+which are mostly used to support the ZEdit. (eg. loading mobiles and items
+into rooms...)
+
+
+_____________________________________________________________________________
+
+5) INFORMATION FOR CODERS
+
+I'm quite sure, that the source-code of DikuEd won't win a beauty-contest,
+but that was not my main-aim. The program also does not require to be
+extremely fast or sofisticated, so when you have complains about the source
+think about these two points.
+
+You may recode DikuEd for your personal use, but please do not spread around
+patches or changed versions. If you want to have one of your changes available
+to all DikuEd-users, please send me the source-parts and descriptions via
+e-mail. If I include your routines, you certainly will get a notice in the
+credits.
+
+I'm very interested in you to help expanding the DikuEd-project, so don't
+hesitate to write, if you got ideas. I'm specially interested, if someone
+tries to modify it for online-editing!
+
+If you have any question around the code, don't hesitate too.
+
+_____________________________________________________________________________
+
+6) BUGS AND IDEAS
+
+If you have ideas around this program, or against all odds (well... ;-))
+find a bug, please send me a report via e-mail (essl@fstgds06.tu-graz.ac.at)
+and please include the versions of the parts of the copy you use (available
+via the version-cmd of DikuCli.)
+
+_____________________________________________________________________________
+
+7) NOTES
+
+The timer field is not supported by the original *.obj format of DikuMud, but
+I included the editing of it for later extensions.
+
+The MEdit uses the definitions of the AFF_* for IEDIT in IPAFFECT.DEF!
+

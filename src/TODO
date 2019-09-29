@@ -1,0 +1,86 @@
+-*- mode: outline -*-
+
+by Jaemok Jeong (1999)
+
+* 구상 
+
+** immnue type 속성 - physical, magical immnue
+   damage의 20-30%정도를 막아주는 효과
+** rent fee를 시간에 비례해서 받도록 수정
+** 방 속성 중에  recall을 방지하는 방을 두도록(Hell?)
+** 방 속성에 대한 정리
+** Rome, hell zone에 대한 정리
+** Rome zone의 안 쓰는 상점 정리
+
+** AWARE라는 spell or mob 특성 부가 
+   backstab을 할 수 없도록.  aware가 있는 mob에 대해 backstab을 하는 경우
+   자동으로  싸움이 되도록 설정
+** Protect from evil 의 현실화
+   안 쓰는 spell
+** 안 쓰는 mob flag, room flag를 없애고 다른 flag 도입
+
+** musashi sword가 mana를 사용하도록.
+** chamber에 대한 수정.. - 넣는게 꽉찰때가 있다. weight 초기화
+
+** mob에 대한 tell
+** 상점 주인들 tell명령으로 이야기하는 것 수정.
+** spell 명령에서 나오는 것 sort
+
+** 명령어 정리
+
+* 구상
+
+** order delay.. 
+
+** level gate통과할수 있는 stone이나 symbol
+** flee할때 경험치 깍아주는걸 막는.. 
+** magic의 성공률 높여주는..(saving spell에 적용되도록)
+** rent하고 retrive할때 옷 입혀주게 하는.. item
+
+* 수정된 일
+** rent 하고 retrieve할 때 옷 입은 상태 유지 (o)
+** Paralysys spell (o)
+   mage 25 정도, wimpy 맙의 경우 도망가지 못하도록. 
+   spell이나 scroll의 경우도 쓰지 못하도록(?)
+   맙도 고 레벨의 mob인 경우에는 가끔 쓰도록 하면...
+** Detect evil spell 대신 detect align spell로
+   각 mob의 align을 색으로 보여주게.. good인 경우에는 blue, evil인 경우에는
+   red .. (o)
+** 아교풀. 깨진 item 복구해주는.. (o)
+** dark seraphim..(magic 쓰는 player의 mana를 1/4씩 깍게 하고.. rescue, helper
+   들고 나오는 item은 key type weapon.. 35d1정도..?
+   무기는 싸울때 자동으로 만들어지도록..)
+** fortune cookie의 내용을 player가 추가할 수 있도록
+** warrior의 multikick delay 줄이도록.. balancing고려해서.
+   대신 move와 mana를 동시에 사용하도록 수정 
+** warrror berserk.. 기능..~ .. (o)
+   hr감소, 총 damage 60%가량 증가, flee안되게 
+** damage stat 출력하는..
+   Magic과 breath에 대해서 magic damage를 출력하도록 수정 .. (o)
+** Robot chamie, recall도 가능하게 .. (o) 
+   Level 35이상, evil만 쓸 수 있도록 
+** 1 mega당 dr, hr 1씩 증가하도록.. 단 temporary하게만 작용하도록..
+   -> hr에 대해서만 4까지 살 수 있도록 수정.. (o)
+** all heal staff.. -> all heal scroll로 해결 1.2M
+** board member가 돈을 너무 많이 가지고 나온다.  (o)
+** mob, 명령 앞에꺼만 쳐도 인식하게.. (o) 
+	--> wizard모드에서 transfer가 이상하게 동작하는 듯
+** Levelup, death 시 다른 사람들에게도 알려주도록.. (o)
+** group play시 gold를 autosplit하도록.. (o)
+** tick size 관련 수정.. (o)
+** sundew수정... (o)
+** auto-reboot.. (o)
+** 전투시에 마법 target 따로 지정 안하면 싸우고 있는 mob으로 동작하도록.(o)
+** auto-backup.. (o)
+** 고물상 추가.. (o)
+** 네버 랜드 regen되도록 수정.. (o)
+** identify 할 때 victim의 stat도 표시.. (o)
+** flee할때 level이 20이상이고 Exp가 1M 이하일때 1/50확률로 hit, move, mana깍게(o)
+** 고물상 일정한도 이상의 item은 안 받도록..(o)
+** 고물상에 대한 search 기능 제공..(o)
+** 고물상 identify 하는 기능
+** rem all 명령어
+** crush armor, blindness하고 나갔다 들어오면 ac 낮아지는 것 수정
+** 여의주 마나 사용량 반으로..
+   청룡.. mage의 마법사용을 막을 방법을 고려..
+** 고물상 decay(10일정도) 지난 item은 제거.. 깔끔하게 하기 위해.. (LRU)

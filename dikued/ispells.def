@@ -1,0 +1,156 @@
+-1 1 1 1 1 1
+No Spell~
+1 1 1 1 0 1
+Armor~
+2 1 1 1 1 1
+Teleport~
+3 1 1 1 0 1
+Bless~
+4 1 1 1 1 1
+Blindness~
+5 0 1 0 0 5
+Burning Hands~
+6 1 1 0 1 12
+Call Lightning~
+7 0 1 1 0 1
+Charm Person~
+8 0 0 0 0 3
+Chill Touch~
+9 0 0 0 0 1
+Reanimate~
+10 0 0 0 0 11
+Color Spray~
+11 0 0 0 0 1
+Relocate~
+12 0 1 0 0 1
+Create Food~
+13 0 0 0 0 1
+Create Water~
+14 1 0 0 1 1
+Cure Blind~
+15 1 0 1 1 1
+Cure Critic~
+16 1 0 0 1 1
+Cure Light~
+17 1 1 0 1 1
+Curse~
+18 1 0 0 1 1
+Detect Evil~
+19 1 0 0 1 1
+Detect Invisible~
+20 0 1 0 0 1
+Recharger~
+21 0 1 0 0 1
+Preach~
+22 1 1 1 1 11
+Dispel Evil~
+23 0 1 0 1 7
+Earthquake~
+24 0 1 0 0 1
+Enchant Weapon~
+25 1 1 1 1 13
+Energy Drain~
+26 0 1 1 0 15
+Fireball~
+27 1 0 0 1 15
+Harm~
+28 1 0 0 1 1
+Heal~
+29 1 1 1 1 1
+Invisible~
+30 0 1 1 0 9
+Lightning Bolt~
+31 0 0 0 0 1
+Locate Object~
+32 0 1 1 0 1
+Magic Missile~
+33 1 0 0 1 1
+Poison~
+34 1 1 0 1 1
+Protect from Evil~
+35 1 1 0 1 1
+Remove Curse~
+36 1 1 0 1 1
+Sanctuary~
+37 0 0 0 0 7
+Shocking Grasp~
+38 1 1 1 1 1
+Sleep~
+39 1 1 0 1 1
+Strength~
+41 0 0 0 0 1
+Summon~
+41 0 0 0 0 1
+Ventriloquate~
+42 1 1 1 1 1
+Word of Recall~
+43 1 0 0 1 1
+Remove Poison~
+44 1 0 0 1 1
+Sence Life~
+45 0 0 0 0 1
+Sunburst~
+46 0 0 0 0 1
+Clone~
+53 0 1 0 0 1
+Identify~
+71 1 0 0 0 1
+Damge up~
+72 0 0 0 0 1
+Energy Flow~
+73 0 0 0 1 1
+Mana boost~
+74 0 0 1 0 1
+Vitalize~
+75 0 0 0 0 1
+Full Fire~
+76 0 0 0 0 1
+Throw~
+77 0 1 0 1 1
+Fire Storm~
+78 0 0 0 0 1
+Crush Armor~
+79 1 0 0 1 1
+Full Heal~
+80 0 0 0 0 1
+Trick~
+81 1 1 0 1 1
+Haste~
+82 1 1 0 1 1
+Improved Haste~
+83 0 0 0 0 1
+Far Look~
+84 0 0 1 1 1
+All Heal~
+90 0 1 0 0 1
+Enchant Armor~
+91 0 1 0 0 1
+Pray for Armor~
+92 1 1 0 1 1
+Infravision~
+93 0 0 0 0 1
+Create Nectar~
+94 0 0 0 0 1
+Create Golden Nectar~
+95 0 1 1 0 1
+Corn of Ice~
+96 0 0 0 0 1
+Disintegrate~
+97 0 0 0 0 1
+Phase~
+98 1 1 0 1 1
+Mirror Image~
+99 0 1 0 1 1
+Hand of God~
+100 1 0 0 1 1
+Cause Light~
+101 1 0 1 1 1
+Cause Critic~
+102 0 0 0 0 1
+Control Weather~
+103 0 1 0 1 1
+Group Sancuary~
+104 1 1 1 1 1
+Paralysis~
+105 1 1 1 1 1
+Cure Paralysis~

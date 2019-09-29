@@ -1,0 +1,15 @@
+MudName      CoconutMUD
+
+ItemFile     tinyworld.obj
+ItemTempFile tinyworld-temp.obj
+
+MobileFile     tinyworld.mob
+MobileTempFile tinyworld-temp.mob
+
+RoomFile      tinyworld.wld
+RoomTempFile  tinyworld-temp.wld
+
+ZoneFile      tinyworld.zon
+ZoneTempFile  tinyworld-temp.zon
+
+AffBitVector 1

@@ -1,0 +1,12 @@
+* 수정된 점(by jmjeong)
+
+- autoexit 표시하도록
+- find, list, show 명령의 버그 수정
+- 각종 flag를 kit용으로 맞도록 porting
+- .mob, .obj 파일의 flag system 도입
+- iweapon.def 파일이 kit용으로 수정(kit source 수정해서 새로운 무기 Type
+  도입 가능하도록)
+
+- redit 명령 수정
+  redit만 치게 되면 현재 방을 update하도록 
+  기존의 help가 나오게 하기 위해서는 'redit -' 를 치면 됨

@@ -1,7 +1,30 @@
-Narai Mud Modern Legacy 2019 version RELEASE 
+Coconut Mud 2002 (UTF-8 conversion)
 
-**VERSION COMMITTED NOW is Legacy 2019 FINAL RELEASE **
-**Legacy 2003 + 2010 + Modern Legacy 2019**
-Released on 2019 09 29. as version 3.00 
+**VERSION COMMITTED NOW is COCONUT 2002 **
 
 uploaded 2019.09.29 by Cookie
+
+------------------------------------------
+Following files are manually converted
+
+iconv: lib/tinyworld.wld:38358:25: cannot convert
+ICONV FAIL: lib/tinyworld.wld
+
+iconv: src/spec_procs6.c:233:73: cannot convert
+ICONV FAIL: src/spec_procs6.c
+
+iconv: utils/mob_check2:1:4: cannot convert
+ICONV FAIL: utils/mob_check2
+
+iconv: utils/players.tr:1:4: cannot convert
+ICONV FAIL: utils/players.tr
+
+iconv: lib/boards/3070board:1:39: cannot convert
+ICONV FAIL: lib/boards/3070board
+
+iconv: lib/mboxes/3071mbox:7:6: cannot convert
+ICONV FAIL: lib/mboxes/3071mbox
+
+iconv: lib/tinyworld.new/tinyworld.wld:38358:25: cannot convert
+ICONV FAIL: lib/tinyworld.new/tinyworld.wld
+

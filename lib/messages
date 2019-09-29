@@ -364,15 +364,15 @@ $n tries to breath lightning upon you.~
 $n tries to breath lightning upon $N.~
 M
  58
-$N makes a strange sound but is suddenly very silent, as you place $w in $S back~
+$N makes a strange sound but is suddenly very silent, as you place $p in $S back~
 Suddenly $n stabs you in the back, RIP...~
-$n place $w in the back of $N, resulting in some strange noises, a lot of blood and a corpse~
+$n place $p in the back of $N, resulting in some strange noises, a lot of blood and a corpse~
 $N quickly avoids your backstab, and you nearly cuts your finger~
 $n tried to backstab you, but you avoid $s~
 $n tried to backstab $N, but nearly cut $s own finger~
-$N makes a strange sound, as you place $w in $S back~
+$N makes a strange sound, as you place $p in $S back~
 Suddenly $n stabs you in the back~
-$n place $w in the back of $N, resulting in some strange noises and some blood~
+$n place $p in the back of $N, resulting in some strange noises and some blood~
 $N sends you a look, that makes you forget all about backstabbing~
 $n tries to backstab you, but changes $s mind~
 $n tries to backstab $N, but changes $s mind~
@@ -418,32 +418,4 @@ $N looks really sick, and shiver uncomfortably.~
 Suffer god Char..~
 Suffer god victim..~
 Suffer god room..~
-M
- 109
-$N sends BIG POWERFUL punch WARURURURURURU!!!!!!!!!~
-Suddenly $n sends you BIG PUNCH...~
-$n send $N BIG PUNCH, resulting in GREAT NOISE~
-$N quickly avoids your BIG PUNCH and you nearly lose your balance~
-$n tried to PUNCH you, but you avoid $n~
-$n tried to PUNCH $N, but nearly lose $s own balance~
-$N SEND BIG POWERFUL PUNCH!!!!!!!!!!!!!!!!!!!~
-Suddenly $n sends you BIG PUNCH~
-$n sends BIG POWERFUL PUNCH $N WARURURURURURU!!!!!!!!!!!!!!~
-$N sends you a look, that makes you forget all about punch~
-$n tries to punch you, but changes $s mind~
-$n tries to punch $N, but changes $s mind~
-M
- 96
-You disintegrate $S body with full power, causing an immediate death~
-Your body is disintegrated by $n... you will scatter~
-$n disintegrates $S body with full power, so $N disappears!~
-Your disintegration power is grazed $S body, $N comforts~
-You are safe, $n misses $s disintegration!!!~
-$n tries to disintegrates $N, but $s fails~
-You make a soft wind, and it disintegrates $S body~
-You feel a soft wind, but it makes your body dispersed~
-You feel a soft wind, and it makes $N's body dispersed~
-You make a soft wind, but it can't affect on $S~
-$n makes a soft wind, but it can't approach you~
-$n's disintegration power is tactfully ignored by natural power~
 $~

@@ -1,3 +1,18 @@
+9 0 0
+Isn't there someone you want to kiss?
+#
+You kiss $M.
+$n kisses $N.
+$n kisses you.
+Never around when required.
+All the lonely people :(
+#
+
+22 0 0
+BOIINNNNNNGG!
+$n bounces around.
+#
+
 23 1 0
 You smile happily.
 $n smiles happily.
@@ -19,14 +34,9 @@ Eh, WHO?
 You skip and dance around by yourself.
 $n skips a light Fandango.
 
-25 0 0
-Isn't there someone you want to kiss?
-#
-You kiss $M.
-$n kisses $N.
-$n kisses you.
-Never around when required.
-All the lonely people :(
+26 0 0
+You cackle gleefully.
+$n throws back $s head and cackles with insane glee!
 #
 
 27 0 0
@@ -58,6 +68,11 @@ $n pukes on your clothes!
 Once again?
 You puke on yourself.
 $n pukes on $s clothes.
+
+31 0 0
+Grrrrrrrrrr...
+$n growls.
+#
 
 32 0 0
 ARRRRRRRRRRGH!!!!!
@@ -205,8 +220,8 @@ $n burps loudly.
 #
 
 107 0 0
-You cackle gleefully.
-$n throws back $s head and cackles with insane glee!
+You chuckle politely.
+$n chuckles politely.
 #
 
 108 0 0
@@ -227,6 +242,11 @@ $n curtseys gracefully.
 111 0 0
 Where are your manners ?
 $n lets off a real rip-roarer!
+#
+
+112 0 0
+You flip head over heels.
+$n flips head over heels.
 #
 
 113 0 5
@@ -484,16 +504,6 @@ You stand with the snowball in your hand because your victim is not here.
 You conjure a snowball from the thin air and throw it at yourself.
 $n conjures a snowball out of the thin air and throws it at $mself.
 
-151 0 0
-You flip head over heels.
-$n flips head over heels.
-#
-
-154 0 0
-BOIINNNNNNGG!
-$n bounces around.
-#
-
 160 0 0
 Kiss whom ??
 #
@@ -676,56 +686,12 @@ You kiss the feet of $M.
 $n kisses the feet of $N.
 $n kisses your feet.  Yuck?
 Worship who?
+A bit self-centered aren't we?
 $n is trying to worship $mself.
-#
 
 198 1 0
 You yodel from the mountain tops.
-$n yodels: YODELAAAHEEEEHOOOOOOOO!  Charge, protect the innocent.
+$n yodels: YODELAAAHEEEEHOOOOOOOO!  Protect the innocent.
 #
 
-202 0 0
-Grrrrrrrrrr...
-$n growls.
-#
-
-226 0 0
-You chuckle politely.
-$n chuckles politely.
-#
-
-255 0 0
-You say 'HAHAHA!!!'.
-$n says, 'HAHAHA!!!'.
-#
-
-256 0 0
-You say 'jjup...'.
-$n says, 'jjup...'.
-#
-
-257 0 0
-You wow it at all.
-$n wows.
-#
-
-258 0 0
-You say 'good-bye'.
-$n says, 'good-bye~~'.
-#
-
-259 0 0
-You say 'hee-hee-hee.'
-$n says 'hee-hee-hee.'
-#
-
-260 0 0
-You say 'I will be right back.'
-$n says 'I will be right back.'
-#
-
-261 0 0
-You say hmm...
-$n hmms.
-#
 -1

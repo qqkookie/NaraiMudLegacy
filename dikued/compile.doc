@@ -1,0 +1,183 @@
+/*****************************************************************************
+*                                                                            *
+* Project : Diku-Mud-World-Creator (DikuEd)                                  *
+*                                                                            *
+* Program : Diku-Mud-Item-Editor (IEdit)                                     *
+* Version : 1.6                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Mobile-Editor (MEdit)                                   *
+* Version : 1.1                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Room-Editor (REdit)                                     *
+* Version : 1.1                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Zone-Editor (ZEdit)                                     *
+* Version : 1.0                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Style Command-Line Interface (DikuCli)                  *
+* Version : 1.0                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Program : Diku-Mud-Style Simulator (DikuSim)                               *
+* Version : 1.0                                                              *
+* Last changed on: 07.8.93                                                   *
+*                                                                            *
+* Code by: Georg Essl (essl@fstgds06.tu-graz.ac.at)                          *
+*     and: Kenneth Holmlund (holmlund@tp.umu.se)                             *
+*                                                                            *
+*****************************************************************************/
+
+
+			 HOW TO COMPILE -DikuEd-
+			 -----------------------
+
+
+1) IN GENERAL:
+
+As a part of the concept, the DikuEd should run on any machine you find a
+ANSI-C compiler for, but due to the different options and surroundings of
+the various compilers on different machines, I can only give general
+information to help you compile it. At the end I will show how the general
+information can be used under UNIX and MS-DOS/BORLAND- conditions.
+
+The source-code is split in 15 parts, 8 being *.c, 7 being *.h files:
+
+dikucli.c
+dikusim.c
+iedit.c
+medit.c
+redit.c
+zedit.c
+dutil.c
+strext.c
+
+dikusim.h
+iedit.h
+medit.h
+redit.h
+zedit.h
+dutil.h
+strext.h
+
+Compiling it can be seperated in 2 steps:
+
+1.Step: Creating the linkable object-files.
+
+You have to compile all 8 *.c files to linkable object-files.
+
+2.Step: Linking to an executeable file.
+
+You have to link all 8 object-files created in 1.Step (and if needed, the
+library-files containing the standard-functions. (stdio, stdlib, ctype,
+string)) to the executeable file.
+
+Nearly every compiler offers the possibility to create makefiles to let the
+compiler do this all in one operation.
+
+
+2) USING UNIX (tested under Dec/Mips/Ultrix conditions with cc and gcc):
+
+
+1.Step:
+
+cc strext.c -c
+cc dutil.c -c
+cc iedit.c -c
+cc medit.c -c
+cc redit.c -c
+cc zedit.c -c
+cc dikusim.c -c
+cc dikucli.c -c
+
+2.Step:
+
+cc strext.o dutil.o iedit.o medit.o redit.o zedit.o dikusim.o dikucli.o -o dikued
+
+Result:
+
+The file -dikued- is the executeable file.
+
+Remark: You can do this with a makefile too. ;-)
+
+
+3) USING MS-DOS AND BORLAND-C++ COMPILER.
+
+i) When using the editor-version just open a project named -dikued.prj-.
+Add:
+
+strext.c
+dutil.c
+iedit.c
+medit.c
+redit.c
+zedit.c
+dikusim.c
+dikucli.c
+
+Select -Make EXE file- in the -Compile- menu.
+
+Result:
+
+The file -dikued.exe- is the executeable file.
+
+ii) When using bcc:
+
+1.Step:
+
+bcc -c strext.c
+bcc -c dutil.c
+bcc -c iedit.c
+bcc -c medit.c
+bcc -c redit.c
+bcc -c zedit.c
+bcc -c dikusim.c
+bcc -c dikucli.c
+
+2.Step:
+
+bcc -edikued.exe strext.obj dutil.obj iedit.obj medit.obj redit.obj zedit.obj dikusim.obj dikucli.obj
+
+Result:
+
+The file -dikued.exe- is the executeable file.
+
+
+4) WHEN YOU GET SERIOUS PROBLEMS COMPILING DIKUED:
+
+... then please send me an e-mail describing your problem (and your machine,
+compiler...). If it is a problem of the source I'll try to think of a
+solution.
+
+5) FAQ: WHAT TO DO WHEN...
+
+i) QUESTION: My Borland-C++ compiler refuses to link dikued with some
+             error-output. What's wrong?
+
+   ANSWER: The compiler/linker-options are not set correctly: change to
+   memory-model large and merge duplicate string.
+
+ii) QUESTION: The cc on my Unix-machine won't compile dikued without errors.
+              When compiling dikued on my UNIX-machine I get
+              "ERROR - Keyword not yet implemented." or "ERROR - XXXXXX is
+              an ANSI-feature" ... What can I do about it?
+
+
+    ANSWER: The behavior of the cc on the different unix-implementations vary
+            quite much. With knowledge of C and the compiler, it should be
+            possible to get around these errors. Maybe a better way is to
+            use gcc (GNU-C-compiler). If this compiler does not exist on your
+            machine, try to compile it for the machine, or ask your machine's
+            administrator to do so.
+
+iii) QUESTION: It does not work.
+
+     ANSWER: If you get into troubles and report your troubles via email, try
+             to give as much information as you can around it. This will help
+             me track down the problem more easily. Most important is it to
+             known if you are talking about Unix, or MS-Dos-conditions. For
+             Unix-machines the name of the OS would be important too.
+             (Ultrix, Irix, SUNOs, Aix, Linux ...)

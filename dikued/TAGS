@@ -1,0 +1,676 @@
+
+dikusim.h,0
+
+dutil.h,364
+#define MAX_STRING_LENGTH 9,411
+#define CREATE(CREATE10,444
+#define DU_ERR_NOERROR 14,603
+#define DU_ERR_LINEINVALID 15,633
+#define DU_ERR_INVALIDSTART 16,663
+#define DU_ERR_OOMFOROBJ 17,693
+#define DU_ERR_STRINGTOOLONG 18,723
+#define DU_ERR_CANTOPEN 19,754
+struct index_dataindex_data23,807
+#define BITSHIFT(BITSHIFT31,997
+#define FLAG(FLAG33,1028
+
+iedit.h,0
+
+medit.h,0
+
+redit.h,0
+
+strext.h,204
+#define SPC_EQUAL 11,433
+#define SPC_NOTEQUAL 12,503
+#define SPC_WILDIGNORE 13,528
+#define SPC_WILDSCHAR 14,589
+#define SPC_WILDMCHAR 15,654
+#define SPC_WILDOBRA 16,730
+#define SPC_WILDCBRA 17,807
+
+zedit.h,248
+#define ZE_NOPURGEDOOR 9,411
+#define ZE_PURGEDOOR 10,436
+struct ze_mob_eqze_mob_eq13,500
+struct ze_mobze_mob20,546
+struct ze_objze_obj30,661
+struct ze_zoneze_zone38,736
+struct reset_comreset_com51,942
+struct zone_datazone_data74,1564
+
+dikucli.c,3565
+#define DC_HELPFILE 27,1113
+#define DC_CONFFILE 28,1147
+#define DC_PROMPT 30,1182
+#define DC_MAXSTRLEN 31,1205
+#define DC_CONFVARS 33,1231
+#define DC_NR_ACMDS 35,1255
+#define DC_NR_BCMDS 36,1277
+#define DC_NR_CCMDS 37,1299
+#define DC_NR_DCMDS 38,1321
+#define DC_NR_ECMDS 39,1343
+#define DC_NR_FCMDS 40,1365
+#define DC_NR_GCMDS 41,1387
+#define DC_NR_HCMDS 42,1409
+#define DC_NR_ICMDS 43,1431
+#define DC_NR_JCMDS 44,1453
+#define DC_NR_KCMDS 45,1475
+#define DC_NR_LCMDS 46,1497
+#define DC_NR_MCMDS 47,1519
+#define DC_NR_NCMDS 48,1541
+#define DC_NR_OCMDS 49,1563
+#define DC_NR_PCMDS 50,1585
+#define DC_NR_QCMDS 51,1607
+#define DC_NR_RCMDS 52,1629
+#define DC_NR_SCMDS 53,1651
+#define DC_NR_TCMDS 54,1673
+#define DC_NR_UCMDS 55,1695
+#define DC_NR_VCMDS 56,1717
+#define DC_NR_WCMDS 57,1739
+#define DC_NR_XCMDS 58,1761
+#define DC_NR_YCMDS 59,1783
+#define DC_NR_ZCMDS 60,1805
+#define DIR_NORTH 62,1828
+#define DIR_EAST 63,1850
+#define DIR_SOUTH 64,1872
+#define DIR_WEST 65,1894
+#define DIR_UP 66,1916
+#define DIR_DOWN 67,1938
+int dc_quitflag;179,3878
+char lastcommand[180,3895
+char MudName[182,3928
+struct command dc_ccmds[194,4135
+struct command dc_dcmds[200,4276
+struct command dc_ecmds[205,4382
+struct command dc_gcmds[210,4480
+struct command dc_hcmds[215,4576
+struct command dc_icmds[219,4645
+struct command dc_lcmds[229,4898
+struct command dc_mcmds[234,4994
+struct command dc_ncmds[244,5247
+struct command dc_pcmds[248,5318
+struct command dc_qcmds[253,5414
+struct command dc_rcmds[257,5483
+struct command dc_scmds[267,5736
+struct command dc_vcmds[271,5807
+struct command dc_ucmds[275,5882
+struct command dc_wcmds[279,5947
+struct command dc_zcmds[284,6043
+struct hashentry dc_cmdhash[295,6297
+char ConfigVars[325,7028
+void (*dc_conf[340,7271
+void dc_commands(357,7536
+void dc_credits(370,7754
+void dc_exits(380,8115
+void dc_give(394,8363
+void dc_goto(501,11178
+void dc_help(543,12274
+void dc_iclone(582,13567
+void dc_icreate(631,14940
+void dc_iedit(649,15293
+void dc_ifind(696,16526
+void dc_ilist(705,16695
+void dc_ipurge(711,16767
+void dc_ishow(733,17243
+void dc_load(775,18328
+void dc_look(874,21376
+void dc_mclone(987,25115
+void dc_mcreate(1036,26495
+void dc_medit(1054,26849
+void dc_mfind(1100,28077
+void dc_mlist(1109,28248
+void dc_mpurge(1115,28320
+void dc_mshow(1137,28802
+void dc_purge(1179,29896
+void dc_put(1282,33108
+void dc_quit(1387,35910
+void dc_rclone(1394,36026
+void dc_rcreate(1444,37412
+void dc_redit(1463,37846
+void dc_rfind(1509,39061
+void dc_rlist(1518,39230
+void dc_rpurge(1524,39302
+void dc_rshow(1546,39778
+void dc_north(1588,40863
+void dc_east(1604,41190
+void dc_south(1621,41516
+void dc_west(1637,41843
+void dc_up(1653,42168
+void dc_down(1669,42489
+void dc_doorstate(1685,42814
+void dc_version(1746,44305
+void dc_wear(1757,44610
+void dc_zclone(1918,49572
+void dc_zcreate(1967,50945
+void dc_zedit(1985,51298
+void dc_zfind(2032,52514
+void dc_zlist(2041,52683
+void dc_zpurge(2049,52761
+void dc_zshow(2071,53237
+void dc_NotFound(2113,54322
+void DoCmdLine(2118,54410
+void ReadHelpFile(2155,55223
+void FreeHelp(2199,56435
+void SimulateDikuCli(2212,56658
+void dc_CMudName(2239,57225
+void dc_CItemFile(2244,57285
+void dc_CIETempF(2249,57342
+void dc_CMobileFile(2254,57398
+void dc_CMETempF(2259,57457
+void dc_CRoomFile(2264,57513
+void dc_CRETempF(2269,57570
+void dc_CZoneFile(2274,57626
+void dc_CZETempF(2279,57683
+void dc_CDataBPath(2284,57739
+void dc_CAffBitVector(2291,57847
+void DoConfigFile(2299,58044
+int main(2339,59125
+
+dikusim.c,810
+#define SIM_MAXSTRLEN 34,1233
+#define SIM_M_QUIT 36,1260
+#define REAL 38,1284
+#define VIRTUAL 39,1299
+#define SIM_ERR_NOERROR 43,1347
+typedef   signed char  sbyte;sbyte48,1404
+typedef unsigned char  ubyte;ubyte49,1434
+typedef   signed short sh_int;sh_int53,1557
+struct dirsdirs56,1611
+struct extra_descextra_desc66,2040
+struct room_dataroom_data73,2256
+int sim_curroom;91,2882
+int sim_currzone;92,2899
+int sim_get_curr_room(114,3331
+void sim_set_curr_room(119,3389
+void sim_lookdir(124,3449
+void sim_look(147,4081
+void sim_lookinv(214,5904
+void sim_exits(234,6241
+void sim_LookMobile(262,6810
+void sim_LookItem(295,7696
+void sim_LookDir(308,7976
+void sim_DoLook(322,8249
+void sim_DoGoto(338,8528
+void sim_DoExits(346,8649
+int sim_GetExit(357,8819
+void sim_InitDikuSim(378,9168
+
+dutil.c,281
+int strnccmp(17,512
+int AskYesNo(30,774
+char *fread_string(44,1030
+long flag_convert(110,2135
+struct index_data *generate_indices(131,2536
+void fwrite_string(189,3564
+void write_string(217,4160
+char *read_multi_string(243,4657
+int GetADef(298,5597
+void FreeADef(326,6145
+
+iedit.c,4503
+#define APPLY_NONE 30,1161
+#define NOWHERE 31,1183
+#define ITEM_WEAPON 32,1205
+typedef   signed char  sbyte;sbyte39,1296
+typedef unsigned char  ubyte;ubyte40,1326
+typedef   signed short sh_int;sh_int44,1449
+struct extra_descr_dataextra_descr_data49,1523
+#define MAX_OBJ_AFFECT 56,1766
+#define OBJ_NOTIMER 57,1843
+struct obj_flag_dataobj_flag_data59,1876
+struct obj_affected_typeobj_affected_type73,2500
+struct obj_dataobj_data80,2739
+struct obj_data ie_defaultitem=99,3573
+#define IE_COMM 125,3925
+#define IE_MAXSTRLEN 126,3945
+#define IE_OBJFILE 128,3971
+#define IE_TEMPFILE 129,4001
+#define IE_ITFILE 131,4035
+#define IE_IWFILE 132,4067
+#define IE_IEXFILE 133,4099
+#define IE_IDLFILE 134,4132
+#define IE_ICTFILE 135,4166
+#define IE_IPAFILE 136,4200
+#define IE_IAFILE 137,4234
+#define IE_ITVFILE 138,4268
+#define IE_ISFILE 139,4300
+#define IE_ITWFILE 140,4333
+#define IE_EDITMAX 142,4368
+#define IE_SM_DELETE 144,4391
+#define IE_SM_SAVE 145,4414
+#define IE_SM_INSERT 146,4437
+#define IE_M_QUIT 148,4461
+#define IS_MAXVALID 151,4502
+#define IF_START 154,4550
+#define IF_EOS 155,4572
+#define IF_EXDISC 156,4594
+#define IF_AFF 157,4616
+#define IF_IPAFF 158,4638
+#define IF_EOF 159,4660
+#define REAL 161,4684
+#define VIRTUAL 162,4699
+struct if_affectedif_affected166,4741
+typedef struct if_fileformatif_fileformat171,4785
+} if_fileformat;if_fileformat184,5076
+struct itv_entryitv_entry187,5095
+} *itv_entries;191,5148
+struct itw_entryitw_entry193,5165
+struct itw_entry *itw_first;200,5237
+struct is_entry *is_first;201,5266
+int is_valid[202,5293
+struct is_entryis_entry204,5323
+const char itv_notused[215,5466
+char ie_objfile[219,5535
+char ie_tempfile[220,5577
+char ie_dbpath[222,5622
+int ie_affbitvec=224,5656
+int it_max;226,5677
+int iw_max;227,5689
+int iex_max;228,5701
+int idl_max;229,5714
+int ict_max;230,5727
+int ipa_max;231,5740
+int ia_max;232,5753
+int ie_changed;234,5766
+char **it_str;236,5783
+char **iw_str;237,5798
+char **iex_str;238,5813
+char **idl_str;239,5829
+char **ict_str;240,5845
+char **ipa_str;241,5861
+char **ia_str;242,5877
+FILE *ie_workfile;244,5893
+FILE *it_file;245,5912
+FILE *iw_file;246,5927
+FILE *iex_file;247,5942
+FILE *idl_file;248,5958
+FILE *ict_file;249,5974
+FILE *ipa_file;250,5990
+FILE *ia_file;251,6006
+FILE *itv_file;252,6021
+FILE *itw_file;253,6037
+FILE *is_file;254,6053
+FILE *ie_temp;256,6069
+#define IE_ERR_NOERROR 260,6114
+#define IE_ERR_LINEINVALID 261,6144
+#define IE_ERR_INVALIDSTART 262,6174
+#define IE_ERR_OOMFOROBJ 263,6204
+#define IE_ERR_STRINGTOOLONG 264,6234
+#define IE_ERR_CANTOPEN 265,6265
+struct obj_data  *object_list 270,6350
+FILE *obj_f;271,6426
+struct index_data *obj_index;272,6502
+int top_of_objt 273,6578
+void (*ie_edit[300,7477
+void (*ie_edit[IE_EDITMAX+1])(struct obj_data 300,7477
+char getch(321,7803
+int OpenObjFile(333,7987
+char *ie_ReadLDesc(379,9337
+char *ie_ReadSDesc(396,9637
+char *ie_ReadName(411,9895
+struct obj_data *read_object(426,10146
+void free_obj(537,12683
+void clear_object(572,13205
+int real_object(583,13419
+int ie_GetRealNumber(608,13805
+int SaveToIETemp(614,13936
+void PrintExtras(943,20654
+void PrintWears(967,20946
+int ie_FindNrRealItem(990,21244
+char *ie_FindItem(1040,22053
+void ie_FindItems(1075,22615
+int ie_FindNrItem(1093,22911
+void PrintContainer(1118,23247
+void PrintAffects(1139,23521
+void ie_doclone(1161,23814
+void  ie_EditNr(1261,26833
+void  ie_EditNameList(1288,27323
+void  ie_EditShortDesc(1307,27686
+void  ie_EditLongDesc(1326,28107
+void  ie_EditActDesc(1345,28501
+void  ie_EditType(1371,29112
+void  ie_EditExtras(1404,29888
+void  ie_EditWear(1443,30744
+void  ie_EditWeight(1482,31587
+void  ie_EditCost(1500,31923
+void  ie_EditCPD(1519,32265
+void  ie_EditTimer(1538,32646
+void  ie_EditValues(1556,32976
+void  ie_EditApply(1750,37531
+void  ie_EditAffects(1798,38686
+struct extra_descr_data *CreateExtraDesc(1837,39531
+void  ie_EditExtraDesc(1859,40084
+void print_obj(1972,42455
+void ie_ShowItem(2026,44366
+int EditAllObj(2038,44515
+void ie_EditItem(2068,45008
+void ie_CloneItem(2084,45275
+void ie_PurgeItem(2100,45510
+void ie_SetFile(2107,45613
+void ie_SetTemp(2114,45693
+void ie_SetAffBitVec(2121,45780
+void ie_SetDBPath(2128,45862
+int GetITWDef(2133,45923
+void FreeITWDef(2178,46762
+int GetITVDef(2193,46989
+void FreeITVDef(2235,47776
+int GetISDef(2248,47955
+void FreeISDef(2290,48793
+void ie_InitIEdit(2310,49060
+void ie_CloseIEdit(2340,50133
+
+medit.c,2757
+#define ME_MAXSTRLEN 29,1148
+#define ME_MOBFILE 31,1174
+#define ME_TEMPFILE 32,1204
+#define ME_MSFILE 34,1238
+#define ME_MPFILE 35,1268
+#define ME_MCFILE 36,1298
+#define ME_MAFILE 37,1330
+#define ME_SM_DELETE 39,1365
+#define ME_SM_SAVE 40,1388
+#define ME_SM_INSERT 41,1411
+#define ME_M_QUIT 43,1435
+#define ME_FLAGS_NONE 45,1458
+#define ME_FLAGS_SIMPLE 46,1486
+#define ME_EDITMAX 48,1516
+#define REAL 50,1539
+#define VIRTUAL 51,1554
+#define MF_EOF 53,1573
+#define MAX_SKILLS 55,1597
+#define MAX_AFFECT 56,1666
+#define MAX_WEAR 57,1734
+#define ME_ERR_NOERROR 61,1787
+typedef   signed char  sbyte;sbyte68,1887
+typedef unsigned char  ubyte;ubyte69,1917
+typedef   signed short sh_int;sh_int73,2040
+struct  ability_dataability_data77,2095
+struct mob_datamob_data87,2206
+char me_mobfile[144,3799
+char me_tempfile[145,3841
+char me_dbpath[147,3886
+int ms_max;149,3920
+int mp_max;150,3932
+int mc_max;151,3944
+int ma_max;152,3956
+int me_changed;154,3969
+char **ms_str;156,3986
+char **mp_str;157,4001
+char **mc_str;158,4016
+char **ma_str;159,4031
+FILE *me_workfile;161,4047
+FILE *ms_file;162,4066
+FILE *mp_file;163,4081
+FILE *mc_file;164,4096
+FILE *ma_file;165,4111
+FILE *me_temp;167,4127
+FILE *mob_f;169,4143
+struct mob_data me_defaultmob 171,4157
+struct index_data *mob_index;207,4614
+int top_of_mobt 208,4690
+void (*me_edit[233,5539
+void (*me_edit[ME_EDITMAX+1])(struct mob_data 233,5539
+void free_mob(257,5968
+int real_mobile(272,6308
+char *me_ReadLDesc(295,6659
+char *me_ReadName(312,6985
+struct mob_data *read_mobile(326,7252
+int OpenMobFile(502,10792
+int me_FindNrRealMobile(553,12513
+char *me_FindMobile(603,13562
+void me_FindMobiles(639,14251
+int me_FindNrMobile(657,14589
+int SaveToMETemp(682,15040
+void PrintActions(991,22760
+void me_doclone(1012,23104
+void  me_EditNr(1102,25639
+void  me_EditNameList(1129,26191
+void  me_EditShortDesc(1148,26594
+void  me_EditLongDesc(1167,27031
+void  me_EditDesc(1187,27492
+void  me_EditActions(1213,28112
+void  me_EditAffects(1252,29108
+void  me_EditAlignment(1291,30120
+void  me_EditLevel(1309,30484
+void  me_EditThac0(1327,30836
+void  me_EditArmor(1345,31176
+void  me_EditHitpoints(1363,31516
+void  me_EditDamage(1408,32437
+void  me_EditGold(1453,33352
+void  me_EditExp(1472,33706
+void  me_EditPosition(1491,34072
+void  me_EditDefPos(1523,34909
+void  me_EditSex(1555,35772
+void print_mob(1589,36599
+int me_GetRealNumber(1642,38645
+int EditAllMob(1649,38740
+void me_EditMobile(1679,39313
+void me_CloneMobile(1695,39602
+void me_PurgeMobile(1711,39862
+void me_ShowMobile(1718,39966
+void me_SetFile(1729,40132
+void me_SetTemp(1736,40214
+void me_SetDBPath(1743,40302
+void me_InitMEdit(1750,40398
+void me_CloseMEdit(1767,40957
+
+redit.c,2872
+#define RE_MAXSTRLEN 33,1334
+#define RE_ROOMFILE 35,1360
+#define RE_TEMPFILE 36,1391
+#define RE_DFILE 38,1425
+#define RE_SFILE 39,1455
+#define RE_FFILE 40,1485
+#define RE_SM_DELETE 42,1516
+#define RE_SM_SAVE 43,1539
+#define RE_SM_INSERT 44,1562
+#define RE_M_QUIT 46,1586
+#define RE_FLAGS_NONE 48,1609
+#define RE_FLAGS_GRIMNE_NEW 49,1637
+#define RE_FLAGS_SIMPLE 50,1667
+#define RE_EDITMAX 52,1694
+#define RE_EDITDOORMAX 53,1716
+#define REAL 55,1742
+#define VIRTUAL 56,1757
+#define RF_EOF 58,1776
+#define RE_ERR_NOERROR 63,1830
+typedef   signed char  sbyte;sbyte68,1886
+typedef unsigned char  ubyte;ubyte69,1916
+typedef unsigned long  ulong;ulong71,1999
+typedef   signed short sh_int;sh_int73,2036
+struct dirsdirs76,2090
+struct extra_descextra_desc86,2539
+struct room_dataroom_data93,2763
+struct room_data re_defaultroom 109,3440
+char re_roomfile[131,3871
+char re_tempfile[132,3915
+char re_dbpath[134,3960
+const char *direction[136,3994
+int rd_max;146,4122
+int rf_max;147,4134
+int rs_max;148,4146
+int re_changed;150,4159
+char **rd_str;152,4176
+char **rf_str;153,4191
+char **rs_str;154,4206
+FILE *re_workfile;156,4222
+FILE *rd_file;157,4241
+FILE *rf_file;158,4256
+FILE *rs_file;159,4271
+FILE *re_temp;161,4287
+FILE *room_f;163,4303
+struct index_data *room_index;167,4371
+int top_of_roomt 168,4448
+void (*re_edit[189,5132
+void (*re_edit[RE_EDITMAX+1])(struct room_data 189,5132
+void (*red_edit[215,5675
+void (*red_edit[RE_EDITDOORMAX+1])(struct room_data 215,5675
+void free_room(227,5852
+int real_room(264,6604
+struct room_data *read_room(288,6990
+int OpenRoomFile(371,9102
+char *re_FindRoom(425,10665
+void re_FindRooms(460,11231
+int re_FindNrRoom(478,11530
+int SaveToRETemp(502,11895
+void PrintRFlags(823,18605
+void PrintDFlags(846,18927
+void re_doclone(867,19216
+void  re_EditNr(973,22170
+void  re_EditName(1000,22666
+void  re_EditDesc(1019,23026
+void re_EditZone(1045,23621
+void re_EditFlags(1063,23964
+void re_EditSec(1102,24782
+void  re_EditNorth(1128,25379
+void  re_EditEast(1133,25452
+void  re_EditSouth(1138,25524
+void  re_EditWest(1143,25597
+void  re_EditUp(1148,25669
+void  re_EditDown(1153,25739
+struct extra_desc *CreateExtra(1158,25811
+void  re_EditExtraDesc(1180,26309
+void print_door(1299,29815
+void  re_EditDoor(1324,30648
+void red_EditToRoom(1363,31482
+void red_EditDesc(1391,32029
+void red_EditName(1416,32696
+void red_Key(1439,33224
+void red_Flags(1468,33792
+void red_Purge(1507,34664
+void print_room(1526,35085
+int re_RoomZone(1596,37184
+int re_GetRealNumber(1609,37378
+int EditAllRoom(1616,37467
+void re_EditRoom(1646,37968
+void re_CloneRoom(1662,38241
+void re_PurgeRoom(1678,38481
+void re_ShowRoom(1688,38696
+void re_SetFile(1699,38857
+void re_SetTemp(1706,38938
+void re_SetDBPath(1713,39024
+void re_InitREdit(1720,39118
+void re_CloseREdit(1735,39538
+
+strext.c,21
+int strpcmp(43,2660
+
+zedit.c,3490
+#define NOWHERE 34,1240
+typedef   signed char  sbyte;sbyte38,1287
+typedef unsigned char  ubyte;ubyte39,1317
+typedef unsigned long  ulong;ulong41,1400
+typedef   signed short sh_int;sh_int43,1437
+struct zone_data ze_defaultzone=48,1506
+#define ZE_COMM 61,1631
+#define ZE_MAXSTRLEN 62,1651
+#define ZE_ZONFILE 64,1677
+#define ZE_TEMPFILE 65,1708
+#define ZE_ZRFILE 67,1742
+#define ZE_ZWFILE 68,1775
+#define ZE_ZDFILE 69,1807
+#define ZE_EDITMAX 71,1839
+#define ZE_SM_DELETE 73,1861
+#define ZE_SM_SAVE 74,1884
+#define ZE_SM_INSERT 75,1907
+#define ZE_M_QUIT 77,1931
+#define ZF_START 80,1977
+#define ZF_EOS 81,1999
+#define ZF_MOBL 82,2021
+#define ZF_OBJL 83,2043
+#define ZF_OBJG 84,2065
+#define ZF_OBJE 85,2087
+#define ZF_OBJP 86,2109
+#define ZF_DOOR 87,2131
+#define ZF_OBJR 88,2153
+#define ZF_ZEND 89,2175
+#define ZF_EOF 90,2197
+#define LM_LOAD 92,2221
+#define LM_SAVE 93,2241
+#define REAL 95,2262
+#define VIRTUAL 96,2277
+char ze_zonfile[104,2371
+char ze_tempfile[105,2413
+char ze_dbpath[107,2458
+int ze_affbitvec=109,2492
+int zw_max;111,2513
+int zr_max;112,2525
+int zd_max;113,2537
+int ze_changed;115,2550
+int ze_activechanged;116,2566
+char **zw_str;118,2589
+char **zr_str;119,2604
+char **zd_str;120,2619
+FILE *ze_workfile;122,2635
+FILE *zw_file;123,2654
+FILE *zr_file;124,2669
+FILE *zd_file;125,2684
+FILE *ze_temp;127,2700
+struct zone_data *ze_activezone=129,2716
+#define ZE_ERR_NOERROR 133,2784
+#define ZE_ERR_LINEINVALID 134,2814
+#define ZE_ERR_INVALIDSTART 135,2844
+#define ZE_ERR_OOMFORZON 136,2874
+#define ZE_ERR_STRINGTOOLONG 137,2904
+#define ZE_ERR_CANTOPEN 138,2935
+FILE *zon_f;143,3020
+struct index_data *zon_index;144,3096
+int top_of_zone 145,3170
+void (*ze_edit[161,3615
+void (*ze_edit[ZE_EDITMAX+1])(struct zone_data 161,3615
+int OpenZoneFile(172,3805
+struct zone_data *read_zone(217,4800
+void ze_purgemob(273,5864
+void ze_purgeobj(326,7579
+struct ze_mob *ze_loadmob(376,9028
+void ze_loadobj(398,9616
+void ze_setdoorstate(417,10063
+void ze_giveobj(422,10156
+void ze_putobj(437,10421
+int ze_putroomobj(452,10688
+void ze_eqobj(466,10918
+struct ze_zone *ze_getroom(483,11274
+struct ze_zone *ze_existroom(499,11544
+void ze_free_zone(544,12586
+void ze_free_zoneroom(562,12954
+void free_zon(599,13759
+struct zone_data *ze_load_zone(608,13910
+int SaveToZETemp(715,16908
+void ze_LoadZone(1053,24143
+int real_zone(1071,24510
+int ze_GetRealNumber(1096,24894
+char *ze_FindZone(1104,24989
+void ze_FindZones(1140,25552
+int ze_FindNrZone(1158,25849
+int ze_FindNrMobRoom(1181,26148
+int ze_FindMobRoom(1200,26407
+int ze_FindNrItemRoom(1244,27202
+int ze_FindItemRoom(1263,27462
+void ze_doclone(1308,28259
+struct zone_data *ze_existzone(1364,29512
+void  ze_EditNr(1385,29887
+void  ze_EditNameList(1414,30392
+void  ze_EditTop(1433,30756
+void  ze_EditLifespan(1452,31083
+void  ze_EditResetMode(1470,31424
+void print_zon(1504,32232
+void ze_ShowZone(1522,32728
+int EditAllZone(1534,32876
+void ze_EditZone(1565,33384
+void ze_CloneZone(1596,34136
+void ze_PurgeZone(1612,34370
+void ze_LoadMobile(1619,34480
+void ze_GiveItemMob(1633,34841
+void ze_WearItemMob(1644,35066
+void ze_GiveItemItem(1655,35299
+void ze_DoorState(1666,35523
+void ze_PurgeMobile(1675,35738
+void ze_LoadItem(1682,35829
+void ze_PurgeItem(1696,36184
+void ze_PurgeAll(1703,36296
+void ze_SetFile(1711,36456
+void ze_SetTemp(1718,36536
+void ze_SetDBPath(1725,36622
+void ze_InitZEdit(1732,36716
+void ze_CloseZEdit(1749,37186

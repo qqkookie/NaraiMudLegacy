@@ -1,0 +1,171 @@
+/* for mobile actions: specials.act */
+#define ACT_SPEC         1     				A
+#define ACT_SENTINEL     2    				B
+#define ACT_SCAVENGER    4   				C
+#define ACT_ISNPC        8 					D 
+#define ACT_NICE_THIEF  16    				E
+#define ACT_AGGRESSIVE  32   				F
+#define ACT_STAY_ZONE   64    				G
+#define ACT_WIMPY      128   				H
+#define ACT_FIGHTER    256					I
+#define ACT_MAGE       512					J
+#define ACT_CLERIC    1024					K
+#define ACT_THIEF     2048					L
+#define ACT_PALADIN   4096					M
+#define ACT_DRAGON    8192					N
+#define ACT_SPITTER  16384					O
+#define ACT_SHOOTER  32768					P
+#define ACT_GUARD    65536					Q
+#define ACT_SUPERGUARD   131072				R
+#define ACT_GIANT        262144				S
+#define ACT_HELPER       524288				T
+#define ACT_RESCUER     1048576				U
+#define ACT_SPELL_BLOCKER  2097152			V
+
+/* Bitvector for 'affected_by' */
+#define AFF_BLIND             1				A
+#define AFF_INVISIBLE         2				B
+#define AFF_DETECT_EVIL       4				C
+#define AFF_DETECT_INVISIBLE  8				D
+#define AFF_INFRAVISION       16			E
+#define AFF_SENSE_LIFE        32			F
+#define AFF_HOLD              64			G
+#define AFF_SANCTUARY         128			H
+#define AFF_GROUP             256			I
+#define AFF_CURSE             1024			J
+#define AFF_MIRROR_IMAGE      2048			K
+#define AFF_POISON            4096			L
+#define AFF_PROTECT_EVIL      8192			M
+#define AFF_PARALYSIS         16384			N
+#define AFF_MORDEN_SWORD      32768			O
+#define AFF_FLAMING_SWORD     65536			P
+#define AFF_SLEEP             131072		Q
+#define AFF_UNUSED            262144		R
+#define AFF_SNEAK             524288		S
+#define AFF_HIDE              1048576		T
+#define AFF_FEAR              2097152		U
+#define AFF_CHARM             4194304		V
+#define AFF_FOLLOW            8388608		W
+#define AFF_HASTE	      	  16777216		Y
+#define AFF_IMPROVED_HASTE    33554432		X
+#define AFF_NO_SUMMON    	  67108864		Y
+#define AFF_NO_CHARM          134217728		Z
+#define AFF_BERSERK		      268435456		a
+
+#define ITEM_GLOW            1				A
+#define ITEM_HUM             2				B
+#define ITEM_DARK            4				C
+#define ITEM_LOCK            8				D
+#define ITEM_EVIL           16				E
+#define ITEM_INVISIBLE      32				F
+#define ITEM_MAGIC          64				G
+#define ITEM_NODROP        128				H
+#define ITEM_BLESS         256				I
+#define ITEM_ANTI_GOOD     512 				J
+#define ITEM_ANTI_EVIL    1024 				K
+#define ITEM_ANTI_NEUTRAL 2048 				L
+#define ITEM_NOLOAD       4096				M
+#define ITEM_ANTI_MAGE    8192 				N
+#define ITEM_ANTI_CLERIC 16384 				O
+#define ITEM_ANTI_THIEF  32768 				P
+#define ITEM_ANTI_WARRIOR 65536 			Q
+#define ITEM_NO_RENT	131072				R
+
+#define ITEM_TAKE              1 			A
+#define ITEM_WEAR_FINGER       2			B
+#define ITEM_WEAR_NECK         4			C
+#define ITEM_WEAR_BODY         8			D
+#define ITEM_WEAR_HEAD        16			E
+#define ITEM_WEAR_LEGS        32			F
+#define ITEM_WEAR_FEET        64			G
+#define ITEM_WEAR_HANDS      128 			H
+#define ITEM_WEAR_ARMS       256			I
+#define ITEM_WEAR_SHIELD     512			J
+#define ITEM_WEAR_ABOUT     1024 			K
+#define ITEM_WEAR_WAISTE    2048			L
+#define ITEM_WEAR_WRIST     4096			M
+#define ITEM_WIELD          8192			N
+#define ITEM_HOLD          16384			O
+#define ITEM_THROW         32768			P
+#define ITEM_WEAR_KNEE     65536			Q
+#define ITEM_WEAR_ABOUTLEGS 131072			R
+
+#define TYPE_UNDEFINED               -1
+#define SPELL_RESERVED_DBC            0  /* SKILL NUMBER ZERO */
+#define SPELL_ARMOR                   1
+#define SPELL_TELEPORT                2
+#define SPELL_BLESS                   3
+#define SPELL_BLINDNESS               4
+#define SPELL_BURNING_HANDS           5
+#define SPELL_CALL_LIGHTNING          6
+#define SPELL_CHARM_PERSON            7
+#define SPELL_CHILL_TOUCH             8
+#define SPELL_REANIMATE               9
+#define SPELL_COLOUR_SPRAY           10 
+#define SPELL_RELOCATE               11 
+#define SPELL_CREATE_FOOD            12 
+#define SPELL_CREATE_WATER           13 
+#define SPELL_CURE_BLIND             14 
+#define SPELL_CURE_CRITIC            15 
+#define SPELL_CURE_LIGHT             16 
+#define SPELL_CURSE                  17 
+#define SPELL_DETECT_EVIL            18 
+#define SPELL_DETECT_INVISIBLE       19 
+#define SPELL_RECHARGER              20 
+#define SPELL_PREACH                 21 
+#define SPELL_DISPEL_EVIL            22 
+#define SPELL_EARTHQUAKE             23 
+#define SPELL_ENCHANT_WEAPON         24 
+#define SPELL_ENERGY_DRAIN           25 
+#define SPELL_FIREBALL               26 
+#define SPELL_HARM                   27 
+#define SPELL_HEAL                   28 
+#define SPELL_INVISIBLE              29 
+#define SPELL_LIGHTNING_BOLT         30 
+#define SPELL_LOCATE_OBJECT          31 
+#define SPELL_MAGIC_MISSILE          32 
+#define SPELL_POISON                 33 
+#define SPELL_PROTECT_FROM_EVIL      34 
+#define SPELL_REMOVE_CURSE           35 
+#define SPELL_SANCTUARY              36 
+#define SPELL_SHOCKING_GRASP         37 
+#define SPELL_SLEEP                  38 
+#define SPELL_STRENGTH               39 
+#define SPELL_SUMMON                 40 
+#define SPELL_VENTRILOQUATE          41 
+#define SPELL_WORD_OF_RECALL         42
+#define SPELL_REMOVE_POISON          43
+#define SPELL_SENSE_LIFE             44
+#define SPELL_SUNBURST               45
+#define SPELL_CLONE                  46
+
+#define SPELL_DAMAGE_UP              71
+#define SPELL_ENERGY_FLOW            72
+#define SPELL_MANA_BOOST             73
+#define SPELL_VITALIZE               74
+#define SPELL_FULL_FIRE              75
+#define SPELL_THROW                  76
+#define SPELL_FIRE_STORM             77
+#define SPELL_CRUSH_ARMOR            78
+#define SPELL_FULL_HEAL		         79
+#define SPELL_TRICK                  80
+#define SPELL_HASTE                  81
+#define SPELL_IMPROVED_HASTE         82
+#define SPELL_FAR_LOOK               83
+#define SPELL_ALL_HEAL               84
+
+#define SPELL_ENCHANT_ARMOR          90
+#define SPELL_PRAY_FOR_ARMOR         91
+#define SPELL_INFRAVISION            92
+#define SPELL_CREATE_NECTAR          93
+#define SPELL_CREATE_GOLDEN_NECTAR   94
+#define SPELL_CORN_OF_ICE            95
+#define SPELL_DISINTEGRATE           96
+#define SPELL_PHASE                  97
+#define SPELL_MIRROR_IMAGE           98
+#define SPELL_HAND_OF_GOD            99
+#define SPELL_CAUSE_LIGHT           100
+#define SPELL_CAUSE_CRITIC          101
+#define SPELL_CONTROL_WEATHER       102
+#define SPELL_Group_SANCTUARY		103
+

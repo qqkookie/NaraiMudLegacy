@@ -1,0 +1,425 @@
+cmds
+Syntax: 'CMDS'
+
+Shows all valid commands of the DikuCli in alphabetic order.
+Has the same effect as 'COMMANDS'
+
+See also: 'HELP', 'COMMANDS'
+~
+commands
+Syntax: 'COMMANDS'
+
+Shows all valid commands of the DikuCli in alphabetic order.
+Has the same effect as 'CMDS'
+
+See also: 'HELP', 'CMDS'
+~
+credits
+Syntax: 'CREDITS'
+
+Shows the credits for all currently included parts of the DikuEd-project.
+
+See also: 'VERSION'
+~
+doorstate
+Syntax: 'DOORSTATE <Direction> <State>'
+
+Sets the state of a door as defined in ZDOORS.DEF.
+
+See also: 'LOOK'
+~
+down
+Syntax: 'DOWN'
+
+Move down, if possible.
+
+See also: 'NORTH', 'SOUTH', 'EAST', 'WEST', 'UP'
+~
+east
+Syntax: 'EAST'
+
+Move east, if possible.
+
+See also: 'NORTH', 'SOUTH', 'WEST', 'UP', 'DOWN'
+~
+exits
+Syntax: 'EXITS'
+
+Shows all exits of current room.
+
+See also: 'LOOK'
+~
+give
+Syntax: 'GIVE <ItemNr|[#.]Pattern> <MobNr|[#.]Pattern>'
+
+Gives a Mobile in current room an Item.
+
+See also: 'PUT', 'WEAR'
+~
+goto
+Syntax: 'GOTO <RoomNumber>', 'GOTO <[Nr.]Pattern>'
+
+Enter a room given either by Number or Wildcard-Pattern.
+
+See also: 'LOOK'
+~
+help
+Syntax: 'HELP', 'HELP <cmd>'
+
+Shows help-texts for a given command.
+
+See also: 'CMDS', 'COMMANDS'
+~
+icreate
+Syntax: 'ICREATE <ItemNumber>'
+
+Creates a dummy Item with given number if possible.
+
+See also: 'ICLONE', 'IEDIT', 'IFIND', 'ILIST', 'ISHOW'
+~
+iclone
+Syntax: 'ICLONE <ItemNr> <ItemNr>', 'ICLONE <[Nr.]Pattern> <ItemNr>'
+
+Clones a item to a new item-number.
+
+See also: 'IFIND', 'IPURGE'
+~
+iedit
+Syntax: 'IEDIT <[#.]NamePattern>' , 'IEDIT <ItemNumber>'
+
+Invoke the build-in Item-Editor.
+
+Argument Format:
+[#.]        - The # ocurrance of an Item fitting the SearchPattern.
+	      default is first Item.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+ItemNumber  - The number of an Item.
+
+For more detailed information read the documentation files.
+
+See also: 'IFIND', 'ILIST', 'IPURGE', 'ISHOW'
+~
+ifind
+Syntax: 'IFIND <NamePattern>
+
+Shows all Item-Names with Item-Number fitting the SearchPattern.
+
+For more details about the wildcards read the docutentation files.
+
+See also: 'ICLONE', 'IEDIT', 'ILIST', 'IPURGE', 'ISHOW'
+~
+ilist
+Syntax: 'ILIST'
+
+Shows all Items in the database. Has the same effect as IFIND *
+
+See also: 'IEDIT', 'IFIND', 'IPURGE', 'ISHOW'
+~
+ipurge
+Syntax: 'IPURGE <ItemNumber>'
+
+Deletes the given Item out of the database-file.
+- WARNING - ONCE PURGED ITEMS CAN'T BE RESTORED!
+
+See also: 'ICLONE', 'IEDIT', 'IFIND', 'ILIST', 'ISHOW'
+~
+ishow
+Syntax: 'ISHOW <[#.]NamePattern>' , 'ISHOW <ItemNumber>'
+
+Shows the data of the given Item.
+
+Argument Format:
+[#.]        - The # ocurrance of an Item fitting the SearchPattern.
+	      default is first Item.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+ItemNumber  - The number of an Item.
+
+For more detailed information read the documentation files.
+
+See also: 'IEDIT', 'IFIND', 'ILIST', 'IPURGE'
+~
+load
+Syntax: 'LOAD OBJ <ItemNr|[#.]Pattern>', 'LOAD MOB <ItemNr|[#.]Pattern>'
+
+Loads a Mobile or Item into current room.
+
+See also: 'LOOK', 'PURGE'
+~
+look
+Syntax: 'LOOK', 'LOOK AT <MobNr|[#.]Pattern>, 'LOOK IN <ItemNr|[#.]Pattern>'
+        'LOOK <Direction>'
+
+Look around in room, or look at Mobile (to see equiptment and inventory),
+or look into an Item, or look into a direction (north, south, east, west,
+up or down).
+
+See also: 'EXITS', 'LOAD', 'GIVE', 'PUT', 'WEAR'
+~
+mclone
+Syntax: 'MCLONE <MobNr> <MobNr>', 'MCLONE <[Nr.]Pattern> <MobNr>'
+
+Clones a mobile to a new mobile-number.
+
+See also: 'MFIND', 'MPURGE'
+~
+mcreate
+Syntax: 'MCREATE <MobNumber>'
+
+Creates a dummy Mobile with given number if possible.
+
+See also: 'MCLONE', 'MEDIT', 'MFIND', 'MLIST', 'MSHOW'
+~
+medit
+Syntax: 'MEDIT <[#.]NamePattern>' , 'MEDIT <MobNumber>'
+
+Invoke the build-in Mobile-Editor.
+
+Argument Format:
+[#.]        - The # ocurrance of a Mobile fitting the SearchPattern.
+	      default is first Mobile.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+MobNumber   - The number of a Mobile.
+
+For more detailed information read the documentation files.
+
+See also: 'MFIND', 'MLIST', 'MPURGE', 'MSHOW'
+~
+mfind
+Syntax: 'MFIND <NamePattern>
+
+Shows all Mobile-Names with Mobile-Number fitting the SearchPattern.
+
+For more details about the wildcards read the docutentation files.
+
+See also: 'MLIST', 'MSHOW'
+~
+mlist
+Syntax: 'MLIST'
+
+Shows all Mobiles in the database. Has the same effect as MFIND *
+
+See also: 'MFIND', 'MSHOW'
+~
+mpurge
+Syntax: 'MPURGE <MobileNumber>'
+
+Deletes the given Mobile out of the database-file.
+- WARNING - ONCE PURGED MOBILES CAN'T BE RESTORED!
+
+See also: 'MCREATE', 'MFIND', 'MLIST', 'MSHOW'
+~
+mshow
+Syntax: 'MSHOW <[#.]NamePattern>' , 'MSHOW <MobNumber>'
+
+Shows the data of the given Mobile.
+
+Argument Format:
+[#.]        - The # ocurrance of a Mobile fitting the SearchPattern.
+	      default is first Mobile.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+MobNumber   - The number of an Mobile.
+
+For more detailed information read the documentation files.
+
+See also: 'MFIND', 'MLIST'
+~
+north
+Syntax: 'NORTH'
+
+Move north, if possible.
+
+See also: 'EAST', 'SOUTH', 'WEST', 'UP', 'DOWN'
+~
+rclone
+Syntax: 'RCLONE <RoomNr> <RoomNr>', 'RCLONE <[Nr.]Pattern> <RoomNr>'
+
+Clones a room to a new room-number.
+
+See also: 'RFIND', 'RPURGE'
+~
+rcreate
+Syntax: 'RCREATE <RoomNumber>'
+
+Creates a dummy Room with given number if possible.
+
+See also: 'RCLONE', 'REDIT', 'RFIND', 'RLIST', 'RSHOW'
+~
+redit
+Syntax: 'REDIT <[#.]NamePattern>' , 'REDIT <RoomNumber>'
+
+Invoke the build-in Room-Editor.
+
+Argument Format:
+[#.]        - The # ocurrance of a Room fitting the SearchPattern.
+	      default is first Room.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+RoomNumber  - The number of a Room.
+
+For more detailed information read the documentation files.
+
+See also: 'RFIND', 'RLIST', 'RPURGE', 'RSHOW'
+~
+rfind
+Syntax: 'RFIND <NamePattern>
+
+Shows all Room-Names with Room-Number fitting the SearchPattern.
+
+For more details about the wildcards read the docutentation files.
+
+See also: 'RLIST', 'RSHOW'
+~
+rlist
+Syntax: 'RLIST'
+
+Shows all Rooms in the database. Has the same effect as RFIND *
+
+See also: 'RFIND', 'RSHOW'
+~
+rpurge
+Syntax: 'RPURGE <RoomNumber>'
+
+Deletes the given Room out of the database-file.
+- WARNING - ONCE PURGED ROOMS CAN'T BE RESTORED!
+
+See also: 'RCREATE', 'RFIND', 'RLIST', 'RSHOW'
+~
+rshow
+Syntax: 'RSHOW <[#.]NamePattern>' , 'RSHOW <RoomNumber>'
+
+Shows the data of the given Room.
+
+Argument Format:
+[#.]        - The # ocurrance of a Room fitting the SearchPattern.
+	      default is first Room.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+RoomNumber  - The number of an Room.
+
+For more detailed information read the documentation files.
+
+See also: 'RFIND', 'RLIST'
+~
+purge
+Syntax: 'PURGE MOB <MobNr|[#.]Pattern>', 'PURGE OBJ <ObjNr|[#.]Pattern'
+
+Purge a Mobile or Item from current room.
+
+See also: 'LOAD'
+~
+put
+Syntax: 'PUT <Item1Nr|[#.]Pattern> <Item2Nr|[#.]Pattern>'
+
+Put an Item (Item1) into another Item (Item2).
+
+See also: 'LOOK', 'GIVE', 'WEAR'
+~
+quit
+Syntax: 'QUIT'
+
+Quits the DikuCLi.
+
+See also: -
+~
+south
+Syntax: 'SOUTH'
+
+Move south, if possible.
+
+See also: 'NORTH', 'EAST', 'WEST', 'UP', 'DOWN'
+~
+up
+Syntax: 'UP'
+
+Move up, if possible.
+
+See also: 'NORTH', 'EAST', 'SOUTH', 'WEST', 'DOWN'
+~
+version
+Syntax: 'VERSION'
+
+Shows the versions of all currently included parts of the DikuEd-project.
+
+See also: 'CREDITS'
+~
+wear
+Syntax: 'WEAR <ItemNr|[#.]Pattern> <MobNr|[#.]Pattern>',
+        'WEAR <ItemNr|[#.]Pattern> <MobNr|[#.]Pattern> <WearPos>'
+
+Forces a Mobile in current room to wear an Item.
+
+See also: 'GIVE', 'LOOK', 'PUT'
+~
+west
+Syntax: 'WEST'
+
+Move west, if possible.
+
+See also: 'NORTH', 'EAST', 'SOUTH', 'UP', 'DOWN'
+~
+zclone
+Syntax: 'ZCLONE <ZoneNr> <ZoneNr>', 'ZCLONE <[Nr.]Pattern> <ZoneNr>'
+
+Clones a zone to a new zone-number.
+
+See also: 'ZFIND', 'ZPURGE'
+~
+zcreate
+Syntax: 'ZCREATE <ZoneNumber>'
+
+Creates a dummy Zone with given number if possible.
+
+See also: 'ZCLONE', 'ZEDIT', 'ZFIND', 'ZLIST', 'ZSHOW'
+~
+zedit
+Syntax: 'ZEDIT <[#.]NamePattern>' , 'ZEDIT <ZoneNumber>'
+
+Invoke the build-in Zone-Editor.
+
+Argument Format:
+[#.]        - The # ocurrance of a Zone fitting the SearchPattern.
+	      default is first Zone.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+ZoneNumber  - The number of a Zone.
+
+For more detailed information read the documentation files.
+
+See also: 'ZFIND', 'ZLIST', 'ZPURGE', 'ZSHOW'
+~
+zfind
+Syntax: 'ZFIND <NamePattern>
+
+Shows all Zone-Names with Zone-Number fitting the SearchPattern.
+
+For more details about the wildcards read the docutentation files.
+
+See also: 'ZLIST', 'ZSHOW'
+~
+zlist
+Syntax: 'ZLIST'
+
+Shows all Zones in the database. Has the same effect as ZFIND *
+
+See also: 'ZFIND', 'ZSHOW'
+~
+zpurge
+Syntax: 'ZPURGE <ZoneNumber>'
+
+Deletes the given Zone out of the database-file.
+- WARNING - ONCE PURGED ZONES CAN'T BE RESTORED!
+
+See also: 'ZCREATE', 'ZFIND', 'ZLIST', 'ZSHOW'
+~
+zshow
+Syntax: 'ZSHOW <[#.]NamePattern>' , 'ZSHOW <ZoneNumber>'
+
+Shows the data of the given Zone.
+
+Argument Format:
+[#.]        - The # ocurrance of a Zone fitting the SearchPattern.
+	      default is first Zone.
+NamePattern - Pattern to fit the name. Allowed wildcards are: * [] ? !
+ZoneNumber  - The number of an Zone.
+
+For more detailed information read the documentation files.
+
+See also: 'ZFIND', 'ZLIST'
+~

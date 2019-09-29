@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+*        text=auto
+ 
+lib/tinyworld.mob-ORIG			binary
+lib/tinyworld.new/tinyworld.*		binary

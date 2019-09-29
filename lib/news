@@ -1,19 +1,17 @@
-================================ TODAYS NEWS ===================================
-                            Welcome to NARAI-MUD
---------------------------------------------------------------------------------
-96/8/9		MUD Restart	96/8/9 pm 10:00 
-97/1/27		Mud work again 		-_-
-97/2/24		MUD Restart 97/2/24 pm 9:20 
-97/2/24		Meta, Quest changed.
-97/3/10		Wimpy changed.
+** Remortal한 class의 주 사용 종족 변환
+   Metaphysician room에서 remortal한 char의 주 사용 종족을 변환할 수 
+   있습니다. 변환에 필요한 exp는 25M이며, 사용횟수는 제한이 없습니다. 
 
-10/12/20	MUD restarted
-11/1/17		Changes in lastchat (Timestamp added)
-11/1/20		Changes in command order (k, b, gr, f, c, ca, fl, fla)
-11/1/29		'enchant weapon' modified ("EXTREMELY" increased success rate)
-11/2/23		'enchant weapon' will be gradually rolled back.
-11/12/24	Visit Users Forum ( http://narai.forumkorean.com/ )
+   예를 들어 Mt를 변환하는 경우 Tm이 되고, Cw는 Wc가 되는 식으로
+   동작을 합니다.
 
-12/01/30	MUD restarted and 'enchant weapon' rerolled
-18/05/22	MUD restarted
---------------------------------------------------------------------------------
+** 몇가지 추가된 사항
+- 몇몇 방은 spell blocker mob의 유무에 상관없이 magic을 쓸 수 없습니다.
+  새로운 존이 추가되거나 기존의 zone이 rebalancing되는 경우 magic을
+  쓸 수 없는 방이 추가될 수 있습니다.
+- Temple of Mid와 Rounge에서 recall사용을 하면 recall만 없어집니다. 
+  추후 추가되는 존이나 기존 zone에 recall이 안되는 방이 들어갈 수
+  있습니다.  지금 계획으로는 hell zone을 좀 쉽게 balancing을 하고 
+  이 zone 전체를 no_recall zone으로 설정할 생각이 있습니다.
+- TUNNEL을 tunnel처럼 동작하도록 했습니다. 
+  Desert가는 길에 나오는 tunnel을 동시에 두명만 들어갈 수 있도록 했습니다.

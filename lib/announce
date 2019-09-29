@@ -1,0 +1,19 @@
+*)target이 지정안되면 heal이 self heal로 동작도록 하였습니다.
+*)Charm가능한 chamie의 수를 wis/9+level/20로 변경합니다.
+*)Poison 성공 메시지를 출력했습니다.
+#O)Ct,Mt의 backstab damage이 조금 상승했습니다.(1/15)
+O)Identify 마법이 전투 중에도 가능하게 변경했습니다.
+O)Board room 옆방에 baseball game room이 들어섰습니다.(by Marx)
+O)Mid에 있던 sailor room에서 Item을 수리해줍니다. type NEWS
+#O)Retrive하고 난 후에 옷 입은 상태를 그대로 유지하게 했습니다.
+O)criminal tag를 동작토록 하였습니다.
+#O)Magic cast delay를 조금 줄였습니다.
+O)paralysis,cure paralysis spell을 넣었습니다.
+O)Level 1인 경우에 자신의 stat을 reroll할 수 있습니다.
+O)Rent에 대한 명령어를 정리했습니다. help rent
+O)3명이상의 Group의 leader에게 추가의 extra exp bonus를 주었습니다.
+#O)아파트의 보관함의 한 슬롯에 저장할수 있는 물품 갯수를 3으로 제한합니다.
+#O)Deathfight zone인 easyland를 no recall zone으로 변경합니다.
+#O)M, C의 move regen수치 조정
+O)Mob의 최소 ss를 높였습니다. 
+O)Remortal한 character는 자기의 주 class를 변경할 수 있습니다.

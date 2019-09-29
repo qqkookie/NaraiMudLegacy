@@ -1,0 +1,61 @@
+Hit point는 CON 수치와 밀접한 관계가 있습니다.
+Move point는 DEX 수치와 밀접한 관계가 있습니다.
+Mana point는 level up시는 wiz, gain은 INT와 관련 있습니다.
+자기의 상태정보는 level 13에서부터 볼수 있습니다.
+이 머드 내엔 몇가지 Quest가 있다고 알려져 있습니다.
+그룹 play시 얻는 경험치는 player의 level과 관련 있습니다.
+Smash type의 무기는 사용자의 INT, WIZ가 낮을 수록 잘 사용합니다.
+...
+MUD내에는 몇개의 level gate가 있습니다. (eg. shire)
+Dump에 관련된 quest가 있다고 알려져 있습니다. Who knows?
+Mayor는 쓰레기 문제로 골치가 아픈듯합니다.
+Arachnos엔 int를 올려주는 item이 있다고 알려져 있습니다.
+학교에는 가끔 버려져있는 yellow potion이 있습니다.
+Zyekian castle엔 무서운 마법사가 살지요...
+Saint가 되면 가끔 추가적인 damage로 때릴 수 있죠.
+Level up시에 prac 숫자는 wis와, prac시의 올라가는 수치는 int와 관련 있습니다.
+REGEN용 item은 hit, mana, move point를 더 빨리 채워줍니다.
+Dangun thief의 backstab damage는 *8입니다.
+Extra damaging은 damage를 30%에서 50%정도 늘려줍니다.
+Musashi는 level 31이상인 player를 random하게 선택하여 공격합니다.
+Unknown origin seed는 prac 수치가 40이상인 skill을 선택 99로 만들어줍니다.
+Loftwick은 중간 레벨에서 갈만한 exp하기 좋은 zone입니다.
+Level이 10이상일 때부터 죽을 때 item이 깨집니다.
+Item이 깨지는 빈도는 상대 mob의 level에 의존합니다.
+Thalos는 level 25부터 들어가지 못합니다.
+Hecate가 살고 있는 방에서 teleport가 가능하다고 알려져 있습니다.
+하수도엔 저레벨용 괜찮은 item들이 있습니다.(muddy boots, purple, magic boots)
+Blue dragon은 force shield를 가지고 있습니다.
+Super deathcure는 전투중 aggressive mob을 소환하기도 합니다.
+Bird, senior, junior, teleport machine은 mage가 chamie로 많이 이용하는 mob이죠.
+Bombard는 조각나버린 sword조각을 찾길 원합니다.
+옥새를 만들기 위해선... 
+병원에서 제공하는 service 금액은 level에 비례하여 비싸집니다.
+Shire의 egg는 원기 회복용으로 좋습니다.
+disintegrate magic은 sanc에 상관없이 damage를 줍니다.
+Sancuary 마법은 damage를 반으로 줄여줍니다.
+Saving breath, Saving spell은 -값이 좋은겁니다.
+power stone을 쥐면 마법 성공률이 높아집니다.
+enery drain 마법은 성향을 evil로 만듭니다.
+Level이 20이상일때부터 exp가 없으면 죽거나 flee할때 hit, move, mana가 깍입니다.
+Level 6부터는 Identify spell로 상태를 알수 있습니다.
+Zeus 있는 곳에 능력치를 올릴 수 있는 장소가 있다고 알려져 있습니다.
+Gobind는 마법을 막는 능력을 지니고 있습니다. 
+Gobind는 전직이 포수였다고 합니다.(믿거나 말거나...)
+오나라의 청룡이 마나 사용량을 줄여주는 여의주를 가졌답니다.
+LAG monster는 31이상의 player를 LAG으로 공격합니다. LAG!!!
+Chamie가 kick을 하는 경우 delay를 master가 당합니다.
+청룡은 마법을 막는 능력을 가지고 있습니다.
+teleport potion으로 어려운 mob을 날려버리는 것도 괜찮은 방법중에 하나죠..
+sumiae가 들고 있는 item은 꽤 좋습니다. (Timber)
+sumiae는 8000이하가 되면 full heal을 4번 합니다 (Timber)
+sumiae는 싸울때 player를 teleport 시킨다는군요 (Timber)
+Berserk상태가 되면 flee가 불가능합니다 (Timber)
+Dark serphim이 가진 vorpal blade는 특수능력이 좋다는군요 (Timber)
+단군이 되면 아파트를 분양 받을 수 있답니다 (Timber)
+DK의 lady, maid sura는 non aggressive입니다 (Zim)
+Mana regen에 관계된 수치는 int 입니다.
+Move regen에 관계된 수치는 dex 입니다.
+Hit regen에 관계된 수치는 con 입니다.
+Advance 할때 prac number 증가에 관계된 수치는 wis 입니다.
+Skill 을 practice할때 int가 높을수록 잘 배웁니다.

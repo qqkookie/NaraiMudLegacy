@@ -1,8 +1,21 @@
+-------------------------------------------------------------------------------
+Movement:                       | Communication:
+NORTH SOUTH EAST WEST UP DOWN   | SAY SHOUT TELL ASK WHISPER
+LOOK EXITS ENTER LEAVE          | Rent:
+SLEEP WAKE REST SIT STAND       | RENT OFFER RETRIEVE
+(LOCK UNLOCK OPEN CLOSE)        |
+-------------------------------------------------------------------------------
+Objects:                        | Information: 
+GET DROP PUT GIVE WEAR GRAB     | SCORE HELP INFO WHO NEWS TIME WEATHER WHERE
+INVENTORY EQUIPMENT EXAMINE EAT | CONSIDER LEVELS WIZLIST CREDITS WIZHELP
+TASTE POUR WRITE DRINK SIP      | DISPLAY HANGUL USER QUEST
+-------------------------------------------------------------------------------
+Combat:                         | Utility:
+KILL WIELD FLEE ASSIST          | ! BUG IDEA TYPO QUIT SAVE BRIEF COMPACT
+(KICK BASH RESCUE BACKSTAB CAST)| AUTOEXIT
+-------------------------------------------------------------------------------
+Further information available by HELP <keyword>, keyword being a command or 
+(for example) one of the following:
 
-Type "help <topic>" to see each topic.
-
-available topic :
-	information (available now)
-	command list(available now)
-	skill list (available now)
-	spell list (available now)
+SOCIAL SHOPS INNS CLERIC WARRIOR THIEF MAGIC
+-------------------------------------------------------------------------------
