@@ -1,0 +1,88 @@
+#!/bin/sh
+#
+#       Excute it ONCE to Restart MUD.
+#
+#	It will rename ./users dir (which has player file, stash, logs and
+#	backup tar file) to ./users.old and make new ./users dir.
+#
+#       This "RESTART" should be in top directory of MUD. (ex. ~mud/narai/)
+#	and excuted there. e.g. $ /bin/sh RESTART > log 
+#       After running, "RESTART" file will be renamed to "RESTART.DONE"
+#	
+#	RESTART written by Cookie on Sun Sep 14 01:50:36 KST 1997
+
+export MUDHOME=`pwd`
+PATH=/bin:/usr/bin/:/usr/local/bin:$MUDHOME/bin:
+        
+# Real jobs..
+#
+echo "=========  RESTART SCRIPT BEGIN ======"
+
+echo Check here is MUD top directory.
+if [ ! -r RESTART -o ! -d lib ] ; then
+	echo \"RESTART\" should be excuted in top dir of MUD.
+	exit 1
+fi
+
+mudhome=$MUDHOME
+
+# All logs, player files and stash files are saved in $usrdir 
+usrdir=$mudhome/users
+
+stash=$usrdir/stash 
+susrdir=$usrdir	
+
+cd $mudhome || exit 2 
+
+echo MUD Home dir is \"`pwd`\"
+
+#	To save old user files, rename it 
+if [ -d $usrdir ]; then
+	/bin/mv $usrdir users.old
+	echo Old user dir is renamed as \"users.old\"
+fi
+
+#  	Setup new ./user dir 
+#	It will hold players files, item stash, logs, and source tar files 
+#	and backups of them.
+
+if [ ! -d $usrdir ]; then
+	echo Setting up new user dir as \"$usrdir\"
+	/bin/mkdir -p $usrdir
+	> $usrdir/players
+	/bin/mkdir $usrdir/boards
+	/bin/mkdir $usrdir/mboxes
+	/bin/chmod 700 $usrdir $usrdir/players 
+fi
+
+if [ ! -e $stash ]; then
+	echo Setting up new item stash dir as \"$stash\"
+	/bin/mkdir -p $stash 
+	/bin/chmod 700 $stash
+	( cd $stash ; 
+	mkdir a b c d e f g h i j k l m n o p q r s t u v w x y z )
+fi 
+ 
+if [ "$usrdir" = "$mudhome/user" ] ; then
+	susrdir="../user"
+fi
+if [ ! -L lib/stash ] ; then
+	/bin/mv 	lib/stash $stash.old 
+	echo Old stash moved to \"$stash.old\".
+	/bin/ln -s	$susrdir/stash lib/stash
+fi 
+
+# make symbolic link to user dir.
+echo "Set up players file, board and mbox."
+if [ ! -L lib/players ] ; then
+	/bin/mv 	lib/players* $usrdir
+	/bin/ln -s	$susrdir/players lib/players
+	/bin/mv -f 	lib/boards/* $usrdir/boards
+	/bin/ln -s	$susrdir/players lib/boards
+	/bin/mv -f 	lib/mboxes/* $usrdir/mboxes
+	/bin/ln -s	$susrdir/players lib/mboxes
+fi 
+
+echo \"RESTART\" file is renamed as \"RESTART.DONE\"
+/bin/mv	RESTART RESTART.DONE 
+echo "=========  RESTART SCRIPT DONE  ======"

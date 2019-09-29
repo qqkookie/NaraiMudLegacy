@@ -1,0 +1,191 @@
+TO DO LIST
+====================================================
+DONE:5. document recent change in source 
+DONE:6. and directory struct. in CHANGE and here.
+
+DONE: 7. write top Makefile and src/Makefile
+
+DONE: move lib/board and mboxs to user and modify RESTART .
+
+DONE: orak bug fix 
+DONE: silent perhaps.. make him more talkative..
+DONE: too long perhaps word kaist ....( not exceed 80 col)
+
+DONE: retire for night need trailing blank line
+DONE: repair mail box
+
+DONE: repair post mail cmd
+DONE: remove board from POST 
+DONE: mbox bug repair
+DONE: check mail when login.
+DONE: move backups in lib to OLD 
+DONE: lib/mboxes dir remove and link 
+DONE: newline before news and send 
+
+DONE:perhaps is strange , debug it.
+DONE: remove blooy mesasge when rent
+DONE: remove bloody message when retire
+DONE:get retun after welcome and mail check..  
+DONE: Dont' attack group member
+DONE: fol , group bug 
+
+DONE: bank fix
+DONE:get retun after welcome and mail check..  
+DONE; stat wiz command need inprovement
+
+DONE: pick open unlock improve
+	- door name first for pick, lock/unlock, open/close direction
+DONE: wizard pick improve
+
+DONE: obj/name matching 'xxxx yyy'
+	- Quoted mutiple words are taken as single argument ( 'like this' ) 
+		cast 'relocate' 'bookkeeper exp' 
+DONE: Banished player should not enter to mid
+DONE: self as argument of cast give .. etc
+ 	'self' is generic name refering yourself. ( cast 'heal' self )
+97/9/26
+DONE:	 You can see "You have MAIL." msg when entering game.
+
+DONE: Follow / group changed. Solo player can't be self-grouped. 
+	  This works even when you are blind or invisible. (Goooood!)
+DONE: Quest ring/necklace/right become more useful.
+DONE: All Tido's suggestions are appreciated. In summary:
+		1. mob would not bash you without wielding weapon.
+		2. sleeping mob or mob who can't see player can't steal money.
+		3. charmed mob don't steal master's money or leave master.  
+-------------------------------------------------------
+message 1 : 그냥 이상한 점 몇가지 :P by Tido
+우선 Bash 문제. Mobile 들은 bash 를 무기 없이 하는데 이치에 안맞는
+점인거 같아요.. 고쳤음 하구여.
+
+Mobile 이 thief 일 경우 돈을 훔치는데 잘때도 훔치고 invisible 못보는
+Lamia 같은 애덜두 invisible player 한테서 돈 훔치져..
+역시 Mob 이 thief 일 경우 chamie 인데도 불구하구 돈 훔친후 튀져..
+
+-------------------------------------------------------
+DONE: pund pierce sword staff 를 알수 있게.
+DONE: look part fix (recursive look in bag */
+DONE:page it
+DONE: indent it
+
+DONE:jail 에서 시간 다되면 나올 수 있게
+DONE:jail 에서는 소리 못치게,chat 못하게 , 마법 못하게. only quaff
+DONE: recite 못하게
+DONE: fix chat 쒸쒸 
+DONE: JOIN guild log -> ^M
+DONE: complain if post fail "post paper" without title.
+DONE: enable korean comand ㅣ
+DONE: you discover hand in pocket... crlf check and improve probability.
+DONE: hit .. confused?! crlf
+DONE: 지존 마법사.... + crlf.
+DONE: Reduce score Regen line.
+
+DONE: magic power blocked.. add crlf 
+DONE: Add old gods in credit. from wizard.backup 
+DONE: log chatting.
+DONE: do_point()
+
+DONE: "wear all" auto matic  hold light/ holditem, wield.
+DONE: ' say logging
+
+DONE: Do noplaying 
+DONE: Do logcommand , do command loging
+DONE: Do af_next code 
+DONE: setting listing logcommand flag
+DONE: setting listing noenchant
+DONE: setting listing noplaying flag.
+
+DONE: resolve symbolic link players file.
+DONE: cp player -> cp -p players
+DONE: everun wait next run 300 sec.
+DONE : don't list bag in bag  (no recursive)
+DONE: simplify gun reloading
+
+====================================================
+Belles board letter.
+
+일단 들어오고 나갈때 엔터 누르는 수가 한번 늘었는데
+습관이 안되서 인지 좀 불편하구요
+
+그담에 bag안에 bag이 있으면 
+examine bag하면 왜 안에있는 bag까지 덩달아 examine하는건지
+일명 recursion인가 쿠쿠.. 이거 고쳐졌으면 하구요
+
+또 혼자다니면 group이 안되던데 이것두요
+xp나 gold를 볼수 없어서 약간 불편하구 
+Gt로 sanc나 armor꺼지고 켜질때 Action쓰는 사람들 많은데
+
+TO DO LIST
+1. include descroption of RESTART and RUNME here
+2. and backup, everrun
+explain utils/tar-new shutmud
+3. write desc of 
+CHANGES
+Makefile
+OLD
+README
+RESTART
+bin
+include
+lib
+obj
+src
+src/utils
+users 
+4. write how to port to new machine and restart
+check title name change or bug 
+give perhaps more tips to says for newbie
+write newbie file for newbies help
+Plz more tips for newbie in newbie file
+write help on unequip, unhold
+From fight.c::group_gain():  
+	NOTE: This assertion fails sometimes.. Why? Winner fled? Find out! */
+	assert(no_members); */ /* To prevent divide by zero */
+        no_members = MAX(1, no_members);
+
+remove assert on group num == 0 debug it
+
+change save file ext. .x.y -> .item
+exp, gold over flow fix
+ wizard open improve
+fix set player passwd
+	 - Rename confusing mob name (like two hydra)
+hydra name 'hydra 50-headed'
+	- special ring items
+	- more enhenced stat/point/meta items
+	- increase importance of stat except AC, DR. especially HR.
+        - Increase importance of stat like HR except AC, DR.
+	- Exp and gold gain / group gain chang little bit more reasonably.
+	- Please, recruit *FEMALE* playes around you to have more fun.
+	- Special provision for group PK!
+
+You can see the female part of Capus Couple.
+Capus 가 아니라 Campus 같아용...
+
+message 2 : 군발이 :p by Chan 
+372-4131 , 011-731-3133 , 017-342-4131
+
+message 3 : group play에 대한 제안 :P by Nix
+
+그냥 혼자 하기 심심해서.. 
+그룹 리더의 quest가 그룹원모두의 quest가 되게하면,
+그룹으로 많이 돌아다니겠죠..
+물론, 리더보다 상위레벨은 그룹할수 없게 해야겠죠.
+그룹정원도 세명으로 제한하고..
+
+추신)소류켄,tornado 성공률 좀 올려주세요.
+
+permit relo/summon to mob of different guild.
+
+fix freeze up when hit ^C during paging.
+randomize exp gold gain
+
+check post paper/board not removed in title....
+check board hangul titile broken.  
+
+alias listing /adding alias
+auto light holding.
+auto staff.
+auto wield
+wield show wepon
+hold show weapon

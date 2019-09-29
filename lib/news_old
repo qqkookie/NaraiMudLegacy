@@ -1,0 +1,154 @@
+             ===== <<<    OLD NEWS ARCHIVE   >>> =====
+                          NEW NARAI TIMES
+-------------------------------------------------------------------------------
+97/11/24
+    - Narai Villa model house open for sale. See board for detail.
+    - Default target of following spell is thyself.
+	* heal, bless, haste, sanc, armor, love, remove curse/poison, cure ...
+    - 'score' will show class and leader you are following.
+    - Good news and good news for 'shouryuken', 'spin bir kick'.
+    - Bad news and bad news for 'backstab'.
+    - spell 'curse' / 'remove curse' gained new ability!! 
+	Good news for Cleric. Bad news for Mage.
+    - White 'sanc' aura gets less bright. 
+
+    - Some change in aliases. (removed 'self' args) 'show plan' again.
+    - You can 'relo' to mobile regardless of guild.
+    - Little better 'mana boost'.   
+    - Charmie can cast spell to its master.
+
+-------------------------------------------------------------------------------
+97/11/08 
+    ANNONCEMENT: NARAI UNDERWENT MAJOR SURGERICAL OPERATION.
+    Plz send her well-wishing letter for early recovery from surgery wounds. 
+
+    - 'NEWS' command is remove and replaced by 'show news'.
+    - To retrieve old news from archive, 'show old'.
+    - Commands 'credit', 'plan', 'wizlist' are also replaced by
+    	'show credit', 'show plan', 'show wizard'. 
+
+    - 'noshout', 'nochat', 'notell' commands removed and replaced by 
+    	'set shout on/off', 'set chat on/off', 'set tell on/off'.   
+    - 'solo', 'compact', 'brief' commands removed and replaced by
+	'set solo on/off', 'set compact on/off', set brief on/off'.
+    - 'title' command is changed to 'set title <title-string>'
+    - 'wimpy' command is changed 'set wimpy on/off/<value>'
+
+    - Now, you can adjust page length of 'spell', 'inv', 'exam', etc..
+    - To set page length of display: 'set pagelength 22'
+
+    - 'unwield', 'unhold' command removed. Try 'wield', 'hold' with no arg.
+    - Try 'score -b' or 'score /brief' for compact display.  
+    - You can 'consider' player for PK.. But...
+    - Try 'time' and 'level'.
+    - All social action command have lower precedence over other command.
+	Ex) 'ki' will be parsed as 'kill' not 'kiss'.
+
+    - New command alias : Review again. ('show plan') 
+    - Spell name alias. Ex)  cast 'enwe' -> cast 'enchant weapon'
+    See 'plan' for complete list and post your opinion on board.
+	
+    - I have a good news and a bad news for 'shouryuken' and 'spin bird kick'..
+    - You can 'punch' while wielding weapon.
+    - Try 'throwing object' with very heavy object.
+    - 'lightning move' gets little better.
+    - Try 'identify' yourself with scroll.
+
+    - Dropping coin in Dump will get more exp than before.  
+    - Better flavour! Enjoy firebreath or golden nectar!
+	But too much drinking may be hazardous to your health.
+    - New formula! Drink 'condition' to ease severe hang over! 
+
+    - You are in wimpy mode on entering game by default till Nov. 30.
+    - BADA nim, Ljw nim, JINNY nim will be aworded for their contributions.
+
+-------------------------------------------------------------------------------
+97/10/17 
+
+    - Mayor of MID city recovered from illness. Congra! Mr. Mayor.
+    - Two of Belle's suggestions are accepted. In summary:
+	'examin' bag will not show contents of bag in bag. (no recurse)
+	  To look contents of bag in bag, try 'look in' bag.
+	Solo player (not grouped) can 'gtell' to him/herself.
+	  This is for tintin "#action {<pattern>} {gtell <msg...> }".
+
+    - Some command aliases are introduced. 
+	Ex. "xh" -> "exam holding"; "hh" -> "cast 'self'"; "/" -> "chat".
+      Sorry, this is just first step to fully customaizable alias system.
+      See 'plan' for complete list and post your opinions on board.
+    - This changed precedence of some single character commands.
+	Ex. "b" -> "backstab"; "t" -> "tornado"; "r" -> "remove" ...  
+    - Abbreviation of 'emote' is change from "," to "~".
+
+    - 'target' is generic name for char. you or your leader 'pointed'. 
+      ('point 2.guard') Or char. you are fighting now. ('look target')
+      This is valid even after mob fleed or you 'lightning move'd.
+    - 'point' action will set 'target' for forthcoming violence of you;
+      And of your group members if you are group leader.
+
+    - Reloading gun made easy. New syntex: "reload [gun-name [ammo-name]]"
+      Gun can be reloaded while holding it. Just 'reload' without args.
+      And you can omit ammo name as long as ammo is in your inventory.
+
+    - Medical service fee for health-care and trans-sexual operation adjusted
+      to catch up doctor salary hike and to cover rising drug cost.
+      But poor low leveler will get Medi-aid benefit from the City Council.
+
+    - When you wake up from sleeping, you are resting, not sitting.
+    - "wear all" will hold light, grab mascot, wield an weapon.
+
+------------------------------------------------------------------------------
+97/10/06 
+    - Amar will help you as a new Imple when Yerin is busy.
+
+    - Jail reopened after building renewal. Be a good boy.
+    - Setting wimpy value zero has new meaning.  
+    - 'leader' is generic name for player you follow. ('assist leader')
+    - 'score' form changed. Plz write opinions about it on board.
+    - Try 'buy 10 solar' to buy that many items in single transaction.
+    - Try 'tell ! message' to talk with one you talked/replied last time.
+    - Try 'chat' or 'cant' without argument.
+    - Pen is out of stock. Use your finger for writing board or letter. 
+    - Improved little: inv, exa bag, report, exit, spell, pr, time.
+    - Damage message in group fight changed little.
+    - Cleric inflicts as much damage as pound weapon with crush weapon.  
+    - 'look' item closely. Especially weapon.
+
+-------------------------------------------------------------------------------
+97/9/27
+    - Sluggish economy of Korea finally hit here!! Expect hard times. 
+    - You can see "You have MAIL." msg when entering game.
+
+    - Follow / group changed. Solo player can't be self-grouped. 
+    - 'self' is generic name refering yourself. ( cast 'heal' self )
+      This works even when you are blind or invisible. (Goooood!)
+    - Quest ring/necklace/right become more useful.
+    - Quoted mutiple words are taken as single argument ( 'like this' ) 
+	    cast 'relocate' 'bookkeeper exp'
+    - open, close, lock,unlock, pick are little better. 
+    
+    - All Tido's suggestions are appreciated. In summary:
+	    1. mob would not bash you without wielding weapon.
+	    2. sleeping mob or mob who can't see player can't steal money.
+	    3. charmed mob don't steal master's money or leave master.
+
+    - Improvement by your good suggestion will be named after you.  
+    - Please, recruit *FEMALE* playes around you to have more fun.
+
+    - Mailing list is up.  'help mailing list' for more info.
+
+-------------------------------------------------------------------------------
+97/9/17
+    - Delete character menu is under test. Report anormaly.
+    - Expert Players, write helpful tips for newbies on board.
+    - Mail system fixed. Send love letter to your girl firend.
+
+-------------------------------------------------------------------------------
+97/9/11   Narai MUD born again!!!  Happy birth day! Narai.. ^_^
+
+        - Warrior's max hand dice is now 50d50
+        - No meta ticket for non-dangun quest, just more quest items.
+        - All remo dangun can request at cost of 10 quest.
+        - You can't buy mata more than 15000 before all remortal
+
+-------------------------------------------------------------------------------

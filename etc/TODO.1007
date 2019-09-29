@@ -1,0 +1,173 @@
+TO DO LIST
+1. include descroption of RESTART and RUNME here
+2. and backup, everrun
+explain utils/tar-new shutmud
+3. write desc of 
+CHANGES
+Makefile
+OLD
+README
+RESTART
+bin
+include
+lib
+obj
+src
+src/utils
+users 
+
+4. write how to port to new machine and restart
+DONE:5. document recent change in source 
+DONE:6. and directory struct. in CHANGE and here.
+
+DONE: 7. write top Makefile and src/Makefile
+
+move lib/board and mboxs to user and modify RESTART .
+
+check title name change or bug 
+DOING: orak bug fix
+
+DONE: silent perhaps.. make him more talkative..
+too long perhaps world kaist ....( not exceed 80 col)
+give perhaps more tips to says for newbie
+
+write newbie file for newbies help
+Plz more tips for newbie in newbie file
+DONE: retire for night need trailing blank line
+repair mail box
+
+DONE: repair post mail cmd
+DONE: remove board from POST 
+DONE: mbox bug repair
+mbox bug test
+DONE: check mail when login.
+DONE: move backups in lib to OLD 
+clean up lib dir
+
+lib/mboxes dir remove and link 
+
+write help on unequip, unhold
+
+DONE: newline before news and send 
+
+DONE:perhaps is strange , debug it.
+DONE: remove blooy mesasge when rent
+DONE: remove bloody message when retire
+From fight.c::group_gain():  
+ /* NOTE: This assertion fails sometimes.. Why? Winner fled? Find out! */
+         /* assert(no_members); */ /* To prevent divide by zero */
+	         no_members = MAX(1, no_members);
+
+remove assert on group num == 0 debug it
+
+change save file ext. .x.y -> .item
+DONT:get retun after welcome and mail check..
+
+Dont' attack group member
+fol , group bug 
+
+exp, gold over flow fix
+bank fix
+NEED MORE THINKING :get retun after welcome and mail check..
+
+stat wiz command need inprovement
+
+pick open unlock improve
+wizard open improve
+
+fix set player passwd
+obj/name matching 'xxxx yyy'
+hydra name 'hydra 50-headed'
+Banished player should not enter to mid
+self as argument of cast give .. etc
+    - More tip and help info. for newbie.. 
+    (Your contribution is strongly needed)
+	 - Rename confusing mob name (like two hydra)
+	- door name first for pick, lock/unlock, open/close direction
+	- special ring items
+	- more enhenced stat/point/meta items
+	- increase importance of stat except AC, DR. especially HR.
+        - Increase importance of stat like HR except AC, DR.
+	- Exp and gold gain / group gain chang little bit more reasonably.
+97/9/26
+	- Sluggish economy of Korea finally hit here!! Expect hard times. 
+	- You can see "You have MAIL." msg when entering game.
+
+	- Follow / group changed. Solo player can't be self-grouped. 
+	- 'self' is generic name refering yourself. ( cast 'heal' self )
+	  This works even when you are blind or invisible. (Goooood!)
+	- Quest ring/necklace/right become more useful.
+	- Quoted mutiple words are taken as single argument ( 'like this' ) 
+		cast 'relocate' 'bookkeeper exp'
+	
+	- All Tido's suggestions are appreciated. In summary:
+		1. mob would not bash you without wielding weapon.
+		2. sleeping mob or mob who can't see player can't steal money.
+		3. charmed mob don't steal master's money or leave master.
+
+	- Improvement by your good suggestion will be named after you.  
+	- Please, recruit *FEMALE* playes around you to have more fun.
+
+-------------------------------------------------------------------------------
+	- Special provision for group PK!
+	- Expect hard times.
+
+						      ~
+
+[1568,1609,1587] read 1
+message 1 : 그냥 이상한 점 몇가지 :P by Tido
+
+안녀셔요.. :)
+
+우선 Bash 문제. Mobile 들은 bash 를 무기 없이 하는데 이치에 안맞는
+점인거 같아요.. 고쳤음 하구여.
+
+Mobile 이 thief 일 경우 돈을 훔치는데 잘때도 훔치고 invisible 못보는
+Lamia 같은 애덜두 invisible player 한테서 돈 훔치져..
+역시 이치에 안맞아용..
+
+역시 Mob 이 thief 일 경우 chamie 인데도 불구하구 돈 훔친후 튀져..
+
+You can see the female part of Capus Couple.
+Capus 가 아니라 Campus 같아용...
+
+담에 또 쓸께여.. 수고하셔용..
+
+[1568,1609,1587] 
+
+						      ~
+
+[1568,1609,1588] read 2
+message 2 : 군발이 :p by Chan
+
+후암.. 드뎌 ㉨휴가나왔어요..
+술사줄분 연락하세요..
+372-4131 , 011-731-3133 , 017-342-4131
+흐흐.
+그럼~ 안녕히~
+
+[1568,1609,1588] read 3
+message 3 : group play에 대한 제안 :P by Nix
+
+그냥 혼자 하기 심심해서.. 
+그룹 리더의 quest가 그룹원모두의 quest가 되게하면,
+그룹으로 많이 돌아다니겠죠..
+물론, 리더보다 상위레벨은 그룹할수 없게 해야겠죠.
+그룹정원도 세명으로 제한하고..
+
+추신)소류켄,tornado 성공률 좀 올려주세요.
+
+
+fix freeze up when hit ^C during paging.
+pund pierce sword staff 를 알수 있게.
+randomize exp gold gain
+
+look part fix (recursive look in bag */
+page it
+indent it
+
+DONE:jail 에서 시간 다되면 나올 수 있게
+DONE:jail 에서는 소리 못치게,chat 못하게 , 마법 못하게. only quaff
+DONE: recite 못하게
+
+permit relo/summon to mob of different guild.

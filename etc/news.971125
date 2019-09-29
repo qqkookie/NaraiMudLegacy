@@ -1,0 +1,65 @@
+             ===== <<<    RECENT BREAKING NEWS    >>> =====
+                            NEW NARAI TIMES
+-------------------------------------------------------------------------------
+97/11/24
+    - Narai Villa model house open for sale. See board for detail.
+    - Default target of following spell is thyself.
+	* heal, bless, haste, sanc, armor, love, remove curse/poison, cure ...
+    - 'score' will show class and leader you are following.
+    - Good news and good news for 'shouryuken', 'spin bir kick'.
+    - Bad news and bad news for 'backstab'.
+    - spell 'curse' / 'remove curse' gained new ability!! 
+	Good news for Cleric. Bad news for Mage.
+    - White 'sanc' aura gets less bright. 
+
+    - Some change in aliases. (removed 'self' args) 'show plan' again.
+    - You can 'relo' to moble regardless of guild.
+    - Little better 'mana boost'.   
+    - Charmie can cast spell to master.
+
+-------------------------------------------------------------------------------
+97/11/08 
+    ANNONCEMENT: NARAI UNDERWENT MAJOR SURGERICAL OPERATION.
+    Plz send her well-wishing letter for early recovery from surgery wounds. 
+
+    - 'NEWS' command is remove and replaced by 'show news'.
+    - To retrieve old news from archive, 'show old'.
+    - Commands 'credit', 'plan', 'wizlist' are also replaced by
+    	'show credit', 'show plan', 'show wizard'. 
+
+    - 'noshout', 'nochat', 'notell' commands removed and replaced by 
+    	'set shout on/off', 'set chat on/off', 'set tell on/off'.   
+    - 'solo', 'compact', 'brief' commands removed and replaced by
+	'set solo on/off', 'set compact on/off', set brief on/off'.
+    - 'title' command is changed to 'set title <title-string>'
+    - 'wimpy' command is changed 'set wimpy on/off/<value>'
+
+    - Now, you can adjust page length of 'spell', 'inv', 'exam', etc..
+    - To set page length of display: 'set pagelength 22'
+
+    - 'unwield', 'unhold' command removed. Try 'wield', 'hold' with no arg.
+    - Try 'score -b' or 'score /brief' for compact display.  
+    - You can 'consider' player for PK.. But...
+    - Try 'time' and 'level'.
+    - All social action command have lower precedence over other command.
+	Ex) 'ki' will be parsed as 'kill' not 'kiss'.
+
+    - New command alias : Review again. ('show plan') 
+    - Spell name alias. Ex)  cast 'enwe' -> cast 'enchant weapon'
+    See 'plan' for complete list and post your opinion on board.
+	
+    - I have a good news and a bad news for 'shouryuken' and 'spin bird kick'..
+    - You can 'punch' while wielding weapon.
+    - Try 'throwing object' with very heavy object.
+    - 'lightning move' gets little better.
+    - Try 'identify' yourself with scroll.
+
+    - Dropping coin in Dump will get more exp than before.  
+    - Better flavour! Enjoy firebreath or golden nectar!
+	But too much drinking may be hazardous to your health.
+    - New formula! Drink 'condition' to ease severe hang over! 
+
+    - You are in wimpy mode on entering game by default till Nov. 30.
+    - BADA nim, Ljw nim, JINNY nim will be aworded for their contributions.
+
+-------------------------------------------------------------------------------

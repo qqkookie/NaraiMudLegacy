@@ -1,0 +1,448 @@
+TO DO LIST
+====================================================
+DONE:5. document recent change in source 
+DONE:6. and directory struct. in CHANGE and here.
+
+DONE: 7. write top Makefile and src/Makefile
+
+DONE: move lib/board and mboxs to user and modify RESTART .
+
+DONE: orak bug fix 
+DONE: silent perhaps.. make him more talkative..
+DONE: too long perhaps word kaist ....( not exceed 80 col)
+
+DONE: retire for night need trailing blank line
+DONE: repair mail box
+
+DONE: repair post mail cmd
+DONE: remove board from POST 
+DONE: mbox bug repair
+DONE: check mail when login.
+DONE: move backups in lib to OLD 
+DONE: lib/mboxes dir remove and link 
+DONE: newline before news and send 
+
+DONE:perhaps is strange , debug it.
+DONE: remove blooy mesasge when rent
+DONE: remove bloody message when retire
+DONE:get retun after welcome and mail check..  
+DONE: Dont' attack group member
+DONE: fol , group bug 
+
+DONE: bank fix
+DONE:get retun after welcome and mail check..  
+DONE; stat wiz command need inprovement
+
+DONE: pick open unlock improve
+	- door name first for pick, lock/unlock, open/close direction
+DONE: wizard pick improve
+
+DONE: obj/name matching 'xxxx yyy'
+	- Quoted mutiple words are taken as single argument ( 'like this' ) 
+		cast 'relocate' 'bookkeeper exp' 
+DONE: Banished player should not enter to mid
+DONE: self as argument of cast give .. etc
+ 	'self' is generic name refering yourself. ( cast 'heal' self )
+97/9/26
+DONE:	 You can see "You have MAIL." msg when entering game.
+
+DONE: Follow / group changed. Solo player can't be self-grouped. 
+	  This works even when you are blind or invisible. (Goooood!)
+DONE: Quest ring/necklace/right become more useful.
+DONE: All Tido's suggestions are appreciated. In summary:
+	1. mob would not bash you without wielding weapon.
+	2. sleeping mob or mob who can't see player can't steal money.
+	3. charmed mob don't steal master's money or leave master.  
+-------------------------------------------------------
+	message 1 : 그냥 이상한 점 몇가지 :P by Tido
+DONE: 우선 Bash 문제. Mobile 들은 bash 를 무기 없이 하는데 이치에 안맞는
+	점인거 같아요.. 고쳤음 하구여.
+
+DONE: Mobile 이 thief 일 경우 돈을 훔치는데 잘때도 훔치고 invisible 못보는
+	Lamia 같은 애덜두 invisible player 한테서 돈 훔치져..
+DONE: 역시 Mob 이 thief 일 경우 chamie 인데도 불구하구 돈 훔친후 튀져..
+
+-------------------------------------------------------
+DONE: pund pierce sword staff 를 알수 있게.
+DONE: look part fix (recursive look in bag */
+DONE:page it
+DONE: indent it
+
+DONE:jail 에서 시간 다되면 나올 수 있게
+DONE:jail 에서는 소리 못치게,chat 못하게 , 마법 못하게. only quaff
+DONE: recite 못하게
+DONE: fix chat 쒸쒸 
+DONE: JOIN guild log -> ^M
+DONE: complain if post fail "post paper" without title.
+DONE: enable korean comand ㅣ
+DONE: you discover hand in pocket... crlf check and improve probability.
+DONE: hit .. confused?! crlf
+DONE: 지존 마법사.... + crlf.
+DONE: Reduce score Regen line.
+
+DONE: magic power blocked.. add crlf 
+DONE: Add old gods in credit. from wizard.backup 
+DONE: log chatting.
+DONE: do_point()
+
+DONE: "wear all" auto matic  hold light/ holditem, wield.
+DONE: ' say logging
+
+DONE: Do noplaying 
+DONE: Do logcommand , do command loging
+DONE: Do af_next code 
+DONE: setting listing logcommand flag
+DONE: setting listing noenchant
+DONE: setting listing noplaying flag.
+
+DONE: resolve symbolic link players file.
+DONE: cp player -> cp -p players
+DONE: everun wait next run 300 sec.
+DONE : don't list bag in bag  (no recursive)
+DONE: simplify gun reloading
+
+----------------------------------------------------
+Belles board letter.
+
+DONT: 일단 들어오고 나갈때 엔터 누르는 수가 한번 늘었는데
+DONT: 습관이 안되서 인지 좀 불편하구요
+
+DONE : 그담에 bag안에 bag이 있으면 
+DONE : examine bag하면 왜 안에있는 bag까지 덩달아 examine하는건지
+DONE : 일명 recursion인가 쿠쿠.. 이거 고쳐졌으면 하구요
+
+DONE : 또 혼자다니면 group이 안되던데 이것두요
+DONE : xp나 gold를 볼수 없어서 약간 불편하구 
+DONE : Gt로 sanc나 armor꺼지고 켜질때 Action쓰는 사람들 많은데
+
+====================================================
+TO DO LIST
+1. include descroption of RESTART and RUNME here
+2. and backup, everrun
+explain utils/tar-new shutmud
+3. write desc of 
+CHANGES
+Makefile
+OLD
+README
+RESTART
+bin
+include
+lib
+obj
+src
+src/utils
+users 
+4. write how to port to new machine and restart
+check title name change or bug 
+give perhaps more tips to says for newbie
+write newbie file for newbies help
+Plz more tips for newbie in newbie file
+write help on unequip, unhold
+From fight.c::group_gain():  
+	NOTE: This assertion fails sometimes.. Why? Winner fled? Find out! */
+	assert(no_members); */ /* To prevent divide by zero */
+        no_members = MAX(1, no_members);
+
+remove assert on group num == 0 debug it
+
+change save file ext. .x.y -> .item
+exp, gold over flow fix
+ wizard open improve
+fix set player passwd
+	 - Rename confusing mob name (like two hydra)
+hydra name 'hydra 50-headed'
+	- special ring items
+	- more enhenced stat/point/meta items
+	- increase importance of stat except AC, DR. especially HR.
+        - Increase importance of stat like HR except AC, DR.
+	- Exp and gold gain / group gain chang little bit more reasonably.
+	- Please, recruit *FEMALE* playes around you to have more fun.
+	- Special provision for group PK!
+
+You can see the female part of Capus Couple.
+Capus 가 아니라 Campus 같아용...
+
+message 2 : 군발이 :p by Chan 
+372-4131 , 011-731-3133 , 017-342-4131
+
+message 3 : group play에 대한 제안 :P by Nix
+
+그냥 혼자 하기 심심해서.. 
+그룹 리더의 quest가 그룹원모두의 quest가 되게하면,
+그룹으로 많이 돌아다니겠죠..
+물론, 리더보다 상위레벨은 그룹할수 없게 해야겠죠.
+그룹정원도 세명으로 제한하고..
+
+추신)소류켄,tornado 성공률 좀 올려주세요.
+
+permit relo/summon to mob of different guild.
+
+fix freeze up when hit ^C during paging.
+randomize exp gold gain
+
+check post paper/board not removed in title....
+check board hangul titile broken.  
+
+alias listing /adding alias
+DONE: auto light holding.
+auto staff.
+DONE: auto wield
+wield show wepon
+hold show weapon
+-------------------------------------------------------
+DONE: update plan
+DONE:comment out MIN,MAX in utils.h
+DONE:chnaged inet_aton to ... in comm.c
+
+DONE: get .tcshrc
+mail to list
+
+  이 메일링 리스트는 나래 머드의 사용자들간의 친목/정보교환을 위해
+  마련되었습니다.  이 메일링 리스트는 대화의 주제에 대한 제한이 없
+  습니다.  머드에 대한 의견이나 잡담, 다른머드에 관한 이야기 등..
+
+  편지는 narai-l@narai.ml.org로 보내시면 됩니다.
+
+ 그리고 나래 머드의 심각한 버그와 같은 관리자에게만 알려야 될것이
+ 있을때는  immortal-l@narai.ml.org로 보내주십시오.
+
+Run purge
+Run chpass
+Run dupname
+Run dangun
+
+Run chlevel make cookie immotal
+DONE: Document tinyworld.obj change from mail.
+
+DONE: ftp back contents of narai/etc
+
+Sat Oct 18 09:18:11 KST 1997
+========================================================
+DONE: Debug write_to_que malloc fail
+
+DONE: Debug assert fail ssertion failed: file "act.other.c", line 406
+
+DONE: 19:02:53 :: cast 'disin'
+DONE: 19:02:53 :: fol jeong
+
+DONE:  merge shutdown() and shutdow()
+  merge do_echo and do_wall()
+  Make do_echo more useful.
+DONE:  host <- dns... in new_desc...
+DONE:  __FILE__ __LINE___ in header
+DONE:   GET_TITLE<- player.title
+DONE:  check title == 0 on sc, who
+
+DONE:  일부 그 버그를 (title에 관련되 버그) 악용하는 사례가 발생하고 있습니다.
+	 추신: 버그는 뭔지 아시져? title 에 NULL들어가는 버그여여.. ^^
+
+      message 11 : 전의 사항 by JINNY 
+      플레이어는 무기 없어야 punch 가 동작하는걸로 아는데,
+      mob.들은 무기를 장착하고 있어도 punch 를 스는것 같더군여.
+      무기를 장착해야 bash가 나가는것처럼 무기를 장착하면 punch를 스지
+      못하게 했으면 합니다.
+
+message 12 : paper by BADA 
+      Quest : guard minotaur elite 였었는데, 가서 guard 2 잡고..
+      잡자마자 regen되서 또 잡게 되었네요. 
+      그런데 4번이나 잡았어도 quest는 안푼것으로 되어 있더라구요.
+
+
+ 선악도에서 fol Saint를 했었는데 그게 안풀려있었군요.
+ 그 상태에서 guard를 죽여서 quest가 안풀렸었는지...궁금..
+ Nix님은 패서 죽여 보자고 했는데 그래서 효과가 있었는지도 모르고요..
+ 어째든 좀 이상한 곳이 있음에는 틀림 없는데..mob을 fol한 상태에서
+ quest풀면 안된다면 bug아닌가요??  마법으로 잡아서 안된다면
+ 그것도 이상하구요..
+ mob을 follow하고 있을 때 quest를 풀면 
+ quest푼걸로 인정해주지 않네요....
+
+DONE:   Program received signal SIGSEGV, Segmentation fault.
+	0xef6175b8 in strlen ()
+	(gdb) #0  0xef6175b8 in strlen ()
+	#1  0xef7965dc in _doprnt ()
+	#2  0xef797634 in sprintf ()
+	#3  0x2c2a0 in do_stat (ch=0x58c4d0,
+	    argument=0xffffd0b8 <Address 0xffffd0b8 out of bounds>, cmd=602740)
+	    at act.wizard.c:468
+	#4  0x419b4 in command_interpreter (ch=0x58c4d0,
+	    argument=0xeffff390 "stat room") at interpreter.c:914
+	#5  0x31520 in game_loop (s=0) at comm.c:363
+	#6  0x30e44 in run_the_game (port=4001) at comm.c:196
+	#7  0x30ddc in main (argc=1, argv=0xeffff8dc) at comm.c:175
+	(gdb)
+	************* Narai MUD Died!!!  Run No. 2 *********
+	1997년 11월  5일 수요일 오후 05시 58분 16초
+		    strcat(page_buffer, buf);
+		    strcat(page_buffer, "Exits:\n\r");
+		    for (i = 0; i <= 5; i++) {
+			if (rm->dir_option[i]) {
+	---->                    sprintf(buf, "Direction %s. Keyword : %s\n\r",
+				    dirs[i], rm->dir_option[i]->keyword);
+			    strcat(page_buffer, buf);
+			    strcpy(buf, "Description:\n\r  ");
+			    if (rm->dir_option[i]->general_description)
+				strcat(buf, rm->dir_option[i]->general_description);
+	"act.wizard.c" 행 468 (전체: 1996) --23%-- 
+
+
+DONE:  Program received signal SIGSEGV, Segmentation fault.
+	0xef6175b8 in strlen ()
+	(gdb) #0  0xef6175b8 in strlen ()
+	#1  0xef7965dc in _doprnt ()
+	#2  0xef797634 in sprintf ()
+	#3  0x1ccbc in do_score (ch=0x6802b8, argument=0xeffff392 "", cmd=16)
+	    at act.informative.c:1199
+	#4  0x419b4 in command_interpreter (ch=0x6802b8, argument=0xeffff390 "sc")
+	    at interpreter.c:914
+	#5  0x31520 in game_loop (s=0) at comm.c:363
+	#6  0x30e44 in run_the_game (port=4001) at comm.c:196
+	#7  0x30ddc in main (argc=1, argv=0xeffff8dc) at comm.c:175
+	(gdb)
+	************* Narai MUD Died!!!  Run No. 1 *********
+	1997년 11월  5일 수요일 오전 02시 34분 06초
+
+
+
+DONE: Program received signal SIGSEGV, Segmentation fault.
+	0xef6175b8 in strlen ()
+	(gdb) #0  0xef6175b8 in strlen ()
+	#1  0xef7965dc in _doprnt ()
+	#2  0xef797634 in sprintf ()
+	#3  0x1ccbc in do_score (ch=0x6802b8, argument=0xeffff392 "", cmd=16)
+	    at act.informative.c:1199
+	#4  0x419b4 in command_interpreter (ch=0x6802b8, argument=0xeffff390 "sc")
+	    at interpreter.c:914
+	#5  0x31520 in game_loop (s=0) at comm.c:363
+	#6  0x30e44 in run_the_game (port=4001) at comm.c:196
+	#7  0x30ddc in main (argc=1, argv=0xeffff8dc) at comm.c:175
+	(gdb)
+	************* Narai MUD Died!!!  Run No. 1 *********
+	1997년 11월  5일 수요일 오전 02시 34분 06초
+
+DONE: Program received signal SIGSEGV, Segmentation fault.
+	0xef6175b8 in strlen ()
+	(gdb) #0  0xef6175b8 in strlen ()
+	#1  0xef7965dc in _doprnt ()
+	#2  0xef797634 in sprintf ()
+	#3  0x1ccbc in do_score (ch=0x6802b8, argument=0xeffff392 "", cmd=16)
+	    at act.informative.c:1199
+	#4  0x419b4 in command_interpreter (ch=0x6802b8, argument=0xeffff390 "sc")
+	    at interpreter.c:914
+	#5  0x31520 in game_loop (s=0) at comm.c:363
+	#6  0x30e44 in run_the_game (port=4001) at comm.c:196
+	#7  0x30ddc in main (argc=1, argv=0xeffff8dc) at comm.c:175
+	(gdb)
+	************* Narai MUD Died!!!  Run No. 1 *********
+	1997년 11월  5일 수요일 오전 02시 34분 06초
+
+
+ 음. 하여간 국내에서 가장 싸게 해 드림..
+22:02:08 : $ COCACOLA $ chat 부품 구입 부터.. 조립, 배달까지..
+22:02:50 : $ COCACOLA $ chat 문의사항은 02-940-5174로 전화해서..
+22:02:55 : $ COCACOLA $ chat 김 인기를 찾기 바람..
+
+DONE:  32:53 : NOT SAME ROOM WHEN FIGHTING!
+	03:33:05 : NOT SAME ROOM WHEN FIGHTING!
+	03:33:05 : NOT SAME ROOM WHEN FIGHTING!
+DONE: 03:50:42 : choose mob: count = 1, rnd # 0, (Khan)
+
+03:51:02 : $ S0:43 : Use log : Khan uses  robot
+10:41:04 : Use log : Khan uses  robot
+10:41:41 : Use log : Khan uses  robot
+
+DONE: 3:57:58 : UNKNOWN is tried cast reraise. '^M' <-
+?????  21:50:36 : Serious screw-up in recharger!
+DONE: 03:15:42 : Highsense gives 7997 to Rook.
+
+
+04:36:31 :: sc
+04:36:31 :: cast 'enchant weapon' small
+04:36:31 :: wear bag
+04:36:31 :: cast 'enchant w' dagger
+
+--------------------------------------------------------------------
+	This is OLD CRASH 
+
+Program received signal SIGSEGV, Segmentation fault.
+0xef63c090 in realfree ()
+(gdb) #0  0xef63c090 in realfree ()
+#1  0xef63c96c in cleanfree ()
+
+#1  0xef63c96c in cleanfree ()
+#2  0xef63bacc in _malloc_unlocked ()
+#3  0xef63b9c8 in malloc ()
+#4  0xef62dbd8 in calloc ()
+#5  0x31a98 in write_to_q (
+    txt=0xefffcd20 "BANG!!!! Mystic Dragon Slayer explodes. It hurts!\n\r",
+    queue=0x6dc750) at comm.c:624
+#6  0x33724 in act (str=0x78830 "BANG!!!! $p explodes. It hurts!",
+    hide_invisible=0, ch=0x330958, obj=0x608f30, vict_obj=0x0, type=3)
+    at comm.c:1269
+#7  0x4b428 in spell_enchant_weapon (level=37 '%', ch=0x330958, victim=0x0,
+    obj=0x608f30) at magic2.c:930
+#8  0x6146c in cast_enchant_weapon (level=37 '%', ch=0x330958,
+    arg=0xeffff38f "", type=0, tar_ch=0x0, tar_obj=0x608f30) at spells2.c:809
+#9  0x5d8ec in do_cast (ch=0x330958, argument=0xeffff38f "", cmd=84)
+    at spell_parser.c:950
+#10 0x414b0 in command_interpreter (ch=0x330958,
+    argument=0xeffff378 "cast 'enchant w' dagger") at interpreter.c:887
+#11 0x312a8 in game_loop (s=0) at comm.c:354
+#12 0x30bcc in run_the_game (port=4001) at comm.c:189
+#13 0x30b64 in main (argc=1, argv=0xeffff8c4) at comm.c:168
+(gdb) =========    BEGIN   === Start of LOG ===  Run No. 1
+1997년 10월 16일 목요일 오전 04시 39분 53초
+
+
+19:02:53 :: cast 'disin'
+19:02:53 :: fol jeong
+Assertion failed: file "act.other.c", line 406
+
+Program exited with code 01.
+(gdb) No stack.
+
+rai MUD Died!!!  Run No. 2 *********
+1997년 10월 17일 금요일 오후 07시 02분 55초
+
+--------------------------------------------------------------------
+message 17 : bug 2개 by Ljw
+
+DONE: 상점에서 buy 10 recall하면 10개가 아니라 11개를 삽니다.  
+DONE: 지금 bag안에 breadboard ring, one ring, diamond brooch, dopo를 
+      담고 있는 bag이 하나 들어 있는데 
+      l i bag을 하면 bag안에 있는 bag의 물품이 breadboard ring 4개로 보입니다.
+
+
+message 18 : 마법제안 by Ljw
+
+마법도 cast 10 'sunburst'하면 sunburst 10번 쓰게 해주세요....^^ 
+tintin을 안쓰다 보니까 !누르기가 귀찮아서....-_-
+
+message 19 : 자진 신고 <BUG> by Parvo
+
+
+ BADA가 짤려서 접속이 안되길래 새로운 character를 만들었죠  :) 
+ STAT setting하고 물론 비번 다시 정하고 하여서 들어오니 
+ BADA 짤린 곳으로 들어오네요.  
+ 그런데 기본 STAT이 BADA 것과 같아요. (AC, HR, DR, Bare Hand Dice) 
+ STR, WIS, INT 등등은 reroll했던 값이구요. <- 요거 버그인데 어케 
+ 발생했는지는 모르겠네요. (비번도 다른데) 
+ 일단 자진신고하고 play는 계속 하렵니다. (skill은 0에서부터 
+ 시작하는군요) 
+
+ 그런데 먼저 한가지 더 집고 넘어가야할게 ...  
+ AIX님이 들어오려고 하면 MUD가 down된다고요...  
+ 덕분에 BAG이 2개 날라갔어요. 갑자기 비정상적인 down될 때 
+ inventory에 있는 BAG of Holding이 없어지더군요 
+ 2번이나 그런일 당해서 부적 3장, 기타 아이템 수억 날라갔어요.  
+  reimburse바라지는 않지만 불안해서 ... 
+
+ 이거 어케 고칠수 있는 방법 없을까요??
+
+  그럼 계속 수고해 주시길 부탁드리며, 2萬  
+
+
+meta 에서 - exp 문제 over flow..
+reset title nil
+

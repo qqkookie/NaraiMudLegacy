@@ -75,7 +75,7 @@ It is tagged as **coconut-2002** in **coconut** branch of git repository.
 
 ### New Narai 1998
 
-This is other fork of original Narai source around year 1998.
+This is other fork of original Narai source year 1997 and operated till 1998.
 The source code was extensively cleaned up and many improvements were made.
 It added many new features and improved quality of mud life,
 but preserves similar user experience of original Sun 3 days.

@@ -1,0 +1,26 @@
+#!/bin/sh
+#	Example of RUNME
+# 
+#	If file named "RUNME" is in top directory of MUD 
+#	( e.g. ~mud/narai/ ), 'everun' script will excute it 
+#	*ONCE* just before next MUD rebooting (normal or abnormal).
+#
+#	Good time to install newly compiled MUD to bin dir.
+#	All stdout and stderr will be rediected to MUD log file.
+#	After running, RUNME file will be renamed to "RUNME.DONE".
+#	See bin/everun for detail.
+#
+#	RUNME written by Cookie on Sun Sep 14 01:50:36 KST 1997
+
+trap "" 1 2 3 13 14 
+MUDHOME=`pwd` 
+export MUDHOME
+PATH=/bin:/usr/bin/:/usr/local/bin:$MUDHOME/bin:$PATH
+	
+# Real jobs..  
+#
+echo Installing new program
+mv bin/mud.run bin/mud.bak
+make install 
+echo Done.
+

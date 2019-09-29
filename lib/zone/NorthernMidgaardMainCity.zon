@@ -7,7 +7,8 @@ O 0 1001 4 3097    Altar in POLICE
 O 0 1001 4 3054    Temple Altar
 O 0 3099 5 3070    The Board
 O 0 3098 1 3071    The Mail Box
-O 0 3099 5 3071    The Board
+* // Removed board in Post Office (by Cookie)
+* O 0 3099 5 3071    The Board
 O 0 3099 5 3099	   The Police Board
 O 0 7999 1 3007    Slot Machine
 O 0 8000 1 3002    String Machine

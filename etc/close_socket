@@ -1,0 +1,58 @@
+do_rent()
+	save_char
+	save_stash
+
+	wipe_obj_from_char
+	extract_char (return_original())
+	con = CON_RMOTD
+
+	should be ch freed 
+
+check_idle() 
+	do_rent()
+	con = CON_CLOSE;
+	free_char()
+
+
+do_quit()
+	check and die()
+	save_char
+	save_stash
+	return_original()
+	con = CON_CLOSE
+
+freaky()
+	if d->char
+	    return_orig(d->ch)
+	if con == CON_PLAY {
+	    save_char
+	    save_stash
+	}
+	con = CON_CLOSE
+
+die()
+	adjust state
+	wipe_stash
+	save_char
+	raw_kill
+	con = CON_RMOTD
+i/O err
+	
+
+raw_kill() 
+    stop_fight
+    extract_char (+ return_original)
+
+CON_CLOSE
+	release_pl
+	close_socket() (free(d))
+
+
+extracy_char
+    die_follower
+    obj to romm
+    carrying = 0
+    remove from charter_list
+    remove_from combat_list
+    stop_fight
+

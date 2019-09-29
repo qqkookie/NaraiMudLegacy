@@ -1,0 +1,2746 @@
+#
+#  Change Log from Old Narai or Psycho MUD since 1997/08/15
+# 
+#	source에 변경을 할경우는 반드시 여기에 기록을 추가해 주세요. 	
+#
+
+    Warrior Hand Dice 올려..  50d50 가능 
+    Request 문제 단군도 가능하게 하구 대충 한 10개 정도 Quest
+    날라가게 하겠다
+
+    Metaphysician과 Quest 선물의 변화 by Illusion
+
+    Metaphysician에서 Hit, Mana, Move point들을 살때 단군이 아니라면 
+      15000 이상은 살수없습니다.
+    Quest 선물의 변화:  단군은 request ticket이 나오지 않습니다.
+    meta ticket은 단군일 경우에만 나옵니다.
+
+    39레벨까지의 선물에서 meta ticket이 사라지는 대신
+    armor, weapon이 나올 확률이 좀 더 높아졌습니다.
+
+
+90/08/20 by Gem :
+	quest.c
+		give_gift_for_quest has changed.
+
+	spec_procs2.c
+		metahospital
+		단군이 아니고 point가 15000이상이면 사용불가.
+ 9.5  : by Dyaus
+
+	quest.c
+		All remortal Dangun 의 request 경우
+		quest number 10 감소
+
+	fight.c 
+		Warrior bare hand dice limit : 50D50
+
+97/09/11 by Cookie :
+	bug fix.
+
+===================================================================
+    db.h : 
+	    MENU GREETING WELC_MESSG STORY
+	    Chnaged mud name and related definitions.
+
+    lib/credit motd news plan wizards: 
+	    Similar changes.
+
+    motd:
+	    Golden Rule of Narai (contents of old motd) is now
+	    inscribed on welcome message: in db.h: WELC_MESSG 
+
+    help_table: COMMAND LIST +unequip, +unhold
+		    CORN OF ICE -> CONE OF ICE
+		    TO DO: need to add help on them.
+
+    limits.h , structs.h are renamed to mlimits.h, mstructs.h
+	    to avoid name clash with system headers.
+
+    act.informative.c: do_who()
+	 "who" form switch by is_korean() removed.(2 place) (Obsolete code)
+
+    act.offensive.c: do_bash()
+	    Dyaus change: Mob can't bash without wielding weapon 
+	    Suggestion by Tido.
+	    Add CR+LF to message for flash victim. 
+    version.c
+		version change to v.2.9
+
+#----------------------------------------------------
+Wed Sep 17 11:03:37 KST 1997 by Cookie
+
+    mstructs.h:
+    	connection status CON_NEWCON, CON_SAVE added.
+	struct char_point_data.{exp ,gold}: type changed to unsigned long  
+
+    comm.c
+	set baddomain to non-existent domain.
+	game_loop(): In noecho mode, output CR-LF, not LF
+	    
+    ****IMPORTANT
+	get_from_q(): check free() arg. 
+	    This is for debugging. remove when done.
+	    When creating brand-new PC player, sometimes SEGV error hit here. 
+
+	flush_queue(): dummy[] max length correction.
+	new_descriptor(): initial STATE(d) = CON_NME
+	LF+CR seq is changed to CR+LF in few places.
+	More sane space line in few places.
+
+	close_socket(): 
+	    saving non-playing char in CON_SAVE state.
+	    This code is not yet used..  
+	signal_setup(): 
+	    catch SIGSEGV and SIGBUS. don't catch SIGTERM.
+	hupsig(): 
+	    BUG FIX: check sanity of 'xo': don't report about non-playing char.
+	    Don't save PC players on dangerous signal.
+	    BSD signals: sig handler have to be reinstalled.
+    
+	log_pid() NEW : write out my pid to file and log
+
+    db.c
+	fopen(file,"rb+" ) -> fopen(f,"r+") : unix don't need "b"
+	boot_zone(): 
+	    BUG FIX: allocate strlen(s)+1 mem , not strlen(s)
+	    BUG FIX: cmd->if_flag is char type , not int 
+	init_char():
+	    God needs initial player title, or "who" will hang
+
+    interpreter.c
+	#define MIN(a,b) causes compiler error on SUN Solaris. Comment out.
+	improve_status(): 
+	    str_add can't exceed 100 
+	LF+CR seq is changed to CR+LF in many places.
+	more sane space line in many case. esp. after getting password.
+	assign_command_pointer() : 
+	    too big to compile on SUN with small swap space.
+	    divided into 3 commando()'s
+	nanny():
+
+	    Enter "quit" for player name to go away.  
+
+	    Check if the name is playing already *after* accepting 
+	    password.  If not, anyone can keep a player from entering game.
+		i.e. Player before password ok state (CON_PWDNRM) is not
+		    considered "Already playing"
+
+	    Send heading before motd.
+	    Return to menu when something fails.
+	    Log brand new player after selecting stat to improve.
+
+	    Delete character is now re-enabled. MENU changed.
+
+    spec_procs2.c
+	perhaps(): 
+	    make it easy to add newbie tips. 
+	    Added more tips to say..   plz add more for newbie.  
+	    Adjust frequency of perhaps talk.  
+
+	    perhaps kiss message is send to victim who can not see her. 
+	    Send messge when she slays unwelcomed mob in MID. 
+
+version 2.90.1
+------------------------------------------------------------------ 
+Thu Sep 18 01:28:13 KST 1997 
+
+    Makefile
+	changes for Sun Solaris compile (esp. -D__ANSI__=0 )
+
+    fight.c: uncommented some assert()'s for debug.
+	raw_kill(): 
+	    Added funeral message when PC player passed away.
+
+    handler.c
+	extract_char():
+	BUG FIX: I suspect some mob has invalid name. So SEGV error 
+	    when it died.  For mobile, show short_description instead.
+
+	Clarified code for debugging only.
+	Moved leaving game code to do_rent() and raw_kill()  
+	Use abort() instead of exit() for abnormal exit.
+
+    boards.c: 
+	post_board() will complain on failure.
+
+    mail.c
+	Moved mbox file from lib/mboxes/3071mbox to lib/boards/3071mbox
+	If mbox file vanishs, it will be re-created.  
+	Mbox in Post Office (3071) is primary box in the world.
+	This primary mbox is inited and loaded at boot time.  
+	This code seems working but need more TEST & debug 
+
+	check_mail() : NEW to check received mail 
+	    This will called when player enters game.
+	Cleaned up show_mail() printing form (left justified list)
+
+    interpreter.c
+	nanny():
+	    check_mail() is added to check mail and tell it 
+		when player enters game.
+
+	    Change of password or player description is saved immediately.
+	    No need to enter game to finalize.
+	    BUG FIX: Failed password change is no longer saved.
+	    BUG FIX: No return to "Void" room after change passwd/descrip.  
+
+    act.informative.c: 
+	do_news(); act.comm.c: do_send()
+	    send one newline before doing that.
+
+    lib/zone/NorthernMidgaardMainCity.zon
+    	Bulletin board in Mid Post Office removed
+	to fix error when posting letter there (mail.c)
+
+ 0 1001 4 3054    Temple Altar
+ O 0 3099 5 3070    The Board
+ O 0 3098 1 3071    The Mail Box
+ * // Removed board in Post Office (by Cookie)
+ * O 0 3099 5 3071    The Board  	<<--- Here!!!!
+ O 0 3099 5 3099    The Police Board
+ O 0 7999 1 3007    Slot Machine
+ O 0 8000 1 3002    String Machine 
+
+    utils/backup , utils/everun 
+	Adjust MUD HOME path, minor debugging. 
+	
+    Old world file and zone backup file in lib dir moved to OLD dir.  
+
+Thu Sep 18 22:06:14 KST 1997
+version 2.90.2
+------------------------------------------------------------------ 
+    fight.c: 
+        Uncommented some assert()'s for debug.  
+
+******  This code was not activated. More jobs and tests.....
+
+	eval_exp(): NEW : NOT ACTIVATED
+	    More elaborate exp gain calculation.
+	    Evaluate how hard to kill the mob for exp point.
+	    Approximately exp = sqrt( dam * hit * AC * 100/40 );
+		where dam = (hand_dice + damroll) * (level/6) for warrior.
+	    Very careful not to overflow or underflow. (loss of precision)
+	    Need more refinement , test and balancing job.
+
+	isqrt(): NEW: NOT ACTIVATED 
+	    integer squre root for eval_exp()
+
+	NOT ACTIVATED
+	gold amount scale GOLDSCALE set to 15
+	gold gained = mob's gold + level(mob)^2 * GOLDSCALE;
+	See group_gain() & damage() 
+
+******	Return to OLD narai exp system.  Fri Sep 26 14:28:54 KST 1997
+******  To activate above codes, #undef OLD_NARAI_EXP in fight.c
+
+        EVAL_GOLD(): NEW : macro def to calculate killing prize gold.
+
+	adjust_gain(): NEW
+	    Shows earned exp and gold point when PC player killed char.
+	    Do exp, gold and alignment manipulation. 
+	    Check PK and set pk_num.
+	    Player can't get exp/gold from cloned or re-animated mob.  
+
+	damage():
+	    Use more elaborate exp calc based on difficulty of mob. 
+	    May need some scale adjustment.
+	    Player can't get exp from reraised victim
+
+	TO DO: reraise/cloned/re-aninated mob check should be unified.
+		( rerasied victim should lose at least gold to killer ??? *)
+
+	group_gain(): 
+	    Assertion commented out.
+		This assertion fails sometimes. Why? Killer fled? Find out!  
+	    high_level calculation not used. comment out.
+	    Money splitting rule changed in favor of large grouping. (1/n)
+		In fact, old rule is *aginst* large group. (1/(n*n)) 
+	    Add pk_num even in case of group PK.
+	
+	do_hit():
+	    You can't hit your group member.
+	    Forbid hitting member of same guild.
+	    But permit fighting mob of same guild OR same group.
+
+	die() :
+	    Changed PC player death penalty :
+	    You will lose about 1/10 - 1/2 of exp.
+	    200 *level^3 -> max(min(300*lev^3,exp/2) exp /10)
+
+    act.movement.c
+	do_follow():
+	    Cleaned up confusing code for clarity.
+	    Stops group when you start following someone. 
+	    Follower must be explicitely grouped by leader.
+	    You can't follow someone who is alredy following other leader.
+	
+	do_group():
+	    You can't group yourself. ( no solo group ) 
+	    When leader do group followers, leader is grouped also.  
+	    When all followers stop following, leader is ungrouped.
+
+	check_leadership(): NEW
+	    Leader checks if someone is in his group except leader himself.
+	    If not, resign leadership, and ungroup.
+	
+        do_open(), do_close(), do_lock(), do_unlock(), do_pick():
+	    This applies to all door related  routines:
+	    These routine searchs door in inventory first , room next,
+	    exits last.  This is wrong. If you have item like 'door key',
+	    'west gate key' in your inventory or room, These are confused.
+	    Search door name first!
+	    door name = "door gate grate trapdoor hatch window . room hall"
+
+	 search_door(): NEW
+	    Similar to find_door(), it checks if there is ANY door of that 
+	    name. Direction ignored.  Used in all door related functions.  
+
+    spell_parse.c
+	stop_follower(): 
+	    Call check_leadership() when follower stop following you.
+	    ( die, rent, fol other.. etc )
+
+    limits.c
+	gain_exp():
+	    Prevent exp overflow or negative exp.
+	    Removed redundant code.
+	gain_gold() : NEW  to check money overflow.
+	
+    quest.c
+	quest_room() : 
+	    Reduced amount of quest prize gold for low leveler quest.
+	    Not much change for level 40.
+	old : max 50000*lev/5 		lv20 = [0.1M,2M],   lv40 = [0.1M,5M] 
+	new : max (lev-7)*(lev-6)* 4K   lv20 = [182K,782K], lv40 = [1.1M,4.5M]
+	
+	    Quest ring, necklace, light now become more useful,
+	    They will have armor affected (APPLY_ARMOR) insted of HITROLL
+
+    quild_command.c:
+	Taxi cab fare raised 10 times.:
+	to KAIST 20000, to PROCESS 30000. hmmm .. seems more realistic.
+	taxi()
+	    If you can't pay, taxi driver will take away all the money you have.
+
+    spec_procs2.c: bank()
+	Prevent overflowing your purse when PC player withdrows from bank.
+
+    act.obj1.c : 
+    	do_give() : NOT ACTIVATED. NEED MORE WORK.
+	    Prohibit giving money to mob to prevent gold inflation.
+	    See group_gain() in fight.c 
+	    Exception: Darimsa 4th jangro accepts money. See daerimsa.c
+	    Do not activate code before solving the exception.
+
+    utils.h : added #include <assert.h>
+
+Tue Sep 23 15:19:53 KST 1997
+
+    act.wizard.c
+	do_echo(): God's echo will be heard by all PC player in the world.
+	do_chat():
+	    "chat" with no arg is same as "chat /last"
+	    Little code clean up ( use do_lastchat() in act.comm.c )
+	do_set():
+	    When "set char keyword" fail, show list of keywords.
+
+	    It's meaningless to change passworod of active player.
+	    Set player passwd disabled temporary.
+	    Set password bug fixed.
+	    	1) Now passord encrypted. 
+	    	2) save victim's char, not ch's		 	
+	    TO_DO: set passwd of non-playing char.
+
+	do_demote()
+	    Log demote after checking all is OK.
+	    Preserve player ability stats (str,int,wis,dex,con) on demote.
+
+	do_stat() 
+	    MSTAT/PSTAT/STAT wiz command will search mob/player 
+	    in current zone before seaching whole world for mob/player.
+
+    handler.c
+	get_char_wiz(): 
+	    get_specific_vis() is rewritten as get_char_wiz()
+	    3rd arg (type) is bit vector, not bool.
+	    This function is called solely by do_stat(). (in act.wizard.c)
+	    Added seach for zone before seach all world.
+
+	isname(): Rewite isname() , code clean up.
+	    isname() matches multiple word string.
+	    i.e. "xxx yyy" will match to "abc xxx yyy zzz "  
+	    digit, '-', '_' char is valid char for name.
+
+	get_char_room_vis()
+	    'self' is generic name refering yourself. ( cast 'heal' self )
+	    This works even when you are blind or invisible. (Goooood!)
+
+    interpreter.c
+	one_argument():
+	    one_argument() will take quoted args as single arg.
+	    Surround multiple words with quotation marks. ( 'like this' )
+	    Now, you can resolve confusing name like president as
+	    "cast 'relocate' 'bookkeeper exp'" (single quotation included )
+
+	    Rewrote indexed version to pointer version for clarity.
+	    Find the first word of string excluding fill word ( "at", "in" ),
+	    Copy it to first_arg. If non-fill word don't exist. fill word will.
+	    Returns pointer to next unlooked char ( blank + following words )
+
+    spec_procs.c
+	npc_steal() - Suggestions by Tido.
+	    Sleeping/dying mob or mob who can't see victim (blind, invisible
+	    dark room & no light, etc ) should not steal victim's gold.
+	    Charmed mob can't steal its master's gold.
+	    Charmed mob can't leave beside master after stealing others gold.  
+
+v2.90.3	
+Sat Sep 27 06:07:05 KST 1997
+=============================================================
+
+Overall code cleanup
+    Will generate minimal error message with "gcc -Wall"
+	except char array subscript and parensses around assignment.
+    Most warnings about unused varibale, uninitialized variable,
+    	implicit function type (no prototype) are cleared.
+
+lib/help_table
+    "MAILING LIST" entry added. by hjpark.
+    "INFORMATION":  added 'mailing list' 
+
+lib/wizards
+    Yerin & Gem   ->  Yerin & Amar
+
+lib/news
+    News article order change: Recent news first.
+
+lib/tinyworld.obj
+    Mahn-tor의 'vambraces steel'(#2963)을 집을수 있도록 바꿨어요. (JHPARK)
+
+*** ../OLD/tinyworld.obj	Fri Jun 20 15:51:33 1997
+--- tinyworld.obj	Sun Sep 28 04:52:02 1997
+***************
+*** 3953,3959 ****
+  a pair of steel vambraces~
+  A gleaming pair of vambraces lies here.~
+  ~
+! 9 0 256
+  6 0 0 0
+  7 5000 450
+  #2964
+--- 3953,3959 ----
+  a pair of steel vambraces~
+  A gleaming pair of vambraces lies here.~
+  ~
+! 9 0 257
+  6 0 0 0
+  7 5000 450
+  #2964
+
+db.h:
+    WELC_MESSG: spelling correction.
+
+    struct index_data:
+	Specified function prototype of special proc func(). 
+
+mstructs.h:
+    struct room_data:
+	Specified function prototype of special proc funct(). 
+
+    Added #define CON_ENTER       21 
+
+    struct char_special_data:
+	Change struct member position : int wimpyness; time_t jail_time;
+	jail_time changed type from 'int' to 'time_t'.
+	    ( Time to be released from jail in unix time(0) unit)
+	 Reduced size of char reply_who[] by 10 char.
+	     NOTE: sizeof( struct char_file_u.name ) == 20
+	     char reply_who[30]  ->  char reply_who[20]
+
+    struct char_file_u:
+	Add    time_t jail_time to save in PC players file.
+	Add    char filler1[2] *before* jail_time 
+	    to justify 4 byte aligntment boundary
+
+	Reduce size of reserved by 6 byte used for filler1 and jail_time. 
+	    from byte reserved[58] to byte reserved[52];
+    
+guild_list.h 
+guild_skills.c 
+
+    Defintion name JALE_ROOM -> POLICE_JAIL_ROOM (spelling!)
+	From guild_skills.c 	#define JALE_ROOM 	    1800 
+	To guild_list.h 	#define POLICE_JAIL_ROOM    1800 
+	Spelling correction JALE -> JAIL 
+
+guild_command.c 
+    guild_practice_yard()
+	'%' char in sprintf() format string should be noted as %%.
+
+guild_informative.c 
+    do_cant()
+	"cant" command without argument is same as "cant /who".
+
+spells.h:
+    Added external function prototypes of all function in magic.c
+
+mlimits.h:
+    Added external function prototypes of all function in limits.c
+
+utils.h: 
+    Added external function prototypes of all func()'s in utility.c
+
+    INCREASE_SKILL() macros mas changed to function call.
+	It is too big for macro. Use function version for space efficency.  
+	The function version is in utility.c. See FYI: there for details.
+
+	void increase_skilled( struct char_data *ch, struct char_data *victim,
+	                      int sk_no, int mul, int add );
+	    NOTE: probability = 1/( skilled(ch, sk_no) * mul + add )
+
+	#define INCREASE_SKILLED(ch, victim, sk_no) \
+		increase_skilled(ch, victim, sk_no, 2, 99 )
+
+    #define STRHAN( a, b, ch ): NEW MACRO: 
+	Select english or korean message string according to ch's 
+	locale selection. Useful for sprintf(). 
+
+    #define ASSERT(test) : NEW MACRO: 
+    	Similar to assert(), but don't abort().
+	just print log() where ASSERT() failed.
+
+utility.c
+
+    monetary() NEW
+	Format number in financial format like "-98,765,432".
+	Returns pointer to recycled internal static char buffer.
+
+    monetary() NEW
+	Similar to monetary(). but show only most significant 4 digit
+        without rounding. like "-98,760,000".
+
+    remove_eol() NEW
+	Remove last last line terminator (CR-LF/LF-CR) in string.  
+	Used to append string as single line. 
+
+    increase_skilled() NEW
+	Function version of INCREASE_SKILLED() macro.
+	It checks victim is pet to prevent skill drill by robot play in petshop.
+	And removed guild check in PK. It is pointless.
+	NOTE: probability = 1/( skilled(ch, sk_no) * mul + add )
+
+act.comm.c:
+
+    do_tell():
+	"!" as listener name means telling to whom you told or replyed
+	    last time. This applies to telling to mob, too.
+	    ex) tell ! Hmm, Please help me, firend..
+
+	If lisner can't hear you because of sleeping.
+	    Show lisner name. (He can't hear you. -> Hydra can't hear you.)
+	    And notify to sleeping PC player to wake up.
+
+	Distinguish PC player tell from Shopkeeper tell.
+	    Fred Wilson tells you 'No magic here - kid!'.
+	    Cookie tells YOU 'Hello, I am in MID. C'mon'.  
+
+    do_write()
+	Ignore pen. It has no useful meaning.
+	Code checking pen in inventory or hold item is commented out.  
+	TO DO: modify help on 'write' and borad/mailbox description for this.
+	
+act.informative.c
+
+    Removed : list_obj_char()   Added list_equips_buf()
+    Added symbolic defintion of mode arg of list_obj_buf(), show_obj_buf().
+    Currently, LOOK_INV is same as LOOK_CONT. mode 4 not used.  
+    
+    argument_split_2(): SUBSTITUTED with NEW look_arguemnt(). 
+
+    int look_argument(char *argument, char *arg1 ) NEW!
+	Parse argument for look command as argument_split_2() does.
+	Search for direction word ( north, ..., up, in, at )
+	Copy first non-diection argument in arg1.
+	Returns direction keyword index or -1 if none. 
+
+    show_obj_char() is SUBSTITUTED with NEW show_obj_to_buf().
+
+    int show_obj_to_buf(struct obj_data *object, struct char_data *ch,
+		 int mode, char *buffer)
+	It sees one and only one object, not objects in container.
+	It store output to buffer, not sending to char
+	It checks visibility of obj to char and returns it. 
+
+	It give more specific info about items. 
+	Especially for ITEM_WEAPON, you will be infomed weapon type.
+	TO DO : /* NOTE: Needs more description for all 22 type */ 
+
+	Shortens descr. about humming or glow to fit in single line if possible.  
+    list_obj_to_char()
+	Now, it send output to char through page_string() for long output.
+	    It will mitigate problem that disconnecting player due to 
+	    long and rapid output when too many object is in single room.
+	Can list contents of bag in bag. (for one level only, not recursively)
+
+    show_char_to_char():
+	OLD show_char_to_char() is divided into two functions.
+	NEW show_char_to_char() (OLD mode 0), look_char_to_char() (OLD mode 1) 
+	NEW show_char_to_char() is used when you look room.
+
+	Detect evil mark append to end of long char description in same line.
+	Detect invisible mark is not changed. (prepended to beginning)
+	
+	Sanctuary and Love affected look description merged in singe line.
+	    to prevent affection description stacked on and on.
+	Indef. noun (He/She) is used for char name in affection description.
+
+    ex)  Musashi is here, dancing with his samurai sword. (Red Aura)
+	 He glows with a bright light! and is EXICTED with glorious feeling!!
+
+    look_char_to_char() NEW
+	Second half of OLD show_char_to_char()
+	It is used when you look 'at' some specific character.
+	It will send output through page_string().
+	Reduced peek success rate for low level thief.
+	    number(0,20) < level  -> number(0,40) =< level
+	It prints equipment list using list_equips_buf().
+
+    OLD show_char_to_char() mode 2 is same as list_obj_To_char()
+	it is not used in anywhere. So removed.  
+
+    OLD list_char_to_char() : Removed. function merged to list_all_in_room().
+
+    list_all_in_room()
+	list_obj_to_char() + OLD list_char_to_char()
+	Show all characters and all object in room. 
+	Used when you enter a room or look room.  
+
+    do_look()
+	Unused variable removed: buf[], arg2[], found.
+	Move static char keywords[] definition to early in souce file.
+	keyword serach is relegated to look_argument().
+
+	In case of 'look at obj' and found no object, it serachs extra 
+	    descriptions and print it. After that it will show_obj_to_char()
+	    the [item with the extra description]. This is correct behavior.
+	    Old behavior is try to show object fail to find in vein.
+
+	Show extra description *without* using page_string().
+	Use list_all_in_room() 
+	    insted of list_obj_to_char() and list_char_to_char();
+
+    do_report()
+	Report to me, too.
+	
+    do_exit()
+	Show virtual room number guessed by some probability.
+	To make Gaussian distribution, perturbate repeatedly.
+	   loop  lev/4 + 2 times
+	       room number += number(-12+lev/4, 12-lev/4); 
+
+    do_score()
+	More compact and distictive score display format.
+	Generate only one of hangul contents or english contents.
+	Use financial format (like 1,234 ) for exp and gold.
+
+    do_spell()
+	Appended each of spell/skill line with player's current spell/skill
+	    learned, skilled stat of that skill/spell. 
+	If the skill/spell is not applicable to that class/level, mark it. 
+	
+	BUG FIX: Now, partial match is OK for listing indivisual spell.
+
+    do_equipment()
+	Calls list_equips_buf() and print it. No change of functionality.
+
+    list_equips_buf(): NEW
+	print to buffer all equipment which char is wearing or using.
+	Called by do_equipment and look_char_to_char().
+	
+    do_police()
+	Log more info about socket descriptor, not just hexa address.
+	    address, desc number, host, input buffer.
+
+magic2.c : 
+    spell_far_look()
+	Use list_all_in_room() to look room.
+
+comm.c
+
+    close_socket()
+	Before close() socket descriptor, send out pending output in queue 
+	    and flush queue.
+
+    send_To_char_han()
+	If korean message is null, send english message instead. 
+
+    is_korean() 
+	Hopelessly out of date. Useless. Comment out.
+    more_than_20()
+	Also obsolete and impotent. Useless. Comment out.
+
+    record_player_number()
+	Now it is meningless to distinguish foreign/domestic players.
+	    Counting/printing of Korean/abroad number commented out.  
+	Removed CR char from log string. log is not TTY.  
+
+db.c
+    Use abort() instead of exit() for abnormal exit.
+
+    reset_time()
+	Set begining_of_time to 0. It was 650336715
+	Now, time is about The 31st Day of the Month of the Sun, Year 1022.
+	    On Real World, Mon Oct  6 21:40:33 KST 1997
+ 
+    store_to_char(), char_to_store()
+	They will restore, save 'jail_time' variable in lib/players file.
+
+    init_char()
+	Newly created PC player is wimpy by default. flee at 1/10 of max hit.
+	This is for novice player forgetting to set wimpy before first death.
+
+    do_rent()
+	BUG FIX: If do_rent() is called by check_idling(), don't return to
+	    main menu state. Otherwise it will cause SEGV error
+	    when idle player is kicked out. 
+    
+handler.c
+
+    extract_char()
+	BUG FIX: casuses SEGV error when check_idle() calls do_rent().
+	    ch->affeted list traversal is wrong.
+	    *af is free()'d in affect_remove(). So af->next is invalid pointer.
+	    Save af->next in af_next and use it for traversal.
+
+    get_char_room_vis()
+	'leader' is generic name refering player you follow. ( 'assist leader' )
+	    This applies only when you are following PC쨛layer leader,
+	    can see him/her, and in same room. ( grouping not needed ) 
+
+    get_char_vis()
+	Search char of that name in zone before search all over the world.
+	Its implipication is not known.
+
+    create_money()
+	Due to hyper inflation in MUD, less than 1K coins are not considered
+	    much, and not worth counting.
+	    So I scaled up money description by 100 fold.
+
+act.others.c
+
+    do_wimpy()
+	BUG FIX : It will check null argument. 
+		It crashed on "wimpy on" command line.
+	Set wimpy zero to flee at 1/10 of maximum hit. (Old default)
+	    Then, wimpy value will be propotional to max hit gain.
+	Se wimpy value will make unwimpy player wimpy. 
+
+    do_practice()
+	It will print spell number on each entry.
+	Little duplicated code clean up. 
+
+spec_procs.c
+
+    guild()
+	Skill/spell linsting in Practice Room with prac command will list 
+	    two skill/spell in each line.
+	Added spell number for cross refernce.
+	BUG FIX: page_string() will keep internal copy. Otherwise it will
+	    mixed up with other players output in guild room.
+
+    npc_steal()
+	assert() is wrong. commnet out.
+	Check ch-> master is not null before comparing with victim
+	    or checking ch->master->in_room.
+
+fight.c
+
+    adjust_gain()
+	It will print exp and gold you get in financial format with
+	    only 4 most siginficant digits. (like 1,234,000 ) 
+
+    damage_message()
+	Currently all damage messages are breif only. 
+	    So message strings for verbose messages are commented out.
+	    static struct dam_weapon_type dam_weapons[] 
+	    static struct dam_weapon_type han_weapons[]	
+
+	Added static struct dam_weapon_type you_dam_weapons[] 
+	    When Player is in group fighting and English mode,
+	    prepend '*' char to 'You', 'you', 'YOU' word to help they be 
+	    easily recognized among long and rapid damage messages scroll.
+	    ex) "*YOU ---==<< V A C U U M >>==--- Queen Sharon."
+		 "Queen Sharon -miss- *you."
+
+	Brief message has no string to replace (no #W macro ).
+	    Omit replace_string() with attack_hit_text[] for efficency.  
+	No need to distinguish message ndex type in english message of
+		singular/plural attack_hit_text[]. Not used.
+
+    replace_string()
+	Not used any more. Commented out.
+
+    damage()
+	Mobile don't need wishing flee message ( ".. wish .. stop BLEEDING.." )
+	If wimpyness is zero for PC player, flee at 1/10 of max hit.  
+
+    hit()
+	Cleric class can do more damage with CRUSH type weapon 
+	   in addition to BLUDGEON type weapon. 
+	Changed serial 'if' clause to more efficent 'swith' clause.
+	Dubious statement of shadow figure advantage clarified.  
+
+act.wizard.c
+
+    do_banish()
+	Now, wizard can specify jail term for banish()'ed PC player. 
+	Optional second argument is hours the player have to serve in jail.
+	It may be fractional number. (minimum 0.02) 
+	Default jail term is 24 hours if no 2nd arg is given.  
+	After jail term expires, player will be forgiven and trans'ed to MID.
+	All these punishment and forgive is logged. Don't abuse it.  
+
+	ex) banish badboy 1.5 ( put him in jail for 1 hour and 30 min.) 
+
+spec_procs2.c
+
+    perhaps(): added more newbie tips.
+
+    jail_room(): 
+	It was jale_room(): spelling correction.
+	Added code for freeing player whose jail term expired.
+	When player is freed, simple move will trans him to MID.
+	Shouting /chatting prohibited.
+	Additional command permited for safe_house() is acknowledged.
+	
+    bank()
+	Show balance in account in financial format.
+
+    totem() 
+	Use list_all_in_room() to look room.
+
+spec_assign.c 
+    assign_rooms()
+	room 6999 (jail for banished player) is changed to jail_room() type.
+
+interpreter.c:
+
+    argument_interpreter()
+	Too confusing and redundant. Simlified with pair of one_argument().
+	CAVEATS: If second word is fill word, it will be discarded.
+	    Ex. "kill at mob1 with knife" -> arg1 = "mob", arg2 = "knife".
+	    If no word after fill word,("kill at") arg1 = "at" arg2 = "".
+
+	BUG FIX: OLD argument_interpreter() will fall in infinite loop on 
+	    command line like "kill at" (no word after fill word).  
+	    OLD argument_interpreter() is commented out.
+
+    commando()
+	minimum positions of LOOK and CAST command are lowered to
+	   POSITION_STUNNED. do_look() and do_cast() does their own 
+	    minimum position check and emits rejection message.
+
+    nanny():
+	Added state CON_ENTER:  Entering game state. 
+	Additional pause time after CON_SLCT / menu select 1
+	    for read welcome messgae, mail check, which was scrolled away.  
+
+	When player punished by Wizard enters games, he will return to jail 
+	    if jail term not expired and not forgiven.
+	Check banished player's jail_time and send him to jail, again.
+	If jail term expired, release him from jail.
+		
+	Even if RETURN_TO_QUIT name is defined, don't save player's room.
+	    In MENU state player's room number is -1 (NOWHERE)
+
+	act("$n has reconnected.", ... ) don't need CR+LF.
+
+modify.c
+    string_add()
+	Use post_board_char(), wrapper proc of post_board().
+	This proc don't take current board argument.
+	No need of board structure related declerations. Commneted out.
+
+    page_string()
+	Little optimization to avoid memory allocation/deallocation.
+	If string is less than 20 lines long, don't paging. Just send out.  
+	Reduced page length from 22 lines/page to 21 lines/page.
+    
+	Even if RETURN_TO_QUIT name is defined, don't save player's room.
+            In EXDSCR state, player's room number is -1 (NOWHERE) 
+    
+board.c
+    show_board()
+	Neatly aligned board message listing.		    
+
+    write_board()
+       If first arg of write is not "board", it is taken as part of title. 
+
+    post_board()
+	Give error or OK message when posting.
+
+    post_board_char() : NEW
+	Wrapper procedure of post_board() for string_add() in modify.c
+	This proc don't take current board argument.
+
+quest.c
+
+    struct zone_data[] :
+	Zone name "The Jale" -> "The Police Jail"
+
+    quest_room() : 
+	BUG FIX: I left out arg of  gain_gold(ch,gold)
+	BUG FIX: APPLY_ARMOR should be negative for better AC.
+		 substitue HITROLL, not DAMROLL
+
+shop.c 
+	
+    shopkeeper() on cmd = 56 /* Buy */
+	If first arg is number, buy that many items in single trade.
+	    ex) "buy 10 solar"
+
+    shopping_buy() returned no value. 
+	Now, it will return -1 on failed transaction. 0 on success.
+    
+v2.91.0	
+Tue Oct  7 21:34:40 KST 1997
+=============================================================
+
+Indentaion formating with 'indent' program 
+    for all *.c *.h file.  ( K&R style with minor variation.) 
+.indent.pro:  
+    -bap -bad -br -nce -ss -npcs -di4 -i4 -ip4 -l78 
+    -c25 -cd25 -cli0 -ci4 -cp33 -d0 -nfc1 -fca -npsl -nsc -nsob -ts8
+
+utils/everun:
+	Sleep 300 sec before next run to wait port being freed.
+	cp -p players ... : preserve players file modification time.
+
+New utils:
+    purge dupname chpass dangun
+
+    WARNING: 'purge' and 'dupname' saves result to "players.new" 
+	Don't replace "players" with this while mud is running"
+	Shutdown mud and run them.
+
+    purge.c : NEW!
+	Purge player not logged on for long time.
+	Delete specific player by name.
+	Result is saved as file named "players.new"
+	purge will delete STASH file, too.
+
+    dupname.c : NEW!
+	Purge players with duplicated entries in "players" file.
+	Result is saved as file named "players.new"
+	dupname will not delete stash file.
+	This program should not have needed or used.  
+
+    player.c : NEW!
+	Subroutine library for handling "players" file.
+	Used by purge.c, dupname.c
+
+    chpass.c 
+	Change Password or Level of non-active player.
+	It will update current "players" file.
+	Don't change password or level of player who is playing NOW!
+	Merged function of OLD change_pass.c and change_level.c 
+
+    dangun.c
+	More detailed listing about danguns statistics.
+	Modified from OLD list.c
+
+lib/plan:
+    Added experimental alias list. For general review only.
+
+lib/news:
+    News was to big to fit in string buffer. (should be less than 3K )
+    Old news before Oct.27 1997 removed.
+
+    Old CHANGES, credits, news, plan moved to narai/etc
+
+Makefile
+    Chnage to accomodate new utils: purge, dupname, chpass, dangun
+    remove -DIMO=41
+    # NOTE: -DIMO=41 moved to mstructs.h
+    MFLAGS  = -DSYPARK -DRETURN_TO_QUIT 
+
+utils.h:
+     Added definition of hangul ctype predicate.  
+	/* #define ishan(ch) (((ch) & 0xE0) > 0x90) */
+	0xE0 = 11100000B , 0x90 = 10010000B, Is above right for KS-5601?
+	#define ishan(ch)	(((ch) & 0377 ) > ( ' ' | 0200)) 
+	#define isnhspace(ch)	(!ishan(ch) && isspace(ch)) 
+
+    isspace() is newly redefined.
+	isspace() fail to recognize hangul as non-blank. (Sun Solaris BSD env.)
+
+    MAX(), MIN()
+	Comment out.
+	MIN(), MAX() is predefined on SUN. So, it caused compile error.
+
+mstruct.h:
+    struct char_special_data 
+	struct char_data *hunting;
+	Now used. Set by pointing or target flee while fighting or light move.
+
+	Added  "#define IMO  41". They were defind in Makefile.
+	There must be in something like "config.h"
+
+handler.c
+    get_char_room_vis()
+	Check 'self', 'leader' or 'target' after checking all char in room.
+
+	'target' is geneic name PC/NPC char. you are fighting now.
+        Or victim fleed while fighting you or you did 'lightning move'.
+        If you are not fighting, 'target' is char you or your leader
+        'pointed' last time. target is unset when target died.
+
+    affect_remove()
+        Warnning! Don't use af->next for ch->affected list traversal.
+        *af is free()'d in affect_remove().
+        So af->next is invalid pointer after calling affect_remove(ch, af).
+        Save af->next before calling affect_remove() and use it for traversal.  
+
+    affect_from_char(), affect_join(), extract_char()
+        hjp->next is invalid pointer. See above affect_remove(). 
+
+act.other.c
+    do_point(): NEW!  
+	Specify target for forthcoming violent action.
+	'point' will set 'target' name to who is pointed to.
+	If group leader points target, target of group members
+	in same room will be set, too.
+	If pointed char cannot be found, fall back to old social action.
+
+quest.c:
+    check_mob_die()
+	OLD: check_quest_mob_die() renamed NEW: check_mob_die()
+	More generalized check including quest mob.
+	Checks for quest mob died as old behavior.   
+	Added check for char is in same room with victim's room.
+	Added check for victim is 'target' which char is hunting for.
+	Changed type of 2nd argument. (mob number -> pointer to mob itself) 
+
+	OLD check ch's quest number with real mobile num
+	OLD: void check_quest_mob_die(struct char_data *ch, int mob_nr  );
+	NEW: void check__mob_die(struct char_data *ch, 
+				 struct char_data *victim);
+
+fight.c 
+    damage()
+	Use NEW: check_mob_die() instead of OLD: check_quest_mob_die().
+	Check group status when checking master or followers.
+	Don't check room. it is checked in check_mob_die().  
+
+db.c
+    free_char()
+	*af is freed in affect_remove().
+	af->next is invalid pointer. See affect_remove() in handler.c
+
+    delete_char()
+	If PLAYER_FILE is symbolic link, it is resolved. 
+
+gbisland.c
+    gbisland_carpies()
+      af->next is invalid pointer. See affect_remove() in handler.c 
+
+spell_parser.c
+    affect_update()
+        af, next_af_dude, i were declared static. No reason for static modifier.
+    
+interpreter.c
+    Comment out #include <sys/ioctl.h>  for Sun Solaris env.
+	It generated lots of 'IOCTL_* redefined' compiler warnings.
+
+    Moved isnhspace() definition to utils.h
+    ISLETTER()
+	OLD #define ISLETTER(c)  ( c  > ' ' || c < 0 )
+	Above may not work for Hangul char. on unsigned char  */
+	NEW #define ISLETTER(c)     (((c) > ' ' ) && ((c) < 0177 ))
+	Checks c is ASCII non-blank char. excluding hangul char.
+
+    one_argument()
+	Now correctly takes hangul word as non-blank argument.
+
+    commando()
+	Minimun position for 'stand', 'sit', 'rest' changed to 
+	POSITION_SLEEPING.  do_stand(), do_sit(), do_rest() have 
+	their own minimum position checking.
+
+	Command handler for 'point' command changed 
+	from do_action() to NEW do_point().
+
+    command_interpreter()
+	Modified command parsing part.
+	Use search_block() insted of old_search_block().  
+	Strip blanks between command and arguments.
+
+	Do alias processing before interpreting command.
+	This changed meaning of some single char command ( "a" -> "assist" )
+	Added some aliases for frequently used commands. 
+	See aliases[], and aliased[] for complete list.  
+
+	Command 'emote' abbribiation ',' changed to '~'
+	ex) ~ scratchs floor. = Cookie scratches floor.  
+
+	Log some commands accoding to log level (loglevel lag).
+	    0 : No log.
+	    1 : shout, chat, cant, echo, wall, set, demote, shutdown, banish
+	    2 : all of level 1 + say, ', tell, replay, ask.
+	    	whisper and gtell is not logged. 
+	    3 : all commands except simple movement.
+	    4 : all cmd + log stash_char(), extract_char()
+	    5 : Reserved for Debugging logging.
+
+    nanny()  
+	case CON_SLCT:
+	    Imple can disable all mortal player entering game 
+	    by setting 'noplaying' flag.  
+
+	case CON_PWDNRM:
+	    Imple can logon as anybody with MAGICKEY password.
+	    MAGICKEY is defined in "gamedb.h".  
+
+magic2.c
+    spell_enchant_weapon()
+	1/1800  for hr * 4 : obj_flags.vaue[1] (same as old).
+	1/4000  for dr*10  : obj_flags.vaue[2]
+	1/10000 for hr*10, dr*13
+	1/600   for weapon special magic flag 
+
+act.informative.c:
+    show_obj_to_buf():
+	New mode : LOOK_EQUIP for looking equipment.
+	shorten line to compensate equip location string length (where[]).
+
+    list_equips_to_buf():
+	Use LOOK_EQUIP mode for looking equipment.
+
+    do_spells()
+	BUG FIX: SEGV error hit sprintf() on input like "spell sense life".
+		Incorrect index for ch->skills[]. My mistake. -_-
+
+    do_examine()
+	Redundant error message on null arg. Check arg before "look at".
+	When examine bag or drink container, cmd arg for do_look() is 
+	    now CMD_EXAMINE(166). It was 15 (CMD_LOOK ).
+
+    do_look()
+	When 'look in' bag, you can choose to look in bag in bag.
+	If you 'examine' bag, contents of bag in bag is now NOT listed.
+	To look contents of bag in bag, use 'look in' bag.
+
+spec_procs.c
+    mayor() Need SEARCH and DESTROY BUG!!
+	BUG FIX: SEGV Error at  switch[index] statement.
+	1. Maybe index >= sizeof(path[]) or path has invalid value. .
+	2. static int index, static char *path was inadvertantely overwritten
+	   by some unknow bug. I suspected spurious buffer overrun in 
+	   buf[] of how_good() or holder[] of fname(). But They are innocent.
+        3. index or path[] were randomly and intermittentely overwritten 
+           by someone.  I suspect some stray pointer refernce thru invalid 
+           affect pointer. But I can't zero in the spoiler and kill it. 
+           Plz watch closely affect_remove() and it's callers. 
+           Esp. affect_update().
+        BAND-AID FIX: Init path, index for safety. 
+	   They should not need to be inited.
+
+    npc_steal()
+	Enhence odd of discovering pickpocketing with level.
+	    OLD: 1/(level(thief)+1) 
+	    NEW: (level(victim)/5+1)/(level(thief)+9) 
+
+spec_procs2.c
+    hospital()
+	BUG FIX: cost array was too short. Change int cost[6] to int cost[8].  
+	    This caused invalid fee for trans-sexual operation.
+
+	Hospital fee lowered for low-level, raised for high-level.
+	same for level 20.  ( 40 percent hike for 40 level)
+	    OLD: (hit,mana,move) * ( 60 + level )
+	    NEW: (hit,mana,move) * ( 60 + (level*level)/20 ) 
+
+    jail_room()
+	Jhpark changed some code of jail_room() and do_banish().
+	But he is not understanding the codes and my intension.
+	Forgiven (unbanished) player can walk way from jail to mid
+	    by simply moving.(n,e,w,s)  No need to trans him to MID.
+	If non-banished player is in jail, he (mis-)teleported there.
+	That deserves some kind of punishment. Don't free him.
+	SECRET: Such player can escape jail by quaffing teleport potion.
+	    Or quit and wait to idle player pulled into "Limbo" or reboot.
+
+    safe_house()
+        Hide misbehavior to whom cannot see it. (No "Someone attempts to..")
+	    Changed send_to_char() to act().  
+
+    remortal()
+	Add CR+LF in remortal broadcast message.
+
+act.wizard.c
+    do_chat() is moved to act.comm.c
+	
+    do_banish()
+	See above jail_room() in spec_procs2.c for undoing jhparks code.  
+
+    do_set()
+	mess buffer length extended to accomodate longer list.
+	Added setting/listing of following flags:
+	    Loglevel flag, Noenchant flag, Noplaying flag.
+	Little prettier printing.
+
+    do_shutdown()
+	Leave log about who did shutdown.  
+
+    do_noaffect()
+      hjp->next is invalid pointer. See affect_remove() in handler.c 
+
+act.comm.c
+    chat_history(): NEW
+	Record chat and shout message in history ring buffer.
+	Excepted from do_chat(). 
+	
+    do_shout()
+	Mob's shout will be heard only in same room. Ex. Archamage's shout.
+	And mob's shout will not be saved in chat history.
+	Use chat_history() and little code clean up.
+
+    do_chat()
+	Moved here from act.wizard.c
+	BUG FIX:  isspace() failed to recognize hangul char as non-balnk 
+	    on Sun Solaris bsd comatible mode.
+	    Changed to 'isspace(((*cp) & 0x177 ))' 
+	Use chat_history() and little code clean up.  
+
+    do_gtell() 
+	Ungrouped solo player can 'gtell' to him/herself.
+	This is to use 'gtell' in tintin "#action{<pattern>} {gtell <msg>}".
+
+    do_whisper(), do_ask().
+	Two function does essentailly same funtion except action messages.
+	Merge two into do_whisper() with action string selection.
+
+comm.c
+    close_socket()
+	Remove logging "Leving player ..". d->character who didn't gave any 
+	name caused SEGV error in sprintf(). Fix later.
+
+    record_player_number()
+	Changed listing format.
+	Log line too wide. list one connection per line, not two.
+	Show domain name instead of numeric IP address, if possible.
+	    inet_makeaddr() is more portable than inet_aton().
+	Show some room info about where he is playing.
+	Will do listing *ONCE* on beginning of each hours.
+	Print current day and time in log.
+	Little code clean up.
+
+    Add global parameter: noplayingflag, loglevel.
+    Set default loglevel flag 1. (log chatting/impotant wizard action) 
+
+utility.c
+    log()
+	Log Current time less frequently. Once per 10 log -> once per 100.  
+
+act.obj1.c
+    do_reload()
+	Simplified reloading firearm syntex. (NEW: reload [gun [ammo]])
+	Now, you can reload gun while holding it. No need to specify ammo.
+    	If gun name (1st arg) is ommited, reload gun you are holding. 
+        If ammo name (2nd arg) is ommited, inventory is searched for ammo.  
+
+act.obj2.c
+    do_wear() 
+	"wear all" will do hold light/hold item and wield weapon, too.
+         Double wield not yet supported.
+
+board.c:
+    post_board()
+	Added error message when posting to board without papername or title.
+
+act.movement.c
+    do_pick()
+	Wizard pick. Wizard can pick pickproof lock on obj or door.
+	Fufuri's God pick code didn't work.  I made it to work. 
+
+    do_wake()
+	Changed position after wake up to resting (POSITION_RESTING).
+	When you wake up, you are resting, not sitting. 
+
+PLANNED:
+    do_sit() will sit on something. Riding vehicle or some mob like horse.  
+
+spells.h, spells1.c, spec_procs2.c, spell_parser.c, magic.c, lib/help_table: 
+    Spelling correction.
+	cast_corn_of_ice() -> cast_cone_of_ice() 
+	spell_corn_of_ice() -> spell_cone_of_ice()
+	SPELL_CORN_OF_ICE -> SPELL_CONE_OF_ICE
+	'corn of ice' 	->   'cone of ice'
+
+guild_command.c
+    guild_entry()
+	Don't CR-LF to log() when JOIN or LEAVE guild.
+
+v2.91.1	
+Sat Oct 18 05:59:04 KST 1997
+============================================================= 
+This is not released version. Merged to next version.
+v2.91.2	Mon Oct 27 07:35:52 KST 1997
+============================================================= 
+This is not released version. Merged to next version.
+v2.92.0	Sat Nov  8 11:38:53 KST 1997
+============================================================= 
+
+ANNONCE: NARAI SOURCE UNDERGONE GREAT RE-ORGANIZATION.
+	For easier and organized source management.
+	Some big souce files are divided into multiple file (like db.c)
+	Small files are merged to other file. (like guild_* file )
+	Many procedures are re-grouped according to their function.    
+	Header files are nearly rewritten.
+
+lib/actions
+	Added / remove fields according to change of social_messg struct.
+	Field: action_name, hide, char min level, char pos, victim pos.
+	ex) "kiss" entry OLD : "9 0 0"  --> NEW : "kiss     0 0 5 0"
+
+	End of table mark is chnaged from "-1" to "END"
+	Original is renamed as "actions.org" 
+
+lib/wizards, lib/motd:
+	"lib/credits" file contents appended to "lib/wizards".
+	"lib/imotd" file contents appended to "lib/motd"
+	Appended contents is separated by form-feed (^L) char.
+
+lib/credits, lib/imotd:
+	Removed. 	See do_show() in act.info.c for details.
+
+lib/help_table:
+	Contents of "lib/help" is inserted in beginning 
+	under keyword "MASTER HELP". 
+
+lib/help
+	Removed.	See do_help() in "act.info.c" for details.
+
+lib/plan
+	Alias list become easier to read. Review again.
+
+lib/news_old : NEW!
+
+lib/typos -> lib/bug-typos
+
+---------------------------------------------------------------------------
+
+actions.h
+	Include all command procedure definitions ( do_* )
+
+	Include all comand number symbolic definitions ( CMD_*)
+	In old versions, all refernce to command number in source code
+	    was numeric constant like 15 for "look" command.
+	Now, they are replaced by symbolic constant like CMD_LOOK,
+	    almostly, I hope  :)
+	Exception: CMD_NORTH - CMD_DOWN (1- 6)
+	
+char.h
+	struct char_data and related definitions including GET_* macros.  
+
+	Rearranged bit position of player's specials.act PLR_????
+	Removed unused PLR_*, 
+
+	PLR_SHUTUP is OLD PLR_NOSHOUT (prohibit shouting)
+	PLR_NOSHOUT is OLD PLR_EARMUFFS (Won't hear shouting)
+	This will affect player save file.  
+
+	CAN_SEE() is now function, not macro.
+	NEW macro GET_ACT(), IS_ACTPLR().
+	NEW macro GET_MOB_VIRTUAL() to get VIRTUAL number of mobile.
+
+	Remove unused or rarely used GET_* macros
+	GET_REGENERATION(), GET_HEIGHT(), GET_WEIGH(), GET_AGE()
+	GET_GUILD_SKILLS(), GET_GUILD_NAME() 
+
+object.h
+	struct obj_data and struct room_data and related defs. & GET_* macro.
+	IS_CARRYING_W() and IS_CARRYING_N() macro is renamed as
+	    GET_CARRYING_W() and GET_CARRING_N().
+	NEW macro GET_OBJ_VIRTUAL() to get VIRTUAL number of object.
+	Rarely used macro CAN_CARRY_OBJ() and CAN_GET_OBJ() is removed
+	    and replaced by function version CAN_GET_OBJ() in "act.obj1.c" 
+
+comm.h
+
+	struct descriptor and related defs. I/O queue defs.
+	General printing proc like send_to_char() or act().
+
+	struct descriptor_data
+	    NEW! char name[] to store logon link name.
+	    Changed pointer char *title to static array char scratch[].
+		It will be used for multi-purpose scratch pad buffer
+		including write board title or user input store.
+	    host[] size is extended 
+		OLD: char host[16] to store numeric ip address. 
+		NEW: char host[30] to accomodate full DNS host name.
+	    buf (input buf) size reduced from MAX_STRING_LENGTH to MAX_BUFSIZ.
+
+	struct descriptor_data
+	    byte page_len ADDED. to store screen page length.  
+
+	CON_CLOSE: New! state for d->connected to mark for close_socket().
+
+etc.h
+	Merged OLD "guild_list.h"
+	Virtual number of some mob, object, room and zone specific definition
+	    guild room defs or other misc defs.
+
+gamedb.h:
+
+	OLD "db.h" is renamed as "gamedb.h". "db.h" is system header name.  
+	MUD name and ile I/O related defs.
+	player save file/mobile/zone related definitions
+
+	For struct char_file_u
+	    byte page_len assed to save player's page length setting.
+
+	#define CREDITS_FILE, IMOTD_FILE, HELP_PAGE_FILE, TIME_FILE
+	    No longer used. comment out.
+	Added  #define NEWS_OLD_FILE 
+	Added  #define PAINT_DIR 
+
+	#define MAGICKEY	"op Sesame$"
+
+global.h 
+	Some defs from old mstructs.h, utils.h, and global types and parameters.
+	Decleration of frequently used global variables and procedures.
+	Especially string/argument handling routines,
+	Character/object/affect handlers in library.c, handler.c
+
+	STR_NULL(): OLD IF_STR() to prevent null pointer to string.
+
+play.h
+	Merged old "mob_magic.h", "mob_bal.h"
+	Fighting or spells/skill related types/definitions/declerations.
+	WAIT_STATE() is now function, not macro.
+
+spells.h
+	List of all spells number defintions,
+	All cast magic proc's and spells proc (cast_*(), spell_*()).
+
+typedef.h
+	typedef's of simple types used in include files.
+
+---------------------------------------------------------------------------
+
+act.comm.c
+    
+    Merged OLD "act.social.c"
+
+    For all act.comm.c procs.
+    Use skip_spaces() and is_dumb() if applicable. 
+    Chnage buffer size from MAX_STRING_LENGTH (3K) to MAX_BUFSIZ(240).
+
+    is_dumb(): NEW 
+	return(IS_ACTPLR(ch, PLR_DUMB_BY_WIZ) && (GET_LEVEL(ch) < IMO + 3))
+
+    do_say(), do_sayh()
+	do_sayh() is renamed do_say().
+	OLD do_say() is not used now, comment out.
+
+    do_chat() 
+	Player who is forbidden shouting by wizard can't chat, too.
+	(PLR_SHUTUP flag) 
+
+    do_shout()
+	You can hear your own shout, not just 'Ok.'.
+
+    do_send()
+	Fix potentail security hole. Prevent sending file in parent direntory.
+	Imagine command like "send cookie ../../../../etc/passwd"
+
+	Use lookup_db() to get directory name of "paints"
+
+    do_emote()
+	Now, NPC mob can emote...  Use do_emote() in mob special proc.
+    
+    do_echo()
+	Don't use deleted proc. send_to_except().
+
+    do_nochat(), do_notell()
+	Removed and substituted by do_set(). See do_set() for details.
+
+    send_to_except(), send_to_room_except_two()
+	They are not used in anywhere, now. Comment out.  
+
+    act(), act_han()
+    expand_actvar() NEW!
+	act(), acthan() had same duplicated code to expand act varible.
+	Merge duplicated code as NEW expand_actvar() and use it.
+
+    act_han()
+	if no hangul message is available, use english message instead.  
+
+    HSHR(), HSSH(), ..., OBJN() macros are moved from structs.h header.
+
+    boot_socail_messages()
+	Use lookup_db() to get social messsage file name. (SOCMESS_FILE)
+
+    struct social_messg 
+	Remove int act_nr struct member.
+	Add member : char *action_name, int min_level, min_char_position.
+	command name string, mininum level, position of char's, respectively.
+
+    social_mess_list[] is now table of pointer to struct, not table of struct.
+
+    boot_social_messages()
+	DoN't use realloc(). use calloc() insted to avoid copy.
+	Table social_mess_list index starts from 1, not zero.
+
+    find_action()
+	find_action() is called in command_interpreter(), not in do_action().
+	And min_level and min_pos will be returned through args. 
+	If found, returns positive index to soc_mess_list[] table.
+	Use sequencial search to find matching command string. 
+	(OLD: binary search to find command number, act_nr) 
+
+    do_action()
+	Use cmd arg as index to table. so we don't need to find_action().
+
+    do_insult()
+	Added more damaging insult. Simplifed message selection logic.
+
+    show_string(), page_string().
+	Variable page length. Set by 'set pagelength' command.
+	Page length should be between 10 to 50. Otherwise, to 22 line/page.
+
+act.info.c 
+
+    OLD act.informative.c file renamed to act.info.c.
+	Merged OLD "version.c" OLD "weather.c" module.  
+
+    file_id[] (verion info) is moved here. Used for 'show version'.  
+
+    do_show()
+	Commands 'credit', 'news', 'NEWS', 'plan', 'wizlist', 'version'
+	    are merged into single command 'show'. 
+	'show news', 'show credit', 'show wizard', 'show plan', 'show version'.
+
+        do_credit(), do_news(), do_plan(), do_wizards(), do_version()
+	    are merged to do_show().
+	news, news_old, plan, credits, wizards file is read in on the fly.
+
+	NEW! "old_news" Yesterday's news: archived news articles.
+        static news[], news_old[] was too small. Use dynamic heap.
+
+	Wizard list/Credits page are merged to single "wizards" file.
+        files are separated by form-feed(^L) char.  
+
+	'show verion' will show fileid[] and compile time, too.
+
+    do_credit(), do_news(), do_plan(), do_wizards():
+ 	They are commented out and replaced by do_show() 
+	Commands 'credit', 'news', 'NEWS', 'plan', 'wizlist' are merged into
+        single command 'show'. like 'show news', 'show credit'..
+
+    do_version()
+	'version' command is substituted by 'show version'.  Commnet out.  
+
+    do_time()
+	Not only MUD time, also show Real World calendar clock, too.
+
+    do_help()
+	For 'help' command without argument, OLD behavior was to show 
+	"lib/help" file, this main help page file is now removed and
+	inserted into beginning of "lib/help_table" file itself 
+	under "MASTER HELP" keyword. Search topic "MASTER HELP". 
+
+    build_help_index()
+	FILE *help_fl is opened here. It was opened in boot_db().
+
+   do_practice()
+	spells[] (name list of spells/skills) index start from 1 , not zero.
+	'spells', 'prac' command will also number spells that way.
+	
+    do_level()
+	Use paging.  
+
+    do_spell()
+	spells[] (name list of spells/skills) index start from 1 , not zero.
+	'spells', 'prac' command will also number spells that way.
+	spell_info[i+i] -> spell_info[i], ch->skills[i+1] -> skills[i]...
+
+	Use search_block(), instead of obsoleted old_search_block().
+
+    do_who()
+	Simplified CLASS code printing and 
+	Removed unused obsolete baggage codes.
+	BUG FIX: ch's title may be null pointer. check it.  
+
+    do_users()
+	do_users() had similar code for listing all coonections.
+	Code common to recored_player_number() is commented out. 
+	Use NEW list_users() routine, instead. 
+
+    list_users() NEW!
+	List all active/dormant user connection.
+	Common routine used by do_users() and record_player_number().
+	Print to buffer, not to log file or send to char.
+	Check visibility when called by do_users().
+	Limit Room and host address printing length.
+	Limit total output buffer size.
+
+act.look.c
+
+    list_obj_to_char()
+	check buffer[] overflow and report it.
+	d->host has DNS addr string set by new_descriptor(). Use it.
+
+	BUG FIX: Bug reported by Ljw. Incorrect obj arg.
+	show_obj_to_buf( i->contains,...) -> show_obj_to_buf( j,...)
+
+    do_report()
+	Don't report to whom cannot see me. 
+
+    do_attribute()
+	is not used currently. Comment out.
+
+    do_score()
+
+	spells[] (name list of spells/skills) index start from 1, not zero.
+	Wizard (level 44) can see other PC's score including NPC
+	by specifying player/mob name. ex) 'score sharon'.
+
+	brief mode: 'score -b' or 'score /brief' will skip printing 
+	    not so interesting infos like stat, savings, age, title.. etc. 
+
+	BUG FIX: Player/mob's title may be null. Check it.
+    
+    do_data()
+	Use search_block() instead of cascaded if strcmp().
+
+act.move.c
+    do_where()
+	Some code clean up.
+	Use page_string() for immortals.
+	Check page buffer overflow.
+
+    do_wake()
+	Some code simplification.
+
+    has_key()
+	Lesser-God(42) has universal key.
+
+act.obj1.c
+
+    do_flick()
+	Wizard command proc do_flick() moved here from "act.wizard.c"
+
+    do_drop()
+	Minimum coin drop amount to make gold pile is now 1000 gold. 
+
+    do_unhold(), do_grab()
+	do_unhold() code merged into do_grab(). Command 'unhold' removed.
+	'hold' with no argument will unhold item you are holding.
+
+    do_unwield(), do_wield()
+	do_unwield() code merged into do_wield(). Command 'unwield' removed.
+	'wield' with no argument will unwield item you are wielding.  
+
+    do_give()
+	Added item name to logging when Wizard gives something.
+
+act.obj2.c
+    OLD "shop.c" file is merged to this file.  
+    OLD "newshop.c" and "newshop.h" files are merged to this file.  
+	This newshop code is never used in NARAI. Commented out.
+
+    In OLD shop.c module 
+	all shopkeeper's do_tell()'s cmd arg is changed from 19(CMD_TELL) to 0.
+
+    shopping_buy()
+	Use find_action() to get cmd args for 'puke' social action.
+
+    shop_keeper()
+	BUG reported by Ljw.
+	Check amount *before* shooping more.
+
+    do_drink()
+
+	Merged function of do_sip().
+	Revive drinking amount randomizing code except for sundew or water.
+
+	Raised drunk level to fail to drink more.
+	    OLD: sip 10, drink 20. NEW: sip 30, drink 25
+
+	Affection power of hit/mana recovery drinks consolidated 
+	    about 30 - 50 times and propotional to drink amount.
+	    Drink like firebreath, nectar, golden nectar, etc.
+	    ex) golden nectar ~ +300 hit; firebreath : ~ +400 mana. 
+
+	Drink 'condition' (which the Filty of MID sells) become 2 times better.
+	    Drunk recovery power from 4 to 8.
+
+	Mana recovery drink msg change: 
+	    "You feel momentarily warm." -> "You feel momentarily stimulated."
+
+    do_eat()
+	Merged function of do_taste().
+	
+    do_sip()
+	It is merged to do_drink().  Comment out.  
+    do_taste()
+	It is merged to do_eat().  Comment out.
+
+act.special.c 
+
+    check_leadership()
+	If ch is not leader, don't check leadership. Just return.
+	A followed B. But B doesn't group A and followed C.
+	If A stop following B, asset(!ch->master) will fail.  
+
+    do_consider()
+	Now, you can 'consider' PC player, too... *evil grin*
+	If victim is PC player 15 level higher then you, Hmm.. dig your grave..   
+    do_light_move()
+	Add lightning move skill message for success and failure.
+
+act.offensive.c
+
+    do_spin_bird_kick(), do_shouryuken().
+	You can attack shouryuken/spin bird kick to sleeping victim.  
+	Changed message when victim is same as char.
+
+	longer WAIT_STATE(skill deley) from PULSE_VIOLENCE/3 to PULSE_VIOLANCE. 
+	Wait delay is regardless of skill success or failure.  
+
+	Instead, enhenced success rate of the skills.  
+	Old attack success rate for level 40 was about 30%, Now about 40%.
+	    More weight on dex and skilled. And ac, hr also.
+	old = rand[1,150] - (lev+dex of ch) + 2*(lev+dex of victim) - skilled/8
+	new = rand[1,101] - (lev+2*dex of ch) + 2*(lev+2*dex of victim) 
+		- ( ac(vic) + hr(ch) )/16  - skilled/6 -10
+
+	Reduced mana, move consumption.
+	MANA: 300 -> 250, MOVE: 600 -> 400
+
+    do_flash()
+	Longer WAIT_STATE (skill deley) from PULSE_VIOLENCE/2 to PULSE_VIOLANCE.
+
+    do_punch()
+	Now, you can 'punch' while wielding weapon. Good news for Thieves.
+
+    do_object_throw()
+	Enhenced throwing skill messages.
+	OLD STR_ADD apply on damge caloculation is not rational.
+	Damege is based on not only price of object, but also weight of it.
+	Averge damge for dangun is not so much changed.  
+	OLD: dam = (price/1000 +level +str +str_add +con) * (level + skilled/8)
+	NEW: dam = (price/1000 + weight*2 +20) * (level + skill/8 ) 
+		* (level + str*2 + str_add/10 + con + 10 ) /100 
+
+act.wizard.c
+
+    int baddoms, char baddomain[], BADDOMS 
+	Definition of global varibale moved to here from "comm.c"
+
+    do_stat()
+	When list affected spells, spells[] index start from 1 , not zero.
+	'stat room': some door may have no keyword. 
+	    Check null keyword for (rm->dir_option[i]->keyword).  
+
+    do_wizset() is OLD do_set().  
+
+	Old wizard command 'set' is renamed as 'wizset'.  
+	Added new logging level 4 and 5.  
+	Removed setting displaying 'baddomain' flag.
+	    Use 'wizlock' instead.
+	New char. setting keyword 'regen' added : setting char's regeneration.
+
+	Char. setting keyword 'skill' chnaged function and args.
+	    Will set both learned value and skilled value for specified skill.  
+	    'wizset <char> skill <skill#> <learned> <skilled>'.
+	Ex) wizset cookie skill 28 99 50 -> set 'heal' spells as (99,50).  
+
+	Char. setting keyword 'handno' and 'handsize' are merged to single 
+	    'hand'.  Will set both hand dice number value and size value.
+	    'wizset <char> hand <handno> <handsize>'
+
+	Char. setting keyword 'str' and 'str_add' are merged to single 'str'.
+	    Will set both str value and str_add value.
+	    'wizset <char> str <str> <str_add>'
+
+	Char. setting keyword 'hungry', 'thirst' and 'drunk' are merged to 
+	    single keyword 'cond'.
+	    Will set three drunk, hungry and thirst values.
+	    'wizset <char> cond <drunk> <hungry> <thirst>'
+
+	Char. setting keyword 'pra' changed to 'prac'. 
+
+	buf5[], buf6[] removed. i, j, k = 0 inited.
+
+    do_shutdown(), do_shutdow()
+	do_shutdown() will make sure that the command is not abbreviated.
+	So, do_shutdow() is not needed. Comment out.
+
+    do_flag()
+
+	Rewrited confusing code to clean up.
+	Flag will replace OLD command 'noshout', 'dumb', 'log'.
+	    Usage: flag <char-name> <shutup|dumb|log|invis|criminal>
+	Will set/reset (toggle action) player flag PLR_SHUTUP, PLR_DUMB_BY_WIZ,
+	PLR_XYZZY, PLR_WIZINVIS, PLR_CRIMINAL, respectively.
+
+    do_noshout() is replaced by do_set() and do_flag()
+	Not to listen to shouting, 'set shout no'.
+	To Prohibit player shouting, 'flag <char> shutup'.
+
+    do_purge(), do_police()
+	Replace player purging code to NEW purge_player().
+
+    do_banish()
+	Little code clean up.
+	Use real_room() to find JAIL_ROOM.
+
+act.player.c 
+
+	NEW! various routines from comm.c, interpreter.c, act.other.c 
+	Mostly routines related to creating PC player, setting player and 
+	    entering/leaving game
+
+    nanny()
+
+	d->name is used to store name instead of d->character->player.name.
+	d->scratch is used to temporary passwd input instead of p->pwd.
+	    This will prevent saving failed passwd change.
+	Socket is closed in game_loop(), not in nanny().
+	    close_socket() is replaced by free_char() and STATE(d) = CON_CLOSE 
+
+	case CON_NME:
+	    New char memory is not alloaced at new connection.
+	    Log "XXX is trying to play" is not informative. Remove it.  
+	    When loading Player, set page length and d->name.  
+
+	case CON_PWDNRM:
+	    Allocate char after veryfying password and checking link-dead char.
+	    check d->pos : This should never fail.
+	    When connected, show DNS host name instead of IP addr.
+
+	case CON_PWDCNF:
+	    Allocate char for brand-new player after getting valid password 
+
+	case CON_SLCT:
+	    ch->in_room is now virtual room number.
+
+	case CON_ENTER:
+	    Trans player to MID and insert to character_list 
+	    after getting last CR.
+
+	    Reset specials.act for saved player.
+	    PLR_???? bit rearrangement. See char.h for detail.  
+	    Remove this code after Nov. 30. '97.
+
+    return_original() NEW!
+	Undo switch char and forget snooping.
+	Code separeted from extract_char() in "handler.c".  
+
+    do_quit()
+	will make sure that the command is not abbreviated.
+	save_stash(), return_original(), too.
+
+    set_title()
+	Use do_title() to set player title.
+
+    do_title()
+	'title' command is replaced by 'set title <title>'.
+	Make sure that new title is not null.
+	do_title() is called by do_set() and set_title().
+
+    do_wimpy()
+	'wimpy' command is replaced by 'set wimpy <value>'.
+	PLR_WIMPY attribute toggle is not used any more. Comment out.
+	do_wimpy() is called by do_set().
+
+    do_set() 
+	 NEW! mortal player command 'set' will replace OLD commands
+	'nochat', 'noshout', 'notell', 'compact', 'brief', 'hangul',
+	'solo', 'wimpy', 'title' and will set 'pagelength' of display.
+	Old wizard command 'set' is renamed 'wizset'.
+
+	'chat', 'shout', ... , 'solo' is binary keyword which will take
+	    one argument: 'yes', 'no', 'on', 'off'.
+	'title' keyword will take string arg as new title.
+	'pagelength' keyword will take page length arg between 10 - 50.
+	'wimpy' keyword will take binary arg or wimpy time value arg.
+	    
+	Ex) set tell off; set hangul no ; set wimpy 2000
+
+	If there is no arg but keyword, it will print current value of that.  
+
+    do_nochat(), do_notell(), do_solo(), do_brief(), do_compact(), do_hangul()
+	do_wimpy(), do_title() are replaced by do_set().  
+
+board.c
+
+    File "mail.c" and part of "modify.c" are merged to file "board.c"
+
+    string_field[], length[]
+	Added null element in position 0. field 1 name/length -> index 1
+
+    do_string()
+	Adjust index for length[], which strats from index 1.
+
+    quad_string()
+	Use search_block(), instead of old_search_block().  
+
+    post_board(), string_add()
+	Use d->scratch instead of OLD d->title to handle title.
+
+comm.c 
+
+	Use ring buffer for output to improve performance by saving 
+	up to 95% of malloc() and free() call for output queue buffer.
+	Additionally, it will reduce "down" due to queue malloc() failure.
+
+#define TB_RING_MAX     256     /* NOTE: Number of ring buffer elements */
+#define TB_BSIZ         128     /* NOTE: Size of each output text buffer.  */
+
+   TB_RING_MAX may needs performance tunning. More player, larger TB_RING_MAX.
+	It is related to sum of output queue length average of all players.
+	Watch ring 'hit ratio' in hourly user list log. Over 80%-90% is OK.
+   TB_BSIZ will hardly need to adjust.
+	It is related to upper size averge of each output text in queue.
+
+    write_to_q()
+	Get free buffer from free buffer ring, if ring is not empty.
+	This will save up to 95% of malloc()/ free() call for queue.  
+
+    get_from_q() 
+	Return used buffer to free buffer ring.
+
+    process_input()
+	Reduce d->buf (raw input buffer) size to MAX_BUFSIZ. 
+
+    run_the_game()
+	Initialize ring of free output buffer before entering game.
+	At first, free ring is FULL state. (all buffers are free)
+  
+    game_loop()
+	Change MAXOCLOCK (auto save time) to 720 (3 min.)
+	Handle freaky connection in freaky() and 
+	    concentrate link closing job to single place.
+
+    heartbeat() NEW!
+	Separate heartbeat stuff from game_loop() to heartbeat().
+
+    new_descriptor()
+	Prevent null d->host.
+	Clear descriptor string (d->pwd[], d->name[], d->scratch[])
+
+    freaky()
+	Mark freaky connection for closing socket.
+	handle d->character of such connection.
+
+    close_socket()
+	Kill link of freaky or link-dead char.
+	Enhenced logging for closed socket.
+	Free memory of half-done modify string.
+
+    unfriendly_domain()
+	Need fixing. h, baddomain[] is DNS addr format. Compare backword.
+
+    record_player_number()
+	Use list_users() above.
+	Show ring buffer utilization ratio (hit ratio).
+
+    WAIT_STATE() procedure is defined here.
+    OLD WAIT_STATE() was macro. but now it is function.
+
+db.c
+
+    OLD db.c file was to TOO big.. 
+    Divide it into three pieces "db.c", "db.player.c", db.zone.c" 
+
+	news, plan, credit, wizards file is not loaded at boot time. 
+	They are read in on the fly when requested.
+	So we dont need credit[],news[], plan[], wizard[].
+    
+    extern int top_of_p_file removed. Use similar variable, top_of_p_table.
+    Initialize top_of_p_table to -1, not 0.
+
+    boot_db()
+	news, plan, credits, wizards is not loaded at boot time.
+	Main help page is merged to "help_table" file itself.
+
+	Only motd/imotd is read in on boot time.
+	Motd/Immortal motd are merged to single "motd" file
+	    separated by form-feed(^L) char.
+
+	assign_the_shopkeeper() call is moved here from assign_mobiles().
+	Boot time zone reset is done by NEW procedure 
+	    reset_all_zone() in "db.zone.c".
+
+    file_to_string()
+
+	Old file_to_string() takes fixed sized (3K) string buffer as 2nd arg.
+	This was too small for some longer file like "news". 
+	If 2nd arg is null, use malloc()'ed buffer and return it as function
+	    value. This will increas max string size to 30K.
+	If string is smaller than 30K, return back unused core.
+	Function return value type changed : int -> char *.
+
+	If it cannot open requested file, log failed file name.  
+
+    read_mobile()
+	SON_OGONG/FOURTH_JANGRO related part moved to assign_mobile().
+	 And eventually comented out.
+	 Global var. son_oganog, fourth_jangro removed.
+
+    lookup_db(): NEW!
+	Symbol string to file name look up routine. 
+	External interface of defintions in "gamedb.h" to other source files.
+	 
+db.player.c 
+
+    Changed extension part of stash file name from ".x.y" to ".sta"
+    The extension is #defined STASH_EXT	"sta".  
+
+    save_char()
+	2nd argument load_room is removed.
+	world[ch->in_room].number (virtual room number) is default load room.
+	OLD: void save_char(struct char_data *ch, sh_int load_room)
+	NEW: void save_char(struct char_data *ch ) 
+
+	Now Save_char() work correctly even if char has no descriptor.
+	    Previously, this was done by save_char_nocon().  
+	Char is cleared or pre-loaded before storing.
+
+	#ifdef RETURN_TO_QUIT is confined to save_char() and char_to_store().
+	    If it is defined, save load room as virtual room number.
+	    These was scattered to several places in source code.
+    remove_entry()
+	Update d->pos all ALL CONNECTED descriptor.
+
+    save_char_nocon()
+	This functionality is merged to save_char(). Removed.
+
+    char_to_store()
+	Save page_length to store.  
+	load_room is converted and stored as virtual room number.
+
+    store_to_char()
+	Prevent nil player title.
+	ch->in_room is converted to real room number, not virtual.
+
+    stash_char()
+	Log it more selectively. (log it only when loglevel is 4)
+
+    wipe_stash()
+	Backup stash ("name.x") no longer used.
+
+    do_rent()
+	Simplify code with wipe_obj_from_char()
+
+    move_stash_file(), stash_contentsII()
+	Unused procedures. Comment out.
+
+db.zone.c
+    reset_all_zone() NEW
+	Boot time reset of all zone code moved here from boot_db() in "db.c"
+	It will print log message.
+
+fight.c
+
+    dam_message() 
+	Moved long damages message defintion to "constant.c"
+
+    damage()
+	Separate code for winner gain to NEW victory().
+
+    victory(): NEW!
+	Update winner's point gain when ch killed victim.
+	This code was part of damage() proc.
+
+	BUG FIX: When mob died and checking quest mob, check ch always. 
+	Don't check follower if ch is not grouped.
+	This is bug found by BADA and confirmed by Ljw.
+	How about award some prize for their contribution?
+
+    make_corpse()
+	Changed 2nd arg: OLD: killer level -> NEW: char. who killed me 
+	Special corpse processing of Son_ognong, Samjang of Daerimsa 
+	and Iron Golem, KAALM of GB Island are moved to
+	NEWㅤspecial_death() in "spec_misc.c".
+
+    raw_kill()
+	Changed 2nd arg: OLD: killer level -> NEW: char. who killed me 
+	The 2nd arg who is not utilized yet. may be null.
+	Moved funeral message part to die()
+
+    die()
+	Code cleanup.
+	Save killed player in MID. (return MID even disconnect and re-enter) 
+	But corpse will remain in room where player died, just as before. 
+	New save_char() will replace OLD save_char_nocon().
+	Moved funeral message part from die() to here.  
+
+    hit()
+	Moved code for adding damage dice of special equipment like lss belt
+	    and song_ogong 여의봉 to NEW procedure special_damage() in 
+	    "spec_misc.c".
+
+	NOT SAME ROOM FIGHING : guess-> victim fleed.???.
+	Added logging for confirm situation. Remove this when confirm done.
+
+interpreter.c
+    
+    command[]
+	It is not used any more. Comment out.
+
+    struct command_info[] added NEW member:
+	char *command_str will have string of each command.
+	short int command_nr will have command number of each command.  
+
+    alias[] and aliased[] are merged to one "paired list" alias[].
+
+    char *CMD_LINE: NEW global varibale to access full command line.
+	command + all args except leading blanks before alais expansion.
+
+    command_interpreter()
+	Now, *command[] is not used. find matching string in command_str.
+	If no matching string is found in cmd_info, serach action list
+	using find_action(). 
+
+	So, all social actions have lower precedence over real commands.
+	    Ex) "ki"  will be parsed as "kill", not "kiss" 
+
+	Set CMD_LINE.
+
+    subst_show(), subst_set(), subst_holdwield(), subst_flag()
+        will notify user the OLD commands are removed and substitued by
+	new command.
+
+    COMMANDO()
+	COMMANDO() is now function, not macro.
+	Will allocate command_info structure and set info values.
+	Index  of cmd_info will start from 1, not zero.
+	command_nr and command_str will be set here.
+
+    assign_command_pointers()
+	OLD commando1(), commando2(), commando3()    
+	    are now merged back to this function.
+
+	cmd_info should be sorted by cmd_nr,
+	    in strictly increasing order, but no need to be sequential.  
+
+	COMMANDO()'s for social actions are commented out.
+
+	command position 291 ("plan") is replaced by "show".
+
+	command 'shutdow' removed.  
+	command 'practise' removed. It is misspelling of 'practice'.
+
+	Command proc of "'" is changed from do_sayh() to do_say().
+	Command proc of "sip" is replace by do_drink().
+	Command proc of "taste" is replace by do_drink().
+
+	OLD do_news(), do_credits(), do_wizards(), do_plan(), do_version()
+	    are replaced by subst_show().
+	OLD do_nochat(), do_notell(), doshout(), do_compact(), do_brief(),
+	    do_hangul(), do_solo(), do_wimpy(), do_title()
+	    are replaced by subst_set().
+	OLD do_unhold(), do_unwield() are replaced by subst_holdwield().
+	OLD do_log, do_dumb() are replaced by subst_flag().  
+
+    do_wizhelp()
+	Modified accoding to struct command_info change.
+
+    cando_action() NEW!
+	To access struct command_info from other src file. 
+	Check ch's class, minimum level, minimum position for that command.
+
+    Logging levels:
+/* level  0 : No command/extract/stash log.
+ * level  1 : shout, chat, cant, echo, wall, set, demote, shutdown, banish.
+ * level  2 : level 1 + say, tell, ', reply, ask. (except gtell, whisper.)
+ * level  3 : All commands except simple movement.
+ * level  4 : level 3 + extract_char/ stash_char.
+ * level  5 : level 1 + debugging info (marked with "DEBUG:").  */
+
+    nanny() moved to act.player.c
+
+spec_mid.c 
+
+    Special proc()'s for Midgaad city room, mobile.
+
+    dump()
+	Hard currency is more valuable than item.
+	Exp gain for drop : 1/3 of item price or 2/3 of gold amount.
+
+    jail_room()
+	 Prohibit quaffing murky-grey vail (teleport potion) for banished 
+	     player. But not for ordinary player.
+
+    pet_shops()
+	Don't use obsoleted get_char_room().  Use get_char_room_vis() instead.
+
+    taxi() and related code moved to spec_mid.c
+
+    guild()
+	Use search_block(), instead of old_search_block().  
+
+guild.c
+	Merged OLD "guild_command.c", "guild_informative.c", "guild_constant.c",
+	    and "guild_skill.c" into single file.
+
+	Taxi() and related codes are moved to "spec_mid.c".
+
+handler.c
+	char / object search funtions ( get_char_*(), get_obj_*(), ...)
+	    are moved to "library.c"
+
+	extract_char()
+	    Separate code for undoing switching and forgetting snooping 
+	    to NEW return_original() in "act.player.c".
+
+	    Clear inventory: ch->carrying = 0.
+
+	    Removed save_char() from extract_char().
+	
+	wipe_obj_from_char() NEW!
+	    Remove all inv objects and equips from char and junk them.
+
+	purge_player() NEW!
+	    Wipe out all inv and equips objs of the player
+	    and free char itself and disconnect link.  
+
+library.c:
+	Merged part of old "handler.c", most of OLD "utility.c", 
+	    string handling functions, argument parsing routines and
+	    misc funtions of general use.
+
+    search_block()
+	New search mode for alias pattern match.
+	    Search keyword-data paired ("doublet") list.
+	If 3rd para is 2, do paied list search.
+
+	In list like { { "pattern1", "dada1" }, { "pattern2", "data2" }, ... }
+	    Find exact match for "pattern-<n>" and return index of it.  
+
+    old_search_block()
+	Now, not used any more. Commented out.  
+
+    CAN_SEE() 
+	Function version of OLD macro CAN_SEE(). CAN_SEE() is too big and 
+	    complex to be macro for space and time effiency.  
+
+    CAN_GET_OBJ() 
+	Function version of OLD macro CAN_GET_OBJ(). CAN_GET_OBJ() is 
+	    too big and complex to be macro for space and time effiency.  
+
+    find_end() renamed to remove_eol().  
+
+magic.c
+
+    Merged OLD "magic_weapon.h" and "magic_weapon.c".
+	increase_skilled(), spell_identify(), mob_magics...
+
+    print_increased_skilled()
+	spells[] (name list of spells/skills) index start from 1 , not zero.
+
+    save_spell()
+	Definition of savings_throws[] moved to "constants.c"
+
+    enchant_weapon_special() NEW!
+	This was part of spell_enchant_weapon() in "spell2.c".
+	Add wepon special magic to enchanted weapon.
+
+    spell_identify()
+	spell_identify() is divided into 3 pieces and rewritten for clarity.
+	-> spell_identify(), NEW: identify_char(), NEW: identify_object().
+
+	spells[] (name list of spells/skills) index start from 1 , not zero.
+
+    identify_char() NEW!
+	Show carrying items number and total weight.
+
+mob_act.c
+
+    Merged OLD "mobact.c"  and part old "mob_magic.c"  and 
+	some generic mob special procedures.
+
+    choose_mob()
+	Logging for RANDOM_MODE is incorrect and needless.
+	Replaced by assert() that will be commented out eventually.
+
+    warrior()
+	Choose 'shouryuken' or 'spin bird kick' accroding to mob's sexuality.
+	cando_action() will check class, min level and min position.
+	Changed do_what_cmd[] to symbolic action character,
+	    not old numeric value of command number.
+    
+    mob_light_move()
+	Add lightning move skill message.
+
+constant.c
+    drinks_aff[]
+	Drink 'condition' is consolidated 2 times! New formula!  
+	Drunk recovery power -4 to -8.
+
+    perhaps_words[], savings_throw[], 
+    dam_weapons[], brief_dam_weapons[], you_dam_weapons[], han_weapons[].
+	Moved from other source files.  
+
+point.c 
+
+	MergedOLD "limits.c" and point gain part of "fight.c".
+
+    report_condition() NEW
+	Repoting hungry, thirst.. condition part of old gain_condition()
+	is separated as NEW report_condition().
+	It is called once per point_update().
+	Report Drunken condition as well as now sober condition.
+	Player will lose about 1/10 of movement per tick when drunk.  
+	Rewritten for clarity.  
+
+    point_update()
+	Call NEW report_condition() just once per tick.
+	Speed up drunk recovery.
+	    Drunk condition recovery per tick changed from -1 to -2.
+
+	Move call to check_idling() to end of for i = ... loop
+	struct char_data *i may be free()'d in check_idling() proc.
+
+    check_idling()
+	Replace call to do_rent() to individual proc's
+
+    eval_gold()
+	OLD macro EVAL_GOLD() is changed to NEW function eval_gold()
+
+spec_mob.c 
+	Special procedure of Midgarrd mobiles.  
+    perhaps()
+	Moved defition of perhaps_words[] to "constants.c" 
+
+spec_misc.c
+	Miscellaneous zone specific special routines.
+
+    gbisland_move_seashore()
+	Use simpler die() than raw_kill().
+
+    special_damage() NEW!
+	Calculate addintional damage dice by special equipment like
+            'lss belt sword' or '여의봉'.
+	Called from hit() after damage add up and before AC(victim) subtract.
+
+    special_death() NEW!
+	Special death/corpse proceesing when mob died.
+	Called from make_corpse() after creating empty corpse 
+            and before unequip char.  
+
+special.c
+	OLD "spec_assign.c" and part of "quest.c"
+
+cast1.c
+	OLD "spells1.c", "spells2.c" renamed to "cast1.c", "cast2.c".
+
+cast2.c
+    cast_recharger()
+	Added logging code to ratify situation of 
+	    log "Serious screw-up in recharger!"...  
+
+spell1.c
+	OLD magic1.c magic2.c is renamed as spell1.c, spell2.c.
+
+spell2.c
+    spell_enchant_weapon()
+	Code for adding weapon special magic is separated as
+	    enchant_wepon_special() and moved to "magic.c" 
+	
+spell_parser.c
+
+    spells[]
+	spells[] (name list of spells/skills) index start from 1 , not zero.
+	added null element in index 0 position.
+
+    say_spell()
+	spells[] (name list of spells/skills) index start from 1 , not zero.  
+
+    stop_followers()
+	BIG FIX:  assert failed on check_leadership().
+	Check and update leadership of ch's master
+	only when ch is member of any group ( charmed or grouped ).
+	See check_leadership() code above in act.other.
+
+    spell_alias[] NEW defined here.
+
+    do_cast()
+	Replace complex spell parsing part with one_argument().
+	Now, one_argument() will handle spell name quatation 
+	SIDE EFFECTS: Single word spell don't need quation. (cast sanc)
+	No complaint about missing quatation.
+
+	Spell name alias expansion. 
+	Need to add more spell alias.
+	    Ex) cast 'enwe' -> cast 'enchant weapon'
+
+	Use search_block(), instead of old_search_block().  
+
+test_skill.c
+	This is not part of NARAI source. just for testing spell damage.
+
+v2.92.1 Sun Nov 16 01:34:08 KST 1997
+============================================================= 
+
+lib/tinyworld.obj
+lib/tinyworld.mob
+    huaju (potion)
+	Change spell 'recharger' to 'remove curse'. 
+
+    Object/Mob/Room Renumbered
+	#300XX -> #75XX (Prideland Room) 
+
+	#233XX -> #122XX (Good-Bad Island)
+	#19000 -> #12400 (KAIST obj/mob)
+	#310XX -> #124XX
+	#180XX -> #127XX (Mudang obj/mob)
+	#181XX -> #128XX
+	#160XX -> #130XX (Kingdom of Wee)
+	#161XX -> #131XX
+	#170XX -> #133XX (O-Kingdom)
+
+	#310XX -> #124XX (KAIST Room)
+	#311XX -> #125XX (KAIST Room)
+
+	#1900X -> #1980X (Prideland mob) Unused.
+
+    Partially affected zone
+	Kingdom_Of_Chok.wld
+	LIMBO.wld
+	Moria_level_1-2.wld.org
+	Northern_Midgaard_Main_City.wld
+	River_of_Midgaard.wld
+	The_Corporation.wld 
+    
+lib/world/world_files
+lib/zone/zone_files
+	world/zone file reordered.
+
+lib/world/Secret_Room.wld
+lib/zone/Secret_Room.zone
+	New world/zone file for Player house (Villa)
+	Pride Land Rooms : #7500 - #7699
+	Villa Rooms : #7700 - #7799
+	    Non-Player Room : #7700 - #7729
+	    Player Room     : #7731 - #7749
+	    Currently Available Rooms (5):
+		#7731, #7732, #7733, #7741, #7742
+
+	Enterence to Villa (#7710): Up from "GruntingBoar"(MID Bar #3007)
+	This is not final choice, can be changed.
+    
+lib/world/Northern_Midgaard_Main_City.wld
+    Removed poster in MID Post Office (#3071)
+
+include/actions.h
+    Add CMD_HOUSE and CMD_HCONTROL
+    Add defintion of do_house(), do_hcontrol().
+
+include/char.h
+
+    struct char_player_data
+	byte  -> ubyte : guild, sex, class, level, remortal. 
+	int -> sh_int : pk_num, pked_num.
+	Removed : no_of_change_guild, skilled 
+
+    struct char_special_data
+	byte -> ubyte : position, default_positon, damnodice, damsizedice,
+			last_direction
+	byte -> sbyte : spells_to_learn,
+	int -> sh_int : carry_weight, alignment, wimpyness.
+	int -> sbyte : apply_saving_throw, conditions
+	int -> ubyte : attack_type
+	Removed : arena, arena_move, arena_mana, arena_hits, 
+		arrest_by arrest_link
+	
+    struct char_data
+	NEW!  struct char_data *off_world for Locker data. Not used yet. 
+
+    IS_MOB(ch) : Definition changed 
+	OLD: ch is NPC and ch->nr >= 0 (valid index to mob_table[]).
+	NEW: ch is NPC and ch->desc == NULL (Real non-switched mobile.)
+
+include/etc.h
+    GoodBad Island item/mobile renumberd.
+
+include/db.h
+    Name of HELP_KWRD_FILE from "lib/help_table" to "lib/help".
+    Moved def. of STASH from "db.player.c" to "db.h".
+
+    struct player_index member 'nr' changed name to 'index'.
+
+include/global.h
+    If MAX(), MIN() is not defined, define it.
+
+include/object.h
+
+	Additional room_flags bits  and macros for "house.c"
+	#define ROOM_HOUSE            (1 << 20)  /* (R) Room is a house    */
+	#define ROOM_HOUSE_CRASH      (1 << 21)  /* (R) House needs saving */
+
+	#define ROOM_FLAGS(rn)
+	#define ROOM_FLAGGED(loc, flag)
+	#define TOROOM(room, dir)
+
+include/play.h
+
+	NEW spell target type flagTAR_DEF_SELF
+	    If no target arg is specified, char it self is target.
+
+	TAR_OBJ_INV, TAR_OBJ_ROOM, .. TAR_CHAR_ZONE renumbered.
+
+act.comm.c
+    do_shout()
+	Sleeping people can't hear shouting.
+
+act.look.c
+    do_look()
+	Player switched to NPC can 'look'.  
+
+    do_score()
+	Show char's class, too.
+	Show leader name if char is following someone.
+
+act.move.c
+    do_simple_move()
+	Before move to romm, check room flag OFF_LIMIT and ROOM_HOUSE.
+	OFF_LIMIT room is permitted only to 44 level God.
+	ROOM_HOUSE room is permitted to house owner and guests.
+
+	'look' room to wizard switched to NPC.
+
+    do_open, do_close(), do_lock(), do_unlock(), do_pick()
+	Little code clean up.
+    
+act.offensive.c
+
+    do_backstab()
+	'backstab' will consume mana and move, similar to shouryuken.
+	Add backstab deley. Full deley on success, half-deley on failure.
+	If backstab fails, char loose hits of MIN(max_hit/30 , 1500).
+
+    do_multi_kick()
+	Check victims location each time to kick.
+
+    do_spin_bird_kick()
+	Less message and more damage (+30%).
+	Average damage is similar to shouryuken().
+	Full deley on success, half-deley on failure.
+
+    do_shouryuken()
+	More message and more damage (+30%).
+	OLD: dam * 26 -> NEW: dam * 35 avrage.
+	Check victims loaction before each time to hit.  
+	Full deley on success, half-deley on failure.
+
+    return_original()
+	return_original when ch is Wizard switched to NPC.  
+
+    do_wimpy()
+	Prevent cheating wimpy value with mana boost.
+	GET_MAX_HIT/4 -> GET_PLAYER_MAX_HIT/4
+
+act.wizard.c
+
+    do_wizset()
+	Remove resetting char's 'age'.
+	char->player.time.birth is used as Player unique ID (serial number).
+
+    find_target_room(): NEW!
+	do_goto() and do_at() has similar code for finding room of char or obj.
+	This part of code is separated and merged as find_target_room().
+	Add check for ROOM_HOUSE room.
+
+    do_goto(0, do_at()
+	Use find_target_room().
+
+    do_load()
+	log name of loading object.
+
+    do_demote()
+	Don't reset birth time on demote. It is player ID.
+
+    do_return()
+	Do 'look' room when return to original char from switch.
+
+cast2.c
+    cast_charm_person()
+	You can't charm switched NPC player.
+
+comm.c
+    Reduce TB_RING_MAX from 256 to 128.
+    
+    game_loop()
+	Auto crash save code moved to heart_beat().
+	zapper() call move to game_loop().
+
+    heart_beat()
+	Auto crash save
+	Add House_save_all() to saving items in all houses.
+
+constants.c
+    color_liquid[]
+	BUG FIX: Add color of 'condition' drink.
+	Missing color caused SEGV error when 'look in condition' 
+
+    room_bit[]
+	Add room bit for NEW ROOM_HOUSE, ROOM_HOUSE_CRASH flags.
+
+db.c
+	Add call to House_boot() of "house.c".
+	Call init_quest() *after* loading mobile file.
+
+    read_mobile()
+	More well skiled mobs.
+	    OLD : for lev =< 40, zero skilled; for lev > 40, about 40.
+	    NEW : for lev < 40, skill == lev; for lev >=40, 40+ 5 for each.
+
+db.player.c
+	struct player_index member nr is renamed index.
+
+	Zone/object renumbered.  Translate object number to new number.
+
+    wipe_stash()
+	Remove OLD stash "<name>.x", "<name>.x.y".
+
+fight.c
+    damage()
+	Return if char's room != victim's room.
+
+	Reduce damage protection ratio of 'sanctuary' magic. From 50% to 33%.
+
+handler.c
+   extract_char()
+	Apply return_original() even NPC char.
+
+interpreter.c
+    command_interpreter()
+	log player PLR_XYZZY only when ch is PC player.
+
+    special()
+	BUG FIX: Incorrect special() arguments order.  
+	OLD: int special(struct char_data *ch, char *arg, int cmd);
+	NEW: int special(struct char_data *ch, int cmd, char *arg )
+
+    assign_command_pointer()
+	Add "house", "hcontrol" command.
+
+magic.c
+    print_increas_skilled(): Removed.
+	Merge this code into increase_skilled()
+
+spec_misc.c
+    special_damage()
+	BUG FIX: 여의봉 can be hold or wield. Check both.
+    
+special.c
+    zone_data[] : Zone number renumbered.
+
+    get_quest()
+	Adjust quest mob range for quest solved >= 60.
+	Easier quest mob for not-all-remo'ed dangun player
+
+    init_quest()
+	Check validity of quest mobile.
+
+    give_gift_for_quest()
+	No quest prize if quest.solved < 0; 
+
+spell2.c
+    spell_relocate()
+	You can relocate to mobile regardless of guild.
+
+    spell_mana_boost()
+	More level advantage for mana boost. ( Avg. +1000 mana for level 40)
+
+    spell_curse()
+	NEW EFFECT! 'curse' spell will remove victim's 'sanctuary' affection.
+	    AND prevent getting 'sanctuary' spell affection.
+
+    spell_sanctuary()
+	Cursed char can not get 'sanctuary' spell.
+
+spell_parser()
+    do_cast()
+	Code clean up.
+	show failure mesaged to switched NPC.
+
+	If no target char is specified and spell type is TAR_DEF_SELF,
+	    set target char to char itself.
+
+	Charmed mob can 'cast' non-harmful spell to its master.
+
+    assign_spell_pointer()
+	Add TAR_DEF_SELF to target type  of following spells:
+	    'armor', 'bless', 'cure blind', 'cure critic', 'cure light',
+	    'heal', 'remove curse', 'sanctuary', 'remove poison', 'love', 
+	    'mana boost', 'vitalize', 'full heal', 'haste', 'entire heal'.
+
+	Magic user can't cast spell 'curse'.
+	    Min level of spell 'curse' for Mage changed from 12 to 41.  
+
+house.c : 
+	Added code from Circle3.0 patch level 11 and modified extensively.
+
+	HCONTROL_FILE "lib/house/hcontrol"
+	struct obj_file_elem is same type as struct obj_data.
+	Object rent fee is 1/10 of object cost.
+
+	No atrium room. No ROOM_ATRIUM room flag. 
+	No player character ID number, use name instead.
+
+    House_spec()
+	Setting/resetting ROOM_HOUSE_CRASH flag and House_save() is
+	done by House_spec() special function of house room.
+
+    reverse_obj_list() : NEW : reverse orders of object list.
+
+    Nearly Rewritten Obj_from_store(), Obj_to_store()
+	It can save/restore item objects recursively.
+
+    Obj_to_save()
+	Adjust container weight.
+	Turn saved NORENT item to useless items.
+
+    No player ID.
+    struct house_control_rec.
+	Member owner and guest[] is char array[], not integer player id.
+
+    house_control is array of pointer to struct house_control_rec.
+	It was static array, now it is dynamically alloac'ed at boot time.
+    House_crashsave() : Removed. Replaced by House_save().
+
+    House_get_filename(), House_load(), House_save(), find_house(),
+	house_can_enter() takes *real* room number as argument, not virtual.
+
+    House_boot()
+	Alloacte house_control_rec for each house. 
+	Assign special function to house room.
+	No attrium proceesing.
+
+    hcontrol_build_house() 
+	Allocate house_control_rec.
+	assign special function to house room.
+	    
+    hcontrol_destory_house() 
+	Free house_control_rec.
+	Remove special function from house room.
+	
+
+v2.92.2 Tue Nov 25 00:08:18 KST 1997
+============================================================= 
+
+
+
+
+
+
+
+

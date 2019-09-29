@@ -137,11 +137,11 @@ worth mentioning.
 W 9 9 20 10 12
 0 12 8 M
 #1000
-narai~
-Narai~
-Narai 미드에서 bow narai 하세요. is proudly standing here.
+perhaps~
+Perhaps~
+Perhaps is proudly standing here.
 ~
-자랑스럽게 깡패머드를 지키는 Narai님이 요기 서있당.
+자랑스럽게 깡패머드를 지키는 Perhaps가 요기 서있당.
 ~
 11 190 2000
 C 43 16 11 6 20
@@ -185,7 +185,7 @@ pan peter~
 Peter Pan~
 Peter Pan is here grinning at you.
 ~
-You see a young lad who looks a bit elfish.  There is a sparkle in his
+You see a young lad who looks a bit selfish.  There is a sparkle in his
 eye, and a devilish twist to his smile.
 ~
 74 136 1000
@@ -841,7 +841,7 @@ underneath its bulging eyes.
 W 14 3 12 10 9
 1000 4 8 N
 #1914
-something~
+some_thing~
 something~
 Something rushes at you.
 ~
@@ -2494,7 +2494,7 @@ W 40 8 5 6 10
 #2924
 keeper minotaur ring-keeper~
 The Minotaur Ring-Keeper~
-3he minotaur ring-keeper stands guarding his post.
+The minotaur ring-keeper stands guarding his post.
 ~
 The ring-keeper is a huge minotaur. You notice a huge ring of multicolored
 keys hanging from his belt. He wears huge, spiked brass knuckles.
@@ -3012,7 +3012,7 @@ W 40 11 8 7 11
 #3127
 extremely hard~
 The Extremely Hard~
-A Extremely Hard is here .
+A Extremely Hard is here.
 ~
 Extremely Hard hit you with extremely power !.
 ~
@@ -3022,7 +3022,7 @@ W 40 12 8 7 15
 #3128
 hit hard~
 The Hit Hard~
-The Hit Hard is here .
+The Hit Hard is here.
 ~
 The Hit Hard hit you with hit hard power !.
 ~
@@ -3032,7 +3032,7 @@ W 40 12 8 7 15
 #3129
 hit~
 The Hit~
-The Hit is here .
+The Hit is here.
 ~
 The Hit hit you with hit power !.
 ~
@@ -3042,7 +3042,7 @@ W 40 12 8 9 12
 #3130
 barely hit~
 The Barely Hit~
-The Barely Hit is here .
+The Barely Hit is here.
 ~
 The Barely Hit hit you with Barely hit power !.
 ~
@@ -3052,7 +3052,7 @@ W 40 13 8 9 12
 #3131
 tickle~
 The Tickle~
-The Tickle is here .
+The Tickle is here.
 ~
 The Tickle hit you with tickle power !.
 ~
@@ -5309,7 +5309,7 @@ The sura looks very tough. he has his own skills for handling weapon.
 he won many fights.
 ~
 104 8 999
-W 33 4 7 7 7
+W 25 4 7 7 7
 50 8 8 M
 #9502
 guru~
@@ -5319,7 +5319,7 @@ A guru stands here advancing his own skills.
 The guru is training for becoming sura.
 ~
 104 8 999
-W 30 6 3 17 11
+W 20 6 3 17 11
 30 12 8 M
 #9503
 captain hook~
@@ -5356,7 +5356,7 @@ A Sura candidate is swing his shining brass golden covered double club.
 ~
 ~
 104 8 999
-W 31 6 8 9 10
+W 23 6 8 9 10
 40 9 8 M
 #9507
 loser~
@@ -5375,7 +5375,7 @@ A Zizon Sura glows with dark green aura!...he emits a faint humming sound!
 ~
 ~
 4138 128 999
-W 40 3 11 15 16
+W 35 3 11 15 16
 500 18 4 M
 #9509
 laiger~
@@ -5395,7 +5395,7 @@ A hide sura is hiding in swamp.
 he is hiding in swamp. how can you see him?
 ~
 40 1048584 999
-W 33 5 7 7 7
+W 27 5 7 7 7
 50 8 8 M
 #9511
 sand sura~
@@ -5404,7 +5404,7 @@ A hide sand sura is trying to hide in sand.
 ~
 ~
 40 1048584 999
-W 32 4 8 7 8
+W 26 4 8 7 8
 50 8 8 M
 #9512
 gatekeeper~
@@ -5490,7 +5490,7 @@ A Rainbow Sura trains here surrounded by Rainbow.
 He is surrounded by beautiful rainbow.
 ~
 42 136 1000
-W 38 7 9 5 6
+W 32 7 9 5 6
 1000 9 8 M
 #9521
 month sura~
@@ -5500,7 +5500,7 @@ A Month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 8 9 4 6
+W 32 8 9 4 6
 2000 9 8 M
 #9522
 learned sura~
@@ -5510,7 +5510,7 @@ A learned sura trains here.
 He looks very tough and learned. Don't look him..he will attack you.
 ~
 42 136 1000
-W 35 10 4 6 7
+W 32 10 4 6 7
 3000 9 8 M
 #9523
 master sura~
@@ -5520,7 +5520,7 @@ A master sura rests here.
 He is trainer of suras. he is training to become najang.
 ~
 42 136 1000
-W 39 5 5 6 9
+W 32 5 5 6 9
 4000 9 8 M
 #9524
 sura knight~
@@ -5530,7 +5530,7 @@ A Sura knight stands here.
 He is guarding Gaiot. you can see his big muscle.
 ~
 4138 136 1000
-W 37 4 9 5 9
+W 32 4 9 5 9
 1000 9 8 M
 #9525
 gaiot ruler najang~
@@ -5619,7 +5619,7 @@ A First Class Sura is training here with woman.
 He is tough tough tough guy.
 ~
 104 8 999
-W 33 5 7 6 8
+W 28 5 7 6 8
 75 9 8 M
 #9534
 maid sura~
@@ -5629,7 +5629,7 @@ A Maid Sura is decorating herself with eager.
 She is very beautiful. She is very charming.
 ~
 10 33556608 999
-M 30 4 10 13 12
+M 27 4 10 13 12
 1000 11 8 F
 #9535
 lady sura~
@@ -5639,7 +5639,7 @@ A Lady Sura is trying to make you fall in love with her.
 She is more beautiful than Maid Sura.
 ~
 10 33556608 999
-M 38 3 9 9 8
+M 33 3 9 9 8
 2000 9 8 F
 #9536
 trainer sura~
@@ -5648,7 +5648,7 @@ A Trainer Sura is training sura candidate here.
 ~
 ~
 42 136 1000
-W 34 5 9 6 7
+W 30 5 9 6 7
 100 8 8 M
 #9537
 grand gatekeeper~
@@ -5678,7 +5678,7 @@ A Red rainbow Sura trains here surrounded by red aura.
 He is surrounded by beautiful red aura.
 ~
 42 136 1000
-W 38 5 4 6 12
+W 35 5 4 6 12
 1000 8 8 M
 #9543
 orange rainbow sura~
@@ -5688,7 +5688,7 @@ A Orange rainbow Sura trains here surrounded by orange aura.
 He is surrounded by beautiful orange aura.
 ~
 42 136 1000
-W 38 6 10 5 7
+W 33 6 10 5 7
 1000 8 8 M
 #9544
 yellow rainbow sura~
@@ -5698,7 +5698,7 @@ A Yellow rainbow Sura trains here surrounded by yellow aura.
 He is surrounded by beautiful yellow aura.
 ~
 42 136 1000
-W 38 11 4 5 7
+W 33 11 4 5 7
 1000 8 8 M
 #9545
 green rainbow sura~
@@ -5708,7 +5708,7 @@ A Green rainbow Sura trains here surrounded by green aura.
 He is surrounded by beautiful green aura.
 ~
 42 136 1000
-W 38 5 4 6 10
+W 33 5 4 6 10
 1000 9 8 M
 #9546
 blue rainbow sura~
@@ -5718,7 +5718,7 @@ A Blue rainbow Sura trains here surrounded by blue aura.
 He is surrounded by beautiful blue aura.
 ~
 42 136 1000
-W 38 6 6 9 6
+W 33 6 6 9 6
 1000 9 8 M
 #9548
 violet rainbow sura~
@@ -5728,7 +5728,7 @@ A violet rainbow Sura trains here surrounded by violet aura.
 He is surrounded by beautiful violet aura.
 ~
 42 136 1000
-W 38 8 10 4 6
+W 33 8 10 4 6
 1000 9 8 M
 #9550
 january month sura~
@@ -5738,7 +5738,7 @@ A January month Sura trains here with his amethyst stone.
 He is decorated with amethyst stone.
 ~
 42 136 1000
-W 38 7 8 7 4
+W 35 7 8 7 4
 2000 8 8 M
 #9551
 february month sura~
@@ -5748,7 +5748,7 @@ A February month Sura trains here with his bloodstone.
 He is decorated with bloodstone.
 ~
 42 136 1000
-W 38 5 7 7 6
+W 35 5 7 7 6
 2000 8 8 M
 #9552
 march month sura~
@@ -5758,7 +5758,7 @@ A March month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 4 8 7 6
+W 35 4 8 7 6
 2000 8 8 M
 #9553
 april month sura~
@@ -5768,7 +5768,7 @@ A April month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 4 9 8 6
+W 35 4 9 8 6
 2000 8 8 M
 #9554
 may month sura~
@@ -5778,7 +5778,7 @@ A May month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 7 8 7 4
+W 35 7 8 7 4
 2000 8 8 M
 #9555
 june month sura~
@@ -5788,7 +5788,7 @@ A June month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 7 7 6
+W 35 5 7 7 6
 2000 8 8 M
 #9556
 july month sura~
@@ -5798,7 +5798,7 @@ A July month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 8 7 7
+W 35 5 8 7 7
 2000 9 8 M
 #9558
 september month sura~
@@ -5808,7 +5808,7 @@ A September month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 9 7 7
+W 35 5 9 7 7
 2000 9 8 M
 #9559
 october month sura~
@@ -5818,7 +5818,7 @@ A October month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 6 8 7 7
+W 35 6 8 7 7
 2000 9 8 M
 #9561
 december month sura~
@@ -5828,7 +5828,7 @@ A December month Sura trains here with his birth stone.
 He is decorated with birth stone of his month.
 ~
 42 136 1000
-W 38 5 7 7 8
+W 35 5 7 7 8
 2000 9 8 M
 #9562
 yuria~
@@ -6664,6 +6664,1495 @@ mirror son ogong~
 1048618 50858152 800
 W 41 2 2 20 20
 100 20 8 M
+#12201
+demon kaalm 악마 카암~
+악마성주(DEMON) 카암(KAALM)~
+악마성주(DEMON) 카암(KAALM)이 화가 나 있습니다.
+~
+"나는 전 세계 악의 지배자 카암이다."
+"누구도 나의 앞을 막을 수 없다."
+"..."
+~
+362 117459128 -999
+W 43 13 15 19 19
+9 19 8 M
+#12202
+statue satan 악마상~
+악마상(STATUE OF SATAN)~
+악마상(STATUE of SATAN)이 놓여 있습니다.
+~
+            _,.-----.,_
+         ,-~           ~-.
+       ,^___           ___^.
+      /~"   ~"   .   "~   "~\
+     Y  ,--._    I    _.--.  Y
+     | Y     ~-. | ,-~     Y |
+     | |        }:{        | |
+     j l       / | \       ! l
+  .-~  (__,.--" .^. "--.,__)  ~-.
+ (           / / | \ \           )
+  \.____,   ~  \/"\/  ~   .____,/
+   ^.____                 ____.^
+      | |T ~\  !   !  /~ T| |
+      | |l   _ _ _ _ _   !| |
+      | l \/V V V V V V\/ j |
+      l  \ \|_|_|_|_|_|/ /  !
+       \  \[T T T T T TI/  /
+        \  `^-^-^-^-^-^'  /    "무섭지?"
+         \               /
+          \.           ,/
+            "^-.___,-^"
+
+~
+525386 67174458 -999
+C 40 5 8 8 9
+9 11 8 M
+#12203
+female saint lanessa 성녀 라네사~
+성녀(FEMALE SAINT) 라네사(LANESSA)~
+성녀(FEMALE SAINT) 라네사(LANESSA)가 조용히 누워 있습니다.
+~
+"신의 은총이 함께 하길..."
+~
+75 184 999
+W 43 2 4 4 2
+9 8 5 F
+#12204
+mirror female saint 성녀~
+성녀(FEMALE SAINT)~
+성녀(FEMALE SAINT)가 멍청히 서 있습니다.
+~
+"..."
+"..."
+"..."
+~
+75 56 850
+W 28 5 4 3 8
+9 4 8 F
+#12205
+dweller 주민~
+주민(DWELLER)~
+주민(DWELLER)이 열심히 청소를 하고 있습니다.
+~
+"마을 밖에는 무시무시한 괴물들이 우글우글 하데요..."
+"강 건너 성에 악마성주가 살고 있는데..."
+"그를 죽여야 평화가 온데요..."
+~
+72 0 600
+W 10 7 8 8 11
+5 9 8 M
+#12206
+dweller 주민~
+주민(DWELLER)~
+주민(DWELLER)이 열심히 일을 하고 있습니다.
+~
+"마법의 진은 성녀님이 만든거에요..."
+"성녀님만이 마법의 진을 나갈 수 있어요..."
+~
+72 0 600
+W 10 7 8 8 11
+5 9 8 M
+#12207
+child 아이~
+아이(CHILD)~
+아이(CHILD)가 돌맹이를 차며 놀고 있습니다.
+~
+"멋진 용사들이 나타나서 우리를 구해준다고 했어요..."
+"성녀님이 그랬거든요..."
+"물병에 종이를 넣어서 띄운 것도 성녀님이에요..."
+~
+72 0 750
+W 5 4 3 8 6
+5 4 8 M
+#12208
+child 아이~
+아이(CHILD)~
+아이(CHILD)가 돌맹이를 던지며 놀고 있습니다.
+~
+"성녀님이 바보가 되었어요..."
+"말을 못한데요..."
+"..."
+~
+72 0 750
+W 5 4 3 8 6
+5 4 8 M
+#12211
+cyclops 사이클로프스~
+사이클로프스(CYCLOPS)~
+외눈박이 거인 사이클로프스(CYCLOPS)가 두리번거리고 있습니다.
+~
+얼굴 한가운데에 있는 붉게 충혈된 눈으로 당신을 쳐다봅니다.
+
+"여기가 어딘지 알아?"
+"너, 착한 놈이지?"
+~
+360 67108920 -750
+W 38 8 4 5 19
+9 14 8 M
+#12212
+grab giant 그래브 자이언트~
+그래브 자이언트(GRAB GIANT)~
+그래브 자이언트(GRAB GIANT)가 커다란 가위손을 흔들며 서 있습니다.
+~
+'싹뚝 싹뚝' 가위질을 하며 당신을 쳐다봅니다.
+
+"내 가위 맛 좀 볼레?"
+"..."
+"쿠구르르."
+~
+362 67108920 -650
+W 35 8 5 13 19
+8 13 8 M
+#12213
+charon 캐론~
+캐론(CHARON)~
+사공 캐론(CHARON)이 다리를 막고 서 있습니다.
+~
+당신을 노려보며 통행세를 내라고 말하고 있습니다.
+
+"이곳은 지옥으로 통하는 다리야."
+"돌아가는게 좋을 걸."
+"너 같은 약한 녀석은 버티기 힘들거야... 흐."
+~
+362 100663480 -850
+W 42 6 11 9 18
+11 13 8 M
+#12214
+caveman 혈거인~
+혈거인(CAVEMAN)~
+혈거인(CAVEMAN)이 무언가를 찾고 있습니다.
+~
+"이상하네."
+"여기 어디서 잃어 버린 것 같은데..."
+"혹시 내 곤봉 본 적 없수?"
+~
+360 67108920 -750
+W 37 13 4 6 18
+8 15 8 M
+#12215
+barlog 발로그~
+발로그(BARLOG)~
+화가난 발로그(BARLOG)가 당신을 노려보고 있습니다.
+~
+"으..."
+"인간이 싫다..."
+"죽인다..."
+~
+360 83886136 -750
+W 38 9 5 9 17
+7 13 8 M
+#12216
+ant giant 거인 개미~
+거인 개미(ANT GIANT)~
+커다란 거인 개미(ANT GIANT)가 기어 다니고 있습니다.
+~
+"치크 치크..."
+~
+488 67108920 -750
+W 33 6 7 13 19
+7 18 8 M
+#12217
+ant lion 사자 개미~
+사자 개미(ANT LION)~
+커다란 사자 개미(ANT LION)가 기어 다니고 있습니다.
+~
+"추크 추크..."
+~
+488 67108920 -750
+W 33 5 6 14 18
+7 18 8 M
+#12218
+termite giant 터마이트 자이언트~
+터마이트 자이언트(TERMITE GIANT)~
+커다란 흰개미가 기어 다니고 있습니다.
+~
+"치이크 치이크..."
+~
+360 67108920 -350
+W 35 8 8 10 18
+8 17 8 M
+#12219
+chromatic dragon 크로매틱 드래곤~
+크로매틱 드래곤(CHROMATIC DRAGON)~
+크로매틱 드래곤(CHROMATIC DRAGON)이 5개의 머리를 빙글 돌리고 있습니다.
+~
+"넘 재미있다..."
+"그런데, 좀 어지러운걸..."
+"으, 심심해..."
+"조용히 좀 해 봐..."
+"..."
+~
+74090 117440696 -650
+W 43 17 13 12 17
+8 15 8 M
+#12220
+carpie dragonewt 드래곤뉴트~
+드래곤뉴트(DRAGONEWT) 카피(CARPIE)~
+사악한 드래곤뉴트(DRAGONEWT) 카피(CARPIE)가 생각에 잠겨 있습니다.
+~
+"세상에서 드래곤보다 쎈 것은 없다."
+"난 드래곤을 지배한다."
+"고로 내가 제일 쎄다... 흐흐."
+~
+491 69027896 -950
+T 43 8 15 8 13
+17 13 8 M
+#12221
+electric eel 전기 뱀장어~
+전기 뱀장어(ELECTRIC EEL)~
+파란 불빛의 꼬리를 가진 물고기가 헤엄쳐 당신에게 다가옵니다.
+~
+"찌르르르..."
+"찌르르르..."
+"찌르르르..."
+~
+362 67108920 -750
+W 39 8 7 7 19
+7 13 8 M
+#12222
+stone giant 바위 거인~
+바위 거인(STONE GIANT)~
+거대한 바위 거인(STONE GIANT)이 서 있습니다.
+~
+"오늘은 몸이 좀 무겁군..."
+"..."
+~
+360 83886136 -650
+W 42 13 7 8 19
+5 15 8 M
+#12223
+iron golem 아이런 고렘~
+아이런 고렘(IRON GOLEM)~
+철로 만든 거대한 동상이 문을 막고 서 있습니다.
+~
+"나는야 문지기 아이런 고렘..."
+"..."
+"애구구..."
+"계속 서 있기만 하니깐 다리가 넘 아프다..."
+~
+362 100663480 -650
+W 43 14 6 6 17
+7 17 8 M
+#12224
+gray oozy 그레이 오즈~
+그레이 오즈(GRAY OOZY)~
+끈적 끈적한 액체가 구석에서 조금씩 움직이고 있습니다.
+~
+"난 슬라임(SLIME)이 아니라구..."
+"날 그런 녀석과 비교하면 곤란하지..."
+"한번 맛을 보면 알지. 나의 강력한 공격을."
+~
+16744 67108920 -750
+W 35 4 5 13 19
+8 15 8 M
+#12225
+were wolf 늑대 인간~
+늑대 인간(WERE-WOLF)~
+늑대 인간(WERE-WOLF)이 꾸부정한 허리를 펴며 운동을 하고 있습니다.
+~
+"애구구 허리야..."
+"맨날 구부리고만 다녔더니..."
+"으싸, 으싸..."
+~
+360 83886136 -650
+W 38 5 7 13 19
+7 14 8 M
+#12226
+first general baron 대장 바론~
+제1대장 바론(FIRST GENERAL BARON)~
+악마군 제1대장 바론(FIRST GENERAL BARON)이 앉아서 쉬고 있습니다.
+~
+"요즘, 녀석들이 너무 게을러진 것 같단말야..."
+"뺑뺑이를 돌려야겠군..."
+"하긴 바보같은 마을 녀석들 잡는거야 식은죽 먹기지만 말야..."
+~
+1048938 100665528 -850
+W 43 12 8 9 19
+17 17 5 M
+#12227
+second general zudra 대장 쥬드라~
+제2대장 쥬드라(SECOND GENERAL ZUDRA)~
+악마군 제2대장 쥬드라(SECOND GENERAL ZUDRA)가 명상에 빠져 있습니다.
+~
+"..."
+"^_^"
+~
+1048938 100679864 -850
+W 43 17 16 13 15
+9 13 5 M
+#12228
+third general olangenu 대장 오란게누~
+제3대장 오란게누(THIRD GENERAL OLANGENU)~
+악마군 제3대장 오란게누(THIRD GENERAL OLANGENU)가 서성이고 있습니다.
+~
+"라네사는 너무 사랑스러워..."
+"라네사는 너무 아름다워..."
+"아, 나의 사랑 라네사..."
+~
+1048938 100729016 -350
+W 43 12 13 19 18
+9 14 8 M
+#12403
+id student~
+ID Student~
+An Industrial Design Student is working hard before the professor.
+~
+~
+72 0 0
+W 13 5 15 7 17
+1000 16 8 M
+#12404
+biri student~
+Biri student~
+A Biri Student plays with his Bibi friends.
+~
+~
+104 24 0
+W 18 6 12 8 8
+1000 15 8 M
+#12405
+bibi Student~
+Bibi Student~
+A Bibi student issue an command to Biri.
+~
+~
+72 24 0
+W 18 6 13 8 9
+1000 15 8 M
+#12406
+Boss Student~
+Boss Student~
+A Boss Student of Black circle sleeps before the Professor.
+~
+~
+104 0 0
+W 14 6 14 9 9
+100 14 8 M
+#12407
+takari~
+Takari~
+A Takari of Boss looks at Boss with eye asleep.
+~
+~
+72 0 0
+W 15 5 18 7 13
+100 14 8 M
+#12408
+female student~
+Female Student~
+A Female student winks you passionably.
+~
+~
+72 0 0
+C 10 10 18 11 19
+100 18 8 F
+#12409
+jokyo prof~
+Jokyo Prof~
+a Jokyo Prof teachs some boring text book.
+~
+~
+72 0 0
+W 20 5 16 7 12
+100 11 8 M
+#12410
+professor lee~
+Professor Lee~
+An Id Professor Lee teachs Id students.
+~
+~
+72 648 -1000
+W 38 5 11 13 13
+50000 15 8 M
+#12411
+auto keeper~
+Auto keeper~
+An auto keeper keeps the auto door with some sharp weapon.
+~
+~
+4170 10 0
+W 10 14 5 10 7
+2000 13 8 M
+#12412
+door keeper~
+Door keeper~
+An door keeper keeps the door.
+~
+~
+4170 10 0
+W 18 5 6 10 17
+2000 13 8 M
+#12413
+second zuzius~
+Second zuzius~
+A cute zuzius crys in the room looking for her girl friend.
+~
+~
+72 190 -1000
+W 20 4 11 18 13
+50000 16 8 M
+#12414
+takari surin~
+Takari surin~
+A sexy surin kisses zuzius passionalbly.
+~
+~
+65784 65776 0
+T 25 14 14 19 16
+2000 18 8 F
+#12415
+third zuzius~
+Third zuzius~
+A ugly zuzius grins you evily.
+You can feel some fear comes to you.
+~
+~
+72 190 -1000
+W 33 5 13 14 13
+50000 16 8 M
+#12416
+poor nimpus~
+Poor nimpus~
+You can see poor boy named nimpus.
+Some one says his IQ is lower than 2 digit.
+~
+~
+72 190 -1000
+W 33 5 13 19 13
+50000 14 8 M
+#12417
+queen designer~
+Queen Designer~
+The queen of industrial design block glares you.
+~
+~
+4138 33556632 500
+W 40 5 17 16 13
+100000 13 8 F
+#12418
+lover of id queen~
+Lover of id queen~
+He loves id queen so guarding id queen.  
+~
+~
+1572874 17827992 500
+C 38 5 11 11 17
+0 16 8 M
+#12419
+electrical queen~
+Electrical Queen~
+The Queen of Electrics guards king beside him.
+~
+~
+1572874 17827992 500
+C 38 9 10 14 13
+10000 16 8 M
+#12420
+ee student~
+EE student~
+An Electronic & Electrical Student is studying hard.
+~
+~
+72 0 0
+W 20 6 15 4 5
+1000 13 8 M
+#12421
+massmon~
+Massmon~
+You can see a mass monster which looks like a ball.
+~
+~
+65626 3260 500
+T 25 3 17 15 14
+10000 13 8 M
+#12422
+velomon~
+Velomon~
+You can see a Velomon which looks like a watch.
+~
+~
+1572874 17827992 500
+C 27 5 19 19 18
+10000 18 8 F
+#12423
+accelemon~
+Accelemon~
+You can see an Accelemon which looks like an unicorn.
+~
+~
+65626 3260 500
+T 27 3 14 18 17
+10000 18 8 F
+#12424
+super model~
+Super model~
+You are falling in love with her at first look at her.
+~
+~
+138 2236 1000
+T 26 4 16 15 17
+10000 17 8 M
+#12425
+cashmon~
+Cashmon~
+You can see cash monster which looks like an cash machine.
+~
+~
+65594 3260 500
+T 33 5 17 18 17
+1234567 18 8 F
+#12426
+chief student~
+Chief student~
+Chief looks like an poolish boy.
+~
+~
+104 0 0
+W 20 3 14 18 16
+10000 12 8 M
+#12427
+satteleton~
+Satteleton~
+You can see a body in the aura of black chips.
+~
+~
+65626 3260 1000
+T 31 5 19 8 13
+10000 11 8 M
+#12428
+controller~
+Controller~
+You can see some phase lag controller.
+~
+~
+65626 3260 0
+T 32 6 18 8 13
+10000 12 8 M
+#12429
+proffesor kim~
+Proffesor Kim~
+You can see proffesor kim who smiles you.
+~
+~
+65594 0 0
+T 35 4 12 8 19
+10000 16 8 F
+#12430
+doctor park~
+Doctor Park~
+Doctor park stands there.
+~
+~
+65594 0 0
+T 36 6 16 7 14
+10000 12 8 F
+#12431
+ph doctor~
+Ph Doctor~
+You can see a doctor like an einstein.
+~
+~
+65594 0 0
+T 37 4 16 7 14
+10000 13 8 M
+#12432
+computer~
+Computer~
+A computer keeps the key with digital eyes.
+~
+~
+90 220 0
+T 38 6 17 5 14
+1000 16 8 M
+#12433
+wave~
+Wave~
+A wave of micro looks at you.
+~
+~
+90 220 0
+T 38 4 16 19 15
+1000 18 8 M
+#12434
+phonemon~
+Phonemon~
+Phonemon is standing here~
+~
+90 220 0
+T 38 6 17 18 14
+1000 17 8 M
+#12435
+breadboard~
+Breadboard~
+A breadboard attacks you.
+~
+~
+90 220 0
+T 37 4 19 15 18
+1000 18 8 M
+#12436
+phase lag~
+Phase Lag~
+A Phase Lag kicks you and wanna your corpse.
+~
+~
+90 220 0
+T 38 6 15 17 13
+1000 13 8 M
+#12437
+partner male~
+Partner Male~
+You can see the male part of Campus Couple.
+You feel you wanna kill them.
+~
+~
+65720 220 0
+T 18 4 15 15 18
+1000 16 8 M
+#12438
+partner female~
+Partner Female~
+You can see the female part of Campus Couple.
+You feel you wanna kiss her.
+~
+~
+65720 220 0
+T 17 6 12 15 14
+1000 16 8 F
+#12439
+Electrical king~
+Electrical King~
+The King of Electrics looks at you.
+~
+~
+4138 33556632 400
+W 41 4 15 17 15
+10000 16 8 M
+#12700
+chief JangSamBong~
+Chief JangSamBong~
+The chief of Mudang, JangSamBong is expertizing for Tae-kuk...
+~
+무당산의 석굴에서 장삼봉이 태극권의 원리를 연구하고 있습니다.
+갑작스러운 당신의 침입에 그는 매우 언짢은 것 같습니다.
+~
+1052714 34613400 500
+W 43 16 4 12 18
+30000 18 8 M
+#12701
+1st knight SongWonKyo~
+1st knight SongWonKyo~
+The 1st knight of Mudang, SongWonKyo is standing here.
+~
+무당칠협의 첫째인 송원교가 서 있습니다. 장삼봉의 뒤를 이어
+무당파를 중흥시켜야 하는 책임이 그에게 있습니다. 그래서 무당의
+모든 대소사는 그를 통해서 이루어지고 있답니다.
+~
+1052714 16844936 500
+W 40 13 9 6 12
+20000 15 8 M
+#12702
+2rd knight YuYeonJu~
+2rd knight YuYeonJu~
+The 2rd knight of Mudang, YuYeonJu is standing here.
+~
+무당칠협의 둘째인 유연주가 유대암의 상처를 걱정하고 있습니다.
+칠협중에서 마음이 가장 부드러운 그조차도 유대암을 암습한 괴한들에게
+복수를 다짐하고 있답니다.
+~
+1052714 16844936 500
+W 40 14 8 5 11
+15000 16 8 M
+#12703
+3nd knight YuDaeAm~
+3nd knight YuDaeAm~
+The 3nd knight of Mudang, YuDaeAm is sitting here.
+~
+무당칠협의 셋째인 유대암이 부상으로 쉬고 있습니다.
+그의 상처는 매우 깊어 쉽게 회복될것 같지 않습니다.
+~
+1052714 16844936 500
+W 40 5 8 4 15
+5000 15 8 M
+#12704
+4th knight JangSongGye~
+4th knight JangSongGye~
+The 4th knight of Mudang, JangSongGye is standing here.
+~
+무당칠협의 넸째인 장송계가 첫째인 송원교를 도와 무당의
+많은 일을 처리하고 있습니다. 칠협중에서 지모가 가장 뛰어나다는
+장송계... 누가 무엇 때문에 둘째형을 암습했는지 골똘히 생각하고 있습니다.
+~
+1052714 16844936 500
+W 40 6 7 6 14
+25000 14 8 M
+#12705
+5th knight JangChwiSan~
+5th knight JangChwiSan~
+The 5th knight of Mudang, JangChwiSan is standing here.
+~
+무당칠협의 다섯째인 장취산의 혼령이 여기 있습니다.
+아내인 은소소와 함께 아들을 바라보며 매우 걱정스러운듯이 서 있습니다.
+~
+1052714 16844936 500
+W 40 8 11 5 13
+25000 14 8 M
+#12706
+6th knight EunYiJeong~
+6th knight EunYiJeong~
+The 6th knight of Mudang, EunYiJeong is standing here.
+~
+무당칠협의 여섯째인 은이정이 약혼녀를 그리며 서있습니다.
+명교의 광명좌사 양소에게 유혹당해 결국은 멸절사태에게 죽어버린 기효부...
+그래서, 은이정은 명교에 속한 사람들만 보면 매우 잔인하게 대합니다.
+~
+1052714 16844936 500
+W 40 7 11 8 12
+18000 16 8 M
+#12707
+7th knight MakSeongGok~
+7th knight MakSeongGok~
+The 7th knight of Mudang, MakSeongGok is standing here.
+~
+무당칠협의 막내인 막성곡이 다섯째형인 장취산의 거취에 대해
+걱정하고 있습니다. 그의 시야에는 무림의 인물들이 올라오는게 보입니다.
+과연, 이들이 무엇때문에 오는지.......
+~
+1052714 16844936 500
+W 40 7 7 7 12
+16000 14 8 M
+#12708
+wife EunSoSo~
+Wife EunSoSO~
+The wife of JangChwiSan, EunSoSo is standing here.
+~
+~
+42 16844936 -200
+W 39 10 7 15 6
+10000 13 8 F
+#12709
+ghost GiHyoBu~
+Ghost GiHyoBu~
+The ghost of GiHyoBu is standing here.
+~
+~
+2097162 16844936 400
+W 39 10 10 14 7
+0 15 8 F
+#12710
+2nd apprenciate mudang SongCheongSeo~
+2nd apprenciate mudang SongCheongSeo~
+The 2nd apprenciate mudang SongCheongSeo is standing here.
+~
+무당파의 앞날을 이끌고갈 송청서가 2대제자들의 앞에서서
+그들을 지도하고 있습니다. 그의 눈에선 희망찬 내일의 모습을
+볼수가 있군요. 
+~
+104 33556632 450
+W 40 6 10 3 13
+10000 14 8 M
+#12711
+2nd apprenciate mudang~
+2nd apprenciate mudang~
+The 2nd apprenciate mudang is training MyeonJang.
+~
+무당파의 제2대제자가 면장을 열심히 익히고 있습니다.
+~
+104 33556632 450
+W 38 5 10 6 8
+5000 11 8 M
+#12712
+2nd apprenciate mudang~
+2nd apprenciate mudang~
+The 2nd apprenciate mudang is training Mudang-Sword theory.
+~
+무당파의 제2대제자가 무당검법을 열심히 익히고 있습니다.
+~
+104 33554584 450
+W 37 4 10 5 8
+5000 11 8 M
+#12713
+2nd apprenciate mudang~
+2nd apprenciate mudang~
+The 2nd apprenciate mudang is training Mudang-Gweon theory.
+~
+무당파의 제2대제자가 무당권법을 열심히 익히고 있습니다.
+~
+104 33554584 450
+W 35 4 12 5 8
+5000 10 8 M
+#12714
+3rd apprenciate mudang~
+3rd apprenciate mudang~
+The 3rd apprenciate mudang is being trained by 2nd apprenciate mudang.
+~
+무당파의 제3대제자가 2대제자로부터 무당파의 기본을 배우고 있습니다.
+~
+104 33554584 400
+W 35 4 12 4 7
+5000 10 8 M
+#12715
+3rd apprenciate mudang~
+3rd apprenciate mudang~
+The 3rd apprenciate mudang is studying basic theory of mudang.
+~
+무당파의 제3대제자가 무당파의 기본을 배우고 있습니다.
+~
+104 33554584 400
+W 33 4 13 3 9
+3000 10 8 M
+#12716
+guard mudang~
+Guard mudang~
+The guard of Mudang stands here on the alert.
+~
+~
+65640 33554584 400
+W 40 8 10 16 13
+3000 16 8 M
+#12720
+guest~
+Guest~
+The Guest of mudang is walking through training hall.
+~
+무당파를 구경하러 온 손님이 무당의 후기지수들이 수련하는 
+모습을 바라보고 있습니다. 무당의 젊은 인재들의 모습에서
+매우 강렬한 인상을 받았나 봅니다.
+~
+232 33554584 450
+T 35 5 12 7 9
+12000 7 8 M
+#12721
+servant~
+Servant~
+The servant of mudang is working at here.
+~
+무당파의 하인이 연무장을 청소하고 있습니다. 무당파에서 오랫동안
+일하다보니 그의 무공실력도 얕잡아볼수가 없군요.
+~
+200 8 300
+W 30 3 17 5 9
+1000 7 8 M
+#12722
+cook~
+Cook~
+The cook of mudang is cooking for dinner.
+~
+요리사가 오늘저녁을 위해서 요리를 하고 있습니다. 평범하게 보이지만
+그의 칼질하는 모습에선 문득문득 무당검법이 나타나곤 합니다.
+~
+44 8 300
+W 31 3 16 5 10
+2000 7 8 M
+#12723
+jumo~
+Jumo~
+The jumo is looking at guests.
+~
+주모가 손님들을 맞이하고 있습니다. 하지만 그녀의 눈빛에는
+언뜻 스쳐가는 강인한 모습이 보이는군요. 과연 그녀의 정체는......
+~
+10 136 400
+T 34 3 12 10 10
+1000 10 8 F
+#12724
+waiter~
+Waiter~
+The waiter is being ordered busily.
+~
+점소이가 손님들로부터 바쁘게 주문을 받고 있습니다. 무림의 많은 인물들을
+상대하다보니 그의 발걸음은 굉장히 빠르게 움직여야만 합니다.
+~
+172 8 200
+W 28 5 13 6 10
+0 11 8 M
+#12730
+tiger~
+Tiger~
+The white Tiger is running around here.
+~
+백호가 무당산의 여기저기를 휘저으며 달리고 있습니다.
+커다란 체구에 온산을 떠날듯이 울부짖는 포효는 산중의 왕으로 불릴만합니다.
+~
+65640 65672 50
+W 30 5 11 7 18
+0 16 8 M
+#12731
+serpent snake~
+Serpent snake~
+The large serpent snake is setting his heart on rising high to sky.
+~
+커다란 구렁이가 하늘 높이 오르기를 열망하고 있습니다. 하지만
+여의주가 없기에 용이 되지 못하고 땅을 기어다니고 있군요.
+~
+65640 65672 50
+W 26 5 12 6 16
+0 10 8 M
+#12732
+dragon yellow~
+Dragon yellow~
+The Yellow Dragon is flying over fall.
+~
+황룡이 폭포주위를 맴돌고 있습니다. 폭포안에 무슨 귀중한것이 있나 보군요.
+~
+8234 16779416 -100
+W 31 6 17 19 14
+50000 15 8 M
+#12733
+tiger~
+Tiger~
+The small tiger is running around here.
+~
+~
+65640 65672 50
+W 25 4 17 7 17
+0 14 8 M
+#12734
+thief black~
+Thief black~
+The black thief is looking at your inventory.
+~
+~
+204 524298 -500
+T 25 5 14 15 15
+0 16 8 M
+#12735
+bodyguard dragon guard~
+Bodyguard~
+The bodyguard of chief is guarding.
+~
+~
+8234 648 -1000
+W 39 3 11 13 14
+50000 12 8 F
+#12736
+dongulkeeper keeper~
+Dongulkeeper~
+The dongulkeeper is guarding.
+~
+~
+8234 648 -1000
+W 40 3 11 13 17
+50000 12 8 F
+#13001
+king chocho~
+Chocho~
+The king of wee-kingdom,ChoCho stands here..
+~
+~
+1052714 33556616 999
+W 41 9 11 11 7
+45000 12 8 M
+#13002
+son chovi~
+Chovi~
+The chocho's first son,chovi is here..
+~
+~
+4138 16779400 999
+W 40 3 9 11 8
+10000 8 8 M
+#13003
+mosa samaui~
+Samaui~
+The best mosa of wee-kingdom is standing here..
+~
+~
+10 16779400 999
+M 39 6 9 11 8
+5000 7 8 M
+#13004
+general hawoodon~
+Hawoodon~
+The general hawoodon is standing here..
+~
+~
+4138 16777368 999
+W 40 7 7 11 9
+5000 9 8 M
+#13005
+mosa seoseo~
+seoseo~
+The mosa seoseo stands here..He thinking about chok-kingdom..
+~
+~
+10 16777368 999
+M 39 9 7 11 14
+5000 15 8 M
+#13006
+general jangryo~
+Jangryo~
+The general jangryo stands here..
+~
+~
+4138 16777368 999
+W 39 6 7 11 9
+5000 12 8 M
+#13007
+general junwee~
+Junwee~
+The general junwee is sleeping here..
+~
+~
+4138 16777368 999
+W 38 5 7 11 13
+5000 14 4 M
+#13008
+general huju~
+Huju~
+The general huju is standing here..He look very tough..
+~
+~
+4138 16777368 999
+W 39 5 7 9 9
+100 8 8 M
+#13009
+boss yellow bandit jangkak~
+Jangkak~
+A boss of yellow-towel-bandits,jangkak stands here..
+~
+~
+4138 16777368 -999
+T 41 7 17 16 18
+20000 18 8 M
+#13010
+juji priest~
+juji~
+A juji of sorim temple is praying for the peace..
+~
+~
+2097162 152 999
+C 35 4 8 7 9
+0 5 8 M
+#13011
+statue sadang~
+Statue~
+A statue of sadang stands here..
+~
+~
+10 152 999
+M 35 5 10 7 9
+0 5 8 N
+#13012
+jwaja~
+Jwaja~
+A mysterious jwaja walks here..
+~
+~
+1048648 33556616 999
+M 37 6 16 16 7
+100 12 8 M
+#13013
+soldier drill drillmaster wee~
+Drillmaster~
+A drillmaster 조교가 당신을 노려보고 있습니다..
+~
+~
+104 0 200
+W 30 5 8 7 9
+100 9 8 M
+#13014
+head soldier wee~
+H-soldier~
+A head soldier 고참 병사가 길을 걷고 있습니다..
+~
+~
+104 0 200
+W 30 6 8 7 9
+100 8 8 M
+#13015
+soldier wee~
+Soldier~
+A soldier 병사가 이곳에 두리번 거리며 서있습니다..
+~
+~
+104 0 200
+W 28 6 7 3 11
+100 8 8 M
+#13016
+retired soldier wee~
+R-soldier~
+A retired soldier 은퇴한 병사가 힘없는 눈초리로 당신을 봅니다..
+~
+~
+104 0 250
+W 25 5 6 7 10
+100 7 8 M
+#13017
+training soldier wee~
+T-soldier~
+A training soldier 훈련병이 열심히 무술을 익히고 있습니다..
+~
+~
+104 0 200
+W 20 4 9 13 15
+100 9 8 M
+#13018
+port keeper portkeeper~
+Portkeeper~
+The portkeeper 항구경비원이 바다를 응시한체 서있습니다..
+~
+~
+65546 128 800
+W 25 4 7 8 10
+100 5 8 M
+#13019
+noble man wee~
+Noble man~
+A noble man 귀족이 우스꽝스러운 몸짓을 하며 길을 거닐고 있습니다..
+~
+~
+72 128 800
+W 20 6 8 11 13
+20000 12 8 M
+#13020
+wee citizen~
+Wee citizen~
+A wee citizen 위나라의 백성이 바쁘게 무언가를 찾고 있습니다..
+~
+~
+204 0 600
+W 18 5 10 12 20
+10 12 8 M
+#13021
+wee farmer~
+Wee farmer~
+A wee farmer 농부가 열심히 일을하고 있습니다..
+~
+~
+76 0 600
+W 18 5 10 12 18
+10 9 8 M
+#13022
+wee merchant~
+Wee merchant~
+A wee merchant 상인이 물건을 가지고 부산히 움직이고 있습니다..
+~
+~
+76 0 400
+W 18 5 8 12 11
+1000 13 8 M
+#13023
+wee pirate~
+Pirate~
+A pirate 해적이 이곳에 있습니다..당신의 목숨을 노리고 있습니다..
+~
+~
+104 0 -800
+W 20 4 9 13 16
+10 9 8 M
+#13024
+boss pirate wee~
+Boss pirate~
+A boss pirate 해적두목이 음흉한 미소를 지으며 당신에게 덤비려 합니다..
+~
+~
+42 128 -800
+W 30 4 8 7 7
+100 5 8 M
+#13025
+wee fisher~
+Wee fisher~
+A fisher 어부가 그물을 끌어 올리며 어기영차를 외치고 있습니다..
+~
+~
+72 0 500
+W 18 6 10 13 16
+10 13 8 M
+#13026
+sea dragon~
+Sea dragon~
+A sea dragon 해룡이 흉칙한 모습을 보이며 서있습니다..
+~
+~
+8296 0 -900
+W 25 6 7 8 10
+0 3 8 M
+#13027
+yellow towel bandit~
+Yellow bandit~
+A yellow-towel bandit 황건적이 당신의 돈을 노리고 있습니다..
+~
+~
+104 0 -700
+T 20 4 9 13 17
+0 13 8 M
+#13028
+wee pozol~
+Wee pozol~
+A wee pozol 포졸이 수상한 사람을 찾아 그의 쿤눈을 두리번 거립니다..
+~
+~
+65608 0 500
+W 20 4 8 11 12
+100 14 8 M
+#13029
+simmani~
+Simmani~
+A simmani 심마니가 산삼을 찾아 가파른 절벽을 오르고 있습니다..
+~
+~
+14 128 800
+T 30 5 5 5 12
+10 6 8 M
+#13301
+king sonkwun~
+SonKwun~
+King sonkwun 손권이 잠시 명상에 젖은듯 지긋이 눈을 감고 있습니다.
+~
+그는 오나라의 왕입니다.형인 손책의 뒤를 이어 오나라를 이끌어 나가고 
+있으나 그에겐 위나라와 촉나라의 존재가 무척신경이 쓰이나 봅니다.
+~
+1052714 33556616 0
+W 41 7 11 11 13
+10000 10 8 M
+#13302
+blue dragon~
+Blue Dragon~
+Blue dragon 청룡이 당신의 침입에 황급히 놀라 공격자세를 취하고 있습니다
+~
+~
+4286 17825944 0
+W 40 7 11 11 8
+100 14 8 M
+#13303
+general jutae~
+Jutae~
+The general Jutae 주태의 험상궂은 눈빛이 당신을 쏘아 봅니다.
+~
+~
+135178 16777368 0
+W 40 7 10 11 10
+1000 8 8 M
+#13304
+mosa jooyu~
+Jooyu~
+The mosa jooyu 주유가 하늘을 쳐다보며 오나라의 앞날을 걱정하고 있습니다.
+~
+~
+4168 16777368 0
+W 37 7 10 11 10
+10000 8 8 M
+#13305
+general yukson~
+Yukson~
+The genaral yukson 육손장군이 벽에 걸린 삼국의 지도를 보며 앞으로의 전세
+를 가늠하고 있습니다.
+~
+~
+4106 16777368 0
+W 37 7 10 11 10
+10000 9 8 M
+#13306
+general yeomong~
+Yeomong~
+The general yeomong 여몽장군이 병사들의 훈련모습을 지켜보고 있습니다.
+~
+~
+4296 152 0
+W 37 3 9 9 9
+1000 8 8 M
+#13307
+general gamnyung~
+Gamnyung~
+The general gamnyung 감녕장군이 위풍당당한 모습으로 길을 거닙니다.
+~
+~
+4168 152 0
+W 37 7 9 9 15
+1000 13 8 M
+#13308
+general taesaza~
+Taesaza~
+The general taesaza 태사자 장군이 오나라의 북문앞에 서서 통행인들을 감시
+하고 있습니다.
+~
+~
+4106 152 0
+W 35 4 7 10 4
+1000 8 8 M
+#13309
+ghost king sonkyun~
+Sonkyun~
+The ghost king sonkyun 손견의 혼령이 음흉한 미소를 지으며 당신을 봅니다.
+~
+~
+20488 1050776 0
+W 40 7 11 11 10
+500000 13 8 M
+#13310
+woogil sunin~
+Woogil~
+The woogil sunin 우길선인이 그의 긴수염을 쓰다듬으며 느릿한 몸짓으로 백
+성을 돌보고 있습니다.
+~
+~
+72 16777368 999
+M 38 14 11 11 9
+100 14 8 M
+#13311
+captain pozol~
+Captain pozol~
+The captain pozol 포도대장이 마당 한가운데를 돌아다니며 죄수들을 둘러보
+고 있습니다.
+~
+~
+65546 128 0
+W 33 4 11 7 5
+1000 9 8 M
+#13312
+pozol~
+Pozol~
+A pozol 포졸이 졸리운 눈으로 두리번 거립니다.
+~
+~
+65608 0 0
+W 30 3 18 7 9
+1000 12 8 M
+#13313
+east soldier~
+East soldier~
+A east soldier 병사가 성내를 순찰하고 있습니다.
+~
+~
+104 24 0
+W 33 6 11 3 8
+1000 7 8 M
+#13314
+west soldier~
+West soldier~
+A west soldier 서쪽성이 맘에 안드는지 병사가 터덜터덜 성내를 순찰합니다.
+~
+~
+104 24 0
+W 33 5 11 6 7
+1000 6 8 M
+#13315
+first soldier~
+1st soldier~
+A first soldier 일등병사가 그의 무공을 뽐내는듯 그의 창을 닦고 있습니다.
+~
+~
+104 0 0
+W 30 5 14 7 9
+100 9 8 M
+#13316
+second soldier~
+2nd soldier~
+A second soldier 이등병사가 힘찬 걸음으로 걷고 있습니다.
+~
+~
+104 0 0
+W 25 5 17 7 18
+100 9 8 M
+#13317
+training soldier~
+training soldier~
+A training soldier 훈련병이 교관의 지시대로 열심히 훈련하고 있습니다.
+~
+~
+104 0 0
+W 20 6 14 11 15
+100 12 8 M
+#13318
+jokyo soldier~
+Jokyo soldier~
+A jokyo soldier 훈련조교가 그들의 훈련병을 매섭게 훈련시키고 있습니다.
+~
+~
+104 0 0
+W 30 8 16 7 9
+100 8 8 M
+#13319
+third soldier~
+3rd soldier~
+A third soldier 삼등병사가 이곳저곳을 둘러보며 서있습니다.
+~
+~
+104 0 0
+W 20 6 14 11 15
+100 12 8 M
+#13320
+fourth soldier~
+4th soldier~
+A fourth soldier 사등병사가 불만스러운 표정으로 당신을 봅니다.
+~
+~
+104 0 0
+W 20 3 17 11 16
+100 11 8 M
+#13321
+fifth soldier~
+5th soldier~
+A fifth soldier 오등병사가 자신의 계급장을 가리며 부끄러운듯 서있습니다.
+~
+~
+104 0 0
+W 20 4 19 11 17
+100 13 8 M
+#13322
+citizen~
+Citizen~
+A citizen 허름한 옷차림의 백성이 당신을 보며 부러운듯 눈초리를 보냅니다.
+~
+~
+72 0 0
+O 20 5 11 11 13
+100 9 8 M
+#13323
+farmer~
+Farmer~
+A farmer 농부가 자신의 얼굴에 땀을 닦으며 잠시 휴식을 취하고 있습니다.
+~
+~
+72 0 0
+O 20 5 11 11 14
+1000 9 8 M
+#13324
+merchant~
+Merchant~
+A merchant 상인이 장터로 향해 가고 있습니다.
+~
+~
+72 0 0
+W 25 5 10 7 17
+20000 8 8 M
+#13325
+ware warehouse keeper~
+warehouse keeper~
+A warehouse keeper 창고지기가 당신을 위아래로 훑어 보고 있습니다.
+~
+~
+104 0 0
+W 30 5 18 7 9
+100000 9 8 M
+#13326
+child~
+Child~
+A child 아이가 즐겁게 뛰어 놀고 있습니다.
+~
+~
+72 0 0
+O 15 5 13 14 20
+10 9 8 M
+#13327
+anakne~
+Anakne~
+A anakne 아낙네가 그녀의 아이를 찾아 이리저리 두리번 거립니다.
+~
+~
+72 0 0
+W 17 6 11 17 17
+1000 13 8 F
+#13328
+jumo~
+Jumo~
+A jumo 짙은 화장을 한 주모가 눈웃음을 치며 당신을 맞이합니다.
+~
+~
+10 0 0
+W 35 3 11 4 7
+10000 8 8 F
 #13784
 zeus god~
 Zeus~
@@ -7311,832 +8800,7 @@ The ugly human,nipporica stands here..
 42 152 500
 M 38 9 12 19 6
 100 13 8 M
-#16001
-king chocho~
-Chocho~
-The king of wee-kingdom,ChoCho stands here..
-~
-~
-1052714 33556616 999
-W 41 9 11 11 7
-45000 12 8 M
-#16002
-son chovi~
-Chovi~
-The chocho's first son,chovi is here..
-~
-~
-4138 16779400 999
-W 40 3 9 11 8
-10000 8 8 M
-#16003
-mosa samaui~
-Samaui~
-The best mosa of wee-kingdom is standing here..
-~
-~
-10 16779400 999
-M 39 6 9 11 8
-5000 7 8 M
-#16004
-general hawoodon~
-Hawoodon~
-The general hawoodon is standing here..
-~
-~
-4138 16777368 999
-W 40 7 7 11 9
-5000 9 8 M
-#16005
-mosa seoseo~
-seoseo~
-The mosa seoseo stands here..He thinking about chok-kingdom..
-~
-~
-10 16777368 999
-M 39 9 7 11 14
-5000 15 8 M
-#16006
-general jangryo~
-Jangryo~
-The general jangryo stands here..
-~
-~
-4138 16777368 999
-W 39 6 7 11 9
-5000 12 8 M
-#16007
-general junwee~
-Junwee~
-The general junwee is sleeping here..
-~
-~
-4138 16777368 999
-W 38 5 7 11 13
-5000 14 4 M
-#16008
-general huju~
-Huju~
-The general huju is standing here..He look very tough..
-~
-~
-4138 16777368 999
-W 39 5 7 9 9
-100 8 8 M
-#16009
-boss yellow bandit jangkak~
-Jangkak~
-A boss of yellow-towel-bandits,jangkak stands here..
-~
-~
-4138 16777368 -999
-T 41 7 17 16 18
-20000 18 8 M
-#16010
-juji priest~
-juji~
-A juji of sorim temple is praying for the peace..
-~
-~
-2097162 152 999
-C 35 4 8 7 9
-0 5 8 M
-#16011
-statue sadang~
-Statue~
-A statue of sadang stands here..
-~
-~
-10 152 999
-M 35 5 10 7 9
-0 5 8 N
-#16012
-jwaja~
-Jwaja~
-A mysterious jwaja walks here..
-~
-~
-1048648 33556616 999
-M 37 6 16 16 7
-100 12 8 M
-#16013
-soldier drill drillmaster wee~
-Drillmaster~
-A drillmaster 조교가 당신을 노려보고 있습니다..
-~
-~
-104 0 200
-W 30 5 8 7 9
-100 9 8 M
-#16014
-head soldier wee~
-H-soldier~
-A head soldier 고참 병사가 길을 걷고 있습니다..
-~
-~
-104 0 200
-W 30 6 8 7 9
-100 8 8 M
-#16015
-soldier wee~
-Soldier~
-A soldier 병사가 이곳에 두리번 거리며 서있습니다..
-~
-~
-104 0 200
-W 28 6 7 3 11
-100 8 8 M
-#16016
-retired soldier wee~
-R-soldier~
-A retired soldier 은퇴한 병사가 힘없는 눈초리로 당신을 봅니다..
-~
-~
-104 0 250
-W 25 5 6 7 10
-100 7 8 M
-#16017
-training soldier wee~
-T-soldier~
-A training soldier 훈련병이 열심히 무술을 익히고 있습니다..
-~
-~
-104 0 200
-W 20 4 9 13 15
-100 9 8 M
-#16018
-port keeper portkeeper~
-Portkeeper~
-The portkeeper 항구경비원이 바다를 응시한체 서있습니다..
-~
-~
-65546 128 800
-W 25 4 7 8 10
-100 5 8 M
-#16019
-noble man wee~
-Noble man~
-A noble man 귀족이 우스꽝스러운 몸짓을 하며 길을 거닐고 있습니다..
-~
-~
-72 128 800
-W 20 6 8 11 13
-20000 12 8 M
-#16020
-wee citizen~
-Wee citizen~
-A wee citizen 위나라의 백성이 바쁘게 무언가를 찾고 있습니다..
-~
-~
-204 0 600
-W 18 5 10 12 20
-10 12 8 M
-#16021
-wee farmer~
-Wee farmer~
-A wee farmer 농부가 열심히 일을하고 있습니다..
-~
-~
-76 0 600
-W 18 5 10 12 18
-10 9 8 M
-#16022
-wee merchant~
-Wee merchant~
-A wee merchant 상인이 물건을 가지고 부산히 움직이고 있습니다..
-~
-~
-76 0 400
-W 18 5 8 12 11
-1000 13 8 M
-#16023
-wee pirate~
-Pirate~
-A pirate 해적이 이곳에 있습니다..당신의 목숨을 노리고 있습니다..
-~
-~
-104 0 -800
-W 20 4 9 13 16
-10 9 8 M
-#16024
-boss pirate wee~
-Boss pirate~
-A boss pirate 해적두목이 음흉한 미소를 지으며 당신에게 덤비려 합니다..
-~
-~
-42 128 -800
-W 30 4 8 7 7
-100 5 8 M
-#16025
-wee fisher~
-Wee fisher~
-A fisher 어부가 그물을 끌어 올리며 어기영차를 외치고 있습니다..
-~
-~
-72 0 500
-W 18 6 10 13 16
-10 13 8 M
-#16026
-sea dragon~
-Sea dragon~
-A sea dragon 해룡이 흉칙한 모습을 보이며 서있습니다..
-~
-~
-8296 0 -900
-W 25 6 7 8 10
-0 3 8 M
-#16027
-yellow towel bandit~
-Yellow bandit~
-A yellow-towel bandit 황건적이 당신의 돈을 노리고 있습니다..
-~
-~
-104 0 -700
-T 20 4 9 13 17
-0 13 8 M
-#16028
-wee pozol~
-Wee pozol~
-A wee pozol 포졸이 수상한 사람을 찾아 그의 쿤눈을 두리번 거립니다..
-~
-~
-65608 0 500
-W 20 4 8 11 12
-100 14 8 M
-#16029
-simmani~
-Simmani~
-A simmani 심마니가 산삼을 찾아 가파른 절벽을 오르고 있습니다..
-~
-~
-14 128 800
-T 30 5 5 5 12
-10 6 8 M
-#17001
-king sonkwun~
-SonKwun~
-King sonkwun 손권이 잠시 명상에 젖은듯 지긋이 눈을 감고 있습니다.
-~
-그는 오나라의 왕입니다.형인 손책의 뒤를 이어 오나라를 이끌어 나가고 
-있으나 그에겐 위나라와 촉나라의 존재가 무척신경이 쓰이나 봅니다.
-~
-1052714 33556616 0
-W 41 7 11 11 13
-10000 10 8 M
-#17002
-blue dragon~
-Blue Dragon~
-Blue dragon 청룡이 당신의 침입에 황급히 놀라 공격자세를 취하고 있습니다
-~
-~
-4286 17825944 0
-W 40 7 11 11 8
-100 14 8 M
-#17003
-general jutae~
-Jutae~
-The general Jutae 주태의 험상궂은 눈빛이 당신을 쏘아 봅니다.
-~
-~
-135178 16777368 0
-W 40 7 10 11 10
-1000 8 8 M
-#17004
-mosa jooyu~
-Jooyu~
-The mosa jooyu 주유가 하늘을 쳐다보며 오나라의 앞날을 걱정하고 있습니다.
-~
-~
-4168 16777368 0
-W 37 7 10 11 10
-10000 8 8 M
-#17005
-general yukson~
-Yukson~
-The genaral yukson 육손장군이 벽에 걸린 삼국의 지도를 보며 앞으로의 전세
-를 가늠하고 있습니다.
-~
-~
-4106 16777368 0
-W 37 7 10 11 10
-10000 9 8 M
-#17006
-general yeomong~
-Yeomong~
-The general yeomong 여몽장군이 병사들의 훈련모습을 지켜보고 있습니다.
-~
-~
-4296 152 0
-W 37 3 9 9 9
-1000 8 8 M
-#17007
-general gamnyung~
-Gamnyung~
-The general gamnyung 감녕장군이 위풍당당한 모습으로 길을 거닙니다.
-~
-~
-4168 152 0
-W 37 7 9 9 15
-1000 13 8 M
-#17008
-general taesaza~
-Taesaza~
-The general taesaza 태사자 장군이 오나라의 북문앞에 서서 통행인들을 감시
-하고 있습니다.
-~
-~
-4106 152 0
-W 35 4 7 10 4
-1000 8 8 M
-#17009
-ghost king sonkyun~
-Sonkyun~
-The ghost king sonkyun 손견의 혼령이 음흉한 미소를 지으며 당신을 봅니다.
-~
-~
-20488 1050776 0
-W 40 7 11 11 10
-500000 13 8 M
-#17010
-woogil sunin~
-Woogil~
-The woogil sunin 우길선인이 그의 긴수염을 쓰다듬으며 느릿한 몸짓으로 백
-성을 돌보고 있습니다.
-~
-~
-72 16777368 999
-M 38 14 11 11 9
-100 14 8 M
-#17011
-captain pozol~
-Captain pozol~
-The captain pozol 포도대장이 마당 한가운데를 돌아다니며 죄수들을 둘러보
-고 있습니다.
-~
-~
-65546 128 0
-W 33 4 11 7 5
-1000 9 8 M
-#17012
-pozol~
-Pozol~
-A pozol 포졸이 졸리운 눈으로 두리번 거립니다.
-~
-~
-65608 0 0
-W 30 3 18 7 9
-1000 12 8 M
-#17013
-east soldier~
-East soldier~
-A east soldier 병사가 성내를 순찰하고 있습니다.
-~
-~
-104 24 0
-W 33 6 11 3 8
-1000 7 8 M
-#17014
-west soldier~
-West soldier~
-A west soldier 서쪽성이 맘에 안드는지 병사가 터덜터덜 성내를 순찰합니다.
-~
-~
-104 24 0
-W 33 5 11 6 7
-1000 6 8 M
-#17015
-first soldier~
-1st soldier~
-A first soldier 일등병사가 그의 무공을 뽐내는듯 그의 창을 닦고 있습니다.
-~
-~
-104 0 0
-W 30 5 14 7 9
-100 9 8 M
-#17016
-second soldier~
-2nd soldier~
-A second soldier 이등병사가 힘찬 걸음으로 걷고 있습니다.
-~
-~
-104 0 0
-W 25 5 17 7 18
-100 9 8 M
-#17017
-training soldier~
-training soldier~
-A training soldier 훈련병이 교관의 지시대로 열심히 훈련하고 있습니다.
-~
-~
-104 0 0
-W 20 6 14 11 15
-100 12 8 M
-#17018
-jokyo soldier~
-Jokyo soldier~
-A jokyo soldier 훈련조교가 그들의 훈련병을 매섭게 훈련시키고 있습니다.
-~
-~
-104 0 0
-W 30 8 16 7 9
-100 8 8 M
-#17019
-third soldier~
-3rd soldier~
-A third soldier 삼등병사가 이곳저곳을 둘러보며 서있습니다.
-~
-~
-104 0 0
-W 20 6 14 11 15
-100 12 8 M
-#17020
-fourth soldier~
-4th soldier~
-A fourth soldier 사등병사가 불만스러운 표정으로 당신을 봅니다.
-~
-~
-104 0 0
-W 20 3 17 11 16
-100 11 8 M
-#17021
-fifth soldier~
-5th soldier~
-A fifth soldier 오등병사가 자신의 계급장을 가리며 부끄러운듯 서있습니다.
-~
-~
-104 0 0
-W 20 4 19 11 17
-100 13 8 M
-#17022
-citizen~
-Citizen~
-A citizen 허름한 옷차림의 백성이 당신을 보며 부러운듯 눈초리를 보냅니다.
-~
-~
-72 0 0
-O 20 5 11 11 13
-100 9 8 M
-#17023
-farmer~
-Farmer~
-A farmer 농부가 자신의 얼굴에 땀을 닦으며 잠시 휴식을 취하고 있습니다.
-~
-~
-72 0 0
-O 20 5 11 11 14
-1000 9 8 M
-#17024
-merchant~
-Merchant~
-A merchant 상인이 장터로 향해 가고 있습니다.
-~
-~
-72 0 0
-W 25 5 10 7 17
-20000 8 8 M
-#17025
-ware warehouse keeper~
-warehouse keeper~
-A warehouse keeper 창고지기가 당신을 위아래로 훑어 보고 있습니다.
-~
-~
-104 0 0
-W 30 5 18 7 9
-100000 9 8 M
-#17026
-child~
-Child~
-A child 아이가 즐겁게 뛰어 놀고 있습니다.
-~
-~
-72 0 0
-O 15 5 13 14 20
-10 9 8 M
-#17027
-anakne~
-Anakne~
-A anakne 아낙네가 그녀의 아이를 찾아 이리저리 두리번 거립니다.
-~
-~
-72 0 0
-W 17 6 11 17 17
-1000 13 8 F
-#17028
-jumo~
-Jumo~
-A jumo 짙은 화장을 한 주모가 눈웃음을 치며 당신을 맞이합니다.
-~
-~
-10 0 0
-W 35 3 11 4 7
-10000 8 8 F
-#18000
-chief JangSamBong~
-Chief JangSamBong~
-The chief of Mudang, JangSamBong is expertizing for Tae-kuk...
-~
-무당산의 석굴에서 장삼봉이 태극권의 원리를 연구하고 있습니다.
-갑작스러운 당신의 침입에 그는 매우 언짢은 것 같습니다.
-~
-1052714 34613400 500
-W 43 16 4 12 18
-30000 18 8 M
-#18001
-1st knight SongWonKyo~
-1st knight SongWonKyo~
-The 1st knight of Mudang, SongWonKyo is standing here.
-~
-무당칠협의 첫째인 송원교가 서 있습니다. 장삼봉의 뒤를 이어
-무당파를 중흥시켜야 하는 책임이 그에게 있습니다. 그래서 무당의
-모든 대소사는 그를 통해서 이루어지고 있답니다.
-~
-1052714 16844936 500
-W 40 13 9 6 12
-20000 15 8 M
-#18002
-2rd knight YuYeonJu~
-2rd knight YuYeonJu~
-The 2rd knight of Mudang, YuYeonJu is standing here.
-~
-무당칠협의 둘째인 유연주가 유대암의 상처를 걱정하고 있습니다.
-칠협중에서 마음이 가장 부드러운 그조차도 유대암을 암습한 괴한들에게
-복수를 다짐하고 있답니다.
-~
-1052714 16844936 500
-W 40 14 8 5 11
-15000 16 8 M
-#18003
-3nd knight YuDaeAm~
-3nd knight YuDaeAm~
-The 3nd knight of Mudang, YuDaeAm is sitting here.
-~
-무당칠협의 셋째인 유대암이 부상으로 쉬고 있습니다.
-그의 상처는 매우 깊어 쉽게 회복될것 같지 않습니다.
-~
-1052714 16844936 500
-W 40 5 8 4 15
-5000 15 8 M
-#18004
-4th knight JangSongGye~
-4th knight JangSongGye~
-The 4th knight of Mudang, JangSongGye is standing here.
-~
-무당칠협의 넸째인 장송계가 첫째인 송원교를 도와 무당의
-많은 일을 처리하고 있습니다. 칠협중에서 지모가 가장 뛰어나다는
-장송계... 누가 무엇 때문에 둘째형을 암습했는지 골똘히 생각하고 있습니다.
-~
-1052714 16844936 500
-W 40 6 7 6 14
-25000 14 8 M
-#18005
-5th knight JangChwiSan~
-5th knight JangChwiSan~
-The 5th knight of Mudang, JangChwiSan is standing here.
-~
-무당칠협의 다섯째인 장취산의 혼령이 여기 있습니다.
-아내인 은소소와 함께 아들을 바라보며 매우 걱정스러운듯이 서 있습니다.
-~
-1052714 16844936 500
-W 40 8 11 5 13
-25000 14 8 M
-#18006
-6th knight EunYiJeong~
-6th knight EunYiJeong~
-The 6th knight of Mudang, EunYiJeong is standing here.
-~
-무당칠협의 여섯째인 은이정이 약혼녀를 그리며 서있습니다.
-명교의 광명좌사 양소에게 유혹당해 결국은 멸절사태에게 죽어버린 기효부...
-그래서, 은이정은 명교에 속한 사람들만 보면 매우 잔인하게 대합니다.
-~
-1052714 16844936 500
-W 40 7 11 8 12
-18000 16 8 M
-#18007
-7th knight MakSeongGok~
-7th knight MakSeongGok~
-The 7th knight of Mudang, MakSeongGok is standing here.
-~
-무당칠협의 막내인 막성곡이 다섯째형인 장취산의 거취에 대해
-걱정하고 있습니다. 그의 시야에는 무림의 인물들이 올라오는게 보입니다.
-과연, 이들이 무엇때문에 오는지.......
-~
-1052714 16844936 500
-W 40 7 7 7 12
-16000 14 8 M
-#18008
-wife EunSoSo~
-Wife EunSoSO~
-The wife of JangChwiSan, EunSoSo is standing here.
-~
-~
-42 16844936 -200
-W 39 10 7 15 6
-10000 13 8 F
-#18009
-ghost GiHyoBu~
-Ghost GiHyoBu~
-The ghost of GiHyoBu is standing here.
-~
-~
-2097162 16844936 400
-W 39 10 10 14 7
-0 15 8 F
-#18010
-2nd apprenciate mudang SongCheongSeo~
-2nd apprenciate mudang SongCheongSeo~
-The 2nd apprenciate mudang SongCheongSeo is standing here.
-~
-무당파의 앞날을 이끌고갈 송청서가 2대제자들의 앞에서서
-그들을 지도하고 있습니다. 그의 눈에선 희망찬 내일의 모습을
-볼수가 있군요. 
-~
-104 33556632 450
-W 40 6 10 3 13
-10000 14 8 M
-#18011
-2nd apprenciate mudang~
-2nd apprenciate mudang~
-The 2nd apprenciate mudang is training MyeonJang.
-~
-무당파의 제2대제자가 면장을 열심히 익히고 있습니다.
-~
-104 33556632 450
-W 38 5 10 6 8
-5000 11 8 M
-#18012
-2nd apprenciate mudang~
-2nd apprenciate mudang~
-The 2nd apprenciate mudang is training Mudang-Sword theory.
-~
-무당파의 제2대제자가 무당검법을 열심히 익히고 있습니다.
-~
-104 33554584 450
-W 37 4 10 5 8
-5000 11 8 M
-#18013
-2nd apprenciate mudang~
-2nd apprenciate mudang~
-The 2nd apprenciate mudang is training Mudang-Gweon theory.
-~
-무당파의 제2대제자가 무당권법을 열심히 익히고 있습니다.
-~
-104 33554584 450
-W 35 4 12 5 8
-5000 10 8 M
-#18014
-3rd apprenciate mudang~
-3rd apprenciate mudang~
-The 3rd apprenciate mudang is being trained by 2nd apprenciate mudang.
-~
-무당파의 제3대제자가 2대제자로부터 무당파의 기본을 배우고 있습니다.
-~
-104 33554584 400
-W 35 4 12 4 7
-5000 10 8 M
-#18015
-3rd apprenciate mudang~
-3rd apprenciate mudang~
-The 3rd apprenciate mudang is studying basic theory of mudang.
-~
-무당파의 제3대제자가 무당파의 기본을 배우고 있습니다.
-~
-104 33554584 400
-W 33 4 13 3 9
-3000 10 8 M
-#18016
-guard mudang~
-Guard mudang~
-The guard of Mudang stands here on the alert.
-~
-~
-65640 33554584 400
-W 40 8 10 16 13
-3000 16 8 M
-#18020
-guest~
-Guest~
-The Guest of mudang is walking through training hall.
-~
-무당파를 구경하러 온 손님이 무당의 후기지수들이 수련하는 
-모습을 바라보고 있습니다. 무당의 젊은 인재들의 모습에서
-매우 강렬한 인상을 받았나 봅니다.
-~
-232 33554584 450
-T 35 5 12 7 9
-12000 7 8 M
-#18021
-servant~
-Servant~
-The servant of mudang is working at here.
-~
-무당파의 하인이 연무장을 청소하고 있습니다. 무당파에서 오랫동안
-일하다보니 그의 무공실력도 얕잡아볼수가 없군요.
-~
-200 8 300
-W 30 3 17 5 9
-1000 7 8 M
-#18022
-cook~
-Cook~
-The cook of mudang is cooking for dinner.
-~
-요리사가 오늘저녁을 위해서 요리를 하고 있습니다. 평범하게 보이지만
-그의 칼질하는 모습에선 문득문득 무당검법이 나타나곤 합니다.
-~
-44 8 300
-W 31 3 16 5 10
-2000 7 8 M
-#18023
-jumo~
-Jumo~
-The jumo is looking at guests.
-~
-주모가 손님들을 맞이하고 있습니다. 하지만 그녀의 눈빛에는
-언뜻 스쳐가는 강인한 모습이 보이는군요. 과연 그녀의 정체는......
-~
-10 136 400
-T 34 3 12 10 10
-1000 10 8 F
-#18024
-waiter~
-Waiter~
-The waiter is being ordered busily.
-~
-점소이가 손님들로부터 바쁘게 주문을 받고 있습니다. 무림의 많은 인물들을
-상대하다보니 그의 발걸음은 굉장히 빠르게 움직여야만 합니다.
-~
-172 8 200
-W 28 5 13 6 10
-0 11 8 M
-#18030
-tiger~
-Tiger~
-The white Tiger is running around here.
-~
-백호가 무당산의 여기저기를 휘저으며 달리고 있습니다.
-커다란 체구에 온산을 떠날듯이 울부짖는 포효는 산중의 왕으로 불릴만합니다.
-~
-65640 65672 50
-W 30 5 11 7 18
-0 16 8 M
-#18031
-serpent snake~
-Serpent snake~
-The large serpent snake is setting his heart on rising high to sky.
-~
-커다란 구렁이가 하늘 높이 오르기를 열망하고 있습니다. 하지만
-여의주가 없기에 용이 되지 못하고 땅을 기어다니고 있군요.
-~
-65640 65672 50
-W 26 5 12 6 16
-0 10 8 M
-#18032
-dragon yellow~
-Dragon yellow~
-The Yellow Dragon is flying over fall.
-~
-황룡이 폭포주위를 맴돌고 있습니다. 폭포안에 무슨 귀중한것이 있나 보군요.
-~
-8234 16779416 -100
-W 31 6 17 19 14
-50000 15 8 M
-#18033
-tiger~
-Tiger~
-The small tiger is running around here.
-~
-~
-65640 65672 50
-W 25 4 17 7 17
-0 14 8 M
-#18034
-thief black~
-Thief black~
-The black thief is looking at your inventory.
-~
-~
-204 524298 -500
-T 25 5 14 15 15
-0 16 8 M
-#18035
-bodyguard dragon guard~
-Bodyguard~
-The bodyguard of chief is guarding.
-~
-~
-8234 648 -1000
-W 39 3 11 13 14
-50000 12 8 F
-#18036
-dongulkeeper keeper~
-Dongulkeeper~
-The dongulkeeper is guarding.
-~
-~
-8234 648 -1000
-W 40 3 11 13 17
-50000 12 8 F
-#19000
+#19801
 wang~
 Wang Comicky~
 멍텅하게 생긴 W.C.가 당신을 보고 있습니다.
@@ -8147,7 +8811,7 @@ Wang Comicky~
 10 33556632 700
 C 43 13 12 7 15
 1000 18 8 M
-#19001
+#19802
 cap~
 Cap Comicky~
 상상을 초월하 생긴 C.C.가 당신을 보고 있습니다.
@@ -8158,7 +8822,7 @@ Cap Comicky~
 10 33556632 700
 C 41 9 12 7 18
 1000 18 8 M
-#19002
+#19803
 Mac~
 Mac Comicky~
 멍텅하게 생긴 M.C.가 당신을 보고 있습니다.
@@ -8168,342 +8832,6 @@ Mac Comicky~
 10 33556632 700
 C 41 9 12 7 14
 1000 14 8 M
-#19003
-id student~
-ID Student~
-An Industrial Design Student is working hard before the professor.
-~
-~
-72 0 0
-W 13 5 15 7 17
-1000 16 8 M
-#19004
-biri student~
-Biri student~
-A Biri Student plays with his Bibi friends.
-~
-~
-104 24 0
-W 18 6 12 8 8
-1000 15 8 M
-#19005
-bibi Student~
-Bibi Student~
-A Bibi student issue an command to Biri.
-~
-~
-72 24 0
-W 18 6 13 8 9
-1000 15 8 M
-#19006
-Boss Student~
-Boss Student~
-A Boss Student of Black circle sleeps before the Professor.
-~
-~
-104 0 0
-W 14 6 14 9 9
-100 14 8 M
-#19007
-takari~
-Takari~
-A Takari of Boss looks at Boss with eye asleep.
-~
-~
-72 0 0
-W 15 5 18 7 13
-100 14 8 M
-#19008
-female student~
-Female Student~
-A Female student winks you passionably.
-~
-~
-72 0 0
-C 10 10 18 11 19
-100 18 8 F
-#19009
-jokyo prof~
-Jokyo Prof~
-a Jokyo Prof teachs some boring text book.
-~
-~
-72 0 0
-W 20 5 16 7 12
-100 11 8 M
-#19010
-professor lee~
-Professor Lee~
-An Id Professor Lee teachs Id students.
-~
-~
-72 648 -1000
-W 38 5 11 13 13
-50000 15 8 M
-#19011
-auto keeper~
-Auto keeper~
-An auto keeper keeps the auto door with some sharp weapon.
-~
-~
-4170 10 0
-W 10 14 5 10 7
-2000 13 8 M
-#19012
-door keeper~
-Door keeper~
-An door keeper keeps the door.
-~
-~
-4170 10 0
-W 18 5 6 10 17
-2000 13 8 M
-#19013
-second zuzius~
-Second zuzius~
-A cute zuzius crys in the room looking for her girl friend.
-~
-~
-72 190 -1000
-W 20 4 11 18 13
-50000 16 8 M
-#19014
-takari surin~
-Takari surin~
-A sexy surin kisses zuzius passionalbly.
-~
-~
-65784 65776 0
-T 25 14 14 19 16
-2000 18 8 F
-#19015
-third zuzius~
-Third zuzius~
-A ugly zuzius grins you evily.
-You can feel some fear comes to you.
-~
-~
-72 190 -1000
-W 33 5 13 14 13
-50000 16 8 M
-#19016
-poor nimpus~
-Poor nimpus~
-You can see poor boy named nimpus.
-Some one says his IQ is lower than 2 digit.
-~
-~
-72 190 -1000
-W 33 5 13 19 13
-50000 14 8 M
-#19017
-queen designer~
-Queen Designer~
-The queen of industrial design block glares you.
-~
-~
-4138 33556632 500
-W 40 5 17 16 13
-100000 13 8 F
-#19018
-lover of id queen~
-Lover of id queen~
-He loves id queen so guarding id queen.  
-~
-~
-1572874 17827992 500
-C 38 5 11 11 17
-0 16 8 M
-#19019
-electrical queen~
-Electrical Queen~
-The Queen of Electrics guards king beside him.
-~
-~
-1572874 17827992 500
-C 38 9 10 14 13
-10000 16 8 M
-#19020
-ee student~
-EE student~
-An Electronic & Electrical Student is studying hard.
-~
-~
-72 0 0
-W 20 6 15 4 5
-1000 13 8 M
-#19021
-massmon~
-Massmon~
-You can see a mass monster which looks like a ball.
-~
-~
-65626 3260 500
-T 25 3 17 15 14
-10000 13 8 M
-#19022
-velomon~
-Velomon~
-You can see a Velomon which looks like a watch.
-~
-~
-1572874 17827992 500
-C 27 5 19 19 18
-10000 18 8 F
-#19023
-accelemon~
-Accelemon~
-You can see an Accelemon which looks like an unicorn.
-~
-~
-65626 3260 500
-T 27 3 14 18 17
-10000 18 8 F
-#19024
-super model~
-Super model~
-You are falling in love with her at first look at her.
-~
-~
-138 2236 1000
-T 26 4 16 15 17
-10000 17 8 M
-#19025
-cashmon~
-Cashmon~
-You can see cash monster which looks like an cash machine.
-~
-~
-65594 3260 500
-T 33 5 17 18 17
-1234567 18 8 F
-#19026
-chief student~
-Chief student~
-Chief looks like an poolish boy.
-~
-~
-104 0 0
-W 20 3 14 18 16
-10000 12 8 M
-#19027
-satteleton~
-Satteleton~
-You can see a body in the aura of black chips.
-~
-~
-65626 3260 1000
-T 31 5 19 8 13
-10000 11 8 M
-#19028
-controller~
-Controller~
-You can see some phase lag controller.
-~
-~
-65626 3260 0
-T 32 6 18 8 13
-10000 12 8 M
-#19029
-proffesor kim~
-Proffesor Kim~
-You can see proffesor kim who smiles you.
-~
-~
-65594 0 0
-T 35 4 12 8 19
-10000 16 8 F
-#19030
-doctor park~
-Doctor Park~
-Doctor park stands there.
-~
-~
-65594 0 0
-T 36 6 16 7 14
-10000 12 8 F
-#19031
-ph doctor~
-Ph Doctor~
-You can see a doctor like an einstein.
-~
-~
-65594 0 0
-T 37 4 16 7 14
-10000 13 8 M
-#19032
-computer~
-Computer~
-A computer keeps the key with digital eyes.
-~
-~
-90 220 0
-T 38 6 17 5 14
-1000 16 8 M
-#19033
-wave~
-Wave~
-A wave of micro looks at you.
-~
-~
-90 220 0
-T 38 4 16 19 15
-1000 18 8 M
-#19034
-phonemon~
-Phonemon~
-Phonemon is standing here~
-~
-90 220 0
-T 38 6 17 18 14
-1000 17 8 M
-#19035
-breadboard~
-Breadboard~
-A breadboard attacks you.
-~
-~
-90 220 0
-T 37 4 19 15 18
-1000 18 8 M
-#19036
-phase lag~
-Phase Lag~
-A Phase Lag kicks you and wanna your corpse.
-~
-~
-90 220 0
-T 38 6 15 17 13
-1000 13 8 M
-#19037
-partner male~
-Partner Male~
-You can see the male part of Campus Couple.
-You feel you wanna kill them.
-~
-~
-65720 220 0
-T 18 4 15 15 18
-1000 16 8 M
-#19038
-partner female~
-Partner Female~
-You can see the female part of Capus Couple.
-You feel you wanna her.
-~
-~
-65720 220 0
-T 17 6 12 15 14
-1000 16 8 F
-#19039
-Electrical king~
-Electrical King~
-The King of Electrics looks at you.
-~
-~
-4138 33556632 400
-W 41 4 15 17 15
-10000 16 8 M
 #19999
 super musashi~
 SUPER Musashi~
@@ -8512,520 +8840,7 @@ SUPER Musashi is here, dancing with his samurai sword.
 SUPER Musashi is getting a little tired of the nonsense around here.
 ~
 9 33556480 1000
-W 43 18 18 9 19
-10000 19 8 M
-#23301
-demon kaalm 악마 카암~
-악마성주(DEMON) 카암(KAALM)~
-악마성주(DEMON) 카암(KAALM)이 화가 나 있습니다.
-~
-"나는 전 세계 악의 지배자 카암이다."
-"누구도 나의 앞을 막을 수 없다."
-"..."
-~
-362 117459128 -999
-W 43 13 15 19 19
-9 19 8 M
-#23302
-statue satan 악마상~
-악마상(STATUE OF SATAN)~
-악마상(STATUE of SATAN)이 놓여 있습니다.
-~
-            _,.-----.,_
-         ,-~           ~-.
-       ,^___           ___^.
-      /~"   ~"   .   "~   "~\
-     Y  ,--._    I    _.--.  Y
-     | Y     ~-. | ,-~     Y |
-     | |        }:{        | |
-     j l       / | \       ! l
-  .-~  (__,.--" .^. "--.,__)  ~-.
- (           / / | \ \           )
-  \.____,   ~  \/"\/  ~   .____,/
-   ^.____                 ____.^
-      | |T ~\  !   !  /~ T| |
-      | |l   _ _ _ _ _   !| |
-      | l \/V V V V V V\/ j |
-      l  \ \|_|_|_|_|_|/ /  !
-       \  \[T T T T T TI/  /
-        \  `^-^-^-^-^-^'  /    "무섭지?"
-         \               /
-          \.           ,/
-            "^-.___,-^"
-
-~
-525386 67174458 -999
-C 40 5 8 8 9
-9 11 8 M
-#23303
-female saint lanessa 성녀 라네사~
-성녀(FEMALE SAINT) 라네사(LANESSA)~
-성녀(FEMALE SAINT) 라네사(LANESSA)가 조용히 누워 있습니다.
-~
-"신의 은총이 함께 하길..."
-~
-75 184 999
-W 43 2 4 4 2
-9 8 5 F
-#23304
-mirror female saint 성녀~
-성녀(FEMALE SAINT)~
-성녀(FEMALE SAINT)가 멍청히 서 있습니다.
-~
-"..."
-"..."
-"..."
-~
-75 56 850
-W 28 5 4 3 8
-9 4 8 F
-#23305
-dweller 주민~
-주민(DWELLER)~
-주민(DWELLER)이 열심히 청소를 하고 있습니다.
-~
-"마을 밖에는 무시무시한 괴물들이 우글우글 하데요..."
-"강 건너 성에 악마성주가 살고 있는데..."
-"그를 죽여야 평화가 온데요..."
-~
-72 0 600
-W 10 7 8 8 11
-5 9 8 M
-#23306
-dweller 주민~
-주민(DWELLER)~
-주민(DWELLER)이 열심히 일을 하고 있습니다.
-~
-"마법의 진은 성녀님이 만든거에요..."
-"성녀님만이 마법의 진을 나갈 수 있어요..."
-~
-72 0 600
-W 10 7 8 8 11
-5 9 8 M
-#23307
-child 아이~
-아이(CHILD)~
-아이(CHILD)가 돌맹이를 차며 놀고 있습니다.
-~
-"멋진 용사들이 나타나서 우리를 구해준다고 했어요..."
-"성녀님이 그랬거든요..."
-"물병에 종이를 넣어서 띄운 것도 성녀님이에요..."
-~
-72 0 750
-W 5 4 3 8 6
-5 4 8 M
-#23308
-child 아이~
-아이(CHILD)~
-아이(CHILD)가 돌맹이를 던지며 놀고 있습니다.
-~
-"성녀님이 바보가 되었어요..."
-"말을 못한데요..."
-"..."
-~
-72 0 750
-W 5 4 3 8 6
-5 4 8 M
-#23311
-cyclops 사이클로프스~
-사이클로프스(CYCLOPS)~
-외눈박이 거인 사이클로프스(CYCLOPS)가 두리번거리고 있습니다.
-~
-얼굴 한가운데에 있는 붉게 충혈된 눈으로 당신을 쳐다봅니다.
-
-"여기가 어딘지 알아?"
-"너, 착한 놈이지?"
-~
-360 67108920 -750
-W 38 8 4 5 19
-9 14 8 M
-#23312
-grab giant 그래브 자이언트~
-그래브 자이언트(GRAB GIANT)~
-그래브 자이언트(GRAB GIANT)가 커다란 가위손을 흔들며 서 있습니다.
-~
-'싹뚝 싹뚝' 가위질을 하며 당신을 쳐다봅니다.
-
-"내 가위 맛 좀 볼레?"
-"..."
-"쿠구르르."
-~
-362 67108920 -650
-W 35 8 5 13 19
-8 13 8 M
-#23313
-charon 캐론~
-캐론(CHARON)~
-사공 캐론(CHARON)이 다리를 막고 서 있습니다.
-~
-당신을 노려보며 통행세를 내라고 말하고 있습니다.
-
-"이곳은 지옥으로 통하는 다리야."
-"돌아가는게 좋을 걸."
-"너 같은 약한 녀석은 버티기 힘들거야... 흐."
-~
-362 100663480 -850
-W 42 6 11 9 18
-11 13 8 M
-#23314
-caveman 혈거인~
-혈거인(CAVEMAN)~
-혈거인(CAVEMAN)이 무언가를 찾고 있습니다.
-~
-"이상하네."
-"여기 어디서 잃어 버린 것 같은데..."
-"혹시 내 곤봉 본 적 없수?"
-~
-360 67108920 -750
-W 37 13 4 6 18
-8 15 8 M
-#23315
-barlog 발로그~
-발로그(BARLOG)~
-화가난 발로그(BARLOG)가 당신을 노려보고 있습니다.
-~
-"으..."
-"인간이 싫다..."
-"죽인다..."
-~
-360 83886136 -750
-W 38 9 5 9 17
-7 13 8 M
-#23316
-ant giant 거인 개미~
-거인 개미(ANT GIANT)~
-커다란 거인 개미(ANT GIANT)가 기어 다니고 있습니다.
-~
-"치크 치크..."
-~
-488 67108920 -750
-W 33 6 7 13 19
-7 18 8 M
-#23317
-ant lion 사자 개미~
-사자 개미(ANT LION)~
-커다란 사자 개미(ANT LION)가 기어 다니고 있습니다.
-~
-"추크 추크..."
-~
-488 67108920 -750
-W 33 5 6 14 18
-7 18 8 M
-#23318
-termite giant 터마이트 자이언트~
-터마이트 자이언트(TERMITE GIANT)~
-커다란 흰개미가 기어 다니고 있습니다.
-~
-"치이크 치이크..."
-~
-360 67108920 -350
-W 35 8 8 10 18
-8 17 8 M
-#23319
-chromatic dragon 크로매틱 드래곤~
-크로매틱 드래곤(CHROMATIC DRAGON)~
-크로매틱 드래곤(CHROMATIC DRAGON)이 5개의 머리를 빙글 돌리고 있습니다.
-~
-"넘 재미있다..."
-"그런데, 좀 어지러운걸..."
-"으, 심심해..."
-"조용히 좀 해 봐..."
-"..."
-~
-74090 117440696 -650
-W 43 17 13 12 17
-8 15 8 M
-#23320
-carpie dragonewt 드래곤뉴트~
-드래곤뉴트(DRAGONEWT) 카피(CARPIE)~
-사악한 드래곤뉴트(DRAGONEWT) 카피(CARPIE)가 생각에 잠겨 있습니다.
-~
-"세상에서 드래곤보다 쎈 것은 없다."
-"난 드래곤을 지배한다."
-"고로 내가 제일 쎄다... 흐흐."
-~
-491 69027896 -950
-T 43 8 15 8 13
-17 13 8 M
-#23321
-electric eel 전기 뱀장어~
-전기 뱀장어(ELECTRIC EEL)~
-파란 불빛의 꼬리를 가진 물고기가 헤엄쳐 당신에게 다가옵니다.
-~
-"찌르르르..."
-"찌르르르..."
-"찌르르르..."
-~
-362 67108920 -750
-W 39 8 7 7 19
-7 13 8 M
-#23322
-stone giant 바위 거인~
-바위 거인(STONE GIANT)~
-거대한 바위 거인(STONE GIANT)이 서 있습니다.
-~
-"오늘은 몸이 좀 무겁군..."
-"..."
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 M
-#23323
-iron golem 아이런 고렘~
-아이런 고렘(IRON GOLEM)~
-철로 만든 거대한 동상이 문을 막고 서 있습니다.
-~
-"나는야 문지기 아이런 고렘..."
-"..."
-"애구구..."
-"계속 서 있기만 하니깐 다리가 넘 아프다..."
-~
-362 100663480 -650
-W 43 14 6 6 17
-7 17 8 M
-#23324
-gray oozy 그레이 오즈~
-그레이 오즈(GRAY OOZY)~
-끈적 끈적한 액체가 구석에서 조금씩 움직이고 있습니다.
-~
-"난 슬라임(SLIME)이 아니라구..."
-"날 그런 녀석과 비교하면 곤란하지..."
-"한번 맛을 보면 알지. 나의 강력한 공격을."
-~
-16744 67108920 -750
-W 35 4 5 13 19
-8 15 8 M
-#23325
-were wolf 늑대 인간~
-늑대 인간(WERE-WOLF)~
-늑대 인간(WERE-WOLF)이 꾸부정한 허리를 펴며 운동을 하고 있습니다.
-~
-"애구구 허리야..."
-"맨날 구부리고만 다녔더니..."
-"으싸, 으싸..."
-~
-360 83886136 -650
-W 38 5 7 13 19
-7 14 8 M
-#23326
-first general baron 대장 바론~
-제1대장 바론(FIRST GENERAL BARON)~
-악마군 제1대장 바론(FIRST GENERAL BARON)이 앉아서 쉬고 있습니다.
-~
-"요즘, 녀석들이 너무 게을러진 것 같단말야..."
-"뺑뺑이를 돌려야겠군..."
-"하긴 바보같은 마을 녀석들 잡는거야 식은죽 먹기지만 말야..."
-~
-1048938 100665528 -850
-W 43 12 8 9 19
-17 17 5 M
-#23327
-second general zudra 대장 쥬드라~
-제2대장 쥬드라(SECOND GENERAL ZUDRA)~
-악마군 제2대장 쥬드라(SECOND GENERAL ZUDRA)가 명상에 빠져 있습니다.
-~
-"..."
-"^_^"
-~
-1048938 100679864 -850
-W 43 17 16 13 15
-9 13 5 M
-#23328
-third general olangenu 대장 오란게누~
-제3대장 오란게누(THIRD GENERAL OLANGENU)~
-악마군 제3대장 오란게누(THIRD GENERAL OLANGENU)가 서성이고 있습니다.
-~
-"라네사는 너무 사랑스러워..."
-"라네사는 너무 아름다워..."
-"아, 나의 사랑 라네사..."
-~
-1048938 100729016 -350
-W 43 12 13 19 18
-9 14 8 M
-#25060
-JuJiYak~
-주지약~
-주지약이 당신의 침입에 놀라며 공격합니다.
-~
-주지약이 장무기의 상처를 걱정스러운 눈빛으로 보고 있습니다.
-~
-1048938 100679864 -850
-W 43 17 16 13 15
-9 13 5 F  
-#25061
-무림지존 JangMuGi~
-지존 장무기~
-장무기가 자리에서 벌떡 일어나 당신을 공격합니다.
-~
-장무기가 막 내상을 치유하고 형형한 안광으로 당신을 노려봅니다.
-~
-362 117459128 999
-W 43 13 15 19 19
-9 19 8 M    
-#25062
-MyulJulSaTae~
-멸절사태~
-멸절사태가 애제자인 주지약을 잃어버리고 걱정하고 있습니다.
-~
-"아미파를 침입하다니."
-"용서할수 없다."
-~
-1048938 100665528 -850
-W 43 12 8 9 19
-17 17 5 F
-#25063
-JungHyunSaTae~
-정현사태~
-멸절사태의 수제자인 정현사태입니다.
-~
-~
-1048938 100729016 -350
-W 43 12 13 19 18
-9 14 8 F
-#25064
-JiSulSaTae~
-지설사태~
-멸절사태의 두번째 제자인 지설사태입니다.
-~
-~
-4138 33556632 400
-W 42 4 15 17 15
-10000 16 8 F
-#25065
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25066
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F
-#25067
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F
-#25068
-TaeSang jangro~
-아미 태상 장로~
-아미 태상장로가 아미파의 보물을 뒤로 숨기며 당신을 바라봅니다.
-~
-~
-1048586 50333832 850
 W 43 19 19 19 19
-1100 14 6 F  
-#25069
-Doctor Ami~
-아미 의사~
-아미파의 의사가 응급 처치할 준비를 하고 사태를 바라보고 있습니다.
-~
-~
-1572874 16777224 780
-W 40 13 12 10 13
-1100 13 6 F
-#25070
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25071
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25072
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25073
-1st apprenciate Ami~
-1대 아미제자~
-1대 아미제자가 당신의 앞을 막아섭니다.
-~
-~
-362 100663480 100
-W 42 6 11 9 18
-11 13 8 F
-#25074
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F                    
-#25075
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F                    
-#25076
-2nd apprenciate Ami~
-2대 아미제자~
-2대 아미제자가 당신에게 달려듭니다.
-~
-~
-362 100663480 -650
-W 41 14 6 6 17
-7 17 8 F                    
-#25077
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F 
-#25078
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F      
-#25079
-Ami Pupil~
-아미 속가제자~
-아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
-~
-~
-360 83886136 -650
-W 42 13 7 8 19
-5 15 8 F      
+10000 19 18 M
 #99999
 $
-

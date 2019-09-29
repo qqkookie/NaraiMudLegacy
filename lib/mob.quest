@@ -156,7 +156,7 @@
 9005 24 wasp queen
 15021 25 robot jjippa
 1700 25 elven wizard
-17024 25 merchant
+13324 25 merchant
 1931 25 zyekian commander
 1933 25 zyekian warder lorin
 2902 25 dweller cave
@@ -167,9 +167,9 @@
 5016 25 nomad guard
 6517 25 giant snake
 2913 26 yeti white
-19011 10 auto keeper
-19012 18 door keeper
-19007 15 takari
+12411 10 auto keeper
+12412 18 door keeper
+12407 15 takari
 2241 27 dragon phase
 2543 27 President Unpopular
 3154 27 undercover cop
@@ -190,7 +190,7 @@
 2903 29 toad rock
 2909 29 guard ogre
 9710 29 pegasus
-16018 25 port keeper portkeeper
+13018 25 port keeper portkeeper
 2106 23 statue hades
 1460 30 Grandma
 15011 30 new robocop
@@ -198,9 +198,9 @@
 15023 30 teleport machine
 15128 30 electro magnet
 1550 30 gobind singh guru sikhu
-16013 30 soldier drill drillmaster wee
-16029 30 simmani
-17025 30 ware warehouse keeper
+13013 30 soldier drill drillmaster wee
+13029 30 simmani
+13325 30 ware warehouse keeper
 202 30 Merlin
 2301 30 spectral minion
 2319 30 dark creeper
@@ -224,7 +224,7 @@
 5105 31 drow master
 9709 31 hercules
 9711 31 orion
-19028 32 controller
+12428 32 controller
 1912 32 king zyekian kalek
 2916 32 guard minotaur
 4205 32 shaithis wamphyri
@@ -241,8 +241,8 @@
 9723 32 scorpio zodiac
 9725 32 capricon zodiac
 9726 32 aquarius zodiac
-19016 33 poor nimpus
-19025 33 cashmon
+12416 33 poor nimpus
+12425 33 cashmon
 2119 33 Proserpina
 4203 33 dweller
 4204 33 dramal doombody wamphyri
@@ -260,32 +260,32 @@
 2114 26 Aeacus
 2115 26 Radamanthus
 2116 26 Minos
+12414 25 takari surin
+12421 25 massmon
+12424 26 super model
+12422 27 velomon
+12423 27 accelemon
+12427 31 satteleton
+9516 28 micro quadruplets quadruplet
+9517 28 mili quadruplets quadruplet
+9518 28 mega quadruplets quadruplet
+9519 28 giga quadruplets quadruplet
+9536 30 trainer sura
 3071 34 furniture throne
 5107 34 drow matron 2nd mother
 5108 34 drow matron 1st mother
 5127 34 drow matron 3rd mother
 5137 34 drow matron 4th mother
 6007 34 jim lumberjack
-19014 25 takari surin
-19021 25 massmon
-19024 26 super model
-19022 27 velomon
-19023 27 accelemon
-19027 31 satteleton
-9516 28 micro quadruplets quadruplet
-9517 28 mili quadruplets quadruplet
-9518 28 mega quadruplets quadruplet
-9519 28 giga quadruplets quadruplet
-9536 34 trainer sura
 1307 35 pan peter
 1450 35 bouncer
 15001 35 diamond robot
 15098 35 1st robocop
-16010 35 juji priest
-16011 35 statue sadang
-17008 35 general taesaza
-17028 35 jumo
-19029 35 proffesor kim
+13010 35 juji priest
+13011 35 statue sadang
+13308 35 general taesaza
+13328 35 jumo
+12429 35 proffesor kim
 1991 35 gate keeper gatekeeper
 2204 35 cleric draconian
 2304 35 wraith
@@ -299,43 +299,44 @@
 5010 35 dracolich
 6516 35 mazekeeper
 9503 35 captain hook
+9508 35 sura zizon
 9532 35 ddal daughter
 15083 36 lsi robot
-19030 36 doctor park
+12430 36 doctor park
 2207 36 bodyguard draconian
 2307 36 shadow dragon
 2308 36 dark stalker
 2920 36 minotaur royal guard
 3072 36 grand mage archmage guildmaster
 9531 36 son adle second
-9522 35 learned sura
+9522 32 learned sura
 1465 37 roy slade
 15035 37 factory gate robot
 15082 37 vlsi robot
 15110 37 factory captain robot
 15224 37 proton robot
-16012 37 jwaja
-17004 37 mosa jooyu
-17005 37 general yukson
-17006 37 general yeomong
-17007 37 general gamnyung
-19031 37 ph doctor
-19035 37 breadboard
+13012 37 jwaja
+13304 37 mosa jooyu
+13305 37 general yukson
+13306 37 general yeomong
+13307 37 general gamnyung
+12431 37 ph doctor
+12435 37 breadboard
 2226 37 hydra
 2314 37 githyanki lord
 15092 38 sick robot
 15104 38 factory president robot
 15225 38 quantum robot
 15226 38 human nipporica
-16007 38 general junwee
-17010 38 woogil sunin
-19010 38 professor lee
-19018 38 lover of id queen
-19019 38 electrical queen
-19032 38 computer
-19033 38 wave
-19034 38 phonemon
-19036 38 phase lag
+13007 38 general junwee
+13310 38 woogil sunin
+12410 38 professor lee
+12418 38 lover of id queen
+12419 38 electrical queen
+12432 38 computer
+12433 38 wave
+12434 38 phonemon
+12436 38 phase lag
 2203 38 mage wizard
 2817 38 general jangbi
 2921 38 guard minotaur elite
@@ -345,10 +346,10 @@
 15099 39 head robocop
 15126 39 bar magnet
 15168 39 super robocop
-16003 39 mosa samaui
-16005 39 mosa seoseo
-16006 39 general jangryo
-16008 39 general huju
+13003 39 mosa samaui
+13005 39 mosa seoseo
+13006 39 general jangryo
+13008 39 general huju
 2221 39 dragon red
 2222 39 dragon black
 2223 39 dragon white
@@ -363,14 +364,13 @@
 15217 36 second husband
 15221 36 third husband
 15193 40 robot zzanga
-9508 40 sura zizon
 15194 40 robot grandiser
-16002 40 son chovi
-16004 40 general hawoodon
-17002 40 blue dragon
-17003 40 general jutae
-17009 40 ghost king sonkyun
-18016 40 guard mudang
+13002 40 son chovi
+13004 40 general hawoodon
+13302 40 blue dragon
+13303 40 general jutae
+13309 40 ghost king sonkyun
+12716 40 guard mudang
 2000 40 fighter
 2001 40 paladin
 2002 40 cleric
@@ -417,20 +417,20 @@
 9563 40 horse black king
 2120 40 Hades King
 2120 40 Hades King
-19017 40 queen designer
-19017 40 queen designer
-18010 40 2nd apprenciate mudang SongCheongSeo
-18001 40 1st knight SongWonKyo
-18002 40 2rd knight YuYeonJu
-18003 40 3nd knight YuDaeAm
-18004 40 4th knight JangSongGye
-18005 40 5th knight JangChwiSan
-18006 40 6th knight EunYiJeong
-18007 40 7th knight MakSeongGok
-18008 39 wife EunSoSo
-18009 39 ghost GiHyoBu
-16009 41 boss yellow bandit jangkak
-16009 41 boss yellow bandit jangkak
+12417 40 queen designer
+12417 40 queen designer
+12710 40 2nd apprenciate mudang SongCheongSeo
+12701 40 1st knight SongWonKyo
+12702 40 2rd knight YuYeonJu
+12703 40 3nd knight YuDaeAm
+12704 40 4th knight JangSongGye
+12705 40 5th knight JangChwiSan
+12706 40 6th knight EunYiJeong
+12707 40 7th knight MakSeongGok
+12708 39 wife EunSoSo
+12709 39 ghost GiHyoBu
+13009 41 boss yellow bandit jangkak
+13009 41 boss yellow bandit jangkak
 1990 41 brontosaurus bronto
 1990 41 brontosaurus bronto
 15154 41 mazinga
@@ -449,18 +449,18 @@
 15129 41 cray computer
 15182 41 great mazinga
 15182 41 great mazinga
-16001 41 king chocho
-16001 41 king chocho
-16001 41 king chocho
-16001 41 king chocho
-17001 41 king sonkwun
-17001 41 king sonkwun
-17001 41 king sonkwun
-17001 41 king sonkwun
-19039 41 Electrical king
-19039 41 Electrical king
-19039 41 Electrical king
-19039 41 Electrical king
+13001 41 king chocho
+13001 41 king chocho
+13001 41 king chocho
+13001 41 king chocho
+13301 41 king sonkwun
+13301 41 king sonkwun
+13301 41 king sonkwun
+13301 41 king sonkwun
+12439 41 Electrical king
+12439 41 Electrical king
+12439 41 Electrical king
+12439 41 Electrical king
 2220 41 tiamat dragon
 2220 41 tiamat dragon
 2317 41 loftwick lich
@@ -484,24 +484,12 @@
 7009 41 grand knight paladin
 7009 41 grand knight paladin
 7009 41 grand knight paladin
-7009 41 grand knight paladin
-9807 41 darth vader
 9807 41 darth vader
 9807 41 darth vader
 9807 41 darth vader
 9808 41 dark emperor
 9808 41 dark emperor
 9808 41 dark emperor
-9808 41 dark emperor
-11128 41 juji 주지 스님
-11128 41 juji 주지 스님
-11128 41 juji 주지 스님
-11126 41 sa ojung 사 오정 사오정
-11126 41 sa ojung 사 오정 사오정
-11126 41 sa ojung 사 오정 사오정
-11127 41 ju palge 저 팔계 저팔계
-11127 41 ju palge 저 팔계 저팔계
-11127 41 ju palge 저 팔계 저팔계
 15183 42 queen sharon
 15183 42 queen sharon
 15183 42 queen sharon
@@ -510,31 +498,14 @@
 9525 42 gaiot ruler najang
 9525 42 gaiot ruler najang
 9525 42 gaiot ruler najang
-23322 42 stone giant 바위 거인
-23322 42 stone giant 바위 거인
-23322 42 stone giant 바위 거인
-23323 43 iron golem 아이런 고렘
-23323 43 iron golem 아이런 고렘
-23323 43 iron golem 아이런 고렘
-23326 43 first general baron 대장 바론
-23326 43 first general baron 대장 바론
-23326 43 first general baron 대장 바론
-23327 43 second general zudra 대장 쥬드라
-23327 43 second general zudra 대장 쥬드라
-23327 43 second general zudra 대장 쥬드라
-23328 43 third general olangenu 대장 오란게누
-23328 43 third general olangenu 대장 오란게누
-23328 43 third general olangenu 대장 오란게누
-18000 43 chief JangSamBong
-18000 43 chief JangSamBong
-18000 43 chief JangSamBong
-18000 43 chief JangSamBong
-18000 43 chief JangSamBong
-18000 43 chief JangSamBong
-11101 43 son ogong 손 오공 손오공
-11101 43 son ogong 손 오공 손오공
-11101 43 son ogong 손 오공 손오공
-11111 43 samjang bubsa 삼장 법사
-11111 43 samjang bubsa 삼장 법사
-11111 43 samjang bubsa 삼장 법사
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
+12700 43 chief JangSamBong
 $

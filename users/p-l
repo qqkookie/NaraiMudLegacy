@@ -1,0 +1,179 @@
+Imple    :: W 44 HP: 100000  MA: 40000 MV 10000 / HD: 01d07  AC:  120 DR:  -4
+        REMO:  C     1000 M GOLD  SEX: M  GUILD: None  LOG: Mon Dec 29 05:33
+
+Yerin    :: W 44 HP:  1343  MA:  1029 MV  1160 / HD: 00d04  AC:  -10 DR:  11
+        REMO:    W      1 M GOLD  SEX: M  GUILD: None  LOG: Tue Dec 23 02:19
+
+Amar     :: M 44 HP: 50000  MA: 100000 MV 100000 / HD: 00d00  AC:   44 DR:   0
+        REMO: M         0 M GOLD  SEX: M  GUILD: None  LOG: Fri Dec 26 08:37
+
+Dyaus    :: C 41 HP:   118  MA:   113 MV    81 / HD: 00d00  AC:    0 DR:   1
+        REMO:    W   2000 M GOLD  SEX: M  GUILD: None  LOG: Fri Nov 28 07:31
+
+Tido     :: C 40 HP: 84092  MA: 32418 MV 27707 / HD: 36d50  AC: -156 DR:  90
+        REMO: MCTW   1145 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 14 16:52
+
+Scarab   :: W 40 HP: 28961  MA: 15458 MV 15648 / HD: 16d17  AC: -133 DR:  71
+        REMO: MCTW      0 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 28 21:30
+
+Master   :: M 40 HP: 13032  MA: 11544 MV 10599 / HD: 06d14  AC:  -44 DR:  40
+        REMO: MCTW    467 M GOLD  SEX: M  GUILD: None  LOG: Fri Nov 21 20:52
+
+Peda     :: W 40 HP: 25010  MA: 15367 MV 15658 / HD: 30d24  AC:  -88 DR:  42
+        REMO: MCTW     33 M GOLD  SEX: M  GUILD: Police  LOG: Sun Dec 28 21:33
+
+BADA     :: W 40 HP: 61419  MA: 16838 MV 13977 / HD: 37d34  AC: -114 DR:  60
+        REMO: MCTW    614 M GOLD  SEX: M  GUILD: Police  LOG: Wed Dec 24 15:26
+
+Nix      :: C 40 HP: 101061  MA: 21845 MV 15328 / HD: 46d50  AC: -606 DR: 347
+        REMO: MCTW   3423 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 28 23:57
+
+XENIA    :: M 40 HP: 13156  MA: 12908 MV 12237 / HD: 00d00  AC:  -11 DR:  40
+        REMO: M       156 M GOLD  SEX: F  GUILD: None  LOG: Tue Nov 25 00:44
+
+Belle    :: T 40 HP: 10964  MA: 11733 MV 11879 / HD: 11d15  AC: -128 DR:  42
+        REMO:   TW    938 M GOLD  SEX: M  GUILD: None  LOG: Mon Dec 29 01:00
+
+JINNY    :: W 40 HP: 45057  MA: 15060 MV 15049 / HD: 39d50  AC: -202 DR: 114
+        REMO: MCTW    661 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 28 20:56
+
+Strader  :: W 40 HP: 61763  MA: 20028 MV 15079 / HD: 41d50  AC: -140 DR:  92
+        REMO: MCTW     82 M GOLD  SEX: M  GUILD: None  LOG: Mon Dec 29 01:25
+
+Clotho   :: C 29 HP:  5875  MA:  6560 MV  5573 / HD: 14d15  AC:  -28 DR:  29
+        REMO: MC W    125 M GOLD  SEX: F  GUILD: Police  LOG: Wed Dec 10 22:59
+
+COCACOLA :: W 40 HP: 74810  MA: 19959 MV 19452 / HD: 50d50  AC: -458 DR: 142
+        REMO: MCTW   1465 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 21 23:00
+
+ZABBIRD  :: M 23 HP:  3887  MA:  4154 MV  3794 / HD: 10d15  AC: -122 DR:  73
+        REMO: MC W     73 M GOLD  SEX: M  GUILD: Police  LOG: Wed Oct 29 23:03
+
+Raw      :: W 40 HP: 31119  MA: 11594 MV 11592 / HD: 17d19  AC:  -42 DR:  41
+        REMO: MCTW    709 M GOLD  SEX: M  GUILD: None  LOG: Fri Dec 26 01:28
+
+HwangSo  :: W 40 HP: 62980  MA: 20010 MV 19516 / HD: 31d50  AC: -106 DR:  75
+        REMO: MCTW    716 M GOLD  SEX: M  GUILD: None  LOG: Mon Dec 22 20:43
+
+White    :: C 19 HP:  2788  MA:  3177 MV  2828 / HD: 15d15  AC:  -18 DR:  19
+        REMO:  C W     56 M GOLD  SEX: M  GUILD: None  LOG: Thu Nov 27 16:26
+
+Waf      :: C 40 HP: 15000  MA: 11257 MV 10804 / HD: 35d47  AC:  594 DR: 194
+        REMO: MCTW    704 M GOLD  SEX: M  GUILD: Police  LOG: Sat Nov 22 00:30
+
+Jeong    :: M 33 HP:  7916  MA:  7595 MV  6954 / HD: 15d15  AC:   37 DR:  44
+        REMO: MC W    200 M GOLD  SEX: M  GUILD: None  LOG: Thu Dec 11 14:29
+
+         :: W 40 HP: 76812  MA: 20050 MV 20121 / HD: 34d50  AC: -337 DR: 125
+        REMO: MCTW    905 M GOLD  SEX: M  GUILD: None  LOG: Sat Nov 29 12:08
+
+OTTO     :: W 40 HP: 59291  MA: 20514 MV 18182 / HD: 40d50  AC:  -75 DR:  45
+        REMO: MCTW    486 M GOLD  SEX: M  GUILD: Police  LOG: Sat Dec 27 15:54
+
+Nofiw    :: W 40 HP: 47370  MA: 40371 MV 29804 / HD: 33d50  AC:  -58 DR:  44
+        REMO: MCTW    179 M GOLD  SEX: F  GUILD: None  LOG: Sun Dec 28 06:19
+
+Yendor   :: M 40 HP: 17892  MA: 12064 MV 11418 / HD: 08d15  AC:  -39 DR:  40
+        REMO: MCTW      2 M GOLD  SEX: M  GUILD: Assasin  LOG: Thu Dec 25 03:59
+
+Riot     :: M 40 HP: 64533  MA: 20428 MV 11557 / HD: 15d15  AC: -121 DR:  51
+        REMO: MCTW   1583 M GOLD  SEX: M  GUILD: None  LOG: Fri Nov 28 18:55
+
+Maestro  :: M 44 HP: 100000000  MA: 100000000 MV 100000000 / HD: 100d100  AC: -6160252 DR: 1000
+        REMO: M      1011 M GOLD  SEX: M  GUILD: Police  LOG: Sun Dec 28 18:30
+
+Papa     :: M 41 HP: 200000  MA: 200000 MV 200000 / HD: 40d40  AC:    0 DR:   1
+        REMO:    W      0 M GOLD  SEX: M  GUILD: None  LOG: Sat Dec 20 17:13
+
+Partake  :: M 21 HP:  3426  MA:  3417 MV  2881 / HD: 14d15  AC:  -22 DR:  21
+        REMO: M  W     25 M GOLD  SEX: M  GUILD: Police  LOG: Tue Dec 23 15:52
+
+Aix      :: W 40 HP: 39857  MA: 13534 MV 13047 / HD: 22d50  AC:  -85 DR:  56
+        REMO: MCTW   1209 M GOLD  SEX: F  GUILD: Outlaw  LOG: Fri Dec 26 13:03
+
+Minm     :: W 40 HP: 25201  MA: 10371 MV 11106 / HD: 23d32  AC:  -45 DR:  44
+        REMO: MCTW    312 M GOLD  SEX: M  GUILD: Police  LOG: Fri Dec 26 17:43
+
+Tomas    :: W 40 HP: 11272  MA: 10957 MV 11694 / HD: 14d15  AC:  -39 DR:  40
+        REMO: MCTW     59 M GOLD  SEX: M  GUILD: Police  LOG: Fri Nov 14 22:22
+
+Dos      :: M 40 HP: 32121  MA: 12694 MV 11765 / HD: 19d42  AC:  -40 DR:  46
+        REMO: MCTW    584 M GOLD  SEX: M  GUILD: Outlaw  LOG: Sat Dec 27 19:08
+
+Ops      :: W 40 HP: 22084  MA: 11749 MV 11478 / HD: 26d40  AC:  -59 DR:  46
+        REMO: MCTW    400 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 28 04:18
+
+Aeris    :: C 40 HP: 11476  MA: 11197 MV 10654 / HD: 15d15  AC:  -39 DR:  40
+        REMO:  C W     85 M GOLD  SEX: F  GUILD: None  LOG: Thu Nov 20 08:26
+
+Ljw      :: C 32 HP:  7619  MA:  8133 MV  7518 / HD: 14d15  AC:  -31 DR:  32
+        REMO: MCT     238 M GOLD  SEX: M  GUILD: None  LOG: Fri Dec 26 15:10
+
+UNKNOWN  :: M 40 HP: 45789  MA: 13668 MV 10622 / HD: 13d20  AC:  -76 DR:  59
+        REMO: MCTW    427 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 28 15:03
+
+Highsense :: W 41 HP:    89  MA: 1000000 MV    88 / HD: 00d00  AC:    0 DR:   1
+        REMO:    W     15 M GOLD  SEX: M  GUILD: None  LOG: Fri Dec 19 23:33
+
+Rook     :: C 40 HP: 50093  MA: 23807 MV 11414 / HD: 14d19  AC:  -72 DR:  47
+        REMO: MCTW    116 M GOLD  SEX: F  GUILD: Police  LOG: Tue Dec 23 04:08
+
+Root     :: T 40 HP: 14026  MA: 12925 MV 11300 / HD: 15d15  AC:  -39 DR:  40
+        REMO: MCTW      3 M GOLD  SEX: M  GUILD: None  LOG: Tue Dec  9 13:11
+
+SPEED    :: W 40 HP: 16702  MA: 12644 MV 10148 / HD: 22d39  AC:  -39 DR:  40
+        REMO: MCTW     30 M GOLD  SEX: F  GUILD: None  LOG: Sun Dec 28 15:07
+
+Minn     :: T 11 HP:  1301  MA:  1149 MV  1048 / HD: 15d15  AC:  -10 DR:  11
+        REMO: MCTW    154 M GOLD  SEX: M  GUILD: Police  LOG: Mon Dec  8 13:58
+
+Yuria    :: M 40 HP: 79794  MA: 23063 MV 29693 / HD: 07d28  AC: -170 DR: 391
+        REMO: MCTW   2026 M GOLD  SEX: F  GUILD: None  LOG: Sun Dec 28 20:21
+
+Ray      :: C 40 HP: 10923  MA:  8925 MV 10547 / HD: 14d31  AC:  -79 DR:  86
+        REMO:  C W    327 M GOLD  SEX: M  GUILD: Outlaw  LOG: Mon Dec 15 11:24
+
+Hyper    :: C 40 HP: 65700  MA: 30008 MV 27867 / HD: 14d15  AC: -163 DR:  47
+        REMO: MCTW    252 M GOLD  SEX: M  GUILD: None  LOG: Mon Dec 29 00:37
+
+Not      :: C 40 HP:  6176  MA: 11055 MV 10517 / HD: 00d00  AC:  -39 DR:  40
+        REMO:  C        0 M GOLD  SEX: F  GUILD: None  LOG: Mon Dec 22 21:21
+
+Baduki   :: C 40 HP: 15650  MA: 15041 MV 11943 / HD: 00d00  AC:  -39 DR:  40
+        REMO:  C     2257 M GOLD  SEX: F  GUILD: Outlaw  LOG: Sun Dec 28 18:07
+
+Zack     :: C 27 HP:  5178  MA:  5623 MV  5073 / HD: 15d15  AC:  -26 DR:  27
+        REMO:  C W      9 M GOLD  SEX: M  GUILD: None  LOG: Wed Dec 24 13:43
+
+Badacy   :: M 40 HP: 28568  MA: 19062 MV 11185 / HD: 15d15  AC:  -39 DR:  43
+        REMO: MCTW    389 M GOLD  SEX: F  GUILD: Police  LOG: Sat Dec 27 19:25
+
+Hans     :: W 40 HP: 39285  MA: 11195 MV 11160 / HD: 33d37  AC:  -43 DR:  45
+        REMO: MCTW   1058 M GOLD  SEX: M  GUILD: None  LOG: Mon Dec 29 06:15
+
+ORANGE   :: M 44 HP:   100  MA: 30000 MV  1000 / HD: 100d100  AC:  -10 DR: 2998
+        REMO: MCTW    532 M GOLD  SEX: F  GUILD: Police  LOG: Sun Dec 28 19:44
+
+HEART    :: M 29 HP:  6075  MA:  6236 MV  5721 / HD: 10d15  AC:  -28 DR:  29
+        REMO: M  W     20 M GOLD  SEX: M  GUILD: Outlaw  LOG: Sun Dec 28 05:38
+
+Raina    :: T 15 HP:  1840  MA:  1928 MV  1590 / HD: 07d13  AC:  -14 DR:  15
+        REMO:   TW    314 M GOLD  SEX: F  GUILD: None  LOG: Sat Dec 27 14:20
+
+Khan     :: C 40 HP: 84898  MA: 20050 MV 20121 / HD: 40d50  AC: -337 DR: 125
+        REMO: MCTW   1210 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 28 23:48
+
+Chan     :: T 41 HP:    43  MA:    39 MV   120 / HD: 00d00  AC:    0 DR:   1
+        REMO:   T       0 M GOLD  SEX: M  GUILD: None  LOG: Sun Dec 28 04:27
+
+Bozo     :: C 29 HP:  6111  MA:  5933 MV  5568 / HD: 15d15  AC:  -30 DR:  29
+        REMO:  C W    114 M GOLD  SEX: F  GUILD: Assasin  LOG: Sun Dec 28 19:05
+
+    Total player : 	240
+    Wizard :		  9
+    Dangun :		 37
+    Remoed non-dangun :	 11
+    All remo dangun :	 31     (out of  48 remoed players)
+
+Remo player GUILD::   None: 36,   Police: 14,   Outlaw: 5,   Assasin: 2
+

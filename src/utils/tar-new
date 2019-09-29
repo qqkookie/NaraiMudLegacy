@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# backup only recently changed files from last backup
+# excluding files matched to $EXECLUDE pattern 
+
+TARF=nar.tar
+
+cd $HOME
+
+EXCLUDE=" 
+-e ^narai/obj/
+-e ^narai/bin/
+-e ^narai/users/
+-e ^narai/OLD/
+-e ^narai/cookie/
+-e ^narai/lib/pid
+-e /core$
+-e /tags$
+-e \.o$
+-e \.swp$
+-e \.bak$
+-e \.org$
+-e \.orig$
+" 
+# find narai -type f -print | egrep -v $EXCULDE
+
+LIST=`find narai -type f -newer $TARF.gz -print | egrep -v $EXCLUDE `
+# tar -cvf test.tar $LIST &&  date >> nar-tar.log 
+mv -f $TARF.gz $TARF.old.gz
+tar -cvf $TARF $LIST &&  date >> nar-tar.log 
+gzip $TARF 

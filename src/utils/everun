@@ -1,0 +1,101 @@
+#!/bin/sh
+#	Run MUD forever.
+#
+#	everun  is converted from csh script to sh script 
+#	by Cookie on Sun Sep 14 01:50:36 KST 1997
+
+PATH=/bin:/usr/bin/:/usr/local/bin:
+trap "" 1 2 3 13 14 
+
+MUDHOME=/home/grad/game/narai 
+export MUDHOME
+mudhome=$MUDHOME
+prog=bin/mud.run
+
+# All logs, player files and stash files are saved in usrdir 
+usrdir=$mudhome/users
+
+logname=run-log 
+stash=$usrdir/stash 
+
+cd $mudhome || exit 1
+
+counter=1
+export counter
+while expr $counter "<=" 100 > /dev/null
+do 
+    (	#  from here, all output goes to log file 
+	echo "=========    BEGIN   === Start of LOG ===  Run No." $counter
+	date
+	cd $usrdir 
+
+	echo "=====    Backup stash files" 
+	/bin/mv -f $usrdir/stash.tar $usrdir/stash.tar.back
+	tar -cf $usrdir/stash.tar stash/*
+	
+	echo ""
+	cd $mudhome
+	if [ -r RUNME ] ; then
+		echo "=====    Excute RUNME before reboot.... "
+		/bin/sh RUNME
+		/bin/mv -f RUNME RUNME.DONE
+		echo "=====    RUNME Done. renamed to RUNME.DONE.... "
+		echo ""
+	fi
+	echo '************* NARAI-MUD REBOOT -- Run No.' $counter '*********'
+	echo ""
+#----------------------------------------
+	sleep 100
+	gdb $prog $* << RUN_INPUT 
+
+handle SIGHUP nostop print pass
+handle SIGINT nostop print pass
+handle SIGPIPE nostop print pass
+handle SIGALRM nostop print pass
+handle SIGTERM nostop print pass
+handle SIGUSR2 nostop print pass
+handle SIGVTALRM nostop print pass
+directory $mudhome/src
+run
+bt 
+quit
+y
+RUN_INPUT
+#----------------------------------------
+
+	echo "" 
+	echo '************* Narai MUD Died!!!  Run No.' $counter '*********'
+		
+	date 
+	echo ""
+	cd $usrdir 
+	echo "=====    Restore missing stash files"
+	# Restore vanished stash files -k : keep existing file
+	tar -xkf $usrdir/stash.tar > /dev/null 2>&1
+
+	echo "=====    Backup players file"
+	/bin/mv -f players.5 players.6
+	/bin/mv -f players.4 players.5
+	/bin/mv -f players.3 players.4
+	/bin/mv -f players.2 players.3
+	/bin/mv -f players.1 players.2
+	/bin/cp -p   players players.1 
+
+	echo "=====    Moving log files" 
+	/bin/mv -f $usrdir/$logname.5 $usrdir/$logname.6 
+	/bin/mv -f $usrdir/$logname.4 $usrdir/$logname.5 
+	/bin/mv -f $usrdir/$logname.3 $usrdir/$logname.4 
+	/bin/mv -f $usrdir/$logname.2 $usrdir/$logname.3 
+	/bin/mv -f $usrdir/$logname.1 $usrdir/$logname.2 
+    ) >> $usrdir/$logname 2>&1
+	/bin/mv -f $usrdir/$logname   $usrdir/$logname.1 
+
+	date >> $usrdir/$logname.1 
+	echo "=====    DONE.    ====    End of LOG   ====  Run No." $counter >>$usrdir/$logname.1
+
+	/bin/tail -100 $usrdir/$logname.1 >> $usrdir/CRASH-LOG
+	#  Sleep 400 sec before next run to wait port being freed.  
+	sleep 300
+	counter="`expr $counter + 1 `"
+
+done 
