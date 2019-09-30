@@ -184,8 +184,8 @@ int use_mana(struct char_data *ch, int sn)
 
 void say_spell(struct char_data *ch, int si)
 {
-    char buf[MAX_STRING_LENGTH], splwd[240];
-    char buf2[MAX_STRING_LENGTH];
+    char buf[MAX_LINE_LEN], splwd[MAX_LINE_LEN];
+    char buf2[MAX_OUT_LEN];
 
     int j, offs;
     struct char_data *temp_char;

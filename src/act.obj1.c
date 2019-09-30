@@ -85,9 +85,9 @@ int can_not_get_item(struct char_data *ch, struct obj_data *obj )
 
 void do_get(struct char_data *ch, char *argument, int cmd)
 {
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
-    char buffer[MAX_BUFSIZ];
+    char arg1[MAX_LINE_LEN];
+    char arg2[MAX_LINE_LEN];
+    char buffer[MAX_OUT_LEN];
     struct obj_data *sub_object;
     struct obj_data *obj_object;
     struct obj_data *next_obj;
@@ -193,8 +193,8 @@ void do_get(struct char_data *ch, char *argument, int cmd)
 
 void do_drop(struct char_data *ch, char *argument, int cmd)
 {
-    char arg[MAX_INPUT_LENGTH];
-    int amount;
+    char arg[MAX_LINE_LEN];
+    LONGLONG amount;
     char buffer[MAX_BUFSIZ];
     struct obj_data *tmp_object;
     struct obj_data *next_obj;
@@ -209,7 +209,7 @@ void do_drop(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     if (is_number(arg)) {
-	amount = atoi(arg);
+	amount = atoll(arg);
 	argument = one_argument(argument, arg);
 	if (str_cmp("coins", arg) && str_cmp("coin", arg)) {
 	    send_to_char("Sorry, you can't do that (yet)...\n\r", ch);
@@ -313,9 +313,9 @@ int perform_put(struct char_data *ch, struct obj_data *obj_object,
 
 void do_put(struct char_data *ch, char *argument, int cmd)
 {
-    char buffer[MAX_BUFSIZ];
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
+    char buffer[MAX_OUT_LEN];
+    char arg1[MAX_LINE_LEN];
+    char arg2[MAX_LINE_LEN];
     struct obj_data *obj_object;
     struct obj_data *sub_object;
     struct obj_data *next_object;
@@ -427,8 +427,8 @@ void give_gold(struct char_data *ch, struct char_data *vict, int amount )
 
 void do_give(struct char_data *ch, char *argument, int cmd)
 {
-    char obj_name[MAX_INPUT_LENGTH], vict_name[MAX_INPUT_LENGTH];
-    char arg[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
+    char obj_name[MAX_LINE_LEN], vict_name[MAX_LINE_LEN];
+    char arg[MAX_LINE_LEN], buf[MAX_BUFSIZ];
     int amount;
     struct char_data *vict;
     struct obj_data *obj;
@@ -1070,9 +1070,9 @@ int where_wear(struct obj_data *obj_object)
 
 void do_wear(struct char_data *ch, char *argument, int cmd)
 {
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
-    char buf[MAX_BUFSIZ];
+    char arg1[MAX_LINE_LEN];
+    char arg2[MAX_LINE_LEN];
+    char buf[MAX_OUT_LEN];
     struct obj_data *obj_object, *next_object;
     int keyword;
     static char *keywords[] =
@@ -1153,9 +1153,9 @@ void do_wear(struct char_data *ch, char *argument, int cmd)
 	'wield' with no argument will unwield item you are wielding.	*/
 void do_wield(struct char_data *ch, char *argument, int cmd)
 {
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
-    char buffer[MAX_BUFSIZ];
+    char arg1[MAX_LINE_LEN];
+    char arg2[MAX_LINE_LEN];
+    char buffer[MAX_OUT_LEN];
     struct obj_data *obj_object;
     int keyword = 12;
 
@@ -1189,9 +1189,9 @@ void do_wield(struct char_data *ch, char *argument, int cmd)
 	'hold' with no argument will unhold item you are holding.	*/
 void do_grab(struct char_data *ch, char *argument, int cmd)
 {
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
-    char buffer[MAX_BUFSIZ];
+    char arg1[MAX_LINE_LEN];
+    char arg2[MAX_LINE_LEN];
+    char buffer[MAX_OUT_LEN];
     struct obj_data *obj_object;
     extern struct obj_data *get_obj_in_list(char *name, struct obj_data *list); 
 
@@ -1234,7 +1234,7 @@ void check_light_off(struct obj_data *obj_object, sh_int room)
 
 void do_remove(struct char_data *ch, char *argument, int cmd)
 {
-    char arg1[MAX_INPUT_LENGTH];
+    char arg1[MAX_LINE_LEN];
     struct obj_data *obj_object;
     int i, j;
     extern struct obj_data *get_object_in_equip_vis(struct char_data *ch,

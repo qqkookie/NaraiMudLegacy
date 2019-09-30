@@ -82,7 +82,7 @@ depend	:
 	ctags $(SRCS) ../include/*.h 
 
 $(PROG) : $(OBJS) 
-	$(LD) $(LFLAGS) -o $@ $^ $(LFLAGS)
+	$(LD) -o $@ $^ $(LFLAGS)
 
 utils : $(UPROGS) 
 	- /bin/cp -p $(SCRIPTS) $(BIN)

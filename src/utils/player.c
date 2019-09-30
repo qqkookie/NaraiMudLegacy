@@ -4,6 +4,7 @@
  ************************************************************************ */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <ctype.h>
 #include <time.h>
@@ -19,6 +20,8 @@
 #define CHUCK ( sizeof( struct char_file_u ))
 
 #define LOWER(c) (((c)>='A'  && (c) <= 'Z') ? ((c)+('a'-'A')) : (c))
+
+#pragma GCC diagnostic ignored "-Wunused-result"
 
 void open_files(int new); 
 void show_PC( struct char_file_u *pst );

@@ -24,20 +24,13 @@
 #include <arpa/telnet.h>
 #include <netdb.h>
 #include <fcntl.h>
-#include <sys/ioctl.h>
-#include <termio.h>
 
-
-/* 
-#include <sys/types.h> 
-#ifndef HAVE_TERMIOS_H
+#ifdef DONT_HAVE_TERMIOS
 #include <termio.h>
 #include <sys/ioctl.h>
 #else
 #include <termios.h>
-#endif 
-#include <sys/wait.h>
-*/ 
+#endif
 
 #include "char.h"
 #include "object.h"
@@ -384,11 +377,12 @@ void game_loop(int s)
 	}
 	for (point = descriptor_list; point; point = point->next) {
 	    xo = point;
-	    if (FD_ISSET(point->descriptor, &output_set) && point->output.head)
+	    if (FD_ISSET(point->descriptor, &output_set) && point->output.head) {
 		if (process_output(point) < 0)
 		    freaky(point);
 		else
 		    point->prompt_mode = 1;
+	    }
 	}
 	/* give the people some prompts */
 	for (point = descriptor_list; point; point = next_point) { 
@@ -407,7 +401,7 @@ void game_loop(int s)
 	    if (point->prompt_mode) {
 		if (point->str)
 		    write_to_descriptor(point->descriptor, "] ");
-		else if (!point->connected)
+		else if (!point->connected) {
 		    if (point->showstr_point)
 			write_to_descriptor(point->descriptor, "*** Press return ***");
 		    else { 
@@ -442,6 +436,7 @@ void game_loop(int s)
 	   } 
  */
 		    }
+		}
 		point->prompt_mode = 0;
 	    }
 	}
@@ -468,10 +463,10 @@ void heart_beat(void)
     extern void affect_update(void);	/* In handler.c */
     extern void point_update(void);	/* In point.c */ 
     extern void	House_save_all(void);
-    static pulse = 0;
+    static int pulse = 0;
     struct descriptor_data *point;
 
-    pulse = ++pulse % 2400 ;
+    pulse = (pulse+1) % 2400 ;
 
     if (!(pulse % PULSE_ZONE)) {
 	zone_update();
@@ -854,8 +849,8 @@ int new_connection(int s)
     void nonblock(int s);
 
     /* struct sockaddr peer; */
-    int i;
     int t;
+    socklen_t  i;
 
     i = sizeof(isa);
     getsockname(s, (struct sockaddr *) &isa, &i);
@@ -871,7 +866,8 @@ int new_descriptor(int s)
 {
     int desc;
     struct descriptor_data *newd;
-    int i, size;
+    int i;
+    socklen_t size;
     struct sockaddr_in sock;
     struct hostent  *h_ent; 
 
@@ -1001,10 +997,11 @@ void freaky(struct descriptor_data *d)
 		d->name, d->descriptor, d->connected); 
 	log(buf); 
     }
-    if (d->character)
-	return_original(d->character);
-    
+
     if(d->character) {
+
+	return_original(d->character);
+
 	if( d->connected == CON_PLYNG ) {
 	    save_char(d->character);
 	    stash_char(d->character);
@@ -1041,23 +1038,21 @@ void close_socket(struct descriptor_data *d)
     } 
 
     /* NOTE: d->character is not freed here, but freaky() */ 
-    if ( d->character ) {
-	if ( d->character->desc ) {
-	    act("$n was kicked out of here and lost $s link. ",
-		TRUE, d->character, 0, 0, TO_ROOM);
-	    sprintf(buf, "Losing player: %s.", GET_NAME(d->character));
-	    d->character->desc = 0;
-	}
-	else {
-	    act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM);
+    if ( d->character ) { 
+	if (d->connected == CON_PLYNG)
+	{ 
+	    act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM); 
 	    sprintf(buf, "Closing link to: %s.", GET_NAME(d->character));
 	}
-	d->character = 0;
+	else 
+	    sprintf(buf, "Losing player: %s.", GET_NAME(d->character));
+
+	d->character->desc = NULL; 
     }
-    else if (d->name[0]) 
-	    sprintf(buf, "Close connection to: %s.", d->name); 
-    else
-	strcpy(buf, "Losing descriptor without name.");
+    else if (*d->name)
+	sprintf(buf, "Losing descriptor and close connection to: %s.", d->name); 
+    else 	
+	strcpy(buf, "Losing descriptor without char.");
 
     log(buf);
 
@@ -1076,7 +1071,8 @@ void close_socket(struct descriptor_data *d)
     /* NOTE: free() half-done string */
     if (d->str && *(d->str)) {
 	free(*(d->str));
-	*(d->str) = 0;
+	free(d->str);
+	d->str = 0;
     }
     
     if (d->showstr_head) {
@@ -1153,7 +1149,6 @@ int unfriendly_domain(char *h)
 void record_player_number()
 {
     char line[MAX_STRING_LENGTH]; 
-    time_t t;
     static int lasttics = 0; 
     char *tmstr;
     extern int list_users(struct char_data *ch, char *line );
@@ -1164,7 +1159,7 @@ void record_player_number()
     lasttics = tics ; 
 
     /* NOTE: Log current day and time.	*/
-    t = time(0);
+    time_t t = time(0);
     tmstr = asctime(localtime(&t));
     tmstr[16] = '\0';
     sprintf(line, "=======  Current Time is %s.  =======\n", tmstr);
@@ -1175,8 +1170,8 @@ void record_player_number()
     /* NOTE: Meaningless..
     sprintf(line,"from korea: %d from abroad %d", in_d, out_d ); log(line);
     */
-    t = 30 + time(0) - boottime;
-    sprintf(line, "Running time  %2ld:%02ld", t / 3600, (t % 3600) / 60);
+    int rt  = 30 + time(0) - boottime;
+    sprintf(line, "Running time  %2d:%02d", rt / 3600, (rt % 3600) / 60);
     log(line);
     /* NOTE: For statistics only */
     sprintf(line, "Txt block: ring: %d,  malloc: %d. Hit ratio: %d%%",
@@ -1184,6 +1179,57 @@ void record_player_number()
     log(line); 
 }
 
+/*
+#if defined(__CYGWIN32__) && !defined(sigmask)
+#include <signal.h>
+static _Sigprocmask( int how, int mask )
+{
+    sigset_t newset=mask, oldset; 
+    int ccode = sigprocmask( how, &newset, &oldset );
+    return ( ccode < 0 )? ccode : oldset; 
+}
+
+#define sigmask(sig)   ( 1UL << ( (sig) % ( 8*sizeof(sigset_t) )))
+#define sigblock(mask)    _Sigprocmask( SIG_BLOCK,   (mask) )
+#define sigsetmask(mask)  _Sigprocmask( SIG_SETMASK, (mask) )
+
+#endif
+*/
+
+#undef siginterrupt
+
+int siginterrupt(int sig, int flag)
+{
+    sigset_t __sigintr;
+    struct sigaction sa;
+
+    sigaction(sig, NULL, &sa); 
+    sigemptyset(& __sigintr);
+    if (flag) {
+        sigaddset(&__sigintr, sig);
+        sa.sa_flags &= ~SA_RESTART;
+    } else {
+        sigdelset(&__sigintr, sig);
+        sa.sa_flags |= SA_RESTART;
+    }
+    return (sigaction(sig, &sa, NULL));
+}
+
+int sigsetmask(unsigned mask) 
+{
+    sigset_t set;
+
+    if ( mask ) {
+	sigprocmask(SIG_SETMASK, NULL, &set);
+	for (int sig = 1; mask ; sig++, mask >>=1)
+	    if ( mask & 0x01 )
+		sigaddset(&set, sig);
+    }
+    else
+	sigemptyset(&set);
+
+    return sigprocmask(SIG_SETMASK, &set, NULL);
+}
 
 void signal_setup(void)
 {
@@ -1195,14 +1241,14 @@ void signal_setup(void)
     void shutdown_request(int sig);
     void checkpointing(int sig);
 
-    // siginterrupt(SIGHUP, 1);
+    siginterrupt(SIGHUP, 1);
     signal(SIGHUP, hupsig);
-    // siginterrupt(SIGINT, 1);
+    siginterrupt(SIGINT, 1);
     signal(SIGINT, hupsig);
     /* NOTE: catch SIGSEGV, SIGBUS. Report place and time of error */
-    // siginterrupt(SIGSEGV, 1);
+    siginterrupt(SIGSEGV, 1);
     signal(SIGSEGV, hupsig);
-    // siginterrupt(SIGBUS, 1);
+    siginterrupt(SIGBUS, 1);
     signal(SIGBUS, hupsig);
     signal(SIGPIPE, SIG_IGN);
     signal(SIGALRM, logsig);
@@ -1238,8 +1284,8 @@ void checkpointing(int sig)
 	    if ( ch == t ) {
 		char buf[MAX_BUFSIZ];
 		log("FATAL: Loop in charter list!!");
-		sprintf(buf, " Char %x (%d-th and %d-th) %s ", 
-			(unsigned) ch, i, j, GET_NAME(ch)); 
+		sprintf(buf, " Char %p (%d-th and %d-th) %s ", 
+			ch, i, j, GET_NAME(ch)); 
 	    } 
 }
 
@@ -1322,7 +1368,7 @@ int WAIT_STATE(struct char_data *ch, int cycle)
 (This head in comments is part of the code, and can't be removed !!!)
 **********************************************************************/
 
-#ifndef HAVE_TERMIOS_H
+#ifdef DONT_HAVE_TERMIOS_H
 
 void echo_local(int fd)
 {
@@ -1352,20 +1398,20 @@ void echo_local(int fd)
 {
     struct termios io;
 
-    ioctl(fd, TIOCGETA, &io);
+    tcgetattr(fd, &io);
     io.c_lflag |= ECHO;
-    ioctl(fd, TIOCSETA, &io);
+    tcsetattr(fd, TCSANOW, &io);
 }
 
 void no_echo_local(int fd)
 {
     struct termios io;
 
-    ioctl(fd, TIOCGETA, &io);
+    tcgetattr(fd, &io);
     io.c_cc[VMIN] = 1;
     io.c_cc[VTIME] = 0;
     io.c_lflag &= ~ECHO;
-    ioctl(fd, TIOCSETA, &io);
+    tcsetattr(fd, TCSANOW, &io);
 }
 
 #endif 		/* HAVE_TERMIOS_H */

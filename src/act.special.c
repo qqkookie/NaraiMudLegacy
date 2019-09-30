@@ -42,11 +42,12 @@ void do_group(struct char_data *ch, char *argument, int cmd)
 	    else
 		k = ch;
 
-	    if (k && IS_AFFECTED(k, AFF_GROUP))
+	    if (k && IS_AFFECTED(k, AFF_GROUP)) {
 		sprintf(buf, "  [ %5d/%5d %5d/%5d %5d/%5d ]   $N (Head of group)",
 			GET_HIT(k), GET_PLAYER_MAX_HIT(k), GET_MANA(k),
 		GET_PLAYER_MAX_MANA(k), GET_MOVE(k), GET_PLAYER_MAX_MOVE(k));
-	    act(buf, FALSE, ch, 0, k, TO_CHAR);
+		act(buf, FALSE, ch, 0, k, TO_CHAR);
+	    }
 
 	    for (f = k->followers; f; f = f->next)
 		if (f->follower && IS_AFFECTED(f->follower, AFF_GROUP)) {
@@ -309,8 +310,8 @@ void stop_follower(struct char_data *ch)
     /* NOTE: This is for DEBUGGING */
     if (!ch->master->followers || !ch->master->followers->follower ) {
 	char buf[MAX_BUFSIZ];
-	sprintf(buf, "DEBUG: stop_follower(): ch = %s ma = %s followers = %x",
-	    GET_NAME(ch), GET_NAME(ch->master), (unsigned) ch->master->followers);
+	sprintf(buf, "DEBUG: stop_follower(): ch = %s ma = %s followers = %p",
+	    GET_NAME(ch), GET_NAME(ch->master), ch->master->followers);
 	return;
     }
     /* NOTE: DEBUG: my master has no follower?   */
@@ -384,8 +385,8 @@ void add_follower(struct char_data *ch, struct char_data *leader)
 
 void do_order(struct char_data *ch, char *argument, int cmd)
 {
-    char name[100], message[256];
-    char buf[256];
+    char name[100], message[MAX_LINE_LEN];
+    char buf[MAX_OUT_LEN];
     bool found = FALSE;
     int org_room;
     struct char_data *victim;

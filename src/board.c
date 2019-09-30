@@ -49,8 +49,8 @@ int read_board(struct char_data *ch, struct board_data *cb, char *arg);
 void do_write(struct char_data *ch, char *argument, int cmd)
 {
     struct obj_data *paper = 0;		/* , *pen = 0; */
-    char papername[MAX_INPUT_LENGTH], penname[MAX_INPUT_LENGTH];
-    char buf[MAX_BUFSIZ]; 
+    char papername[MAX_LINE_LEN], penname[MAX_LINE_LEN];
+    char buf[MAX_OUT_LEN]; 
 
     argument_interpreter(argument, papername, penname);
 
@@ -562,7 +562,7 @@ struct mbox_data *init_a_mbox(struct char_data *ch)
     cr_mbox = (struct mbox_data *) malloc(sizeof(struct mbox_data));
 
     if (cr_mbox) {
-	bzero(cr_mbox, sizeof(cr_mbox));
+	bzero(cr_mbox, sizeof(*cr_mbox));
 	/* NOTE: when ch is NULL, init primary mbox */
 	if (ch)
 	    cr_mbox->room_num = world[ch->in_room].number;

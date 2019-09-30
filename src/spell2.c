@@ -285,6 +285,8 @@ void spell_create_food(byte level, struct char_data *ch,
     obj_to_room(tmp_obj, ch->in_room);
 
     tmp_obj->item_number = -1;
+    // Rent BUG FIX!
+    SET_BIT(tmp_obj->obj_flags.extra_flags, ITEM_NORENT);
 
     act("$p suddenly appears.", TRUE, ch, tmp_obj, 0, TO_ROOM);
     act("$p suddenly appears.", TRUE, ch, tmp_obj, 0, TO_CHAR);
@@ -737,7 +739,7 @@ void spell_enchant_weapon(byte level, struct char_data *ch,
 	}		/* by process */
     }
 
-    if ((GET_ITEM_TYPE(obj) == ITEM_WEAPON)) {
+    if (GET_ITEM_TYPE(obj) == ITEM_WEAPON) {
 	INCREASE_SKILLED2(ch, ch, SPELL_ENCHANT_WEAPON);
 	SET_BIT(obj->obj_flags.extra_flags, ITEM_NORENT);
 	if (!IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {
@@ -891,7 +893,7 @@ void spell_enchant_armor(byte level, struct char_data *ch,
 	    return;
 	}
     }
-    if ((GET_ITEM_TYPE(obj) == ITEM_ARMOR)) {
+    if (GET_ITEM_TYPE(obj) == ITEM_ARMOR) {
 	INCREASE_SKILLED2(ch, ch, SPELL_ENCHANT_ARMOR);
 	SET_BIT(obj->obj_flags.extra_flags, ITEM_NORENT);
 	if (!IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {
@@ -992,7 +994,7 @@ void spell_pray_for_armor(byte level, struct char_data *ch,
 	    return;
 	}
     }
-    if ((GET_ITEM_TYPE(obj) == ITEM_ARMOR)) {
+    if (GET_ITEM_TYPE(obj) == ITEM_ARMOR) {
 	INCREASE_SKILLED2(ch, ch, SPELL_PRAY_FOR_ARMOR);
 	SET_BIT(obj->obj_flags.extra_flags, ITEM_NORENT);
 	if (!IS_SET(obj->obj_flags.extra_flags, ITEM_MAGIC)) {

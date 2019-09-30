@@ -45,7 +45,7 @@ int puff(struct char_data *ch, int cmd, char *arg)
 int perhaps(struct char_data *ch, int cmd, char *arg)
 {
     struct char_data *vict, *next;
-    static perhaps_words_size = 0;
+    static int perhaps_words_size = 0;
     int i;
 
     /* NOTE: not change of functionality, just to make it easy to add tips */
@@ -541,9 +541,10 @@ int musashi(struct char_data *ch, int cmd, char *arg)
 
     for ( vict = ch->specials.fighting; vict; vict = next_vict) {
 	next_vict = vict->next_in_room;
-	if (vict->specials.fighting == ch) 
+	if (vict->specials.fighting == ch) {
 	    hit(ch, vict, TYPE_UNDEFINED);
 	    hit(ch, vict, TYPE_UNDEFINED);
+	}
     }
 
     vict = ch->specials.fighting; 

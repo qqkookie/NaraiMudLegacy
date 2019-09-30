@@ -436,6 +436,12 @@ void do_request(struct char_data *ch, char *arg, int cmd)
     /* request */
     if (ch->quest.type > 0) {
 
+        /*      if error occur, can do request. */
+	if (ch->quest.data == '\0' ) {
+	    ch->quest.type = 0;
+	    return;
+	}
+
 	/* All remotal player can't do request. */
 	/* NOTE: by dyaus : Not so, all remo player can do request with
 	   severe panalty . Cost: 10 quest      */

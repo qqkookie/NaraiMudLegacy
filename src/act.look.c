@@ -757,7 +757,7 @@ void do_examine(struct char_data *ch, char *argument, int cmd)
     char arg[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
     struct obj_data *object;
 
-    extern weapon_type(struct obj_data *weapon); 
+    extern int weapon_type(struct obj_data *weapon); 
     extern char *weapon_type_desc[];
 
     /* NOTE: Redundant errer msg on null arg. Check arg number first. */
@@ -848,7 +848,7 @@ void do_equipment(struct char_data *ch, char *argument, int cmd)
    };
  */
 
-static char align_msg[13][44] = {
+static char *align_msg[13] = {
     "You are a saint.\n\r",
     "You feel like being a saint.\n\r",
     "You are good.\n\r",
@@ -864,7 +864,7 @@ static char align_msg[13][44] = {
     "You are a devil.\n\r"
 };
 
-static char align_msg_han[13][44] = {
+static char *align_msg_han[13] = {
     "당신은 성인 군자십니다.\n\r",
     "당신은 성이 군자가 되어가고 있습니다.\n\r",
     "당신은 선하십니다.\n\r",
@@ -1041,7 +1041,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 
     sprintf(buf,STRHAN("You have scored  %s exp,  and have  %s gold coins.\n\r",
 	   "당신은  %s 의 경험치와  %s 원의 돈을 가지고 있습니다.\n\r", ch),
-	    monetary((long) GET_EXP(ch)), monetary((long) GET_GOLD(ch)));
+	    monetary(GET_EXP(ch)), monetary(GET_GOLD(ch)));
     send_to_char(buf, to);
 
     playing_time = real_time_passed((time(0) - ch->player.time.logon) +
@@ -1067,7 +1067,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	else
 	    sprintf(buf, STRHAN("You need  %s experience to advance.\n\r",
 		   "다음 레벨까지  %s 만큼의 경험치가 필요합니다.\n\r", ch),
-		    monetary((long) (titles[GET_CLASS(ch) - 1][GET_LEVEL(ch) + 1].exp - GET_EXP(ch))));
+		    monetary(titles[GET_CLASS(ch) - 1][GET_LEVEL(ch) + 1].exp - GET_EXP(ch)));
 	send_to_char(buf, to);
     }
 
@@ -1212,7 +1212,8 @@ void do_data(struct char_data *ch, char *argument, int cmd)
     struct descriptor_data *d;
     struct char_data *victim;
     char buf[256], name[256], fmt[16];
-    int i = 0, k, n, nc;
+    int i = 0, k, nc;
+    LONGLONG n;
     static char *keywords[] = { "",
 	"exp", "hit", "gold", "armor", "age",
 	"time", "flags", "bank", "des", "level",
@@ -1226,13 +1227,13 @@ void do_data(struct char_data *ch, char *argument, int cmd)
 	send_to_char("Keywords: " KEYS "\r\n", ch);
 	return;
     }
-    if ((k == 1) || (k == 3) || (k == 8)) {
+    if ((k == 1) || (k == 3) || (k == 7) || (k == 8)) {
 	nc = 3;
-	strcpy(fmt, "%-15s%10d%s");
+	strcpy(fmt, "%-12s%13lld%s");
     }
     else {
 	nc = 4;
-	strcpy(fmt, "%-15s%4d%s");
+	strcpy(fmt, "%-12s%6lld%s");
     }
     for (d = descriptor_list; d; d = d->next) {
 	if (!d->connected && CAN_SEE(ch, d->character)) {

@@ -32,7 +32,7 @@
 #define GET_OBJ_RENT(obj)	((obj)->obj_flags.cost/10)
 /* NOTE: Char's ID number is not used */
 /* #define GET_IDNUM(ch) ((ch)->player.time.birth) */
-#define mudlog(str, type, level, file) (log(str))
+#define debuglog(str, type, level, file) (log(str))
 
 #ifdef NO_DEF
 /* NOTE: This part moved to "include/object.h"                          */
@@ -486,7 +486,7 @@ void hcontrol_list_houses(struct char_data *ch)
     int i, j;
     char *timestr;
     char built_on[128], last_pay[128], own_name[128];
-    char buf[MAX_BUFSIZ], buf2[MAX_BUFSIZ];
+    char buf[MAX_OUT_LEN], buf2[MAX_BUFSIZ];
 
     if (!num_of_houses) {
 	send_to_char("No houses have been defined.\r\n", ch);
@@ -535,7 +535,7 @@ void hcontrol_list_houses(struct char_data *ch)
 
 void hcontrol_build_house(struct char_data *ch, char *arg)
 {
-    char arg1[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
+    char arg1[MAX_LINE_LEN], buf[MAX_OUT_LEN];
     struct house_control_rec temp_house;
     sh_int virt_house, real_house, exit_num;
 
@@ -668,7 +668,7 @@ void hcontrol_pay_house(struct char_data *ch, char *arg)
     else {
 	sprintf(buf, "Payment for house %s collected by %s.",
 		arg, GET_NAME(ch));
-	mudlog(buf, NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE);
+	debuglog(buf, NRM, MAX(LVL_IMMORT, GET_INVIS_LEV(ch)), TRUE);
 
 	house_control[i]->last_payment = time(0);
 	House_save_control();

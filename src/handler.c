@@ -25,7 +25,7 @@ void free_obj(struct obj_data *o);
 
 void affect_modify(struct char_data *ch, byte loc, short mod, long bitv, bool add)
 {
-    int maxabil;
+    // int maxabil;
 
     if (add) {
 	SET_BIT(ch->specials.affected_by, bitv);
@@ -35,7 +35,7 @@ void affect_modify(struct char_data *ch, byte loc, short mod, long bitv, bool ad
 	mod = -mod;
     }
 
-    maxabil = (IS_NPC(ch) ? 25 : (GET_LEVEL(ch) >= (IMO + 2) ? 25 : 18));
+    // maxabil = (IS_NPC(ch) ? 25 : (GET_LEVEL(ch) >= (IMO + 2) ? 25 : 18));
 
     switch (loc) {
     case APPLY_NONE: break;

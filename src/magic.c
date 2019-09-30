@@ -617,7 +617,7 @@ void identify_char(struct char_data *ch, struct char_data *victim )
 
 void identify_object(struct char_data *ch, struct obj_data *obj )
 {
-    char buf[MAX_BUFSIZ], buf2[MAX_BUFSIZ], bufh[MAX_BUFSIZ], *msg; 
+    char buf[MAX_LINE_LEN], buf2[MAX_NAME_LEN], bufh[MAX_LINE_LEN], *msg; 
     int i, found;
     extern int ac_applicable(struct obj_data *obj_object); 
 
@@ -637,7 +637,7 @@ void identify_object(struct char_data *ch, struct obj_data *obj )
 
     if (obj->obj_flags.bitvector) {
 	sprintbit(obj->obj_flags.bitvector, affected_bits, buf2);
-	sprintf(STRHAN("Item will give you following abilities:  %s\r\n",
+	sprintf(buf, STRHAN("Item will give you following abilities:  %s\r\n",
 	     "이 물건은 다음과 같은 능력을 줍니다:  %s\r\n", ch), buf2);
 	send_to_char(buf, ch);
     }

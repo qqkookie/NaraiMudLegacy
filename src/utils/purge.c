@@ -60,7 +60,7 @@ void delete_if_true(char *name,
 	if((test)(&st)) {
 	    show_PC( &st) ;
 	    printf("\nReally delete [%s] ? (Y/N) >> ", st.name );
-	    gets(buf);
+	    fgets(buf, sizeof(buf) -1, stdin);
 
 	    if ( LOWER(buf[0]) == 'y' ) {
 		if ( del_stash )
@@ -87,7 +87,7 @@ void extract_it(char *name)
 	if ( strcasecmp(st.name, name )==0 ) {
 	    show_PC( &st) ;
 	    printf("\nOK to EXTRACT? (Y/N) >> ");
-	    gets(buf);
+	    fgets(buf, sizeof(buf) -1, stdin);
 
 	    if ( LOWER(buf[0]) == 'y' ) {
 		fwrite( &st , CHUCK , 1 , FN );
@@ -112,7 +112,7 @@ int main(int argc, char **argv)
     printf("  [Q] QUIT.\n");
     printf("\nSelect Function [D/P/R/E/Q] : " );
 
-    gets(buf); 
+    fgets(buf, sizeof(buf) -1, stdin);
     if( strlen(buf) == 0 )
 	exit(0);
 
@@ -121,7 +121,7 @@ int main(int argc, char **argv)
     switch( toupper(buf[0])) {
     case 'D' :
 	printf("\nPlayer NAME to DELETE >>>> ");
-	gets(buf); 
+	fgets(buf, sizeof(buf) -1, stdin);
 	strcpy(dname, buf);
 	if ( strlen(buf) >= 2 )
 	    delete_if_true(buf, by_dname, 1); 
@@ -129,7 +129,7 @@ int main(int argc, char **argv)
 
     case 'P' : 
 	printf("\nNumber of DAYS not logged in >>>> ");
-	gets(buf); 
+	fgets(buf, sizeof(buf) -1, stdin);
     	if ((deadline = atoi(buf)) < 7 )
 	    deadline = DEADLINE ; 
 	printf( "\nPlayers not played within (%d) DAYS...\n", deadline);
@@ -146,7 +146,7 @@ int main(int argc, char **argv)
 
     case 'E' : 
 	printf("\nPlayer NAME to EXTRACT >>>> ");
-	gets(buf); 
+	fgets(buf, sizeof(buf) -1, stdin);
 	if ( strlen(buf) >= 2 ) {
 	    printf( "\nExtrcting [%s] player entry into file...\n", buf);
 	    extract_it(buf); 

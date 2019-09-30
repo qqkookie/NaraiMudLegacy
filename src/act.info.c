@@ -7,7 +7,8 @@
    this file is for version control of mud.
    and fileid is also used in 'show version'.
  */
-char fileid[] = "@(#) This is version v2.92.3 97/12/09  by Cookie.\n\r"
+char fileid[] = "@(#) New Narai Clasic version v4.00  2019/09/30  by Cookie (cantata@gmail.com)\n\r"
+" New Narai 1998 version  v2.92.3 97/12/09  by Cookie.\n\r"
 " New Narai. version  v2.90   97/09/11  by cookie (cookie0@chollian.net)\n\r"
 " Greatly Improved    v2.00   94/10/10  by process(wdshin@eve)\n\r"
 "                     v1.13   94/04/13  by Source Manager Cold.\n\r" ; 
@@ -181,7 +182,7 @@ int list_users(struct char_data *ch, char *line );
 void do_users(struct char_data *ch, char *argument, int cmd)
 {
     char line[MAX_STRING_LENGTH];
-    time_t	t;
+    int	t;
     extern time_t	boottime;
 
     one_argument(argument, line);

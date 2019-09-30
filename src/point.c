@@ -629,7 +629,7 @@ void check_idling(struct char_data *ch)
     extern void purge_player(struct char_data *ch);
     extern void stash_char(struct char_data *ch);
 
-    if (++(ch->specials.timer) > 7)
+    if (++(ch->specials.timer) > 7) {
 	if (ch->specials.was_in_room == NOWHERE && ch->in_room != NOWHERE) {
 	    ch->specials.was_in_room = ch->in_room;
 	    if (ch->specials.fighting) {
@@ -647,6 +647,7 @@ void check_idling(struct char_data *ch)
 	    stash_char(ch);
 	    purge_player(ch);
 	}
+    }
 }
 
 /* ================================================================ */

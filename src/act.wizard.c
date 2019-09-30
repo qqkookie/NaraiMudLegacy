@@ -8,7 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include <sys/time.h>
+#include <time.h>
 #include <sys/resource.h>
 
 #include "char.h"
@@ -141,8 +141,8 @@ void stat_room(struct char_data *ch, int rm_nr)
     struct char_data *k;
     struct obj_data *j;
     struct extra_descr_data *desc;
-    char page_buffer[MAX_STRING_LENGTH];
-    char buf[MAX_BUFSIZ], buf2[MAX_BUFSIZ];
+    char page_buffer[MAX_STR_LEN];
+    char buf[MAX_LINE_LEN], buf2[MAX_NAME_LEN];
     int i;
 
     static char *Dirs[] = /* NOTE: Capitalized  'dirs[]' */
@@ -232,8 +232,8 @@ void stat_room(struct char_data *ch, int rm_nr)
 void stat_object(struct char_data *ch, struct obj_data *obj)
 {
     struct extra_descr_data *desc;
-    char buf[MAX_BUFSIZ], buf2[MAX_BUFSIZ];
-    char page_buffer[MAX_STRING_LENGTH];
+    char buf[MAX_LINE_LEN], buf2[MAX_NAME_LEN];
+    char page_buffer[MAX_STR_LEN];
     int virtual, i; 
 
     /* for objects */
@@ -307,8 +307,8 @@ void stat_char(struct char_data *ch, struct char_data *kch)
     struct follow_type *fol;
     struct affected_type *aff;
     struct obj_data *j;
-    char buf[MAX_BUFSIZ], buf2[MAX_BUFSIZ];
-    char page_buffer[MAX_STRING_LENGTH];
+    char buf[MAX_LINE_LEN], buf2[MAX_NAME_LEN];
+    char page_buffer[MAX_STR_LEN];
     int i,i1, i2, t;
 
     /* for chars */
@@ -370,7 +370,7 @@ void stat_char(struct char_data *ch, struct char_data *kch)
 	    kch->specials.damnodice, kch->specials.damsizedice );
     strcat(page_buffer, buf);
 
-    sprintf(buf, "Gold: %ld, Bank: %ld, Exp: %ld  \r\n",
+    sprintf(buf, "Gold: %lld, Bank: %lld, Exp: %lld  \r\n",
 	    GET_GOLD(kch), kch->bank, GET_EXP(kch)); 
 
     sprintf(buf, "Alignment[%d]   Regen : %d \r\n",
@@ -603,6 +603,7 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 	one_argument(buf2, buf3);
 	if (*buf3)
 	    reboot_time = atoi(buf3);
+
 	sprintf(mess, "Reboot Time is %ld seconds (%.2f hours) after current"
 	    " boot time.\r\n", reboot_time, (((float) reboot_time) / 3600.0));
 	send_to_char(mess, ch);
@@ -642,10 +643,11 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 
 	half_chop(buf2, buf3, buf4);
 	k = atoi(buf4);
+	LONGLONG kk = atoll(buf4);
 	if ((GET_LEVEL(ch) < (IMO + 2)) && (strcmp(buf3, "gold")))
 	    return;
 	if (strcmp(buf3, "exp") == 0 && (GET_LEVEL(ch) > (IMO + 2)))
-	    victim->points.exp = k;
+	    victim->points.exp = kk;
 	/* NOTE: keyword 'skill' takes 3 more arguments.
 	    Set both learned value and skilled value of specifed skill.
 	    wizset <char> skill <skill#> <learned> <skilled>  */
@@ -680,17 +682,20 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 	else if (strcmp("move", buf3) == 0)
 	    victim->points.move = victim->points.max_move = k;
 	else if (strcmp("bank", buf3) == 0)
-	    victim->bank = k;
+	    victim->bank = kk;
 	else if (strcmp("gold", buf3) == 0)
-	    victim->points.gold = k;
+	    victim->points.gold = kk;
 	else if (strcmp("align", buf3) == 0)
 	    victim->specials.alignment = k;
 	/* NOTE: keyword 'str' and 'str_add' merged to single 'str' which
 	    will take 2 more args str value and str_add value.
 	    EX) wizset <char> str <str> <str_add>  */ 
 	else if (strcmp("str", buf3) == 0) { 
+	    k = 0;
 	    sscanf(buf4, " %d %d ", &j, &k );
 	    victim->abilities.str = j;
+	    if ( j < 18) 
+		k = 0;
 	    victim->abilities.str_add = k;
 	}
 	else if (strcmp("dex", buf3) == 0)
@@ -871,7 +876,7 @@ void do_force(struct char_data *ch, char *argument, int cmd)
 {
     struct descriptor_data *i;
     struct char_data *vict;
-    char name[100], to_force[100], buf[100];
+    char name[100], to_force[100], buf[MAX_LINE_LEN];
     int diff;
 
     if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 3))
@@ -1411,7 +1416,7 @@ void do_noaffect(struct char_data *ch, char *argument, int cmd)
     struct obj_data *dummy;
     /* struct affected_type *hjp, *hjp_next; */
     char buf[MAX_INPUT_LENGTH];
-    extern affect_remove_all(struct char_data *ch);
+    extern void affect_remove_all(struct char_data *ch);
 
     if (IS_NPC(ch))
 	return;
@@ -1866,8 +1871,8 @@ void do_sys(struct char_data *ch, char *argument, int cmd)
 
     getrusage(RUSAGE_SELF, &xru);
     sprintf(buffer,
-	 "sys time: %d secs \tusr time: %d secs \trun time: %ld secs\n\r",
-	    xru.ru_stime.tv_sec, xru.ru_utime.tv_sec, time(0) - boottime);
+	 "sys time: %d secs \tusr time: %d secs \trun time: %d secs\n\r",
+	    (int) xru.ru_stime.tv_sec, (int) xru.ru_utime.tv_sec, (int)(time(0) - boottime));
     send_to_char(buffer, ch);
     /* NOTE: Show memory usage */
     /*
@@ -1904,11 +1909,11 @@ void do_police(struct char_data *ch, char *argument, int cmd)
 	return;
     target = atoi(name);
     for (d = descriptor_list; d; d = d->next) {
-	/* NOTE: Log more info for descriptor */
-	sprintf(name, "addr:%x, desc:%d, host: %s, input=[%s]",
-		(unsigned) d, d->descriptor, d->host, d->ibuf);
-	log(name);
 	if (target == d->descriptor) {
+	    /* NOTE: Log more info for descriptor */
+	    sprintf(name, " desc:%d, host: %s",
+		    d->descriptor, d->host);
+	    log(name);
 	    if ((d->connected == CON_PLYNG) && (d->character)) {
 		if (d->character->player.level < ch->player.level) { 
 		    /* NOTE: Same effect with simpler code. */
@@ -1954,7 +1959,9 @@ void do_wizlock(struct char_data *ch, char *argument, int cmd)
 		break;
 	    }
 	if (j >= 0) {
-	    strcpy(baddomain[j], baddomain[--baddoms]);
+	    // strcpy(baddomain[j], baddomain[--baddoms]);
+	    strcpy(buf, baddomain[--baddoms]);
+	    strcpy(baddomain[j], buf);
 	}
 	else {
 	    if (baddoms < BADDOMS)

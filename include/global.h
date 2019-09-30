@@ -9,29 +9,24 @@
 
 #include "typedef.h" 
 
-#if defined(__CYGWIN32__) && !defined(sigmask)
-#include <signal.h>
-static _Sigprocmask( int how, int mask )
-{
-    sigset_t newset=mask, oldset; 
-    int ccode = sigprocmask( how, &newset, &oldset );
-    return ( ccode < 0 )? ccode : oldset; 
-}
+#define  sigsetmask(m) __mysigsetmask(m)
 
-#define sigmask(sig)   ( 1UL << ( (sig) % ( 8*sizeof(sigset_t) )))
-#define sigblock(mask)    _Sigprocmask( SIG_BLOCK,   (mask) )
-#define sigsetmask(mask)  _Sigprocmask( SIG_SETMASK, (mask) )
+extern int sigsetmask(unsigned mask);
 
-#endif
+#define MAX_STR_LEN		2000
+#define MAX_OUT_LEN		512
+#define MAX_LINE_LEN		200
+#define MAX_NAME_LEN		64
 
-
-#define MAX_STRING_LENGTH	3000
-#define MAX_INPUT_LENGTH	80
-#define MAX_BUFSIZ		(MAX_INPUT_LENGTH*3) 
+#define MAX_STRING_LENGTH	MAX_STR_LEN
+#define MAX_BUFSIZ		MAX_LINE_LEN
+#define MAX_INPUT_LENGTH	MAX_LINE_LEN
 
 #ifndef IMO
 #define	IMO	41
 #endif
+
+#pragma GCC diagnostic ignored "-Wunused-result"
 
 /*  NOTE: also defined in "comm.c"	*/ 
 #define DFLT_PORT 4001  /* default port */ 
@@ -178,12 +173,14 @@ extern int str_cmp(char *arg1, char *arg2);
 extern int strn_cmp(char *arg1, char *arg2, int n);
 extern char *skip_spaces(char *string);
 
+#define log(s)	mudlog(s)
 extern void log(char *str);
+
 
 extern void sprintbit(long vektor, char *names[], char *result);
 extern void sprinttype(int type, char *names[], char *result);
-extern char *monetary(long n);
-extern char *monetary4(long n);
+extern char *monetary(LONGLONG n);
+extern char *monetary4(LONGLONG n);
 
 extern int isname(char *str, char *namelist);
 extern char *fname(char *namelist); 

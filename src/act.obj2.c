@@ -185,7 +185,7 @@ drink_ok:
 void do_sip(struct char_data *ch, char *argument, int cmd)
 {
     struct affected_type af;
-    char arg[MAX_INPUT_LENGTH];
+    char arg[MAX_LINE_LEN];
     char buf[MAX_BUFSIZ];
     struct obj_data *temp;
 
@@ -262,9 +262,9 @@ void do_sip(struct char_data *ch, char *argument, int cmd)
 
 void do_pour(struct char_data *ch, char *argument, int cmd)
 {
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
-    char buf[MAX_BUFSIZ];
+    char arg1[MAX_LINE_LEN];
+    char arg2[MAX_LINE_LEN];
+    char buf[MAX_OUT_LEN];
     struct obj_data *from_obj;
     struct obj_data *to_obj;
     int amount;
@@ -441,7 +441,7 @@ void do_eat(struct char_data *ch, char *argument, int cmd)
 void do_taste(struct char_data *ch, char *argument, int cmd)
 {
     struct affected_type af;
-    char arg[MAX_INPUT_LENGTH];
+    char arg[MAX_LINE_LEN];
     struct obj_data *temp;
 
     one_argument(argument, arg);
@@ -517,9 +517,9 @@ void do_junk(struct char_data *ch, char *argument, int cmd)
     If ammo name (2nd arg) is ommited, inventory is searched for ammo.   */
 void do_reload(struct char_data *ch, char *argument, int cmd)
 {
-    char buffer[MAX_BUFSIZ];
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
+    char buffer[MAX_OUT_LEN];
+    char arg1[MAX_LINE_LEN];
+    char arg2[MAX_LINE_LEN];
     struct obj_data *gun;
     struct obj_data *ammo, *tmp_obj;
     int ammo_nr ;
@@ -811,7 +811,7 @@ int is_ok(struct char_data *keeper, struct char_data *ch, int shop_nr)
 	do_say(keeper, "Come back later!", 0);
 	return (FALSE);
     }
-    else if (shop_index[shop_nr].close1 < time_info.hours)
+    else if (shop_index[shop_nr].close1 < time_info.hours) {
 	if (shop_index[shop_nr].open2 > time_info.hours) {
 	    do_say(keeper, "Sorry, we have closed, but come back later.", 0);
 	    return (FALSE);
@@ -820,6 +820,7 @@ int is_ok(struct char_data *keeper, struct char_data *ch, int shop_nr)
 	    do_say(keeper, "Sorry, come back tomorrow.", 0);
 	    return (FALSE);
 	};
+    }
 
     if (!(CAN_SEE(keeper, ch))) {
 	do_say(keeper, "I don't trade with someone I can't see!", 0);
@@ -1067,7 +1068,7 @@ void shopping_value(char *arg, struct char_data *ch,
 void shopping_list(char *arg, struct char_data *ch,
 		   struct char_data *keeper, int shop_nr)
 {
-    char buf[MAX_STRING_LENGTH], buf2[100], buf3[100];
+    char buf[MAX_OUT_LEN], buf2[MAX_LINE_LEN], buf3[100];
     struct obj_data *temp1;
     int found_obj;
     extern char *drinks[];

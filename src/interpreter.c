@@ -658,7 +658,7 @@ void do_not_here(struct char_data *ch, char *argument, int cmd)
 void COMMANDO(char *str, sh_int number, byte min_pos, 
 	void (*pointer)(), byte min_lm, byte min_lc, byte min_lt, byte min_lw)
 { 
-    static counter = 0;
+    static int counter = 0;
     struct command_info *command;
     CREATE(command, struct command_info, 1 );
     cmd_info[++counter] = command;
@@ -1088,7 +1088,7 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 	if (!(no % 4))
 	    strcat(buf, "\n\r");
 	no++;
-no_wizcmd:
+no_wizcmd:;
     }
     strcat(buf, "\n\r");
     page_string(ch->desc, buf, 1);

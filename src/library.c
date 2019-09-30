@@ -733,7 +733,7 @@ char *skip_spaces(char *string)
 /* writes a string to the log */
 void log(char *str)
 {
-    long ct;
+    time_t ct;
     char *tmstr;
     static int count = 0;
 
@@ -760,7 +760,7 @@ void sprintbit(long vektor, char *names[], char *result)
     *result = '\0';
 
     for (nr = 0; vektor; vektor >>= 1) {
-	if (IS_SET(1, vektor))
+	if (IS_SET(1, vektor)) {
 	    if (*names[nr] != '\n') {
 		strcat(result, names[nr]);
 		strcat(result, " ");
@@ -769,6 +769,7 @@ void sprintbit(long vektor, char *names[], char *result)
 		strcat(result, "UNDEFINED");
 		strcat(result, " ");
 	    }
+	}
 	if (*names[nr] != '\n')
 	    nr++;
     }
@@ -845,7 +846,7 @@ struct time_info_data age(struct char_data *ch)
 
 /* NOTE: Show number in financial format like "-98,765,432".    */
 /* NOTE: Returns pointer to recycled static internal char buffer.  */
-char *monetary(long n)
+char *monetary(LONGLONG n)
 {
     static char outbuf[5][20];
     static char ring = 0;
@@ -855,7 +856,7 @@ char *monetary(long n)
     pd = digits;
     po = outbuf[ring % 5];
 
-    sprintf(digits, "%ld", n < 0 ? -n : n);
+    sprintf(digits, "%lld", n < 0 ? -n : n);
     pos = strlen(digits);
     if (n < 0)
 	*po++ = '-';
@@ -870,7 +871,7 @@ char *monetary(long n)
 
 /* NOTE: Similar to monetary(). but show only most significant 4 digit
    without rounding. like "-98,760,000".         */
-char *monetary4(long n)
+char *monetary4(LONGLONG n)
 {
     int nsig = 0;
     char *out, *po;
@@ -1120,9 +1121,9 @@ char *one_argument(char *argument, char *first_arg)
 
 char *one_word(char *argument, char *first_arg)
 {
-    int found, begin, look_at;
+    int /*found,*/ begin, look_at;
 
-    found = begin = 0;
+    /* found = */ begin = 0;
 
     do {
 	for (; isspace(*(argument + begin)); begin++) ;

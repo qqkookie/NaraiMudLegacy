@@ -6,6 +6,7 @@
 *.log
 *.pid
 *.x.y
+*.sta
 
 # generic unix files
 
@@ -17,26 +18,22 @@
 *.tmp
 *.swp
 *.diff
-*.depend
 
 # directories to ignore
 
 bin/
-[Oo]bj/
 src/[Oo]bj/
 [Tt]mp/
-log/
 
-lib/boards/
-lib/mboxes/
-lib/log/
-lib/stash/
+users/boards/
+users/log/
+users/stash/
 
 # files to ignore
 
 src/.depend
-lib/players*
-lib/stash*
+users/players*
+users/stash*
 run-mud
 log-check
 log-run

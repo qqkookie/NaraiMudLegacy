@@ -110,7 +110,7 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
 {
     char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
     int i, room_number;
-    char guild_number;
+    int guild_number;
 
     if (IS_NPC(ch))
 	return (FALSE);

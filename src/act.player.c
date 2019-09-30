@@ -9,12 +9,16 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <time.h>
+#ifndef __FreeBSD__
+#include <crypt.h>
+#endif
 
 #include "char.h"
 #include "object.h"
 #include "global.h"
 #include "comm.h"
 #include "gamedb.h"
+#include "play.h"
 #include "etc.h"
 
 #define STATE(d) ((d)->connected)
@@ -795,10 +799,15 @@ void init_player(struct char_data *ch)
     /* NOTE: New player is wimpy by default  */
     SET_BIT(ch->specials.act, PLR_WIMPY);
 
-#ifdef RESTART_BONUS
     /* initial bonus */
+#ifdef BETA_TEST
+    GET_GOLD(ch) = 10000000000L;
+    ch->quest.solved = 50;
+    ch->specials.damnodice = 10;
+    ch->specials.damsizedice = 10;
+#else
     ch->points.gold = 1000;
-#endif				/* RESTART_BONUS */
+#endif
 
     for (i = 0; i <= MAX_SKILLS - 1; i++) {
 	if (GET_LEVEL(ch) < IMO + 3) {

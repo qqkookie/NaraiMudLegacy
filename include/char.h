@@ -93,8 +93,8 @@ struct char_point_data {
     int move;
     int max_move;	/* Max move for NPC			   */
     int armor;		/* Internal -100..100, external -10..10 AC */
-    unsigned long gold;	/* Money carried			   */
-    unsigned long exp;	/* The experience of the player		   */
+    LONGLONG gold;	/* Money carried			   */
+    LONGLONG exp;	/* The experience of the player		   */
     sbyte hitroll;	/* Any bonus or penalty to the hit roll    */
     sbyte damroll;	/* Any bonus or penalty to the damage roll */
 };
@@ -327,7 +327,7 @@ struct char_data {
     int nr;
     sh_int in_room;
     int magic_number;
-    unsigned long bank;
+    LONGLONG bank;
     int life, regeneration;
 
     /* for mobile */ /* it's regened... */

@@ -33,7 +33,7 @@
 "-------------<< N-A-R-A-I >>-----------<< M-U-D >>---------------\n\r\
 Welcome to the Living Nightmare. May your visit here be... Interesting.\r\n\r\n\
 Heavenly voice whisperes 'Your fate and destiny lies beyond this world...'.\r\n\
-Yo! poor Mortals... Worship the Great Old Goddess!
+Yo! poor Mortals... Worship the Great Old Goddess! \r\n\
 Fall on your knees and kiss her feet.\r\n\
 Glory to the Goddess, Glory to Narai...\r\n\
 \r\n   -----===    GOLDEN RULES OF NARAI    ===-----\r\n\
@@ -111,7 +111,7 @@ struct char_file_u {
     int alignment;
     time_t last_logon;
     unsigned act;
-    unsigned long bank;
+    LONGLONG bank;
     char name[20];
     char pwd[11];
     int conditions[3];

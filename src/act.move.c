@@ -258,7 +258,7 @@ int search_door(struct char_data *ch, char *type, char *dir)
 void do_open(struct char_data *ch, char *argument, int cmd)
 {
     int door, other_room;
-    char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
+    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN], buf[MAX_BUFSIZ];
     struct room_direction_data *back;
     struct obj_data *obj;
     struct char_data *victim;
@@ -331,7 +331,7 @@ void do_open(struct char_data *ch, char *argument, int cmd)
 void do_close(struct char_data *ch, char *argument, int cmd)
 {
     int door, other_room;
-    char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
+    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN], buf[MAX_BUFSIZ];
     struct room_direction_data *back;
     struct obj_data *obj;
     struct char_data *victim;
@@ -409,7 +409,7 @@ int has_key(struct char_data *ch, int key)
 void do_lock(struct char_data *ch, char *argument, int cmd)
 {
     int door, other_room;
-    char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH];
+    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN];
     struct room_direction_data *back;
     struct obj_data *obj;
     struct char_data *victim; 
@@ -475,7 +475,7 @@ void do_lock(struct char_data *ch, char *argument, int cmd)
 void do_unlock(struct char_data *ch, char *argument, int cmd)
 {
     int door, other_room;
-    char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH];
+    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN];
     struct room_direction_data *back;
     struct obj_data *obj;
     struct char_data *victim; 
@@ -545,7 +545,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
 {
     byte percent;
     int door, other_room;
-    char type[MAX_INPUT_LENGTH], dir[MAX_INPUT_LENGTH];
+    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN];
     struct room_direction_data *back;
     struct obj_data *obj;
     struct char_data *victim;
@@ -627,7 +627,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
 void do_enter(struct char_data *ch, char *argument, int cmd)
 {
     int door;
-    char buf[MAX_INPUT_LENGTH], tmp[MAX_BUFSIZ];
+    char buf[MAX_LINE_LEN], tmp[MAX_OUT_LEN];
 
     one_argument(argument, buf);
 
@@ -676,7 +676,7 @@ void do_leave(struct char_data *ch, char *argument, int cmd)
 
 void do_where(struct char_data *ch, char *argument, int cmd)
 {
-    char name[MAX_INPUT_LENGTH], buffer[MAX_STRING_LENGTH], buf2[MAX_BUFSIZ];
+    char name[MAX_LINE_LEN], buffer[MAX_STRING_LENGTH], buf2[MAX_BUFSIZ];
     struct char_data *i, *vic;
     int j, n;
     struct obj_data *k;
@@ -814,7 +814,7 @@ void do_exits(struct char_data *ch, char *argument, int cmd)
     for (door = 0; door <= 5; door++)
 	if (EXIT(ch, door))
 	    if (EXIT(ch, door)->to_room != NOWHERE &&
-		!IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
+		!IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
 		if (GET_LEVEL(ch) >= IMO)
 		    sprintf(buf + strlen(buf), "%-5s - [%5d] %s\r\n",
 			 exits[door], world[EXIT(ch, door)->to_room].number,
@@ -825,6 +825,7 @@ void do_exits(struct char_data *ch, char *argument, int cmd)
 		else
 		    sprintf(buf + strlen(buf), "%s - %s\n\r", exits[door],
 			    world[EXIT(ch, door)->to_room].name); 
+	    }
 
     send_to_char(( *buf ? buf : "None.\r\n"), ch);
 } 
@@ -955,7 +956,7 @@ void do_sleep(struct char_data *ch, char *argument, int cmd)
 void do_wake(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *tmp_char;
-    char arg[MAX_INPUT_LENGTH]; 
+    char arg[MAX_LINE_LEN]; 
 
     one_argument(argument, arg);
     /* NOTE: Some code simplification. */

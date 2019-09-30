@@ -18,8 +18,8 @@
 
 /* Locals */
 /* NOTE: Now symbolic constant. LASTCHAT_SIZE */ 
-#define LASTCHAT_SIZE 20
-static char history[LASTCHAT_SIZE][MAX_INPUT_LENGTH+25];
+#define LASTCHAT_SIZE 40
+static char history[LASTCHAT_SIZE][MAX_LINE_LEN];
 static int his_start = 0, his_end = 0;
 
 void do_lastchat(struct char_data *ch, char *argument, int cmd);
@@ -172,7 +172,7 @@ void do_lastchat(struct char_data *ch, char *argument, int cmd)
 void do_tell(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *vict;
-    char *s, name[100], message[MAX_BUFSIZ], buf[MAX_BUFSIZ];
+    char *s, name[100], message[MAX_LINE_LEN], buf[MAX_OUT_LEN];
 
     if (is_dumb(ch)) return;
     half_chop(argument, name, message);
@@ -239,7 +239,7 @@ void do_reply(struct char_data *ch, char *argument, int cmd)
 void do_send(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *vict;
-    char *s, name[100], message[100], paint_name[100]; 
+    char *s, name[100], message[100], paint_name[MAX_OUT_LEN]; 
     char  buf[MAX_BUFSIZ], paint[MAX_STRING_LENGTH];
 
     if (is_dumb(ch)) return;
@@ -531,7 +531,7 @@ static int list_top  = 0 ;
 /* NOTE: cmd arg has index to messge table, not regular command number. */
 void do_action(struct char_data *ch, char *argument, int cmd)
 {
-    char buf[MAX_INPUT_LENGTH];
+    char buf[MAX_LINE_LEN];
     struct social_messg *action;
     struct char_data *vict;
 
@@ -638,10 +638,10 @@ int find_action(char *action_name, int *pmin_lev, int *pmin_pos )
 
 char *fread_action(FILE * fl)
 {
-    char buf[MAX_BUFSIZ], *rslt;
+    char buf[MAX_LINE_LEN], *rslt;
 
     for (;;) {
-	if ( fgets(buf, MAX_STRING_LENGTH, fl) == NULL ) {
+	if ( fgets(buf, MAX_LINE_LEN-1, fl) == NULL ) {
 	    perror("Fread_action - unexpected EOF.");
 	    exit(2);
 	}
@@ -661,7 +661,7 @@ void boot_social_messages(void)
 {
     FILE *fl ;
     int hide, min_lev, min_ch_pos, min_vic_pos;
-    char action_name[MAX_INPUT_LENGTH];
+    char action_name[MAX_LINE_LEN];
     struct social_messg *action;
 
     /* NOTE: use lookup_db() to get socail message file name.(SOCMESS_FILE) */
@@ -783,11 +783,12 @@ void send_to_char(char *messg, struct char_data *ch)
 void send_to_char_han(char *msgeng, char *msghan, struct char_data *ch)
 {
     /* NOTE: if Korean message unavialable, send english message instead. */
-    if (ch->desc)
+    if (ch->desc) {
 	if ( IS_ACTPLR(ch, PLR_KOREAN) && msghan && *msghan )	/* korean */
 	    write_to_q(msghan, &ch->desc->output);
 	else if (msgeng && *msgeng )	/* english */
 	    write_to_q(msgeng, &ch->desc->output);
+    }
 }
 
 void send_to_all(char *messg)
@@ -1163,7 +1164,7 @@ void acthan(char *streng, char *strhan, int hide_invisible,
 
 void show_string(struct descriptor_data *d, char *input)
 {
-    char buffer[MAX_STRING_LENGTH*2], buf[MAX_INPUT_LENGTH];
+    char buffer[MAX_STRING_LENGTH*2], buf[MAX_LINE_LEN];
     register char *scan, *chk;
     int lines = 0, toggle = 1;
     int pl;	/* NOTE: page length */

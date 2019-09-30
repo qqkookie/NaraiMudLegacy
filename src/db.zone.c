@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "char.h"
 #include "object.h"
@@ -135,6 +136,8 @@ void boot_world(void)
 			(zone ? zone_table[zone - 1].top : -1)) {
 			fprintf(stderr, "Room nr %d is below zone %d.\n",
 				room_nr, zone);
+			fprintf(stderr, "DEBUG: %d, %s\n",
+			    world[room_nr].number, world[room_nr].name);
 			exit(2);
 		    }
 		    while (world[room_nr].number > zone_table[zone].top)
@@ -533,7 +536,7 @@ void load_zones(int zone)
     /* read the command table */
     cmd_no = 0;
     for (expand = 1;;) {
-	if (expand)
+	if (expand) {
 	    if (!cmd_no)
 		CREATE(zone_table[zon].cmd, struct reset_com, 1);
 
@@ -544,6 +547,7 @@ void load_zones(int zone)
 		perror(zone_table[zon].filename);
 		exit(2);
 	    }
+	}
 	expand = 1;
 	fscanf(fl, " ");	/* skip blanks */
 	fscanf(fl, "%c", &zone_table[zon].cmd[cmd_no].command);
@@ -634,7 +638,7 @@ void boot_zones(void)
 	/* read the command table */
 	cmd_no = 0;
 	for (expand = 1;;) {
-	    if (expand)
+	    if (expand) {
 		if (!cmd_no)
 		    CREATE(zone_table[zon].cmd, struct reset_com, 1);
 
@@ -645,6 +649,7 @@ void boot_zones(void)
 		    perror(file_name);
 		    exit(2);
 		}
+	    }
 	    expand = 1;
 	    fscanf(fl, " ");	/* skip blanks */
 	    fscanf(fl, "%c", &zone_table[zon].cmd[cmd_no].command);

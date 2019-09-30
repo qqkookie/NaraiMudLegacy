@@ -43,7 +43,7 @@ void show_player(struct char_file_u *st)
 	    
     tp = ctime( &(st->last_logon));
     tp[16] = '\0';
-    printf("%6s  REMO: %4s  %5ld M GOLD  SEX: %c  GUILD: %s  LOG: %s\n\n",
+    printf("%6s  REMO: %4s  %10lld M GOLD  SEX: %c  GUILD: %s  LOG: %s\n\n",
 	    "", remoed, (st->bank/1000 + st->points.gold/1000)/1000,
 	    "NMF"[st->sex], guild[st->guild] , tp);
 }

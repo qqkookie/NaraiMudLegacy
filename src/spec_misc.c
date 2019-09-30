@@ -210,7 +210,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
     struct obj_data *i, *obj;
     struct char_data *victim, *mob;
     int done = 0;
-    static action = 0;
+    static int action = 0;
     extern void do_drop(struct char_data *ch, char *argument, int cmd);
     extern void do_wear(struct char_data *ch, char *argument, int cmd);
 
@@ -775,11 +775,11 @@ void gbisland_go_out_barrier(struct char_data *ch)
 
 void gbisland_go_back(struct char_data *ch)
 {
-    int was_in;
+    // int was_in;
     char tmp[256];
     int dir;
 
-    was_in = ch->in_room;
+    // was_in = ch->in_room;
     dir = number(1, 4);
 
     do_say(ch, "신의 은총이 함께하길...", 0);

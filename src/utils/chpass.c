@@ -9,16 +9,23 @@
 #include <string.h> 
 #include <unistd.h> 
 #include <stdlib.h> 
+
+#ifndef __FreeBSD__
+#include <crypt.h>
+#endif
+
 #include "char.h"
 #include "gamedb.h"
 
 #define PLAYERF	"players"
 #define CHUCK (sizeof( struct char_file_u ))
 
+#pragma GCC diagnostic ignored "-Wunused-result"
+
 int main()
 {
     struct char_file_u st;
-    char name[20], passwd[20];
+    char name[100], passwd[100];
     FILE *FL;
     int newlevel ;
 
@@ -29,9 +36,9 @@ int main()
 
     printf("\nChange Password or Level of non-active player...\n\n");
     printf("Player Name? ");
-    gets(name);
+    fgets(name, sizeof(name)-1, stdin);
     printf("Enter new PASSWORD or LEVEL >> ");
-    gets(passwd);
+    fgets(passwd, sizeof(passwd)-1, stdin);
     if ( !*name || !*passwd )
 	exit(1);
     newlevel =  atoi(passwd);
@@ -46,7 +53,7 @@ int main()
 		printf("Change LEVEL to [%d]... ", st.level );
 	    }
 	    else {
-		strncpy(st.pwd, crypt(passwd, st.pwd),10);
+		strncpy(st.pwd, crypt(passwd, st.pwd), 10);
 		st.pwd[10] = '\0' ;
 		printf("Change PASSWORD to [%s]... ", passwd );
 	    }

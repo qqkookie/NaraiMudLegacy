@@ -1179,12 +1179,12 @@ int real_object(int virtual)
 /* read and allocate space for a '~'-terminated string from a given file */
 char *fread_string(FILE * fl)
 {
-    char buf[MAX_STRING_LENGTH], tmp[500];
+    char buf[MAX_STR_LEN], tmp[MAX_STR_LEN+100];
     char *rslt;
     register char *point;
     int flag;
 
-    bzero(buf, MAX_STRING_LENGTH);
+    bzero(buf, MAX_STR_LEN);
     do {
 	if (!fgets(tmp, MAX_STRING_LENGTH, fl)) {
 	    /* NOTE: more informative log on file read error. */
@@ -1192,7 +1192,7 @@ char *fread_string(FILE * fl)
 	    perror(tmp);
 	    return(NULL);
 	}
-	if (strlen(tmp) + strlen(buf) > MAX_STRING_LENGTH) {
+	if (strlen(tmp) + strlen(buf) > MAX_STR_LEN) {
 	    log("fread_string: string too large (db.c)");
 	    buf[70] = 0;
 	    fprintf(stderr, "%s\n", buf);

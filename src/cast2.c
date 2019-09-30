@@ -1340,7 +1340,7 @@ void cast_phase(byte level, struct char_data *ch, char *arg, int type,
     case 's': case 'S': direction = 2; break;
     case 'd': case 'D': direction = 5; break;
     case 'u': case 'U': direction = 4; break;
-    case NULL:
+    case '\0':
 	send_to_char("Phase to where?\n\r", ch);
 	return;
     default:

@@ -18,12 +18,10 @@
 #include "comm.h"
 #include "gamedb.h"
 
-#define SAVE_DESC      /* NOTE: was OLD $(CC) -DSYPARK */ 
+// #define SAVE_DESC      /* NOTE: was OLD $(CC) -DSYPARK */ 
 #define RETURN_TO_QUIT /* NOTE: was OLD $(CC) -DRETURN_TO_QUIT */ 
 
 #define KJHRENT      66666	/* kjh number to tell new rent format */
-#define SYPARKRENT   900176	/* sypark student id :) */
-#define KNIFE_RENT   77777	/* Equiped Rent by Knife */
 
 extern void affect_total(struct char_data *ch);
 extern void affect_modify(struct char_data *ch, byte loc, short mod,
@@ -569,7 +567,7 @@ void delete_char(struct char_data *ch)
 void stash_char(struct char_data *ch)
 {
     struct obj_data *p;
-    char stashfile[100], name[100];
+    char stashfile[MAX_LINE_LEN], name[100];
     FILE *fl;
     int i;
     unsigned int mask;
@@ -646,13 +644,13 @@ void stash_contents(FILE * fl, struct obj_data *p, int wear_flag)
 	    fprintf(fl, " %d", p->obj_flags.value[j]);
 	for (j = 0; j < 2; j++)
 	    fprintf(fl, " %d %d", p->affected[j].location, p->affected[j].modifier);
-#ifdef SAVE_DESC
+	// #ifdef SAVE_DESC
 	fprintf(fl, " %d %d", p->obj_flags.extra_flags, p->obj_flags.gpd);
 	fprintf(fl, "\n");
 	fprintf(fl, "%s\n", p->name);
 	fprintf(fl, "%s\n", p->short_description);
 	fprintf(fl, "%s\n", p->description);
-#endif
+	// #endif
     }
 
     if ((pc = p->next_content))
@@ -664,7 +662,7 @@ void stash_contents(FILE * fl, struct obj_data *p, int wear_flag)
 void unstash_char(struct char_data *ch, char *stashname)
 {
     struct obj_data *obj;
-    char stashfile[100], name[100];	/* ,sf2[100]; */
+    char stashfile[MAX_LINE_LEN], name[100];	/* ,sf2[100]; */
     FILE *fl;
     int i, n, tmp[4];	/* , newflag ; */
     char tmp_str[255], *str;
@@ -742,7 +740,7 @@ void unstash_char(struct char_data *ch, char *stashname)
 	    obj->affected[i].location = tmp[i * 2];
 	    obj->affected[i].modifier = tmp[i * 2 + 1];
 	}
-#ifdef	SAVE_DESC
+	// #ifdef	SAVE_DESC
 	fscanf(fl, "%d", &tmp[0]);
 	if (tmp[0] != -1)
 	    obj->obj_flags.extra_flags = tmp[0];
@@ -774,7 +772,7 @@ void unstash_char(struct char_data *ch, char *stashname)
 	    free(obj->description);
 	    obj->description = str;
 	}
-#endif
+	// #endif
 	while (stack_count && item_stack[stack_count - 1] < -1 &&
 	       item_stack[stack_count - 1] < where) {
 	    stack_count--;
@@ -875,13 +873,13 @@ void stash_contentsII(FILE * fp, struct obj_data *o, int wear_flag)
 	for (i = 0; i < 2; i++)
 	    fprintf(fp, " %d %d", o->affected[i].location,
 		    o->affected[i].modifier);
-#ifdef SAVE_DESC
+	// #ifdef SAVE_DESC
 	fprintf(fp, " %d %d", o->obj_flags.extra_flags, o->obj_flags.gpd);
 	fprintf(fp, "\n");
 	fprintf(fp, "%s\n", o->name);
 	fprintf(fp, "%s\n", o->short_description);
 	fprintf(fp, "%s\n", o->description);
-#endif
+	// #endif
 	fprintf(fp, "\n");
     }
     if (oc = o->next_content)
@@ -1004,7 +1002,7 @@ void unstash_char(struct char_data *ch, char *stashname)
 
 void do_checkrent(struct char_data *ch, char *argument, int cmd)
 {
-    char stashfile[100], name[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
+    char stashfile[MAX_LINE_LEN], name[MAX_NAME_LEN], buf[MAX_LINE_LEN];
     char str[255];
     FILE *fl;
     int i, j, n;
@@ -1048,7 +1046,7 @@ void do_checkrent(struct char_data *ch, char *argument, int cmd)
 
 void do_extractrent(struct char_data *ch, char *argument, int cmd)
 {
-    char name[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
+    char name[MAX_NAME_LEN], buf[MAX_LINE_LEN];
 
     one_argument(argument, name);
     if (!*name)
@@ -1061,7 +1059,7 @@ void do_extractrent(struct char_data *ch, char *argument, int cmd)
 
 void do_replacerent(struct char_data *ch, char *argument, int cmd)
 {
-    char name[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
+    char name[MAX_NAME_LEN], buf[MAX_LINE_LEN];
 
     one_argument(argument, name);
     if (!*name)

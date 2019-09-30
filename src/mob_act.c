@@ -333,7 +333,7 @@ void mob_punch_drop(struct char_data *ch, struct char_data *victim)
     char buffer[MAX_STRING_LENGTH];
     struct obj_data *tmp_object;
     struct obj_data *next_obj;
-    bool test = FALSE;
+    // bool test = FALSE;
 
     /* punch out equipments  */
     for (i = 0; i < MAX_WEAR; i++) {
@@ -369,7 +369,7 @@ void mob_punch_drop(struct char_data *ch, struct char_data *victim)
 		tmp_object, 0, TO_ROOM);
 	    obj_from_char(tmp_object);
 	    obj_to_room(tmp_object, ch->in_room);
-	    test = TRUE;
+	    // test = TRUE;
 	}
     }
 }
@@ -596,7 +596,7 @@ void npc_steal(struct char_data *ch, struct char_data *victim)
 
 void first_attack(struct char_data *ch, struct char_data *victim)
 {
-    char buf[80], sbuf[80];
+    char buf[80], sbuf[MAX_LINE_LEN];
     int num;
 
     sprintf(buf, "%s", GET_NAME(victim));
@@ -606,7 +606,7 @@ void first_attack(struct char_data *ch, struct char_data *victim)
 	return;
     }
     /* NOTE: If char has Solar flare, quaff it before attack */
-    if (get_obj_in_list_vis(ch, "solar flare", ch->carrying));
+    if (get_obj_in_list_vis(ch, "solar flare", ch->carrying))
 	do_quaff(ch, "solar flare", 0 ); 
 	
     if ( number(0, 99) < 33 ) {

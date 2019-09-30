@@ -275,7 +275,7 @@ int remortal(struct char_data *ch, int cmd, char *arg)
 int bank(struct char_data *ch, int cmd, char *arg)
 {
     char buf[MAX_STRING_LENGTH];
-    int amt;
+    LONGLONG amt;
 
     if (IS_NPC(ch))
 	return (FALSE);
@@ -298,7 +298,7 @@ int bank(struct char_data *ch, int cmd, char *arg)
 	    return (TRUE);
 	}
 	arg = one_argument(arg, buf);
-	amt = atoi(buf);
+	amt = atoll(buf);
 	if (amt <= 0) {
 	    send_to_char("The banker says 'Amount must be positive.'\n\r", ch);
 	    return (TRUE);
@@ -361,6 +361,7 @@ int dump(struct char_data *ch, int cmd, char *arg)
 	     tmp_char = tmp_char->next_in_room)
 	    if (CAN_SEE_OBJ(tmp_char, k))
 		send_to_char(buf, tmp_char);
+
 	/* NOTE: Hard currency is more valuable than item  */
 	if( k->obj_flags.type_flag == ITEM_MONEY )
 	    value += k->obj_flags.cost ;
@@ -737,7 +738,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
     char buf[MAX_STRING_LENGTH];
     char buf2[MAX_STRING_LENGTH];
     int k, opt;
-    int mult;
+    // int mult;
     long int cost = 0;
     struct obj_data *tmp_obj;
 
@@ -760,7 +761,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
     else if (cmd == CMD_BUY) {	/* Buy */
 	half_chop(arg, buf, buf2);
 	opt = atoi(buf);
-	mult = 1;
+	// mult = 1;
 
 	/* 
 	   if (1 <= opt && opt <= 6) { */
@@ -1068,7 +1069,7 @@ int pet_shops(struct char_data *ch, int cmd, char *arg)
 	    /* can't buy PC */
 	    if (!IS_NPC(pet))
 		continue;
-	    sprintf(buf, "%8ld - %s\n\r", 10 * GET_EXP(pet), pet->player.short_descr);
+	    sprintf(buf, "%8lld - %s\n\r", 10 * GET_EXP(pet), pet->player.short_descr);
 	    send_to_char(buf, ch);
 	}
 	return (TRUE);

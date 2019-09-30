@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 	else {
 	    show_PC( &st) ;
 	    printf( "\nReally delete [%s] ? (Y/N) >> ", st.name );
-	    gets(buf);
+	    fgets(buf, 100, stdin);
 
 	    if ( LOWER(buf[0]) == 'y' ) {
 		killed++;

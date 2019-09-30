@@ -1,0 +1,4 @@
+define BETA_TEST in Makefile
+
+#dfine IMO
+#define RETURN_TO_QUIT
