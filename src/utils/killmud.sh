@@ -3,9 +3,9 @@
 # For debuging use only, not for production use
 #
 
-port=5002	# $usrdir/PORT is primary
+port=4000	# $usrdir/PORT is primary
 
-prog=mud-narai
+prog=mud-kit
 usrdir=$HOME/mud/lib
 
 pids="`ps -cx | grep $prog | cut -c1-6 `"

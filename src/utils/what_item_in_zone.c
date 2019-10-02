@@ -23,6 +23,8 @@ int main(int argc,char *argv[])
 	int items[MAX_ITEMS];
 	int no_item=0,i,old_item=0;
 
+	if (argc !=2 )
+	    exit(1);
 	fp=fopen(argv[1],"r");
 	if(fp==NULL)
 		exit(1);

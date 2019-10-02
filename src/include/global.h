@@ -27,6 +27,7 @@ extern int sigsetmask(unsigned mask);
 #endif
 
 #pragma GCC diagnostic ignored "-Wunused-result"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
 
 /*  NOTE: also defined in "comm.c"	*/ 
 #define DFLT_PORT 4001  /* default port */ 

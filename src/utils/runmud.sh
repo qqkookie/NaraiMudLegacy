@@ -20,13 +20,13 @@ trap "" 1 2 3 13 14
 
 umask 0077
 
-port=5002	# $usrdir/PORT is primary
+port=4000	# $usrdir/PORT is primary
 
 # mud home and belows should be absolute path
 export MUDHOME=$HOME/mud
 mudhome="$MUDHOME"
 
-prog=$mudhome/bin/mud-narai
+prog=$mudhome/bin/mud-kit
 prog_new=$prog.new
 prog_run=$prog.run
 srcdir=$mudhome/src
@@ -162,7 +162,7 @@ do
 			acct=SYSTEM
 		fi
 
-		echo "============================================================================"
+		echo "-------------------------------------------------------------------"
 		if [ -f $pidfile ] ; then
 			check="STARTED PID: `cat $pidfile`"
 			running="Running...."

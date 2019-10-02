@@ -196,7 +196,7 @@ int show_obj_to_buf(struct obj_data *object, struct char_data *ch, int mode,
 void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode)
 {
     struct obj_data *i, *j;
-    char buffer[MAX_STRING_LENGTH * 2], *buf;
+    char buffer[MAX_STR_LEN * 2], *buf;
     int found = 0;
 
     buf = buffer;
@@ -222,8 +222,8 @@ void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode)
 	    }
 	}
 	/* NOTE: check buffer overflow */
-	if ((buf - buffer + 100) > sizeof(buffer)) {
-	    strcat(buf, "AND many other things to numerous to list....\r\n"); 
+	if ( buf > buffer + sizeof(buffer) -100) {
+	    strcat(buf, "AND many other things too numerous to list....\r\n"); 
 	    break;
 	}
     }
@@ -1253,7 +1253,7 @@ void do_data(struct char_data *ch, char *argument, int cmd)
 	    case 7: n = victim->specials.act; break;
 	    case 8: n = victim->bank; break;
 	    case 9: n = d->descriptor; break;
-	    case 10: n = victim->player.level;
+	    case 10: n = victim->player.level; break;
 	    default:
 		n = -1;
 	    }

@@ -496,6 +496,7 @@ int jail_room(struct char_data *ch, int cmd, char *arg)
 	    send_to_char("He he he. Drug is illegal substances here..\n\r", ch);
 	    return(TRUE);
 	}
+	break;
     default:
 	if (dismiss) {
 	    send_to_char("Get way!! I don't want see your ugly face"

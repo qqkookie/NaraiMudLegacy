@@ -3,8 +3,8 @@
 #
 # For GNU make only.
 
-PROG    = mud-eve
-INCDIR  = ../include
+PROG    = mud-kit
+INCDIR  = ./include
 UTLSRC  = ./utils
 OBJDIR  = ./obj
 INSTDIR = ../bin
@@ -20,20 +20,20 @@ CC	= gcc-9
 MAKE    = make
 LD      = $(CC)
 
-OFLAGS  = -O0 -g -Wall -pipe
+OFLAGS  = -O0 -g -Wall -Wextra -Werror -pipe
 # OFLAGS  = -O -g -Wall -pipe
 
 INCLUDE = -I$(INCDIR)
 
-# MFLAGS: SYPARK RETURN_TO_QUIT INIT_BARE_HAND GHOST
+# MFLAGS: RETURN_TO_QUIT INIT_BARE_HAND GHOST
 #         OldMobileFormat OLD_DAM_MESSAGE OLD_PARRY
 #         OLD_MIRROR_IMAGE OldMobAct
 #
 # MFLAGS    = -DIMO=41 -DRETURN_TO_QUIT
 #
-# MFLAGS are moved to ../include/utils.h
+# MFLAGS are moved to "include/global.h"
 
-# Set initial gold and quest in "db.c"
+# Set initial gold and quest in "act.player.c"
 DFLAGS= -DBETA_TEST
 # DFLAGS=
 

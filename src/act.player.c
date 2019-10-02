@@ -288,6 +288,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	init_player(d->character);
 	STATE(d) = CON_QSTATE;
 	SEND_TO_Q("\r\n\r\n*** PRESS RETURN : ", d);
+	/*FALLTHRU*/
 	/* NOTE: FALL THRU */
 
     case CON_QSTATE:

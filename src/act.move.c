@@ -258,7 +258,7 @@ int search_door(struct char_data *ch, char *type, char *dir)
 void do_open(struct char_data *ch, char *argument, int cmd)
 {
     int door, other_room;
-    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN], buf[MAX_BUFSIZ];
+    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN], buf[MAX_LINE_LEN];
     struct room_direction_data *back;
     struct obj_data *obj;
     struct char_data *victim;
@@ -331,7 +331,7 @@ void do_open(struct char_data *ch, char *argument, int cmd)
 void do_close(struct char_data *ch, char *argument, int cmd)
 {
     int door, other_room;
-    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN], buf[MAX_BUFSIZ];
+    char type[MAX_LINE_LEN], dir[MAX_LINE_LEN], buf[MAX_LINE_LEN];
     struct room_direction_data *back;
     struct obj_data *obj;
     struct char_data *victim;
@@ -676,7 +676,7 @@ void do_leave(struct char_data *ch, char *argument, int cmd)
 
 void do_where(struct char_data *ch, char *argument, int cmd)
 {
-    char name[MAX_LINE_LEN], buffer[MAX_STRING_LENGTH], buf2[MAX_BUFSIZ];
+    char name[MAX_LINE_LEN], buffer[MAX_STR_LEN], buf2[MAX_LINE_LEN];
     struct char_data *i, *vic;
     int j, n;
     struct obj_data *k;
@@ -693,7 +693,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
 	    if( !vic || d->connected != CON_PLYNG || vic->in_room == NOWHERE )
 		continue;
 	    /* NOTE: check page buffer overflow */
-	    if ((buf - buffer + 100) > sizeof(buffer) )
+	    if (buf >  buffer + sizeof(buffer) - 100)
 		break;
 	    if (GET_LEVEL(ch) < IMO) { 
 		if (( world[vic->in_room].zone != world[ch->in_room].zone )
@@ -740,7 +740,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
 	}
 	else {
 	    /* NOTE: check page buffer overflow */
-	    if ((buf - buffer + 100) > sizeof(buffer) )
+	    if (buf >  buffer + sizeof(buffer) - 100)
 		break;
 	    sprintf(buf, "%2d: %-30s- %s [%d]\r\n", ++n,
 		( IS_NPC(i) ? i->player.short_descr : i->player.name ),
@@ -756,7 +756,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
     for (i = character_list; i; i = i->next)
 	for (j = 0; j < MAX_WEAR; ++j)
 	    if (i->equipment[j] && isname(name, i->equipment[j]->name)) {
-		if ((buf - buffer + 100) > sizeof(buffer))
+		if (buf >  buffer + sizeof(buffer) - 100)
 		    break;
 		sprintf(buf, "%2d: %s worn by %s.\n\r", ++n, 
 		    i->equipment[j]->short_description, GET_NAME(i));
@@ -765,7 +765,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
 
     for (k = object_list; k; k = k->next)
 	if (isname(name, k->name)) { 
-	    if ((buf - buffer + 100) > sizeof(buffer))
+	    if (buf >  buffer + sizeof(buffer) - 100)
 		break;
 	    if (k->carried_by)
 		sprintf(buf, "%2d: %s carried by %s.\n\r",

@@ -25,15 +25,16 @@ bin/
 src/[Oo]bj/
 [Tt]mp/
 
-users/boards/
-users/log/
-users/stash/
+users/
 
 # files to ignore
 
 src/.depend
-users/players*
-users/stash*
+src/tags
+lib/boards
+lib/log
+lib/stash*
+lib/players*
 run-mud
 log-check
 log-run

@@ -7,11 +7,11 @@
    this file is for version control of mud.
    and fileid is also used in 'show version'.
  */
-char fileid[] = "@(#) New Narai Clasic version v4.00  2019/09/30  by Cookie (cantata@gmail.com)\n\r"
-" New Narai 1998 version  v2.92.3 97/12/09  by Cookie.\n\r"
-" New Narai. version  v2.90   97/09/11  by cookie (cookie0@chollian.net)\n\r"
-" Greatly Improved    v2.00   94/10/10  by process(wdshin@eve)\n\r"
-"                     v1.13   94/04/13  by Source Manager Cold.\n\r" ; 
+char fileid[] = "@(#) KIT Clasic version v4.00  2019/10/03  by Cookie (cantata@gmail.com)\n\r"
+" New Narai 1998  v2.92.3   97/12/09  by Cookie.\n\r"
+" Forked from Narai  v2.90   97/09/11  by cookie (cookie0@chollian.net)\n\r"
+" Legacy v2.00   94/10/10  Greatly Improved by process(wdshin@eve)\n\r"
+"        v1.13   94/04/13  by Source Manager Cold.\n\r" ; 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -617,25 +617,23 @@ void do_show(struct char_data *ch, char *argument, int cmd)
     char arg[100], *fs, file_str[MAX_STRING_LENGTH];
     int topic;
     static char *show_list[] = { 
-	"", "help", "?", "news", "NEWS", "olds", "plans", 
-	"wizards", "wizlists", "credits", "motd", "versions" , "\n" }; 
+	"news", "NEWS", "oldnews", "plans", "wizards", "wizlists",
+       	"credits", "motd", "versions" , "help", "?", "", "\n" }; 
 #define TOPICS "help, news, old, plan, wizards, credits, motd and version"
     extern char motd[];			/* the messages of today	*/
 
     one_argument(argument, arg ); 
 
     switch( topic = search_block(arg, show_list, 0 )) {
-    case 0: 
-	send_to_char("SHow what? Try 'show <topic>'.\r\n", ch);
-	/* FALL THRU */
-    case 1:  case 2:
-	send_to_char( "Available topics: " TOPICS ".\r\n" , ch);
-	break; 
-
-    case 3:	case 4:    case 5:
+	case 0:	case 1:    case 2:  case 3:
 	/* NOTE: NEW! "old_news" Yesterday's news: archived news articles  */
 	/* NOTE:  static news[], news_old[] was too small. Use dynamic heap. */
-	strcpy( arg, ( topic == 5 ? NEWS_OLD_FILE : NEWS_FILE ));
+	if ( topic == 2 ) 
+	    strcpy( arg, NEWS_OLD_FILE);
+        else if ( topic == 3 )
+	    strcpy( arg, PLAN_FILE );
+	else 
+	    strcpy( arg, NEWS_FILE );
 	    
 	if (!(fs = file_to_string(arg, NULL )))
 	    return;
@@ -644,14 +642,7 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	free(fs);
 	break; 
 
-    case 6: 
-	if (!file_to_string(PLAN_FILE, file_str ))
-	    return;
-	send_to_char("\r\n", ch); 
-	page_string(ch->desc, file_str, 1);
-	break; 
-
-    case 7:	case 8:	    case 9:
+    case 4:	case 5:	    case 6:
 	/* NOTE: Wizard list/Credits page are merged to single "wizards" */ 
 	/* NOTE:    files are separated by form-feed(^L) char	*/
 	if(!file_to_string(WIZARDS_FILE, file_str))
@@ -665,11 +656,11 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	    send_to_char( file_str, ch );	/* NOTE: Wizards */
 	break; 
 
-    case 10:
+    case 7:
 	send_to_char( motd, ch );
 	break; 
 
-    case 11:
+    case 8:
 	if (GET_LEVEL(ch) >= IMO ) {
 	    send_to_char(fileid, ch);
 	    /* NOTE: show compile time */
@@ -680,7 +671,7 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	break;
 
     default:
-	send_to_char("Hmm.. Sorry, No such topic. Try 'show help'.\r\n", ch);
+	send_to_char( "Available topics: " TOPICS ".\r\n" , ch);
 	break;
     }
 } 
@@ -727,14 +718,14 @@ extern void send_to_outdoor(char *mesg);
 void do_weather(struct char_data *ch, char *argument, int cmd)
 {
     char buf[100], buf2[100];
-    char static *sky_look[4] =
+    static char *sky_look[4] =
     {
 	"cloudless",
 	"cloudy",
 	"rainy",
 	"lit by flashes of lightning"
     };
-    char static *sky_look_han[4] =
+    static char *sky_look_han[4] =
     {
 	"하늘이 구름 한점 없이 맑습니다.",
 	"하늘에 구름이 조금 있습니다.",

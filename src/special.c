@@ -437,7 +437,7 @@ void do_request(struct char_data *ch, char *arg, int cmd)
     if (ch->quest.type > 0) {
 
         /*      if error occur, can do request. */
-	if (ch->quest.data == '\0' ) {
+	if (ch->quest.data == 0 ) {
 	    ch->quest.type = 0;
 	    return;
 	}

@@ -486,7 +486,7 @@ void hcontrol_list_houses(struct char_data *ch)
     int i, j;
     char *timestr;
     char built_on[128], last_pay[128], own_name[128];
-    char buf[MAX_OUT_LEN], buf2[MAX_BUFSIZ];
+    char buf[MAX_OUT_LEN], buf2[MAX_LINE_LEN];
 
     if (!num_of_houses) {
 	send_to_char("No houses have been defined.\r\n", ch);

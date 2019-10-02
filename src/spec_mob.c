@@ -308,6 +308,7 @@ int Quest_bombard(struct char_data *ch, int cmd, char *arg)
 	break;
     case 9:
 	do_punch(ch, GET_NAME(vict), 0);
+	break;
     case 10:
     case 11:
 	hit(ch, vict, TYPE_UNDEFINED);
@@ -417,20 +418,24 @@ int deathcure(struct char_data *ch, int cmd, char *arg)
 	do_say(ch, "I admire Dangun the greatgod !", 0);
 	return (1);
     case 8:
-	act("$n disintegrates you to thounsand particles with his pierce.",
-	    1, ch, 0, 0, TO_ROOM);
-    case 9:
-	act("$n decimates you to micro mesh powder with his pound.",
-	    1, ch, 0, 0, TO_ROOM);
-    case 10:
-	act("$n massacres you to small fragment with his slash.",
-	    1, ch, 0, 0, TO_ROOM);
+	act("$n try to steal your inventory .", 1, ch, 0, 0, TO_ROOM);
 	return (1);
-    case 11:
+    case 9:
 	act("$n hashes you to bloody sushi pieces with his slash.",
 	    1, ch, 0, 0, TO_ROOM);
+	/*FALLTHRU*/
+    case 10:
+	act("$n decimates you to micro mesh powder with his pound.",
+	    1, ch, 0, 0, TO_ROOM);
+	/*FALLTHRU*/
+    case 11:
+	act("$n disintegrates you to thounsand particles with his pierce.",
+	    1, ch, 0, 0, TO_ROOM);
+	/*FALLTHRU*/
     case 12:
-	act("$n try to steal your inventory .", 1, ch, 0, 0, TO_ROOM);
+    case 13:
+	act("$n massacres you to small fragment with his slash.",
+	    1, ch, 0, 0, TO_ROOM);
 	return (1);
     default:
 	return (0);
@@ -752,11 +757,12 @@ int super_musashi(struct char_data *ch, int cmd, char *arg)
 	case 10:
 	case 11:
 	case 12:
-	    do_say(ch, "Crush Armor    ..", 0);
 	    if (!vict)
 		break;
-	    send_to_char("You feel shrink.\n\r", vict);
 	    if (!affected_by_spell(vict, SPELL_CRUSH_ARMOR)) {
+		do_say(ch, "Crush Armor    ..", 0);
+		send_to_char("You feel shrink.\n\r", vict);
+
 		af.type = SPELL_CRUSH_ARMOR;
 		af.duration = 20;
 		af.modifier = GET_LEVEL(ch) / 4 * (-1);
@@ -766,7 +772,9 @@ int super_musashi(struct char_data *ch, int cmd, char *arg)
 		af.location = APPLY_AC;
 		af.modifier = GET_LEVEL(ch) + 20;
 		affect_to_char(vict, &af);
+		return (1);
 	    }
+	    /*FALLTHRU*/
 	case 13:
 	case 14:
 	case 15:

@@ -364,6 +364,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 	else if ( action )
 	    MOB_STEP(ch) = 0;
 
+	/*FALLTHRU*/ 
 	/* NOTE: FALL THRU*/
     case 2:
 	if ( action == CMD_ASK) {	/* ask */

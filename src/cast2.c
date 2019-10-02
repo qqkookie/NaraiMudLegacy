@@ -682,6 +682,7 @@ void cast_enchant_person(byte level, struct char_data *ch, char *arg, int type,
 	if (!tar_ch)
 	    return;
 	spell_enchant_person(level, ch, tar_ch, 0);
+	break;
     default:
 	log("Serious screw-up in enchant person!");
 	break;

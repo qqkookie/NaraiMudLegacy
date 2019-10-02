@@ -1126,7 +1126,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     if (ch->in_room != victim->in_room) {
 	/* NOTE: Victim fleed , maybe. Let's confirm it. */
 	/* NOTE: This is for confirm, not DEBUGGING. Remove when confirmed. */
-	char buf1[MAX_OUT_LEN], buf2[MAX_LINE_LEN];
+	char buf1[MAX_LINE_LEN], buf2[MAX_NAME_LEN];
 
 	if (ch->in_room && victim->in_room)
 	    sprintf(buf2, " at ch = %d, vic = %d",

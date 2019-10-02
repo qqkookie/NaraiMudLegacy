@@ -25,6 +25,9 @@ int main(int argc,char *argv[])
 	int items[MAX_ITEMS];
 	int no_item=0,i,old_item=0;
 
+	if (argc !=2 )
+	    exit(1);
+
 	fp=fopen(argv[1],"r");
 	if(fp==NULL)
 		exit(1);
@@ -116,7 +119,7 @@ int main(int argc,char *argv[])
 	}
 	qsort(items,no_item,sizeof(int),com_func);
 
-	for(i=0;i<strlen(zonename);i++)
+	for(i=0;i<(int) strlen(zonename);i++)
 	{
 		if(zonename[i]==' ') zonename[i]='_';
 	}

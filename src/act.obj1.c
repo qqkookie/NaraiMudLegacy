@@ -428,7 +428,7 @@ void give_gold(struct char_data *ch, struct char_data *vict, int amount )
 void do_give(struct char_data *ch, char *argument, int cmd)
 {
     char obj_name[MAX_LINE_LEN], vict_name[MAX_LINE_LEN];
-    char arg[MAX_LINE_LEN], buf[MAX_BUFSIZ];
+    char arg[MAX_LINE_LEN], buf[MAX_LINE_LEN];
     int amount;
     struct char_data *vict;
     struct obj_data *obj;

@@ -13,7 +13,7 @@
 
 #define MAX_PC 1000
 
-int main(int argc, char **argv)
+int main()
 {
     char buf[100], **pl;
     int all, killed, duped ;

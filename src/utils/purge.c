@@ -49,8 +49,7 @@ int duple( struct char_file_u *st)
     return(0);
 }
 	 
-void delete_if_true(char *name, 
-		    int (*test)(struct char_file_u *st), int del_stash )
+void delete_if_true( int (*test)(struct char_file_u *st), int del_stash )
 {
     char 	buf[100];
     struct char_file_u  st;
@@ -99,7 +98,7 @@ void extract_it(char *name)
     }
 }
 
-int main(int argc, char **argv)
+int main()
 {
     char 	buf[100];
 
@@ -124,7 +123,7 @@ int main(int argc, char **argv)
 	fgets(buf, sizeof(buf) -1, stdin);
 	strcpy(dname, buf);
 	if ( strlen(buf) >= 2 )
-	    delete_if_true(buf, by_dname, 1); 
+	    delete_if_true( by_dname, 1); 
 	break;
 
     case 'P' : 
@@ -135,13 +134,13 @@ int main(int argc, char **argv)
 	printf( "\nPlayers not played within (%d) DAYS...\n", deadline);
 	deadline *= SECPERDAY ;
 	deadline = time(0) - deadline ;
-	delete_if_true(buf, by_date, 1 ); 
+	delete_if_true( by_date, 1 ); 
 	break;
 
     case 'R' : 
 	printf( "\nDuplicated Entries...\n");
 	/* dupcated name will NOT delete stash file. */
-	delete_if_true(buf, duple, 0 ); 
+	delete_if_true( duple, 0 ); 
 	break;
 
     case 'E' : 

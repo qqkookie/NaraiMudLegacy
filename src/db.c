@@ -1229,7 +1229,7 @@ char *fread_string(FILE * fl)
     return (rslt);
 } 
 
-/* NOTE: Increase max buf size to 10-fold (30K), and save memory, too  */
+/* NOTE: Increase max buf size to 10-fold (20K), and save memory, too  */
 /*     If 2nd parameter is null, use malloc()'ed memory and return it.   */
 /* read contents of a text file, and place in buf */
 char *file_to_string(char *name, char *sbuf)
@@ -1247,7 +1247,7 @@ char *file_to_string(char *name, char *sbuf)
 	buflen = MAX_STRING_LENGTH*10;
     }
     *buf = '\0';
-    bp = buf; buflen = MAX_STRING_LENGTH;
+    bp = buf; 
 
     if (!(fl = fopen(name, "r"))) {
 	/* NOTE: Log failed file name. */
@@ -1256,11 +1256,11 @@ char *file_to_string(char *name, char *sbuf)
 	return (NULL);
     }
 
-    while( fgets( bp, 198, fl) > 0 ) { 
+    while( fgets( bp, MAX_LINE_LEN-3, fl) != NULL ) { 
 	bp += strlen(bp);
 	strcpy( bp, "\r" );
 	bp ++;
-	if ( bp - buf + 200 > buflen ) {
+	if ( bp > buf + buflen - MAX_LINE_LEN ) {
 	    if ( sbuf ) {
 		log("fl->strng: string too big (db.c, file_to_string)");
 		buf[40] = '\0';

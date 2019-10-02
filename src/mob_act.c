@@ -114,8 +114,9 @@ void mobile_activity(void)
 		REMOVE_BIT(ch->specials.act, ACT_SPEC);
 	    }
 	    else {
-		if ((*mob_index[ch->nr].func) (ch, 0, ""))
-		    /* continue; */ ;
+		// if ((*mob_index[ch->nr].func) (ch, 0, ""))
+		//    /* continue; */ ;
+		(*mob_index[ch->nr].func) (ch, 0, "");
 	    }
 	}
 	if (AWAKE(ch) && !(ch->specials.fighting)) { 
@@ -1350,6 +1351,7 @@ int paladin(struct char_data *ch, int cmd, char *arg)
     case 22:
     case 23:
 	do_light_move(ch, "", 0);
+	/*FALLTHRU*/
     case 24:
     case 25:
 	act("$n utters the words 'heal'.", 1, ch, 0, 0, TO_ROOM);
@@ -1424,16 +1426,19 @@ int dragon(struct char_data *ch, int cmd, char *arg)
 	cast_fire_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);
 	if (mh < 400)
 	    return TRUE;
+	/*FALLTHRU*/
     case 2:
 	act("$n utters the words 'qassir porolo'.", 1, ch, 0, 0, TO_ROOM);
 	cast_gas_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);
 	if (mh < 400)
 	    return TRUE;
+	/*FALLTHRU*/
     case 3:
 	act("$n utters the words 'qassir relata'.", 1, ch, 0, 0, TO_ROOM);
 	cast_lightning_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);
 	if (mh < 400)
 	    return TRUE;
+	/*FALLTHRU*/
     case 4:
 	act("$n utters the words 'qassir moolim'.", 1, ch, 0, 0, TO_ROOM);
 	cast_frost_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);

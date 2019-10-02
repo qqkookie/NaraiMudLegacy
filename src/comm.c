@@ -79,7 +79,7 @@ int boottime;
 int no_echo = 0;
 
 /* reboot_time = 24 hour */
-u_long reboot_time = 86400;
+int reboot_time = 86400;
 
 int maxdesc, avail_descs;
 int tics = 0;		/* for extern checkpointing */
@@ -151,18 +151,18 @@ int main(int argc, char **argv)
     if (argc == 2) {
 	if (!ISDIGIT(*argv[1])) {
 	    fprintf(stderr, "Usage: %s [ port # ]\n", argv[0]);
-	    exit(0);
+	    exit(1);
 	}
 	else if ((port = atoi(argv[1])) <= 1024) {
 	    fprintf(stderr, "Illegal port #\n");
-	    exit(0);
+	    exit(1);
 	}
     }
     sprintf(buf, "Running game on port %d.", port);
     log(buf);
     if (chdir(dir) < 0) {
-	perror("chdir");
-	exit(0);
+	// perror("chdir");
+	// exit(1);
     }
     srandom(boottime = time(0));
     run_the_game(port);
@@ -175,7 +175,7 @@ void run_the_game(int port)
     int i;
     void signal_setup(void);
     void saveallplayers(void);
-    void log_pid(void);
+    void log_pid(char * file);
     int init_socket(int port);
     void no_echo_local(int fd);
     void game_loop(int s);
@@ -189,8 +189,10 @@ void run_the_game(int port)
     log("Opening mother connection.");
     s = init_socket(port);
     boot_db();
-    /* NOTE: write out my pid to "lib/pid" file */
-    log_pid();
+    /* NOTE: write out my pid to "lib/pid-port#" file */
+    char pidfile[MAX_NAME_LEN];
+    sprintf(pidfile, "mud-%d.pid", port);
+    log_pid(pidfile);
 
     /* NOTE: init ring of free output buffer before entering game   */
     /*	     At first, free ring is FULL state. (all buffers are free)  */
@@ -210,6 +212,7 @@ void run_the_game(int port)
     saveallplayers();
     close_sockets(s);
     shutdown(s, 2);
+    unlink(pidfile);
     log("Normal termination of game.");
 }
 
@@ -1072,7 +1075,7 @@ void close_socket(struct descriptor_data *d)
     if (d->str && *(d->str)) {
 	free(*(d->str));
 	free(d->str);
-	d->str = 0;
+	d->str = NULL;
     }
     
     if (d->showstr_head) {
@@ -1179,7 +1182,7 @@ void record_player_number()
     log(line); 
 }
 
-/*
+#ifdef UNUSED_CODE
 #if defined(__CYGWIN32__) && !defined(sigmask)
 #include <signal.h>
 static _Sigprocmask( int how, int mask )
@@ -1194,7 +1197,7 @@ static _Sigprocmask( int how, int mask )
 #define sigsetmask(mask)  _Sigprocmask( SIG_SETMASK, (mask) )
 
 #endif
-*/
+#endif // UNUSED_CODE
 
 #undef siginterrupt
 
@@ -1221,7 +1224,7 @@ int sigsetmask(unsigned mask)
 
     if ( mask ) {
 	sigprocmask(SIG_SETMASK, NULL, &set);
-	for (int sig = 1; mask ; sig++, mask >>=1)
+	for (int sig = 1; mask ; sig++, mask >>= 1)
 	    if ( mask & 0x01 )
 		sigaddset(&set, sig);
     }
@@ -1326,16 +1329,16 @@ void logsig(int sig)
 }
 
 /* NOTE: I need to know pid , write my pid number to "lib/pid" file   */
-void log_pid(void)
+void log_pid(char * file)
 {
     FILE *pidfile;
     char buf[80];
     pid_t pid = getpid();
 
-    sprintf(buf, "INFO: PID: %d\n", pid);
+    sprintf(buf, "Writing pid file: %s : %d", file, pid);
     log(buf);
 
-    if ((pidfile = fopen("pid", "w"))) {
+    if ((pidfile = fopen(file, "w"))) {
 	fprintf(pidfile, " %d \n", pid);
 	fclose(pidfile);
     }
