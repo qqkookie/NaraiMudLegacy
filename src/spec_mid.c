@@ -16,6 +16,7 @@
 #include "play.h"
 #include "actions.h"
 #include "gamedb.h"
+#include "etc.h"
 
 
 #define FUDGE (100+dice(6,20))
@@ -321,7 +322,7 @@ int bank(struct char_data *ch, int cmd, char *arg)
 		return (TRUE);
 	    }
 	    /* NOTE: prevent purse (coin you carry) overflow */
-	    if (GET_GOLD(ch) + amt < 0) {;
+	    if (GET_GOLD(ch) + amt < GET_GOLD(ch)) {
 		send_to_char("The banker says 'Your wallet will burst.'\n\r", ch);
 		return (TRUE);
 	    }
@@ -358,15 +359,16 @@ int dump(struct char_data *ch, int cmd, char *arg)
     for (k = world[ch->in_room].contents; k; k = world[ch->in_room].contents) {
 	sprintf(buf, "The %s vanish in a puff of smoke.\n\r", fname(k->name));
 	for (tmp_char = world[ch->in_room].people; tmp_char;
-	     tmp_char = tmp_char->next_in_room)
+	     tmp_char = tmp_char->next_in_room) {
 	    if (CAN_SEE_OBJ(tmp_char, k))
 		send_to_char(buf, tmp_char);
+	}
 
 	/* NOTE: Hard currency is more valuable than item  */
 	if( k->obj_flags.type_flag == ITEM_MONEY )
-	    value += k->obj_flags.cost ;
+	    value += k->obj_flags.cost*2 ;
 	else 
-	    value += k->obj_flags.cost /2; 
+	    value += k->obj_flags.cost; 
 	extract_obj(k);
     }
     if (value > 0) {
@@ -375,7 +377,7 @@ int dump(struct char_data *ch, int cmd, char *arg)
 	acthan("$n has been awarded for being a good citizen.",
 	       "$n님이 착한 시민상을 받았습니다", TRUE, ch, 0, 0, TO_ROOM);
 
-	ch->points.exp += (value * 2)/3;
+	ch->points.exp += value/3;
     }
     return TRUE;
 } 
@@ -960,6 +962,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 /* ******************************************************/
 /* shuttle bus to KAIST */
 
+/*
 char *msg_for_taxi[] =
 {
     "NOT-DEFINED",
@@ -967,11 +970,19 @@ char *msg_for_taxi[] =
     "Welcome to Process' house\n\r"
 };
 
+char *taxi_name[] =
+{
+    "NOT-DEFINED",
+    "kaist",
+    "process",
+};
+*/
+
 char *where_to_taxi[] =
 {
     "NOT-DEFINED",
     "KAIST",
-    "PROCESS House",
+    "Process' House",
 };
 
 /* NOTE: taxi fare should be more realistic :P  */
@@ -985,8 +996,8 @@ int charge_taxi[] =
 int room_taxi[] =
 {
     0,
-    12401,	/* NOTE: KAIST zone renumber 31001->12401  */
-    2000
+    TAXI_KAIST_ENTRY,	/* NOTE: KAIST zone renumber 31001->12401  */
+    TAXI_PROCESS_ENTRY,
 };
 
 int level_taxi[] =
@@ -998,59 +1009,63 @@ int level_taxi[] =
 
 int taxi(struct char_data *ch, int cmd, char *arg)
 {
-    char buf[MAX_STRING_LENGTH];
-    int room_number;
+    char buf[MAX_LINE_LEN], *where_to;
+    int charge;
     int taxi_num;
     int to_room;
 
     if (IS_NPC(ch))
 	return FALSE;
-    room_number = world[ch->in_room].number;
-#define TO_KAIST 3014
-#define TO_PROCESS 3502
-    switch (room_number) {
-    case TO_KAIST:
-	taxi_num = 1;
-	break;
-    case TO_PROCESS:
-	taxi_num = 2;
-	break;
-    default:
+    if (cmd != CMD_TAXI) 	/* taxi  or call */
 	return FALSE;
-    }
-    to_room = real_room(room_taxi[taxi_num]);
 
-    if (cmd == CMD_CALL) {	/* call */
-	if (GET_LEVEL(ch) < level_taxi[taxi_num]) {
-	    send_to_char("You cannot ride this taxi.sorry", ch);
-	    return TRUE;
-	}
-	send_to_char(msg_for_taxi[taxi_num], ch);
-	send_to_char("Sit down on your seat,and wait for a while\n\r", ch);
-	sprintf(buf, "The taxi with %s starts to leave for %s.", GET_NAME(ch), where_to_taxi[taxi_num]);
-	act(buf, TRUE, ch, 0, 0, TO_ROOM);
-	char_from_room(ch);
-	sprintf(buf, "OK. Here is %s.\n\r", where_to_taxi[taxi_num]);
-	send_to_char(buf, ch);
-	sprintf(buf, "The charge is %d.\n\r", charge_taxi[taxi_num]);
-	send_to_char(buf, ch);
-	if (GET_GOLD(ch) < charge_taxi[taxi_num]) {
-	    send_to_char("The taxi driver slaps you!!!\n\r", ch);
-	    send_to_char("Get the fuck out!!\n\r", ch);
-	    GET_HIT(ch) = 1;
-	    GET_MOVE(ch) = 1;
-	    /* NOTE: taxi driver takes away all the money you have */
-	    GET_GOLD(ch) = 0;
-	    char_to_room(ch, real_room(3001));
-	    do_look(ch, "", 15);
-	    return TRUE;
-	}
-	GET_GOLD(ch) -= charge_taxi[taxi_num];
-	char_to_room(ch, to_room);
+    // room_number = world[ch->in_room].number;
+    // case ROOM_TAXI_STOP:
+
+    arg = one_argument(arg, buf);
+
+    if ( strcasecmp(buf, "kaist") ==0 ) 
+	taxi_num = 1; 
+    else if ( strcasecmp(buf, "process") == 0)
+	taxi_num = 2;
+    else  {
+	send_to_char("To where? 'taxi kaist' or 'taxi process'.\n\r", ch);
+	return TRUE;
+    }
+    where_to =  where_to_taxi[taxi_num];
+
+    to_room = real_room(room_taxi[taxi_num]);
+    charge =  charge_taxi[taxi_num];
+
+    if (GET_LEVEL(ch) < level_taxi[taxi_num]) {
+	send_to_char("You cannot ride this taxi. Sorry", ch);
+	return TRUE;
+    }
+    sprintf(buf, "Welcome to %s!!!\n\r", where_to);
+    send_to_char(buf, ch);
+    send_to_char("Sit down on your seat,and wait for a while\n\r", ch);
+    sprintf(buf, "The taxi with %s starts to leave for %s.", GET_NAME(ch), where_to);
+    act(buf, TRUE, ch, 0, 0, TO_ROOM);
+    char_from_room(ch);
+    sprintf(buf, "OK. Here is %s.\n\r", where_to);
+    send_to_char(buf, ch);
+    sprintf(buf, "The charge is %d.\n\r", charge);
+    send_to_char(buf, ch);
+    if (GET_GOLD(ch) < charge_taxi[taxi_num]) {
+	send_to_char("The taxi driver slaps you!!!\n\r", ch);
+	send_to_char("Get the fuck out!!\n\r", ch);
+	GET_HIT(ch) = 1;
+	GET_MOVE(ch) = 1;
+	/* NOTE: taxi driver takes away all the money you have */
+	GET_GOLD(ch) = 0;
+	char_to_room(ch, real_room(MID_TEMPLE));
 	do_look(ch, "", 15);
 	return TRUE;
     }
-    return FALSE;
+    GET_GOLD(ch) -= charge;
+    char_to_room(ch, to_room);
+    do_look(ch, "", 15);
+    return TRUE;
 }
 
 int pet_shops(struct char_data *ch, int cmd, char *arg)

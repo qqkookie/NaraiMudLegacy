@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <string.h> 
 #include <stdlib.h>
+#include <time.h>
 
 #include "char.h"
 #include "object.h"
@@ -97,7 +98,7 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
     else if (*cp == '\0' || strncmp(cp, "/last", 5) == 0)
 	do_lastchat(ch, argument, cmd); 
     else { 
-	sprintf(buf, "%s> %s\r\n", GET_NAME(ch), argument);
+	sprintf(buf, "%s > %s\r\n", GET_NAME(ch), argument);
 	for (i = descriptor_list; i; i = i->next)
 	    if ((i->connected == CON_PLYNG) && (!i->original)
 		    && !IS_ACTPLR(i->character, PLR_NOCHAT))
@@ -140,7 +141,9 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
 		    && !IS_SET(i->character->specials.act, PLR_NOSHOUT))
 		send_to_char(buf, i->character);
 
-	chat_history(buf) ;
+	// NOTE: exclude NPC shouting from chat history
+	if (!IS_NPC(ch))
+	    chat_history(buf) ;
     }
 }
 
@@ -149,12 +152,30 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
 void chat_history(char *str)
 {
     /* assert(his_end >= 0 && his_end < LASTCHAT_SIZE); */
-    strcpy(history[his_end], str);
+    // NOTE: add date time
+    char stime[MAX_NAME_LEN], buf[MAX_LINE_LEN];
+    time_t tt = time(0);
+    strftime(stime, MAX_NAME_LEN-1, "%F %H:%M", localtime(&tt));
+    sprintf(buf, "%s  %s", stime, str);
+
+    // NOTE: skip year and date part. They are for chatlog only.
+    strcpy(history[his_end], buf+12);
+
     his_end++;
     if ((his_end % LASTCHAT_SIZE) == (his_start % LASTCHAT_SIZE)) {
 	his_end = his_start % LASTCHAT_SIZE;
 	his_start = (his_start + 1) % LASTCHAT_SIZE;
     } 
+
+#ifdef	CHATLOG
+    // NOTE: log chat and shout
+    static FILE *chatlogfp = NULL;
+    if (chatlogfp == NULL)
+	chatlogfp = fopen(CHATLOG, "a");
+    fputs(buf, chatlogfp);
+    fflush(chatlogfp);
+#endif
+
 }
 
 void do_lastchat(struct char_data *ch, char *argument, int cmd)
@@ -239,8 +260,8 @@ void do_reply(struct char_data *ch, char *argument, int cmd)
 void do_send(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *vict;
-    char *s, name[100], message[100], paint_name[MAX_OUT_LEN]; 
-    char  buf[MAX_BUFSIZ], paint[MAX_STRING_LENGTH];
+    char *s, name[MAX_NAME_LEN], message[MAX_NAME_LEN], paint_name[MAX_LINE_LEN]; 
+    char  buf[MAX_LINE_LEN], paint[MAX_STR_LEN];
 
     if (is_dumb(ch)) return;
     half_chop(argument, name, message);
@@ -256,7 +277,7 @@ void do_send(struct char_data *ch, char *argument, int cmd)
     else {
 	/* NOTE: get name of file to send from db.c module */
 	sprintf(paint_name, "%s/%s", lookup_db("paints") , message); 
-	if (file_to_string( paint_name, paint) == NULL)
+	if (file_to_string(paint_name, paint) == NULL)
 	    send_to_char("No such paint prepared.\n\r", ch);
 	else if ((IS_SET(vict->specials.act, PLR_NOTELL))  &&
 		((GET_LEVEL(ch) < IMO) || (GET_LEVEL(ch) <= GET_LEVEL(vict))))
@@ -311,7 +332,7 @@ void do_gtell(struct char_data *ch, char *argument, int cmd)
 void do_whisper(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *vict;
-    char name[100], message[MAX_BUFSIZ], buf[MAX_BUFSIZ];
+    char name[100], message[MAX_LINE_LEN], buf[MAX_LINE_LEN];
     char **actstr ; 
 
     static char  *ask_str[] = { 

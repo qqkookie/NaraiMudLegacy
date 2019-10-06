@@ -3,6 +3,12 @@
    *  Usage: connection structures and messaging 			   *
    ************************************************************************* */ 
 
+// Kuldge to convert deprecated sigsetmask() call to sigprocmask() call
+
+#define  sigsetmask(m) __mysigsetmask(m)
+
+extern int sigsetmask(int mask);
+
 /* ================= Connection Descriptor =================== */
 
 /* NOTE: For switch/return char  */

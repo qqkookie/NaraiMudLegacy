@@ -70,7 +70,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
 	/* See if char is carrying a wing */
 	for (obj = ch->carrying; obj; obj = obj->next_content) {
 	    obj_number = GET_OBJ_VIRTUAL(obj);
-	    if (obj_number == OBJ_PEGASUS_WING || obj_number == OBJ_FEATHER)
+	    if (obj_number == OBJ_PEGASUS_WING || obj_number == OBJ_BIRD_FEATHER)
 		/* Wings of Pegasus  and feather */
 		has_wing = TRUE;
 	}

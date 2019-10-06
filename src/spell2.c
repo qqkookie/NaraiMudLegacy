@@ -285,7 +285,8 @@ void spell_create_food(byte level, struct char_data *ch,
     obj_to_room(tmp_obj, ch->in_room);
 
     tmp_obj->item_number = -1;
-    // Rent BUG FIX!
+    
+    // NOTE: Rent BUG FIX!!!
     SET_BIT(tmp_obj->obj_flags.extra_flags, ITEM_NORENT);
 
     act("$p suddenly appears.", TRUE, ch, tmp_obj, 0, TO_ROOM);
@@ -777,7 +778,7 @@ void spell_enchant_weapon(byte level, struct char_data *ch,
 	    if (number(0, 1800) == 444) {
 		obj->obj_flags.value[1] *= (2 + number(0, 4));
 		act("$p laughs evily. 'FU HA HA HA'", FALSE, ch, obj, 0, TO_CHAR);
-		/* NOTE: Doubious syntex */
+		/* NOTE: Doubious syntax */
 		/* GET_HIT(ch) =- 3; */
 		/* NOTE: Punish more severly */
 		GET_HIT(ch) = GET_HIT(ch) / 2 - 1000;

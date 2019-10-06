@@ -158,7 +158,7 @@ char *spell_alias[] = {
     "co",	"cone of ice",
     "fh",	"full heal",
     "full",	"full heal",
-    "dev",	"detect evil",
+    "dali",	"detect align",
     "dinv",	"detect invisible",
     "enwe",	"enchant weapon",
     "enar",	"enchant armor",
@@ -184,9 +184,8 @@ int use_mana(struct char_data *ch, int sn)
 
 void say_spell(struct char_data *ch, int si)
 {
-    char buf[MAX_LINE_LEN], splwd[MAX_LINE_LEN];
-    char buf2[MAX_OUT_LEN];
-
+    char buf[MAX_LINE_LEN], buf2[MAX_LINE_LEN];
+    char splwd[MAX_NAME_LEN], obfus[100];
     int j, offs;
     struct char_data *temp_char;
 
@@ -259,14 +258,14 @@ void say_spell(struct char_data *ch, int si)
     while (*(splwd + offs)) {
 	for (j = 0; *(syls[j].org); j++)
 	    if (strncmp(syls[j].org, splwd + offs, strlen(syls[j].org)) == 0) {
-		strcat(buf, syls[j].new);
+		strcat(obfus, syls[j].new);
 		if (strlen(syls[j].org))
 		    offs += strlen(syls[j].org);
 		else
 		    ++offs;
 	    }
     }
-    sprintf(buf2, "$n utters the words, '%s'", buf);
+    sprintf(buf2, "$n utters the words, '%s'", obfus);
     /* NOTE: spells index starts from 1, not zero.   */
     sprintf(buf, "$n utters the words, '%s'", spells[si]);
     for (temp_char = world[ch->in_room].people;
@@ -343,6 +342,11 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
     /*  SIDE EFFECTS: Single word spell don't need quation. (cast sanc)
 	   No complaint about missing quatation. */
     argument = one_argument(argument, name);
+    // NOTE: Replace '-', '_' with space, 'full-heal' => 'full heal'
+    char *cp = argument;
+    while(*++cp)
+	if (*cp == '-'  || *cp == '_') 
+	    *cp = ' ';
 
     if (!*name ) {
 	send_to_char("Cast which what where?\n\r", ch);
@@ -455,7 +459,8 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
     if (!tar_char && !tar_obj && !IS_SET(spell_info[spl].targets, TAR_IGNORE)) {
 	if (*name)
 		send_to_char("Say what?\n\r", ch);
-	else {	/* Nothing was given as argument */
+	// else {	/* Nothing was given as argument */
+	else if (!IS_NPC(ch)) {
 	    if (spell_info[spl].targets < TAR_OBJ_INV)
 		send_to_char("Who should the spell be cast upon?\n\r", ch);
 	    else 

@@ -355,7 +355,7 @@ char *alias[] = {
     "f",	"flee",
     "g",	"get",
     "h",	"h",
-    "j",	"junk",
+    "j",	"j",
     "k",	"kill",
     "m",	"multi",
     "o",	"open",
@@ -381,7 +381,7 @@ char *alias[] = {
     "og",	"open gate",
     "xc",	"examine corpse",
     "gac",	"get all corpse",
-    "re",	"rescue",
+    "res",	"rescue",
     "drs",	"drink sundew",
     "xh",	"examine holding",
     "wh",	"wear holding",
@@ -393,22 +393,22 @@ char *alias[] = {
     "asl",	"assist leader",
 
     "id",	"cast 'identify'",
-    "sol",	"quaff solar",
-    "rr",	"recite recall",
+    "solar",	"quaff solar",
+    "rrr",	"recite recall",
     "word",	"cast 'word'",
     "zzz",	"cast 'sleep' ",
     "hh",	"cast 'self heal'",
     "he",	"cast 'heal' ",
-    "fh",	"cast 'full heal' ",
-    "san",	"cast 'sanc' ",
-    "arm",	"cast 'armor' ",
+    "hhh",	"cast 'full heal' ",
+    "sanc",	"cast 'sanc' ",
+    "armor",	"cast 'armor' ",
     "has",	"cast 'haste' ",
-    "jh",	"cast 'harm' ",
-    "jc",	"cast 'cone' ",
-    "fs",	"cast 'firestorm'",
+    "harm",	"cast 'harm' ",
+    "cone",	"cast 'cone' ",
+    "fire",	"cast 'firestorm'",
     "li",	"light",
-    "sh",	"shouryuken",
-    "sp",	"spin", 
+    "sho",	"shouryuken",
+    "spin",	"spin", 
     "\n",	"\n",
 };
 
@@ -605,7 +605,7 @@ int special(struct char_data *ch, int cmd, char *arg )
 
     /* special in mobile present? */
     for (k = world[ch->in_room].people; k; k = k->next_in_room)
-	if (IS_NPC(k) && k->nr >= 0 )	/* NOTE: It was IS_MOB(ch) */
+	if (IS_MOB(k) && k->nr >= 0 )	/* NOTE: not IS_NPC(ch) */
 	    if (mob_index[k->nr].func)
 		if ((*mob_index[k->nr].func) (ch, cmd, arg))
 		    return (1);
@@ -1038,7 +1038,8 @@ void assign_command_pointers(void)
     COMMANDO( "show", CMD_SHOW, POS_SLEEPING, do_show, 1, 1, 1, 1);
     COMMANDO( "power bash", CMD_POWER_BASH, POS_FIGHTING, do_power_bash, 15, 15, 15, 15);
     COMMANDO( "evil strike", CMD_EVIL_STRIKE, POS_FIGHTING, do_evil_strike, 25, 25, 25, 25);
-    COMMANDO( "call", CMD_CALL, POS_STANDING, do_not_here, 1, 1, 1, 1);
+    // NOTE: 'call' => 'taxi <zone>' ('taxi kaist', 'taxi process') 
+    COMMANDO( "taxi", CMD_TAXI, POS_STANDING, do_not_here, 1, 1, 1, 1);
     COMMANDO( "charge", CMD_CHARGE, POS_FIGHTING, do_charge, 20, 20, 20, 20); 
     /* NOTE: 'solo' command is substituted by 'set solo on/off'.  */
     /* COMMANDO(296, POS_STANDING, do_solo, 1, 1, 1, 1); */
@@ -1061,6 +1062,8 @@ void assign_command_pointers(void)
     COMMANDO( "hcontrol", CMD_HCONTROL, POS_STANDING, do_hcontrol, IMO +3, IMO + 3, IMO + 3, IMO + 3);
     /* NOTE: NEW!!! track command. */
     COMMANDO( "track", CMD_TRACK, POS_STANDING, do_track, 20, 20, 1, 10);
+    // NOTE: call command is obsolete.
+    COMMANDO( "call", CMD_TAXI, POS_STANDING, do_not_here, 1, 1, 1, 1);
     /* NOTE: Mark end of valid cmd_info[] */
     COMMANDO(NULL, -1, 0, NULL, 0, 0, 0, 0);
 }

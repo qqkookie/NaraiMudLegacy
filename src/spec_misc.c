@@ -34,13 +34,13 @@ int special_damage(struct char_data *ch, struct char_data *victim,
                  are added independently.   */ 
     if ( (ch->equipment[WIELD]
 	    && ch->equipment[WIELD]->item_number >= 0
-	    && GET_OBJ_VIRTUAL(ch->equipment[WIELD]) == 11126))
+	    && GET_OBJ_VIRTUAL(ch->equipment[WIELD]) == OBJ_SON_OGONG_BONG))
 	if (number(1, 10) >= 8)
 	    dam_add += dice(ch->equipment[WIELD]->obj_flags.value[1],
 			ch->equipment[WIELD]->obj_flags.value[2]);
      if ((ch->equipment[HOLD]
 	    && ch->equipment[HOLD]->item_number >= 0
-	    && GET_OBJ_VIRTUAL(ch->equipment[HOLD]) == 11126)) 
+	    && GET_OBJ_VIRTUAL(ch->equipment[HOLD]) == OBJ_SON_OGONG_BONG)) 
 	if (number(1, 10) >= 5)
 	    dam_add += dice(ch->equipment[HOLD]->obj_flags.value[1],
 			ch->equipment[HOLD]->obj_flags.value[2]);
@@ -48,7 +48,7 @@ int special_damage(struct char_data *ch, struct char_data *victim,
     /* lss belt sword */
     if (ch->equipment[WEAR_WAISTE]
 	&& ch->equipment[WEAR_WAISTE]->item_number >= 0
-	&& GET_OBJ_VIRTUAL(ch->equipment[WEAR_WAISTE]) == 9508)
+	&& GET_OBJ_VIRTUAL(ch->equipment[WEAR_WAISTE]) == OBJ_LSS_BELT)
 	if (number(1, 10) > 6)
 	    dam_add += dice(ch->equipment[WEAR_WAISTE]->obj_flags.value[1],
 		    ch->equipment[WEAR_WAISTE]->obj_flags.value[2]);
@@ -66,17 +66,17 @@ void special_death(struct char_data *ch, struct char_data *who,
     if (!IS_NPC(ch)) /* NOTE: currently, no spcial for PC daeth */
 	return;
     /* NOTE: When Mr. Son died. Remove GOLDEN_RIM from corpse */
-    if (GET_MOB_VIRTUAL(ch) == SON_OGONG ) {
+    if (GET_MOB_VIRTUAL(ch) == MOB_SON_OGONG ) {
 	if ( ch->equipment[WEAR_HEAD]) {
 	    otmp = unequip_char(ch, WEAR_HEAD);
 	    extract_obj(otmp);
 	}
     }
     /* 삼장법사(11111) (put 금테(11127), 성수병(11134) Into corpse) */
-    else if (GET_MOB_VIRTUAL(ch) == 11111) {
-	otmp = read_object( GOLDEN_RIM, VIRTUAL);
+    else if (GET_MOB_VIRTUAL(ch) == OBJ_DAERIMSA_GOLDEN_RIM ) {
+	otmp = read_object( OBJ_DAERIMSA_GOLDEN_RIM, VIRTUAL);
 	obj_to_obj(otmp, corpse);
-	otmp = read_object(11134, VIRTUAL);
+	otmp = read_object( OBJ_DAERIMSA_SAINT_WATER, VIRTUAL);
 	obj_to_obj(otmp, corpse);
     }
 
@@ -104,7 +104,7 @@ int neverland(struct char_data *ch, int cmd, char *arg)
     if (cmd != CMD_DOWN)  /* specific to Room 2707. cmd 6 is move down */
 	return (FALSE);
     /* NOTE: to Room 2720-2724. (2724 is no exit room) */
-    loc_nr = NEVERLAND_SENDBEACH + number(0, 4);
+    loc_nr = NEVERLAND_SANDBEACH + number(0, 4);
 
     location = real_room(loc_nr);
     act("$n씨가 지금 내려 갔나요 ??", FALSE, ch, 0, 0, TO_NOTVICT);
@@ -236,7 +236,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    acthan( "Ogong pulls out a hair, and throws it.",
 		      "오공이 머리털 하나를 뽑하서 던집니다.",
 		      FALSE, ch, 0, 0, TO_ROOM);
-	    mob = read_mobile(SON_OGONG_MIRROR, VIRTUAL);
+	    mob = read_mobile(MOB_SON_OGONG_CLONE, VIRTUAL);
 	    char_to_room(mob, ch->in_room);
 	    first_attack(mob, victim);
 	    done++;
@@ -247,7 +247,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    acthan( "Ogong gets a bong in his ear.",
 		      "오공이 귓속에서 여의봉을 꺼냅니다.",
 		      FALSE, ch, 0, 0, TO_ROOM);
-	    obj = read_object(SON_OGONG_BONG, VIRTUAL);
+	    obj = read_object(OBJ_SON_OGONG_BONG, VIRTUAL);
 	    wear(ch, obj, 12);
 	    MOB_STEP(ch) = 3;
 	    done++;
@@ -264,7 +264,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	case 0:
 	    if (action != CMD_WEAR) {
 		for (i = ch->carrying; i; i = i->next_content)
-		    if (GET_OBJ_VIRTUAL(i) == GOLDEN_RIM) {
+		    if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_GOLDEN_RIM) {
 			acthan( "Ogong asks \"What's this?\"",
 				"\"이거 머하는 거지?\"라고 묻는다.",
 				FALSE, ch, 0, 0, TO_ROOM);
@@ -276,7 +276,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 		/* wear */
 		if (ch->equipment[WEAR_HEAD]
 		    && ch->equipment[WEAR_HEAD]->item_number >= 0
-		    && GET_OBJ_VIRTUAL(ch->equipment[WEAR_HEAD]) == GOLDEN_RIM){
+		    && GET_OBJ_VIRTUAL(ch->equipment[WEAR_HEAD]) == OBJ_DAERIMSA_GOLDEN_RIM){
 		    acthan("$n looks at you.", "$n님이 당신을 바라봅니다.",
 			   TRUE, ch, 0, ch, TO_VICT);
 		    acthan("$n looks at $N.", "$n님이 $N님을 바라봅니다.",
@@ -293,7 +293,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    if (action == CMD_GIVE) {
 		/* GIVE */
 		for (i = ch->carrying; i; i = i->next_content)
-		    if (GET_OBJ_VIRTUAL(i) == GOLDEN_RIM)
+		    if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_GOLDEN_RIM)
 			break;
 		if (i) {
 		    do_wear(ch, " rim", 13);
@@ -387,9 +387,9 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 	if ( action ) {
 	    pen = paper = NULL;
 	    for (i = ch->carrying; i; i = i->next_content) {
-		if (GET_OBJ_VIRTUAL(i) == DAERIMSA_PEN)
+		if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_PEN)
 		    pen = i;
-		else if (GET_OBJ_VIRTUAL(i) == DAERIMSA_PAPER)
+		else if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_PAPER)
 		    paper = i;
 	    }
 
@@ -425,7 +425,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 	    acthan( "4th jangro says \"Recite this scroll in the dark room\".",
 		   "\"어두운 방에서 이 두루마리를 읽으세요\"라고 말합니다.",
 		    FALSE, ch, 0, 0, TO_ROOM);
-	    obj = read_object(DAERIMSA_SCROLL, VIRTUAL);
+	    obj = read_object(OBJ_DAERIMSA_SCROLL, VIRTUAL);
 	    obj_to_room(obj, ch->in_room);
 	    MOB_STEP(ch) = 5;
 	    break;
@@ -449,7 +449,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
     return done;
 }
 
-/* son_ogong mirror */
+/* son_ogong clone */
 int son_ogong_mirror_func(struct char_data *ch, int cmd, char *arg)
 {
     if( !cmd ) {
@@ -476,13 +476,13 @@ int teleport_daerimsa_tower(struct char_data *ch, int cmd, char *arg)
 	    return 1;
 	}
 
-	if (GET_OBJ_VIRTUAL(scroll) != DAERIMSA_SCROLL)
+	if (GET_OBJ_VIRTUAL(scroll) != OBJ_DAERIMSA_SCROLL)
 	    return 0;
 
-	if (world[ch->in_room].number == DARK_ROOM_IN_DAERIMSA) {
+	if (world[ch->in_room].number == ROOM_DAERIMSA_DARK_ROOM) {
 	    /* transport all memeber to TOWER */
 	    for (i = 0; i <= top_of_world; i++)
-		if (world[i].number == TOWER_IN_DAERIMSA)
+		if (world[i].number == ROOM_DAERIMSA_TOWER)
 		    break;
 	    if (i == top_of_world) {
 		log("NO-EXIST ROOM");
@@ -540,7 +540,7 @@ int saint_water(struct char_data *ch, int cmd, char *arg)
     if (!(obj = get_obj_in_list_vis(ch, buf, ch->carrying)))
 	return FALSE;
 
-    if (GET_OBJ_VIRTUAL(obj) != SAINT_WATER)
+    if (GET_OBJ_VIRTUAL(obj) != OBJ_DAERIMSA_SAINT_WATER)
 	return FALSE;
 
     GET_ALIGNMENT(ch) = 999; 

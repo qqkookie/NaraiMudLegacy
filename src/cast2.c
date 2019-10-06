@@ -1341,7 +1341,7 @@ void cast_phase(byte level, struct char_data *ch, char *arg, int type,
     case 's': case 'S': direction = 2; break;
     case 'd': case 'D': direction = 5; break;
     case 'u': case 'U': direction = 4; break;
-    case '\0':
+    case ' ': case '\0': 
 	send_to_char("Phase to where?\n\r", ch);
 	return;
     default:
@@ -1481,8 +1481,8 @@ void cast_charm_person(byte level, struct char_data *ch, char *arg, int type,
 		       struct char_data *tar_ch, struct obj_data *tar_obj)
 {
 
-    /* NOTE: It was if (!IS_MOB(tar_ch) .... ) */
-    if (!IS_NPC(tar_ch) && GET_LEVEL(ch) < (IMO + 3)) {
+    /* NOTE: not !IS_NPC(tar_ch) */
+    if (!IS_MOB(tar_ch) && GET_LEVEL(ch) < (IMO + 3)) {
 	send_to_char("You cannot charm player!\n\r", ch);
 	return;
     }

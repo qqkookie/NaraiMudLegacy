@@ -17,7 +17,6 @@
 #include "global.h"
 #include "comm.h"
 
-
 /* NOTE: These get_char_*(), get_obj_*() function was moved from handler.c */
 int get_number(char **name)
 {
@@ -443,11 +442,12 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 	    return (FIND_CHAR_WORLD);
 
     if (IS_SET(bitvector, FIND_OBJ_EQUIP)) {
-	for (found = FALSE, i = 0; i < MAX_WEAR && !found; i++)
+	for (found = FALSE, i = 0; i < MAX_WEAR && !found; i++) {
 	    if (ch->equipment[i] && !str_cmp(name, ch->equipment[i]->name)) {
 		*tar_obj = ch->equipment[i];
 		found = TRUE;
 	    }
+	}
 	if (found) 
 	    return (FIND_OBJ_EQUIP);
     }
@@ -700,9 +700,10 @@ int str_cmp(char *arg1, char *arg2)
     if(!arg1) return(-1);
     if(!arg2) return(1);
 
-    for ( ; *arg1 || *arg2 ; arg1++, arg2++)
+    for ( ; *arg1 || *arg2 ; arg1++, arg2++) {
 	if (( chk =  LOWER(*arg1) - LOWER(*arg2)))
 	    return((chk > 0) ? 1 : -1);
+    }
 
     return(0);
 }
@@ -717,9 +718,10 @@ int strn_cmp(char *arg1, char *arg2, int n)
     if(!arg1) return(-1);
     if(!arg2) return(1);
 
-    for (; (*arg1 || *arg2) && (n > 0); arg1++, arg2++, n--)
+    for (; (*arg1 || *arg2) && (n > 0); arg1++, arg2++, n--) {
 	if (( chk = LOWER(*arg1) - LOWER(*arg2 )))
 	    return((chk > 0) ? 1 : -1 );
+    }
 
     return (0);
 } 
@@ -731,7 +733,7 @@ char *skip_spaces(char *string)
 }
 
 /* writes a string to the log */
-void log(char *str)
+void mudlog(char *str)
 {
     time_t ct;
     char *tmstr;

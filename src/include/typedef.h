@@ -3,11 +3,14 @@
 #define _TYPE_DEFINED
 
 #include <sys/types.h> 
-typedef long long 	LONGLONG; 
-typedef short 		sbyte;
-typedef unsigned  short ubyte;
-typedef int 		sh_int;
-typedef unsigned 	ush_int;
+
+// NOTE: Changed all bytes to short and shorts to int/unsigned
+
+typedef long long		LONGLONG; 
+typedef short			sbyte;
+typedef unsigned  short		ubyte;
+typedef int			sh_int;
+typedef unsigned		ush_int;
 // typedef BOOL 		bool;
 #include <stdbool.h>
 typedef short 		byte; 

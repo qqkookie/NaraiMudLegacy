@@ -9,9 +9,34 @@
 
 #include "typedef.h" 
 
-#define  sigsetmask(m) __mysigsetmask(m)
+// ----------- configurable parameter defintions --------------
 
-extern int sigsetmask(unsigned mask);
+#define RETURN_TO_QUIT
+
+#define	LEV_IMMO		41
+
+/*  NOTE: also defined in "comm.c"	*/ 
+#define DFLT_PORT		4001  /* default port */ 
+#define DFLT_DIR		"users"  /* default directory */ 
+
+#define REBOOT_TIME		(4*86400)
+#define TIME_ZONE		(9*3600)
+#define REBOOT_WHEN		(9*60-5)
+
+#define CARRY_WEIGHT_BASE	500
+#define CARRY_NUM_BASE		15
+
+#define CHATLOG			"log/chatlog.log"
+#define MID_HELPER		"Narai"
+
+#define SPLIT_ZONE_SYSTEM
+
+// #define ZONE_CHECK
+
+#pragma GCC diagnostic ignored "-Wunused-result"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+
+// ------------------------------------------------------------
 
 #define MAX_STR_LEN		2000
 #define MAX_OUT_LEN		512
@@ -25,14 +50,7 @@ extern int sigsetmask(unsigned mask);
 #ifndef IMO
 #define	IMO	41
 #endif
-
-#pragma GCC diagnostic ignored "-Wunused-result"
-#pragma GCC diagnostic ignored "-Wunused-parameter"
-
-/*  NOTE: also defined in "comm.c"	*/ 
-#define DFLT_PORT 4001  /* default port */ 
-#define DFLT_DIR "lib"  /* default directory */ 
-
+ 
 /* -----------------  Misc. structures about char  ------------------- */
 
 struct str_app_type {

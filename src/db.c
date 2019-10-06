@@ -659,10 +659,12 @@ struct char_data *read_mobile(int nr, int type)
 
     /* NOTE: VERY IMPORTANT!!! EXPERIMENTAL!!!     Sun Dec 28 1997
 	Mobile hit, maxhit, HR, DR, AC Adjustment. May be controversal. */
+    /*
     mob->points.hit = mob->points.max_hit =  mob->points.max_hit /4;
     GET_HITROLL(mob) *= 2; 
     GET_DAMROLL(mob) *= 2;
     GET_AC(mob) -=  level*2 + 50 ;
+    */
 
     return (mob);
 }

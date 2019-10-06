@@ -390,6 +390,9 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
         OLD:  dam = (LEARNED/2 + SKILLED*2) * number(LEVEL, LEVEL*2);
         NEW:  dam = (LEARNED/3 + SKILLED/2) * number(LEVEL, LEVEL*2); */
 
+    // dam = ((GET_LEARNED(ch, SKILL_PUNCH)>>1)+(GET_SKILLED(ch, SKILL_PUNCH)<<1))
+    //		 * number(GET_LEVEL(ch), GET_LEVEL(ch) << 1);
+
     dam = (GET_LEARNED(ch, SKILL_PUNCH) /3 + GET_SKILLED(ch, SKILL_PUNCH) /2)
 		    * number(GET_LEVEL(ch), GET_LEVEL(ch) *2);
 
@@ -398,6 +401,7 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
     WAIT_STATE(ch, PULSE_VIOLENCE);
     if (percent > ch->skills[SKILL_PUNCH].learned) {
         /* NOTE: To print punch damage message, use fight_message() in damage() */ 
+	// punch message in in "lib/messages" #109
 	/*
 	send_to_char("You failed to punch him WHAT a DAMN!!!!!\n\r", ch);
 	act("$n failed to punch down $N!!!", TRUE, ch, 0, victim, TO_ROOM);

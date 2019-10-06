@@ -125,9 +125,9 @@ void assign_mobiles(void)
     /* son_ogong = mob_index[real_mobile(SON_OGONG)]; */
     /* fourth_jangro = mob_index[real_mobile(FOURTH_JANGRO)]; */
 
-    mob_index[real_mobile(SON_OGONG)].func = son_ogong_func;
-    mob_index[real_mobile(FOURTH_JANGRO)].func = fourth_jangro_func;
-    mob_index[real_mobile(SON_OGONG_MIRROR)].func = son_ogong_mirror_func;
+    mob_index[real_mobile(MOB_SON_OGONG)].func = son_ogong_func;
+    mob_index[real_mobile(MOB_FOURTH_JANGRO)].func = fourth_jangro_func;
+    mob_index[real_mobile(MOB_SON_OGONG_CLONE)].func = son_ogong_mirror_func;
 
     /* GoodBadIsland */
     mob_index[real_mobile(SAINT_MIRROR)].func = gbisland_saint_mirror;
@@ -261,7 +261,7 @@ void assign_rooms(void)
     world[real_room(15162)].funct = electric_shock;
 
     /* JAIL ROOM */
-    world[real_room(POLICE_JAIL_ROOM)].funct = jail_room;
+    world[real_room(ROOM_POLICE_JAIL)].funct = jail_room;
 
     /* quest room */
     world[real_room(3081)].funct = quest_room;
@@ -430,7 +430,7 @@ void do_request(struct char_data *ch, char *arg, int cmd)
 	return;
     }
 
-    if (IS_NPC(ch)) 	/* MOBILE */
+    if (IS_MOB(ch)) 	/* MOBILE */
 	return;
 
     /* request */
@@ -442,7 +442,7 @@ void do_request(struct char_data *ch, char *arg, int cmd)
 	    return;
 	}
 
-	/* All remotal player can't do request. */
+	/* All remortal player can't do request. */
 	/* NOTE: by dyaus : Not so, all remo player can do request with
 	   severe panalty . Cost: 10 quest      */
 	if ((ch->player.level >= (IMO - 1)) && (ch->player.remortal >= 15)) {
@@ -513,7 +513,7 @@ void do_hint(struct char_data *ch, char *arg, int cmd)
 	return;
     }
 
-    if (IS_NPC(ch)) 	/* MOBILE */
+    if (IS_MOB(ch)) 	/* MOBILE */
 	return;
 
     /* not initialized */
@@ -557,7 +557,7 @@ void do_quest(struct char_data *ch, char *arg, int cmd)
 	return;
     }
 
-    if (IS_NPC(ch))	/* MOBILE */
+    if (IS_MOB(ch))	/* MOBILE */
 	return;
 
     /* not initialized */
@@ -619,7 +619,8 @@ void init_quest(void)
 	fscanf(fp, " %d ", &(QM[topQM].level));
 
 	fgets(buf, MAX_STRING_LENGTH - 1, fp);
-	size = strlen(buf);
+	// NOTE: BUG FIX!!!
+	size = strlen(buf) +1;
 	buf[size - 1] = 0;
 	CREATE(QM[topQM].name, char, size);
 	strcpy(QM[topQM].name, buf);

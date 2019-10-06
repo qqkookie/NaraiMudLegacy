@@ -676,7 +676,7 @@ void identify_object(struct char_data *ch, struct obj_data *obj )
 	break;
     case ITEM_WAND:
     case ITEM_STAFF:
-	sprintf(buf, "Has %d chages, with %d charges left.\n\r",
+	sprintf(buf, "Has %d charges, with %d charges left.\n\r",
 		obj->obj_flags.value[1], obj->obj_flags.value[2]);
 	send_to_char(buf, ch);
 

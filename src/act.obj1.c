@@ -12,6 +12,7 @@
 #include "object.h"
 #include "global.h"
 #include "comm.h"
+#include "etc.h"
 
 
 /* extern functions */
@@ -409,12 +410,10 @@ void give_gold(struct char_data *ch, struct char_data *vict, int amount )
      * NOTE: Exception: Darimsa 4th jangro accepts money. See daerimsa.c.
      * Do not activated this code before solving the exception.
      */
-    /* 
-    if (IS_NPC(vict)) {
+    if (IS_NPC(vict) && GET_MOB_VIRTUAL(vict) != MOB_FOURTH_JANGRO) {
 	send_to_char("Don't feed mob. It will bite your hand.\n\r",ch);
 	return;
     }
-    */
 
     send_to_char("Ok.\n\r", ch);
     sprintf(buf, "%s gives you %d gold coins.\n\r", PERS(ch, vict), amount);

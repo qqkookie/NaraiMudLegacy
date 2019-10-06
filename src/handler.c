@@ -471,9 +471,9 @@ void extract_char(struct char_data *ch)
 	if (world[ch->in_room].contents) {	/* room nonempty */
 	    /* locate tail of room-contents */
 	    for (i = world[ch->in_room].contents; i->next_content;
-		 i = i->next_content) ;
-	    /* append ch's stuff to room-contents */
-	    i->next_content = ch->carrying;
+		i = i->next_content)
+		/* append ch's stuff to room-contents */
+		i->next_content = ch->carrying;
 	}
 	else
 	    world[ch->in_room].contents = ch->carrying;
@@ -519,7 +519,7 @@ void extract_char(struct char_data *ch)
 	/* NOTE: This list traversal is incorrect. SEGV error on do_rent()   */
 	/*    *af is free()'d in affect_remove(). So, af->next is invalid
 	      pointer. save af->next before free() and use it for traversal  */
-	for (af = ch->affected; af; af = af_next) {
+	for (af = ch->affected; af != NULL; af = af_next) {
 	    af_next = af->next;
 	    affect_remove(ch, af);
 	}

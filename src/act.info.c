@@ -7,7 +7,8 @@
    this file is for version control of mud.
    and fileid is also used in 'show version'.
  */
-char fileid[] = "@(#) KIT Clasic version v4.00  2019/10/03  by Cookie (cantata@gmail.com)\n\r"
+char fileid[] = 
+"@(#) KIT Clasic version v4.00  2019/10/05  by Cookie (cantata@gmail.com)\n\r"
 " New Narai 1998  v2.92.3   97/12/09  by Cookie.\n\r"
 " Forked from Narai  v2.90   97/09/11  by cookie (cookie0@chollian.net)\n\r"
 " Legacy v2.00   94/10/10  Greatly Improved by process(wdshin@eve)\n\r"
@@ -717,7 +718,7 @@ extern void send_to_outdoor(char *mesg);
 
 void do_weather(struct char_data *ch, char *argument, int cmd)
 {
-    char buf[100], buf2[100];
+    char buf[MAX_LINE_LEN], buf2[MAX_LINE_LEN];
     static char *sky_look[4] =
     {
 	"cloudless",

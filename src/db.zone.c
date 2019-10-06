@@ -8,11 +8,9 @@
 #include "comm.h"
 #include "gamedb.h"
 
-#define NEW_ZONE_SYSTEM 
-
 /* NOTE: Check validity of world/zone file. for zone debugging only. 
          *DON'T* define this for production version. */ 
-#undef ZONE_CHECK
+// #define ZONE_CHECK
 
 /* NOTE: Moved from db.h	*/
 /* zone definition structure. for the 'zone-table'   */
@@ -141,7 +139,7 @@ void boot_world(void)
 			exit(2);
 		    }
 		    while (world[room_nr].number > zone_table[zone].top)
-			if (++zone > top_of_zone_table) {
+			if (zone > top_of_zone_table) {
 			    fprintf(stderr, "Room %d is outside of any zone.\n",
 				    virtual_nr);
 			    exit(2);
@@ -184,6 +182,7 @@ void boot_world(void)
 
 	free(temp);	/* cleanup the area containing the terminal $  */
 	fclose(fl);
+	zone++;
     }
 
     fclose(all_files);
@@ -337,7 +336,6 @@ void renum_world(void)
 			real_room(world[room].dir_option[door]->to_room);
 }
 
-#ifdef  ZONE_CHECK
 /* NOTE: NEW! check validity of all mobiles and objects */
 void check_mobile_and_object(void)
 {
@@ -459,12 +457,11 @@ void check_zcmd(struct reset_com *zcmd, int zone, int comm)
 
 void check_zone_data(void)
 {
+#ifdef  ZONE_CHECK
     check_world();
     check_mobile_and_object();
-}
-#else
-void check_zone_data(void) { /* Null Function */ }
 #endif		/* ZONE_CHECK */ 
+}
 
 void renum_zone_table(void)
 {
@@ -840,7 +837,7 @@ void zone_update(void)
 } 
 
 
-#ifdef NEW_ZONE_SYSTEM
+#ifdef SPLIT_ZONE_SYSTEM
 
 /* index : real number */
 struct char_data *get_mobile_index(int index)
@@ -1056,7 +1053,7 @@ void reset_zone(int zone)
     zone_table[zone].age = 0;
 }
 
-#else
+#else	// SPLIT_ZONE_SYSTEM
 
 
 #define ZCMD zone_table[zone].cmd[cmd_no]
@@ -1168,7 +1165,7 @@ void reset_zone(int zone)
 
 #undef ZCMD
 
-#endif
+#endif	// SPLIT_ZONE_SYSTEM
 
 /* for use in reset_zone; return TRUE if zone 'nr' is free of PC's  */
 int is_empty(int zone_nr)

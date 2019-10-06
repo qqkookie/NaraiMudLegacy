@@ -70,7 +70,7 @@ int look_argument(char *argument, char *arg1)
     return (dir);
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 
 void argument_split_2(char *argument, char *first_arg, char *second_arg)
 {
@@ -99,7 +99,7 @@ void argument_split_2(char *argument, char *first_arg, char *second_arg)
     begin += look_at;
 }
 
-#endif				/* NO_DEF */
+#endif	// UNUSED_CODE
 
 char *find_ex_description(char *word, struct extra_descr_data *list)
 {

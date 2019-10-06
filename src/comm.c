@@ -18,6 +18,7 @@
 #include <errno.h>
 #include <setjmp.h>
 #include <sys/types.h>
+#include <sys/stat.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -25,6 +26,7 @@
 #include <netdb.h>
 #include <fcntl.h>
 
+// Don't use obsolete "termio.h", use "termios.h"
 #ifdef DONT_HAVE_TERMIOS
 #include <termio.h>
 #include <sys/ioctl.h>
@@ -38,15 +40,12 @@
 #include "comm.h"
 #include "gamedb.h"
 
-#ifndef DFLT_DIR
-#define DFLT_DIR "lib"	/* default directory */
-#endif	/* DFLT_DIR */
 #ifndef DFLT_PORT
 #define DFLT_PORT 4001	/* default port */
 #endif	/* DFLT_PORT */
 
-#define MAX_NAME_LENGTH 15
-#define MAX_HOSTNAME 256
+#define MAX_HOSTNAME	MAX_NAME_LEN
+
 #define OPT_USEC 200000	/* time delay corresponding to 4 passes/sec */
 #define MAXFDALLOWED 200
 /* #define MAXOCLOCK 1200 */ 
@@ -79,7 +78,7 @@ int boottime;
 int no_echo = 0;
 
 /* reboot_time = 24 hour */
-int reboot_time = 86400;
+int reboot_time = REBOOT_TIME;
 
 int maxdesc, avail_descs;
 int tics = 0;		/* for extern checkpointing */
@@ -110,7 +109,7 @@ void close_socket(struct descriptor_data *d);
 /* Additionally, it will reduce "down" due to queue malloc() failure.	*/
 
 #define TB_RING_MAX	128 	/* NOTE: Number of ring buffer elements */
-#define TB_BSIZ		128	/* NOTE: Size of each output text buffer.  */
+#define TB_BSIZ		MAX_LINE_LEN	/* NOTE: Size of each output text buffer.  */
 /* NOTE: 
    TB_RING_MAX may needs performance tunning. More player, larger TB_RING_MAX. 
      It is related to sum of output queue length average of all players.
@@ -146,8 +145,8 @@ int main(int argc, char **argv)
     port = DFLT_PORT;
     dir = DFLT_DIR;
     /* NOTE: set site you wish to refuse playing. Currently no such site */
-    strcpy(baddomain[0], "99.99.99.99");
-    baddoms = 1;
+    // strcpy(baddomain[0], "99.99.99.99");
+    baddoms = 0;
     if (argc == 2) {
 	if (!ISDIGIT(*argv[1])) {
 	    fprintf(stderr, "Usage: %s [ port # ]\n", argv[0]);
@@ -158,12 +157,19 @@ int main(int argc, char **argv)
 	    exit(1);
 	}
     }
+
     sprintf(buf, "Running game on port %d.", port);
     log(buf);
+
+    // NOTE: no need to chdir
     if (chdir(dir) < 0) {
-	// perror("chdir");
+	perror("chdir");
 	// exit(1);
     }
+
+    // NOTE: for file security
+    umask(0077);
+
     srandom(boottime = time(0));
     run_the_game(port);
     return (0);
@@ -175,7 +181,6 @@ void run_the_game(int port)
     int i;
     void signal_setup(void);
     void saveallplayers(void);
-    void log_pid(char * file);
     int init_socket(int port);
     void no_echo_local(int fd);
     void game_loop(int s);
@@ -183,16 +188,33 @@ void run_the_game(int port)
     void close_sockets(int s);
     extern void boot_db(void);
 
+    char pidname[MAX_NAME_LEN];
+    sprintf(pidname, "mud-%d.pid", port);
+    
+    if (access(pidname, F_OK) == 0) {
+	log("Port busy: pid file already exists");
+	exit(1);
+    }
+
     descriptor_list = NULL;
     log("Signal trapping.");
     signal_setup();
     log("Opening mother connection.");
     s = init_socket(port);
     boot_db();
-    /* NOTE: write out my pid to "lib/pid-port#" file */
-    char pidfile[MAX_NAME_LEN];
-    sprintf(pidfile, "mud-%d.pid", port);
-    log_pid(pidfile);
+
+    /* NOTE: write out my pid to "lib/mud-port#.pid" file */
+    FILE *pidfile;
+    char buf[100];
+    pid_t pid = getpid();
+
+    sprintf(buf, "Writing pid file: %s : %d", pidname, pid);
+    log(buf);
+
+    if ((pidfile = fopen(pidname, "w"))) {
+	fprintf(pidfile, " %d \n", pid);
+	fclose(pidfile);
+    }
 
     /* NOTE: init ring of free output buffer before entering game   */
     /*	     At first, free ring is FULL state. (all buffers are free)  */
@@ -212,7 +234,8 @@ void run_the_game(int port)
     saveallplayers();
     close_sockets(s);
     shutdown(s, 2);
-    unlink(pidfile);
+    
+    unlink(pidname);
     log("Normal termination of game.");
 }
 
@@ -853,11 +876,11 @@ int new_connection(int s)
 
     /* struct sockaddr peer; */
     int t;
-    socklen_t  i;
+    socklen_t  size;
 
-    i = sizeof(isa);
-    getsockname(s, (struct sockaddr *) &isa, &i);
-    if ((t = accept(s, (struct sockaddr *) &isa, &i)) < 0) {
+    size = sizeof(isa);
+    getsockname(s, (struct sockaddr *) &isa, &size);
+    if ((t = accept(s, (struct sockaddr *) &isa, &size)) < 0) {
 	perror("Accept");
 	return (-1);
     }
@@ -1180,6 +1203,16 @@ void record_player_number()
     sprintf(line, "Txt block: ring: %d,  malloc: %d. Hit ratio: %d%%",
 	    tb_pooled, tb_alloced, (100 * tb_pooled)/(tb_pooled+tb_alloced+1));
     log(line); 
+
+#ifdef REBOOT_WHEN
+#define A_DAY		86400
+    static bool adjust = FALSE;
+    if ( !adjust && reboot_time >= A_DAY*3 ) {
+	reboot_time += A_DAY - (boottime+reboot_time-1000)%A_DAY - 1000
+	    - TIME_ZONE + 60*REBOOT_WHEN;
+	adjust = TRUE;
+    }
+#endif
 }
 
 #ifdef UNUSED_CODE
@@ -1218,7 +1251,7 @@ int siginterrupt(int sig, int flag)
     return (sigaction(sig, &sa, NULL));
 }
 
-int sigsetmask(unsigned mask) 
+int sigsetmask(int mask) 
 {
     sigset_t set;
 
@@ -1244,19 +1277,16 @@ void signal_setup(void)
     void shutdown_request(int sig);
     void checkpointing(int sig);
 
-    siginterrupt(SIGHUP, 1);
-    signal(SIGHUP, hupsig);
-    siginterrupt(SIGINT, 1);
-    signal(SIGINT, hupsig);
+    siginterrupt(SIGHUP, 1); signal(SIGHUP, hupsig);
+    siginterrupt(SIGINT, 1); signal(SIGINT, hupsig);
     /* NOTE: catch SIGSEGV, SIGBUS. Report place and time of error */
-    siginterrupt(SIGSEGV, 1);
-    signal(SIGSEGV, hupsig);
-    siginterrupt(SIGBUS, 1);
-    signal(SIGBUS, hupsig);
+    siginterrupt(SIGSEGV, 1); signal(SIGSEGV, hupsig);
+    siginterrupt(SIGBUS, 1); signal(SIGBUS, hupsig);
     signal(SIGPIPE, SIG_IGN);
     signal(SIGALRM, logsig);
     /* NOTE: Don't catch SIGTERM. Terminate immediately */
     /* siginterrupt(SIGTERM, 1); signal(SIGTERM, hupsig); */
+
     signal(SIGUSR2, shutdown_request);
 
     interval.tv_sec = 900;	/* 15 minutes */
@@ -1311,12 +1341,14 @@ void hupsig(int sig)
 		GET_LEVEL(xo->character), xo->host, world[xo->character->in_room].name,
 		xo->character->in_room);
 	log(s);
-	/* NOTE: Don't save players potentially danerous signals */
-	if (sig == SIGHUP || sig == SIGINT || sig == SIGQUIT || sig == SIGTERM)
-	    saveallplayers();
     }
     else
 	log("Signal received. But I'm confused.");
+
+    /* NOTE: Don't save players potentially danerous signals */
+    if (sig == SIGHUP || sig == SIGINT || sig == SIGTERM)
+	saveallplayers();
+
     /* NOTE: BSD signal don't restore sig handler */
     signal(sig, hupsig);
     longjmp(env, -1);
@@ -1326,22 +1358,6 @@ void logsig(int sig)
 {
     log("Signal received. Ignoring.");
     signal(sig, logsig);
-}
-
-/* NOTE: I need to know pid , write my pid number to "lib/pid" file   */
-void log_pid(char * file)
-{
-    FILE *pidfile;
-    char buf[80];
-    pid_t pid = getpid();
-
-    sprintf(buf, "Writing pid file: %s : %d", file, pid);
-    log(buf);
-
-    if ((pidfile = fopen(file, "w"))) {
-	fprintf(pidfile, " %d \n", pid);
-	fclose(pidfile);
-    }
 }
 
 /* NOTE: OLD WAIT_STATE() was macro. now use this function. */
@@ -1417,7 +1433,7 @@ void no_echo_local(int fd)
     tcsetattr(fd, TCSANOW, &io);
 }
 
-#endif 		/* HAVE_TERMIOS_H */
+#endif 		/* DONT_HAVE_TERMIOS_H */
 
 void no_echo_telnet(struct descriptor_data *d)
 {

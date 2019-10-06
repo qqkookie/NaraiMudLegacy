@@ -5,6 +5,7 @@
    ************************************************************************* */
 
 #include <stdio.h>
+#include <string.h>
 
 #include "char.h"
 #include "object.h"
@@ -13,6 +14,7 @@
 #include "play.h"
 #include "actions.h"
 #include "spells.h"
+#include "etc.h"
 
 
 /* ********************************************************************
@@ -51,6 +53,32 @@ int perhaps(struct char_data *ch, int cmd, char *arg)
     /* NOTE: not change of functionality, just to make it easy to add tips */
     /* NOTE: Moved perhaps_words[] definition to "constants.c"   */
     extern char *perhaps_words[];
+
+#ifdef 	MID_HELPER
+    static struct char_data *perhaps = NULL;
+    char buf[MAX_LINE_LEN];
+    char *blessings[3] = {
+	    "%s님에게 신의 가호가 있기를...",
+	    "%s님에게 축복을 드립니다...",
+	    "%s님에게 신의 은총이 내리기를..." ,
+    };
+    while(*arg==' ') arg++;
+    if (cmd == CMD_BOW && strcasecmp(arg, MID_HELPER)==0 	// bow narai 
+	    && strcasecmp(GET_NAME(ch), MID_HELPER) != 0) { 
+	cast_sanctuary(GET_LEVEL(perhaps), perhaps, NULL, 
+	    SPELL_TYPE_SPELL, ch, NULL);
+	cast_haste(GET_LEVEL(perhaps), perhaps, NULL, 
+	    SPELL_TYPE_SPELL, ch, NULL);
+	
+	char *msg =  blessings[number(0,2)];
+	sprintf(buf, msg , GET_NAME(ch));
+	do_say(perhaps, buf, 0);
+	return 0;
+    }
+    if (perhaps == NULL && cmd == 0 && ch != NULL
+	&& mob_index[ch->nr].virtual == 1000 ) 
+	perhaps  = ch;
+#endif
 
     if (cmd) return (0);	/* If void return */
     if (!ch) return (0);
@@ -499,7 +527,7 @@ int super_deathcure(struct char_data *ch, int cmd, char *arg)
 	    break;	/* semi robot : cyb */
 	case 7:
 	case 8:
-	    ran_num = 13014;
+	    ran_num = MOB_WEE_HEAD_SOLDIER;
 	    break;	/* head soldier wee : cyb */
 	default:
 	    return (1);

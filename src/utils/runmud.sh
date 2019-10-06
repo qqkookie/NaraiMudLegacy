@@ -20,7 +20,7 @@ trap "" 1 2 3 13 14
 
 umask 0077
 
-port=4000	# $usrdir/PORT is primary
+port=4001	# $usrdir/PORT is primary
 
 # mud home and belows should be absolute path
 export MUDHOME=$HOME/mud
@@ -37,7 +37,7 @@ loglink=log-run
 lastlink=log-last
 checklink=log-check
 # All logs, player files and stash files are saved in $usrdir
-usrdir=lib
+usrdir=users
 
 if [ -f $mudhome/$usrdir/PORT ] ; then
 	port=`cat $mudhome/$usrdir/PORT`

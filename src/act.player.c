@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <time.h>
+// BSD family don't have "crypt.h"
 #ifndef __FreeBSD__
 #include <crypt.h>
 #endif
@@ -29,6 +30,7 @@ extern char *imotd;
 
 
 void init_player(struct char_data *ch);
+void set_title(struct char_data *ch);
 void query_status(struct descriptor_data *d);
 int _parse_name(char *arg, char *name);
 int improve_status(struct char_data *ch, char arg);
@@ -721,7 +723,8 @@ void init_player(struct char_data *ch)
     if (top_of_p_table < 0) {
 	GET_LEVEL(ch) = IMO + 3;
 	/* NOTE:  God needs initial player title, or "who" will hang */
-	GET_TITLE(ch) = "Implementor of This World";
+	// GET_TITLE(ch) = "Implementor of This World";
+	set_title(ch);
     }
 
     ch->player.short_descr = 0;

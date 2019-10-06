@@ -786,7 +786,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
     act("$n disappears suddenly to JAIL!!!!!!",
 	TRUE, victim, 0, 0, TO_ROOM);
     char_from_room(victim);
-    char_to_room(victim, real_room(POLICE_JAIL_ROOM));
+    char_to_room(victim, real_room(ROOM_POLICE_JAIL));
     if (!IS_NPC(victim)) {
 	sprintf(buf, "%s was sent to the JAIL room!!!!\n\r", GET_NAME(victim));
 	send_to_all(buf);

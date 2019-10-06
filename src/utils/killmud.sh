@@ -3,10 +3,10 @@
 # For debuging use only, not for production use
 #
 
-port=4000	# $usrdir/PORT is primary
+port=4001	# $usrdir/PORT is primary
 
 prog=mud-kit
-usrdir=$HOME/mud/lib
+usrdir=$HOME/mud/users
 
 pids="`ps -cx | grep $prog | cut -c1-6 `"
 

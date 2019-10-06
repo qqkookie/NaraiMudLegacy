@@ -642,30 +642,44 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
     if ((victim = get_char(buf))) {	/* NOTE: if arg is char name */
 
 	half_chop(buf2, buf3, buf4);
-	k = atoi(buf4);
+	k = atoi(buf4); 
 	LONGLONG kk = atoll(buf4);
-	if ((GET_LEVEL(ch) < (IMO + 2)) && (strcmp(buf3, "gold")))
+
+	if (((GET_LEVEL(ch) < (IMO + 2)) && (strcmp(buf3, "gold")))
+	    || (k == 0 && strcmp("class", buf3) && strcmp("remortal", buf3)))
 	    return;
+	
+	sprintf(mess, "Setting %s's %s to %s Ok.\n\r", buf, buf3, buf4);
+
 	if (strcmp(buf3, "exp") == 0 && (GET_LEVEL(ch) > (IMO + 2)))
 	    victim->points.exp = kk;
-	/* NOTE: keyword 'skill' takes 3 more arguments.
-	    Set both learned value and skilled value of specifed skill.
-	    wizset <char> skill <skill#> <learned> <skilled>  */
-	else if (strcmp(buf3, "skill") == 0) {
-	    /* for (i = 0; i < MAX_SKILLS; i++)
-		victim->skills[i].learned = k; */	/* clear skills */ 
+	else if (strcmp("skill", buf3) == 0) {
+	    /* NOTE: keyword 'skill' takes 3 more arguments.
+		Set both learned value and skilled value of specifed skill.
+		wizset <char> skill <learned> <skilled> <skill#>  */
+	    i=j=k=-1;
+	    sscanf(buf4, " %d %d %d ", &k, &j, &i );
 
-	    if ( k <= 0 || k >= MAX_SKILLS )
+	    if ( i < 0 ) {	// 4th arg, set all skills
+		if ( k > 0 )	// 2nd
+		    for (i = 0; i < MAX_SKILLS; i++)
+			victim->skills[i].learned = k;
+		if ( j > 0 )	// 3rd
+		    for (i = 0; i < MAX_SKILLS; i++)
+			victim->skills[i].skilled = j;
+	    } 
+	    else if ( i > 0 && i <= MAX_SKILLS ) {
+		victim->skills[i].learned = k;
+		victim->skills[i].skilled = j;
+	    }
+	    else
 		return;
-	    sscanf(buf4, " %d %d %d ", &i, &j, &k );
-	    victim->skills[i].learned = j;
-	    victim->skills[i].skilled = k; 
 	}
-	else if (strcmp(buf3, "recognise") == 0) {
+	else if (strcmp("recognise", buf3) == 0) {
 	    for (i = 0; i < MAX_SKILLS; i++)
 		victim->skills[i].recognise = k;
 	}
-	else if (strcmp(buf3, "lev") == 0)
+	else if (strcmp("lev", buf3) == 0)
 	    GET_LEVEL(victim) = k;
 	else if (strcmp("hit", buf3) == 0)
 	    victim->points.hit = victim->points.max_hit = k;
@@ -747,23 +761,23 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 	else if (strcmp("remortal", buf3) == 0) {
 	    if (strncmp("w", buf4, 1) == 0 || strncmp("W", buf4, 1) == 0) {
 		victim->player.remortal |= REMORTAL_WARRIOR;
-		send_to_char("WARRIOR. Done.\n\r", ch);
+		strcpy(mess, "WARRIOR. Done.\n\r");
 	    }
 	    else if (strncmp("c", buf4, 1) == 0 || strncmp("C", buf4, 1) == 0) {
 		victim->player.remortal |= REMORTAL_CLERIC;
-		send_to_char("CLERIC. Done.\n\r", ch);
+		strcpy(mess, "CLERIC. Done.\n\r");
 	    }
 	    else if (strncmp("m", buf4, 1) == 0 || strncmp("M", buf4, 1) == 0) {
 		victim->player.remortal |= REMORTAL_MAGIC_USER;
-		send_to_char("MAGIC USER. Done.\n\r", ch);
+		strcpy(mess, "MAGIC USER. Done.\n\r");
 	    }
 	    else if (strncmp("t", buf4, 1) == 0 || strncmp("T", buf4, 1) == 0) {
 		victim->player.remortal |= REMORTAL_THIEF;
-		send_to_char("THIEF. Done.\n\r", ch);
+		strcpy(mess, "THIEF. Done.\n\r");
 	    }
 	    else {
 		victim->player.remortal = 0;
-		send_to_char("Invalid class. remortal is resetted.\n\r", ch);
+		strcpy(mess, "Invalid class. remortal is resetted.\n\r");
 	    }
 	}
 	else if (strcmp("class", buf3) == 0) {
@@ -776,7 +790,7 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 	    else if (strncmp("t", buf4, 1) == 0 || strncmp("T", buf4, 1) == 0)
 		victim->player.class = 3;
 	    else
-		send_to_char("Invalid class\n\r", ch);
+		strcpy(mess, "Invalid class\n\r");
 	}
 
 /* NOTE: It's meaningless to change passworod of active player */
@@ -800,9 +814,9 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 		"\tlev hit mana move ac dr hr hand regen align\r\n"
 		"\texp gold bank prac skill recognise quest cond.\r\n");
 
-	    send_to_char(mess, ch);
 	}
 	victim->tmpabilities = victim->abilities;
+	send_to_char(mess, ch);
     }
     else {		/* NOTE: if arg is obj name? */ 
 	
@@ -1586,8 +1600,8 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
     }
     else {
 	victim->points.exp = 1;
-	gain_exp_regardless(victim, (titles[GET_CLASS(victim) - 1][
-					  newlevel].exp) - GET_EXP(victim));
+	LONGLONG le = titles[GET_CLASS(victim) - 1][newlevel].exp;
+	gain_exp_regardless(victim, le - GET_EXP(victim));
     }
 }
 
@@ -1911,7 +1925,7 @@ void do_police(struct char_data *ch, char *argument, int cmd)
     for (d = descriptor_list; d; d = d->next) {
 	if (target == d->descriptor) {
 	    /* NOTE: Log more info for descriptor */
-	    sprintf(name, " desc:%d, host: %s",
+	    sprintf(name, "Policed: desc: %d, host: %s",
 		    d->descriptor, d->host);
 	    log(name);
 	    if ((d->connected == CON_PLYNG) && (d->character)) {

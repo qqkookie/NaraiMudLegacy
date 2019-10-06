@@ -1068,7 +1068,7 @@ void shopping_value(char *arg, struct char_data *ch,
 void shopping_list(char *arg, struct char_data *ch,
 		   struct char_data *keeper, int shop_nr)
 {
-    char buf[MAX_OUT_LEN], buf2[MAX_LINE_LEN], buf3[100];
+    char buf[MAX_STR_LEN*2], buf2[MAX_LINE_LEN], buf3[MAX_NAME_LEN];
     struct obj_data *temp1;
     int found_obj;
     extern char *drinks[];
@@ -1118,8 +1118,8 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
     keeper = 0;
     for (temp_char = world[ch->in_room].people; (!keeper) && (temp_char);
 	 temp_char = temp_char->next_in_room)
-	/* NOTE: It was IS_MOB(temp_char) */
-	if (IS_NPC(temp_char) && temp_char->nr >= 0 ) 
+	/* NOTE: not IS_NPC(temp_char) */
+	if (IS_MOB(temp_char) && temp_char->nr >= 0 ) 
 	    if (mob_index[temp_char->nr].func == shop_keeper)
 		keeper = temp_char;
     for (shop_nr = 0; shop_index[shop_nr].keeper != keeper->nr; shop_nr++) ;

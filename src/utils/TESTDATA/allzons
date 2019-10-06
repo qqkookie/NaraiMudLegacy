@@ -1,0 +1,11 @@
+#!/bin/csh
+
+#for all zone file
+
+echo >! mob.max1.zon
+
+foreach file (../zone/*.zon)
+	zone -N $file >> mob.max1.zon
+end
+
+echo $ >> mob.max1.zon

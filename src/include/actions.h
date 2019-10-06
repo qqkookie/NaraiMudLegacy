@@ -75,6 +75,7 @@
 #define CMD_RENT 		92
 #define CMD_JUNK 		93
 #define CMD_ADVANCE 		95
+#define CMD_BOW 		98
 #define CMD_OPEN 		99
 #define CMD_CLOSE 		100
 #define CMD_LOCK 		101
@@ -185,7 +186,7 @@
 #define CMD_SHOW 		291
 #define CMD_POWER_BASH 		292
 #define CMD_EVIL_STRIKE 	293
-#define CMD_CALL 		294
+#define CMD_TAXI 		294
 #define CMD_CHARGE 		295
 #define CMD_SOLO 		296
 #define CMD_DUMB 		297

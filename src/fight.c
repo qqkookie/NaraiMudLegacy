@@ -1142,10 +1142,9 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     miss = hit_miss(ch, victim, type);
     if ( miss > 1  )
 	return; 
-/*
-    if (ch->equipment[HOLD])
-	held = ch->equipment[HOLD];
-*/ 
+    // if (ch->equipment[HOLD])
+    //	    held = ch->equipment[HOLD];
+
     if (ch->equipment[WIELD] &&
 	(ch->equipment[WIELD]->obj_flags.type_flag == ITEM_WEAPON)) {
 	wielded = ch->equipment[WIELD];

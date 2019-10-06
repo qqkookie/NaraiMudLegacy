@@ -6,6 +6,7 @@
  ************************************************************************ */
 
 #include <stdio.h>
+#include <string.h>
 
 #include "char.h"
 #include "object.h" 
@@ -597,10 +598,11 @@ void npc_steal(struct char_data *ch, struct char_data *victim)
 
 void first_attack(struct char_data *ch, struct char_data *victim)
 {
-    char buf[80], sbuf[MAX_LINE_LEN];
+    char buf[MAX_NAME_LEN], sbuf[MAX_LINE_LEN];
     int num;
 
-    sprintf(buf, "%s", GET_NAME(victim));
+    assert(GET_NAME(victim));
+    strcpy(buf, GET_NAME(victim));
 
     if (GET_LEVEL(ch) < 10) {
 	hit(ch, victim, TYPE_UNDEFINED);

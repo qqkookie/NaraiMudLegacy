@@ -512,7 +512,7 @@ void save_char(struct char_data *ch)
     st.load_room = ch->in_room;
 #endif
     if( ch->desc ) {
-	if (ch->desc->pwd[0])
+	if (ch->desc->pwd[0] != '\0')
 	    strcpy(st.pwd, ch->desc->pwd);
 	/* NOTE: save page length */
 	st.page_len = ch->desc->page_len;
@@ -567,12 +567,12 @@ void delete_char(struct char_data *ch)
 void stash_char(struct char_data *ch)
 {
     struct obj_data *p;
-    char stashfile[MAX_LINE_LEN], name[100];
+    char stashfile[100], name[MAX_NAME_LEN];
     FILE *fl;
     int i;
     unsigned int mask;
     void stash_contents(FILE * fl, struct obj_data *p, int wear_flag);
-    char buf[256];
+    char buf[MAX_LINE_LEN];
 
     mask = sigmask(SIGUSR1) | sigmask(SIGUSR2) | sigmask(SIGINT) |
 	sigmask(SIGBUS) | sigmask(SIGSEGV) |
@@ -804,7 +804,7 @@ void unstash_char(struct char_data *ch, char *stashname)
 
 void wipe_stash(char *name)
 {			/* delete id.x and id.x.y */
-    char stashfile[100], stname[50];
+    char stashfile[100], stname[MAX_NAME_LEN];
     int i;
 
     for (i = 0; name[i]; ++i)
@@ -816,7 +816,7 @@ void wipe_stash(char *name)
     remove(stashfile);
 }
 
-#ifdef 	NO_DEF
+#ifdef 	UNUSED_CODE
 /* NOTE: for adding new player only.. */
 void save_char_new( struct char_data *ch )
 {
@@ -998,12 +998,12 @@ void unstash_char(struct char_data *ch, char *stashname)
 }
 
 #endif		/* NEW_STASH */ 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 void do_checkrent(struct char_data *ch, char *argument, int cmd)
 {
-    char stashfile[MAX_LINE_LEN], name[MAX_NAME_LEN], buf[MAX_LINE_LEN];
-    char str[255];
+    char stashfile[100], name[MAX_NAME_LEN], buf[MAX_LINE_LEN];
+    char str[256];
     FILE *fl;
     int i, j, n;
 
@@ -1085,6 +1085,7 @@ void do_rent(struct char_data *ch, char *arg, int cmd)
     }
     save_char(ch);
     stash_char(ch);	/* clear file.x and save into file.x */
+    // NOTE: extract_char() wipes wearing/carrying items. 
     extract_char(ch); 
 
     /* NOTE: If idle char is forced to rent by check_idling() ,

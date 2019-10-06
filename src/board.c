@@ -44,13 +44,14 @@ int write_board(struct char_data *ch, struct board_data *cb, char *arg);
 int remove_board(struct char_data *ch, struct board_data *cb, char *arg);
 int read_board(struct char_data *ch, struct board_data *cb, char *arg);
 
-#define MAX_NOTE_LENGTH MAX_STRING_LENGTH	/* arbitrary */
+#define MAX_NOTE_LENGTH MAX_STR_LEN	/* arbitrary */
+
 /* 쓰기 */
 void do_write(struct char_data *ch, char *argument, int cmd)
 {
     struct obj_data *paper = 0;		/* , *pen = 0; */
-    char papername[MAX_LINE_LEN], penname[MAX_LINE_LEN];
-    char buf[MAX_OUT_LEN]; 
+    char papername[MAX_NAME_LEN], penname[MAX_NAME_LEN];
+    char buf[MAX_LINE_LEN]; 
 
     argument_interpreter(argument, papername, penname);
 
@@ -418,7 +419,7 @@ int write_board(struct char_data *ch, struct board_data *cb, char *arg)
     obj_to_char(paper, ch);
 
     /* write paper with pen */
-#define MAX_NOTE_LENGTH MAX_STRING_LENGTH
+// #define MAX_NOTE_LENGTH MAX_STRING_LENGTH
     ch->desc->str = &paper->action_description;
     ch->desc->max_str = MAX_NOTE_LENGTH;
     sprintf(ch->desc->scratch, "paper %s", arg);
@@ -773,7 +774,8 @@ int get_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
 	    remove_mail(cb, i);
 	    letter = read_object(paper_num, REAL);
 	    obj_to_char(letter, ch);
-	    CREATE(letter->action_description, char, strlen(buffer + 1));
+	    // NOTE: BUG FIX!
+	    CREATE(letter->action_description, char, strlen(buffer)+1);
 	    strcpy(letter->action_description, buffer);
 	    send_to_char("You got letter from mail box.\n\r", ch);
 	    return (TRUE);
