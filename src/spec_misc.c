@@ -568,7 +568,7 @@ void gbisland_move_seashore(struct char_data *ch)
 
     need_movement = movement_loss[world[ch->in_room].sector_type];
 
-    if (GET_MOVE(ch) < need_movement && !IS_NPC(ch) && GET_LEVEL(ch) < IMO) {
+    if (GET_MOVE(ch) < need_movement && PC_MORTAL(ch)) {
 	send_to_char("You are too exhausted.\n\r", ch);
 	return;
     }
@@ -623,7 +623,7 @@ void gbisland_move_seashore(struct char_data *ch)
     GET_MOVE(ch) = number(1, GET_PLAYER_MAX_MOVE(ch) / 5000 + 1);
 
     /* check - remortal */
-    if ((ch->player.remortal < 15) && (GET_LEVEL(ch) < IMO)) {
+    if (!IS_ALL_REMOED(ch) && IS_MORTAL(ch)) {
 	send_to_char("당신은 소용돌이에 휘말려 정신을 차리지 못합니다.\n\r", ch);
 	send_to_char("당신은 죽습니다.\n\r", ch);
 

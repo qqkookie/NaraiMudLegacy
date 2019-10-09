@@ -489,7 +489,7 @@ int command_interpreter(struct char_data *ch, char *argument)
 found: 
     if ( cmd_nr <= 0) {
 	lev = GET_LEVEL(ch); 
-	if ( lev >= IMO )
+	if (lev > LEVEL_LIMIT)
 	    msg = STRHAN("What did you say, Sir ?\r\n",
 	"오 신이시여 무식한 제가 잘못입니다.. 좀더 쉬운 말씀으로..\r\n", ch);
 	else if (lev >= 31)
@@ -682,6 +682,8 @@ void assign_command_pointers(void)
 
 /* NOTE: cmd_info should be sorted by cmd_nr,
 	in strictly increasing order, but no need to be sequential. */
+
+#define IMO	(LEVEL_LIMIT+1)
 
 /* NOTE: Original commando was too big to compile with small swap sapce */
     COMMANDO( "north", CMD_NORTH, POS_STANDING, do_move, 0, 0, 0, 0);
@@ -1084,7 +1086,7 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 		|| GET_LEVEL(ch) < cmd_info[i]->minimum_level[GET_CLASS(ch)-1])
 	    continue;
 	for (j = 0; j < 4; j++)
-	    if ( IMO > cmd_info[i]->minimum_level[j])
+	    if ( LEVEL_LIMIT >= cmd_info[i]->minimum_level[j])
 		goto no_wizcmd;
 	
 	sprintf(buf + strlen(buf), "%-15s", cmd_info[i]->command_str);

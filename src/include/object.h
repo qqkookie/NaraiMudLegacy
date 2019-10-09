@@ -175,7 +175,7 @@ struct obj_data {
        !IS_AFFECTED((sub),AFF_BLIND)) &&    \
      ( IS_LIGHT(sub->in_room) || IS_AFFECTED((sub),AFF_INFRAVISION)) )
 
-#define CAN_SEE_OBJ(sub,obj) (X98(sub,obj)||(!IS_NPC(sub)&&GET_LEVEL(sub)>=IMO))
+#define CAN_SEE_OBJ(sub,obj) (X98(sub,obj)||IS_WIZARD(sub))
 
 #define GET_ITEM_TYPE(obj) ((obj)->obj_flags.type_flag)
 
@@ -183,9 +183,9 @@ struct obj_data {
 
 #define GET_OBJ_WEIGHT(obj) ((obj)->obj_flags.weight)
 
-#define CAN_CARRY_W(ch) (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w)
+#define CAN_CARRY_W(ch) (str_app[STRENGTH_APPLY_INDEX(ch)].carry_w + CARRY_WEIGHT_BASE)
 
-#define CAN_CARRY_N(ch) (5+GET_DEX(ch)/2+GET_LEVEL(ch)/2)
+#define CAN_CARRY_N(ch) (GET_DEX(ch)/2+GET_LEVEL(ch)/2 + 5 + CARRY_NUM_BASE)
 
 /* NOTE: OLD IS_CARRYING_W() is renamed as GET_CARRYING_W()  */
 #define GET_CARRYING_W(ch) ((ch)->specials.carry_weight)

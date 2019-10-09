@@ -368,7 +368,8 @@ void spell_full_fire(byte level, struct char_data *ch,
 
     assert(victim && ch);
 
-    if (!IS_NPC(ch) && GET_LEVEL(ch) == IMO) {
+    // OLD: if (!IS_NPC(ch) && GET_LEVEL(ch) == LEV_IMMO)
+    if (prohibit_violence(ch)) {
 	send_to_char("You cannot use this spell.\n\r", ch);
 	return;
     }
@@ -732,7 +733,7 @@ void spell_reflect_damage(byte level, struct char_data *ch,
 	act("$n gets ready to reflect damages!", TRUE, ch, 0, 0, TO_ROOM);
 	af.type = SPELL_REFLECT_DAMAGE;
 	af.duration = 5;
-	af.modifier = IMO - (level >> 1);
+	af.modifier = LEVEL_LIMIT+1 - (level/2);
 	af.location = APPLY_AC;
 	af.bitvector = AFF_REFLECT_DAMAGE;
 	affect_to_char(victim, &af);

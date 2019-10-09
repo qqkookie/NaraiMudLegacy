@@ -26,7 +26,7 @@
 #include <netdb.h>
 #include <fcntl.h>
 
-// Don't use obsolete "termio.h", use "termios.h"
+// NOTE: Don't use obsolete "termio.h", use "termios.h"
 #ifdef DONT_HAVE_TERMIOS
 #include <termio.h>
 #include <sys/ioctl.h>
@@ -191,6 +191,7 @@ void run_the_game(int port)
     char pidname[MAX_NAME_LEN];
     sprintf(pidname, "mud-%d.pid", port);
     
+    // NOTE: Check pid file as port lock
     if (access(pidname, F_OK) == 0) {
 	log("Port busy: pid file already exists");
 	exit(1);
@@ -437,8 +438,8 @@ void game_loop(int s)
 	Used for mob balancing. Don't activate this in production version. */
 	    /* NOTE: FOR TESTING:*/
 	    static int myhit= 0 , yourhit= 0;
-	    char buf[200];
-	    if (GET_LEVEL(point->character) < IMO 
+	    char buf[MAX_LINE_LEN];
+	    if (IS_MORTAL(point->character)
 		&& (point->character->specials.fighting) ) {
 		sprintf(buf, "(%d,%d) ",
 		myhit - GET_HIT(point->character),
@@ -516,10 +517,10 @@ void heart_beat(void)
     }
 
     /* NOTE: Auto Crash save code moved form game_loop() */
-    for (point = descriptor_list; point; point = point->next ) { 
-	if ((point->descriptor == ( pulse % MAXOCLOCK)) 
-	    && (point->connected == CON_PLYNG) && (point->character) 
-	    && (!point->original) && (GET_LEVEL(point->character) < IMO)) { 
+    for (point = descriptor_list; point; point = point->next ) {
+	if ((point->descriptor == ( pulse % MAXOCLOCK))
+	    && (point->connected == CON_PLYNG) && (point->character)
+	    && (!point->original) && IS_MORTAL(point->character)) {
 	    save_char(point->character);
 	    stash_char(point->character);
 	}
@@ -1205,6 +1206,7 @@ void record_player_number()
     log(line); 
 
 #ifdef REBOOT_WHEN
+    // NOTE: sync reboot time to wall clock time
 #define A_DAY		86400
     static bool adjust = FALSE;
     if ( !adjust && reboot_time >= A_DAY*3 ) {
@@ -1345,7 +1347,7 @@ void hupsig(int sig)
     else
 	log("Signal received. But I'm confused.");
 
-    /* NOTE: Don't save players potentially danerous signals */
+    /* NOTE: Don't save players on potentially danerous signals */
     if (sig == SIGHUP || sig == SIGINT || sig == SIGTERM)
 	saveallplayers();
 

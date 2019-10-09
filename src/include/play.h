@@ -208,4 +208,6 @@ extern void damage(struct char_data *ch, struct char_data *victim,
 
 extern bool saves_spell(struct char_data *ch, int spell);
 
+extern bool prohibit_violence(struct char_data *ch);
+
 /* ----------------------------------------------------------------- */

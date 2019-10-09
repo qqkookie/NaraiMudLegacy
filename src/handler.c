@@ -35,7 +35,7 @@ void affect_modify(struct char_data *ch, byte loc, short mod, long bitv, bool ad
 	mod = -mod;
     }
 
-    // maxabil = (IS_NPC(ch) ? 25 : (GET_LEVEL(ch) >= (IMO + 2) ? 25 : 18));
+    // maxabil = (IS_NPC(ch) ? 25 : (GET_LEVEL(ch) >= LEV_DEMI ? 25 : 18));
 
     switch (loc) {
     case APPLY_NONE: break;
@@ -199,7 +199,7 @@ void affect_remove_special(struct char_data *ch, struct affected_type *af )
     else if (af->type == SPELL_DEATH && af->duration < 0 ) {
 	/* NOTE: Don't use die(). Religate real daeth to point_update() */
 	/* NOTE: If char is dead already, No more death */
-	if ( GET_HIT(ch) > 0 && GET_LEVEL(ch) < IMO) {
+	if ( GET_HIT(ch) > 0 && IS_MORTAL(ch)) {
 	    GET_HIT(ch) = -1000;
 	    GET_POS(ch) = POS_MORTALLYW;
 	}
@@ -471,7 +471,7 @@ void extract_char(struct char_data *ch)
 	if (world[ch->in_room].contents) {	/* room nonempty */
 	    /* locate tail of room-contents */
 	    for (i = world[ch->in_room].contents; i->next_content;
-		i = i->next_content)
+		i = i->next_content) //  ; BUG FIX
 		/* append ch's stuff to room-contents */
 		i->next_content = ch->carrying;
 	}

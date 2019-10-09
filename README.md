@@ -26,7 +26,9 @@ There are few versions of the source.
 
 For current version and changes, see VERSION file.
 
-Source git respository is https://
+Source git respository is 
+https://github.com/qqkookie/NaraiMudLegacy
+ssh:git@github.com/qqkookie/NaraiMudLegacy
 
 Legacy 2003, 2010, 2019 versions are maintained
 as **`legacy`** branch in the **`git`** repository 

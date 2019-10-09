@@ -388,7 +388,7 @@ void do_eat(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     if ((temp->obj_flags.type_flag != ITEM_FOOD) 
-	    && (GET_LEVEL(ch) < (IMO + 1))) {
+	    && !IS_DIVINE(ch)) {
 	act("Your stomach refuses to eat that!?!", FALSE, ch, 0, 0, TO_CHAR);
 	return;
     }
@@ -403,7 +403,7 @@ void do_eat(struct char_data *ch, char *argument, int cmd)
     if (GET_COND(ch, FULL) > 32)
 	act("You are full.", FALSE, ch, 0, 0, TO_CHAR);
 
-    if ((temp->obj_flags.value[3] == 1) && (GET_LEVEL(ch) < IMO)) {
+    if ((temp->obj_flags.value[3] == 1) && IS_MORTAL(ch)) {
 	act("Ooups, it tasted rather strange ?!!?", FALSE, ch, 0, 0, TO_CHAR);
 	act("$n coughs and utters some strange sounds.",
 	    FALSE, ch, 0, 0, TO_ROOM);
@@ -899,7 +899,7 @@ int shopping_buy(char *arg, struct char_data *ch,
     }
 
     if (GET_GOLD(ch) < (int) (temp1->obj_flags.cost *
-	     shop_index[shop_nr].profit_buy) && GET_LEVEL(ch) < (IMO + 1)) {
+	     shop_index[shop_nr].profit_buy) && !IS_DIVINE(ch)) {
 	sprintf(buf, shop_index[shop_nr].missing_cash2, GET_NAME(ch));
 	do_tell(keeper, buf, 0);
 
@@ -937,7 +937,7 @@ int shopping_buy(char *arg, struct char_data *ch,
     do_tell(keeper, buf, 0);
     sprintf(buf, "You now have %s.\n\r", temp1->short_description);
     send_to_char(buf, ch);
-    if (GET_LEVEL(ch) < (IMO + 1))
+    if (!IS_DIVINE(ch))
 	GET_GOLD(ch) -= (int) (temp1->obj_flags.cost *
 			       shop_index[shop_nr].profit_buy);
 
@@ -1156,7 +1156,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 	hit(keeper, ch, TYPE_UNDEFINED);
     }
     else if (((cmd == CMD_CAST) || (cmd == CMD_RECITE) || (cmd == CMD_USE))
-	&& GET_LEVEL(ch) < IMO) { 
+	&& IS_MORTAL(ch)) {
 	/* Cast 84 , recite 207 , use  172 */
 	act("$N tells you 'No magic here - kid!'.", 
 		FALSE, ch, 0, keeper, TO_CHAR);

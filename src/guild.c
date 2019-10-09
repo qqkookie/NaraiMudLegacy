@@ -136,19 +136,19 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
 	   character want to join */
 	switch (guild_number) {
 	case POLICE:
-	    if ((GET_LEVEL(ch) < 15) && GET_LEVEL(ch) < IMO) {
+	    if ((GET_LEVEL(ch) < 15) && IS_MORTAL(ch)) {
 		send_to_char("당신은 경찰이 될만한 자격이 없군요.\n\r", ch);
 		return TRUE;
 	    }
 	    break;
 	case OUTLAW:
-	    if ((GET_LEVEL(ch) < 20) && GET_LEVEL(ch) < IMO) {
+	    if ((GET_LEVEL(ch) < 20) && IS_MORTAL(ch)) {
 		send_to_char("당신은 깡패가 될만한 자격이 없군요.\n\r", ch);
 		return TRUE;
 	    }
 	    break;
 	case ASSASSIN:
-	    if ((GET_LEVEL(ch) < 25) && GET_LEVEL(ch) < IMO) {
+	    if ((GET_LEVEL(ch) < 25) && IS_MORTAL(ch)) {
 		send_to_char("당신은 암살자가 될만한 자격이 없군요.\n\r", ch);
 		return TRUE;
 	    }
@@ -195,7 +195,7 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
 	return TRUE;
     }
     else if (cmd == CMD_NORTH) {	/* north */
-	if ((guild_number != ch->player.guild) && GET_LEVEL(ch) < IMO) {
+	if ((guild_number != ch->player.guild) && IS_MORTAL(ch)) {
 	    sprintf(buf, "The guild guard humiliates you,and block your way.\n\r");
 	    sprintf(buf2, "The guard humilates $n,and blocks $s way.");
 	    send_to_char(buf, ch);
@@ -204,7 +204,7 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
 	}
     }
     else if (cmd == CMD_CAST) {	/* to prevent cast 'phase' */
-	if ((guild_number != ch->player.guild) && GET_LEVEL(ch) < IMO) {
+	if ((guild_number != ch->player.guild) && IS_MORTAL(ch)) {
 	    sprintf(buf, "The guild guard screams, SHUT UP~~!!\n\r");
 	    send_to_char(buf, ch);
 	    return TRUE;
@@ -253,7 +253,7 @@ int locker_room(struct char_data *ch, int cmd, char *arg)
     if (guild_number < 0 || guild_number > MAX_GUILD_LIST) {
 	return FALSE;
     }
-    if (guild_number != ch->player.guild && GET_LEVEL(ch) < IMO) {
+    if (guild_number != ch->player.guild && IS_MORTAL(ch)) {
 	send_to_char("But you are not the member of this guild!", ch);
 	return FALSE;
     }
@@ -358,7 +358,7 @@ int guild_practice_yard(struct char_data *ch, int cmd, char *arg)
     default:
 	return FALSE;
     }
-    if (guild_number != GET_GUILD(ch) && GET_LEVEL(ch) < IMO) {
+    if (guild_number != GET_GUILD(ch) && IS_MORTAL(ch)) {
 	send_to_char("But you are not a member of this guild.\n\r", ch);
 	return FALSE;
     }
@@ -460,7 +460,7 @@ void do_cant(struct char_data *ch, char *argument, int cmd)
 
     if (IS_NPC(ch))
 	return;
-    if (IS_SET(ch->specials.act, PLR_DUMB_BY_WIZ) && GET_LEVEL(ch) < IMO + 3) {
+    if (IS_SET(ch->specials.act, PLR_DUMB_BY_WIZ) && NOT_GOD(ch)) {
 	return;
     }
     if (ch->player.guild < 1 || ch->player.guild > MAX_GUILD_LIST) {
@@ -476,7 +476,7 @@ void do_cant(struct char_data *ch, char *argument, int cmd)
 		    continue;
 		victim = i->character;
 		if (ch->player.guild == victim->player.guild 
-			&& GET_LEVEL(victim) < IMO) {
+			&& IS_MORTAL(victim)) {
 		    j++;
 		    sprintf(buf, "<%2d> %s <%5d,%5d,%5d> %s \n\r", GET_LEVEL(victim),
 			    GET_NAME(victim), GET_PLAYER_MAX_HIT(victim),
@@ -498,7 +498,7 @@ void do_cant(struct char_data *ch, char *argument, int cmd)
 		if (i->original)
 		    continue;
 		victim = i->character;
-		if (ch->player.guild == victim->player.guild || GET_LEVEL(victim) > IMO) {
+		if (ch->player.guild == victim->player.guild || IS_DIVINE(victim)) {
 		    send_to_char(buf, victim);
 		}
 	    }
@@ -608,7 +608,7 @@ void do_power_bash(struct char_data *ch, char *argument, int cmd)
     /* remove guild skills by atre */
     return;
 
-    if (GET_GUILD(ch) != POLICE && GET_LEVEL(ch) < IMO) {
+    if (GET_GUILD(ch) != POLICE && IS_MORTAL(ch)) {
 	return;
     }
 
@@ -661,7 +661,7 @@ void do_whistle(struct char_data *ch, char *argument, int cmd)
     /* remove guild skills by atre */
     return;
 
-    if (GET_GUILD(ch) != POLICE && GET_LEVEL(ch) < IMO) {
+    if (GET_GUILD(ch) != POLICE && IS_MORTAL(ch)) {
 	return;
     }
     one_argument(argument, name);
@@ -708,7 +708,7 @@ void do_simultaneous(struct char_data *ch, char *argument, int cmd)
     return;
 
     one_argument(argument, name);
-    if (GET_GUILD(ch) != POLICE && GET_LEVEL(ch) < IMO) {
+    if (GET_GUILD(ch) != POLICE && IS_MORTAL(ch)) {
 	return;
     }
 
@@ -728,7 +728,7 @@ void do_simultaneous(struct char_data *ch, char *argument, int cmd)
 	if ((vict && !IS_NPC(vict) && GET_GUILD(vict) == POLICE 
 	    && GET_GUILD_SKILL(vict, POLICE_SKILL_SIMULTANEOUS) > number(1, 99)
 	    && GET_MANA(vict) > 180) 
-	    || (!IS_NPC(vict) && GET_LEVEL(vict) > IMO - 1)) {
+	    || (IS_WIZARD(vict))) {
 	    dam = GET_INT(vict) * GET_GUILD_SKILL(vict, POLICE_SKILL_SIMULTANEOUS);
 	    if (victim)
 		damage(vict, victim, dam, TYPE_HIT);
@@ -758,7 +758,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
     return;
 
     one_argument(argument, name);
-    if (GET_GUILD(ch) != POLICE && GET_LEVEL(ch) < IMO)
+    if (GET_GUILD(ch) != POLICE && IS_MORTAL(ch))
 	return;
 
     if (!(victim = get_char_room_vis(ch, name))) {
@@ -777,7 +777,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
 	return;
     if ((GET_GUILD_SKILL(ch, POLICE_SKILL_ARREST) < number(1, 99) || 
 	  (GET_HIT(victim) >= GET_PLAYER_MAX_HIT(victim) / 8) 
-	  || GET_MANA(ch) < 500) && GET_LEVEL(ch) < IMO ) { 
+	  || GET_MANA(ch) < 500) && IS_MORTAL(ch)) {
 	GET_MANA(ch) -= 100;
 	send_to_char("You failed to arrest him!!!\n\r", ch);
 	return;
@@ -840,7 +840,7 @@ void do_charge(struct char_data *ch, char *argument, int cmd)
     /* remove guild skills by atre */
     return;
 
-    if ((GET_GUILD(ch) != OUTLAW && GET_LEVEL(ch) < IMO) || IS_NPC(ch))
+    if ((GET_GUILD(ch) != OUTLAW && IS_MORTAL(ch)) || IS_NPC(ch))
 	return;
     if (!(victim = get_char_room_vis(ch, name))) {
 	if (ch->specials.fighting) {
@@ -856,7 +856,7 @@ void do_charge(struct char_data *ch, char *argument, int cmd)
 	return;
     }
 
-    if (!IS_NPC(victim) && !IS_NPC(ch) && GET_LEVEL(ch) < IMO) {
+    if (!IS_NPC(victim) && PC_MORTAL(ch)) {
 	send_to_char("You can't use charge to player\n\r", ch);
 	return;
     }
@@ -905,7 +905,7 @@ void do_angry_yell(struct char_data *ch, char *argument, int cmd)
 
     one_argument(argument, name);
 
-    if ((GET_GUILD(ch) != OUTLAW && GET_LEVEL(ch) < IMO) || IS_NPC(ch))
+    if ((GET_GUILD(ch) != OUTLAW && IS_MORTAL(ch)) || IS_NPC(ch))
 	return;
     if (!(victim = get_char_room_vis(ch, name))) {
 	if (ch->specials.fighting) {
@@ -960,11 +960,11 @@ void do_shadow(struct char_data *ch, char *argument, int cmd)
     /* remove guild skills by atre */
     return;
 
-    if (GET_GUILD(ch) != ASSASSIN && GET_LEVEL(ch) < IMO) {
+    if (GET_GUILD(ch) != ASSASSIN && IS_MORTAL(ch)) {
 	send_to_char("You are not assasin!!!\n\r", ch);
 	return;
     }
-    if (GET_MANA(ch) < 1000 && GET_LEVEL(ch) < IMO) {
+    if (GET_MANA(ch) < 1000 && IS_MORTAL(ch)) {
 	send_to_char("Your mana isn't enough to make a shadow!!!\n\r", ch);
 	return;
     }
@@ -991,7 +991,7 @@ void do_solace(struct char_data *ch, char *argument, int cmd)
     /* remove guild skills by atre */
     return;
 
-    if ((GET_GUILD(ch) != ASSASSIN && GET_LEVEL(ch) < IMO) || IS_NPC(ch))
+    if ((GET_GUILD(ch) != ASSASSIN && IS_MORTAL(ch)) || IS_NPC(ch))
 	return;
     for (location = 0; location <= top_of_world; location++) {
 	if (world[location].number == home) {
@@ -1005,7 +1005,7 @@ void do_solace(struct char_data *ch, char *argument, int cmd)
     }
     if ((GET_GUILD_SKILL(ch, ASSASSIN_SKILL_SOLACE) > number(0, 100) &&
 	 GET_HIT(ch) < (GET_PLAYER_MAX_HIT(ch) / 7))
-	|| GET_LEVEL(ch) >= IMO) {
+	|| IS_WIZARD(ch)) {
 	do_say(ch, "HAHAHAHAHAH!!! BYEBYE!!!!!", 0);
 	act("$n disappears.", TRUE, ch, 0, 0, TO_ROOM);
 	if (ch->specials.fighting) {
@@ -1035,7 +1035,7 @@ void do_evil_strike(struct char_data *ch, char *argument, int cmd)
 
     one_argument(argument, name);
 
-    if ((GET_GUILD(ch) != ASSASSIN && GET_LEVEL(ch) < IMO) || IS_NPC(ch))
+    if ((GET_GUILD(ch) != ASSASSIN && IS_MORTAL(ch)) || IS_NPC(ch))
 	return;
     if (!(victim = get_char_room_vis(ch, name))) {
 	if (ch->specials.fighting) {
@@ -1099,7 +1099,7 @@ void do_assault(struct char_data *ch, char *argument, int cmd)
     int percent;
     int location;
 
-    if (GET_GUILD(ch) != OUTLAW && GET_LEVEL(ch) < IMO) {
+    if (GET_GUILD(ch) != OUTLAW && IS_MORTAL(ch)) {
 	send_to_char("How about join outlaws???\n\r", ch);
 	return;
     }
@@ -1158,4 +1158,3 @@ void do_assault(struct char_data *ch, char *argument, int cmd)
 	send_to_char("먼 챙피? 하하하...\n\r", ch);
     }
 }
-

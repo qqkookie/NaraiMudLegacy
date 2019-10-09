@@ -227,7 +227,7 @@ void boot_world(void)
 		    exit(2);
 		}
 		while (world[room_nr].number > zone_table[zone].top)
-		    if (++zone > top_of_zone_table) {
+		    if (zone > top_of_zone_table) {
 			fprintf(stderr, "Room %d is outside of any zone.\n",
 			    virtual_nr);
 			exit(2);
@@ -267,6 +267,7 @@ void boot_world(void)
 
 	    room_nr++;
 	}
+	zone++;
     } while (flag);
 
     free(temp); 
@@ -1206,7 +1207,7 @@ void do_resetzone(struct char_data *ch, char *argument, int cmd)
 
     if (!ch)
 	return;
-    if (GET_LEVEL(ch) < (IMO + 3))
+    if (NOT_GOD(ch))
 	return;
     if (!argument || !*argument) {
 	send_to_char("Which zone do you want to reset?\n\r", ch);
@@ -1250,7 +1251,7 @@ void do_reloadzone(struct char_data *ch, char *argument, int cmd)
 
     if (!ch)
 	return;
-    if (GET_LEVEL(ch) < (IMO + 3))
+    if (NOT_GOD(ch))
 	return;
     if (!argument || !*argument) {
 	send_to_char("Which zone do you want to reset?\n\r", ch);

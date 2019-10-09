@@ -50,8 +50,8 @@
 
 #define ROOM_PRIVATE		(PRIVATE)	/* Can't teleport in         */
 
-#define LVL_GRGOD		(IMO+3)
-#define LVL_IMMORT		(IMO)
+#define LVL_GRGOD		(LEV_GOD)
+#define LVL_IMMORT		(LEV_IMMO)
 
 /*
    char    buf[MAX_BUFSIZ];
@@ -804,7 +804,7 @@ int House_can_enter(struct char_data *ch, sh_int house)
 {
     int i, j;
 
-    if (GET_LEVEL(ch) >= LVL_GRGOD || (i = find_house(house, ch)) < 0)
+    if (GET_LEVEL(ch) == LVL_GRGOD || (i = find_house(house, ch)) < 0)
 	return 1;
 
     if ( IS_SET(house_control[i]->mode, HOUSE_PRIVATE)) {
@@ -1045,7 +1045,7 @@ void do_track(struct char_data *ch, char *argument, int cmd)
 	WAIT_STATE(ch, PULSE_VIOLENCE );
 	
 	if ( num < ( 30 + GET_LEARNED(ch, SKILL_TRACK) 
-		+ GET_SKILLED(ch, SKILL_TRACK)) / 2 || GET_LEVEL(ch) > IMO ) {
+		+ GET_SKILLED(ch, SKILL_TRACK)) / 2 || IS_DIVINE(ch)) {
 	    INCREASE_SKILLED(ch, NULL, SKILL_TRACK);
 	}
 	else

@@ -7,7 +7,7 @@
    this file is for version control of mud.
    and fileid is also used in 'show version'.
  */
-char fileid[] = 
+char version_id[] = 
 "@(#) KIT Clasic version v4.00  2019/10/05  by Cookie (cantata@gmail.com)\n\r"
 " New Narai 1998  v2.92.3   97/12/09  by Cookie.\n\r"
 " Forked from Narai  v2.90   97/09/11  by cookie (cookie0@chollian.net)\n\r"
@@ -150,7 +150,7 @@ void do_who(struct char_data *ch, char *argument, int cmd)
 		    if (IS_SET(d->character->specials.act, PLR_CRIMINAL))
 			strcat(buf, " (CRIMINAL)");
 
-		if (GET_LEVEL(ch) < IMO) {
+		if (IS_MORTAL(ch)) {
 		    sprintf(buf2, " PK#(%d)\n\r", d->character->player.pk_num);
 		    strcat(buf, buf2);
 		}
@@ -164,7 +164,7 @@ void do_who(struct char_data *ch, char *argument, int cmd)
 	    if (!IS_AFFECTED(d->character, AFF_SHADOW_FIGURE))
 		strcat(page_buffer, buf);
 	    else {
-		if (GET_LEVEL(ch) < IMO)
+		if (IS_MORTAL(ch))
 		    strcat(page_buffer, "A shadow figure\n\r");
 		else
 		    strcat(page_buffer, buf);
@@ -187,7 +187,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
     extern time_t	boottime;
 
     one_argument(argument, line);
-    if ((GET_LEVEL(ch) >= IMO) && (strcmp("-t", line) != 0)) {
+    if (IS_WIZARD(ch) && (strcmp("-t", line) != 0)) {
 	strcpy( line, "------------ ------------\r\n" ); 
 	list_users( ch, line + strlen(line) );
 	strcat(line , "\r\n" );
@@ -242,7 +242,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
 	most = m;
     sprintf(line, "%s%d/%d active connections\n\r",
 	    (n % 2) ? "\n\r" : "", m, most);
-    if (GET_LEVEL(ch) > IMO + 2)
+    if (IS_GOD(ch))
 	send_to_char(line, ch);
 #endif		/* NO_DEF */ 
 
@@ -326,7 +326,8 @@ int list_users(struct char_data *ch, char *line )
     } 
     if (m > most)
 	most = m;
-    sprintf( buf, "\nConnections:    Active: %d    Peak: %d", m, most); 
+    if (IS_DIVINE(ch))
+	sprintf( buf, "\nConnections:    Active: %d    Peak: %d", m, most); 
 
     return(m);
 }
@@ -348,7 +349,7 @@ bool do_practice(struct char_data *ch, char *arg, int cmd)
     struct char_data *victim;
 
     buf = buffer; *buf = '\0';
-    if (GET_LEVEL(ch) >= IMO) {
+    if (IS_WIZARD(ch)) {
 	arg = one_argument(arg, victim_name);
 	if (*victim_name) {
 	    victim = get_char_vis(ch, victim_name);
@@ -462,8 +463,8 @@ void do_levels(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     *buf = '\0';
-    for (i = 1; i < IMO; i++) {
-	sprintf(buf + strlen(buf), "%2d: %9d to %9d: ", i,
+    for (i = 1; i <= LEVEL_LIMIT; i++) {
+	sprintf(buf + strlen(buf), "%2d: %10lld to %10lld: ", i,
 		titles[GET_CLASS(ch) - 1][i].exp,
 		titles[GET_CLASS(ch) - 1][i + 1].exp);
 	switch (GET_SEX(ch)) {
@@ -662,8 +663,8 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	break; 
 
     case 8:
-	if (GET_LEVEL(ch) >= IMO ) {
-	    send_to_char(fileid, ch);
+	if (IS_WIZARD(ch)) {
+	    send_to_char(version_id, ch);
 	    /* NOTE: show compile time */
 	    send_to_char("Compiled on : " __DATE__ "  " __TIME__ ".\r\n" , ch); 
 	}
@@ -737,7 +738,7 @@ void do_weather(struct char_data *ch, char *argument, int cmd)
     void weather_change(int change);
 
     one_argument(argument, buf2);
-    if ((GET_LEVEL(ch) > (IMO + 2)) && buf2[0] != '\0') {
+    if (IS_GOD(ch) && buf2[0] != '\0') {
 	if (strcmp(buf2, "cloud") == 0)
 	    weather_change(1);
 	else if (strcmp(buf2, "rain") == 0)

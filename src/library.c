@@ -470,15 +470,15 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 	It was too complex macros to use time- and space-efficently */
 int CAN_SEE(struct char_data *ch, struct char_data *vic ) 
 {
-#define OMNI(sub) (!IS_NPC(sub) && (GET_LEVEL(sub) >= IMO))
+// #define OMNI(sub) (!IS_NPC(sub) && IS_IMMORTAL(sub) )
 #define X99(sub, obj)   ( ((!IS_AFFECTED((obj),AFF_INVISIBLE) || \
 				IS_AFFECTED((sub),AFF_DETECT_INVISIBLE)) && \
 				!IS_AFFECTED((sub),AFF_BLIND) ) && \
 		(IS_NPC(obj) || !IS_SET((obj)->specials.act,PLR_WIZINVIS)) && \
-    (OMNI(sub) || IS_LIGHT(sub->in_room) || IS_AFFECTED(sub,AFF_INFRAVISION)))
+    (IS_WIZARD(sub) || IS_LIGHT(sub->in_room) || IS_AFFECTED(sub,AFF_INFRAVISION)))
 
-#define CAN_SEE_MACRO(sub,obj) (X99(sub,obj)||(OMNI(sub) && (IS_NPC(obj) || \
-   (GET_LEVEL(sub) >= GET_LEVEL(obj)))))
+#define CAN_SEE_MACRO(sub,obj) (X99(sub,obj)||(IS_WIZARD(sub) && (IS_NPC(obj) || \
+   !HIGHER_LEV(obj, sub))))
 
     return(CAN_SEE_MACRO(ch , vic));
 }

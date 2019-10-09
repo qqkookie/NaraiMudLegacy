@@ -9,7 +9,7 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <time.h>
-// BSD family don't have "crypt.h"
+// NOTE: BSD family doesn't have "crypt.h"
 #ifndef __FreeBSD__
 #include <crypt.h>
 #endif
@@ -180,7 +180,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	SEND_TO_Q(motd, d);
 	SEND_TO_Q("\r\n*** PRESS RETURN : ", d);
 	/* NOTE: general motd first, immortal motd next */
-	if (GET_LEVEL(d->character) >= IMO)
+	if (IS_WIZARD(d->character))
 	    STATE(d) = CON_IMOTD;
 	else
 	    STATE(d) = CON_RMOTD;
@@ -368,7 +368,7 @@ void nanny(struct descriptor_data *d, char *arg)
 
 	case '1':
 	    /* NOTE: Imple can disable mortal player entering game.  */
-	    if ( noplayingflag && GET_LEVEL(d->character) < IMO ) {
+	    if ( noplayingflag && IS_MORTAL(d->character)) {
 		STATE(d) = CON_CLOSE;
 		break;
 	    }
@@ -386,7 +386,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	    /* NOTE : Player punished by God will return to jail before
 	       forgiven or jail term expired   */
 	    if (IS_SET(d->character->specials.act, PLR_BANISHED)
-		&& (d->character->player.level < IMO)) {
+		&& IS_MORTAL(d->character)) {
 		/* NOTE: check jail term and release */
 		if (d->character->specials.jail_time > time(0))
 		    d->character->in_room = real_room(JAIL_ROOM);
@@ -400,7 +400,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	    }
 
 	    if (d->character->in_room <= NOWHERE ) {
-		d->character->in_room = (GET_LEVEL(d->character) < IMO) ? 
+		d->character->in_room = IS_MORTAL(d->character) ?
 		    real_room(MID_TEMPLE) : real_room(WIZ_LOUNGE);
 	    }
 
@@ -721,7 +721,7 @@ void init_player(struct char_data *ch)
     GET_EXP(ch) = 1;
     /* *** if this is our first player --- he be God *** */
     if (top_of_p_table < 0) {
-	GET_LEVEL(ch) = IMO + 3;
+	GET_LEVEL(ch) = LEV_GOD;
 	/* NOTE:  God needs initial player title, or "who" will hang */
 	// GET_TITLE(ch) = "Implementor of This World";
 	set_title(ch);
@@ -814,7 +814,7 @@ void init_player(struct char_data *ch)
 #endif
 
     for (i = 0; i <= MAX_SKILLS - 1; i++) {
-	if (GET_LEVEL(ch) < IMO + 3) {
+	if (NOT_GOD(ch)) {
 	    ch->skills[i].learned = 0;
 	    ch->skills[i].skilled = 0;
 	    ch->skills[i].recognise = 0;
@@ -831,7 +831,7 @@ void init_player(struct char_data *ch)
     for (i = 0; i < 5; i++)
 	ch->specials.apply_saving_throw[i] = 0;
     for (i = 0; i < 3; i++)
-	GET_COND(ch, i) = (GET_LEVEL(ch) == (IMO + 3) ? -1 : 24);
+	GET_COND(ch, i) = (IS_GOD(ch) ? -1 : 24);
 }
 
 
@@ -1045,7 +1045,7 @@ void do_wimpy(struct char_data *ch, char *argument, int cmd)
 
 	/* NOTE: Rewrited code for more clarity   */
 	/* NOTE: Prevent cheating wimpy value with mana boost */
-	if ((ch->player.level >= (IMO - 1)) && (ch->player.remortal >= 15))
+	if (IS_ALL_REMOED(ch))
 	    wimpy_limit = GET_PLAYER_MAX_HIT(ch) * 25 / 100;
 	else
 	    wimpy_limit = GET_PLAYER_MAX_HIT(ch) * 60 / 100;

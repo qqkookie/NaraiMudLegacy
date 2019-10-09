@@ -15,6 +15,14 @@
 #include "spells.h"
 #include "actions.h"
 
+bool prohibit_violence(struct char_data *ch)
+{
+    // NOTE: Prohibit voilance for all wizards or just immo. (level 41) ?
+    /* if ((GET_LEVEL(ch) == IMO) && (!IS_NPC(ch))) { */
+    // if (IS_WIZARD(ch))
+    return ((GET_LEVEL(ch) == LEV_IMMO) && !IS_NPC(ch));
+}
+
 /* NOTE: NEW!  Get victim of given name and check it is valid victim.
         If not valid, print error message and return NULL.
        	Called by do_backstab(), do_bash(), do_kick(), do_punch(), do_flash(),
@@ -26,8 +34,8 @@ struct char_data *get_victim(struct char_data *ch, char *argument, int cmd)
 
     one_argument(argument, name);
 
-    /* if ((GET_LEVEL(ch) == IMO) && (!IS_NPC(ch))) { */
-    if ((GET_LEVEL(ch) >= IMO) && (!IS_NPC(ch))) 
+    // OLD: if ((GET_LEVEL(ch) == LEV_IMMO) && (!IS_NPC(ch)))
+    if(prohibit_violence(ch))
 	return NULL;
 
     if ((!name[0] || !(victim = get_char_room_vis(ch, name)))
@@ -75,8 +83,7 @@ struct char_data *get_victim(struct char_data *ch, char *argument, int cmd)
 		"유령을 치겠다고? 미친소리!\n\r", ch); 
 	return NULL;
     }
-    else if ((cmd == CMD_SHOOT) 
-	    && (GET_LEVEL(victim) >= IMO) && (!IS_NPC(victim))) {
+    else if ((cmd == CMD_SHOOT) && IS_WIZARD(victim)) {
 	if (!IS_NPC(ch))
 	    send_to_char("Shoot an immortal?  Never.\n\r", ch);
 	return NULL;
@@ -93,7 +100,8 @@ void do_hit(struct char_data *ch, char *argument, int cmd)
 
     one_argument(argument, arg);
 
-    if ((GET_LEVEL(ch) == IMO) && (!IS_NPC(ch))) 
+    // OLD: if ((GET_LEVEL(ch) == LEV_IMMO) && (!IS_NPC(ch))) 
+    if(prohibit_violence(ch))
 	return;
     if (!*arg) {
 	send_to_char("Hit whom?\n\r", ch);
@@ -167,12 +175,12 @@ void do_kill(struct char_data *ch, char *argument, int cmd)
     char buf[70];
     struct char_data *victim;
 
-    if (GET_LEVEL(ch) >= IMO && GET_LEVEL(ch) < IMO + 3) {
+    if (IS_WIZARD(ch) && NOT_GOD(ch)) {
 	sprintf(buf, "Fight IMO:%s v.s. %s", GET_NAME(ch), argument);
 	log(buf);
 	return;
     }
-    if ((GET_LEVEL(ch) < IMO) || IS_NPC(ch)) {
+    if (IS_MORTAL(ch) || IS_NPC(ch)) {
 	do_hit(ch, argument, 0);
 	return;
     }
@@ -186,7 +194,7 @@ void do_kill(struct char_data *ch, char *argument, int cmd)
 	else if (ch == victim)
 	    send_to_char("Your mother would be so sad.. :(\n\r", ch);
 	else {
-	    if (GET_LEVEL(ch) < IMO + 3 && GET_LEVEL(victim) >= (IMO + 3))
+	    if (NOT_GOD(ch) && IS_GOD(victim))
 		return;
 	    act("You chop $M to pieces! Ah! The blood!",
 		FALSE, ch, 0, victim, TO_CHAR);
@@ -284,7 +292,7 @@ void do_bash(struct char_data *ch, char *argument, int cmd)
 	dam = GET_LEVEL(ch) * (10 + GET_SKILLED(ch, SKILL_BASH));
 	damage(ch, victim, dam, SKILL_BASH);
 
-	percent = number(1, IMO << 1);
+	percent = number(1, LEVEL_LIMIT *2+5);
 	if (percent < GET_LEVEL(ch))
 	    GET_POS(victim) = POS_STUNNED;
 	else
@@ -313,7 +321,7 @@ void do_multi_kick(struct char_data *ch, char *argument, int cmd)
 	return;
     }
 
-    GET_MOVE(ch) -= ((IMO << 1) - GET_LEVEL(ch));
+    GET_MOVE(ch) -= (LEVEL_LIMIT *2 - GET_LEVEL(ch));
     dam = GET_LEVEL(ch) * (1 + (GET_SKILLED(ch, SKILL_KICK) >> 2));
     dam = number(dam, dam << 1);
 
@@ -390,6 +398,7 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
         OLD:  dam = (LEARNED/2 + SKILLED*2) * number(LEVEL, LEVEL*2);
         NEW:  dam = (LEARNED/3 + SKILLED/2) * number(LEVEL, LEVEL*2); */
 
+    // NOTE: Old code
     // dam = ((GET_LEARNED(ch, SKILL_PUNCH)>>1)+(GET_SKILLED(ch, SKILL_PUNCH)<<1))
     //		 * number(GET_LEVEL(ch), GET_LEVEL(ch) << 1);
 
@@ -400,7 +409,7 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
 		    - GET_SKILLED(ch, SKILL_PUNCH)) >> 4) + number(1, 101);
     WAIT_STATE(ch, PULSE_VIOLENCE);
     if (percent > ch->skills[SKILL_PUNCH].learned) {
-        /* NOTE: To print punch damage message, use fight_message() in damage() */ 
+        /* NOTE: To print punch damage message, use fight_message() in damage() */
 	// punch message in in "lib/messages" #109
 	/*
 	send_to_char("You failed to punch him WHAT a DAMN!!!!!\n\r", ch);
@@ -425,9 +434,10 @@ void do_tornado(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *tch, *tch2;
 
-    if ((GET_LEVEL(ch) == IMO) && (!IS_NPC(ch))) {
+    // OLD: if ((GET_LEVEL(ch) == LEV_IMMO) && (!IS_NPC(ch)))
+    if(prohibit_violence(ch))
 	return;
-    }
+
     for (tch = world[ch->in_room].people; tch; tch = tch2) {
 	tch2 = tch->next_in_room;
 	if ((IS_NPC(ch) ^ IS_NPC(tch)) && ch->points.move > 0) {
@@ -439,7 +449,7 @@ void do_tornado(struct char_data *ch, char *argument, int cmd)
 	}
     }
     if (ch->points.move > 0)
-	ch->points.move -= (IMO - GET_LEVEL(ch) + 2);
+	ch->points.move -= (LEVEL_LIMIT - GET_LEVEL(ch) + 3);
     INCREASE_SKILLED(ch, ch, SKILL_TORNADO);
     if (!IS_NPC(ch))
 	WAIT_STATE(ch, PULSE_VIOLENCE * 1);
@@ -457,7 +467,7 @@ void do_flash(struct char_data *ch, char *argument, int cmd)
 	return;
 
     /*
-    if (!IS_NPC(victim) && !IS_NPC(ch) && GET_LEVEL(ch) < IMO) {
+    if (!IS_NPC(victim) && PC_MORTAL(ch)) {
         send_to_char("You can't use flash to player\n\r",ch);
 	return;
     }
@@ -528,11 +538,10 @@ void shoot(struct char_data *ch, struct char_data *victim, int type)
 	    FALSE, ch, ch->equipment[HOLD], 0, TO_ROOM);
 	return;
     }
-    if ((GET_LEVEL(ch) < (IMO + 3)) &&
-	((ch && !IS_NPC(ch))
-	    || (ch && IS_NPC(ch) && IS_AFFECTED(ch, AFF_CHARM))))
+    if (ch && ((!IS_NPC(ch) && NOT_GOD(ch))
+	    || (IS_NPC(ch) && IS_AFFECTED(ch, AFF_CHARM))))
 	ch->equipment[HOLD]->obj_flags.value[0]--;
-    if ((!IS_NPC(ch)) && (GET_LEVEL(ch) >= (IMO + 3)))
+    if (IS_GOD(ch))
 	percent = 0;
     else
 	percent = number(1, 101) + GET_LEVEL(victim) - GET_LEVEL(ch);
@@ -550,9 +559,8 @@ void shoot(struct char_data *ch, struct char_data *victim, int type)
 	if (!IS_NPC(victim))
 	    WAIT_STATE(victim, PULSE_VIOLENCE * 2);
 	damage(ch, victim, dam, TYPE_SHOOT);
-	if (GET_LEVEL(ch) < (IMO + 3))
-	    if (!IS_NPC(ch))
-		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
+	if ( !IS_NPC(ch) && NOT_GOD(ch))
+	    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
     }
     else {
 	act("You try to shoot $M with $p, but miss.",
@@ -817,7 +825,7 @@ void do_throw_object(struct char_data *ch, char *argument, int cmd)
     if ( !victim )
 	return; 
 
-    else if (GET_CLASS(ch) != CLASS_THIEF && GET_LEVEL(ch) < IMO) {
+    else if (GET_CLASS(ch) != CLASS_THIEF && IS_MORTAL(ch)) {
 	send_to_char("This skill is for thieves only.\n\r", ch);
 	return;
     } 

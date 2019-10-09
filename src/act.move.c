@@ -57,7 +57,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
 	    if (obj->obj_flags.type_flag == ITEM_OTHER
 		&& obj->obj_flags.value[0] == ITEMSUB_BOAT) 
 		has_boat = TRUE;
-	if (!has_boat && GET_LEVEL(ch) < IMO) {
+	if (!has_boat && IS_MORTAL(ch)) {
 	    send_to_char("You need a boat to go there.\n\r", ch);
 	    return (FALSE);
 	}
@@ -74,7 +74,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
 		/* Wings of Pegasus  and feather */
 		has_wing = TRUE;
 	}
-	if (!has_wing && (GET_LEVEL(ch) < IMO + 3)) {
+	if (!has_wing && NOT_GOD(ch)) {
 	    send_to_char("You need wings to fly there.\n\r", ch);
 	    return (FALSE);
 	}
@@ -84,7 +84,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
     ASSERT(to_room != NOWHERE);		/* Check validity */
 
     /* NOTE:  Only wizard level 43 or up can enter OFF_LIMIT room */
-    if ( ROOM_FLAGGED( to_room, OFF_LIMITS ) && (GET_LEVEL(ch) < IMO + 2 )) {
+    if ( ROOM_FLAGGED( to_room, OFF_LIMITS ) && (GET_LEVEL(ch) < LEV_DEMI )) {
 	send_to_char("That room is off-limits!\r\n", ch);
 	return (FALSE);
     }
@@ -96,7 +96,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
 	return (FALSE);
     } 
 
-    if (GET_MOVE(ch) < need_movement && !IS_NPC(ch) && GET_LEVEL(ch) < IMO) {
+    if (GET_MOVE(ch) < need_movement && PC_MORTAL(ch)) {
 	if (!following)
 	    send_to_char("You are too exhausted.\n\r", ch);
 	else
@@ -105,7 +105,7 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
 	return (FALSE);
     }
 
-    if (GET_LEVEL(ch) < IMO && !IS_NPC(ch))
+    if (PC_MORTAL(ch))
 	GET_MOVE(ch) -= need_movement;
 
     if (!IS_AFFECTED(ch, AFF_SNEAK)) {
@@ -403,7 +403,7 @@ int has_key(struct char_data *ch, int key)
 	    return (1);
 
     /* NOTE: Lesser-God(42) has universal key */ 
-    return (GET_LEVEL(ch) > IMO);
+    return (IS_DIVINE(ch));
 } 
 
 void do_lock(struct char_data *ch, char *argument, int cmd)
@@ -579,7 +579,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
 	else if (!IS_SET(obj->obj_flags.value[1], CONT_LOCKED))
 	    send_to_char("Oho! This thing is NOT locked!\n\r", ch);
 	else if (IS_SET(obj->obj_flags.value[1], CONT_PICKPROOF)
-		&& (GET_LEVEL(ch) < IMO)) 
+		&& IS_MORTAL(ch))
 		send_to_char("It resists your attempt to pick it.\n\r", ch);
 	else {
 	    if ( IS_SET(obj->obj_flags.value[1], CONT_PICKPROOF))
@@ -603,7 +603,7 @@ void do_pick(struct char_data *ch, char *argument, int cmd)
     else if (!IS_SET(EXIT(ch, door)->exit_info, EX_LOCKED))
 	send_to_char("Oh.. it wasn't locked at all.\n\r", ch);
     else if (IS_SET(EXIT(ch, door)->exit_info, EX_PICKPROOF)
-	    && (GET_LEVEL(ch) < IMO))
+	    && IS_MORTAL(ch))
 	    send_to_char("You seem to be unable to pick this lock.\n\r",ch);
     else {
 	if (IS_SET(EXIT(ch, door)->exit_info, EX_PICKPROOF))
@@ -695,7 +695,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
 	    /* NOTE: check page buffer overflow */
 	    if (buf >  buffer + sizeof(buffer) - 100)
 		break;
-	    if (GET_LEVEL(ch) < IMO) { 
+	    if (IS_MORTAL(ch)) {
 		if (( world[vic->in_room].zone != world[ch->in_room].zone )
 		    || ((!CAN_SEE(ch, vic) || IS_AFFECTED(vic, AFF_HIDE)
 			|| IS_AFFECTED(vic, AFF_SHADOW_FIGURE)) && ch != vic ))
@@ -726,12 +726,12 @@ void do_where(struct char_data *ch, char *argument, int cmd)
 
     for (i = character_list; i; i = i->next) {
 	if ((i->in_room == NOWHERE) || !isname(name, i->player.name)
-	    || ((GET_LEVEL(ch) < IMO ) && ( i != ch )
+	    || (IS_MORTAL(ch) && ( i != ch )
 		&& ( !CAN_SEE(ch, i) || IS_AFFECTED(i, AFF_SHADOW_FIGURE) 
 		    || (world[i->in_room].zone != world[ch->in_room].zone))))
 	    continue;
 
-	if (GET_LEVEL(ch) < IMO) {
+	if (IS_MORTAL(ch)) {
 	    sprintf(buf, "    %-30s- %s\r\n", 
 		( IS_NPC(i) ? i->player.short_descr : i->player.name ),
 		    world[i->in_room].name );
@@ -749,7 +749,7 @@ void do_where(struct char_data *ch, char *argument, int cmd)
 	}
     }
 
-    if (GET_LEVEL(ch) < IMO) { 
+    if (IS_MORTAL(ch)) {
 	send_to_char("Couldn't find any such thing.\n\r", ch);
 	return;
     }
@@ -815,7 +815,7 @@ void do_exits(struct char_data *ch, char *argument, int cmd)
 	if (EXIT(ch, door))
 	    if (EXIT(ch, door)->to_room != NOWHERE &&
 		!IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED)) {
-		if (GET_LEVEL(ch) >= IMO)
+		if (IS_WIZARD(ch))
 		    sprintf(buf + strlen(buf), "%-5s - [%5d] %s\r\n",
 			 exits[door], world[EXIT(ch, door)->to_room].number,
 			    world[EXIT(ch, door)->to_room].name);

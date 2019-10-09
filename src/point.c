@@ -364,12 +364,12 @@ void advance_level(struct char_data *ch, int level_up)
 	ch->specials.spells_to_learn = MAX(0, ch->specials.spells_to_learn);
     }
 
-    if (GET_LEVEL(ch) > IMO)
+    if (IS_DIVINE(ch))
 	for (i = 0; i < 3; i++)
 	    ch->specials.conditions[i] = -1;
 }
 
-void gain_gold(struct char_data *ch, long money)
+void gain_gold(struct char_data *ch, LONGLONG money)
 {
     if (money > 0) {
 	/* NOTE: Check overflow, purse max is about 2100 M coin */
@@ -386,9 +386,9 @@ void gain_gold(struct char_data *ch, long money)
     }
 }
 
-void gain_exp(struct char_data *ch, long gain)
+void gain_exp(struct char_data *ch, LONGLONG gain)
 {
-    if (IS_NPC(ch) || ((GET_LEVEL(ch) < IMO) && (GET_LEVEL(ch) > 0))) {
+    if (IS_NPC(ch) || (IS_MORTAL(ch) && (GET_LEVEL(ch) > 0))) {
 	if (gain > 0) {
 	    gain = MIN(GET_LEVEL(ch) * GET_LEVEL(ch) * 20000, gain);
 	    /* NOTE: prevent exp. overflow */
@@ -406,7 +406,7 @@ void gain_exp(struct char_data *ch, long gain)
     }
 }
 
-void gain_exp_regardless(struct char_data *ch, long gain)
+void gain_exp_regardless(struct char_data *ch, LONGLONG gain)
 {
     int i;
     bool is_altered = FALSE;
@@ -415,7 +415,7 @@ void gain_exp_regardless(struct char_data *ch, long gain)
     if (!IS_NPC(ch)) {
 	if (gain > 0) {
 	    GET_EXP(ch) += gain;
-	    for (i = 0; (i <= (IMO + 3)) &&
+	    for (i = 0; (i <= LEV_GOD) &&
 		 (titles[GET_CLASS(ch) - 1][i].exp <= GET_EXP(ch)); i++) {
 		if (i > GET_LEVEL(ch)) {
 		    send_to_char("You raise a level.\n\r", ch);
@@ -564,7 +564,7 @@ void point_update(void)
 	*/
 
 	/* NOTE: char i may be free()'d in check_idling()  */
-	if (GET_LEVEL(i) < IMO)
+	if (IS_MORTAL(i))
 	    check_idling(i); 
     }			/* for */
 

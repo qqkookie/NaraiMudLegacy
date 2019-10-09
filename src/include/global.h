@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "typedef.h" 
+#include "typedef.h"
 
 // ----------- configurable parameter defintions --------------
 
@@ -23,8 +23,8 @@
 #define TIME_ZONE		(9*3600)
 #define REBOOT_WHEN		(9*60-5)
 
-#define CARRY_WEIGHT_BASE	500
-#define CARRY_NUM_BASE		15
+#define CARRY_WEIGHT_BASE	500	// NOTE: more carrying weight
+#define CARRY_NUM_BASE		10	// NOTE: more carry num
 
 #define CHATLOG			"log/chatlog.log"
 #define MID_HELPER		"Narai"
@@ -47,10 +47,26 @@
 #define MAX_BUFSIZ		MAX_LINE_LEN
 #define MAX_INPUT_LENGTH	MAX_LINE_LEN
 
-#ifndef IMO
-#define	IMO	41
-#endif
- 
+#define LEV_GOD			(LEV_IMMO+3)
+#define LEV_DEMI		(LEV_IMMO+2)
+#define LEV_LESSER		(LEV_IMMO+1)
+#define LEVEL_LIMIT		(LEV_IMMO-1)
+#define LEVEL_SIZE		(LEV_GOD+1)
+
+#define IS_WIZARD(ch)		(GET_LEVEL(ch) >= LEV_IMMO && GET_LEVEL(ch) <= LEV_GOD \
+					 && !IS_NPC(ch))
+
+#define IS_MORTAL(ch)		(GET_LEVEL(ch) <= LEVEL_LIMIT)
+#define PC_MORTAL(ch)		(GET_LEVEL(ch) <= LEVEL_LIMIT && !IS_NPC(ch))
+
+#define IS_GOD(ch)		(!IS_NPC(ch) && GET_LEVEL(ch) == LEV_GOD)
+#define NOT_GOD(ch)		(GET_LEVEL(ch) != LEV_GOD)
+#define IS_DIVINE(ch)		(GET_LEVEL(ch) >= LEV_LESSER)
+
+#define IS_NPCLEV(ch)		(IS_NPC(ch) || GET_LEVEL(ch) > LEV_GOD )
+#define HIGHER_LEV(ch, vict)    (GET_LEVEL(ch) > GET_LEVEL(vict))
+
+
 /* -----------------  Misc. structures about char  ------------------- */
 
 struct str_app_type {
@@ -58,7 +74,7 @@ struct str_app_type {
     int todam;		/* Damage Bonus/Penalty                */
     int carry_w;	/* Maximum weight that can be carrried */
     int wield_w;	/* Maximum weight that can be wielded  */
-}; 
+};
 
 struct index_data {
     int virtual;	/* virtual number of this mob/obj           */
@@ -72,7 +88,7 @@ struct index_data {
 struct title_type {
     char *title_m;
     char *title_f;
-    int exp;
+    LONGLONG exp;
 };
 
 /*------------------------    TIME AND WEATHER   ------- -------------*/
@@ -245,7 +261,7 @@ extern char *fread_string(FILE * fl);
 /* ************************************************************************
    *  file: handler.h , Handler module.                      Part of DIKUMUD *
    *  Usage: Various routines for moving about objects/players               *
-   ************************************************************************* */ 
+   ************************************************************************* */
 
 /* handling the affected-structures */
 void affect_to_char(struct char_data *ch, struct affected_type *af);
@@ -313,8 +329,8 @@ extern void wear(struct char_data *ch, struct obj_data *obj, int where_flag);
 
 extern void do_look(struct char_data *ch, char *arg, int cmd);
 
-extern void gain_exp(struct char_data *ch, long gain);
-extern void gain_gold(struct char_data *ch, long money);
+extern void gain_exp(struct char_data *ch, LONGLONG gain);
+extern void gain_gold(struct char_data *ch, LONGLONG money);
 
 extern void stop_follower(struct char_data *ch);
 
@@ -326,7 +342,7 @@ extern char *guild_names[];
 extern char *spells[];
 extern struct time_info_data time_info;
 extern struct str_app_type str_app[];
-extern struct title_type titles[4][IMO + 4] ;
+extern struct title_type titles[4][LEVEL_SIZE] ;
 extern struct weather_data weather_info; /* the infomation about the weather */ 
 
 /* -------------------------------------------------------------- */

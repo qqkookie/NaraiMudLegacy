@@ -493,8 +493,12 @@ struct char_data {
 /* NOTE: NEW! get virtual number of mob */
 #define GET_MOB_VIRTUAL(ch) (mob_index[(ch)->nr].virtual)
 
+/* NOTE: NEW! check all-remortal'ed */
+#define IS_ALL_REMOED(ch) (!IS_NPC(ch) && GET_LEVEL(ch) >= LEVEL_LIMIT \
+		&& ((ch)->player.remortal >= 15))
+
 /* NOTE: CAN_SEE() is now function, not macro.  See library.c */
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* Can subject see character "obj"? */
 #define OMNI(sub) (!IS_NPC(sub) && (GET_LEVEL(sub) >= IMO))
 #define X99(sub, obj)   ( ((!IS_AFFECTED((obj),AFF_INVISIBLE) || \
@@ -505,7 +509,7 @@ struct char_data {
 
 #define CAN_SEE(sub,obj) (X99(sub,obj)||(OMNI(sub) && (IS_NPC(obj) || \
    (GET_LEVEL(sub) >= GET_LEVEL(obj)))))
-#endif		/* NO_DEF  */
+#endif	    // UNUSED CODE
 
 /*************    External variables and proc()'s    *****************/
 

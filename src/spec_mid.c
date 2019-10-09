@@ -41,7 +41,7 @@ int guild(struct char_data *ch, int cmd, char *arg)
     if (cmd == CMD_ADVANCE) {	/* advance */
 	if (!IS_NPC(ch)) {
 	    for (i = 0; titles[GET_CLASS(ch) - 1][i].exp <= GET_EXP(ch); i++) {
-		if (i >= IMO) {
+		if (i > LEVEL_LIMIT) {
 		    send_to_char_han("Immortality cannot be gained here.\n\r",
 				   "여기서는 신이 될 수 없습니다.\n\r", ch);
 		    return (TRUE);
@@ -384,7 +384,7 @@ int dump(struct char_data *ch, int cmd, char *arg)
 
 int safe_house(struct char_data *ch, int cmd, char *arg)
 { 
-    if (GET_LEVEL(ch) >= (IMO + 2))
+    if (GET_LEVEL(ch) >= LEV_DEMI)
 	return FALSE;
     switch (cmd) {
     case CMD_KILL:		/* kill */
@@ -435,7 +435,7 @@ int jail_room(struct char_data *ch, int cmd, char *arg)
 {
     static int dismiss = 0;
 
-    if (GET_LEVEL(ch) >= IMO)
+    if (IS_WIZARD(ch))
 	return FALSE;
 
     if (IS_SET(ch->specials.act, PLR_BANISHED)
@@ -656,7 +656,7 @@ int hospital(struct char_data *ch, int cmd, char *arg)
 	return (TRUE);
     }
     if (cost[opt] > GET_GOLD(ch)) {
-	if (GET_LEVEL(ch) >= IMO) {
+	if (IS_WIZARD(ch)) {
 	    send_to_char("쩝...당신한테만 외상으로 해드리는 거에요...\n\r", ch);
 	    cost[opt] = 0;
 	}
@@ -1218,7 +1218,7 @@ int level_gate(struct char_data *ch, int cmd, char *arg)
 	break;
     }
 
-    if ((f) && (GET_LEVEL(ch) < IMO)) {
+    if ((f) && IS_MORTAL(ch)) {
 	act("$n attempts go to where $e is not welcome.", FALSE, ch, 0, 0, TO_ROOM);
 	send_to_char("People of your level may not enter.\n\r", ch);
 	return TRUE;

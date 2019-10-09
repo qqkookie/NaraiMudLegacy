@@ -408,7 +408,7 @@ int drink_aff[][3] =
 };
 
 
-struct title_type titles[4][IMO + 4] =
+struct title_type titles[4][LEVEL_SIZE] =
 {
     {
 	{"the Man", "the Woman", 0},
@@ -955,9 +955,9 @@ char *connected_types[] =
 };
 
 /* [class], [level] (all) M, C, T, W */
-/* cyb const int thaco[4][IMO+4] = { */
+/* cyb const int thaco[4][LEVEL_SIZE] = { */
 /* probability of attack */
-int thaco[4][IMO + 4] =
+int thaco[4][LEVEL_SIZE] =
 {
     {0,
      1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
@@ -1055,7 +1055,7 @@ struct dex_skill_type dex_app_skill[26] =
 };
 
 /* [level] backstab multiplyer (thieves only) */
-byte backstab_mult[IMO + 4] =
+byte backstab_mult[LEVEL_SIZE] =
 {
     1,			/* 0 */
     2,			/* 1 */
@@ -1236,7 +1236,7 @@ struct wis_app_type wis_app[26] =
 #define SAVING_RESERVED \
 	  { 0, }
 
-byte saving_throws[4][5][IMO + 10] =
+byte saving_throws[4][5][LEVEL_SIZE] =
 {
 	/* for magic user */
     {SAVING_MEDIUM,

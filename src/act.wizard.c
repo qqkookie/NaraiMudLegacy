@@ -51,7 +51,7 @@ void do_shutdown(struct char_data *ch, char *argument, int cmd)
 	return;
     }
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 3))
+    if (IS_NPCLEV(ch))
 	return;
     one_argument(argument, arg);
     if (!*arg) {
@@ -494,7 +494,7 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 
     if (IS_NPC(ch))
 	return;
-    if (GET_LEVEL(ch) < (IMO + 3))
+    if (NOT_GOD(ch))
 	return;
     half_chop(argument, buf, buf2);
     if (!*buf) {
@@ -642,21 +642,23 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
     if ((victim = get_char(buf))) {	/* NOTE: if arg is char name */
 
 	half_chop(buf2, buf3, buf4);
-	k = atoi(buf4); 
+	k = atoi(buf4);
 	LONGLONG kk = atoll(buf4);
 
-	if (((GET_LEVEL(ch) < (IMO + 2)) && (strcmp(buf3, "gold")))
+	if ((GET_LEVEL(ch) < LEV_DEMI && strcmp("gold", buf3) != 0)
 	    || (k == 0 && strcmp("class", buf3) && strcmp("remortal", buf3)))
 	    return;
 	
+	// NOTE: display feedback message to player
 	sprintf(mess, "Setting %s's %s to %s Ok.\n\r", buf, buf3, buf4);
 
-	if (strcmp(buf3, "exp") == 0 && (GET_LEVEL(ch) > (IMO + 2)))
+	if (strcmp("exp", buf3) == 0 && IS_GOD(ch))
 	    victim->points.exp = kk;
 	else if (strcmp("skill", buf3) == 0) {
 	    /* NOTE: keyword 'skill' takes 3 more arguments.
 		Set both learned value and skilled value of specifed skill.
-		wizset <char> skill <learned> <skilled> <skill#>  */
+		if 3rd arg skill# is omited, apply to all skills
+		wizset <char> skill <learned> [<skilled> [<skill#>]]  */
 	    i=j=k=-1;
 	    sscanf(buf4, " %d %d %d ", &k, &j, &i );
 
@@ -816,6 +818,7 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 
 	}
 	victim->tmpabilities = victim->abilities;
+	// NOTE: added
 	send_to_char(mess, ch);
     }
     else {		/* NOTE: if arg is obj name? */ 
@@ -838,7 +841,7 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 
 	half_chop(buf2, buf3, buf4);
 	k = atoi(buf4);
-	if (GET_LEVEL(ch) < (IMO + 3))
+	if (NOT_GOD(ch))
 	    return;
 	if (strcmp(buf3, "value1") == 0)
 	    tar_obj->obj_flags.value[0] = k;
@@ -893,7 +896,7 @@ void do_force(struct char_data *ch, char *argument, int cmd)
     char name[100], to_force[100], buf[MAX_LINE_LEN];
     int diff;
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 3))
+    if (IS_NPCLEV(ch))
 	return;
 
     half_chop(argument, name, to_force);
@@ -909,7 +912,7 @@ void do_force(struct char_data *ch, char *argument, int cmd)
 		send_to_char("Oh no you don't!!\n\r", ch);
 	    }
 	    else {
-		if (GET_LEVEL(ch) < (IMO + 3))
+		if (NOT_GOD(ch))
 		    sprintf(buf, "$n has forced you to '%s'.", to_force);
 		else
 		    buf[0] = 0;
@@ -920,7 +923,7 @@ void do_force(struct char_data *ch, char *argument, int cmd)
 	}
     }
     else {		/* force all */
-	if (GET_LEVEL(ch) < (IMO + 3)) {
+	if (NOT_GOD(ch)) {
 	    send_to_char("Force all's are a bad idea these days.\n\r", ch);
 	    return;
 	}
@@ -950,7 +953,7 @@ void do_trans(struct char_data *ch, char *argument, int cmd)
 	if (!(victim = get_char_vis(ch, buf)))
 	    send_to_char("No-one by that name around.\n\r", ch);
 	else {
-	    if (GET_LEVEL(ch) < IMO + 3 && GET_LEVEL(victim) > GET_LEVEL(ch)) {
+	    if (NOT_GOD(ch) && HIGHER_LEV(victim, ch)) {
 		send_to_char("That might not be appreciated.\n\r", ch);
 		return;
 	    }
@@ -967,7 +970,7 @@ void do_trans(struct char_data *ch, char *argument, int cmd)
 	}
     }
     else {		/* Trans All */
-	if (ch->player.level >= (IMO + 3))
+	if (IS_GOD(ch))
 	    for (i = descriptor_list; i; i = i->next)
 		if (i->character != ch && !i->connected) {
 		    target = ch->in_room;
@@ -1010,7 +1013,7 @@ int find_target_room(struct char_data *ch, char *loc_str )
 	send_to_char("No such creature or object around.\n\r", ch); 
 
     /* NOTE: OFF_LIMIT/HOUSE room is permited only to level 43 or up */
-    if ( GET_LEVEL(ch) < IMO + 2 && location != NOWHERE ) {
+    if ( GET_LEVEL(ch) < LEV_DEMI && location != NOWHERE ) {
 	if ( IS_SET(world[location].room_flags, OFF_LIMITS)) {
 	    send_to_char("Sorry, off limits.\n", ch);
 	    return NOWHERE;
@@ -1037,7 +1040,7 @@ void do_at(struct char_data *ch, char *argument, int cmd)
 
     half_chop(argument, loc_str, command);
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     if (!*loc_str) {
 	send_to_char("You must supply a room number or a name.\n\r", ch);
 	return;
@@ -1068,12 +1071,13 @@ void do_at(struct char_data *ch, char *argument, int cmd)
 
     /* a location has been found. */
 
-    if ((GET_LEVEL(ch) < (IMO + 3)) 
+    if (NOT_GOD(ch)
 	    && (IS_SET(world[location].room_flags, OFF_LIMITS))) {
 	send_to_char("That room is off-limits.\n", ch);
 	return;
     }
-#endif 		/* NO_DEF */
+#endif		// UNUSED_CODE
+
     if( (location = find_target_room(ch, loc_str)) < 0 )
 	return;
 
@@ -1097,7 +1101,7 @@ void do_goto(struct char_data *ch, char *argument, int cmd)
     int location, i, flag; 
     struct char_data *pers;
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 4))
+    if (IS_NPCLEV(ch))
 	return;
     one_argument(argument, buf);
 
@@ -1136,7 +1140,7 @@ void do_goto(struct char_data *ch, char *argument, int cmd)
     if( (location = find_target_room(ch, buf)) < 0 )
 	return;
 
-    if (GET_LEVEL(ch) < (IMO + 2)) {
+    if (GET_LEVEL(ch) < LEV_DEMI) {
 	if (IS_SET(world[location].room_flags, PRIVATE)) {
 	    for (i = 0, pers = world[location].people; pers; pers =
 		 pers->next_in_room, i++) ;
@@ -1147,7 +1151,7 @@ void do_goto(struct char_data *ch, char *argument, int cmd)
 	    }
 	}
     }
-    flag = ((GET_LEVEL(ch) >= (IMO + 2)) &&
+    flag = ((GET_LEVEL(ch) >= LEV_DEMI) &&
 	    IS_SET(ch->specials.act, PLR_WIZINVIS));
     if (!flag)
 	act("$n disappears in a puff of smoke.", FALSE, ch, 0, 0, TO_ROOM);
@@ -1165,7 +1169,7 @@ void do_load(struct char_data *ch, char *argument, int cmd)
     char type[100], num[100], buf[100];
     int number, r_num;
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 4))
+    if (IS_NPCLEV(ch))
 	return;
 
     half_chop(argument, type, num);
@@ -1201,7 +1205,7 @@ void do_load(struct char_data *ch, char *argument, int cmd)
 	    return;
 	}
 	obj = read_object(r_num, REAL);
-	if (GET_LEVEL(ch) < (IMO + 2))
+	if (GET_LEVEL(ch) < LEV_DEMI)
 	    if (IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) {
 		send_to_char("That item is not loadable.\n\r", ch);
 		extract_obj(obj);
@@ -1234,7 +1238,7 @@ void do_purge(struct char_data *ch, char *argument, int cmd)
     struct obj_data *obj, *next_o;
     char name[100], buf[100];
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 3))
+    if (IS_NPCLEV(ch))
 	return;
     one_argument(argument, name);
     if (*name) {
@@ -1332,10 +1336,10 @@ void do_flag(struct char_data *ch, char *argument, int cmd)
 	send_to_char("Couldn't find any such creature.\n\r", ch);
     else if (IS_NPC(vict))
 	send_to_char("Can't do that to a beast.\n\r", ch);
-    else if ((GET_LEVEL(vict) >= IMO) && 
+    else if (IS_WIZARD(vict) &&
 	( attrs[key] == PLR_DUMB_BY_WIZ || attrs[key] == PLR_CRIMINAL ))
 	send_to_char("It's pointless to flag an immortal.\n\r", ch);
-    else if ((GET_LEVEL(vict) >= IMO) && GET_LEVEL(ch) < GET_LEVEL(vict))
+    else if (IS_WIZARD(vict) && HIGHER_LEV(vict, ch))
 	act("$E might object to that.. better not.", 0, ch, 0, vict, TO_CHAR);
     else {
 	flag = attrs[key]; 
@@ -1365,7 +1369,7 @@ void do_flag(struct char_data *ch, char *argument, int cmd)
     }
 }
 
-#ifdef   NO_DEF
+#ifdef   UNUSED_CODE
 /* NOTE: OLD 'noshout' command absorbed by 'set shout' command 
 	and 'flag shutup' wizard command. */ 
 void do_noshout(struct char_data *ch, char *argument, int cmd)
@@ -1388,7 +1392,7 @@ void do_noshout(struct char_data *ch, char *argument, int cmd)
 	}
 	return;
     }
-    if (GET_LEVEL(ch) < IMO)
+    if (IS_MORTAL(ch))
 	return;
     if (!generic_find(argument, FIND_CHAR_WORLD, ch, &vict, &dummy))
 	send_to_char("Couldn't find any such creature.\n\r", ch);
@@ -1407,11 +1411,11 @@ void do_noshout(struct char_data *ch, char *argument, int cmd)
 	SET_BIT(vict->specials.act, PLR_NOSHOUT);
     }
 }
-#endif		/* NO_DEF */
+#endif		// UNUSED_CODE
 
 void do_invis(struct char_data *ch, char *argument, int cmd)
 {
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 4))
+    if (IS_NPCLEV(ch))
 	return;
     if (IS_SET(ch->specials.act, PLR_WIZINVIS)) {
 	REMOVE_BIT(ch->specials.act, PLR_WIZINVIS);
@@ -1469,7 +1473,7 @@ void do_restore(struct char_data *ch, char *argument, int cmd)
     int i;
 
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 3))
+    if (IS_NPCLEV(ch))
 	return;
     one_argument(argument, buf);
     if (!*buf)
@@ -1481,13 +1485,13 @@ void do_restore(struct char_data *ch, char *argument, int cmd)
 	GET_HIT(victim) = GET_PLAYER_MAX_HIT(victim);
 	GET_MOVE(victim) = GET_PLAYER_MAX_MOVE(victim);
 
-	if (GET_LEVEL(victim) >= IMO) {
+	if (IS_WIZARD(victim)) {
 	    for (i = 0; i < MAX_SKILLS; i++) {
 		victim->skills[i].learned = 100;
 		victim->skills[i].recognise = 0;
 	    }
 
-	    if (GET_LEVEL(victim) >= (IMO + 3)) {
+	    if (IS_GOD(victim)) {
 		victim->abilities.str_add = 100;
 		victim->abilities.intel = 25;
 		victim->abilities.wis = 25;
@@ -1510,7 +1514,7 @@ void do_reroll(struct char_data *ch, char *argument, int cmd)
     char buf[100]; 
     extern void roll_abilities(struct char_data *ch);
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO + 3))
+    if (IS_NPCLEV(ch))
 	return;
 
     one_argument(argument, buf);
@@ -1540,7 +1544,7 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
     if (IS_NPC(ch))
 	return;
 
-    if (GET_LEVEL(ch) < (IMO + 3)) {
+    if (NOT_GOD(ch)) {
 	send_to_char("You can only do that in a guild.\n\r", ch);
 	return;
     }
@@ -1577,7 +1581,7 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
 		return;
 	    }
 	    victim->player.level = newlevel;
-	    if (newlevel < IMO) {
+	    if (newlevel <= LEVEL_LIMIT) {
 		for (i = 0; i < 3; ++i)
 		    victim->specials.conditions[i] = 0;
 	    }
@@ -1588,7 +1592,7 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
 	}
     }
 
-    if (newlevel > IMO) {
+    if (newlevel > LEVEL_LIMIT) {
 	send_to_char("Too high a level.\n\r", ch);
 	return;
     }
@@ -1673,7 +1677,7 @@ void do_banish(struct char_data *ch, char *argument, int cmd)
 	send_to_char("Couldn't find any such creature.\n\r", ch);
     else if (IS_NPC(vict))
 	send_to_char("Can't do that to a beast.\n\r", ch);
-    else if (GET_LEVEL(vict) >= IMO)
+    else if (IS_WIZARD(vict))
 	send_to_char("It's pointless to banish an immortal.\n\r", ch);
     else 
 	goto OK;
@@ -1896,7 +1900,7 @@ void do_sys(struct char_data *ch, char *argument, int cmd)
     send_to_char(buffer, ch);
     */
 
-    if (GET_LEVEL(ch) >= (IMO + 2)) {
+    if (GET_LEVEL(ch) >= LEV_DEMI) {
 	nits = 0;
 	for (k = object_list; k; k = k->next)
 	    ++nits;

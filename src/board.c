@@ -336,7 +336,7 @@ int remove_board(struct char_data *ch, struct board_data *cb, char *arg)
     }
 
     if (strcmp(cb->writer[msg - 1], GET_NAME(ch))) {
-	if (GET_LEVEL(ch) < IMO) {
+	if (IS_MORTAL(ch)) {
 	    send_to_char("Only Immortal can remove other player's ", ch);
 	    send_to_char("messages from board.\n\r", ch);
 	    return TRUE;
@@ -719,7 +719,7 @@ int show_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
 
     /* NOTE: Algned mail list form (left justified) */
     for (i = 0; i < cb->m_num; i++) {
-	if (isname(GET_NAME(ch), cb->receiver[i]) || GET_LEVEL(ch) > IMO + 2) {
+	if (isname(GET_NAME(ch), cb->receiver[i]) || IS_GOD(ch)) {
 	    sprintf(buf + strlen(buf), "    from %-8s to %-8s : %s\r\n",
 		    cb->sender[i], cb->receiver[i], cb->head[i]);
 	    pm_num++;
@@ -1041,7 +1041,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 
 	switch (field) {
 	case 1:
-	    if (!IS_NPC(mob) && GET_LEVEL(ch) < (IMO + 3)) {
+	    if (!IS_NPC(mob) && NOT_GOD(ch)) {
 		send_to_char("You can't change that field for players.", ch);
 		return;
 	    }

@@ -572,7 +572,7 @@ bool saves_spell(struct char_data *ch, int save_type)
 {
     int save;
     /* saving_throws[class][type][level] */
-    extern byte saving_throws[4][5][IMO + 10] ;
+    extern byte saving_throws[4][5][LEVEL_SIZE] ;
 
     /* Negative apply_saving_throw makes saving throw better! */
     save = ch->specials.apply_saving_throw[save_type];
@@ -814,7 +814,7 @@ void spell_fire_breath(byte level, struct char_data *ch,
 	damage(ch, victim, dam, SPELL_FIRE_BREATH);
 
     /* And now for the damage on inventory */
-    if (number(0, IMO) < GET_LEVEL(ch)) {
+    if (number(0, LEVEL_LIMIT+2) <= GET_LEVEL(ch)) {
 	if (!saves_spell(victim, SAVING_BREATH)) {
 	    for (burn = victim->carrying;
 		 burn && (burn->obj_flags.type_flag != ITEM_SCROLL) &&
@@ -845,7 +845,7 @@ void spell_frost_breath(byte level, struct char_data *ch,
 	damage(ch, victim, dam, SPELL_FROST_BREATH);
 
     /* And now for the damage on inventory */
-    if (number(0, IMO) < GET_LEVEL(ch)) {
+    if (number(0, LEVEL_LIMIT+2) <= GET_LEVEL(ch)) {
 	if (!saves_spell(victim, SAVING_BREATH)) {
 	    for (frozen = victim->carrying;
 		 frozen && (frozen->obj_flags.type_flag != ITEM_SCROLL) &&
@@ -875,7 +875,7 @@ void spell_gas_breath(byte level, struct char_data *ch,
 	damage(ch, victim, dam, SPELL_GAS_BREATH);
 
     /* And now for the damage on inventory */
-    if (number(0, IMO) < GET_LEVEL(ch)) {
+    if (number(0, LEVEL_LIMIT+2) <= GET_LEVEL(ch)) {
 	if (!saves_spell(victim, SAVING_BREATH)) {
 	    for (melt = victim->carrying;
 		 melt && (melt->obj_flags.type_flag != ITEM_SCROLL) &&
@@ -905,7 +905,7 @@ void spell_lightning_breath(byte level, struct char_data *ch,
 	damage(ch, victim, dam, SPELL_LIGHTNING_BREATH);
 
     /* And now for the damage on inventory */
-    if (number(0, IMO) < GET_LEVEL(ch)) {
+    if (number(0, LEVEL_LIMIT+2) <= GET_LEVEL(ch)) {
 	if (!saves_spell(victim, SAVING_BREATH)) {
 	    for (explode = victim->carrying;
 		 explode && (explode->obj_flags.type_flag != ITEM_SCROLL) &&

@@ -1280,13 +1280,13 @@ void cast_sleep(byte level, struct char_data *ch, char *arg, int type,
 	     tar_ch; tar_ch = tar_ch->next_in_room)
 	    if (tar_ch != ch) {
 		spell_sleep(level, ch, tar_ch, 0);
-		if ((!IS_NPC(tar_ch)) && (GET_LEVEL(tar_ch) < IMO)) {
+		if (!PC_MORTAL(tar_ch)) {
 		    flag = 1;
 		    break;
 		}
 	    }
 	if (flag == 1)
-	    spell_sleep(IMO + 3, ch, ch, 0);
+	    spell_sleep(LEV_GOD, ch, ch, 0);
 	break;
     default:
 	log("Serious screw-up in sleep!");
@@ -1482,7 +1482,7 @@ void cast_charm_person(byte level, struct char_data *ch, char *arg, int type,
 {
 
     /* NOTE: not !IS_NPC(tar_ch) */
-    if (!IS_MOB(tar_ch) && GET_LEVEL(ch) < (IMO + 3)) {
+    if (!IS_MOB(tar_ch) && NOT_GOD(ch)) {
 	send_to_char("You cannot charm player!\n\r", ch);
 	return;
     }

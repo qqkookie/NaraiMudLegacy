@@ -273,7 +273,7 @@ void show_char_to_char(struct char_data *i, struct char_data *ch)
 	return;
     }
     if (IS_AFFECTED(i, AFF_HIDE) || !CAN_SEE(ch, i)) {
-	if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(i) < (IMO + 2)))
+	if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(i) < LEV_DEMI))
 	    send_to_char_han("You sense a hidden life in the room.\n\r",
 			     "방에 숨어있는 생명을 감지합니다.\n\r", ch);
 	return;
@@ -426,7 +426,7 @@ void look_char_to_char(struct char_data *i, struct char_data *ch)
     }
 
     if (((GET_CLASS(ch) == CLASS_THIEF) && (ch != i)) 
-    	|| (GET_LEVEL(ch) >= IMO)) {
+	|| IS_WIZARD(ch)) {
 	found = FALSE;
 	strcat(buf, STRHAN("\n\rYou attempt to peek at the inventory:\n\r",
 			   "\n\r장비와 물건을 엿보려고 합니다.\n\r", ch));
@@ -436,7 +436,7 @@ void look_char_to_char(struct char_data *i, struct char_data *ch)
 	    /* NOTE : Reduced peek success rate for low level thief  */
 	    /* number(0,20) -> number(0,40)     */
 	    if (CAN_SEE_OBJ(ch, tmp_obj) &&
-		(number(0, IMO-1) <= GET_LEVEL(ch))) {
+		(number(0, LEVEL_LIMIT) <= GET_LEVEL(ch))) {
 		show_obj_to_buf(tmp_obj, ch, LOOK_INV, buf);
 		buf += strlen(buf);
 		found = TRUE;
@@ -669,7 +669,7 @@ void do_look(struct char_data *ch, char *argument, int cmd)
     else if (ch && IS_AFFECTED(ch, AFF_BLIND))
 	send_to_char_han("You can't see a damn thing, you're blinded!\n\r",
 		     "앞을 볼 수가 없습니다! 눈이 멀었습니다!\n\r", ch);
-    else if ( ch && GET_LEVEL(ch) < IMO && IS_DARK(ch->in_room)
+    else if ( ch && IS_MORTAL(ch) && IS_DARK(ch->in_room)
 	    && !IS_AFFECTED(ch, AFF_INFRAVISION))
 	send_to_char_han("It is pitch black...\n\r",
 			 "너무 깜깜합니다..\n\r", ch);
@@ -712,7 +712,7 @@ ok:
 
 	/* look ''    */
     case 8:{
-	    if (GET_LEVEL(ch) >= IMO) {
+	    if (IS_WIZARD(ch)) {
 
 		sprintf(buffer, "%s  [%5d] [ ", world[ch->in_room].name,
 			world[ch->in_room].number);
@@ -916,7 +916,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
     int tmp, align, brief;
     struct char_data *to, *tmpch ;
 
-    extern byte saving_throws[4][5][IMO + 10];
+    extern byte saving_throws[4][5][LEVEL_SIZE];
 
     one_argument(argument, buf);
 
@@ -927,7 +927,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	if (!strcmp(buf,"-b") || !strcmp(buf,"/brief"))
 	    brief++;
 	/* NOTE: Wizard can see 'score' of other player/ mobile */
-	else if( GET_LEVEL(ch) >= IMO ) {
+	else if(IS_WIZARD(ch)) {
 	    if ((tmpch = get_char_vis(ch, buf))) {
 		ch = tmpch ; 	/* NOTE: See player/mob's score */
 		sprintf(buf, "Looking for score of %s.\r\n", GET_NAME(ch));
@@ -1060,7 +1060,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	    "UMCTWU"[GET_CLASS(ch)], GET_LEVEL(ch));
     if ( !brief )
 	send_to_char(buf, to);
-    if (GET_LEVEL(ch) < IMO) {
+    if (IS_MORTAL(ch)) {
 	if (titles[GET_CLASS(ch) - 1][GET_LEVEL(ch) + 1].exp < GET_EXP(ch))
 	    strcpy(buf, STRHAN("You have enough experience to advance.\n\r",
 		    "레벨을 올릴만큼 충분한 경험치가 쌓였습니다.\n\r", ch));

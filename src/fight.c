@@ -669,7 +669,7 @@ void fight_message(int dam, struct char_data *ch, struct char_data *victim,
 	 j < nr && messages; j++)
 	messages = messages->next;
 
-    if (!IS_NPC(victim) && (GET_LEVEL(victim) >= IMO)) {
+    if (IS_WIZARD(victim)) {
 	act(messages->god_msg.attacker_msg, FALSE, ch,
 	    ch->equipment[WIELD], victim, TO_CHAR);
 	act(messages->god_msg.victim_msg, FALSE, ch,
@@ -749,7 +749,7 @@ void damage(struct char_data *ch, struct char_data *victim,
 	goto eternal_peace; 
     }
 
-    if (GET_LEVEL(victim) >= IMO && !IS_NPC(victim))
+    if (IS_WIZARD(victim))
 	dam = 0;
 
     if (victim != ch && attack ) {
@@ -961,7 +961,7 @@ int die_special(struct char_data *ch, struct char_data *victim)
 int hit_miss(struct char_data *ch, struct char_data *victim, int type)
 {
     int parry_num, prf, miss;
-    extern int thaco[4][IMO + 4];
+    extern int thaco[4][LEVEL_SIZE];
 
     prf = 0;
     /* parry for NPC */
@@ -1073,7 +1073,7 @@ int warrior_damage(struct char_data *ch )
 
 	if (number(0, 49 + ((ch->specials.damnodice * ch->specials.damsizedice) << 4)) == 37) {
 	    /* Check for all remortaled by dsshin   */
-	    if ((ch->player.level >= (IMO - 1)) && (ch->player.remortal >= 15)) {
+	    if (IS_ALL_REMOED(ch)) {
 	    /* Limit is changed by epochal          */
 		limit_nodice = 50; limit_sizedice = 50;
 		/* limit_nodice = 21; limit_sizedice = 31; */

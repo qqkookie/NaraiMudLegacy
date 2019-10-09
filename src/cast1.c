@@ -60,7 +60,7 @@ void cast_gas_breath(byte level, struct char_data *ch, char *arg, int type,
     case SPELL_TYPE_SPELL:
 	for (tar_ch = world[ch->in_room].people;
 	     tar_ch; tar_ch = tar_ch->next_in_room)
-	    if ((tar_ch != ch) && (GET_LEVEL(tar_ch) < IMO))
+	    if ((tar_ch != ch) && IS_MORTAL(tar_ch))
 		spell_gas_breath(level, ch, tar_ch, 0);
 	break;
 	/* THIS ONE HURTS!! */
@@ -344,7 +344,7 @@ void cast_full_fire(byte level, struct char_data *ch, char *arg, int type,
 		    struct char_data *victim, struct obj_data *tar_obj)
 {
     /* 
-       if (!IS_NPC(victim)&&GET_LEVEL(ch)<IMO&&!IS_NPC(ch)) {
+       if (!IS_NPC(victim) && PC_MORTAL(ch)) {
        send_to_char("You can't use full fire to player!\n\r",ch); return; } */
     switch (type) {
     case SPELL_TYPE_SPELL:
@@ -369,7 +369,7 @@ void cast_throw(byte level, struct char_data *ch, char *arg, int type,
 		struct char_data *victim, struct obj_data *tar_obj)
 {
     /* 
-       if (!IS_NPC(victim)&&GET_LEVEL(ch)<IMO&&!IS_NPC(ch)) {
+       if (!IS_NPC(victim) && PC_MORTAL(ch)) {
        send_to_char("You can't use throw to player!\n\r",ch); return; } */
     switch (type) {
     case SPELL_TYPE_SPELL:

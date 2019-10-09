@@ -28,17 +28,17 @@ void chat_history(char *str);
 
 int is_dumb(struct char_data *ch)
 {
-    return(IS_ACTPLR(ch, PLR_DUMB_BY_WIZ) && (GET_LEVEL(ch) < IMO + 3));
+    return(IS_ACTPLR(ch, PLR_DUMB_BY_WIZ) && NOT_GOD(ch));
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* 말하기 */
 void do_say(struct char_data *ch, char *argument, int cmd)
 {
     int i;
     char buf[MAX_STRING_LENGTH];
 
-    if (IS_SET(ch->specials.act, PLR_DUMB_BY_WIZ) && GET_LEVEL(ch) < IMO + 3) {
+    if (IS_SET(ch->specials.act, PLR_DUMB_BY_WIZ) && NOT_GOD(ch)) {
 	return;
     }
     for (i = 0; *(argument + i) == ' '; i++) ;
@@ -52,7 +52,7 @@ void do_say(struct char_data *ch, char *argument, int cmd)
 	act(buf, FALSE, ch, 0, 0, TO_ROOM);
     }
 }
-#endif
+#endif	    // UNUSED_CODE
 
 /* NOTE: do_sayh() is renamed do_say() */
 void do_say(struct char_data *ch, char *argument, int cmd)
@@ -89,7 +89,7 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
 	return; 
     /* NOTE: Did little code clean up */
     cp = skip_spaces(argument);
-    if (is_dumb(ch) || ( nochatflag && (GET_LEVEL(ch) < IMO)))
+    if (is_dumb(ch) || ( nochatflag && IS_MORTAL(ch)))
 	send_to_char("chat is forbiddened now.\n\r", ch);
     /* NOTE: Player forbidden shouting by wizard can't chat, too. */
     else if (IS_SET(ch->specials.act, PLR_SHUTUP))
@@ -123,7 +123,7 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
     }
 
     argument = skip_spaces(argument); 
-    if (is_dumb(ch) || ( noshoutflag && (GET_LEVEL(ch) < IMO)))
+    if (is_dumb(ch) || ( noshoutflag && IS_MORTAL(ch)))
 	send_to_char("I guess you can't shout now?\n\r", ch);
     else if (IS_SET(ch->specials.act, PLR_SHUTUP))
 	send_to_char("Shut up your mouth!!\n\r", ch);
@@ -214,7 +214,7 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
     else if (ch == vict)
 	send_to_char("You try to tell yourself something.\n\r", ch);
 
-    else if (GET_POS(vict) == POS_SLEEPING && (GET_LEVEL(ch) < IMO)) {
+    else if (GET_POS(vict) == POS_SLEEPING && IS_MORTAL(ch)) {
 	/* NOTE: Identify listener you tell even when it is sleeping.  */
 	act("$N can't hear you.", FALSE, ch, 0, vict, TO_CHAR);
 	/* NOTE: If victim player is sleeping, just notify.. */
@@ -226,7 +226,7 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
 	}
     }
     else if (!IS_ACTPLR(ch, PLR_NOTELL) ||
-	     ((GET_LEVEL(ch) >= IMO) && (GET_LEVEL(ch) > GET_LEVEL(vict)))) {
+	     (IS_WIZARD(ch) && HIGHER_LEV(ch, vict))) {
 	if (IS_NPC(ch)) {
 	    s = ch->player.short_descr;
 	    sprintf(buf, "%s tells you '%s'\n\r", s, message);
@@ -280,7 +280,7 @@ void do_send(struct char_data *ch, char *argument, int cmd)
 	if (file_to_string(paint_name, paint) == NULL)
 	    send_to_char("No such paint prepared.\n\r", ch);
 	else if ((IS_SET(vict->specials.act, PLR_NOTELL))  &&
-		((GET_LEVEL(ch) < IMO) || (GET_LEVEL(ch) <= GET_LEVEL(vict))))
+		(IS_MORTAL(ch) || !HIGHER_LEV (ch, vict)))
 	    act("$E isn't listening now.", FALSE, ch, 0, vict, TO_CHAR);
 	else {
 	    send_to_char("\r\n", vict);
@@ -379,7 +379,7 @@ void do_ask(struct char_data *ch, char *argument, int cmd)
     struct char_data *vict;
     char name[100], message[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
 
-    if (IS_SET(ch->specials.act, PLR_DUMB_BY_WIZ) && GET_LEVEL(ch) < IMO + 3) {
+    if (IS_SET(ch->specials.act, PLR_DUMB_BY_WIZ) && NOT_GOD(ch)) {
 	return;
     }
     half_chop(argument, name, message);
@@ -436,7 +436,7 @@ void do_echo(struct char_data *ch, char *argument, int cmd)
 	sprintf(buf, "%s\n\r", argument);
 	/* NOTE: God and Demi-God's echo will be heard by all players       */
 	/* NOTE: Don't use send_to_except()   */
-	if ( GET_LEVEL(ch) >= IMO + 2) {
+	if ( GET_LEVEL(ch) >= LEV_DEMI ) {
 	    for (i = descriptor_list; i; i = i->next)
 		if ( i->character && ch->desc != i && !i->connected)
 		    send_to_char( argument, i->character );
@@ -452,7 +452,7 @@ void do_wall(struct char_data *ch, char *argument, int cmd)
     char buf[MAX_BUFSIZ];
 
     argument = skip_spaces(argument);
-    if (IS_NPC(ch) || (!*argument) || GET_LEVEL(ch) > (IMO + 3))
+    if (IS_NPCLEV(ch) || (!*argument))
 	return;
     sprintf(buf, "%s\n\r", argument);
     send_to_all(buf);
@@ -473,7 +473,7 @@ void do_wiznet(struct char_data *ch, char *argument, int cmd)
 	    if (i->original)
 		continue;
 	    victim = i->character;
-	    if ((GET_LEVEL(victim) >= IMO) && (GET_LEVEL(victim) < (IMO + 4)))
+	    if (IS_WIZARD(victim))
 		send_to_char(buf, victim);
 	}
     send_to_char("Ok.\n\r", ch);

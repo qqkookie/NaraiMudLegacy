@@ -635,7 +635,7 @@ void spell_recharger(byte level, struct char_data *ch,
 void spell_enchant_person(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj)
 {
-    if (noenchantflag && GET_LEVEL(ch) < IMO)
+    if (noenchantflag && IS_MORTAL(ch))
 	return;
 
     INCREASE_SKILLED2(ch, ch, SPELL_ENCHANT_PERSON);
@@ -724,10 +724,11 @@ void spell_enchant_weapon(byte level, struct char_data *ch,
 
     assert(ch && obj);
 
-    if (noenchantflag && GET_LEVEL(ch) < IMO)
+    if (noenchantflag && IS_MORTAL(ch))
 	return;
 
-    if (!IS_NPC(ch) && GET_LEVEL(ch) == IMO) {
+    // OLD: if (!IS_NPC(ch) && GET_LEVEL(ch) == LEV_IMMO)
+    if (prohibit_violence(ch)) {
 	send_to_char("You cannot enchant!\n\r", ch);
 	return;
     }
@@ -815,7 +816,7 @@ void spell_enchant_weapon(byte level, struct char_data *ch,
 		act("New object appeared.", FALSE, ch, obj, 0, TO_CHAR);
 	    }
 
-	    if (number(0, 8) < 2 || GET_LEVEL(ch) >= IMO) {
+	    if (number(0, 8) < 2 || IS_WIZARD(ch)) {
 		if (number(0, 18000) == 900 || number(0, 18000) == 176) {
 		    obj->obj_flags.extra_flags ^= ITEM_NORENT;
 		    act("$p is blessed by ThunderBolt.", FALSE, ch, obj, 0, TO_CHAR);
@@ -877,10 +878,11 @@ void spell_enchant_armor(byte level, struct char_data *ch,
     int i;
     struct obj_data *tmp;
 
-    if (noenchantflag && GET_LEVEL(ch) < IMO)
+    if (noenchantflag && IS_MORTAL(ch))
 	return;
 
-    if (!IS_NPC(ch) && GET_LEVEL(ch) == IMO) {
+    // OLD: if (!IS_NPC(ch) && GET_LEVEL(ch) == LEV_IMMO)
+    if (prohibit_violence(ch)) {
 	send_to_char("You cannot enchant!\n\r", ch);
 	return;
     }
@@ -934,7 +936,7 @@ void spell_enchant_armor(byte level, struct char_data *ch,
 		obj->affected[1].location = APPLY_AC;
 		obj->affected[1].modifier = number(2, level / 10 + 2) / -2;
 	    }
-	    if (number(0, 9) < 2 || GET_LEVEL(ch) >= IMO) {
+	    if (number(0, 9) < 2 || IS_WIZARD(ch)) {
 		obj->affected[0].modifier *= number(1, 2);
 		act("$p gain new energy.", FALSE, ch, obj, 0, TO_CHAR);
 		if (number(0, 9) < 5)
@@ -978,10 +980,11 @@ void spell_pray_for_armor(byte level, struct char_data *ch,
     int i;
     struct obj_data *tmp;
 
-    if (noenchantflag && GET_LEVEL(ch) < IMO)
+    if (noenchantflag && IS_MORTAL(ch))
 	return;
 
-    if (!IS_NPC(ch) && GET_LEVEL(ch) == IMO) {
+    // OLD: if (!IS_NPC(ch) && GET_LEVEL(ch) == LEV_IMMO)
+    if (prohibit_violence(ch)) {
 	send_to_char("You cannot cast pray for armor!\n\r", ch);
 	return;
     }
@@ -1035,7 +1038,7 @@ void spell_pray_for_armor(byte level, struct char_data *ch,
 		obj->affected[1].location = APPLY_AC;
 		obj->affected[1].modifier = number(2, level / 10 + 2) / -2;
 	    }
-	    if (number(0, 9) < 2 || GET_LEVEL(ch) >= IMO) {
+	    if (number(0, 9) < 2 || IS_WIZARD(ch)) {
 		obj->affected[0].modifier *= number(1, 2);
 		act("$p gain new energy.", FALSE, ch, obj, 0, TO_CHAR);
 		if (number(0, 9) < 5)
@@ -1168,7 +1171,7 @@ void spell_entire_heal(byte level, struct char_data *ch,
     assert(victim);
 
     INCREASE_SKILLED2(ch, victim, SPELL_ENTIRE_HEAL);
-    if (number(0, 6) != 3 || GET_LEVEL(ch) >= (IMO + 3)) {
+    if (number(0, 6) != 3 || IS_GOD(ch)) {
 	spell_cure_blind(level, ch, victim, obj);
 	GET_HIT(victim) = victim->points.max_hit;
 	send_to_char("Perhaps kisses your cheek.\n\r", victim);
@@ -1240,7 +1243,7 @@ void spell_locate_object(byte level, struct char_data *ch,
 			 world[i->in_room].name));
 		send_to_char(buf, ch);
 	    }
-	    if (GET_LEVEL(ch) < IMO)
+	    if (IS_MORTAL(ch))
 		j--;
 	}
     }
@@ -1417,7 +1420,7 @@ void spell_mirror_image(byte level, struct char_data *ch,
     if (!affected_by_spell(victim, SPELL_MIRROR_IMAGE)) {
 	INCREASE_SKILLED2(ch, victim, SPELL_MIRROR_IMAGE);
 	af.type = SPELL_MIRROR_IMAGE;
-	af.duration = (level < IMO) ? 3 : level;
+	af.duration = (level <= LEVEL_LIMIT) ? 3 : level;
 	af.duration += (level > 30) + (level > 35);
 	af.modifier = 0;
 	af.location = APPLY_NONE;
@@ -1443,7 +1446,7 @@ void spell_sanctuary(byte level, struct char_data *ch,
 	act("$n is surrounded by a white aura.", TRUE, victim, 0, 0, TO_ROOM);
 	act("You start glowing.", TRUE, victim, 0, 0, TO_CHAR);
 	af.type = SPELL_SANCTUARY;
-	af.duration = (level < IMO) ? 5 : level;
+	af.duration = (level <= LEVEL_LIMIT) ? 5 : level;
 	af.duration += (level > 30) + (level > 35);
 	af.modifier = 0;
 	af.location = APPLY_NONE;
@@ -1525,7 +1528,7 @@ void spell_sleep(byte level, struct char_data *ch,
 
     assert(victim);
 
-    if (!IS_NPC(victim) && (GET_LEVEL(victim) >= IMO) &&
+    if (IS_WIZARD(victim) &&
 	(GET_LEVEL(ch) < GET_LEVEL(victim)))
 	return;
     if (GET_POS(victim) == POS_SLEEPING)
@@ -1699,9 +1702,10 @@ void spell_charm_person(byte level, struct char_data *ch,
     void add_follower(struct char_data *ch, struct char_data *leader);
     bool circle_follow(struct char_data *ch, struct char_data *victim);
 
-    assert(ch && victim); 
+    assert(ch && victim);
 
-    if (!IS_NPC(ch) && GET_LEVEL(ch) == IMO) {
+    // OLD: if (!IS_NPC(ch) && GET_LEVEL(ch) == LEV_IMMO)
+    if (prohibit_violence(ch)) {
 	send_to_char("You cannot use this spell.\n\r", ch);
 	return;
     }
@@ -1720,7 +1724,7 @@ void spell_charm_person(byte level, struct char_data *ch,
 	send_to_char("You like yourself even better!\n\r", ch);
 	return;
     }
-    if (level < IMO && (level < GET_LEVEL(victim) || GET_LEVEL(victim) > 21)) {
+    if (level <= LEVEL_LIMIT && (level < GET_LEVEL(victim) || GET_LEVEL(victim) > 21)) {
 	send_to_char("You failed.\n\r", ch);
 	return;
     }
@@ -1737,7 +1741,7 @@ void spell_charm_person(byte level, struct char_data *ch,
 	send_to_char("not be allowed.\n\r", ch);
 	return;
     }
-    if (GET_LEVEL(ch) < (IMO + 3))
+    if (NOT_GOD(ch))
 	if (saves_spell(victim, SAVING_PARA))
 	    return;
 

@@ -102,22 +102,22 @@ int perhaps(struct char_data *ch, int cmd, char *arg)
 	    act("$n kisses $N on $S cheek.", 1, ch, 0, vict, TO_NOTVICT);
 	    vict->points.hit = vict->points.max_hit;
 	}
-	/* 
+#ifdef UNUSED_CODE
 	if( vict&&((vict->points.armor)>1) ) {
 	    act("$n hugs $N.", 1, ch, 0, vict, TO_ROOM);
 	    vict->points.armor=1;
 	}
 	if( vict&&((vict->points.hitroll) < GET_LEVEL(vict))
-		&&GET_LEVEL(vict)<IMO ) {
+		&&IS_MORTAL(vict)) {
 	    act("$n pats $N.", 1, ch, 0, vict, TO_ROOM);
 	    vict->points.hitroll=GET_LEVEL(vict);
 	}
 	if( vict&&((vict->points.damroll) < GET_LEVEL(vict))
-		&&GET_LEVEL(vict)<IMO ) {
+		&&IS_MORTAL(vict)) {
 	    act("$n raises $s POWER!!!", 1, ch, 0, vict, TO_ROOM);
 	    vict->points.damroll=GET_LEVEL(vict);
 	}
-	*/
+#endif		// UNUSED_CODE
     }
     /* NOTE: To sustain similar frequency of perhaps talk */
     i = number(0, 1000);
@@ -559,7 +559,7 @@ int musashi(struct char_data *ch, int cmd, char *arg)
 	vict = choose_victim(ch, VIC_ALL, MODE_HIGH_LEVEL);
 
 	/* high level victim is already selected */
-	if (vict && number(1, IMO - GET_LEVEL(vict)) < 5) {
+	if (vict && number(0, LEVEL_LIMIT - GET_LEVEL(vict)) < 4) {
 	    send_to_char("I CHALLENGE YOU.\n\r", vict);
 	    hit(ch, vict, TYPE_UNDEFINED);
 	    return (TRUE);
@@ -822,7 +822,7 @@ int super_musashi(struct char_data *ch, int cmd, char *arg)
 	return (1);
 
     /* high level victim is already selected */
-    if (vict && number(1, IMO - GET_LEVEL(vict)) < 5) {
+    if (vict && number(0, LEVEL_LIMIT - GET_LEVEL(vict)) < 4) {
 	send_to_char("I CHALLENGE YOU.\n\r", vict);
 	hit(ch, vict, TYPE_UNDEFINED);
 	return (1);

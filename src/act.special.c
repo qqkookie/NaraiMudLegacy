@@ -556,9 +556,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd)
 	- dex_app_skill[GET_DEX(ch)].p_pocket
 	- (GET_SKILLED(ch, SKILL_STEAL) >> 3);
 
-    if (!IS_NPC(victim) &&
-	(GET_LEVEL(victim) >= IMO) &&
-	(GET_LEVEL(ch) < GET_LEVEL(victim)))
+    if (IS_WIZARD(victim) && HIGHER_LEV(victim, ch))
 	percent = 101;
     if (str_cmp(obj_name, "coins") && str_cmp(obj_name, "gold")) {
 	if (!(obj = get_obj_in_list_vis(victim, obj_name, victim->carrying))) {
@@ -790,7 +788,7 @@ void do_light_move(struct char_data *ch, char *argument, int cmd)
     if ((victim = ch->specials.fighting)) {
 	if (ch->skills[SKILL_LIGHT_MOVE].learned > 10 && ch->points.mana > 0) {
 	    hit(ch, victim, TYPE_UNDEFINED);
-	    ch->points.mana -= (IMO << 1) - GET_LEVEL(ch);
+	    ch->points.mana -= LEVEL_LIMIT *2 - GET_LEVEL(ch) + 2;
 	    if ((GET_LEVEL(ch) + 1) * number(2, 3) +
 		ch->skills[SKILL_LIGHT_MOVE].learned / 2 >
 		GET_LEVEL(victim) * number(2, 3) + number(30, 40)) {
@@ -831,7 +829,7 @@ void do_temptation(struct char_data *ch, char *argument, int cmd)
     int percent;
 
     half_chop(argument, name, message);
-    if (IS_NPC(ch) || (!(GET_SEX(ch) == SEX_FEMALE) && GET_LEVEL(ch) < IMO)) {
+    if (IS_NPC(ch) || (!(GET_SEX(ch) == SEX_FEMALE) && IS_MORTAL(ch))) {
 	send_to_char("You cannot seduce anyone as you are not female.\n\r", ch);
 	return;
     }
@@ -903,9 +901,7 @@ void do_disarm(struct char_data *ch, char *argument, int cmd)
 	send_to_char("You stupid! How about using remove instead of disarm?\n\r", ch);
 	return;
     }
-    if (!IS_NPC(victim) &&
-	(GET_LEVEL(victim) >= IMO) &&
-	(GET_LEVEL(ch) < GET_LEVEL(victim)))
+    if (IS_WIZARD(victim) && HIGHER_LEV(victim, ch))
 	return;
     if ((!IS_NPC(victim)) && (nodisarmflag)) {
 	act("Oops..", FALSE, ch, 0, 0, TO_CHAR);

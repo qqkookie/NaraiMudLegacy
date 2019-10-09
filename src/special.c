@@ -393,7 +393,7 @@ int get_quest(struct char_data *ch)
     int num;
 
     /* NOTE: All remortal dangun */
-    if (GET_LEVEL(ch) >= 40 && ch->player.remortal == 15 ) {
+    if (IS_ALL_REMOED(ch)) {
 	low = 284;
 	high = END_QUEST_MOBILE;
     }
@@ -424,7 +424,7 @@ void do_request(struct char_data *ch, char *arg, int cmd)
     int num;
     char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
-    if (GET_LEVEL(ch) >= IMO) {		/* IMO */
+    if (IS_WIZARD(ch)) {		/* IMO */
 	send_to_char_han("QUEST : You can do something.\n\r",
 			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
 	return;
@@ -445,7 +445,7 @@ void do_request(struct char_data *ch, char *arg, int cmd)
 	/* All remortal player can't do request. */
 	/* NOTE: by dyaus : Not so, all remo player can do request with
 	   severe panalty . Cost: 10 quest      */
-	if ((ch->player.level >= (IMO - 1)) && (ch->player.remortal >= 15)) {
+	if (IS_ALL_REMOED(ch)) {
 	    if (ch->quest.solved < 30) {
 
 		send_to_char_han("QUEST : You can't request.\n\r",
@@ -507,7 +507,7 @@ void do_hint(struct char_data *ch, char *arg, int cmd)
     char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
     char *zone;
 
-    if (GET_LEVEL(ch) >= IMO) {		/* IMO */
+    if (IS_WIZARD(ch)) {		/* IMO */
 	send_to_char_han("QUEST : You can do something.\n\r",
 			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
 	return;
@@ -551,7 +551,7 @@ void do_quest(struct char_data *ch, char *arg, int cmd)
     int num;
     char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
-    if (GET_LEVEL(ch) >= IMO) {		/* IMO */
+    if (IS_WIZARD(ch)) {		/* IMO */
 	send_to_char_han("QUEST : You can do something.\n\r",
 			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
 	return;
@@ -791,7 +791,7 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 
 	    tmp_obj = get_obj_in_list_vis(ch, buf, ch->carrying);
 	    if (tmp_obj) {
-		if ((ch->player.level >= (IMO - 1)) && (ch->player.remortal >= 15))
+		if (IS_ALL_REMOED(ch))
 		    send_to_char("You can't use that ticket .\n\r", ch);
 		else if (obj_index[tmp_obj->item_number].virtual == 7994) {
 		    ch->quest.type = 0;
@@ -812,7 +812,7 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 	return FALSE;
     }
 
-    if (GET_LEVEL(ch) >= IMO) {		/* IMO */
+    if (IS_WIZARD(ch)) {		/* IMO */
 	send_to_char_han("QUEST : You can do something.\n\r",
 			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
 	return TRUE;

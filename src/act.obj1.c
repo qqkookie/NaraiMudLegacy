@@ -400,7 +400,7 @@ void give_gold(struct char_data *ch, struct char_data *vict, int amount )
 	return;
     }
     if ((GET_GOLD(ch) < amount) && (IS_NPC(ch) 
-	    || (GET_LEVEL(ch) < (IMO + 1)))) {
+	    || !IS_DIVINE(ch))) {
 	send_to_char("You haven't got that many coins!\n\r", ch);
 	return;
     }
@@ -408,7 +408,6 @@ void give_gold(struct char_data *ch, struct char_data *vict, int amount )
      * NOTE: Don't give money to mob... They don't know value of it.
      * Prohibit it to prevent gold inflation. See group_gain() in fight.c.
      * NOTE: Exception: Darimsa 4th jangro accepts money. See daerimsa.c.
-     * Do not activated this code before solving the exception.
      */
     if (IS_NPC(vict) && GET_MOB_VIRTUAL(vict) != MOB_FOURTH_JANGRO) {
 	send_to_char("Don't feed mob. It will bite your hand.\n\r",ch);
@@ -419,7 +418,7 @@ void give_gold(struct char_data *ch, struct char_data *vict, int amount )
     sprintf(buf, "%s gives you %d gold coins.\n\r", PERS(ch, vict), amount);
     send_to_char(buf, vict);
     act("$n gives some gold to $N.", 1, ch, 0, vict, TO_NOTVICT);
-    if (IS_NPC(ch) || (GET_LEVEL(ch) < (IMO + 1)))
+    if (IS_NPC(ch) || !IS_DIVINE(ch))
 	GET_GOLD(ch) -= amount;
     GET_GOLD(vict) += amount;
 }
@@ -454,7 +453,7 @@ void do_give(struct char_data *ch, char *argument, int cmd)
 	amount = atoi(obj_name); 
 	give_gold(ch, vict, amount);
 
-	if (GET_LEVEL(ch) >= IMO && !IS_NPC(ch)) {
+	if (IS_WIZARD(ch)) {
 	    sprintf(buf, "%s gives %d coins to %s.",
 		    GET_NAME(ch), amount, GET_NAME(vict));
 	    log(buf);
@@ -486,7 +485,7 @@ void do_give(struct char_data *ch, char *argument, int cmd)
     act("$n gives you $p.", 0, ch, obj, vict, TO_VICT);
     send_to_char("Ok.\n\r", ch);
 
-    if (GET_LEVEL(ch) >= IMO && !IS_NPC(ch)) {
+    if (IS_WIZARD(ch)) {
 	/* NOTE: Added item name to log */
 	sprintf(buf, "%s gives %s (%d) to %s." ,
 		GET_NAME(ch), obj->name, GET_OBJ_VIRTUAL(obj), GET_NAME(vict));
@@ -617,7 +616,7 @@ void wear(struct char_data *ch, struct obj_data *obj_object, int keyword)
 	    send_to_char(buffer, ch);
 	    return;
 	}
-	if (gpd < IMO && (GET_LEVEL(ch) < gpd)) {
+	if (gpd <= LEVEL_LIMIT && (GET_LEVEL(ch) < gpd)) {
 	    sprintf(buffer, "You can use %s from %d level.\n\r",
 		    obj_object->short_description, gpd);
 	    send_to_char(buffer, ch);

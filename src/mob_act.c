@@ -100,7 +100,7 @@ void mobile_activity(void)
     extern int no_specials; 
 
     for (ch = character_list; ch; ch = ch->next) {
-	if (!IS_NPC(ch) || ch->nr < 0 ) 	/* NOTE: it was !IS_MOB(ch) */
+	if (!IS_MOB(ch) || ch->nr < 0 ) 	/* NOTE: not !IS_NPC(ch) */
 	    continue;
 
 	/* NOTE: make mobile more combat-ready. */
@@ -236,7 +236,7 @@ int aggressive(struct char_data *ch, int cmd, char *arg)
 
     for (tmp_ch = world[ch->in_room].people; tmp_ch;
 	 tmp_ch = tmp_ch->next_in_room) {
-	if (IS_NPC(tmp_ch) || !CAN_SEE(ch, tmp_ch) || GET_LEVEL(tmp_ch) >= IMO )
+	if (IS_NPC(tmp_ch) || !CAN_SEE(ch, tmp_ch) || IS_WIZARD(tmp_ch))
 	    continue;
 	if (IS_SET(ch->specials.act, ACT_WIMPY) && AWAKE(tmp_ch)) 
 	    continue; 
@@ -476,7 +476,7 @@ struct char_data *choose_victim(struct char_data *mob, int fightmode, int mode)
 	     || mode == MODE_LOW_LEVEL) {
 	for (i = 0; i < count; i++) {
 	    lev = GET_LEVEL(victims[i]);
-	    if (mode == MODE_HIGH_LEVEL && lev >= 31 && lev < IMO)
+	    if (mode == MODE_HIGH_LEVEL && lev >= 31 && lev <= LEVEL_LIMIT)
 		return (victims[i]);
 	    else if (mode == MODE_MID_LEVEL && lev >= 13 && lev <= 30)
 		return (victims[i]);
@@ -544,16 +544,14 @@ void npc_tornado(struct char_data *ch)
 	}
     }
 
-    ch->points.move -= (IMO - GET_LEVEL(ch) + 2);
+    ch->points.move -= (LEVEL_LIMIT - GET_LEVEL(ch) + 3);
 }
 
 void npc_steal(struct char_data *ch, struct char_data *victim)
 {
     int dir, gold;
 
-    if (IS_NPC(victim))
-	return;
-    if (GET_LEVEL(victim) >= IMO)
+    if (IS_NPC(victim) || IS_WIZARD(victim))
 	return;
 
 /* NOTE: - Suggestions by Tido.  */
@@ -836,8 +834,8 @@ int thief(struct char_data *ch, int cmd, char *arg)
 	    return FALSE;
 
 	for (cons = world[ch->in_room].people; cons; cons = cons->next_in_room) {
-	    if ((!IS_NPC(cons)) && (GET_LEVEL(cons) < IMO) &&
-		(GET_LEVEL(cons) >= GET_LEVEL(ch)) ) {
+	    if (PC_MORTAL(cons) &&
+		!HIGHER_LEV(ch, cons)) {
 		do_what = number(1, 6);
 		if ( do_what <= 2 ) { 
 		    npc_steal(ch, cons);
@@ -1026,7 +1024,7 @@ int thief(struct char_data *ch, int cmd, char *arg)
 	    acthan("$n says 'Ya haa haa hap'.", "$n님이 '야하햐합' 하고 말합니다",
 		   1, ch, 0, 0, TO_ROOM);
 	    for (cons = world[ch->in_room].people; cons; cons = cons->next_in_room) {
-		if (number(10, IMO + 3) < GET_LEVEL(ch) && GET_LEVEL(cons) < IMO)
+		if (number(10, IMO + 3) < GET_LEVEL(ch) && IS_MORTAL(cons))
 		    if (!IS_NPC(cons) && ch != cons)
 			hit(ch, cons, TYPE_UNDEFINED);	/* It is tornado */
 	    }
@@ -1041,8 +1039,8 @@ int thief(struct char_data *ch, int cmd, char *arg)
 	return FALSE;
     else {
 	for (cons = world[ch->in_room].people; cons; cons = cons->next_in_room) {
-	    if ((!IS_NPC(cons)) && (GET_LEVEL(cons) < IMO) &&
-		(GET_LEVEL(cons) >= GET_LEVEL(ch)) && (number(1, 3) == 1))
+	    if (PC_MORTAL(cons) &&
+		!HIGHER_LEV(ch, cons) && (number(1, 3) == 1))
 		npc_steal(ch, cons);
 	}
     }
@@ -1556,7 +1554,7 @@ int shooter(struct char_data *ch, int cmd, char *arg)
 	return (FALSE);
     if (IS_SET(ch->specials.act, ACT_AGGRESSIVE) || (GET_POS(ch) == POS_FIGHTING)) {
 	for (tch = world[ch->in_room].people; tch; tch = tch->next_in_room) {
-	    if ((!IS_NPC(tch)) && (GET_LEVEL(tch) < IMO)) {
+	    if (PC_MORTAL(tch)) {
 		if (GET_POS(tch) <= POS_DEAD)
 		    continue;
 		act("$n yells '$N must die!'", FALSE, ch, 0, tch, TO_ROOM);

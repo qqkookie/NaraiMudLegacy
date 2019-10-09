@@ -174,7 +174,7 @@ int use_mana(struct char_data *ch, int sn)
 
     lev = GET_LEVEL(ch) / 5 + 2;
     lev += spell_info[sn].min_level[GET_CLASS(ch) - 1];
-    lev = MIN(IMO, lev);
+    lev = MIN(LEVEL_LIMIT+1, lev);
     min = spell_info[sn].min_usesmana * lev;
     min /= (1 + GET_LEVEL(ch));
     min = MAX(spell_info[sn].min_usesmana, min);
@@ -298,7 +298,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 	return;
     } */
 
-    if (GET_LEVEL(ch) < IMO && IS_SET(world[ch->in_room].room_flags, NO_MAGIC)) {
+    if (IS_MORTAL(ch) && IS_SET(world[ch->in_room].room_flags, NO_MAGIC)) {
 	send_to_char("Your magical power can't be summoned!\n\r", ch);
 	return;
     }
@@ -469,7 +469,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 	return;
     }
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) < (IMO + 3)) {
+    if (IS_NPC(ch) || NOT_GOD(ch)) {
 	if ((tar_char == ch) &&
 	    IS_SET(spell_info[spl].targets, TAR_SELF_NONO)) {
 	    send_to_char("You can not cast this spell upon yourself.\n\r", ch);
@@ -487,7 +487,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 	}
     }
 
-    if (IS_NPC(ch) || GET_LEVEL(ch) < IMO)
+    if (IS_NPC(ch) || IS_MORTAL(ch))
 	if (GET_MANA(ch) < use_mana(ch, spl)) {
 	    if (!IS_NPC(ch))
 		send_to_char("You can't summon enough energy to cast the spell.\n\r", ch);
@@ -568,6 +568,8 @@ void SPELLO(int nr, char *name, byte beat,
 	fprintf(stderr, "hmm.. wrong spell name.. %s %s.\n", name, spells[nr]);
     */
 }
+
+#define IMO	(LEVEL_LIMIT+1)
 
 void assign_spell_pointers(void)
 {
