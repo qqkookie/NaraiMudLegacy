@@ -29,6 +29,8 @@
 #define CHATLOG			"log/chatlog.log"
 #define MID_HELPER		"Narai"
 
+#define  MAGICKEY		"^op Sesame$"
+
 #define SPLIT_ZONE_SYSTEM
 
 // #define ZONE_CHECK

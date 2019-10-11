@@ -1017,7 +1017,8 @@ void shopping_sell(char *arg, struct char_data *ch,
 
     if ((get_obj_in_list(argm, keeper->carrying)) ||
     /* NOTE: Item type to junk when sold to shopkeeper: was ITEM_TRASH */
-	(GET_ITEM_TYPE(temp1) == ITEM_OTHER))
+	    (GET_ITEM_TYPE(temp1) == ITEM_TRASH) ||
+	    (GET_ITEM_TYPE(temp1) == ITEM_OTHER))
 	extract_obj(temp1);
     else {
 	obj_from_char(temp1);

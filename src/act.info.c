@@ -326,7 +326,7 @@ int list_users(struct char_data *ch, char *line )
     } 
     if (m > most)
 	most = m;
-    if (IS_DIVINE(ch))
+    if (ch && IS_DIVINE(ch))
 	sprintf( buf, "\nConnections:    Active: %d    Peak: %d", m, most); 
 
     return(m);
@@ -616,7 +616,8 @@ void build_help_index(void)
 /* NOTE: news, news_old, plan, credits, wizards is read on the fly. */
 void do_show(struct char_data *ch, char *argument, int cmd)
 {
-    char arg[100], *fs, file_str[MAX_STRING_LENGTH];
+    char arg[100], *fs, *mark, *head, *tail;
+    char file_str[MAX_STRING_LENGTH];
     int topic;
     static char *show_list[] = { 
 	"news", "NEWS", "oldnews", "plans", "wizards", "wizlists",
@@ -630,32 +631,44 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	case 0:	case 1:    case 2:  case 3:
 	/* NOTE: NEW! "old_news" Yesterday's news: archived news articles  */
 	/* NOTE:  static news[], news_old[] was too small. Use dynamic heap. */
-	if ( topic == 2 ) 
-	    strcpy( arg, NEWS_OLD_FILE);
-        else if ( topic == 3 )
-	    strcpy( arg, PLAN_FILE );
-	else 
-	    strcpy( arg, NEWS_FILE );
-	    
-	if (!(fs = file_to_string(arg, NULL )))
+	strcpy( arg, NEWS_FILE );
+	fs = file_to_string(arg, NULL );
+	if (!fs)
 	    return;
-	send_to_char("\r\n", ch); 
-	page_string(ch->desc, fs, 1);
+	if ( topic == 2  )
+	    mark = "\n#OLDNEWS\n";
+	else if ( topic == 3 )
+	    mark = "\n#PLAN\n";
+	else
+	    mark = "\n#NEWS\n";
+	head = strstr(fs, mark);
+	if ( !head ) 
+	    return;
+	head += strlen(mark);
+	tail = strstr(head+1, "\n#");
+	if ( tail )
+	    *tail = '\0';
+
+	page_string(ch->desc, head, 1);
 	free(fs);
 	break; 
 
     case 4:	case 5:	    case 6:
 	/* NOTE: Wizard list/Credits page are merged to single "wizards" */ 
 	/* NOTE:    files are separated by form-feed(^L) char	*/
-	if(!file_to_string(WIZARDS_FILE, file_str))
+	if(!file_to_string(CREDITS_FILE, file_str))
 	    return;
-	for( fs = file_str; *fs && (*fs != '\f') ; fs++ ) ;
-	if ( *fs )
-	    *(fs++) = '\0' ;
-	if ( topic == 9  && *fs ) 
-	    send_to_char( fs, ch );		/* NOTE: Credit */
-	else 
-	    send_to_char( file_str, ch );	/* NOTE: Wizards */
+
+	mark = (topic == 6) ? "\n#WIZARDS\n" : "\n#CREDITS\n";
+	head = strstr(file_str, mark);
+	if ( !head ) 
+	    return;
+	head += strlen(mark);
+	tail = strstr(head+1, "\n#");
+	if ( tail )
+	    *tail = '\0';
+
+	send_to_char( head, ch );
 	break; 
 
     case 7:

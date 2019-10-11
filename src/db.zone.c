@@ -370,7 +370,7 @@ void check_mobile_and_object(void)
 	if ( GET_ITEM_TYPE(obj)< ITEM_LIGHT || GET_ITEM_TYPE(obj) > ITEM_MONEY
 	    || GET_ITEM_TYPE(obj) ==  7 /* ITEM_MISSILE */
 	    || GET_ITEM_TYPE(obj) ==  ITEM_OTHER
-	    || GET_ITEM_TYPE(obj) ==  13 /* ITEM_TRASH */
+	    || GET_ITEM_TYPE(obj) ==  ITEM_TRASH
 	    || GET_ITEM_TYPE(obj) ==  14 /* ITEM_TRAP */
 	    )
 	    fprintf(stderr, "ITEM TYPE = %2d #%06d [%s]  V0-3: %d,%d,%d,%d.\n",

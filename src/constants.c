@@ -618,7 +618,7 @@ char *item_types[] =
     "POTION",
     "WORN",
     "OTHER",
-    "UNDEFINED", /* "TRASH", */
+    "TRASH", 
     "UNDEFINED", /* "TRAP", */
     "CONTAINER",
     "NOTE",
@@ -701,7 +701,7 @@ char *room_bits[] =
     "RENT",
     "NORELOCATE",
     "EVERYZONE",
-    "JAIL",
+    "NOTRACK",	// NOTE: was JAIL
     "RESTROOM",
     "TEST",
     "TEST2",

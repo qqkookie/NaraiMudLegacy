@@ -59,6 +59,44 @@
 #define WAIT_SEC                4
 #define WAIT_ROUND              4 
 
+/* --------------      Some Login banners    ----------------- */
+
+char login_banner[] = 
+"\r\n\r\n\
+                   -- * ---<--<--<@-@>-->-->-- * -- * --\r\n\
+       -----===<< * * *    K I T   C L A S S I C    * * * >>===-----\r\n\
+                   -- * ---<--<--<@-@>-->-->-- * -- * --\r\n\r\n\
+                   Land of Nostalgic, melangcolic memory.\r\n\r\n\
+                      Continued from Old Narai MUD\r\n\
+                    Derived from EVE-MUD and KIT-MUD\r\n\r\n\
+                       Started 2019. 11. 11. .....\r\n\r\n";
+
+char login_welcome[] =  
+"-------------<< N-A-R-A-I >>-----------<< M-U-D >>---------------\n\r\
+Welcome to the Living Nightmare. May your visit here be... Interesting.\r\n\r\n\
+Heavenly voice whisperes 'Your fate and destiny lies beyond this world...'.\r\n\
+Yo! poor Mortals... Worship the Great Old Goddess!\r\n\
+Fall on your knees and kiss on her feet.\r\n\
+Glory to the Goddess, Glory to Narai...\r\n\
+\r\n   -----===    GOLDEN RULES OF NARAI    ===-----\r\n\
+\r\n   **** PK is LEGAL for any time, any way and any reason!\r\n\
+\r\n   **** NO REIMBURSE !!!\r\n";
+// **** MULTI/ROBOT PLAYING is *NOT* allowed.\r\n"
+
+char login_menu[] =
+"GOOD luck to you, Adventurous MUDDER.\r\n\r\n\
+0) Get away from Mud.\r\n\
+1) Into the MUD and Enjoy playing.\r\n\
+2) Modify your description.\r\n\
+3) Change secret key.\r\n\
+4) Delete character.\r\n\r\n\
+   What number? : ";
+
+#define STORY     \
+"Once upon a time, long and long years ago...... Ummm...\r\n\
+ ....Cookie doesn't say more. You'd better entering the Game.\r\n\r\n"
+
+/*********************************************************************/
 
 /* local globals */
 
@@ -984,7 +1022,7 @@ int new_descriptor(int s)
     descriptor_list = newd;
 
     SEND_TO_Q("\r\n", newd);
-    SEND_TO_Q(GREETINGS, newd);
+    SEND_TO_Q(login_banner, newd);
     SEND_TO_Q("\r\n", newd);
     if (nonewplayers) {
 	SEND_TO_Q("WARNING:\n\r", newd);

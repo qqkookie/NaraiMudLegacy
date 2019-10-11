@@ -344,7 +344,7 @@ void nanny(struct descriptor_data *d, char *arg)
     case CON_RMOTD:	/* read CR after printing motd */
 	d->scratch[0] = '\0';
 	SEND_TO_Q("\r\n", d);
-	SEND_TO_Q(MENU, d);
+	SEND_TO_Q(login_menu, d);
 	STATE(d) = CON_SLCT;
 	break;
 
@@ -374,7 +374,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	    }
 	    reset_char(d->character);
 	    send_to_char("\r\n", d->character);
-	    send_to_char(WELC_MESSG, d->character);
+	    send_to_char(login_welcome, d->character);
 	    send_to_char("\r\n", d->character);
 
 	    /* NOTE: Check unread mail in MID POST */

@@ -806,9 +806,11 @@ void do_exits(struct char_data *ch, char *argument, int cmd)
     /* NOTE: Show current virtual room number guess with some probalility */
     rn = world[ch->in_room].number;
     /* NOTE: add some perturbation (make Gaussian distribution) */
-    lev = GET_LEVEL(ch);
-    for (round = 0; round < lev / 4 + 2; round++)
-	rn += number(-12 + lev / 4, 12 - lev / 4);
+    if (!IS_DIVINE(ch)) {
+	lev = GET_LEVEL(ch);
+	for (round = 0; round < lev / 4 + 2; round++)
+	    rn += number(-12 + lev / 4, 12 - lev / 4);
+    }
     sprintf(buf + strlen(buf), "  ROOM ???  [%5d]\r\n", rn);
 
     for (door = 0; door <= 5; door++)

@@ -16,7 +16,7 @@ Following topics are available. To see, type "help <topic>".
 	command list, skill list, spell list, shops, social actions,
 	class, magic user, cleric, thief, warrior, savings, inn, god,
 	dice, guild, assassin, outlaw, police, experience, ac,
-	mailing list
+	community 
 #
 "COMMAND LIST"
 
@@ -2362,15 +2362,10 @@ and you use bare hand, the damage of your bare hand increases.
 
 See also : SKILLED
 #
-"MAILING LIST"
+"COMMUNITY"
 
-The mailing list is up.  If you are not on the mailing list:
- -> send a message to  :  narai-l-request@narai.ml.org
- -> containing the line:  subscribe
- -> the list address is:  narai-l@narai.ml.org
- 
-If you ever want to remove yourself from this mailing list:
- -> send a message to  :  narai-l-request@narai.ml.org
- -> containing the line:  unsubscribe [your email address]
+There is a talk group for Narai MUD players on Kakao Talk messenger
+
+Kakao Talk: https://open.kakao.com/o/gAx75aN
 
 #~

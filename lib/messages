@@ -405,6 +405,20 @@ $N sends you a look, that makes you forget all about punch~
 $n tries to punch you, but changes $s mind~
 $n tries to punch $N, but changes $s mind~
 M
+ 200
+You feel wounded - too wounded - you die~
+You feel wounded - too wounded - you die~
+$N lies suffering on the ground till no blood is left in $S body~
+suffer miss char.~
+suffer miss victim.~
+suffer miss room.~
+You lie on the ground suffering from your terrible wounds~
+You lie on the ground suffering from your terrible wounds~
+$N lies helplessly on the ground and suffers~
+Suffer god char..~
+Suffer god victim..~
+Suffer god room..~
+M
  150
 You punch $N's head with a blow, that crushes $S skull.~
 $n punches your head with a blow, that crushes your skull.~
@@ -514,20 +528,6 @@ suffer miss room..~
 You lie on the ground suffering from bleeding wounds~
 $N lies immobile on the ground, suffering...~
 ~
-Suffer god victim..~
-Suffer god room..~
-M
- 200
-You feel wounded - too wounded - you die~
-You feel wounded - too wounded - you die~
-$N lies suffering on the ground till no blood is left in $S body~
-suffer miss char.~
-suffer miss victim.~
-suffer miss room.~
-You lie on the ground suffering from your terrible wounds~
-You lie on the ground suffering from your terrible wounds~
-$N lies helplessly on the ground and suffers~
-Suffer god char..~
 Suffer god victim..~
 Suffer god room..~
 $~

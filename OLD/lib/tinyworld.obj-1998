@@ -1,0 +1,10724 @@
+#1
+bottle condition~
+A bottle of condition(TM)~
+A bottle of condition(TM) has been left here.~
+~
+17 0 1
+1 1 19 3
+1 2500 -1
+#101
+ciga cigarette tabacco 88~
+88 light~
+EIGHTY EIGHT low tar & triple filter,MADE IN KOREA~
+~
+12 1441794 16385
+0 0 0 0
+1 700 25
+#102
+ciga cigarrette sky~
+SKY LIGHTS~
+SKY LIGHTS CHARCOAL FILTER SLIM 100's MADE IN U.S.A~
+~
+12 144794 16385
+0 0 0 0
+1 1000 25
+#151
+drug marijuana~
+a marijuana~
+Marijuana~
+~
+12 1311234 16385
+0 0 0 0
+1 100000 25
+#201
+case glass~
+the glass case~
+~
+~
+15 0 0
+500 13 5226 0
+0 0 0
+#202
+chalice cup~
+a chalice~
+An ornate chalice has been left on the altar.~
+~
+17 0 1
+16 16 0 0
+1 2 1
+E
+chalice~
+It is a large and beautifully ornate chalice.  There is an inscrition on the
+base reading "To the king with love".
+~
+#1000
+sundew bubble machine~
+liquid bubbles~
+A mysterious liquid bubbles from the ground.~
+~
+17 0 0
+100000 100000 15 0
+100000 0 0
+E
+bubbles~
+Use "drink sundew" to get a refreshing drink.
+~
+#1001
+altar~
+Temple Altar~
+A altar made of white marble sits in the middle of the room.~
+~
+15 0 0
+1200 0 0 0
+0 0 0
+#1002
+champion belt~
+Champion belt~
+a Champion belt which is decorated with gold and many jewels is here.~
+This Champion belt means that someone who wears this belt is best player.~
+9 4161 2049
+10 0 0 0
+4 5000 0
+A
+1 +10
+A
+19 +5
+#1300
+immo gloves magic~
+a pair of IMMO Magic Gloves~
+a strange useless Gloves is here~
+~
+9 4098 129
+10 0 0 0
+1 1000 0
+A
+18 +10 
+A
+19 +10 
+#1301
+immo wooden Kal~
+a ruined wooden IMMO Kal~
+a ruined harmless Kal is here.~
+pound~
+5 323 8193
+170 15 15 7
+3 12 2
+A
+18 +15 
+A
+19 +15 
+#1302
+Boots of Bangard~
+a bangard boots~
+a Beautiful decorated Boots is here.~
+~
+9 4161 65
+7 0 0 0 
+1 200000 0
+A
+12 20
+A
+18 +2
+#1303
+Protecter of Seraphim~
+a Seraphim Protecter~
+a smart knee protecter is here.~
+~
+9 5121 65537
+3 0 0 0 
+1 500000 0
+A
+18 +2
+A
+19 +5
+#1304
+immo vulcan mail~
+A glowing suit of IMMO vulcan mail~
+A glowing suit of vulcan mail lies on the ground~
+~
+9 4161 9
+50 0 0 0 
+0 75000 0
+A
+18 +3
+A
+19 +3
+#1305
+silver epee~
+a silver epee~
+A beautifully crafted silver epee is here.~
+pierce~
+5 0 8193
+0 5 10 11
+8 5000 0
+#1306
+scythe~
+a large scythe~
+A large cumbersome looking scythe is here.~
+slash~
+5 4608 8193
+0 21 1 3
+16 5000 0
+A
+1 -1
+A
+18 -5
+#1307
+hammer~
+a hammer~
+A carpenter's hammer lies here.~
+pound~
+5 0 8193
+0 1 18 7
+8 5000 0
+#1308
+key vault~
+a key~
+The key to the vault has been left here.~
+~
+18 0 1
+0 0 0 0
+1 5 0
+#1309
+plates ancient~
+an ancient Plates~
+an ancient Dragon scale Plates is here.~
+~
+9 2049 131073
+2 0 0 0
+1 800000 1
+A
+19 +2
+#1310
+nothing~
+nothing~
+There is nothing here.~
+~
+8 0 1
+0 0 0 0
+1 1 0
+#1311
+totem~
+a totem~
+A strange looking totem is here.~
+~
+3 2 16385
+0 0 0 0
+1 1 1
+#1312
+claws faust~
+Claws of Faust~
+a heavy looking claws of faust is lying here.~
+crush~
+5 130 8193
+0 4 7 6
+16 15000 0
+A
+18 2
+A
+17 -10
+#1313
+map~
+A map~
+A map has been dropped here.~
+~
+8 0 1
+0 0 0 0
+1 10 1
+E
+map~
+------------------------------------------------------
+|            					     |
+|    DS	   	       altar-RC     Dragon Tower     |	
+|Arachnos     Glade       ||      Moria ||           |
+|     Galaxy   Forest +--------+  Castle||Sikhs      |
+|   ==================Main Street=======DK(Dwarven)  |
+|Dark      Shire      |Midgaard|    Olympus          |
+|Forest        Forest |  Dump  |     Greece          |
+|                     |(Arena) | Wasteland     Aerie |
+|      DK River======River================Ocean==    |
+|	   	    	 KC KW       ||  Drow 	     |
+|                            ====tunnel======= Desert|
+|                                                    |
+|                                        Thalos      |
+------------------------------------------------------
+AREA - LEVEL KEY:
+ Arena : very easy  Arachnos: easy/a little hard  Dragon Tower: extremely hard
+ Moria : easy       Shire   : easy  		  Galaxy: extremely hard
+ Forest: very easy  Dark Forest: hard/very hard   Dwarven: little hard
+ Glade : easy/mid   Wasteland: little hard        KC:extremely*2 hard 
+ Chapel: very hard  Castle: easy		  Drow: hard
+ Desert: easy       Thalos: little easy    	  Aerie: very hard
+ Sewers: easy	    Loftwick: hard		  Greece: hard/very hard
+~
+#1314
+white dove~
+the White Dove of Peace~
+The peace is here.~
+~
+9 96 16387
+1 1 0 0
+3 50000 25000
+A
+25 4
+A
+17 -3
+#1315
+broom~
+an ordinary broom~
+An ordinary broom has been discarded here.~
+pound~
+5 0 8193
+0 9 1 7
+3 10 0
+#1316
+plates armored~
+an armored plates~
+an armored plates is here~
+~
+9 1 131073
+4 0 0 0
+1 90000 0
+A
+18 +1
+#1317
+anti deathcure~
+The ANTI DeathCure~
+The ANTI DeathCure is here~
+~
+9 4097 131073
+7 0 0 0
+1 1000000 0
+A
+14 +70
+A
+12 +70
+#1318
+banner bloody cross~
+the bloody cross banner~
+the bloody cross banner lies on the ground.~
+~
+1 4163 16385
+0 0 -1 0
+280 15000 0
+A
+17 -10
+A
+19 2
+#1319
+banner green crescent~
+the green crescent banner~
+the green crescent banner lies on the ground.~
+~
+1 102467 16385
+0 0 -1 0
+200 5000 0
+A
+17 -10
+A
+18 2
+#1320
+shades sunglasses~
+a pair of sunglasses~
+A pair of sunglasses is here.~
+~
+9 0 17
+3 0 0 0
+3 150 50
+A
+2 1
+#1321
+blade chaos~
+Chaos Blade~
+A sword of streaked Obsidian, examines you closely.~
+slash~
+5 1 8193
+0 7 4 3
+30 10000 0
+A
+17 -10
+A
+18 2
+#1322
+align keywords great super sundew supersundew nogada~
+A align Keywords by Great SuperSundew's NOGADA !!~
+A align Keywords by Great SuperSundew's NOGADA !! has been dropped here.~
+~
+8 0 1
+0 0 0 0
+1 10 1
+E
+align Keywords by Great SuperSundew's NOGADAi !!~
+   *Zone*  	:         *Mob's Align*                      *Aggresive?* 
+    Aerie 	:             Devil        -------------->        Yew
+   Arachnos	:	 Good( Except Arach.)   --------->         No
+    Arena 	:	      Evil        --------------->         No
+    Castle	:	     Neutral	    ------------->         No
+    Chapel	:             Devil        -------------->        Yes 
+ Dark Forest	:  	   Evil & Devil       ----------->        Yes
+    Desert	:  	  Newtral & Evil       ---------->     Yes or No
+      DK	:             Good        --------------->        Yes 
+Kingdom of Chok :             Devil       --------------->        Yes
+  Dragon Tower	:             Devil        -------------->     Yes or No
+     Drow	:             Devil        -------------->        Yes
+   Dwarven	:             Good        --------------->         No
+    Galaxy	:             Good        --------------->         No
+    Glade 	:             Good        --------------->         No
+    Greece	:             Devil        -------------->        Yes
+   Loftwick	:            Newtral        ------------->        Yes 
+    Marsh	:             Devil        -------------->        Yes
+    Moria 	:             Devil        -------------->     Yes or No
+    Ocean	:             Devil        -------------->        Yes
+    Sewers	:             Devil        -------------->        Yes
+    Shire 	:             Good        --------------->         No
+   Thalos	:             Evil        --------------->         Yes
+   Wasteland	:             Devil        -------------->         Yes
+~
+#1325
+stone mauve~
+A mauve stone~
+A mauve stone sits here.~
+~
+8 4160 16385
+0 0 0 0
+10 5500 200
+A
+1 2
+#1326
+pendant diamond~
+A diamond pendant~
+A beautiful diamond pendant sits here.~
+~
+9 4161 5
+0 0 0 0
+10 50000 0
+A
+17 -15
+A
+18 +1
+#1327
+magnolias garland~
+A garland of beautiful magnolias~
+A garland of beautiful magnolias is here.~
+~
+9 0 5
+0 0 0 0
+1 1 1
+#1330
+baseball cap~
+a Cleveland Indians baseball cap~
+A Cleveland Indians baseball cap is here.~
+~
+9 0 17
+4 0 0 0
+3 150 150
+#1331
+cape white~
+a white cape~
+A white cape is in a heap on the ground.~
+~
+3 4097 1025
+5 0 0 0
+10 10000 0
+A
+12 45
+#1335
+potion speckled~
+a speckled potion~
+A speckled potion has been left here.~
+~
+10 64 1
+15 15 -1 -1
+2 200 100
+E
+potion speckled~
+It has an interesting speckled pattern and it smells like lilacs.
+~
+#1450
+brass knuckles~
+some brass knuckles~
+A set of brass knuckles is here.~
+~
+9 2048 129
+2 0 0 0
+4 100 100
+A
+19 3
+#1451
+dockers levis~
+A pair of Levi Dockers~
+A pair of light blue Levi Dockers has been left here.~
+~
+9 2048 33
+6 0 0 0
+5 100 100
+A
+3 -1
+#1452
+shirt chambray~
+A striped chambray Bugle Boy shirt~
+A striped chambray Bugle Boy shirt has been dropped here.~
+~
+9 2048 9
+6 0 0 0
+5 100 100
+A
+4 -1
+#1453
+reebok pumps~
+A pair of Reebok Pumps~
+A new pair of Reebok Pumps has been left here.~
+~
+9 2049 65
+5 0 0 0
+6 100 100
+A
+14 50
+#1454
+scroll iron-banded~
+A iron-banded scroll~
+A iron-banded scroll has been left here.~
+~
+2 64 1
+40 24 90 -1
+15 1000000 0
+#1455
+boddari~
+a boddari~
+A little boddari.~
+~
+15 0 16385
+169 0 0 0
+2 80000 1
+#1460
+nectar glass~
+a yellow glass~
+A small nectar glass has been left here.~
+~
+17 0 1
+15 15 16 0
+15 3000 3
+#1461
+flare solar~
+a Solar Flare~
+A Solar Flare has carelessly been left here.~
+~
+10   64 16385
+20 1 36 39
+1 90000 1
+E
+solar flare~
+This is actually a potion.
+~
+#1462
+potion red~
+a red potion~
+A red potion has carelessly been left here.~
+~
+10 4160 16385
+20 92 -1 -1
+1 3000 1
+#1500
+key stoney~
+a stoney key~
+A rock is here that looks like a stoney key.~
+~
+18 32 16385
+2 0 0 0
+5 200 5000
+#1501
+biker jacket~
+a biker jacket~
+A jacket with an eagle on it.~
+~
+9 512 9
+3 0 0 0
+10 300 70
+#1502
+electric force shield~
+an electric force shield~
+A force shield generator is on the ground here.~
+~
+9 99 513
+5 0 0 0
+5 50000 20000
+A
+17 -4
+A
+24 5
+#1550
+kangha comb~
+a Golden Kangha~
+A Golden Kangha lies on the ground here.~
+~
+9 1 17
+4 0 0 0
+1 1 0
+E
+kangha comb~
+It is a comb worn by the Sikhu warrior to hold their hair back.
+~
+A
+4 2
+#1551
+kachks pants~
+A pair of Kachks~
+A pair of white and red Kachks lie on the ground...~
+~
+9 4097 33
+9 0 0 0
+1 200000 0
+A
+14 +500
+#1552
+kara bracelet~
+A Shinning Steel Kara~
+A Shinning Stell Kara lies on the ground...~
+~
+9 4097 4097
+5 0 0 0
+2 500000 0
+E
+kara bracelet~
+It's looks like a Sikhu Warrior's bracelet.
+~
+A
+24 -5
+A
+19 +2
+#1553
+kirpan dagger~
+A Golden Kirpan~
+A Golden Kirpan lies stabbed into the ground...~
+pierce~
+5 4097 8193
+0 4 4 11
+4 100 0
+E
+kirpan dagger~
+It's a Sikhu Dagger.
+~
+A
+18 2
+#1605
+brass shield brassshield~
+the brass shield~
+The brass shield in on the floor.~
+This shield is a handsome item.
+~
+9 4416 513
+8 0 0 0
+50 25000 0
+A
+2 4
+#1620
+colt gun~
+a Colt 45~
+An original Colt 45 has been set here.~
+~
+6 4096 16385
+6 6 100 0
+12 250000 1
+#1621
+bullets ammo~
+some bullets for a Colt 45~
+A small supply of bullets for a Colt 45 is here.~
+~
+8 4096 1
+0 0 0 0
+2 50000 -1
+#1622
+shotgun~
+an old shotgun~
+An ancient shotgun has been dropped here.~
+~
+6 0 16385
+2 2 60 0
+16 250000 100
+#1623
+shells ammo~
+two shotgun shells~
+A pair of shotgun shells is here.~
+~
+8 4096 1
+0 0 0 0
+2 20000 -1
+#1700
+rainbow staff~
+the rainbow staff~
+The rainbow staff lies here.~
+~
+1 64 16385
+0 0 -1 0
+8 5000 2667
+A
+4 1
+#1701
+sting~
+Sting~
+Sting lies here.~
+~
+5 1091 8193
+175 2 8 10
+1 15000 7
+A
+18 2
+A
+19 2
+#1702
+sign~
+a sign~
+A sign demands your attention.~
+~
+12 0 0
+0 0 0 0
+0 0 0
+E
+sign~
+
+Welcome to the Shire.  As you enter the Shire from Haon-Dor you come under
+the jurisdiction of the Thain, the peacekeeper of the Shire.  Consequently,
+by entering these lands you agree to obey our laws.  If you break these laws,
+you will be severely punished.  We do not like riff raff in our peaceful
+town.
+
+					The Thain
+					Peacekeeper of the Shire
+
+~
+#1703
+pipeweed bread~
+a pipeweed bread~
+A loaf of pipeweed bread arouses your hunger.~
+~
+19 0 1
+24 0 0 0
+1 13 2
+#1704
+silvery cloak~
+a silvery cloak~
+A silvery cloak lies here.~
+~
+9 4096 1025
+0 0 0 0
+3 12000 10
+A
+24 -1
+A
+17 -5
+#1705
+one ring onering~
+the One Ring~
+The One Ring is here.~
+~
+9 4160 16387
+1 1 0 0
+3 50000 0
+A
+25 10
+A
+26 50
+#1706
+elven bow~
+an elven bow~
+An elven bow lies here.~
+~
+5 2 8193
+0 3 4 7
+10 2000 0
+A
+18 2
+A
+19 2
+#1707
+mithril axe~
+a mithril axe~
+A mithril axe lies here.~
+~
+5 6 8193
+0 2 5 7
+12 6000 0
+A
+18 2
+A
+19 2
+#1708
+thain girth~
+the thain girth~
+The girth of the thain lies here.~
+~
+9 2 2049
+1 1 0 0
+4 1000 200
+A
+17 -5
+#1709
+tiny dagger~
+a tiny dagger~
+A tiny dagger lies here.~
+~
+5 0 8193
+0 1 6 11
+3 400 0
+#1710
+egg~
+an egg~
+An egg lies here.~
+~
+19 0 1
+12 0 0 2
+1 3 1
+#1901
+crystalline longsword~
+a crystalline longsword~
+A small buzzing noise is coming from a sword here.~
+slash~
+5 3138 8193
+0 4 4 3
+20 20000 0
+A
+19 1
+#1902
+spear~
+an zyekian spear~
+An zyekian spear has been has been left here stuck in the ground.~
+pierce~
+5 320 8193
+0 2 6 11
+1 6000 0
+E
+spear~
+The spear is about seven foot long, and contains many small 
+runes.  It is obviously a good weapon, as well as a good walking 
+staff.
+~
+A
+10 -1 
+A 
+18 1
+#1903
+garden hoe~
+a garden hoe~
+A garden hoe has been left on the ground here.~
+slash~
+5 0 8193
+0 1 8 3
+3 250 0
+#1904 
+vial emerald~
+an emerald colored vial~
+A small emerald colored vial has been left here.~
+~
+10 0 1
+15 15 16 22
+4 1000 100
+#1905 
+bread wheat~
+a loaf of wheat bread~
+A loaf of wheat bread sits here on a rock.~
+~
+19 0 1
+16 0 0 0 
+1 35 5
+#1906
+gaiters~
+a pair of leather gaiters~
+A pair of leather gaiters lie here.~
+~
+9 64 33
+4 0 0 0 
+4 7599 100
+E
+gaiters~
+These leg coverings look very comfortable, and provide
+good protection.
+~
+A
+2 1
+#1907
+blackthorn shillelagh~
+a blackthorn shillelagh~
+A blackthorn shillelagh is propped against a log here.~
+pound~
+5 322 8193
+0 3 5 7
+15 25000 0
+E
+shillelagh~
+It is a very large cudgel.  Maybe it would be a good weapon.
+~
+A
+19 1
+A
+18 1
+#1908
+steel mace~
+a large steel mace~
+A large steel mace is lying here.~
+pound~
+5 106817 8193
+0 4 4 7
+14 12000 0
+A
+18 2
+A
+19 2
+#1909
+oak staff~
+an oaken staff~
+A staff has been left here.~
+pound~
+5 4161 8193
+0 2 10 7
+5 5000 0
+#1910
+falchion blued-steel~
+a blued-steel falchion~
+A long falchion rests on the ground here.~
+slash~
+5 64 8193
+0 3 4 3
+12 1000 0
+A
+18 2
+#1911
+belt leather leatherbelt~
+a leather belt~
+Scott's leather belt has been dropped here.~
+~
+9 4098 2049
+6 0 0 0
+0 100000 0
+A
+2 2
+#1912
+blue vial~
+a deep blue vial~
+A deep blue vial sets on a shelf here.~
+~
+10 0 1 
+15 27 17 -1 
+1 8000 120
+#1913
+red vial~
+a red vial~
+A small red vial rests here.~
+~
+10 0 1
+15 1 3 22
+1 10000 100
+#1914
+light sphere~
+a light sphere~
+A glimmering sphere is here.~
+~
+1 4291 16385
+0 0 -1 0 
+60 5000 0
+E
+sphere~
+It is a marble-like orb, containing a deep blue center.
+~
+A
+17 -10
+A
+18 1
+#1916
+scroll~
+a neatly wrapped scroll~
+A scroll has been left here.~
+~
+2 0 1 
+15 35 36 -1
+0 100 100
+#1918
+apple~
+a red apple~
+A bright red apple lies here.~
+~
+19 0 1
+6 0 0 0 
+1 2 -1
+#1919
+tree~
+An apple tree~
+A large apple tree is here.~
+~
+15 0 0
+1000 5 -1 0
+100000 1 -1
+#1921
+wand~
+a wand of fireballs~
+A wand has been left here on the ground.~
+~
+3 65 16385
+20 2 2 26
+5 500000 -1
+#1922
+chest~
+a chest~
+A large chest sits here.~
+~
+15 0 0 
+1000 15 1923 0
+1200 0 0 
+#1923
+key~
+a shinny key~
+The key has been set on a rock here.~
+~
+18 0 16385
+2 0 0 0 
+1 10000 -1
+#1924
+bracelet~
+a silvery bracelet~
+A glinting bracelet lies on the ground here.~
+~
+9 3392 4097
+4 0 0 0
+1 20000 100
+A
+19 1
+#1925
+wine flask~
+a wine flask~
+A wine flask sets here.~
+~
+17 0 16385
+30 30 2 0
+12 90 -1
+#1926
+treasure coins~
+treasure~
+A large pile of golden coins is here.~
+~
+20 0 1
+65000 0 0 0 
+1 65000 0 
+#1939
+key~
+a door key~
+A key has been left here.~
+~
+18 0 1
+2 0 0 0 
+1 10000 -1
+#1940 
+holy symbol~
+a zyakin holy symbol~
+a silver symbol is lying heree.~
+~
+8 106817 16385
+0 0 0 0
+10 300 300
+A
+25 4 
+#1950
+key bronto~
+a Bronto key~
+The Bronto key to the Bronto Saurus has been left here.~
+~
+18 0 16385
+2 0 0 0
+80 200 5000
+#2000
+rifle~
+A rifle~
+A rifle has been left here.~
+~
+6 131137 16385
+2 2 10000 0
+5 0 40
+A
+2 +5
+A
+19 +10
+#2001
+bullets ammo~
+Bullets of A rifle~
+Bullets of A rifle has been left here.~
+~
+8 4096 1
+0 0 0 0
+2 50000 -1
+#2002
+sword damaging~
+A DAMAGING sword~
+A DAMAGING sword is here.~
+slash~
+5 131137 8193
+175 20 20 3
+20 0 40
+A
+18 +020
+A
+19 +020
+#2003
+mail good really~
+A REALLY GOOD mail~
+A REALLY GOOD mail lies on the ground.~
+~
+9 131137 9
+50 0 0 0
+10 0 40
+A
+5 +10
+A
+13 +10000
+#2004
+ring cap~
+A ring of CAP~
+A ring of CAP has been left here.~
+~
+9 131137 3
+20 0 0 0
+2 0 40
+A
+18 +10
+A
+23 -10
+#2005
+knee band~
+A knee band~
+A knee band lies on the ground.~
+~
+9 131137 65537
+20 0 0 0
+4 0 40
+A
+20 -10
+A
+26 10
+#2006
+gloves~
+A pair of gloves~
+A pair of gloves lies here.~
+~
+9 131137 129
+20 0 0 0
+6 0 40
+A
+18 +10
+A
+19 +10
+#2007
+bracelet~
+bracelet~
+A bracelet is here.~
+~
+9 131137 4097
+20 0 0 0
+5 0 40
+#2008
+dagger norent~
+A NORENT dagger~
+A NORENT dagger id here.~
+pierce~
+5 131137 8193
+0 20 20 11
+20 0 40
+A
+18 +20
+A
+19 +20
+#2009
+staff zizon mage~
+A staff of ZIZON mage~
+A staff of ZIZON mage is here.~
+pound~
+5 131137 8193
+171 20 20 7
+20 0 40
+A
+18 +20
+A
+19 +20
+#2010
+shield~
+A shield~
+A shield is here.~
+~
+9 131137 513
+20 0 0 0
+12 0 40
+A
+18 -5
+A
+25 -10
+#2011
+cloak~
+A cloak~
+A cloak is here.~
+~
+9 131137 1025
+20 0 0 0
+12 0 40
+A
+3 +10
+A
+4 +10
+#2012
+boots speed~
+A pair of SPEED boots~
+A pair of SPEED boots lies on the ground~
+~
+9 131137 65
+20 0 0 0
+5 0 40
+A
+18 +10
+A
+19 +10
+#2013
+pendant light~
+A light pendant of M-A-N-A~
+A light pendant od M-A-N-A is here.~
+~
+9 131137 21
+10 0 0 0
+2 0 40
+A
+12 +5000
+A
+10 -100
+#2014
+light~
+A light~
+A light lights the room.~
+~
+1 131137 16385
+0 0 0 0
+10 0 40
+A
+19 +20
+A
+26 +30
+#2015
+legging~
+A pair of leggings~
+A pair of leggings is here.~
+~
+9 131137 33
+10 0 0 0
+1 0 40
+A
+18 +10
+A
+19 +10
+#2016
+belt~
+A belt~
+A belt is here.~
+~
+9 131137 2049
+10 0 0 0
+2 0 40
+A
+18 +10
+A
+19 +10
+#2017
+plate~
+A plate~
+A plate is here.~
+~
+9 131137 131073
+20 0 0 0
+1 0 40
+A
+18 +10
+A
+19 +10
+#2018
+cap~
+A cap~
+A cap is here.~
+~
+9 131137 17
+20 0 0 0
+1 0 40
+A
+18 +20
+A
+26 +50
+#2091
+key 1st~
+the 1st key~
+The 1st key to 2nd floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#2092
+key 2nd~
+the 2nd key~
+The 2nd key to 3rd floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#2093
+key 3rd~
+the 3rd key~
+The 3rd key to 4th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#2094
+key 4st~
+the 4st key~
+The 4st key to 5th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#2095
+key 5th~
+the 5th key~
+The 5th key to 6th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#2096
+key 6th~
+the 6th key~
+The 6th key to 7th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#2100
+oak stick~
+an oak stick~
+An oak stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+1 1
+#2101
+maple stick~
+a maple stick~
+A maple stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+2 1
+#2102
+pine stick~
+a pine stick~
+A pine stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+3 1
+#2103
+birch stick~
+a birch stick~
+A birch stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+4 1
+#2104
+walnut stick~
+a walnut stick~
+A walnut stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+5 1
+#2105
+beech stick~
+a beech stick~
+A beech stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+18 1
+#2106
+fruitwood stick~
+a fruitwood stick~
+A fruitwood stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+19 1
+#2107
+ash stick~
+an ash stick~
+An ash stick lies here.~
+~
+8 0 16385
+0 0 0 0
+1 100 0
+A
+13 3
+#2108
+fir stick~
+a fir stick~
+A fir stick lies here.~
+~
+8 128 16385
+0 0 0 0
+1 100 0
+A
+13 -10
+#2109
+elm stick~
+an elm stick~
+An elm stick lies here.~
+~
+8 128 16385
+0 0 0 0
+1 100 0
+A
+1 -2
+#2110
+poplar stick~
+a poplar stick~
+A poplar stick lies here.~
+~
+8 128 16385
+0 0 0 0
+1 100 0
+A
+2 -2
+#2111
+balsa stick~
+a balsa stick~
+A balsa stick lies here.~
+~
+8 128 16385
+0 0 0 0
+1 100 0
+A
+18 -5
+#2112
+cherry stick~
+a cherry stick~
+A cherry stick lies here.~
+~
+8 128 16385
+0 0 0 0
+1 100 0
+A
+14 10
+#2115
+amulet~
+an amulet~
+A tear shaped a amulet lies on the ground.~
+~
+9 4160 5
+0 0 0 0
+2 150000000 0
+A
+17 -100
+A
+19 10
+#2116
+shield pallas~
+The shield of Pallas~
+The shield of Pallas has been dropped here.~
+~
+9 4610 513
+10 0 0 0
+8 10 0
+A
+18 20
+A
+19 30
+#2120
+fork~
+a two-pronged fork~
+The two-pronged fork of Hades has been left here.~
+pierce~
+5 4674 8193
+0 4 3 11
+16 10000 0
+A
+18 3
+A
+19 3
+#2121
+cloak brown browncloak~
+a brown cloak~
+A brown cloak has been dropped here.~
+~
+9 4161 1025
+5 0 0 0
+12 14500 0
+A
+13 5
+#2122
+emerald ring emeraldring~
+A emerald ring~
+A emerald ring was foolishly dropped here.~
+~
+11 4160 3
+0 0 0 0 
+1 20000 0
+A
+13 50
+#2123
+amulet~
+an amulet~
+A tear shaped amulet lies on the ground.~
+~
+9 4160 5
+0 0 0 0
+2 1500 0
+A
+5 2
+A
+19 2
+#2124
+whip medusa~
+The whip of Medusa~
+The whip of Medusa has been tossed aside here.~
+slash~
+5 4161 8193
+0 2 8 3
+0 10000 0
+A
+18 2
+A
+19 2
+#2125
+black pendant blackpandant~
+A black pendant~
+A black pendant is on the ground here.~
+~
+9 193 5
+5 0 0 0
+11 2500 150
+A
+1 -10
+A
+2 -8
+#2126
+medallion ceres~
+The medallion of Ceres~
+The medallion of Ceres has been dropped here.~
+~
+9 514 5
+4 0 0 0
+1 25000 0
+A
+12 10
+A
+4 -1
+#2127
+shield pallas~
+The shield of Pallas~
+The shield of Pallas has been dropped here.~
+~
+9 4610 513
+10 0 0 0
+8 25000 0
+#2128
+elixir strange~
+A strange elixir~
+A strange elixir has been set here.~
+~
+10 96 1
+16 4 36 39
+5 6000 0
+#2129
+fury boots~
+the boots of a fury~
+A pair of boots once worn by a fury have been dropped here.~
+~
+9 4160 65
+3 0 0 0
+1 50000 0
+A
+14 25
+A
+2 2
+#2130
+bracelet serpentine~
+A serpentine bracelet~
+A bracelet made from the petrified body of a small serpent lies here.~
+~
+9 4097 4097
+4 0 0 0
+2 25000 0
+A
+18 2
+A
+19 1
+#2131
+bracelet serpentine~
+A serpentine bracelet~
+A bracelet made from the petrified body of a small serpent lies here.~
+~
+9 4226 4097
+1 0 0 0
+2 25000 0
+A
+18 -2
+A
+19 -2
+#2132
+staff hades~
+The staff of Hades~
+The heavy staff of Hades has been foolishly dropped here.~
+smash~
+5 4610 8193
+0 5 5 7
+30 25000 0
+#2133 
+vulcan mail~
+A glowing suit of vulcan mail~
+A glowing suit of vulcan mail lies on the ground.~
+~
+9 4161 9
+8 0 0 0
+0 75000 0
+A
+2 2
+A
+17 -4
+#2134
+cloak red~
+a firey red cloak~
+A firey red cloak lies lifeless on the ground.~
+~
+3 4192 1025
+0 0 0 0
+2 100000 0
+A
+12 40
+#2135
+ring jeweled jeweledring~
+a jeweled ring~
+The jeweled ring of Hecate has been dropped here.~
+~
+9 192 3
+1 0 0 0
+8 1000 0
+A
+3 2
+A
+4 2
+#2136
+crown dreams~
+a crown of dreams~
+A crown of dreams has been dropped here?~
+~
+9 2 17
+4 0 0 0
+12 10000 0
+A
+13 10
+A
+18 -1
+#2137
+potion herbal~
+An herbal potion~
+A herbal potion has been set here.~
+~
+10 96 1
+20 44 -1 -1
+10 7500 0
+#2138
+staff rosewood~
+A rosewood staff~
+A rosewood staff has been left here.~
+~
+4 96 16385
+15 2 2 77
+12 6600 0
+#2139
+candlestick~
+A candlestick~
+A candlestick has been carelessly discarded here.~
+~
+1 64 16385
+0 0 90 0
+20 3000 0
+#2140
+scroll flowered~
+A flowered scroll~
+A flowered scroll has been left here.~
+~
+2 64 1
+24 24 -1 -1
+15 11000 0
+#2141
+oboe golden~
+A golden oboe~
+A brilliant golden oboe catches your eye.~
+~
+4 65 16385
+17 1 1 7
+6 10000 0
+#2142
+helmet cyclopes~
+The Helmet of Hades~
+The Helmet of Hades, given hhim by the Cyclopes, was foolishly left here.~
+~
+9 4162 17
+10 0 0 0
+12 50000 0
+A
+26 50
+#2143
+staff~
+The Larger Staff of Hades~
+The Larger Staff of Hades is here.~
+smash~
+5 4674 8193
+171 2 15 7
+30 75000 5
+A
+17 +15
+#2144
+gloves magic~
+A pair of Magic Gloves~
+A strange useless Gloves is here.~
+~
+9 4097 129
+5 0 0 0
+2 10000 0
+A
+18 1
+A 
+19 1
+#2145
+potion green~
+A green potion~
+A green potion has been discarded here.~
+~
+10 0 16385
+20 28 16 15
+2 10000 0
+#2146
+grapes~
+a bunch of grapes~
+A bunch of fresh grapes is here.~
+~
+19 0 1
+5 0 0 0
+1 10 0
+#2147
+skirt muslin~
+a skirt made of muslin~
+A simple muslin skirt has been left here.~
+~
+9 4160 33
+6 0 0 0
+7 5000 0
+A
+14 10
+A
+18 3
+#2148
+shirt muslin~
+a shirt made of muslin~
+A simple muslin shirt has been left here.~
+~
+9 4160 9
+6 0 0 0
+10 10000 0
+A
+14 10
+A
+18 3
+#2149
+sandals~
+a pair of sandals~
+A pair of plain sandals has been left here.~
+~
+9 64 65
+4 0 0 0
+8 5000 0
+A
+5 2
+#2150
+pike forged~
+A forged pike~
+A forged pike has been carelessly left here~
+slash~
+5 4161 8193
+0 2 9 3
+0 10250 0
+A
+18 2
+A
+19 2
+#2151
+rope~
+a rope~
+A rope has been left here.~
+~
+9 4160 2049
+5 0 0 0
+4 10000 0
+A
+13 1
+#2152
+key black~
+a black key~
+A black key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#2153
+goblet wine~
+a golden goblet~
+A golden goblet shines brightly on the ground here.~
+~
+17 321 1
+200 200 2 0
+200 10000 0
+#2154
+brassard hydra~
+the brassard of the hydra~
+A small brassard, with the number 50 engraved upon it, is here.~
+~
+9 4096 257
+10 0 0 0
+5 80000 0
+#2155
+wrist band~
+A heavy metal wrist band~
+A heavy metal wrist band has been dropped here.~
+~
+9 4097 4097
+3 0 0 0
+2 25000 0
+A
+18 1
+A
+19 2
+#2156
+white potion~
+a white potion~
+A small white potion has been left here.~
+~
+10 64 1
+20 43 -1 -1
+1 25000 0
+#2157
+seed unknown~
+a seed of unknown origin~
+The seed of an unknown plant lies here.~
+~
+19 4098 16385
+1 0 0 0
+1 50000 1
+E
+seed~
+Eating the seed will probably have serious consequences.
+~
+#2200
+spear jagged~
+A Jagged Spear~
+A barbed spear has been left here.~
+pierce~
+5 0 8193
+0 2 5 11
+15 4000 1500
+#2201
+dagger silver~
+A silver dagger~
+A silver dagger is lying here.~
+pierce~
+5 0 8193
+0 2 4 11
+10 1000 200
+#2202
+knife tooth dragon~
+A Dragon's Tooth Knife~
+A dangerous looking knife made from a Dragon's Tooth has been left here.~
+pierce~
+5 4163 8193
+0 4 5 11
+8 100000 50000
+A
+2 2
+A
+19 2
+#2203
+bracelet dragon~
+A Dragon Skin Bracelet~
+A Scaly Bracelet lies on the ground.~
+~
+9 4161 4097  
+5 0 0 0
+10 40000 0
+A
+1 1
+#2204
+belt silk black~
+A Black Silk Belt~
+A black belt made of the finest silk is hanging here.~
+~
+15 0 2049
+150 0 -1 0
+25 10000 4000
+A
+17 -4
+A
+5 2
+#2205
+belt silk white~
+A White Silk Belt.~
+A white belt made of the finest silk is hanging here.~
+~
+15 0 2049
+150 0 -1 0
+25 10000 4000
+A
+17 -4
+A
+1 2
+#2206
+bracelet platinum~
+A Platinum Bracelet.~
+A tarnished platinum bracelet has been dropped here.~
+~
+9 65 4097
+7 0 0 0
+5 50000 25000
+#2207
+necklace symbol holy~
+A Holy Symbol~
+A Golden Medallion is here.~
+~
+9 45057 16389
+0 0 0 0
+2 50000 0
+A
+12 15
+A
+18 -1
+#2208
+robe black~
+A Plain Black Robe~
+A black robe is hanging on a hook on the wall.~
+~
+9 512 1025
+5 0 0 0
+3 50000 5000
+A
+19 2
+#2209
+sword emerald~
+An Emerald Sword~
+An emerald long sword is leaning against the wall.~
+slash~
+5 6146 8193
+0 5 5 3
+24 200000 100000
+A
+18 2
+A
+19 3
+#2210
+club stone~
+a stone club~
+A heavy looking stone club is here.~
+pound~
+5 4096 8193
+0 3 5 7
+18 7500 5000
+#2211
+axe heavy~
+a heavy axe~
+A heavy old axe has been dropped here.~
+chop~
+5 6656 8193
+0 18 1 3
+30 5000 0
+A
+2 -3
+#2212
+ring diamond diamondring~
+a diamond ring~
+A diamond ring lies gleaming on the ground.~
+~
+9 4160 3
+2 0 0 0
+6 50000 0
+A
+17 -11
+A
+19 4
+#2213
+ring copper copperring~
+a copper ring~
+A copper ring is here.~
+~
+9 0 3
+1 0 0 0
+1 100000 25000
+A
+4 2
+#2214
+key steel~
+a steel key~
+A steel key.~
+~
+18 0 1
+0 0 0 0
+1 500 1000
+#2215
+key ruby~
+A ruby key~
+A ruby key.~
+~
+18 0 1
+0 0 0 0
+1 500 1000
+#2216
+key white~
+a white key~
+A white key.~
+~
+18 0 1
+0 0 0 0
+1 500 1000
+#2217
+key grey~
+a grey key~
+A grey key.~
+~
+18 0 1
+0 0 0 0
+1 500 1000
+#2218
+key stone~
+a stone key~
+A stone key.~
+~
+18 0 1
+0 0 0 0 
+1 500 1000
+#2220
+bow diana~
+Diana's great bow~
+A carefully crafted bow, used by Diana, has been foolishly dropped here.~
+~
+6 4096 16385
+1 1 100 0
+18 50000 1
+#2221
+arrow~
+An arrow for Diana's bow~
+An arrow for Diana's bow has been left here.~
+~
+8 4096 16385
+0 0 0 0
+3 10000 1
+#2222
+leggings~
+Diana's leggings~
+A pair of fur leggings, worn by Diana, are here.~
+~
+9 4096 33
+9 0 0 0
+7 10000 0
+A
+1 1
+#2223
+sash~
+A fur sash~
+A soft fur sash, worn by Diana, lies here.~
+~
+9 4096 2049
+9 0 0 0
+7 10000 0
+A
+14 5
+#2224
+fur hat~
+A fur hat~
+A hat, made of soft fur, has been left here.~
+~
+9 4096 17
+9 0 0 0
+7 10000 0
+A
+12 5
+#2226
+loin cloth~
+A small loin cloth~
+A small loin cloth lies in a heap here.~
+~
+9 4096 2049
+7 0 0 0
+7 10000 0
+#2227
+horn~
+The Horn of Silenus~
+The Horn of Silenus has been foolishly dropped here.~
+~
+4 320 16385
+25 3 3 36
+9 50000 0
+#2228
+spear~
+The spear of Narcissus~
+The spear used by Narcissus has been left here.~
+slash~
+5 0 8193
+0 1 21 3
+8 4900 0
+#2230
+staff echo~
+Echo's staff~
+Echo's staff has been left here.~
+~
+4 0 16385
+25 2 2 13
+5 1000 1
+#2231
+berries~
+Some berries~
+Some berries were left here.~
+~
+19 0 1
+10 0 0 2
+5 1000 1
+#2232
+a nut~
+A large nut~
+A large nut has been left here.~
+~
+19 0 16385
+12 0 0 0
+5 1000 1
+#2233
+jug wine~
+a jug of wine~
+A large jug of wine has been left here.~
+~
+17 0 16385
+100 100 2 0
+9 1000 0
+#2240
+sling~
+A small sling~
+A small sling has been heedlessly discarded here.~
+~
+6 4096 16385
+1 1 25 0
+8 5000 1
+#2241
+rock~
+A small rock~
+There is a small rock here.~
+~
+12 0 1
+0 0 0 0
+3 100 1
+#2242
+cape green~
+A dark green cape~
+A dark green cape has been left here.~
+~
+9 4418 1025
+10 0 0 0
+10 10000 0
+A
+2 -2
+#2243
+necklace emerald~
+An emerald necklace~
+A beautiful emerald necklace has been left here.~
+~
+9 4097 5
+8 0 0 0
+6 10000 0
+A
+5 -2
+#2244
+brass ring brassring~
+A brass ring~
+A brass ring has been left here.~
+~
+11 4160 3
+0 0 0 0 
+2 25000 0
+A
+18 3
+A
+19 3
+#2245
+broadsword black~
+A black broadsword~
+A black broadsword has been carelessly left here.~
+slash~
+5 4161 8193
+0 2 9 3
+24 10250 0
+A
+18 2
+A
+19 2
+#2246
+crooked dagger~
+A strange looking crooked dagger~
+A strange looking crooked dagger has been dropped here.~
+pierce~
+5 4672 8193
+0 6 3 11
+8 10000 0
+#2247
+bonnet~
+A blue bonnet~
+A blue bonnet has been left here.~
+~
+9 0 17
+5 0 0 0
+100 100 100
+#2248
+key black~
+a black key~
+A black key.~
+~
+18 0 1
+0 0 0 0
+1 500 1000
+#2249
+key platinum~
+a platinum key~
+A platinum key.~
+~
+18 0 1
+0 0 0 0
+1 500 1000
+#2250
+staff black~
+a black staff~
+You notice the faint outline of a staff.~
+~
+4 577 16385 
+30 2 2 36 
+25 75000 5000 
+#2251 
+potion cyan~
+a cyan potion~
+A small cyan potion has been left here.~
+~
+10 0 1 
+30 15 34 0 
+1 40000 1000 
+#2252 
+potion magenta~
+a magenta potion~
+A magenta potion.~
+~
+10 128 1 
+30 4 27 0 
+1 2000 100 
+#2253 
+sandals~
+moth-eaten sandals~
+An old pair of sandals is here.~
+~
+9 90176 65 
+4 0 0 0 
+10 40000 5000
+A
+2 2
+A
+14 100
+#2254 
+gauntlets spiked~
+a pair of spiked gauntlets~
+A pair of spiked gauntlets.~
+~
+9 4161 129 
+4 0 0 0 
+10 50000 0
+A
+19 2
+A
+1 1                
+#2260 
+scimitar golden~
+a golden scimitar~
+A golden scimitar.~
+slash~
+5 1 8193 
+0 3 5 3 
+10 40000 7000 
+A
+3 1
+A
+4 1      
+#2261 
+brooch diamond~
+a diamond brooch~
+A diamond brooch.~
+~
+9 114752 5 
+8 0 0 0 
+2 10000 4000
+A
+25 20                 
+#2262
+shield crested~
+a crested shield~
+A large crested shield draws your attention.~
+~
+9 4096 513
+10 0 0 0
+20 200000 0
+A
+5 1
+A
+1 1
+#2263
+wand golden~
+a golden wand~
+A golden wand has been dropped here.~
+~
+3 1 16385
+44 5 5 42
+5 10000 5000
+#2264
+staff silver~
+a silver staff~
+A silver staff.~
+~
+4 65 16385
+25 3 3 28
+5 10000 5000
+#2265
+staff dragon~
+the staff of the dragon~
+A powerful oak staff has been left here.~
+~
+1 1 16385
+0 0 -1 0
+5 10000 3000
+A
+3 2
+A
+4 -2
+#2266
+mail scale~
+the white dragon scale mail~
+A set of scale mail has been abandoned here.~
+~
+9 1 9
+10 0 0 0
+20 100000 20000
+#2267
+tiamat mail scale~
+the Tiamat mail~
+A set of Tiamat mail has been abandoned here.~
+~
+9 4097 9
+30 0 0 0
+20 100000 0
+A
+19 +3
+#2270 
+scroll~
+a runed scroll~
+A runed scroll.~
+~
+2 64 16385 
+30 1 2 36 
+1 5000 500 
+#2271
+gloves dragon~
+a pair of dragon skin gloves~
+A pair of dragon skin gloves is lying on the ground.~
+~
+9 4096 129
+6 0 0 0
+5 40000 0
+A
+2 2
+A
+5 -1
+#2275
+helm dragon~
+a helm of dragon kind~
+A helm made of a dragon's skull is lying on the ground.~
+~
+9 4096 17
+6 0 0 0 
+15 30000 0
+A
+13 15
+A
+18 2                 
+#2276
+fur cloak~
+a fur cloak~
+A large mound of fur is lying here.~
+~
+9 4096 1025
+9 0 0 0 
+10 25000 0
+A
+1 1
+A
+13 10               
+#2280
+leggings dragon scale~
+a pair of dragon scale leggings~
+A pair of dragon scale leggings is lying on the ground.~
+~
+9 4096 33
+8 0 0 0 
+15 35000 0 
+#2281
+sleeves dragon scale~
+a set of dragon scale sleeves~
+A set of dragon scale sleeves is lying on the ground.~
+~
+9 4096 257 
+8 0 0 0 
+12 30000 0 
+#2285
+whip dragon tail~
+a dragon tailed whip~
+A dragon tailed whip is lying on the ground.~
+pound~
+5 111106 8193 
+0 6 4 4
+14 40000 20500
+A
+18 2
+A
+19 2                 
+#2286
+hammer copper~
+a copper hammer~
+A copper hammer is lying on the ground.~
+pound~
+5 4096 8193 
+0 3 5 7 
+12 30000 15000 
+#2298
+cloak winged~
+a dragon winged cloak~
+A dragon winged cloak is hanging on a wall here.~
+~
+9 4096 1025 
+0 0 0 0 
+10 10000 0
+A
+17 -4
+A
+1 3
+#2299
+key gold tarnished~
+a tarnished gold key~
+a tarnished gold key.~
+~
+18 0 1 
+0 0 0 0
+1 500 1000
+#2301
+pike~
+a huge, heavy, black pike~
+A heavy looking black pike is floating above the ground here.~
+slash~
+5 4226 8193
+0 5 4 3
+12 150000 0
+A
+18 2
+A
+23 -1
+#2302
+sleeves chaos~
+a pair of chaos sleeves~
+A pair of scorched pitch-black spiked sleeves lie here.~
+~
+9 6786 257 
+9 0 0 0
+18 12500 0
+#2303
+leggings chaos~
+a pair of chaos leggings~
+A pair of scorched pitch-black plate leggings lie here.~
+~
+9 6786 33
+9 0 0 0
+18 12500 0
+#2304
+helm darkness~
+a pitch-black helm of darkness~
+A pitch-black helm with a bone white skull visor lies here.~
+~
+9 6786 17
+9 0 0 0
+16 12500 0
+#2305
+flesh boots~
+a pair of blackened flesh boots~
+A pair of boots made from the flesh of a mindflayer lie here.~
+~
+9 6786 65
+9 0 0 0
+18 12500 0
+#2306
+gauntlets~
+a pair of blackened gauntlets~
+A pair of heavy plated gauntlets lies here.~
+~
+9 6786 129
+9 0 0 0
+5 12500 0
+#2307
+dragon shield~
+gold dragon shield~
+A large gold shield, with a skull emblazoned on it lies here.~
+~
+9 6786 513
+9 0 0 0
+10 12500 0
+A
+23 -2
+A
+24 -2 
+#2308
+skull belt~
+a black leather belt with dangling skulls~
+A black leather belt with the heads of previous victims lies here.~
+~
+9 4546 2049
+8 0 0 0
+2 12500 0
+A
+19 1
+A
+4 -2
+#2309
+staff arcane~
+a staff with arcane symbols~
+A small wooden staff lies here collecting dust.~
+~
+4 65 16385
+9 10 10 15
+15 500000 5000
+A
+12 5 
+#2310
+black pearl power~
+the black pearl of power~
+a glistening black pearl lies here.~
+~
+8 193 16385
+0 0 0 0
+5 5000 500
+A
+12 10
+A
+18 1
+#2311
+blood red vial~
+a blood red vial~
+A small vial of a reddish color lies here.~
+~
+10 64 1
+20 15 43 -1
+1 5000 250
+#2312
+swirling blue potion~
+a swirling blue potion~
+A swirling blue potion sits here.~
+~
+10 65 1
+15 33 27 17
+1 1 0
+#2313
+bloody mary~
+a bloody chalice~
+a gold chalice filled with a dark red drink.~
+~
+17 0 1
+5 5 13 0
+1 5 -1
+#2314
+githyanki chainmail~
+a suit of githyanki chainmail~
+a glinting suit of chainmail lies here.~
+~
+9 0 9
+9 0 0 0
+20 1000 100 
+A
+2 1
+#2315
+githyanki blade~
+a wicked-looking silver blade~
+a runed and decorated githyanki sword lies here.~
+slash~
+5 0 8193
+0 2 7 3
+12 5000 0
+A
+18 3
+#2316
+signet ring signetring~
+a signet ring~
+a large ring made of a black metal lies here.~
+~
+9 226 3
+0 0 0 0
+1 16000 0
+A
+13 -20
+A
+12 -20
+#2317
+flail~
+a heavy, black flail~
+a heavy looking black flail is lying here.~
+crush~
+5 130 8193
+0 2 8 6
+16 15000 0
+A
+18 2
+A
+19 2
+#2318
+cloak darkness~
+a cloak of darkness~
+A jet black cloak lies here in the dirt.~
+~
+9 4674 1025
+9 0 0 0
+5 1000 0
+A
+18 1
+A
+19 1
+#2319
+rod darklight~
+a rod of darklight~
+A thin black rod glows evilly in the dirt.~
+~
+1 65 16385
+0 0 -1 0
+5 1000 66
+A
+18 1
+A 
+19 1
+#2320
+crystal ring crystalring~
+a black crystal ring~
+A ring made of what seems to be black ice lies here.~
+~
+9 4288 3
+0 0 0 0
+1 15000 0 
+A
+17 -9
+#2321
+robe runed arcane~
+an arcane runed robe~
+a black robe covered with arcane runes lies here.~
+~
+9 65 9
+11 0 0 0
+6 10000 0
+A
+12 5
+A
+2 -2
+#2322
+cinnamon stick meat~
+a stick of meat~
+a stick covered with meat lies here it smells faintly of cinnamon.~
+~
+19 0 1
+20 0 0 3
+1 5 1
+#2323
+wand~
+a dark black wand~
+A wand that makes your soul shiver lies here.~
+~
+3 612 16385
+13 11 11 25
+1 1000 0
+#2324
+demonic ring posession demonicring~
+a demonic ring of posession~
+a ring that has demon's figure lies here.~ 
+~
+9 6850 3
+0 0 0 0
+1 32500 0
+A
+17 -10
+A
+19 3
+#2400
+wooden Kal~
+a ruined wooden Kal~
+a ruined harmless Kal is here.~
+pound~
+5 4419 8193
+0 4 6 7
+20 150000 0
+A
+18 2
+A
+19 2
+#2500
+suit polyester~
+A polyester suit~
+A polyester suit has been left here.~
+~
+9 1536 9
+2 0 0 0
+3 500 0
+#2501
+suit tweed~
+A tweed suit~
+A tweed suit has been left here.~
+~
+9 1536 9
+3 0 0 0
+4 1000 0
+#2502
+suit cotton~
+A cotton suit~
+A cotton suit has been discarded here.~
+~
+9 1536 9
+5 0 0 0
+5 1500 0
+#2503
+suit wool~
+A wool suit~
+A wool suit has been discarded here.~
+~
+9 1536 9
+7 0 0 0
+6 2000 0
+#2504
+suit cashmere~
+A cashmere suit~
+A cashmere suit has been discarded here.~
+~
+9 5632 9
+9 0 0 0
+7 2500 0
+#2505
+hat polyester~
+A polyester hat~
+A polyester hat has been left here.~
+~
+9 1536 17
+2 0 0 0
+3 500 0
+#2506
+hat tweed~
+A tweed hat~
+A tweed hat has been dropped here.~
+~
+9 1536 17
+3 0 0 0
+4 1000 0
+#2507
+hat cotton~
+A cotton hat~
+A cotton hat has been left here.~
+~
+9 1536 17
+5 0 0 0
+5 1500 0
+#2508
+hat wool~
+A wool hat~
+A wool hat has been dropped here.~
+~
+9 1536 17
+7 0 0 0
+6 2000 0
+#2509
+hat cashmere~
+A cashmere hat~
+A cashmere hat has been discarded here.~
+~
+9 5632 17
+9 0 0 0
+7 2500 0
+#2510
+pants polyester~
+A pair of polyester pants~
+A pair of polyester pants has been dropped here.~
+~
+9 1536 33
+2 0 0 0
+3 500 0
+#2511
+pants tweed~
+A pair of tweed pants~
+A pair of tweed pants has been dropped here.~
+~
+9 1536 33
+3 0 0 0
+4 1000 0
+#2512
+pants cotton~
+A pair of cotton pants~
+A pair of cotton pants has been discarded here.~
+~
+9 1536 33
+5 0 0 0
+5 1500 0
+#2513
+pants wool~
+A pair of wool pants~
+A pair of wool pants has been dropped here.~
+~
+9 1536 33
+7 0 0 0
+6 2000 0
+#2514
+pants cashmere~
+A pair of cashmere pants~
+A pair of cashmere pants has been dropped here.~
+~
+9 5632 33
+9 0 0 0
+7 2500 0
+#2515
+shoes vinyl~
+A pair of vinyl shoes~
+A pair of vinyl shoes has been dropped here.~
+~
+9 1536 65
+2 0 0 0
+3 500 0
+#2516
+shoes rubber~
+A pair of rubber shoes~
+A pair of rubber shoes has been discarded here.~
+~
+9 1536 65
+3 0 0 0
+4 1000 0
+#2517
+shoes suede~
+A pair of suede shoes~
+A pair of suede shoes has been discarded here.~
+~
+9 1536 65
+5 0 0 0
+5 1000 0
+#2518
+shoes leather~
+A pair of leather shoes~
+A pair of leather shoes has been dropped here.~
+~
+9 1536 65
+7 0 0 0
+6 2000 0
+#2519
+shoes corfam~
+A pair of corfam shoes~
+A pair of corfam shoes has been left here.~
+~
+9 5632 65
+9 0 0 0
+7 2500 0
+#2520
+gloves vinyl~
+A pair of vinyl gloves~
+A pair of vinyl gloves has been left here.~
+~
+9 1536 129
+2 0 0 0
+3 500 0
+#2521
+gloves rubber~
+A pair of rubber gloves~
+A pair of rubber gloves has been dropped here.~
+~
+9 1536 129
+3 0 0 0
+4 1000 0
+#2522
+gloves suede~
+A pair of suede gloves~
+A pair of suede gloves has been dropped here.~
+~
+9 1536 129
+5 0 0 0
+5 1500 0
+#2523
+gloves leather~
+A pair of leather gloves~
+A pair of leather gloves has been dropped here.~
+~
+9 1536 129
+7 0 0 0
+6 2000 0
+#2524
+gloves corfam~
+A pair of corfam gloves~
+A pair of corfam gloves has been left here.~
+~
+9 5632 129
+9 0 0 0
+7 2500 0
+#2550
+briefcase~
+A leather briefcase~
+A brown leather briefcase was left here.~
+~
+15 0 16385
+100 15 2551 0
+10 1000 0
+#2551
+key small~
+A small key~
+A small key is barely visible here.~
+~
+18 0 1
+0 0 0 0
+1 1000 0
+#2552
+fortune coins~
+A fortune in coins~
+A fortune in coins has been left here.~
+~
+20 0 1
+2500000 0 0 0
+1 1 0
+#2553
+briefcase~
+A vinyl briefcase~
+A black vinyl briefcase was left here.~
+~
+15 0 16385
+100 5 -1 0
+10 1000 0
+#2555
+file cabinet~
+A large grey file cabinet~
+A large grey file cabinet is here.~
+~
+15 0 0
+100 15 2556 0
+10 1000 0
+#2556
+key tin~
+A tin key~
+A tin key was dropped here.~
+~
+18 0 1
+0 0 0 0
+1 1000 0
+#2560
+shorts boxer~
+A pair of boxer shorts~
+A pair of dippy looking boxer shorts has been left here.~
+~
+9 1536 33
+8 0 0 0
+3 5000 0
+A
+5 2
+#2561
+towel~
+A bath towel~
+A damp bath towel has been dropped here.~
+~
+9 1536 33
+8 0 0 0
+3 5000 0
+A
+5 2
+#2570
+stun gun~
+A high-voltage stun gun~
+A high-voltage stun gun has been left here.~
+~
+6 4096 16385
+16 16 32 0
+5 10000 0
+E
+gun~
+The gun is cheaply made, designed for a limited lifetime.
+~
+#2571
+battery pack~
+a battery pack~
+A small battery pack has been left here.~
+~
+8 4096 1
+0 0 0 0
+2 10000 1
+#2572
+tube ointment~
+A tube of translucent ointment~
+A tube of translucent ointment has been left here.~
+~
+3 0 16385
+15 5 5 15
+4 5000 0
+E
+tube oimtment~
+Directions:
+  HOLD and USE for best results.  Keep of the reach of children.
+~
+#2575
+coffee machine~
+a coffee machine~
+A coffee machine is standing here.~
+~
+15 2 0
+3 0 -1 0
+100 3000 300
+E
+coffee machine~
+The machine has been recently repainted, but you can still make out the
+letter Q through the paint.
+~
+#2576
+coffee cup~
+a coffee cup~
+A coffee cup has been left here.~
+~
+17 0 1
+3 3 12 0
+1 6 3
+#2577
+newspaper paper~
+a newspaper~
+A copy of the Midgaard Plain Dealer has been left here.~
+~
+12 0 1
+0 0 0 0
+1 10 0
+E
+paper newspaper~
+The Headlines:
+
+   BOARD MEMBERS INDICTED IN MONEY LAUNDERING SCHEME
+
+           Emergency Board Meeting Called
+
+      Chairman of the Board in Love Nest Scandal
+
+              Mayor Denounces Chairman
+
+
+~
+#2700
+feather 깃털~
+아름다운 새의 깃털~
+아름다운 새의 깃털이 하나 떨어져 있습니다.~
+~
+8 256 1
+0 0 0 0
+10 5500 0
+#2801
+macho's BIG sinbal~
+Macho's BIG sinbal~
+Very BIG sinbal is here..~
+~
+9 6145 65
+4 0 0 0
+8 1000000 13
+A
+18 +3
+A
+19 +3
+#2802
+chowoon's BIG bracers~
+Chowoon's BIG bracers~
+Very BIG bracers is here...~
+~
+9 6145 257
+4 0 0 0
+9 1000000 13
+A
+18 +3
+A
+19 +3
+#2803
+gwanwoo's BIG toogoo~
+Gwanwoo's BIG toogoo~
+Very BIG toogoo is here...~
+~
+9 6145 17
+6 0 0 0
+10 1000000 18
+A
+18 +3
+A
+19 +3
+#2804
+gongmyung's BIG cloak~
+Gongmyung's BIG cloak~
+Very BIG cloak is here...~
+~
+9 6145 1025
+5 0 0 0
+5 1000000 15
+A
+18 +3
+A
+19 +3
+#2805
+yubi's BIG knee~
+Yubi's BIG knee~
+Very BIG knee is here...~
+~
+9 6145 65537
+5 0 0 0
+7 1000000 25
+A
+18 +3
+A
+19 +4
+#2806
+yubi's BIG knee~
+Yubi's BIG knee~
+Very BIG knee is here...~
+~
+9 4097 65537
+5 0 0 0
+7 1000000 25
+A
+18 +3
+A
+19 +4
+#2818
+jangbi key~
+Jangbi key~
+Very BIG jangbi key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#2824
+chok castle key~
+Chok castle key~
+Very BIG chok castle key is here..~
+~
+18 32 16385
+0 0 0 0
+2 100 0
+#2829
+1st secret key~
+1st secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#2831
+2nd secret key~
+2nd secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#2833
+3rd secret key~
+3rd secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#2834
+4th secret key~
+4th secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#2835
+hwata shop key~
+Hwata shop key~
+Very BIG key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#2836
+white vial~
+a white vial~
+A small white vial rests here.~
+~
+10 4097 1
+40 1 -1 -1
+1 200000 100
+#2837
+golden vial~
+a golden vial~
+A small golden vial is here.~
+~
+10 4098 1
+30 71 3 -1
+1 200000 100
+#2838
+sharon stone~
+a sharon stone~
+a beautiful sharon stone is here.~
+~
+8 4193 16387
+1 0 0 0
+3 1000000 13
+A
+25 50
+A
+18 -3
+#2900
+gloves combat~
+a pair of minotaur combat gloves~
+A pair of metal plated gloves lie here.~
+~
+9 0 129
+9 0 0 0
+6 10000 2500
+E
+gloves~
+These golves are plated with metal plates that provide strength and 
+protection.
+~
+A
+18 1
+A
+19 1
+#2901
+spiked armor garde~
+a suit of spiked garde armor~
+A pile of spiked chainmail lies here.~
+~
+9 0 9
+7 0 0 0
+8 25000 5000
+A
+18 1
+A
+19 2
+#2902
+greaves black~
+A pair of black minotaur greaves~
+Some black metal greaves lie here.~
+~
+9 0 33
+9 0 0 0
+9 25000 5000
+#2903
+vambraces black~
+A pair of black minotaur vambraces~
+Some black metal vambraces lie here.~
+~
+9 0 259
+9 0 0 0
+9 25000 5000
+#2904
+rod weaponry~
+the rod of weaponry~
+A shiny metal rod lies here.~
+crush~
+5 8513 8193
+0 5 5 6
+24 50000 10000
+E
+rod~
+A warrior could make good use of it.
+~
+A
+18 3
+A
+19 3
+#2905
+cloak pitch black~
+a pitch black cloak~
+A pile of black cloth lies here.~
+~
+15 64 1025
+150 0 0 0
+3 25000 2500
+E
+cloak~
+It appears to have pockets inside it.
+~
+A
+23 -3
+#2906
+neckguard neck guard black plate~
+a black plate neckguard~
+A black plate collar rests here.~
+~
+9 2624 5
+9 0 0 0
+10 10000 1500
+A
+4 1
+#2907
+spiked gauntlet gauntlets~
+a pair of spiked gauntlets~
+A pair of spiked gauntlets lies here.~
+~
+9 0 129
+3 0 0 0
+10 15000 2500
+E
+gauntlets~
+They look pretty damaging.
+~
+A
+18 3
+A
+19 3
+#2908
+shield shadow~
+the shadow shield~
+A shadowy shield rests here.~
+~
+9 2625 513
+20 0 0 0
+15 50000 7500
+E
+shield~
+You look into the depths of the shield and shiver at the evil it contains.
+~
+A
+23 -3
+A
+19 5
+#2909
+nightbringer short sword shortsword~
+a shortsword named "NightBringer"~
+A very evil looking shortsword lies here.~
+pierce~
+5 10817 8193
+0 5 5 11
+9 75000 10000
+E
+sword~
+The runes "NightBringer" are etched along it's side.
+~
+A
+18 3
+A
+19 3
+#2910
+visor helm golden~
+a golden helm and visor~
+A helm and visor made of pure gold rests here.~
+~
+9 3137 17
+7 0 0 0
+15 25000 5000
+A
+4 1
+A
+3 1
+#2911
+breast plate gilded gold~
+a gilded gold breast plate~
+A large golden breast plate lies here.~
+~
+9 3137 9
+15 0 0 0
+18 35000 6500
+A
+13 25
+#2912
+cape white billowing silk~
+a billowing white cape ~
+A pile of white silk lies here.~
+~
+9 8257 5
+5 0 0 0
+5 15000 3500
+E
+cape~
+Nice and silky.
+~
+A
+9 20
+#2913
+shield huge tower~
+a huge tower shield~
+A huge shield lies here.~
+~
+9 65 513
+10 0 0 0
+14 10000 1500
+E
+shield~
+A pure white shield with a gold cross emblazoned across it.
+~
+#2914
+dawnbringer mace huge~
+a huge mace named "DawnBringer"~
+A huge mace lies here. It radiates an aura of power.~
+crush~
+5 11331 8193
+0 6 6 7
+24 50000 10000
+E
+mace~
+The runes "DAwNbRIngER" are scrawled along the handle.
+~
+A
+18 3
+A
+19 3
+#2915
+spectacles wire rimmed~
+a pair of wire rimmed spectacles~
+A small pair of wire rimmed spectacles rests here.~
+~
+9 8256 17
+1 0 0 0
+2 25000 2500
+E
+spectacles~
+They'll make you look smart.
+~
+A
+3 4
+#2916
+ring banded~
+a banded ring~
+A small ring made of gold and silver bands lies here.~
+~
+9 65 3
+1 0 0 0
+2 25000 2500
+E
+ring~
+The ring has entwined bands of gold and silver.
+~
+A
+12 30
+A
+9 10
+#2917
+globe minor~
+a minor globe of invulnerability~
+A small globe rests here. It shimmers and radiates power.~
+~
+9 65 1025
+10 0 0 0
+1 50000 7500
+E
+globe~
+Shimmering colors move inside the globe.
+~
+A
+25 -5
+A
+23 -5
+#2918
+staff gnarled magius~
+a gnarled magius staff~
+A gnarled staff lies here.~
+pound~
+5 64 8193
+0 4 4 7
+10 35000 5000
+E
+staff~
+It appears to be simply a gnarled old limb. It feels powerful though.
+~
+A
+18 3
+A
+19 3
+#2919
+girdle pouches many~
+a girdle of many pouches~
+A girdle lies here.~
+~
+15 0 2049
+500 0 0 0
+5 15000 1500
+E
+girdle~
+It appears to be full of tiny pockets.
+~
+#2920
+robe heavy woolen~
+a heavy woolen robe~
+A heavy pile of wool lies here.~
+~
+9 64 1025
+15 0 0 0
+10 15000 1000
+#2921
+broach ivory~
+a broach of life~
+A small ivory broach lies here.~
+~
+9 321 5
+2 0 0 0
+5 50000 10000
+A
+13 50
+#2922
+manual arts healing book~
+a manual of healing arts~
+A small book lies here.~
+~
+2 0 16385
+30 0 0 0
+5 15000 2500
+E
+nanual book~
+It appears to be a book of anatomy and medicine.
+~
+#2923
+mace huge mithril~
+a huge mithril mace~
+A huge mace made of mithril metal lies here.~
+~
+5 8257 8193
+0 4 4 7
+13 25000 5000
+A
+18 2
+A
+19 2
+#2924
+symbol holy golden~
+a golden holy symbol~
+A small holy symbol on a golden chain lies here.~
+~
+9 64 5
+2 0 0 0
+3 10000 1000
+#2925
+ring marble thick~
+a thick marble ring~
+A thick ring made of marble~
+~
+9 64 3
+4 0 0 0
+5 10000 1000
+#2926
+bracelet thick marble~
+a thick marble bracelet~
+A thick bracelet made of marble lies here.~
+~
+9 64 4097
+4 0 0 0
+8 30000 3000
+A
+5 1
+A
+17 -5
+#2927
+boots striding~
+boots of striding~
+A lithe pair of leather boots have been left here.~
+~
+9 64 65
+5 0 0 0
+5 45000 4500
+E
+boots~
+They look comfortable to walk in.
+~
+A
+14 30
+#2928
+cloak icy white~
+an icy white cloak~
+A cold pile of white cloth lies here.~
+~
+9 65 1025
+0 0 0 0
+5 25000 2500
+E
+cloak~
+Smoke rises from it almost like its made of dry ice.
+~
+A
+15 -8
+#2929
+staff ice~
+an ice staff~
+A staff made of ice rests here.~
+pound~
+5 64 8193
+0 6 3 7
+13 45000 7500
+E
+staff~
+The runes "FrIgID" are inscribed in the icy staff.
+~
+A
+18 2
+A
+12 20
+#2930
+ring carved wooden~
+a carved wooden ring~
+An intricately carved wooden ring lies amongst the debris.~
+~
+9 64 3
+0 0 0 0
+3 25000 2500
+A
+18 1
+A
+19 1
+#2931
+horn life~
+the horn of life~
+A severed minotaur horn lies here.~
+~
+3 64 16385
+30 0 0 0
+5 25000 2500
+E
+horn~
+The horn is capped at both ends with gold. Unreadable runes are scrawled on
+it.
+~
+#2932
+belt life~
+the belt of life~
+A strange belt lies here.~
+~
+9 64 2049
+3 0 0 0
+9 50000 5500
+A
+5 3
+#2933
+stone blood red~
+a blood red stone~
+A blood red stone lies here collecting dust.~
+~
+11 66 16384
+0 0 0 0
+2 45000 4500
+E
+stone~
+The stone pulses with your own heart beat.
+~
+A
+13 20
+#2934
+bow crossbow cross huge~
+a huge cross bow~
+A huge crossbow rests here.~
+pound~
+5 64 8193
+0 8 7 7
+15 35000 3500
+A
+18 3
+A
+19 3
+#2935
+pack leather small~
+a small leather pack~
+A small leather pack rests here.~
+~
+15 0 1025
+200 0 0 0
+9 1000 250
+E
+pack
+It looks pretty big on the inside.
+~
+#2936
+hood black leather~
+a black leather hood~
+A hood made of black leather rests here.~
+~
+9 64 17
+5 0 0 0
+5 25000 2500
+#2937 
+sleeves black leather~
+a pair of black leather sleeves~
+Some leather sleeves lie here.~
+~
+9 0 257
+7 0 0 0
+5 3500 1000
+#2938
+pants black leather~
+a pair of black leather pants~
+Some leather pants lie here.~
+~
+9 64 33
+7 0 0 0
+5 15000 1500
+E
+pants~
+They look sneaky.
+~
+#2939
+sword wicked short shortsword~
+a wicked shortsword~
+A wicked looking shortsword lies here.~
+pierce~
+5 64 8193
+0 5 5 11
+11 50000 5000
+E
+short sword shortsword~
+It looks just perfect for backstabbing.
+~
+A
+18 1
+A
+19 1
+#2940
+globe major~
+a major globe of invulnerability~
+A large globe rests here, pulsing uneasily.~
+~
+11 8257 1025
+0 0 0 0
+1 100000 25000
+E
+globe~
+Shimmering colors move inside the globe.
+~
+A
+17 -20
+A
+24 -5
+#2941
+chain chainmail black suit~
+a suit of black minotaur chainmail~
+A huge pile of black chainmail rests here.~
+~
+9 8192 9
+15 0 0 0
+12 100000 10000
+A
+1 1
+A
+5 1
+#2942
+buckler spiked~
+a spiked buckler~
+A small spiked buckler rests here.~
+~
+9 0 513
+10 0 0 0
+5 22500 5000
+A
+18 1
+A
+19 2
+#2943
+ring studded~
+a studded ring~
+A small studded ring lies here.~
+~
+11 64 3
+0 0 0 0
+1 5000 1000
+A
+17 -5
+A
+19 2
+#2944
+helm horned~
+a horned minotaur helm~
+A small horned helm rests here.~
+~
+9 0 17
+10 0 0 0
+8 20000 2000
+A
+18 1
+A
+19 1
+#2945
+axe great~
+Mahn-Tor's Great Axe~
+An extremely huge axe is resting here.~
+cleave~
+5 106562 8193
+177 10 10 7
+26 100000 2
+E
+axe~
+The runes "DeAtH" are scrawled along the blade.
+~
+A
+18 5
+A
+19 5
+#2946
+plate ethereal suit~
+a suit of ethereal plate~
+A suit of shimmering plate rests here.~
+~
+9 513 9
+10 0 0 0
+2 50000 10000
+E
+suit plate~
+You can almost see through it.
+~
+A
+24 -3
+A
+20 -3
+#2947
+helm ethereal~
+an ethereal helm~
+A shimmering helm rests here.~
+~
+9 513 17
+8 0 0 0
+5 15000 3500
+E
+helm~
+You can almost see through it.
+~
+#2948
+blade ethereal~
+an ethereal blade~
+A shimmering blade lies here.~
+pierce~
+5 513 8193
+0 4 4 3
+3 10000 1000
+E
+blade~
+You can almost see through it.
+~
+A
+18 1
+A
+19 1
+#2949
+branch willow~
+a willow branch~
+A small willow branch lies here.~
+~
+3 64 16385
+20 0 0 0
+3 10000 1000
+#2950
+key keep~
+the keep key~
+A small key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2951
+key red~
+a red key~
+A small red key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0 0
+#2952
+key black~
+a black key~
+A small black key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2953
+key white~
+a white key~
+A small white key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2954
+key brown~
+a brown key~
+A small brown key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2955
+key yellow~
+a yellow key~
+A small yellow key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2956
+key maroon~
+a maroon key~
+A small maroon key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2957
+key green~
+a green key~
+A small green key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2958
+key grey~
+a grey key~
+A small grey key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+#2959
+key royal runed~
+a runed key~
+A small runed key lies here.~
+~
+18 0 1
+2 0 0 0
+1 0 0
+E
+key runed~
+The key looks like it was made for royalty.
+~
+#2960
+boots fur lined~
+a pair of fur lined boots~
+Some boots lined with fur rest on the ground.~
+~
+9 64 65
+3 0 0 0
+5 10000 1500
+A
+14 10
+#2961
+pelt yeti white~
+the white pelt of a yeti~
+A white pelt lies here.~
+~
+9 0 1025
+0 0 0 0
+9 5000 750
+A
+17 -8
+#2962
+sword kopesh~
+a kopesh sword~
+A sword with a curved blade lies here.~
+slash~
+5 0 8193
+0 5 3 3
+13 10000 1000
+E
+sword kopesh~
+The sword looks like it would be grasped so that the blade extended along the
+forearm of the wielder.
+~
+#2963
+vambraces steel~
+a pair of steel vambraces~
+A gleaming pair of vambraces lies here.~
+~
+9 0 257
+6 0 0 0
+7 5000 450
+#2964
+greaves steel~
+a pair of steel greaves~
+A gleaming pair of greaves lie here.~
+~
+9 0 33
+6 0 0 0
+7 5000 450
+#2965
+axe battle battleaxe~
+a battle axe~
+A dangerous looking battle axe rests here.~
+cleave~
+5 0 8193
+0 4 4 3
+18 7500 1250
+#2966
+plate steel breast~
+a steel breast plate~
+A breast plate of thick steel rests here.~
+~
+9 0 9
+6 0 0 0
+10 8000 1000
+#2967
+helm steel~
+a steel helm~
+A steel helm has been left here.~
+~
+9 0 17
+6 0 0 0
+6 3000 450
+#2968
+halberd huge~
+a huge halberd~
+A huge halberd has been left here.~
+cut~
+5 64 8193
+0 9 2 3
+18 20000 5000
+A
+18 1
+A
+19 1
+#2969
+visor blue steel helm~
+a blue steel helm and visor~
+A helm and visor of blue steel rests here.~
+~
+9 0 17
+8 0 0 0
+8 10000 2500
+#2970
+greaves blue steel~
+a pair of blue steel greaves~
+Some greaves made of blue steel rest here.~
+~
+9 0 33
+8 0 0 0
+8 10000 2500
+#2971
+vambraces blue steel~
+a pair of blue steel vambraces~
+Some vambraces made of blue steel rest here.~
+~
+9 0 257
+8 0 0 0
+8 10000 2500
+#2972
+sword two two-handed~
+a two-handed sword~
+A large sword lies here.~
+slash~
+5 64 8193
+0 6 3 3
+18 20000 2000
+A
+18 2
+A
+19 2
+#2973
+visor helm steel red~
+a red steel helm and visor~
+A helm and visor made of red steel rests here.~
+~
+9 0 17
+9 0 0 0
+8 20000 5000
+#2974
+greaves red steel~
+a pair of red steel greaves~
+Some greaves made of red steel rest here.~
+~
+9 0 33
+9 0 0 0
+8 20000 5000
+#2975
+vambraces red steel~
+a pair of red steel vambraces~
+Some vambraces made of red steel rest here.~
+~
+9 0 257
+9 0 0 0
+8 20000 5000
+#2976
+glaive~
+a minotaur glaive~
+A very large glaive rests here.~
+cleave~
+5 64 8193
+0 5 4 3
+19 45000 5000
+A
+18 1
+A 
+19 1
+#2977
+visor helm crimson steel~
+a crimson steel helm and visor~
+A helm and visor made of crimson steel rests here.~
+~
+9 0 17
+10 0 0 0
+8 40000 7500
+#2978
+greaves crimson steel~
+a pair of crimson steel greaves~
+Some greaves made of crimson steel rest here.~
+~
+9 0 33
+10 0 0 0
+8 40000 7500
+#2979
+vambraces crimson steel~
+a pair of crimson steel vambraces~
+Some vambraces made of crimson steel rest here.~
+~
+9 0 257
+10 0 0 0
+8 40000 7500
+#2980
+star morning morningstar morning-star~
+a huge morningstar~
+A huge morningstar rests here.~
+crush~
+5 64 8193
+0 7 3 6
+20 65000 8500
+E
+morningstar~
+It looks damaging.
+~
+A
+18 2
+A
+19 2
+#2981
+seste huge spiked brass knuckles~
+some huge spiked brass knuckles~
+A set of spiked brass knuckles lies here.~
+claw~
+5 0 8193
+0 4 3 1
+9 15000 1500
+E
+knuckles brass~
+A band held in the hand that has spikes on the front side.
+~
+#2982
+ring key multi colored multi-colored~
+a multi-colored key ring~
+A ring of multi-colored keys rests here.~
+~
+15 0 5
+10 0 0 0
+3 500 250
+E
+ring key~
+It has several keys of different colors on it.
+~
+#2983
+maul huge wooden~
+a huge wooden maul~
+A huge wooden maul rests here.~
+crush~
+5 0 8193
+0 5 5 6 
+22 100000 20000
+#2984
+potion misty~
+a misty potion~
+A small misty potion rests here.~
+~
+10 8257 1
+20 0 0 0
+3 5000 650
+#2985
+pouch belt~
+a belt pouch~
+A belt pouch lies here.~
+~
+15 0 2049
+75 0 0 0
+5 3500 850
+#2986
+spear ogre~
+an ogre spear~
+A crude spear rests here.~
+pierce~
+5 0 8193
+0 2 5 11
+8 1000 500
+#2987
+club ogre war~
+an ogre war club~
+A large, crude club rests here.~
+pound~
+5 0 8193
+0 2 6 6
+10 2500 750
+#2988
+cloak bear skin bearskin~
+a bearskin cloak~
+A rough bearskin rests here.~
+~
+9 0 1025
+0 0 0 0
+12 3500 900
+A
+17 -8
+#2989
+ear ring earring feathered~
+a pair of feathered earrings~
+Some feathered earrings rest here.~
+~
+9 65 17
+1 0 0 0
+2 15000 5000
+#2990
+gauntlets ogre power~
+gauntlets of ogre power~
+Some heavy gauntlets lie here.~
+~
+9 8257 129
+7 0 0 0
+13 75000 25000
+E
+gauntlets~
+They look very "handy".
+~
+A
+1 4
+A
+19 3
+#2991
+club massive~
+a massive club~
+A massive club lies here, discarded.~
+crush~
+5 0 8193
+0 5 3 6
+19 15000 3500
+#2992
+cape thick fur~
+a thick fur cape~
+A thick pile of fur lies here.~
+~
+9 0 5
+6 0 0 0
+5 2500 550
+#2993
+tunic fur lined~
+a fur lined tunic~
+A fur lined tunic rests here.~
+~
+9 0 9
+6 0 0 0
+6 1500 450
+#3000
+beer barrel~
+a barrel~
+A beer barrel has been left here.~
+~
+17 0 1
+50 50 1 0
+65 300 -1
+#3001
+beer bottle~
+a bottle~
+A beer bottle has been left here.~
+~
+17 0 1
+8 8 1 0
+10 20 -1
+#3002
+ale bottle dark~
+a bottle~
+A dark bottle of ale has been left here.~
+~
+17 0 1
+8 8 3 0
+10 10 -1
+#3003
+firebreather bottle~
+a firebreather~
+A firebreather has been left here.~
+~
+17 0 1
+8 8 7 3
+10 50 17
+#3004
+local bottle~
+a bottle~
+A dark bottle has been left here.~
+~
+17 0 1
+8 8 8 0
+10 20 -1
+#3005
+water fancy bottle~
+a fancy bottle~
+A bottle of fine French sparkling spring water has been dropped here.~
+~
+17 0 1
+50 50 0 0
+65 100 1
+#3006
+cheeseburger~
+A cheeseburger~
+A cheeseburger has been left here.~
+~
+19 0 1
+36 0 0 0
+4 1000 0
+#3007
+coke cup~
+A large cup~
+A large cup has been left here.~
+~
+17 0 1
+36 36 15 0
+37 500 0
+#3010
+bread~
+a bread~
+A loaf of bread has been left here.~
+~
+19 0 1
+12 0 0 0
+1 10 1
+#3011
+danish pastry~
+a danish pastry~
+A delicious danish pastry has been placed here.~
+~
+19 0 1
+5 0 0 0
+1 5 -1
+#3020
+dagger~
+a dagger~
+A dagger with a long thin blade is here.~
+pierce~
+5 0 8193
+0 1 4 11
+1 10 0
+#3021
+sword small~
+a small sword~
+A small sword lies here.~
+slash~
+5 0 8193
+0 1 6 11
+3 60 0
+E
+sword small~
+The small sword seems to have an inscription of some sort.
+~
+E
+inscription~
+It says : May this sword be a good companion.
+~
+#3022
+sword long~
+a long sword~
+A long sword has been left here.~
+slash~
+5 0 8193
+0 1 8 3
+8 600 0
+#3023
+club wooden~
+a wooden club~
+A simple looking wooden club is here.~
+pound~
+5 0 8193
+0 1 3 7
+3 12 0
+#3024
+warhammer hammer~
+a warhammer~
+A medium sized warhammer is here.~
+pound~
+5 0 8193
+0 1 5 7
+6 50 0
+#3025
+sword particle~
+a particle of bombard sword~
+A particle of bombard sword has been left here.~
+slash~
+18 1 8193
+6 1 5 3
+8 100000 0
+E
+sword particle~
+This is one of seven particle of bombard sword. It looks useless. 
+If you rent, maybe this will be left to the void.
+~
+#3026
+sword samurai~
+Samurai sword~
+A Samurai sword has been left here.~
+slash~
+5 65 8193
+175 9 9 3
+8 100000 3
+A
+18 3
+A 
+19 3
+#3027
+sword bombard~
+a Bombard sword~
+A Bombard sword has been left here.~
+slash~
+5 4161 8193
+174 8 8 3
+8 100000 2
+A
+25 10
+A
+19 5
+#3030
+torch~
+a torch~
+A large torch.~
+~
+1 0 16385
+0 0 24 0
+1 10 3
+#3031
+lantern~
+a lantern~
+A brass lantern.~
+~
+1 0 16385
+0 0 96 0
+1 50 17
+#3032
+bag~
+a bag~
+A small bag.~
+~
+15 0 16385
+50 0 0 0
+2 20 1
+#3033
+box~
+a box~
+A small box.~
+~
+15 0 16385
+10 0 0 0
+5 50 -1
+#3034
+pen~
+a pen~
+an ordinary pen~
+~
+12 0 16385
+0 0 0 0
+2 5 1
+#3035
+paper white~
+a white paper~
+an ordinary white paper~
+~
+16 0 16385
+0 0 0 0
+2 5 1
+#3040
+breast plate~
+a breast plate~
+A breast plate is lying on the ground.~
+~
+9 0 9
+7 0 0 0
+100 18000 600
+#3041
+chain mail shirt~
+a chain mail shirt~
+A chain mail shirt is lying on the ground.~
+~
+9 0 9
+5 0 0 0
+60 2500 250
+#3042
+shield~
+a shield~
+A small wooden shield is lying on the ground.~
+~
+9 0 513
+2 0 0 0
+3 100 33
+#3043
+jacket soft leather~
+a leather jacket~
+A soft leather jacket is lying on the ground.~
+~
+9 0 9
+2 0 0 0
+10 200 60
+#3044
+jacket studded~
+a studded leather jacket~
+A studded leather jacket is lying on the ground.~
+~
+9 0 9
+3 0 0 0
+20 500 50
+#3045
+jacket scale mail~
+a scale mail jacket~
+A scale mail jacket is lying on the ground.~
+~
+9 0 9
+4 0 0 0
+40 1000 100
+#3046
+bronze breast plate~
+a bronze breast plate~
+A bronze breast plate is lying on the ground.~
+~
+9 0 9
+6 0 0 0
+80 7000 250
+#3050
+scroll identify~
+a scroll of identify~
+A scroll has carelessly been left here.~
+~
+2 64 16385
+12 53 -1 -1
+1 1000 50
+E
+scroll identify~
+The scroll has a magic formula drawn upon it:
+     ???
+    ?   ?
+       ?
+      ?
+      ?
+      *
+~
+#3051
+potion yellow~
+a yellow potion of see invisible~
+A small yellow potion has carelessly been left here.~
+~
+10 64 16385
+12 19 -1 -1
+1 400 1
+E
+potion yellow~
+The potion has a small label 'Detect The Invisible'.
+~
+#3052
+scroll recall~
+a scroll of recall~
+A scroll has carelessly been left here.~
+~
+2 64 16385
+12 42 -1 -1
+4 020000 1
+E
+scroll~
+The scroll has written a formulae of 'Word of Recall' upon it.
+~
+#3053
+wand~
+a wand of invisibility~
+A wand has carelessly been left here.~
+~
+3 64 16385
+12 2 2 29
+2 4000 -1
+E
+wand~
+The wand is an old dark stick. You notice a small symbol etched at the
+base of the wand. It looks like this:
+
+     \ /
+    - O -
+     / \
+~
+#3054
+staff~
+a staff of sleep~
+A staff has carelessly been left here.~
+~
+4 64 16385
+12 1 1 38
+9 3000 0
+E
+staff~
+The staff is made of old oak, and is around five feet long. It fits
+perfectly into your hand. You notice a small symbol etched at the
+base of the staff, it looks like:
+
+  ZZZZZ
+     Z
+    Z
+   Z
+  ZZZZZ  z   z
+~
+#3060
+raft~
+a raft~
+A raft has been left here.~
+~
+12 0 1
+7 7 0 0
+75 400 200
+E
+raft~
+The raft looks very primitive.
+~
+#3061
+canoe~
+a canoe~
+A canoe has been left here.~
+~
+12 0 1
+7 7 0 0
+32 1000 100
+E
+canoe~
+The canoe is fairly light.
+~
+#3070
+gauntlets bronze~
+a pair of bronze gauntlets~
+A pair of bronze gauntlets is lying on the ground.~
+~
+9 0 129
+6 0 0 0
+8 1750 150
+#3071
+gloves leather~
+a pair of leather gloves~
+A pair of leather gloves is lying on the ground.~
+~
+9 0 129
+3 0 0 0
+3 75 25
+#3075
+helmet bronze~
+a bronze helmet~
+A bronze helmet is lying on the ground.~
+~
+9 0 17
+6 0 0 0
+8 3500 200
+#3076
+cap leather~
+a leather cap~
+A leather cap is lying on the ground.~
+~
+9 0 17
+3 0 0 0
+3 150 50
+#3080
+leggings bronze~
+a pair of bronze leggings~
+A pair of bronze leggings is lying on the ground.~
+~
+9 0 33
+6 0 0 0
+8 3500 200
+#3081
+pants leather~
+a pair of leather pants~
+A pair of leather pants is lying on the ground.~
+~
+9 0 33
+3 0 0 0
+8 150 50
+#3085
+sleeves bronze~
+a pair of bronze sleeves~
+A pair of bronze sleeves is lying on the ground.~
+~
+9 0 257
+6 0 0 0
+8 1750 150
+#3086
+sleeves leather~
+a pair of leather sleeves~
+A pair of leather sleeves is lying on the ground.~
+~
+9 0 257
+2 0 0 0
+4 75 25
+#3090
+robe archmage~
+Robe of the Archmage~
+A flowing red and gold robe lies here.~
+~
+9 114752 9
+13 0 0 0
+5 100000 0
+A
+12 40
+A
+2 -2
+#3091
+gildenwood staff magi~
+Staff of the Magi~
+A gildenwood staff topped by a murky orb lies here.~
+~
+4 118976 16385
+30 7 7 6
+8 100000 0
+A
+12 -100
+A
+25 -5
+#3098
+board mbox mail~
+a mail box~
+A large mail box is mounted on a wall here.~
+~
+12 0 0
+0 0 0 0
+500 0 0
+#3099
+board bulletin~
+a bulletin board~
+A large bulletin board is mounted on a wall here.~
+~
+12 0 0
+0 0 0 0
+500 0 0
+E
+board~
+USAGE: READ/REMOVE #, LOOK AT, EMOTE
+
+~
+#3100
+tea cup~
+a cup~
+A cup has been set here.~
+~
+17 0 1
+8 8 11 0
+1 5 1
+#3101
+coffee cup~
+a cup~
+A cup has been set here.~
+~
+17 0 1
+8 8 12 0
+1 7 -1
+#3102
+water bottle~
+a bottle~
+A water bottle has been set here.~
+~
+17 0 1
+64 64 0 0
+5 10 -1
+#3120
+key iron~
+a key~
+An iron key has been left here.~
+~
+18 0 1
+0 0 0 0
+1 0 10
+E
+key iron~
+The iron key is not special.
+~
+#3121
+key rusty~
+a key~
+A rusty key has been left here.~
+~
+18 0 1
+0 0 0 0
+1 0 -1
+E
+key rusty~
+The key is a fairly large rusty key. You notice a lot of dirt it.
+~
+#3122
+key wooden~
+a key~
+A wooden key has been left here.~
+~
+18 0 1
+0 0 0 0
+1 0 10
+E
+key wooden~
+The wooden key is not special.
+~
+#3123
+key brass~
+a key~
+A brass key has been left here.~
+~
+18 0 1
+0 0 0 0
+1 0 -1
+E
+key brass~
+The brass key is small and looks like it fits a very complicated lock.
+~
+#3130
+desk drawer~
+the desk~
+A desk is set against the western wall.~
+The desk looks very sparse, there is a drawer in the left side.
+~
+15 0 0
+34 15 3122 0
+100 0 100000
+E
+drawer~
+You notice a keyhole in the drawer.
+~
+#3131
+safe~
+the safe~
+A safe is placed in a dark corner of the room.~
+The safe has a keyhole.
+~
+15 0 0
+34 15 3123 0
+100 0 100000
+E
+safe~
+The safe is very heavy.
+~
+#3132
+gold coins~
+the gold~
+A lot of gold is here.~
+Looks like at least 10,000 coins.
+~
+20 0 1
+52385 0 0 0
+0 52385 0
+#3133
+city key~
+the City Key~
+The very big City Key is lying here.~
+It is probably the biggest key you have seen in your life.  It is made from
+polished gold and has various patterns on it along with the Midgaard Coat of
+Arms.
+~
+18 0 1
+0 0 0 0
+10 10000 -1
+#3134
+bench~
+the Bench~
+A white-painted wooden bench is standing here.~
+~
+12 0 0
+0 0 0 0
+100 600 200
+E
+bench~
+It is a quite heavy but very comfortable bench.  It is placed with its front
+towards the river so you can sit and watch the river and the houses on the
+other side.
+~
+#3135
+fountain~
+a fountain~
+A small white fountain is standing at the end of the road.~
+~
+17 0 0
+50 50 0 0
+500 3000 1000
+E
+fountain~
+It is very nice.  Made from fine white marble.
+~
+#3136
+coins gold~
+a small pile of gold coins~
+A small pile of gold coins lies here.~
+~
+20 0 1
+20 0 0 0
+0 0 0
+#3137
+scroll recharge~
+a scroll of recharge~
+A scroll has carelessly been left here.~
+~
+2 64 16385
+12 20 -1 -1
+4 100000 1
+E
+scroll~
+The scroll has written a formulae of 'Recharge spell' upon it.
+~
+#3138
+potion opaque~
+a opaque potion of love~
+A small opaque potion has carelessly been left here.~
+~
+10 64 16385
+12 104 -1 -1
+1 80000 1
+E
+potion opaque~
+The potion has a small label 'Love potion'.
+~
+#3300
+key metal~
+a metal key~
+A small metal key has been dropped here.~
+~
+18 0 1
+0 0 0 0
+1 10 100
+E
+key metal~
+You notice 'My Cottage' has been inscribed on the key.
+~
+#3301
+key brass~
+a brass key~
+An old brass key has been dropped here.~
+~
+18 0 1
+0 0 0 0
+1 10 100
+E
+key brass~
+It looks as if it is very old.  There are some small marks on it as if
+somebody with tiny (but strong!) teeth has been biting a lot in it.
+~
+#3400
+candlestick~
+a candlestick~
+A pewter candlestick is standing here.~
+~
+1 0 16385
+0 0 24 0
+5 150 50
+E
+candlestick~
+It is a rather old-looking three-armed candlestick made from pewter.  Its
+candles are a yellowish white colour.
+~
+#3401
+oops~
+oops~
+oops~
+~
+12 0 16385
+0 0 0 0 
+5 150 50
+E
+oops~
+oops
+~
+#3402
+tickler~
+a nightgaunt's tickler~
+A nightgaunt's tickler has been left here~
+tickle~
+5 128 1
+0 2 5 3
+50 5 10000
+E
+tickler~
+A horrid black mass of gooey tentacles obviously ripped from the corpse
+of a nightgaunt...disgusting.
+~
+A
+18 2
+A
+19 2
+#3403
+plasma webbing~
+disgusting pinkish plasma webbing~
+A pile of pink material is lying here~
+~
+12 2624 9
+0 0 0 0
+10 5000 5000
+E
+plasma webbing~
+Yuck mossy and wet it looks like some sorta webbing
+~
+A
+17 -2
+#3410
+rod key~
+a queerly shaped rod~
+a queerly shaped rod is lying here~
+~
+18 0 1
+0 0 0 0
+5 0 20000
+E
+rod key~
+  This rod look sorta octagonal, and sorta like a key and crowbar. You
+recognize that it will probably fit the lock at the entrance of the tombs.
+~
+#3411
+large black dirty key~
+a large black dirty key~
+a large black dirty key is lying here~
+~
+18 0 16385
+0 0 0 0 
+3 0 20000
+E
+large black dirty key~
+  One of those traditional old lock type key...except huge, black and
+filty...hmm...like it has been buried for some time...
+~
+#3412
+head jubal mummy~
+the mummified head of Jubal the Benevolent~
+the mummified head of Jubal the Benevolent is lolling here back and forth~
+~
+15 1024 1
+3 5 -1 0
+20 0 50000
+E
+head jubal mummy~
+  ACK! Its half eaten away...yet it is whole...infact I think it can be opened
+and closed...is there something in its teeth!?!?!? ACK you do it!
+~
+#3413
+black marble ring marblering~
+a black marble ring~
+a black marble ring is lying here on the ground...~
+~
+11 1088 3
+0 0 0 0
+2 4000 750
+E
+black marble ring~
+  It is pitch black and has beautiful swirls characteristic of marble all
+through it.
+~
+A
+14 10
+A
+24 1
+#3414
+thin rapier~
+a whisper thin rapier~
+a rapier is lying here~
+pierce~
+5 2 8193
+0 4 2 11
+4 1000 0
+E
+thin rapier~
+  It seems so thin that it would be useless but at the same time it
+looks deadly.
+~
+A
+10 10
+#3415
+sarcophagus coffin~
+a stone sarcophagus~
+a stone sarcophagus is sitting here~
+~
+15 0 0
+400 15 3416 0
+2000 0 0
+E
+sarcophagus coffin~
+  I well crafted, if dusty and ancient, home for the afterworld it seems
+to be able to be opened but needs a key.
+~
+#3416
+iron heavy key~
+a heavy iron key~
+a heavy iron key is lying here~
+~
+18 0 16385
+0 0 0 0 
+4 0 30000
+E
+iron heavy key~
+  It looks to be a very heavy old iron key.
+~
+#3417
+flask wineflask~
+a wineflask~
+a wineflask has been curiously been left lying around~
+~
+17 0 16385
+4 4 2 0
+5 80 25
+E
+wineflask flask~
+  A nice leather wineflask that has somehow survived the ages in a coffin.
+The wine should be nicely aged.
+~
+#3418
+coins~
+a mound of coins fit for a dead king~
+you see a mound of coins fit for a dead king here~
+~
+20 0 1
+10000 0 0 0
+50 0 0
+#3419
+key~
+key to the coffin~
+The key to the coffin is lying here~
+~
+18 0 16385
+0 0 0 0
+3 0 50000
+E
+key~
+   Neat you have the key to the coffin...is is a soft orange color
+and burns in your hand a bit.
+~
+#3420
+rat'hcor rathcor~
+a hidden conpartment in the room~
+~
+~
+15 4 0
+10 5 -1 0
+1000 0 0
+E
+rat'hcor rathcor~
+  AH HA! a hidden compartment!!!!
+~
+#3421
+rusty sword curved scimitar~
+a rusty curved scimitar~
+a sword has been left lying here~
+slash~
+5 0 8193
+0 2 3 3
+6 500 0
+E
+rusty sword scimitar~
+  Very rusty and old...it has a wide blade and chunks missing from
+its cutting edge.
+~
+#3422
+piece slime~
+a piece of slime~
+You step on a piece of slime...your foot squishes a bit~
+~
+19 0 1
+15 0 0 0
+1 15 5
+E
+slime piece~
+  ICK! This is a piece of slug-like brownish green slime...
+Blech!
+~
+#3423
+smock~
+An artists smock~
+An artists smock is lying here on the floor~
+~
+11 0 9
+0 0 0 0
+7 100 50
+E
+smock~
+  It has paint and little shavings of different materials all over it.
+It is very old an smells of paint, mildew, and rot.
+~
+A
+9 -3
+#3424
+scroll tightly rolled~
+a tightly rolled scroll~
+a yellowing tightly rolled scroll is here~
+~
+2 64 16385
+15 10 12 32
+5 5000 1429
+E
+scroll tightly rolled~
+  It is tightly wound. The writing on the inside when opened up is very
+unreadable but the scroll has a seal on it with a grey :
+
+    88
+    88 
+8888  8888
+    88
+    88
+
+~
+#3425
+auburn orb~
+An auburn-colored orb~
+An orb is here~
+~
+4 66 16385
+10 2 2 7
+10 15000 4638
+E
+auburn orb~
+  You gaze into the orb and are almost lost in the swirling mists of color
+inside of this rare and beautiful object.
+~
+#3426
+bar gold~
+A bar of gold~
+A bar of gold is lying here~
+~
+8 0 1
+0 0 0 0
+30 5000 1250
+E
+bar gold~
+  A nice little brick of gold...very dusty and old... it has some emblem
+on it...The emblem is a large 'J'
+~
+#3427
+cape dark black~
+a dark black cape~
+A dark black cape is lying here~
+~
+11 64 1025
+0 0 0 0
+10 8000 500
+E
+dark black cape~
+  The cape is gently flows and pulls in the light so evenly and perfectly
+that the cape seems to be simply a void of blackness. It is quite beautiful
+~
+A
+13 10
+A
+17 10
+#3428
+flaming sword long longsword~
+a pitch-black longsword that flames brightly...~
+A black lies here.~
+~
+5 4160 8193
+172 3 7 3
+12 7000 6
+E
+flaming sword long longsword~
+  This sword is amazing! It almost wields itself! As you test it out, the 
+flames seems to roar brighter as you go thru basic swordsman routines.
+it is obviously a great find!
+~
+A
+18 3
+A
+19 3
+#3430
+suit golden armor~
+a beautiful suit of armor, made of white gold~
+A brilliantly crafted, carefully polished, suit of golden armor is here.~
+~
+9 4161 9
+9 0 0 0
+1 100000 0
+A
+2 2
+A
+17 -5
+#4000
+ring yellow green yellowgreenring~
+a yellow and green ring~
+A ring, with yellow and green ornamentation. It looks very old.~
+~
+9 0 16387
+0 0 0 0
+1 50 20
+E
+ring~
+It feels heavy.
+~
+A
+1 -2
+#4001
+corpse~
+a corpse~
+A halfways decayed corpse of a goblin.~
+~
+15 0 1
+1 0 -1 0
+10 0 500
+#4002
+coins~
+some coins~
+A small pile of coins.~
+~
+20 0 1
+500 0 0 0
+0 0 0
+#4050
+potion purple~
+a purple potion~
+A purple potion is here.~
+~
+10 0 16385
+17 14 36 33
+1 500 200
+E
+potion purple~
+It looks rather strange!
+~
+#4051
+helmet metal~
+a metal helmet~
+A metal helmet in here.~
+~
+9 0 16401
+0 0 0 0
+4 3000 200
+E
+helmet metal~
+It looks somehow magical!.
+~
+A
+24 -2
+A
+23 -2
+#4052
+mushroom~
+a mushroom~
+A small mushroom is here.~
+~
+19 0 16385
+2 0 0 1
+1 9 3
+E
+mushroom~
+Let's put it this way - I wouldn't eat it !
+~
+#4100
+blade black demon~
+a black demon blade.~
+A black demon blade is here, you sense the forces of evil
+controling the weapon.~
+~
+5 2560 8193 
+0 3 4 11
+8 10000 0
+E
+blade~
+You'll become as evil as the weapon, if you use it!
+~
+#4101
+gloves~
+a swordmans gloves~
+Some gloves is here. They look like the right kind of
+equipment to use when fighting.~
+~
+9 512 129
+0 0 0 0
+1 1500 100
+E
+gloves~
+Looks very usefull in combat.
+~
+A
+18 2
+A
+19 1
+#4102
+scroll ysafg~
+a scroll which reads "ysafg"~
+A scroll which reads "ysafg", it looks very fragile and quite old.~
+~
+2 0 1
+1 53 0 0
+1 1500 500
+E
+scroll~
+It looks informative.
+~
+#4103
+slime mold~
+a green slime mold~
+A green slime mold is here. Stinks like sh**.~
+~
+19 0 1
+24 0 0 0
+1 20 8
+E
+smile mold~
+It wasn't mend to be food, - Certainly not for humans.
+~
+#4104
+slime mold~
+a green slime mold~
+A green slime mold is here. Stinks like sh**.~
+~
+19 0 1
+24 0 0 1
+1 20 8
+E
+smile mold~
+It wasn't mend to be food, - Certainly not for humans.
+~
+#4200
+guantlet war wamphyri~
+A Wamphyri War Gauntlet~
+A guantlet full of blades and hooks lies here.~
+slash~
+5 2754 8193
+0 3 12 3
+28 300000 200
+E
+guantlet~
+It is an evil looking weapon.  It resembles a blender.
+~
+A
+2 -5
+A
+18 2
+#4201
+white leather dress~
+A white leather dress~
+A pile of fine white leather lies here~
+~
+9 576 9
+10 0 0 0
+4 150000 300
+A
+12 40
+A
+1 -1
+#4202
+silver scythe~
+A sharp silver scythe~
+A curved silver blade lies here.~
+slash~
+5 3137 8193
+0 3 12 3 
+28 300000 500
+A
+17 7
+#4203
+coat long black~
+A long black coat~
+A pile of dark black cloth lies here~
+~
+9 5120 1025
+10 0 0 0 
+5 200000 0
+#4204
+hat black widebrimmed~
+A wide brimmed black hat~
+A comfortable black hat has been left here~
+~
+9 4096 17
+9 0 0 0 
+2 100000 0
+A
+5 2
+#4205
+crucifix silver~
+A silver crucifix~
+A silver crucifix has been carelessly left here~
+~
+8 3265 16389
+0 0 0 0
+5 50250 100
+A
+18 2
+A
+4 1
+#4206
+talisman blood~
+A talisman of innocent blood~
+A blood red talisman has been dropped here~
+~
+9 578 5
+5 0 0 0
+3 200000 500
+A
+12 20
+A
+18 -1
+#4207
+vacuous grimoire~
+The Vacuous Grimoire~
+A book has been dropped~
+~
+8 192 16385
+0 0 0 0
+5 10000 100
+A
+3 -1
+A
+4 -2
+#4208
+scroll blood~
+A scroll written in blood~
+A blood soaked scroll has been dropped in the dirt~
+~
+2 64 16385
+15 1 34 36
+1 4000 600
+#4209
+ring weakness weaknessring~
+A ring of weakness~
+A dull ring lies here~
+~
+9 224 3
+0 0 0 0
+2 60000 200
+A
+1 -5
+A
+12 -70
+#4210
+cloak blood bloodsoaked~
+A bloodsoaked cloak~
+A pile of black bloodsoaked cloth lies in the dirt~
+~
+9 4738 5
+0 0 0 0
+5 20000 0
+A
+17 -10
+#4211
+jumpsuit white~
+A white jumpsuit~
+A white jumpsuit with many pockets lies on the ground~
+~
+15 1089 9
+300 0 -1 0
+5 100000 500
+A
+17 -7
+A
+5 1
+#4212
+warrior tusk~
+A tusk of a Warrior Beast~
+A large animal tusk lies in the dirt~
+pierce~
+5 0 8193
+0 3 6 11
+6 8000 50
+A
+18 1
+A
+19 1
+#4213
+black cape~
+A black cape~
+A cape of black clothe lies heaped on the floor.~
+~
+9 4224 1025
+9 0 0 0
+6 120000 0
+A
+1 1
+#4214
+patch leather~
+A wide leather patch~
+A odd piece of leather lies here.~
+~
+9 4226 17
+7 0 0 0
+2 5000 0
+A
+13 20
+A
+12 -10
+#4215
+sash fine silk~
+A fine silk sash~
+A small pile of silk lies on the ground.~
+~
+9 4737 2049
+7 0 0 0
+3 50000 0
+A
+14 40
+A
+1 -1
+#4216
+sleeves spiked~
+Some spiked sleeves~
+A set of spiked sleeves lies on the ground.~
+~
+9 4099 257
+4 0 0 0
+10 80500 0
+A
+18 -2
+A
+19 3
+#4217
+scale warrior~
+A Wamphyri Warrior's Scale~
+A huge animal scale lies here~
+~
+9 642 513
+8 0 0 0
+10 80000 0
+A
+23 -5
+#4218
+leggings smooth~
+A set of smooth leggings~
+A set of smooth leggings lie here unattended.~
+~
+9 4128 33
+9 0 0 0
+10 54000 0
+A
+18 -2
+A
+1 -1
+#4219
+necklace ornate~
+An ornate necklace~
+A small ornate necklace lies at your feet.~
+~
+9 195 5
+3 0 0 0
+6 42000 0
+A
+5 3
+A
+14 -100
+#4220
+ring delusion delusionring~
+A ring of delusion~
+A small metal ring lies here.~
+~
+9 67 16387
+1 0 0 0
+5 13000 0
+A
+12 1
+A
+13 1
+#4221
+urn black~
+A cracked black urn~
+A large, cracked urn has been left here.~
+~
+15 0 1
+500 1 -1 0
+15 5000 100
+#4222
+potion blood red~
+A blood red potion~
+A blood red sits upright waiting to be taken.~
+~
+10 512 1
+20 15 16 28
+2 6000 400
+#4223
+gloves thin white~
+A pair of thin white gloves~
+A pair of white gloves lie here.~
+~
+9 6784 129
+5 0 0 0
+2 7500 0
+A
+18 2
+A
+19 2
+#4224
+pickaxe bloody~
+A bloody pickaxe~
+A bloody pickaxe has been left here.~
+pierce~
+5 640 8193
+0 10 2 11
+28 66000 0
+A
+18 -4
+A
+17 10
+#4225
+spike wooden~
+A large wooden spike~
+A large wooden spike lies here.~
+~
+8 3299 16385
+0 0 0 0
+10 3050 50
+A
+17 -3
+A
+2 1
+#4226
+murky grey vial~
+A murky grey vial~
+A murky grey vial sits upright on the ground.~
+~
+10 130 1
+20 2 27 38
+1 5000 200
+#4227
+mountain coins~
+A TON of coins~
+A MOUNTAIN of coins is piled here.~
+~
+20 1 1
+1500000 0 0 0
+20 0 0
+#4228
+jeweled key~
+A jewel key~
+A jewel encrusted key lies here.~
+~
+18 33 1
+2 0 0 0
+1 5000 5000
+#5000
+pick~
+A small mining pick~
+A small mining pick made of what appears to be silver lies on the ground.~
+pierce~
+5 513 8193
+0 1 9 11
+3 600 0
+#5001 
+banded mail~
+A glowing suit of banded mail~
+A glowing suit of banded mail lies on the ground.~
+~
+9 65 9
+9 0 0 0
+0 75000 20000
+A
+2 2
+A
+19 2
+#5002
+halberd~
+the halberd~
+A mighty halberd lies against the wall.~
+slash~
+5 4416 8193
+0 3 7 3
+16 12000 0
+A
+18 2
+A
+19 2
+#5003
+amulet old~
+the old amulet~
+A old mushroom shaped amulet lies on the ground.~
+~
+9 2624 5
+0 0 0 0
+2 1500 500
+A
+5 1
+#5005
+bone~
+A large leg bone~
+A large leg bone rests on the ground.~
+crush~
+5 0 8193
+0 1 4 7
+5 300 0
+#5006
+cactus~
+a small cactus cup~
+A small cactus cup lies on the ground.~
+~
+17 0 1
+5 5 0 0
+6 30 5
+#5007
+basket~
+a small wicker basket~
+A small wicker basket sits on the ground.~
+~
+15 0 1
+100 5 -1 0
+50 5000 500
+#5008 
+basket~
+a small wicker basket~
+A small wicker basket sits on the ground.~
+~
+15 0 1
+100 5 -1 0
+50 5000 500
+#5009
+basket~
+a small wicker basket~
+A small wicker basket sits on the ground.~
+~
+15 0 1
+100 5 -1 0
+50 5000 500
+#5010
+basket~
+a small wicker basket~
+A small wicker basket sits on the ground.~
+~
+15 0 0
+100 5 -1 0
+50 5000 500
+#5011
+rope~
+a coil of rope~
+A long coil of rope lies on the ground.~
+~
+12 0 1
+0 0 0 0
+12 450 45
+#5012
+stakes~
+a bunch of stakes~
+A small bundle of stakes lies here.~
+~
+12 0 1
+0 0 0 0
+6 250 30
+#5013
+map~
+an old, tattered map~
+An old, tattered, and much faded map lies here.~
+~
+12 0 1
+0 0 0 0
+1 300 20
+#5014
+turban~
+a thick padded turban~
+A thick padded turban lies here.~
+~
+9 192 17
+0 0 0 0
+15 4300 1200
+A 
+17 1
+#5015
+coins~
+a great pile of treasure~
+A great, gleaming pile of treasure lies at your feet.~
+~
+20 0 1 
+46270 0 0 0
+0 0 0
+#5016
+sabre~
+a long, curved sabre~
+A long, curved sabre stands upright in the ground.~
+slash~
+5 2048 8193
+0 2 8 3
+7 1050 0
+A
+18 2
+#5017
+scimitar~
+a curved scimitar~
+A curved scimitar lies at your feet.~
+slash~
+5 2048 8193
+0 1 7 3
+6 600 0
+A
+18 1
+#5018
+cutlass~
+a long, pointed cutlass~
+A long, pointed cutlass lies here.~
+slash~
+5 2048 8193
+0 1 7 3
+5 550 0
+#5019
+potion pink~
+a pink potion~
+A pink potion stands here.~
+~
+10 0 1
+25 33 17 -1
+6 600 110
+#5020
+wand platinum~
+a platinum wand~
+A platinum wand lies here.~
+~
+3 2 16385
+30 10 10 32
+8 1900 900
+#5021
+bow energy~
+a strange bow~
+A strange golden bow lies here.~
+blast~
+5 4419 8193
+0 4 6 7
+20 150000 0
+#5022
+scroll encrypted~
+An encrypted scroll~
+An encrypted scroll lies at your feet.~
+~
+2 0 1
+22 14 35 43
+7 1500 540
+#5023
+chest~
+an iron bound chest~
+An iron bound chest with a shiny lock sits here.~
+~
+15 0 0
+200 15 5024 0
+200 1000 100
+#5024
+key golden~
+a golden key~
+A shiny golden key lies here.~
+~
+18 0 1 
+10 0 0 0
+1 150 15
+#5025
+bracelet copper~
+a copper bracelet~
+A tarnished copper bracelet lies at your feet.~
+~
+9 4289 4097
+8 0 0 0
+10 23000 2500
+#5026
+gem ruby~
+A large ruby~
+A large ruby lies on the ground collecting dust.~
+~
+8 192 1
+20 0 0 0
+9 4000 1500
+#5027
+gem diamond~
+A glittering diamond~
+A glittering diamond lies at your feet.~
+~
+8 64 1
+21 0 0 0
+10 9500 3200
+#5028
+gem sapphire~
+A brilliant sapphire~
+A brilliant sapphire lies here twinkling.~
+~
+8 64 1
+22 0 0 0
+7 3500 1100
+#5029
+gem lapis~
+a deep blue lapis lazuli~
+A deep blue lapis lazuli gem lies here.~
+~
+8 64 1
+24 0 0 0
+11 8500 2400
+#5030
+jewel tiger~
+the Tiger Jewel~
+The Tiger Jewel lies here blazing.~
+~
+8 256 16385
+0 0 0 0
+23 43000 4500
+A
+2 1
+#5031
+jewel red-eyed~
+the red-eyed jewel~
+The red-eyed jewel glares at you greedily.~
+~
+8 128 16385
+0 0 0 0
+30 35000 2600
+A
+3 -2
+#5032
+gem emerald~
+a fiery green emerald~
+A fiery green emerald sits here.~
+~
+8 64 1
+23 0 0 0
+7 5500 1550
+#5050
+cloak blue~
+a shimmering blue cloak~
+A shimmering blue cloak lies furled on the ground.~
+The cloak seems to shimmer and vanish at will.~
+3 96 1025
+18 500 500 29
+2 100000 25000
+#5051
+rifle assualt~
+an M-16 assualt rifle~
+an M-16 assualt rifle lies at your feet.~
+blast~
+5 0 8193
+0 15 1 11
+20 500000 0
+#5100
+longsword commoner~
+A commoner's longsword~
+A commoner's longsword made of adamantite has been left here.~
+slash~
+5 0 8193
+0 1 8 3
+2 1000 0
+A
+18 1
+A
+19 1
+#5101
+longsword noble~
+A noble's longsword~
+A drow noble's longsword made of adamantite lies here~
+slash~
+5 0 8193
+0 1 8 3
+2 1500 0
+A
+18 2
+A
+19 2
+#5102
+whip snake twoheaded~
+A snake headed whip~
+A whip with two snakes heads lies here.~
+slash~
+5 65 8193
+0 2 6 3
+0 1750 0
+A
+18 2
+A
+19 2
+#5103
+whip snake threeheaded~
+A snake headed whip~
+A whip with three snake heads has been left here~
+slash~
+5 65 8193
+0 2 7 3
+0 5000 0
+A
+18 2
+A
+19 2
+#5104
+whip snake fourheaded~
+A snake headed whip~
+A whip with four snake heads has been left here~
+slash~
+5 65 8193
+0 2 8 3
+0 10250 0
+A
+18 2
+A
+19 2
+#5105
+longsword black~
+A black longsword~
+A black longsword has been carelessly left here~
+slash~
+5 65 8193
+0 2 8 3
+0 10250 0
+A
+18 2
+A
+19 2
+#5106
+whip snake fiveheaded~
+A snake headed whip~
+A whip with 5 snake heads is lying here~
+slash~
+5 577 8193
+0 3 6 3
+0 12000 0
+A
+1 -1
+A 
+3 -1
+#5107
+whip snake sixheaded~
+A snake headed whip~
+A whip with six snake heads has been dropped here~
+slash~
+5 577 8193
+0 4 5 3
+0 15000 0
+A
+1 -2
+A 
+3 -2
+#5108
+bracers iron~
+A pair of bracers~
+A pair of bracers has been dropped here~
+~
+9 4161 257
+5 0 0 0
+3 2000 500
+A
+18 1
+A
+19 1
+#5109
+gauntlets iron strgauntlets~
+A pair of gauntlets~
+A pair of gauntlets has been dropped~
+~
+11 4097 129
+0 0 0 0
+2 10000 5000
+A
+1 3
+#5110
+wand lightning blue silver~
+A silvery blue wand~
+A silvery blue wand has been dropped in the dirt~
+~
+3 64 16385
+10 3 3 30
+1 4000 600
+#5111
+helmet helm~
+A small helmet~
+A small helmet lies up against a rock~
+~
+9 64 17
+1 0 0 0 
+5 6000 4000
+A
+3 3
+#5112
+ring ruby rubyring~
+A small ruby ring~
+A small ruby ring lies in the dirt~
+~
+11 4160 3
+0 0 0 0 
+1 20000 16000
+A
+13 20
+A
+12 10
+#5113
+dagger shaped sacrificial~
+A spider shaped dagger~
+A dagger with spider leg shaped blades lies on the ground~
+pierce~
+5 90688 8193
+0 21 2 11
+2 12000 0
+A
+18 2
+A
+19 2
+#5114
+hat green~
+A small bright green hat~
+A small bright green hat lies in the dirt~
+~
+11 128 17
+0 0 0 0 
+1 2000 600
+A 
+9 -15
+A
+17 -2
+#5200
+ringmail vest~
+A ringmail vest~
+A vest made of iron rings lies heaped on the floor.~
+~
+9 65 9
+4 0 0 0
+60 12000 3000
+A
+17 -1
+#5201
+helm iron~
+An iron helm~
+Here lies a small iron helm.~
+~
+9 0 17
+7 0 0 0
+10 5000 1800
+A
+18 -2
+#5202
+gauntlets iron~
+A pair of iron gauntlets~
+A pair of iron gauntlets rests on the ground.~
+~
+9 0 129
+7 0 0 0
+10 2200 900
+A
+18 -3
+A
+19 2
+#5203
+sleeves iron~
+Some iron sleeves~
+A set of iron sleeves lies on the ground.~
+~
+9 0 257
+7 0 0 0
+10 2450 1200
+A
+18 -4
+A
+19 2
+#5204
+boots iron~
+A pair of iron boots~
+A pair of iron boots stands has been left here.~
+~
+9 0 65
+4 0 0 0
+6 800 200
+A
+18 -1
+A
+2 -1
+#5205
+leggings iron~
+A set of iron leggings~
+A set of iron leggings lie here unattended.~
+~
+9 0 33
+7 0 0 0
+10 5400 2100
+A
+18 -3
+A
+2 -3
+#5206
+girth iron~
+An iron girth~
+A small iron girth lies at your feet.~
+~
+9 0 2049
+4 0 0 0
+6 4200 1200
+#5207
+breast plate iron~
+A battered iron breast plate~
+A battered iron breast plate lies here.~
+~
+9 0 9
+5 0 0 0 
+125 13000 1500
+A
+18 -6
+#5208
+shield iron~
+A sturdy iron shield~
+A small, but sturdy, iron shield has been left here.~
+~
+9 4288 513
+6 0 0 0
+5 500 100
+A
+23 -2
+A
+24 -2
+#5209
+shield black dark~
+A large black shield~
+A large black shield bearing the symbol of the Darkside rests here.~
+In the middle of the shield you see the symbol of the Darkside; a
+black fist with a blood-red aura shining behind it.~ 
+9 0 513
+2 0 0 0
+3 100 1
+#5210
+potion black~
+A black potion~
+A jet black potion sits upright waiting to be taken.~
+~
+10 96 1
+16 4 36 39
+5 6000 1400
+#5211
+potion orange~
+An orange potion~
+A small orange potion lies here.~
+~
+10 96 1
+20 44 -1 -1
+10 7500 2000
+#5213
+staff serpentine~
+A green serpentine staff~
+A green serpentine staff has been left here.~
+~
+4 96 16385
+15 2 2 23
+12 6600 1300
+#5214
+ball quartz~
+A smooth quartz ball~
+A smooth quartz ball lies here gleeming.~
+~
+1 64 16385
+0 0 72 0
+30 3050 950
+#5215
+scroll tattered~
+A tattered scroll~
+A worn and tattered scroll has been left here.~
+~
+2 64 1
+24 24 -1 -1
+15 11000 3400
+#5216
+scroll bound~
+A bound scroll~
+A bound scroll of detection lies at your feet.~
+~
+2 64 1
+15 18 19 20
+15 4200 2100
+#5217
+flute silver~
+A silver flute~
+A brilliant silver flute glimmers from beneath a rock.~
+~
+4 65 16385
+17 1 1 4
+6 10500 3500
+#5218
+talisman demon~
+A demon-faced talisman~
+A demon-faced talisman glares at you angrily.~
+~
+9 193 5
+5 0 0 0
+11 2500 150
+A
+1 -10
+A
+2 -8
+#5219
+venison chunk~
+A chunk of venison~
+A large chunk of venison sits here ready to be eaten.~
+~
+19 0 1
+24 0 0 0
+20 100 20
+#5220
+fountain cracked~
+a large cracked fountain~
+~
+Some stagnent water lies in the bottom of the fountain.~
+17 0 0
+10 10 0 1
+0 0 0
+#5221
+two-handed two sword~
+A two-handed sword~
+A nice two-handed sword hangs on a hook in the wall.~
+~
+5 0 8193
+0 1 12 3
+24 55000 0
+A
+18 -2
+A
+19 3
+#5222
+robe black silk~
+A black silk robe~
+A black silk robe lies heaped in one corner.~
+~
+9 0 1025
+5 0 0 0
+6 1300 500
+#5223
+cloak green~
+A dark green cloak~
+A beautiful dark green cloak has been dropped by someone.~
+~
+9 4161 1025
+5 0 0 0
+12 14500 2200
+A
+19 1
+A
+1 2
+#5224
+seal ebony~
+An engraved ebony seal~
+A small, engraved ebony seal is here.~
+~
+18 0 16385
+30 0 0 0
+2 500 20
+#5225
+desk curved~
+the desk~
+~
+~
+15 0 0
+100 13 5224 0
+0 0 0
+#5226
+seal ivory~
+An engraved ivory seal~
+A small, engraved ivory seal lies here.~
+~
+18 0 16385
+31 0 0 0
+2 500 20
+#5227
+cabinet glass~
+the glass cabinet~
+~
+~
+15 0 0
+500 13 5226 0
+0 0 0
+#5228
+arm rotted~
+A rotten arm~
+A rotted arm floats lazily by your feet.~
+~
+19 0 1
+50 0 0 1
+20 0 0
+#5230
+stone pale blue~
+A pale blue stone~
+A pale blue stone sits here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 2000
+A
+1 1
+#5231
+stone scarlet blue~
+A scarlet and blue stone~
+A pretty scarlet and blue stone has been dropped here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 2000
+A
+3 1
+#5232
+stone blue incandescent~
+A incandescent blue stone~
+A small incandescent blue stone lies here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 2000
+A
+4 1
+#5233
+stone red deep~
+A deep red stone~
+Someone has left a deep red stone here.~
+~
+8 64 16385
+0 0 0 0
+10 5500 2000
+A
+2 1
+#5234
+stone pink~
+A pink stone~
+A tiny pink stone lies at your feet.~
+~
+8 64 16385
+0 0 0 0
+10 5500 2000
+A
+5 1
+#5235
+stone pearly white~
+A pearly white stone~
+This pearly white stone would probably sell for a good price.~
+~
+8 64 16385
+0 0 0 0
+10 8700 3500
+A
+13 1
+#5236
+stone lavander pale~
+A pale lavander stone~
+A beautiful pale lavander stone lies here.~
+~
+8 192 16385
+0 0 0 0
+10 4300 1700
+A
+24 -2
+#5237
+stone lavander green~
+A lavander and green stone~
+A stunning lavander and green stone rests on the ground.~
+~
+8 192 16385
+0 0 0 0
+10 4700 1900
+A
+24 -4
+#5238
+stone rose dusty~
+A dusty rose stone~
+This stone is sort of a dusty rose color and very pretty.~
+~
+8 64 16385
+0 0 0 0
+10 9800 4200
+A
+17 -1
+#5239
+stone grey dull~
+A dull grey stone~
+You can barely make out a dull grey stone on the ground.~
+~
+8 0 16385
+0 0 0 0
+10 20 20
+#5240
+stone purple vibrant~
+A vibrant purple stone~
+A stunningly vibrant purple stone attracts your attention.~
+~
+8 192 16385
+0 0 0 0
+10 10200 4500
+A
+13 -20
+#5241
+stone pink green~
+A pink and green stone~
+A bright pink and green stone has been left here.~
+~
+8 192 16385
+0 0 0 0
+10 6600 2500
+A
+18 -5
+#5242
+stone green pale~
+A pale green stone~
+A pale green stone lies here collecting dust.~
+~
+8 192 16385
+0 0 0 0
+10 7100 2800
+A
+19 -5
+#5243
+stone clear~
+A clear stone~
+A odd clear stone lies at your feet.~
+~
+8 192 16385
+0 0 0 0
+10 8900 3900
+A
+17 3
+#5244
+stone iridescent~
+An iridescent stone~
+A large iridescent stone has been left here.~
+~
+8 192 16385
+0 0 0 0
+10 3700 1500
+A
+13 -50
+#5250
+mandolin~
+A mandolin~
+A mandolin lies against the wall.~
+~
+4 64 16385
+13 3 3 15
+20 3000 5000
+#5251
+harp golden~
+A golden harp~
+A battered golden harp has been tipped over.~
+~
+4 64 16385
+18 1 1 6
+100 2500 6700
+#5999
+boots~
+black, leather boots~
+The boots are a very black leather, and they look like they are very comfort-
+able.~
+~
+9 1 65
+3 0 0 0
+4 10000 10000
+A
+2 1
+A
+5 1
+#6000
+axe lumber~
+a lumber axe~
+A heavy lumber axe lies here.~
+chop~
+5 0 8193
+0 2 4 3
+10 50 0
+E
+axe lumber~
+It is a heavy axe of the kind lumberjacks use to chop down trees.
+~
+#6001
+shirt~
+a chequered shirt~
+A chequered shirt lies here.~
+~
+9 0 9
+1 0 0 0
+2 20 8
+E
+shirt~
+It is an extra large, chequered shirt made from heavy cloth.
+~
+#6002
+boots~
+a pair of leather boots~
+A pair of leather boots lies here.~
+~
+9 0 65
+3 0 0 0
+4 60 20
+E
+boots~
+They are fashioned from rough leather that has been oiled frequently to make
+it stay waterproof.  They look worn but quite functional.
+~
+#6003
+fireplace~
+a fireplace~
+A fireplace made from stone is set against the east wall.~
+~
+15 0 0
+200 0 0 0
+0 0 0
+E
+fireplace~
+It is fashioned from stones of various sizes that have been stacked on top of
+each other and fastened with mortar.  Its chimney is constructed likewise and
+leads the smoke out through the low cabin ceiling.
+~
+#6004
+lantern~
+a hooded brass lantern~
+A hooded brass lantern has been left here.~
+~
+1 0 16385
+0 0 100 0
+4 60 20
+E
+lantern~
+It is a large and robust but somewhat battered oil lantern made from brass,
+and it is equipped with a handle to make it handy and a hood to protect its
+flame.  Some letters have been scratched on its bottom.
+~
+E
+letters~
+They say, "Use 'hold lantern' to activate."
+~
+#6005
+chest~
+a wooden chest~
+A wooden chest stands in the corner.~
+~
+15 0 1
+100 15 6006 0
+40 100 30
+E
+chest~
+It is a robust chest made from short, heavy planks that have been fastened
+together with tenons.  It is equipped with a simple brass lock.
+~
+#6006
+key~
+a small brass key~
+A small brass key lies here.~
+~
+18 0 1
+6005 0 0 0
+1 10 4
+E
+key~
+It is a small, simple brass key with no inscriptions or marks of any kind.
+~
+#6007
+coins gold~
+a heap of gold coins~
+Some gold coins lie piled up in a heap on the floor.~
+~
+20 0 1
+100 0 0 0
+0 0 0
+E
+coins~
+The coins seem to be gold.  They are obviously valuable.
+~
+#6010
+blackberries~
+some blackberries~
+Some blackberries grow on a bush nearby.~
+~
+19 0 1
+3 0 0 0
+1 10 10
+E
+blackberries~
+They look very tasty indeed.
+~
+#6011
+mushroom~
+a mushroom~
+A small mushroom grows nearby.~
+~
+19 0 1
+6 0 0 0
+1 10 10
+E
+mushroom~
+It is a tasty little thing.
+~
+#6012
+sign~
+a large sign~
+A large sign mounted on a pole is standing by the roadside.~
+~
+12 0 0
+0 0 0 0
+100 0 0
+E
+pole~
+Not the most interesting pole in the world.
+Better leave it here, though, as it holds the sign in place.
+~
+E
+sign~
+It says :-
+
+                         Haon-Dor
+                         --------
+
+ This is the Forest of Haon-Dor.  Enter at your own risk.
+     Please report any strange occurrences to Quifael.
+
+~
+#6013
+water barrel~
+the barrel~
+A water barrel has been left here.~
+~
+17 0 1
+50 50 0 0
+65 60 20
+#6101
+sign~
+a sign~
+An old, battered sign lies on the ground.~
+~
+12 0 1
+0 0 0 0
+10 2 2
+E
+sign~
+Only some of the letters are legible :-
+                _
+      _________| |_________
+     /         | |         \
+    /  CAR.AX  | |  M.STY   \
+    \  M..SI.N | |  SW..P   /
+     \_________| |_________/
+               | |
+~
+#6102
+tree opening~
+a colossal tree~
+A colossal tree blocks the way westwards.~
+~
+15 0 0
+1000 0 0 0
+0 0 0
+E
+tree~
+This enourmous tree must be a thousand years old.  Its rough bark looks grey
+and pale and is decorated with scratches and clawmarks.  On its west side is a
+small opening just above ground level.
+~
+E
+opening~
+The opening is far too narrow for you to squeeze through but it looks as if the
+tree is hollow.
+~
+#6103
+branch~
+a long, grey branch~
+A long, grey branch rests heavily on the ground.~
+~
+1 0 16385
+0 0 25 0
+20 1 3
+E
+branch~
+It is quite heavy and looks as if it has been dropped from great height.  It is
+long dead and very dry.  Could probably be lighted quite easily.
+~
+#6104
+branch~
+a long, grey branch~
+A long, grey branch rests heavily on the ground.~
+pound~
+5 0 8193
+0 2 5 7
+30 60 0
+E
+branch~
+It is very heavy and looks as if it has been dropped from great height.  It is
+long and straight and the wood is very hard, still being full of sap.  Although
+it does not fit very well in your hand, it could be used as a clumsy but very
+heavy weapon.
+~
+A
+18 -2
+#6105
+branch~
+a long, grey branch~
+A long, grey branch rests heavily on the ground.~
+~
+12 0 1
+0 0 0 0
+40 0 0
+E
+branch~
+It is very heavy and looks as if it has been dropped from great height.  It is
+somewhat twisted and the hard wood is still full of sap.
+~
+A
+18 -2
+#6106
+toadstool~
+a toadstool~
+A large toadstool grows nearby.~
+~
+19 0 1
+12 0 0 0
+5 20 20
+E
+toadstool~
+It is a large, brown boletus that must weigh nearly five pounds.  The top
+surface is covered in a thin layer of transparent slime that emits a weak,
+musty smell.  Not the most delicious thing you have seen.
+~
+#6107
+toadstool~
+a toadstool~
+A large toadstool grows nearby.~
+~
+19 0 1
+12 0 0 1
+5 20 20
+E
+toadstool~
+It is a large, brown boletus that must weigh nearly five pounds.  It has small
+white spots and the top surface is covered in a thin layer of transparent slime
+that emits a weak, musty smell.  Not the most delicious thing you have seen.
+~
+#6108
+coins gold~
+a big pile of gold coins~
+A big pile of gold coins is lying here.~
+~
+20 0 1
+10000 0 0 0
+0 0 0
+#6109
+potion blue~
+a blue potion~
+A blue potion has been left here.~
+~
+10 64 1
+15 28 -1 -1
+2 1000 300
+E
+potion blue~
+It has a nice sky blue colour and a smell like peppermint.
+~
+#6110
+potion yellow~
+a yellow potion~
+A yellow potion has been left here.~
+~
+10 64 1
+15 39 -1 -1
+2 1000 300
+E
+potion yellow~
+It has a deep yellow colour and and a strong spicy smell.
+~
+#6111
+shield large~
+a large round shield~
+A large round shield has been left here.~
+~
+9 0 513
+5 0 0 0
+15 300 100
+E
+shield large~
+It is made from hard wood that has been reinforced with heavy iron bands.
+~
+#6112
+crown iron~
+an iron crown~
+An iron crown rests on the ground.~
+~
+9 64 17
+4 0 0 0
+10 5000 1500
+E
+crown iron~
+It is a heavy human-sized crown made from solid iron.
+~
+#6113
+sceptre iron~
+an iron sceptre~
+An iron sceptre lies on the ground.~
+~
+1 64 16385
+0 0 -1 0
+10 5000 1500
+E
+sceptre iron~
+It is a heavy sceptre made from solid iron.
+~
+#6114
+ring iron ironring~
+an iron ring~
+An iron ring has been left here.~
+~
+9 64 3
+1 0 0 0
+1 5000 1500
+E
+ring iron~
+It is a quite heavy human-sized ring made from solid iron.  It lacks
+decorations of any kind.
+~
+#6115
+potion haste powerful~
+a Powerful potion~
+A Powerful potion has been left here.~
+~
+10 64 1
+40 81 98 -1
+5 45000 300
+E
+potion haste~
+It has a Powerful and a smell like peppermint.
+~
+#6116
+potion improve haste great powerful~
+a Great Powerful potion~
+A Great Powerful potion has been left here.~
+~
+10 64 1
+40 82 71 -1
+10 90000 300
+E
+potion improve haste~
+It has a Great Powerful and a smell like peppermint.
+~
+#6117
+staff mana~
+a staff of mana boost~
+A staff has been left here on the ground.~
+~
+4 4161 16385
+40 2 2 73 
+20 500000 1000 
+#6118
+wand vitalize~
+a wand of vitalize~
+A wand has been left here on the ground.~
+~
+3 4161 16385
+40 2 2 74 
+20 500000 1000 
+#6504
+dwarven hammer~
+a hammer~
+There is a dwarven hammer laying here.~
+pummel~
+5 0 8193
+0 2 6 3
+3 5500 0
+#6505
+dwarven plate~
+dwarven plate mail~
+There is dwarven plate mail laying here.~
+~
+9 0 9
+7 0 0 0
+4 14500 500
+A
+17 -1
+A
+18 1
+#6506
+stick healstick~
+long, black stick~
+There is a long, black stick lying here.~
+~
+4 0 16385
+15 1 1 28
+1 100 10
+#6507
+stick lightstick~
+long, black stick~
+There is a long, black stick here.~
+~
+1 0 16385
+0 0 0 0
+1 0 0
+#6508
+club~
+dwarven club~
+There is a dwarven club laying here.~
+~
+5 0 8193
+0 2 6 3
+1 3000 0
+#6509
+two-handed dwarven axe~
+a two-handed dwarven axe~
+A two-handed Dwarven axe is here.~
+slices~
+5 0 8193
+0 2 7 3
+5 5000 0
+A
+18 2
+A
+1 2
+#6510
+helmet~
+A dwarven helmet~
+A dwarven helmet is here.~
+~
+9 0 17
+5 0 0 0
+4 2500 300
+A
+18 1
+#6511
+gold ring dwarvenring~
+A golden dwarven ring~
+A golden dwarven ring is lying here.~
+~
+9 0 3
+2 0 0 0
+1 10000 500
+A
+18 1
+A
+19 1
+#6512
+dwarvengloves gloves~
+Dwarven gloves~
+Thick dwarven gloves lay here.~
+~
+9 0 129
+3 0 0 0
+2 4000 800
+A
+1 1
+A
+2 1
+#6513
+note~
+a note~
+A crumpled note is here.~
+~
+12 0 1
+0 0 0 0
+0 0 0
+E
+note letter letters~
+  This note seems of utmost importance, as it has the stamp of the
+    Queen on it!  It says:
+	To Anyone,
+	I have lost my birth control pills, and I will reward anyone who
+	finds them.  Without them I will have many unwanted children.
+	You should be able to find the keys (YES, KEYS) to the castle,
+	since none of my servants fight for anything anymore, and one
+	of them should be around the store room, where I lost it, so
+	examine the area CAREFULLY since the dust is very thick there.
+	But who cares about fighting?  I'm a lover, not a fighter.
+	The last time I saw the other key was on a barrack dwarf.
+  Signed, The Queen.
+  PS When you find them, tell the Gods, and he will reward your hard
+     work.  You must have all the keys necessary to obtain it, also.
+~
+#6514
+castle key~
+a castle key~
+There is a key to Strangelove Castle here.~
+~
+18 0 1
+0 0 0 0
+0 10 1000000
+#6515
+magic boots~
+a pair of magic boots~
+There is a pair of magic boots here.~
+~
+9 64 65
+5 0 0 0
+1 5000 15
+A
+18 2
+A
+1 2
+#6516
+key mine~
+a mine key~
+There is a key to the mines here.~
+~
+18 0 1
+0 0 0 0
+0 10 1000000
+#6517
+coal~
+a chunk of coal~
+There is a chunk of coal here.~
+~
+12 0 16385
+0 0 0 0
+100 0 0
+#6518
+pick~
+a mining pick~
+There is a mining pick here.~
+picks~
+5 256 8193
+0 2 3 11
+1 300 0
+E
+pick~
+It looks almost blessed!
+~
+#6519
+potion pills~
+a box of birth control pills~
+There is a box of birth control pills here.~
+~
+10 64 1
+21 79 -1 -1
+1 300 15
+E
+birth control pills pill~
+They are in a circular container, and there are numbers corresponding
+to the day that they are to be taken.  You can tell they haven't been
+used for a while.
+~
+#6520
+poster~
+a poster~
+There is a very large poster here, and you better read it!
+~
+~
+12 0 0
+0 0 0 0
+0 0 0
+E
+sign poster letters~
+The sign says:
+	      WELCOME TO THE DWARVEN KINGDOM !!!!!
+   There are some fun things in here, and if you can't figure them out,
+   DO NOT ask a god.  There is a quest involved within here, and your
+   first hint is that a dwarf in the barracks is your first clue.  He
+   is not willing to share in the prize, so you may have to kill him
+   for it.  When you complete the quest, you will be richly rewarded!
+   Don't think that it is easy, because it is NOT.  Contact Depeche
+   when you have finished the quest, or leave a message on the board.
+   PS If you find any bugs, please report them.
+~
+#6521
+bag holding~
+A Bag of Holding~
+A Very big Bag of Holding with many pockets and jewels.~
+~
+15 0 278529 
+1000 0 0 0
+2 20 1
+#6522
+bright golden key~
+A bright key~
+A bright key with sparkling light.~
+~
+18 0 1
+0 0 0 0 
+1 0 1000000
+#6550
+Red and blue key~
+a red and blue key~
+A colorful key with obvious dwarven runes carved upon it.~
+~
+18 0 1
+0 0 0 0
+1 0 1000000
+E
+key colorful red and blue~
+This key looks like it would open a very large door.~
+#6551
+trapdoor~
+an old, wooden trapdoor~
+There is an old, wooden trapdoor here on the floor.
+~
+~
+12 32 0
+0 0 0 0
+400 0 0
+#6910
+shirt scale~
+a black dragon scale shirt~
+A black dragon scale shirt has been left here.~
+~
+9 64 9
+6 0 0 0
+10 10000 3000
+E
+shirt scale~
+It is a sleeveless shirt made from big, black dragon scales joined with silver
+threads.  Its inside has been made from the soft skin on the dragon's belly,
+making it very comfortable to wear.  The name "Isha" has been engraved on one
+of the scales.
+~
+#6911
+skirt scale~
+a black dragon scale skirt~
+A black dragon scale skirt has been left here.~
+~
+9 64 33
+6 0 0 0
+8 5000 1500
+E
+skirt scale~
+It is a short skirt made from big, black dragon scales joined with silver
+threads.  Its inside has been made from the soft skin on the dragon's belly,
+making it very comfortable to wear.  The name "Isha" has been engraved on one
+of the scales.
+~
+#6912
+cloak black hooded~
+a black, hooded cloak~
+A large, hooded cloak, as dark as the night, has been left here.~
+~
+9 64 1025
+6 0 0 0
+20 8000 3000
+E
+cloak black~
+It is a heavy, black cloak with a large hood.  The name "Isha" is written
+inside it with a silver thread.
+~
+A
+23 -2
+#6913
+belt silver silverbelt~
+a broad silver belt~
+A broad silver belt has been left here.~
+~
+9 64 2049
+6 0 0 0
+4 5000 1500
+E
+belt silver~
+It is a broad belt made from tiny silver rings woven together.
+~
+#6914
+sword long slender~
+a long, slender sword~
+A long, slender sword lies on the ground.~
+slash~
+5 2625 8193
+178 3 6 3
+4 30000 5
+E
+sword long slender~
+It is a long, slender sword that seems to be made from silver.  The name
+"Isha" has been engraved on the hilt.
+~
+A
+18 2
+A
+19 2
+#6999
+scythe~
+the Scythe of Death~
+The Scythe of Death rests heavily on the ground.~
+reaps~
+5 64 8193
+171 1 100 3
+100 30000 5
+E
+scythe~
+It is a very heavy scythe.  The grey handle is made from hard wood and the long
+iron blade is completely smooth from countless years of use.  It feels cold to
+the touch.
+~
+#7090
+waybread food~
+a waybread~
+Some waybread has been put here.~
+~
+19 0 1
+24 0 0 0
+1 50 50
+E
+waybread~
+The waybread is the traditional feed of elves when travelling, they call it
+lembas.  It is said to refresh the weary traveler greatly.
+~
+#7190
+ring silver silverring~
+a glinting ring of silver~
+A lovely silverring has been left here.~
+~
+1 4160 16387
+0 0 14 0
+1 46 10000
+A 
+17 -10
+A
+18 +2
+#7191
+ring gold goldring~
+a golden ring~
+A shiny goldring has been abandoned here.~
+~
+11 64 3
+1 0 0 0
+1 0 2000
+A
+3 +5
+#7192
+boots magic~
+the magic boots~
+A pair of magic boots are here.~
+~
+9 64 65
+3 0 0 0
+10 75 100
+A
+14 20
+#7200
+rod devil~
+the devil rod~
+The mysterious devil rod lies on the floor.~
+crush~
+5 64 8193
+0 2 6 3
+6 16000 0
+E
+devil rod~
+This is indeed a mysterious rod.  It is dark black at the base but has four
+very sharp purple tentacles at the end.
+~
+A
+18 2
+A
+1 -1
+#7201
+mace large~
+the large mace~
+A large mace lies here.~
+crush~
+5 64 8193
+0 1 6 7
+10 1000 0
+E
+large mace~
+The mace is pretty large with a weight of 10 lbs.  The head is actually four
+purple tentacles tied together.
+~
+A
+19 2
+#7202
+mace small~
+the small mace~
+a small mace has been left here.~
+crush~
+5 64 8193
+0 1 6 7
+6 600 0
+E
+small mace~
+This weapon does look like it does a lot of damage, but then you never know.
+It consists of a black handle and a purple head.
+~
+A
+19 1
+#7203
+cloak purple~
+a purple cloak~
+A purple cloak lies on the floor.~
+~
+9 64 5
+0 0 0 0
+20 5000 2500
+E
+cloak purple~
+This is a very fine made cloak from an unknown material, in a nice purple
+color.
+~
+A
+24 1
+A
+17 -10
+#7204
+potion blue~
+an neon blue potion~
+A neon blue potion stands on the floor.~
+~
+10 64 1
+14 6 -1 -1
+4 100 200
+E
+potion blue~
+In the flask is a transparent electric blue liquid.
+~
+#7205
+key black~
+a black key~
+A black key has been left on the floor.~
+~
+18 0 1
+0 0 0 0
+2 10 1000
+E
+black key~
+This little key is made from a black metal of unknown origin.
+~
+#7206
+skull white~
+a strange white skull~
+A strange white skull lies on the floor looking at you.~
+~
+9 192 17
+1 0 0 0
+30 0 2500
+E
+white skull~
+The skull has two small horns in the forehead. You notice some writing on
+the inside.
+~
+E
+writing text~
+You read the number '666'.
+~
+A
+2 -4
+#7207
+gauntlets muddy~
+a pair of muddy gauntlets~
+A pair of muddy gauntlets have been thrown away here.~
+~
+9 64 129
+2 0 0 0
+10 60 40
+E
+muddy gauntlets~
+These gauntlets are muddy indeed, however they look very effective.
+~
+A
+1 2
+#7208
+stick small light~
+a small stick~
+A small stick lies here.~
+~
+1 0 16385
+0 0 -1 0
+4 200 200
+E
+small stick~
+The small stick does not look interesting at all.  But just as you are going
+to throw it away you notice some small letters.
+~
+E
+letters letter~
+It reads 'Hold me'.
+~
+#7209
+boots muddy~
+a pair of muddy boots~
+A pair of muddy boots has been dropped here.~
+~
+9 64 65
+2 0 0 0
+20 75 100
+E
+The boots are muddy and they look well worn, but also very comfortable.~
+~
+A
+18 1
+#7210
+treasure coins~
+a huge treasure~
+There is a huge treasure here, looking very valuable.~
+~
+20 0 1
+6000 0 0 0
+0 0 0
+E
+treasure~
+This looks like a whole lot of coins.
+~
+#7211
+sword short~
+a short sword~
+There lies a short sword.~
+stab~
+5 0 8193
+0 2 4 11
+4 60 0
+E
+small sword~
+This is a very nice little weapon.
+~
+#7212
+sword bastard~
+a huge bastard sword~
+There is a huge bastard sword here.~
+slash~
+5 3136 8193
+177 2 8 3
+18 1700 5
+E
+bastard sword~
+Quite a heavy weapon, with a pure white hilt.
+~
+A
+19 3
+#7213
+helmet large~
+a large helmet~
+There is a large helmet on the floor.~
+~
+9 64 17
+7 0 0 0 
+5 4500 1500
+E 
+large helmet~
+This looks like some heavy protection, for the head of course.
+~
+#7214
+helmet chaos~
+a chaos helmet~
+On the floor is a grand evil-looking caos helmet.~
+~
+9 2624 17
+6 0 0 0
+8 2300 1000
+E
+chaos helmet~
+This helmet has mounted some mean looking spikes on the front, moreover it
+looks like good protection.
+~
+A
+1 1
+A
+24 -2
+#7215
+sabre light~
+a light sabre~
+On the floor lies a strange looking sabre.~
+~
+1 7232 16385
+0 0 10000 0
+4 1500 300
+E
+light sabre~
+This looks as a sabre out of an well known SF-movie.
+~
+A
+18 +7 
+#7216
+sword two-handed~
+a two-handed sword~
+On the floor rests a enormous two-handed sword.~
+slash~
+5 1600 8193
+0 4 4 3
+22 1800 0
+E
+two-handed sword~
+You notice that there has been inscribed some runes and a sort of pattern,
+which resembles flames running along the edge.
+~
+E 
+runes~
+On the blade you can read 'Flame And Strength United Are My Soul Power'.
+~
+A
+17 +15
+A
+19 +3
+#7217
+plate breast~
+a silvery breast plate~
+There is a silvery breast plate on the floor.~
+~
+9 3328 9
+7 0 0 0
+70 25000 3000
+E
+plate breast~
+On the breast plate you notive a relief of large rose. The metal seems to be 
+some kind of silver or platinium.
+~
+#7218
+plates leg~
+some leg plates~
+On the floor you see some leg plates.~
+~
+9 3328 33
+7 0 0 0 
+40 12500 5000
+E
+leg plates~
+They seem to be made from silver or platinum. You see the outline of a rose.
+~
+#7219
+gloves~
+a pair of gloves~
+You can see a pair of gloves on the floor.~
+~
+9 3392 129
+3 0 0 0
+14 900 1000
+E
+gloves~
+The gloves are made of silver threads.
+~
+A
+18 1
+#7220
+helmet~
+a silvery helmet~
+The silvery helmet lies here.~
+~
+9 3328 17
+9 0 0 0
+35 9000 2000
+E
+helmet~
+The helmet is made from platinum or silver and has a white fur brush attached
+on the top.
+~
+#7221
+shield~
+the shield of the rose~
+The shield of the rose rests on the floor.~
+~
+9 3328 513
+9 0 0 0
+60 15000 1000
+E
+shield~
+On the shield you see a clear and perfect painting of a dark red rose on a white
+background. You also notice the inscription :'Pax Est Sanctuum'.
+~
+#7222
+boots~
+a pair of heavy plated boots~
+A pair of heavy plated boots stand on the floor.~
+~
+9 3328 65
+7 0 0 0
+40 2000 500
+E
+boots~
+The boots are made from a silvery metal.
+~
+#7223
+plates arm~
+some arm plates~
+On the floor you see some arm plates.~
+~
+9 3328 257
+7 0 0 0
+40 12500 1000
+E
+plates arm~
+They seem to be made from silver or platinum. You see the outline of a rose.
+~
+#7224
+ring innocence innocencering~
+a sparkling ring of innocence~
+On the floor you see a ring with white aura.~
+~
+9 3392 3
+0 0 0 0
+1 50000 10000
+E
+ring innocence~
+It seems to be made from silver or platinum. You see the outline of a rose.
+~
+A
+17 -10
+A
+19 3
+#7900
+key large steel~
+a large key~
+A large steel key has been left here.~
+~
+18 0 1
+2 0 0 0
+2 10 -1
+E
+steel key~
+This huge key is made from solid steel.
+~
+#7901
+key copper~
+a copper key~
+A copper key has been left on the floor.~
+~
+18 0 1
+2 0 0 0
+2 10 -1
+E
+copper key~
+This little key is made from copper.
+~
+#7903
+new key~
+a new key~
+A new key is here.~
+~
+18 0 1
+2 0 0 0
+2 10 -1
+#7909
+treasure coins~
+a huge treasure~
+There is a huge treasure here, looking very valuable.~
+~
+20 0 1
+1000000 0 0 0
+0 0 0
+E
+treasure~
+This looks like a whole lot of coins.
+~
+#7910
+chest~
+a wooden chest~
+A wooden chest stands in the corner.~
+~
+15 0 0
+100 15 7911 0
+400 100 30000
+E
+chest~
+It is a robust chest made from short, heavy planks that have been fastened
+together with tenons.  It is equipped with a simple brass lock.
+~
+#7911
+key~
+a small brass key~
+A small brass key lies here.~
+~
+18 0 1
+7910 0 0 0
+1 10 -1
+E
+key~
+It is a small, simple brass key with no inscriptions or marks of any kind.
+~
+#7922
+knee protecter leather~
+a leather knee protecter~
+a leather knee protecter is here.~
+~
+9 1 65537
+2 0 0 0
+1 200000 5000
+A 
+18 +1
+#7923
+knee protecter bronze~
+a bronze knee protecter~
+a bronze knee protecter is here.~
+~
+9 2 65537
+4 0 0 0
+1 400000 5000
+A
+18 1
+#7924
+청잠바 잠바 shirt shirts~
+청잠바~
+퍼햅스의 더러운 셔츠가 여기 있음~
+~
+9 2097152 1025
+55 0 0 0
+1 1000000 50
+A
+18 5
+A
+18 5
+#7925
+안경 퍼햅스 glass glasses~
+안경~
+퍼햅스의 빛나는 안경이 여기있음~
+~
+9 2097152 17
+20 0 0 0
+1 1000000 50
+A
+18 20
+A
+19 20
+#7926
+바지 청바지 pants blue jeans~
+바지~
+퍼햅스의 더러운 청바지가 여기있음~
+~
+9 2097152 33
+30 0 0 0
+1 1000000 50
+A
+18 10
+A
+18 10
+#7927
+잠바 청잠바 coat~
+잠바 청잠바~
+퍼햅스의 더러운 청잠바가 여기 있음~
+~
+9 2097152 1025
+20 0 0 0
+1 1000000 50
+A
+18 10
+A
+19 10
+#7928
+belt 벨트~
+벨트~
+퍼햅스의 더러운 가죽벨트가 여기 있음~
+~
+9 2097152 2049
+20 0 0 0
+1 1000000 50
+A
+18 4
+A
+19 4
+#7929
+신발 shoes~
+신발~
+퍼햅스의 때묻은 구두가 여기 있당~
+~
+9 2097152 65
+20 0 0 0
+1 1000000 50
+A
+18 5
+A
+18 5
+#7991
+ticket~
+A ticket for meta~
+A ticket for meta has been dropped here.~
+~
+8 0 1
+0 0 0 0
+1 1 1
+E
+ticket~
+The Metaphysician makes your AC up with this ticket and some xp.
+~
+#7992
+ticket~
+A ticket for meta~
+A ticket for meta has been dropped here.~
+~
+8 0 1
+0 0 0 0
+1 1 1
+E
+ticket~
+The Metaphysician makes your HR up with this ticket and some xp.
+~
+#7993
+ticket~
+A ticket for meta~
+A ticket for meta has been dropped here.~
+~
+8 0 1
+0 0 0 0
+1 1 1
+E
+ticket~
+The Metaphysician makes your DR up with this ticket and some xp.
+~
+#7994
+ticket~
+A ticket for request~
+A ticket for request has been dropped here.~
+~
+8 0 1
+0 0 0 0
+1 1 1
+E
+ticket~
+The QM gives another quest without penalty.
+~
+#7997
+quest weapon~
+quest weapon~
+A quest weapon is here.~
+slash~
+5 131137 8193
+0 20 20 3
+1 0 1
+A
+18 20
+A
+19 20
+#7998
+quest armor~
+quest armor~
+A quest armor is here.~
+~
+9 131137 3
+20 0 0 0
+1 0 1
+A
+18 10
+A
+19 10
+#7999
+slot machine~
+a slot machine~
+A slot machine is here.~
+~
+12 0 0
+0 0 0 0
+200 1 1
+E
+slot machine~
+
+                      *SLOT* MACHINE 
+
+       Pull this machine, and you will get 3 numbers.
+       If all of them are different numbers, you will
+       lose 1M coins. Otherwise, you will get another
+       coins.
+~
+#8000
+string machine~
+a string machine~
+A string machine is here.~
+~
+12 0 0
+0 0 0 0
+200 1 1
+E
+string machine~
+
+              *STRING* MACHINE 
+
+   This machine will set the string of your item
+   what you want with some gold.
+
+      Usage : change item-name item-string
+~
+#9001
+knife thief's~
+a very sharp knife~
+A very sharp knife lies here.~
+~
+5 2112 8193
+0 6 2 11
+9 1000 0
+E
+knife~
+A keen knife, very sharp--you could cut the air in two!
+~
+A
+2 2
+A
+18 3
+#9002
+hat wizard's~
+a wizard's hat~
+A blue wizard's hat lies here.~
+~
+9 96 17
+6 0 0 0
+5 20000 20000
+E
+hat~
+A hat made of blue cloth.  Ist looks very comfortable.
+~
+A
+3 3
+A
+17 -2
+#9003
+headress pontiff's~
+a pontiff's headress~
+A white cone-shaped head ornament with religious symbols lies here.~
+~
+9 96 17
+6 0 0 0
+5 20000 20000
+E
+headress~
+A starchy headress worn by powerful secular types.
+~
+A
+4 3
+A
+17 -2
+#9004
+visor black knight's~
+a black knight's visor~
+A black visor sits here.~
+~
+9 96 17
+6 0 0 0
+5 20000 20000
+E
+visor~
+A visor that protects the head, good for warriors.
+~
+A
+1 1
+A
+5 2
+#9501
+key gatekey~
+a gatekey~
+A huge gate key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9502
+key plaza~
+a plaza key~
+A plaza key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9503
+key huge third~
+a huge Brop key for third castle~
+a huge Brop key for third castle is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9504
+key fourth~
+a fourth castle key~
+A fourth castle key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9505
+key gatekey~
+a gatekey~
+A gate key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9506
+key second castle~
+a second castle key~
+a second castle key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9507
+key first castle~
+a first castle key~
+a first castle key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9508
+belt lss sword~
+a Lss belt sword~
+A Dragon and Lss marked flexible Belt sword is crying here.~
+slash~
+5 4097 10241
+0 5 5 3
+5 10000 10
+E
+lss belt sword~
+It is very flexible so you can wear it. Dragon mark is carved on it.
+It seems that LSS is name of maker.
+~
+A
+18 3
+A
+19 3
+#9509
+dragon slayer~
+A Dragon slayer~
+A Dragon slayer is here.~
+slash~
+5 4161 8193
+176 4 6 3
+30 10000 3
+A
+17 -10
+A
+19 2
+#9510
+sword honour~
+a Sword of Honour~
+A Sword of Honour is welded on very heavy stone.~
+slash~
+5 4097 8193
+0 4 5 3
+10 30000 0
+A
+17 -9
+A
+19 3
+#9511
+helmet gaiot~
+The Gaiot's Helmet~
+A Gaiot's Helmet is here.~
+~
+9 4162 17
+12 0 0 0
+15 50000 0 
+A
+17 -5
+#9512
+cloak shadow gaiot~
+Gaiot's evil shadow~
+evil shadow is following Gaiot.~
+~
+9 4161 1025
+12 0 0 0
+5 10000 10
+A
+20 -5
+A
+19 2
+#9513
+boots gaiot~
+a Gaiot's leather boots~
+leather boots is here.~
+~
+9 4161 65
+10 0 0 0
+20 10000 0
+A
+14 500
+A
+18 3
+#9514
+gloves hyobik~
+a Hyobik gloves~
+A hyobik's gloves is here.~
+~
+9 4097 129
+10 0 0 0
+2 50 10
+#9515
+black death plates~
+A Black death plates~
+A Black plates is here.~
+~
+9 4097 131073
+9 0 0 0
+1 5000 10
+A
+19 4
+#9516
+club hexagonal~
+a hexagonal club~
+A large steel hexagonal club is here.~
+pound~
+5 0 8193
+171 2 8 7
+20 1000 10
+#9517
+cap~
+a captain's cap~
+A captain's cap is here.~
+~
+9 4096 17
+6 0 0 0 
+3 10000 10000
+A
+19 2
+A
+17 -2
+#9518
+sword yuseong~
+Yuseong sword~
+A Yuseong sword is fallen from sky.~
+pound~
+5 4161 8193
+173 4 5 3
+8 10000 1
+A
+18 2
+A
+19 2
+#9519
+laiger leggings~
+A Laiger's leggings~
+A black leather leggings which were worn by Laiger is here.~
+~
+9 4096 33
+12 0 0 0 
+5 30000 10000
+#9520
+ring yuria yuriaring~
+a ring of Yuria~
+A undecorated ring is lying here.~ 
+~
+9 4097 3
+0 0 0 0
+2 50000 100000
+A
+17 -14
+#9521
+scale knee band~
+a dragon scale knee band~
+A mysterious scale knee band is in dirt.~
+~
+9 4224 65537
+7 0 0 0
+4 100 100
+#9522
+shield holy cross~
+a Holy cross shield~
+a Holy cross shield is lying here.~
+~
+9 4096 513
+10 0 0 0 
+1 100 100
+A
+24 -5
+A
+23 -5
+#9523
+kabot chainmail~
+a black chainmail kabot~
+a black chainmail kabot leans against wall.~
+~
+9 4097 9
+9 0 0 0 
+30 10000 10000
+A
+17 -3
+A
+19 2
+#9524
+razor~
+a razor~
+a razor is here.~
+pierce~
+5 4096 8193
+0 3 5 11
+10 10 0
+#9525
+giga light~
+a giga light~
+a light made by giga glows brightly.~
+~
+1 4193 16385
+0 0 -1 0
+50 2000 1000
+A
+19 2
+A
+17 -3
+#9526
+mega bracelet~
+a mega bracelet~
+a bracelet made by mega is crying here.~
+~
+9 4194 4097
+3 0 0 0
+10 4000 0
+A
+5 2
+A
+18 3
+#9527 
+mili stone~
+a mili stone~
+a stone made by mili is in silence.~
+~
+8 4192 16385
+0 0 0 0
+10 3000 3000
+A
+18 1
+A
+19 1 
+#9528
+micro ring microring~
+a micro ring~
+a ring made by micro is making you crazy.~
+~
+9 4195 3
+0 0 0 0
+1 1 0
+A
+17 -8
+A
+19 1
+#9529
+adamantite shoes~
+a adamantite horse shoes~
+a adamantite horse shoes is lying here.~
+~
+9 102400 65
+5 0 0 0
+10 10 10000
+A
+12 1000
+A
+19 3
+#9600
+key redkey~
+a redkey~
+a red key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9601
+key orangekey~
+a orangekey~
+a orange key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9602
+key yellowkey~
+a yellowkey~
+a yellow key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9603
+key greenkey~
+a greenkey~
+a green key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9604
+key bluekey~
+a bluekey~
+a blue key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9605
+key indigokey~
+a indigokey~
+a indigo key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9606
+key violetkey~
+a violetkey~
+a violet key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9611
+key garnet~
+a garnet key~
+a garnet key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9612
+key amethyst~
+a amethyst key~
+a amethyst key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9613
+key bloodstone~
+a bloodstone key~
+a bloodstone key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9614
+key diamond~
+a diamond key~
+a diamond key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9615
+key emerald~
+a emerald key~
+a emerald key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9616
+key pearl~
+a pearl key~
+a pearl key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9617
+key ruby~
+a ruby key~
+a ruby key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9618
+key sardonyx~
+a sardonyx key~
+a sardonyx key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9619
+key sapphire~
+a sapphire key~
+a sapphire key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9620
+key opal~
+a opal key~
+a opal key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9621
+key topaz~
+a topaz key~
+a topaz key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9622
+key turquoise~
+a turquoise key~
+a turquoise key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9623
+key small~
+small key~
+small hyobik key is lying here.~
+~
+18 0 1
+0 0 0 0
+1 1 10
+#9701
+comet's tail~
+a comet's tail~
+A long, slender whip lies here.~ 
+~
+5 3 8193
+0 2 6 2
+9 1000 0
+#9702
+arm hercules~
+the Titanic Arm plates of Hercules~
+Arm plates of the Zodiac lie here.~
+~
+9 1089 257
+7 0 0 0
+10 10000 5000
+E
+arm~
+These mighty armors have been worn by this immortal, since the ancient time.~
+A
+1 1
+A 
+19 2
+#9703
+wings pegasus~
+the Wings of Pegasus~
+The wings of Pegasus, still flapping is lying on the ground.~
+~
+4 322 16385
+15 2 2 28
+15 6000 3000
+#9704
+belt orion~
+the Titanic Belt of Orion~
+A belt of the Zodiac lies here.~
+~
+9 1089 2049
+9 0 0 0
+9 10000 5000
+E
+belt~
+You can immediately see that it belongs to Orion, from the 3 stars engraved on it.~
+A
+5 2
+#9705
+skull draco~
+An ugly skull of Draco~
+A massive skull of a dead Draco lies here.~
+~
+3 194 16385
+15 5 5 26
+20 10000 3000
+#9706
+fleece aries~
+the Titanic Fleece of Aries~
+A fleece of the Zodiac lies here.~ 
+~
+9 1089 5
+0 0 0 0
+9 10000 5000 
+E
+fleece~
+From a look it resembles the Golden Fleece that exists in the Greek myths.~
+A
+17 -12
+A
+19 1
+#9707
+hoof taurus~
+the Titanic Hoof of Taurus~
+A hoof of the Zodiac lies here.~
+~
+9 1089 65
+6 0 0 0
+10 10000 5000
+E
+hoof~
+It is with these hooves that Taurus can stand against Orion's attacks.~
+A
+14 50
+A
+19 1
+#9708
+mask gemini~
+the Titanic Mask of Gemini~
+A mask of the Zodiac lies here.~
+~
+9 1217 17
+8 0 0 0
+7 10000 5000
+E
+mask~
+You notice the mask has got two faces,one smiling and the other crying,you don't know which way you should wear it.~
+A
+1 1
+A
+2 2
+#9709
+shell cancer~
+the Titanic Shell of Cancer~
+A shell of the Zodiac lies here.~
+~
+9 1089 9
+11 0 0 0
+15 10000 5000
+E
+shell~
+A shell which is dented in the middle, resulting from the Hercules' mighty pound when the Crab was still an enemy of Hercules in ancient times.~
+A
+17 -2
+A
+2 -2
+#9710
+skin leo~
+the Titanic Skin of Leo~
+A skin of the Zodiac lies here.~
+~
+9 1089 1025
+12 0 0 0
+15 10000 5000
+E
+skin~
+A skin made of metal, which was worn by Hercules during his Ten Labours.~
+A
+18 -2
+#9711
+bracelet virgo~
+the Titanic Bracelet of Virgo~
+A bracelet of the Zodiac lies here.~
+~
+9 1089 4097
+6 0 0 0
+4 10000 5000
+E
+bracelet~
+A bracelet of purity and youth, only worn by selected virgins.~
+A
+4 2
+A
+9 -10
+#9712
+scale libra~
+the Titanic Scale of Libra~
+A shield of the Zodiac lies here.~
+~
+9 1089 513
+5 0 0 0
+15 10000 5000 
+E
+scale~
+It is a shield of justice, used in the ancient battle against injustice.~
+A
+17 -3
+A
+13 5
+#9713
+scale libra~
+the Titanic Scale of Libra~
+A shield of the Zodiac lies here.~
+~
+9 194 513
+0 0 0 0
+15 10000 5000 
+E
+scale~
+It is a shield of injustice, it picks on the innocent.~
+A
+17 6
+A
+13 -30
+#9714
+sting scorpio~
+the Sting of Scorpio~
+Sting of the Zodiac lies here.~
+~
+5 1089 8193
+0 4 4 11
+7 10000 0
+E
+sting~
+This dreadful wepaon put a lot of mortals to death before Scorpio was banished.~
+A
+18 3
+A
+19 1
+#9715
+arrow sagittarius~
+the Arrow of Sagittarius~
+THE arrow of the Zodiac lies here.~
+~
+3 1089 16385
+10 20 20 30
+7 5000 5000 
+E
+arrow~
+It's THE arrow of lightning; it will never miss any target.~
+#9716
+bow sagittarius~
+the Titanic Bow of Sagittarius~
+THE bow of the zodiac lies here.~
+~
+5 1089 8193
+175 3 8 7
+20 10000 20
+E
+bow~
+The gigantic bow used by the Archer, it is a very powerful weapon.~
+A
+18 2
+A
+19 3 
+#9717
+horns capricon~
+the Titanic Horns of Capriocon~
+a pair of horns of the Zodiac lies here.~
+~
+9 1089 129 
+4 0 0 0
+6 10000 5000
+E
+horn~
+These strange horns are the work of gods, shaped to fit on hands and they look powerful indeed.~
+A
+18 1
+A
+19 2
+#9718
+vessel aquarius~
+the Ancient Vessel of Aquarius~
+A vessel of the Zodiac lies here.~
+~
+4 1089 16385
+5 10000 10000 13
+12 10000 5000
+E
+vessel~
+This vessel has been carried by the Water Bearer ever since she came to the Zodiac.~
+#9719
+tail pisces~
+the Titanic Tail of Pisces~
+A fish tail of the Zodiac lies here.~
+~
+9 1089 33
+10 0 0 0
+11 10000 5000
+E
+tail~
+This tail can actually be worn by mortals somehow as leggings..Another work of the gods.~
+A
+19 -2
+A
+2 -2
+#9720
+ring dignity dignityring~
+the Ring of Dignity~
+A ring of speciality lies here.~
+~
+9 1123 3
+0 0 0 0
+3 20000 10000
+E
+ring~
+This ring belongs to THE queen of the Universe,Cassiopeia. Mortals, do not touch!~
+A
+12 25
+A
+3 2
+#9721
+sceptre might~
+the Sceptre of Might~
+A sceptre of interest lies here.~
+~
+1 1123 16385
+0 0 -1 0
+4 20000 10000
+E
+sceptre~
+You'd better give it back, or THE king of the Universe will punish you, Mortals!~
+A
+18 2
+A
+19 2
+#9722
+ring universe universering~
+the RING of the UNIVERSE~
+Here lies a fortune..a small ring of power.~
+~
+9 355 3
+6 0 0 0
+3 40000 20000
+E
+ring~
+It conceals the power of the universe.~
+A
+12 30
+A
+13 30
+#9723
+great dipper~
+the Great Dipper of the Skies~
+A dazzling white object lies on the ground.~
+~
+5 355 8193
+0 5 4 6
+20 30000 0
+E
+dipper~
+THE MOST awesome WEPAON since ancient times. Put on the sky by the gods as a memorial.~
+A
+18 3
+A
+19 3
+#9724
+spring shoot~
+a spring shoot~
+A shoot grows here, covered with dew.~
+~
+18 3 1
+0 0 0 0
+2 0 100000
+#9725
+summer flower~
+a summer flower~
+A flower grows here, waiting to be picked up.~
+~
+18 3 1
+0 0 0 0
+2 0 100000
+#9726
+autumn leaf~
+an autumn leaf~
+A leaf lies here, as if just fallen from a tree.~
+~
+18 3 1
+0 0 0 0
+2 0 100000
+#9727
+winter branch~
+a winter branch~
+A branch lies here, still covered with snow.~ 
+~
+18 3 1
+0 0 0 0
+2 0 100000
+#9728
+chains andromeda~
+chains of Andromeda~
+Some chains lie on the floor.~
+~
+12 3 1
+0 0 0 0
+25 0 0
+E
+chains~
+They certainly look important!~
+#9800
+card key~
+hatch card key~
+A magnetic card key is lying here.~
+~
+18 3 1
+0 0 0 0
+2 0 10000
+#9801
+card key~
+first card key~
+A magnetic card key is lying here.~
+~
+18 3 1
+0 0 0 0
+2 0 10000
+#9802
+card key~
+second card key~
+A magnetic card key is lying here.~
+~
+18 3 1
+0 0 0 0
+2 0 10000
+#9803
+black aura~
+black aura~
+black aura from the dark emperor is choking you to death.~
+~
+9 65 1025
+12 0 0 0
+5 10000 10
+A
+18 2
+A
+19 2
+#9804
+dark ring darkring~
+dark ring~
+dark ring is hiding itself in the darkness.~
+~
+9 0 3
+0 0 0 0
+1 100000 1
+A
+17 -14
+A
+19 4
+#9805
+blue light sabre~
+blue light sabre~
+blue light sabre is waiting for its new master.~
+~
+1 2 16385
+0 0 -1 0
+10 100000 1
+A
+18 2
+A
+19 2
+#9806
+grey shoes~
+a pair of grey leather shoes~
+a pair of leather shoes is dropped here.~
+~
+9 98304 65
+8 0 0 0
+2 100 1
+A
+19 5
+A
+25 15
+#9807
+black masked helmet~
+black masked helmet~
+black masked helmet is breathing with a terrible noise.~
+~
+9 0 17
+8 0 0 0
+15 100000 1
+A
+18 1
+A
+19 2
+#9808
+black suit~
+black mechanical suit~
+black mechanical suit is left here.~
+~
+9 0 9
+15 0 0 0
+30 100000 1
+A
+13 1000
+A
+19 3
+#9809
+red light sabre~
+red light sabre~
+red light sabre is lighting here.~
+~
+5 24642 8193
+96 6 6 3
+30 100000 9
+A
+18 4
+A
+19 3
+#9810
+service cross medal~
+Distinguished Service Cross~
+A honorable medal is lying here.~
+~
+9 64 5
+5 0 0 0
+1 100000 1
+A
+18 1
+A
+19 1
+#9811
+rubber hose~
+dirty abandoned rubber hose~
+A dirty hose is abandoned here.~
+~
+9 64 2049
+8 0 0 0
+8 100000 1
+A
+18 1
+A
+19 2
+#9812
+golden watch~
+gold-plated sapphire-tungsten watch~
+A glittering watch let you know the time.~
+~
+9 0 257
+6 0 0 0
+1 50000 1
+A
+18 6
+#9813
+metal fragment hull~
+large fragment of a spaceship's hull~
+A large metal plate is lying here.~
+~
+9 64 513
+18 0 0 0
+1 1000 1
+A
+18 -1
+#9814
+power capsule engine~
+main engine of the Death Star~
+A large heavy power capsule is generating power here.~
+~
+8 262144 16385
+0 0 0 0
+450 500000 1
+A
+25 10
+#9815
+power capsule engine~
+main engine of the Death Star~
+A large heavy power capsule is generating power here.~
+~
+8 262144 16385
+0 0 0 0
+450 500000 1
+A
+25 -5
+#11101
+okbul~
+옥불~
+대림사의 주지를 상징하는 옥불(okbul)이 놓여 있습니다.~
+~
+18 4097 33
+2 0 0 0
+5 100000 0
+#11102
+gate key~
+산문 열쇠~
+열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+1 0 0 0
+1 1000 0
+#11103
+tower key~
+대림사탑 열쇠~
+열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 10000 0
+#11104
+safe key~
+금고 열쇠~
+열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+1 0 0 0
+1 10000 0
+#11105
+chest key~
+보물상자 열쇠~
+열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11109
+mouse key~
+자 열쇠~
+쥐의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11110
+cow key~
+축 열쇠~
+소의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11111
+tiger key~
+인 열쇠~
+범의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11112
+rabbit key~
+묘 열쇠~
+토끼의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11113
+dragon key~
+진 열쇠~
+용의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11114
+snake key~
+사 열쇠~
+뱀의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11115
+horse key~
+오 열쇠~
+말의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11116
+sheep key~
+미 열쇠~
+양의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11117
+monkey key~
+신 열쇠~
+원숭이의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11118
+hen key~
+유 열쇠~
+닭의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11119
+dog key~
+술 열쇠~
+개의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11120
+pig key~
+해 열쇠~
+돼지의 그림이 그려진 열쇠가 떨어져 있습니다.~
+~
+18 4096 1
+2 0 0 0
+1 20000 0
+#11121
+huaju~
+후아주~
+원숭이들이 즐겨 마시는 후아주 병이 떨어져 있습니다.~
+~
+10 0 1
+25 18 35 28
+5 10000 100
+#11122
+banana~
+바나나~
+바나나가 떨어져 있습니다.~
+~
+19 0 1
+30 0 0 0
+2 1110 50
+#11123
+붓 pen~
+붓~
+한자루의 붓(pen)이 바닥에 놓여 있습니다.~
+~
+12 131328 16385
+0 0 0 0
+1 1000 1
+#11124
+종이 paper~
+종이~
+얇은 종이 한장이 바닦에 놓여 있습니다.~
+~
+12 131328 16385
+0 0 0 0
+1 1000 1
+#11126
+여의봉 bong~
+여의봉~
+기다란 여의봉이 바닥에 놓여 있습니다.~
+pound~
+5 114753 24577
+30 10 10 7
+1 100000 1
+A
+19 10
+A
+25 25
+#11127
+금테 golden rim~
+금테~
+멋있는 금테(golden rim)가 바닥에 놓여 있습니다.~
+~
+8 131137 17
+0 0 0 0
+20 1000 1
+A
+12 -500
+A
+25 30
+#11128
+가사 dopo~
+가사~
+금색 가사(dopo)가 가지런히 놓여 있습니다.~
+~
+9 107777 1025
+10 0 0 0
+2 10000 1
+A
+19 10
+A
+25 100
+B
+2048
+#11129
+장화 boots~
+장화~
+청룡 그림이 그려진 장화가 놓여 있습니다.~
+~
+9 91201 65
+8 0 0 0
+10 10000 1
+A
+19 4
+A
+14 500
+#11130
+cap~
+A B-L-O-O-D-Y CAP~
+A Bloody Cap is here.~
+~
+9 57665 17
+2 0 0 0
+20 100000 1
+A
+19 7
+A
+18 +2
+#11132
+scroll teleport~
+a scroll of teleport to the tower~
+A scroll has carelessly been left here.~
+~
+2 131136 16385
+41 -1 -1 -1
+4 120000 1
+E
+scroll~
+The scroll has written a formulae of 'TELEPORT' upon it.
+~
+#11133
+chest 보물 상자~
+보물 상자~
+A 보물 상자(chest) sits here.~
+~
+15 0 0 
+1000 15 11105 0
+1200 0 0 
+#11134
+saint water bottle 성수병~
+성수병~
+성수가 담긴 병이 놓여 있습니다.~
+~
+10 35 1
+41 0 0 0
+1 1 1
+E
+saint water bottle 성수병~
+
+    성스러운 이 물은 석가모니의 땀방울도 그리스도의 핏방울도
+    아닙니다. 단지 이 물은 전설로 내려오는 고대 IMPLE의 체내
+    에서 흘러나온 가장 자연스러운 물이랍니다. 당신이 이 물을
+    마신다면 당신은 삶의 의미를 다시 파악하고 마치 성인이 된
+    듯한 마음을 가지도록 한다는 말이 있습니다.(usage:quaff)
+
+~
+#12201
+castle key 성문 열쇠~
+성문 열쇠(CASTLE KEY)~
+악마 모형의 성문 열쇠가 바닥에 놓여 있습니다.~
+~
+18 131074 16385
+0 0 0 0
+1 1 1
+#12202
+jail key 감옥 열쇠~
+감옥 열쇠(JAIL KEY)~
+커다란 열쇠가 바닥에 놓여 있습니다.~
+~
+18 131074 16385
+0 0 0 0
+1 1 1
+#12203
+room key 방 열쇠~
+방 열쇠(ROOM KEY)~
+방 열쇠가 놓여 있습니다.~
+~
+18 131074 16385
+0 0 0 0
+1 1 1
+#12206
+piece magic paper 부적 조각~
+부적 조각(A PIECE OF MAGIC PAPER)~
+부적 조각(A PIECE OF MAGIC PAPER)이 놓여 있습니다.~
+~
+8 131073 16385
+0 0 0 0
+1 1 1
+#12207
+piece magic paper 부적 조각~
+부적 조각(A PIECE OF MAGIC PAPER)~
+부적 조각(A PIECE OF MAGIC PAPER)이 놓여 있습니다.~
+~
+8 131073 16385
+0 0 0 0
+1 1 1
+#12208
+magic paper 부적~
+부적(MAGIC PAPER)~
+성스러운 마법의 부적이 놓여 있습니다.~
+~
+8 1025 16385
+0 0 0 0
+1 1 1
+#12209
+seed evil power 악마 씨앗~
+악마의 씨앗(SEED OF EVIL POWER)~
+만악의 근원이 되는 악마의 씨앗(SEED OF EVIL POWER)이 있습니다.~
+~
+19 131138 16385
+0 0 0 0
+1 1 1
+B
+5120
+#12211
+paper 종이~
+낡은 종이~
+낡은 종이가 놓여 있습니다.~
+~
+12 131072 1
+0 0 0 0
+1 1 1
+E
+paper text~
+용사들이여,
+
+악마성주 카암을 물리치고, 마을을 구하고, 세상을
+악의 무리에게서 구해 주세요...
+
+제발...
+
+이 글이 용사들에게 용기를 북돋아 줄 수 있도록
+신의 은총이...
+~
+#12212
+bottle 물병~
+물병~
+물병이 버려져 있습니다.~
+~
+15 131072 16385
+5 5 -1 0
+1 1 1
+#12216
+kaalm boots 카암 장화~
+카암의 부츠~
+악마성주 카암의 부츠가 바닥에 놓여 있습니다.~
+~
+9 2626 65
+4 0 0 0
+10 1 1
+A
+25 30
+A
+19 5
+#12217
+kaalm sword 카암 칼~
+카암의 칼~
+악마성주 카암의 칼이 놓여 있습니다.~
+slash~
+5 2882 8193
+0 13 17 3
+30 1 1
+A
+25 20
+A
+19 12
+#12400
+A wonderful Zeusword~
+The Greatest Zeusword~
+The Zeusword lays with some beautiful aura.~
+slash~
+5 323 8193
+171 6 6 7
+3 12 2
+A
+18 +5
+A
+19 +5
+#12401
+key 3rd~
+a 3rd key~
+A 3rd key has been here.~
+~
+18 0 16385
+0 0 0 0
+10 1000 -1
+#12402
+key 3001~
+a 3001 key~
+A 3001 key has been here.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12403
+wings light~
+a Wings light~
+A Wings light lies there.~
+~
+1 4291 16387
+15 0 -1 0
+10 10000 20
+A
+17 -6
+A
+19 +4
+#12404
+picture armor~
+a industrial picture armor~
+A industrial picture armor glows with a beautiful aura.~
+~
+9 4161 9
+10 0 0 0
+20 12000 20
+A
+18 +5
+A
+19 +5
+#12405
+kaist plate~
+a KAIST plate~
+A KAIST plate lies here.~
+~
+9 4160 131073
+10 0 0 0
+20 10000 20
+A
+18 +2
+A
+19 +2
+#12406
+kaist belt~
+a KAIST belt~
+A KAIST belt lies there.~
+~
+9 4159 2049
+10 0 0 0
+20 10000 20
+A
+18 +2
+A
+19 +2
+#12407
+kaist ring~
+a KAIST ring~
+A KAIST ring glows with a smal aura.~
+~
+9 4161 3
+15 0 0 0
+2 12000 20
+A
+17 -15
+A
+19 +4
+#12408
+pencile chok~
+Pencile chok~
+Sharp pencile chok lies there.~
+slash~
+5 4097 8193
+0 18 4 11
+10 20000 20
+A
+19 +5
+A
+3 +3
+#12409
+key 2hogwan~
+a 2hogwan key~
+A 2hogwan key has been here.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12410
+stair key~
+a Stair key~
+A Stair key has been left there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12411
+panty zuzius~
+a panty zuzius~
+A panty key has been here.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12412
+panty two~
+a panty two~
+A two key has been here.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12413
+panty prof~
+a panty prof~
+A prof key has been here.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12414
+chuem~
+a chuem key~
+A chuem key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12415
+duche~
+a duche key~
+A duche key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12416
+seche~
+a seche key~
+A seche key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12417
+computer~
+a computer key~
+A computer key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12418
+micro~
+a micro key~
+A micro key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12419
+communication~
+a communication key~
+A communication key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12420
+circuit~
+a circuit key~
+A circuit key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12421
+control~
+a control key~
+A control key has been there.~
+~
+18 0 16385
+0 0 0 0
+5 1000 -1
+#12422
+kaist mascot~
+KAIST Mascot~
+A cute KAIST mascot left here.~
+~
+8 4163 16385
+0 0 0 0
+5 1000 20
+A
+17 -5
+A
+19 +4
+#12423
+kaist scarf~
+KAIST Scarf~
+A beautiful KAIST scarf lies here.~
+~
+9 5187 5
+10 0 0 0
+5 1000 20
+A
+17 -5
+A
+25 5
+#12424
+kaist gloves~
+KAIST Gloves~
+A warm KAIST gloves lefs here.~
+~
+9 5187 129
+10 0 0 0
+5 1000 20
+A
+14 200
+#12425
+kaist bohos~
+KAIST Bohos~
+A comic KAIST bohos lies here.~
+~
+9 5187 33
+7 0 0 0
+5 1000 20
+A
+26 +10
+#12426
+IQ hat~
+IQ Hat~
+An I.Q. increasing hat lefts here.~
+~
+9 5187 17
+10 0 0 0
+5 1000 20
+A
+3 +10
+#12427
+kaist shield~
+KAIST Shield~
+Here is a KAIST Shield.~
+~
+9 4195 513
+15 0 0 0
+10 10000 20
+A 
+24 -7
+A
+25 7
+#12428
+kaist mangto~
+KAIST Mangto~
+You can see a KAIST Mangto here.~
+~
+9 5187 1025
+13 0 0 0
+10 10000 20
+A
+18 +3
+#12429
+kaist band~
+KAIST Band~
+Here is a KAIST band left without owner.~
+~
+9 5187 4097
+13 0 0 0
+10 10000 20
+A
+19 +3
+#12430
+breadboard ring~
+Breadboard Ring~
+You can see a breadboard ring made in KAIST.~
+~
+9 5187 3
+15 0 0 0
+10 10000 20
+A
+19 +3
+A
+25 +3
+#12431
+kaist armplate~
+KAIST Armplate~
+You can see a KAIST armplate here.~
+~
+9 5187 257
+10 0 0 0
+10 10000 20
+A
+19 +3
+#12432
+kaist kneeband~
+KAIST Kneeband~
+You can see a KAIST kneeband here.~
+~
+9 5187 65537
+10 0 0 0
+10 10000 20
+A
+19 +2
+A
+18 +1
+#12433
+1ho-gwan key~
+1ho-gwan Key~
+You can see 1 ho gwan key.~
+~
+18 0 16385
+0 0 0 0
+5 10000 -1
+#12700
+great dopo~
+Great dopo~
+the JangSamBong's dopo is here~
+~
+9 4161 9
+4 0 0 0 
+2 1500000 10000
+A
+25 100
+A
+26 10
+#12701
+great heal potion~
+Great heal potion~
+the great heal potion is here.~
+~
+10 4161 1
+30 102 33 0
+1 3000000 1
+#12800
+key M7~
+a M7 key~
+A M7 key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#12801
+key M6~
+a M6 key~
+A M6 key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#12802
+key M5~
+a M5 key~
+A M5 key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#12803
+key M4~
+a M4 key~
+A M4 key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#12804
+key M3~
+a M3 key~
+A M3 key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#12805
+key M2~
+a M2 key~
+A M2 key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#12806
+key M1~
+a M1 key~
+A M1 key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#12807
+key dongul~
+a dongul key~
+A dongul key has been set here.~
+~
+18 0 1
+0 0 0 0
+5 1000 0
+#13001
+chocho shield chochoshield~
+Chocho shield~
+a shield is here~
+~
+9 5121 513
+12 0 0 0
+12 20000 0
+A
+18 +3
+A
+19 +3
+#13002
+chovi knee~
+Chovi's knee band~
+A very thick knee band is here~
+~
+9 5121 65537
+5 0 0 0
+10 2000 0
+A
+18 +3
+A
+19 +3
+#13003
+samaui magic book magicbook~
+Samaui's magic book~
+A mysterious book lies on the ground~
+~
+8 5120 16385
+0 0 0 0
+8 2000 0
+A
+17 -4
+A
+19 +2
+#13004
+hawoodon cloak~
+Hawoodon's cloak~
+A cloak is here~
+~
+9 5121 1025
+8 0 0 0
+12 1000 0
+A
+18 +3
+A
+19 +3
+#13005
+seoseo ring seoseoring~
+Seoseo ring~
+A ring is here~
+~
+9 5122 3
+2 0 0 0
+10 2000 0
+A
+17 -10
+A
+19 +3
+#13006
+jangryo jipsin~
+Jangryo's dirty jipsin~
+A dirty jipsin lies on the ground~
+~
+9 5122 65
+6 0 0 0
+5 2000 0
+A
+18 +3
+A
+19 +3
+#13007
+junwee bracelet~
+Junwee's wooden bracelet~
+A bracelet is here~
+~
+9 5121 4097
+10 0 0 0
+10 300 0
+A
+18 +1
+A
+19 +2
+#13009
+jangkak dagger~
+Jangkak's glinting dagger~
+A dagger is here~
+~
+5 94209 8193
+0 25 3 11
+5 20000 0
+A
+18 +2
+A
+19 +2
+#13010
+bandit towel~
+yellow bandit towel~
+A yellow bandit towel is here.~
+~
+9 94273 21
+6 0 0 0
+2 10000 0
+A
+18 +2
+A
+19 +3
+#13051
+wee gate key~
+Wee gate key~
+A key is here~
+~
+18 0 1
+0 0 0 0
+1 20 0
+#13065
+jangryo door key~
+Jangryo door key~
+A jangryo key is here~
+~
+18 0 1
+0 0 0 0
+1 20 0
+#13102
+sarip key~
+Sarip key~
+A sarip key lies on the ground~
+~
+18 0 1
+0 0 0 0
+1 100 0
+#13110
+noogak key~
+Noogak key~
+A noogak key is here~
+~
+18 0 1
+0 0 0 0
+1 200 0
+#13111
+chocho key~
+Chocho key~
+A chocho key is here~
+~
+18 0 1
+0 0 0 0
+1 200 0
+#13301
+sonkwun gabot~
+A Sonkwun gabot~
+A gabot is here~
+~
+9 4098 9
+14 0 0 0
+32 10000 0
+A
+18 +3
+A
+19 +4
+#13302
+bluedragon's yuiju~
+The bluedragon's yuiju~
+A hard ball radiates blue light on the ground.~
+~
+8 1 16387
+0 0 0 0
+10 1000 0
+A
+23 -5
+A
+19 +3
+#13303
+jutae's war boots~
+Jutae's War Boots~
+a boots is here.~
+~
+9 4098 65
+6 0 0 0
+12 1000 0
+A
+13 +500
+A
+5 +2
+#13304
+mosi baji~
+Mosi baji~
+A mosi baji is here~
+~
+9 4097 33
+7 0 0 0
+1 10000 0
+A
+14 -30
+A
+19 +3
+#13305
+seggijul~
+The seggijul~
+a seggijul lies on the ground.~
+~
+9 0 2049
+8 0 0 0
+2 100 0
+A
+18 +1
+A
+19 +2
+#13306
+yeomong knee band~
+Yeomong's knee band~
+A knee band is here.~
+~
+9 4097 65537
+2 0 0 0
+5 1000 0
+A
+18 +1
+A
+19 +2
+#13307
+wooden shield~
+gamnyung's wooden shield~
+a wooden shield is here~
+~
+9 1 513
+6 0 0 0
+10 777 0
+A
+18 -2
+A
+19 +2
+#13309
+white ghost ring~
+White Ghost Ring~
+a ghost ring is here~
+~
+9 162 3
+0 0 0 0
+0 500 0
+A
+24 -2
+A
+19 +1
+#13310
+makoli sabal~
+Makoli sabal~
+A makoli sabal has been left here.~
+~
+17 0 1
+8 8 18 2
+10 300 -1
+#13334
+east castle key~
+East Castle Key~
+a key is here~
+~
+18 0 1
+0 0 0 0
+1 10 0
+#13336
+west castle key~
+West Castle Key~
+a key is here~
+~
+18 0 1
+0 0 0 0
+1 10 0
+#13340
+north gate key~
+North Gate Key~
+a key is here~
+~
+18 0 1
+0 0 0 0
+1 10 0
+#13359
+room key~
+Room Key~
+a key is here~
+~
+18 0 1
+0 0 0 0
+1 10 0
+#13784
+shield aegis~
+Huge Shield~
+Aegis lies here.~
+~
+9 28675 513
+7 0 0 0
+10 40000 50000
+A
+19 5
+A
+17 -7
+#13785
+mirror~
+Silver mirror~
+A shining mirror has been left here.~
+~
+8 61440 16385
+0 0 0 0
+1 30000 30000
+A
+4 3
+A
+25 3
+#13787
+necklace~
+plain necklace~
+A pile of beads is lying here.~
+~
+9 4160 5
+0 0 0 0
+2 20000 35000
+A
+17 -10
+A
+19 1
+#13789
+sword flaming~
+A flaming sword~
+A fiery hot blade is floating here.~
+~
+5 4131 8193
+173 6 6 3
+20 50000 3
+A
+18 3
+A
+19 4
+#13793
+helm battle~
+A battle helm~
+A runed helm made for battle lies here.~
+~
+9 28675 17
+7 0 0 0
+10 45000 45000
+A
+3 2
+A
+4 2
+#13795
+spear athena~
+spear~
+Athena's spear has been left here.~
+pierce~
+5 28673 8193
+175 12 3 0
+30 40000 40000
+A
+18 2
+A
+19 2 
+#13796
+key~
+key~
+key of the Gods.~
+~
+18 0 1
+0 0 0 0
+1 0 1000000
+#13797
+sandals~
+old sandals~
+A pair of old sandals have been discarded here.~
+~
+9 4097 65
+7 0 0 0
+5 30000 30000
+A
+17 -3
+A
+25 -2
+#13798
+gold~
+gold~
+A huge pile of gold is lying here.~
+~
+20 0 1
+0 0 0 0
+0 10000 0
+#13799
+key olympus~
+a Olympus key~
+The Olympus key to the Great Olympus has been left here.~
+~
+18 0 16385
+2 0 0 0
+180 200 5000
+#15001
+diamond key~
+Diamond key~
+The Diamond key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15002
+sapphire key~
+Sapphire key~
+The Sapphire key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15003
+ruby key~
+Ruby key~
+The Ruby key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15004
+gold key~
+Gold key~
+The Gold key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15005
+silver key~
+Silver key~
+The Silver key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15006
+copper key~
+Copper key~
+The Copper key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15007
+iron key~
+Iron key~
+The Iron key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15008
+mine gate key~
+Mine Gate key~
+The Gate key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15012
+pentium key~
+Pentium key~
+The Pentium key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15013
+486 key~
+486 key~
+The 486 key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15014
+386 key~
+386 key~
+The 386 key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15015
+at key~
+AT key~
+The AT key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15016
+xt key~
+XT key~
+The XT key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15017
+msx key~
+MSX key~
+The MSX key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15018
+computertower gate key~
+Computertower Gate key~
+The Gate key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15019
+mazinga chip~
+Mazinga chip~
+A mazinga chip is here.~
+~
+8 4096 16385
+3 0 0 0
+5 100 25
+A
+25 +3
+A
+19 +4
+#15020
+great mazinga chorong~
+The Great Mazinga Chorong~
+A powerful Great Mazinga Chorong lies on the ground.~
+~
+1 4163 16385
+12 0 -1 0
+200 1000000 25
+A
+18 +7
+A
+19 +7
+#15021
+sharon's leggings~
+Sharon's Beautiful Leggings~
+A beautiful leggings lies on the ground.~
+~
+9 4161 33
+15 0 0 0
+50 1500000 25
+A
+18 +4
+A
+19 +4
+#15022
+zizon sword~
+a beautiful ZIZON sword~
+a beautiful sword is here.~
+slash~
+5 61763 8193
+175 15 15 3
+20 12 02
+A
+18 +10
+A
+19 +10
+#15023
+robocop gun~
+A head robocop's gun~
+A head robocop's gun has been left here.~
+~
+6 4096 16385
+16 16 300 0
+5 10000 0
+A
+1 +10
+A
+17 -2
+#15024
+cray robo mail~
+A C-R-A-Y robo M-A-I-L~
+A cray robo mail lies on the ground~
+~
+9 4161 9
+25 0 0 0
+10 100000 30
+A
+18 +2 
+A
+19 +6
+#15025
+mechanic ring mechanicring~
+A ring of secret mechanic robot~
+A mechanic ring has been left here.~
+~
+9 4160 3
+0 0 0 0
+2 25000 33
+A
+17 -16
+A
+19 +5
+#15026
+zzanga's PCB knee~
+a zzanga's PCB knee~
+A zzanga's PCB knee lies on the ground.~
+~
+9 4224 65537
+10 0 0 0
+4 1000 20
+#15027
+titanic gloves of grandiser~
+a titanic gloves of grandiser~
+A titanic gloves is here.~
+~
+9 4097 129
+12 0 0 0
+6 1000 22
+#15028
+pentium computer chip~
+Pentium Computer Chip~
+A chip is here~
+~
+9 1 17
+8 0 0 0
+5 1000 0
+A
+3 +3
+A
+4 +3
+#15029
+diamond robo bracelet robobracelet~
+Diamond robo Bracelet~
+A glinting bracelet is here~
+~
+9 1 4097
+5 0 0 0
+5 1000 0
+A
+12 +50
+A
+13 +50
+#15030
+potion capsule~
+a factory robo capsule~
+A capsule is here~
+~
+10 64 1
+21 79 -1 -1
+1 300 15
+#15031
+president gloves presidentgloves~
+Factory president gloves~
+A gloves is here~
+~
+9 1 129
+5 0 0 0
+5 1000 0
+A
+1 +2
+A
+19 +3
+#15032
+electric wire electricwire~
+Electric Wire~
+A wire is here~
+~
+9 1 5
+6 0 0 0
+4 1000 0
+A
+23 +2
+A
+24 +2
+#15033
+electric socket~
+Electric Socket~
+a socket is here~
+~
+8 0 16387
+0 0 0 0
+5 100 0
+A
+5 +2
+A
+13 -125
+#15035
+factory gate key~
+Factory Gate key~
+The Gate key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15036
+zizon dagger~
+a beautiful ZIZON dagger~
+a beautiful dagger is here.~
+pierce~
+5 4419 8193
+175 10 10 11
+20 12 33
+A
+18 +7
+A
+19 +7
+#15068
+chip key~
+Chip key~
+The Chip key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15072
+vlsi chip key~
+Vlsi Chip key~
+The Chip key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15074
+lsi chip key~
+Lsi Chip key~
+The Chip key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15092
+door key~
+Door key~
+The Door key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15094
+fourth key~
+Fourth key~
+The Fourth key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15095
+third key~
+Third key~
+The Third key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15096
+second key~
+Second key~
+The Second key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15097
+first key~
+First key~
+The First key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15098
+head key~
+Head key~
+The Head key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15103
+door key~
+Door key~
+The Door key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15109
+door key~
+Door key~
+The Door key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15139
+magnetic key~
+Magnetic key~
+The Magnetic key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15153
+door key~
+Door key~
+The Door key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15168
+castle gate key~
+Castle Gate key~
+The Gate key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15181
+secret key~
+Secret key~
+The Secret key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15182
+sharon key~
+Sharon key~
+The Sharon key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15192
+1st dark key~
+1st Dark key~
+The Dark key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15193
+2nd dark key~
+2nd Dark key~
+The Dark key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15194
+3rd dark key~
+3rd Dark key~
+The Dark key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15215
+electron key~
+Electron key~
+The Electron key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15223
+proton key~
+Proton key~
+The Proton key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15224
+quantum key~
+Quantum key~
+The Quantum key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#15225
+curtain key~
+Curtain key~
+The Curtain key is lying here..~
+~
+18 0 16385
+0 0 0 0
+2 100 0
+#40000
+$
+~

@@ -33,7 +33,7 @@ struct obj_flag_data {
 #define ITEM_POTION		10
 #define ITEM_WORN		11
 #define ITEM_OTHER		12
-/* NOTE: #define ITEM_TRASH		13 */
+#define ITEM_TRASH		13
 /* NOTE: #define ITEM_TRAP		14 */
 #define ITEM_CONTAINER 		15
 #define ITEM_NOTE		16
@@ -261,11 +261,11 @@ struct room_data {
 #define NOSUMMON		2
 #define NO_MOB			4
 #define INDOORS			8
-#define LAWFUL			16
-#define NEUTRAL			32
-#define CHAOTIC			64
+// #define LAWFUL			16
+// #define NEUTRAL			32
+// #define CHAOTIC			64
 #define NO_MAGIC		128
-#define TUNNEL			256
+// #define TUNNEL			256
 #define PRIVATE			512
 #define OFF_LIMITS		1024
 #define RENT			2048

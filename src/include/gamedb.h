@@ -5,48 +5,6 @@
 
 #include "typedef.h"
 
-/* --------------      Some Login banners    ----------------- */
-
-#define  MAGICKEY	"op Sesame$"
-
-#define MENU         \
-"GOOD luck to you, Adventurous MUDDER.\r\n\r\n\
-0) Get away from Mud.\r\n\
-1) Into the MUD and Enjoy playing.\r\n\
-2) Modify your description.\r\n\
-3) Change secret key.\r\n\
-4) Delete character.\r\n\r\n\
-   What number? : "
-
-
-#define GREETINGS \
-"\r\n\r\n\
-                   -- * ---<--<--<@-@>-->-->-- * -- * --\r\n\
-       -----===<< * * *   N  A  R  A  I - M  U  D   * * * >>===-----\r\n\
-                   -- * ---<--<--<@-@>-->-->-- * -- * --\r\n\r\n\
-                Land of the Brave, the Beauty and the Beast.\r\n\r\n\
-                      Continued from Old NaraiMUD\r\n\
-                    Derived from EVE-MUD and KIT-MUD\r\n\r\n\
-                    This MUD started 1997. 9. 11. .....\r\n\r\n"
-
-#define WELC_MESSG \
-"-------------<< N-A-R-A-I >>-----------<< M-U-D >>---------------\n\r\
-Welcome to the Living Nightmare. May your visit here be... Interesting.\r\n\r\n\
-Heavenly voice whisperes 'Your fate and destiny lies beyond this world...'.\r\n\
-Yo! poor Mortals... Worship the Great Old Goddess! \r\n\
-Fall on your knees and kiss her feet.\r\n\
-Glory to the Goddess, Glory to Narai...\r\n\
-\r\n   -----===    GOLDEN RULES OF NARAI    ===-----\r\n\
-\r\n   **** PK is LEGAL for any time, any way and any reason!\r\n\
-\r\n   **** NO REIMBURSE !!!\r\n\
-\r\n   **** MULTI/ROBOT PLAYING is *NOT* allowed.\r\n\r\n"
-
-#define STORY     \
-"Once upon a time, long and long years ago...... Ummm...\r\n\
- ....Cookie doesn't say more. You'd better entering the Game.\r\n\r\n"
-
-/*********************************************************************/
-
 /* ------------   data files used by the game system   ------------------*/ 
 /*  default directory is defined in comm.h : usually lib */
 
@@ -59,26 +17,27 @@ Glory to the Goddess, Glory to Narai...\r\n\
 #define ALL_WORLD_FILE "world/world_files"
 
 
-#ifdef NO_DEF
-#define CREDITS_FILE      "credits"	/* for the 'credits' command  */
+#ifdef UNUSED_CODE
+#define WIZARDS_FILE      "wizards"	/* for wizards command : cyb  */
 #define IMOTD_FILE	  "imotd"	/* MOTD for immortals         */
 #define TIME_FILE         "time"	/* game calendar information  */
 #define HELP_PAGE_FILE    "help"	/* for HELP <CR>              */
-#endif  	/* NO_DEF */ 
+#endif  	// UNUSED_CODE
 
 #define PLAYER_FILE       "players"	/* the player database        */
 #define MESS_FILE         "messages"	/* damage message             */
 #define SOCMESS_FILE      "actions"	/* messgs for social acts     */
-/* NOTE: Chnage HELP file name from "help_table" to simpler "help".   */
+/* NOTE: Change HELP file name from "help_table" to simpler "help".   */
 #define HELP_KWRD_FILE    "help"	/* for HELP <keywrd>          */
 #define PAINT_DIR 	  "paints"      /* NOTE: NEW! paints directory   */
 
-/* NOTE: "wizards" + "credits" -> "wizards" ; "motd" + "imotd" -> "motd"  */
-#define NEWS_FILE         "news"	/* for the 'news' command     */
-#define NEWS_OLD_FILE 	  "news_old"    /* NOTE: NEW! archived news   */
-#define MOTD_FILE         "motd"	/* messages of today          */
-#define PLAN_FILE         "plan"	/* for god's plan             */
-#define WIZARDS_FILE      "wizards"	/* for wizards command : cyb  */
+// NOTE: "news" + "old_news" -> "NEWS"
+/* NOTE: "wizards" + "credits" -> "CREDITS" ; "motd" + "imotd" -> "MOTD"  */
+#define NEWS_FILE         "NEWS"	/* for the 'news' command     */
+// #define NEWS_OLD_FILE 	  "news_old"    /* NOTE: NEW! archived news   */
+#define MOTD_FILE         "MOTD"	/* messages of today          */
+// #define PLAN_FILE         "plan"	/* for god's plan             */
+#define CREDITS_FILE      "CREDITS"	/* for the 'credits' command  */
 
 #define STASH		  "stash"	/* stash directory	      */
 #define STASH_EXT	  "sta"

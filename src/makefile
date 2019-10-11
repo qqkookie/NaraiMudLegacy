@@ -200,7 +200,8 @@ $(OBJ)/db.o: db.c   \
     $(INC)/char.h $(INC)/typedef.h  \
     $(INC)/object.h \
     $(INC)/global.h  $(INC)/comm.h \
-    $(INC)/play.h $(INC)/gamedb.h
+    $(INC)/play.h $(INC)/gamedb.h \
+    $(INC)/spells.h
 
 $(OBJ)/db.player.o: db.player.c   \
     $(INC)/char.h $(INC)/typedef.h  \

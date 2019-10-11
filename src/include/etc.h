@@ -22,7 +22,7 @@
 // #define TAXI_TO_KAIST			3014
 // #define TAXI_TO_PROCESS			3052
 
-#define TAXI_KAIST_ENTRY		12401	/* NOTE: KAIST zone renumber 31001->12401  */
+#define TAXI_KAIST_ENTRY		31001	/* OLD NOTE: KAIST zone renumber 31001->12401  */
 #define TAXI_PROCESS_ENTRY		2000
 
 #define OBJ_LSS_BELT			9508
@@ -72,23 +72,24 @@
 
 /* --------------      Good-Bad Island	   ----------------- */
 
-#define SAINT_MIRROR			12204
-#define LANESSA				12203
-#define CARPIE				12220 
-#define GBISLAND_KAALM			12201 
-#define GBISLAND_GOLEM			12223 
+#define GBISLAND_BASE			23300
+#define SAINT_MIRROR			23304
+#define LANESSA				23303
+#define CARPIE				23320 
+#define GBISLAND_KAALM			23301 
+#define GBISLAND_GOLEM			23323 
 
-#define GBISLAND_SEA			12201 
-#define GBISLAND_SEASHORE		12202
-#define GBISLAND_MIRROR_SAINT		12221
-#define GBISLAND_MAGIC_BARRIER_OUT      12231
-#define GBISLAND_BOTTLE			12212
+#define GBISLAND_SEA			23301 
+#define GBISLAND_SEASHORE		23302
+#define GBISLAND_MIRROR_SAINT		23321
+#define GBISLAND_MAGIC_BARRIER_OUT      23331
+#define GBISLAND_BOTTLE			23312
 
-#define GBISLAND_MAGIC_PAPER1		12206
-#define GBISLAND_MAGIC_PAPER2		12207
-#define GBISLAND_MAGIC_PAPER		12208
+#define GBISLAND_MAGIC_PAPER1		23306
+#define GBISLAND_MAGIC_PAPER2		23307
+#define GBISLAND_MAGIC_PAPER		23308
 
-#define GBISLAND_SEED_EVIL_POWER	12209 
+#define GBISLAND_SEED_EVIL_POWER	23309 
 
 /* --------------------------------------------------------- */
 

@@ -98,6 +98,15 @@ struct descriptor_data {
 /*	Global varaible	*/
 extern struct descriptor_data  *descriptor_list;
 
+
+#define STORY     \
+"Once upon a time, long and long years ago...... Ummm...\r\n\
+ ....Cookie doesn't say more. You'd better entering the Game.\r\n\r\n"
+
+extern char login_menu[];
+extern char login_banner[]; 
+extern char login_welcome[];  
+
 /* ==============    Genral Printing proc's    ============== */
 
 #define SEND_TO_Q(messg, desc)  write_to_q((messg), &(desc)->output)

@@ -15,6 +15,7 @@
 #include "comm.h"
 #include "play.h"
 #include "gamedb.h" 
+#include "spells.h" 
 
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
@@ -114,9 +115,11 @@ void boot_db(void)
     /* 	     separated by form-feed(^L) char				*/
     log("Reading motd.");
     if( file_to_string(MOTD_FILE, motd)) {
-	for( imotd = motd; *imotd && *imotd != '\f' ; imotd++ ) ;
-	if ( *imotd )
-	    *(imotd++) = '\0' ;
+	imotd = strstr(motd, "\n#IMMO\n");
+	if ( imotd ) {
+	    *imotd = '\0' ;
+	    imotd += strlen("\n#IMMO\n");
+	}
 	else
 	    imotd = motd;
     }
@@ -1063,6 +1066,14 @@ struct obj_data *read_object(int nr, int type)
     fscanf(obj_f, " %d \n", &tmp);
     obj->obj_flags.gpd = tmp;
 
+    // NOTE: Weapon magic spell type translation 
+    if ( obj->obj_flags.type_flag == ITEM_WEAPON ) {
+	if (obj->obj_flags.value[0] == 1000)
+	    obj->obj_flags.value[0] = WEAPON_ANY_MAGIC;
+	else if (obj->obj_flags.value[0] < 10 && obj->obj_flags.value[0] > 0)
+	    obj->obj_flags.value[0] += WEAPON_ANY_MAGIC;
+    }
+
     /* *** extra descriptions *** */
 
     obj->ex_description = 0;
@@ -1260,8 +1271,9 @@ char *file_to_string(char *name, char *sbuf)
 
     while( fgets( bp, MAX_LINE_LEN-3, fl) != NULL ) { 
 	bp += strlen(bp);
-	strcpy( bp, "\r" );
-	bp ++;
+	// NOTE: not \n\r => \n
+	// strcpy( bp, "\r" );
+	// bp ++;
 	if ( bp > buf + buflen - MAX_LINE_LEN ) {
 	    if ( sbuf ) {
 		log("fl->strng: string too big (db.c, file_to_string)");
