@@ -1,13 +1,3 @@
-#3000
-The Locker room in General~
- You can SAVE or LOAD your items here.
-~
-30 12 0
-D2
-~
-~
-0 -1 3002
-S
 #3001
 The Temple Of Midgaard~
    You are in the southern end of the temple hall in the Temple of Midgaard.
@@ -37,11 +27,11 @@ D3
 D4
 ~
 ~
-0 -1 3081
+0 -1 3061
 D5
 ~
 ~
-0 -1 3039
+0 -1 3062
 S
 #3002
 The Bank~
@@ -53,7 +43,7 @@ should read the sign.  And take your hat off, please.
 D0
 ~
 ~
-0 -1 3000
+0 -1 1841
 D2
 ~
 ~
@@ -174,7 +164,7 @@ D4
 You see enterence to Luxurious Villas.
 ~
 ~
-0 -1 7710
+0 -1 13310
 S
 #3008
 The Reception~
@@ -519,7 +509,7 @@ the new McDonalds.  The alley continues east.
 D0
 ~
 ~
-0 -1 3060
+0 -1 3066
 D1
 ~
 ~
@@ -628,16 +618,6 @@ D5
 ~
 0 -1 3050
 S
-#3039
-Remortal Place~
-You are standing at the place of remortaling and demoting.You want to be new bie again. You can feel the baby in your heart. Let's reborn with your power!!!! Your spells and status can be saved. Watch out. You should type this. <say CLASS>,in which CLASS can be 'W' 'M' 'C' 'T'. E.G> remort W <<---You will be reborn with Warrior character!!!!
-~
-52 136 1
-D0
-~
-~
-0 0 3001
-S
 #3040
 Inside the West Gate of Midgaard~
    You are by two small towers that have been built into the city wall and
@@ -669,7 +649,7 @@ west from here.
 D0
 ~
 ~
-0 -1 3221
+0 -1 1871
 D1
 You see the city gate.
 ~
@@ -953,7 +933,7 @@ behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
 D0
 ~
 ~
-0 -1 3095
+0 -1 1855
 D1
 ~
 ~
@@ -979,23 +959,38 @@ D5
 ~
 0 -1 3034
 S
-#3060
-The MidGaard Hospital~
-   You are in the MidGaard Hospital.  It is a very modern facility,
-providing the latest in health care.  There is a sign here.
+#3061
+The Quest Room~
+   You are standing in the quest room. There is a small poster on the wall.
 ~
-30 8 0
-D2
+30 2060 0
+D5
+You see the Midgaard.
 ~
 ~
-0 -1 3026
+0 -1 3001
 E
-sign~
+poster~
 
-Use "list" to get see the service available.
-Use "buy <number>" and you might be cured.
+   quest - QM proposes a quest to you.
+           If you make it, QM will give some gifts to you.
 
 ~
+S
+#3062
+Remortal Place~
+    You are standing at the place of remortaling and demoting.
+You want to be new bie again. You can feel the baby in your heart.
+Let's reborn with your power!!!! Your spells and status can be saved.
+Watch out.
+You should type this. <say CLASS>, in which CLASS can be 'W' 'M' 'C' 'T'.
+E.G> remort W <<---You will be reborn with Warrior character!!!!
+~
+52 136 1
+D0
+~
+~
+0 0 3001
 S
 #3065
 The Metaphysician's~
@@ -1027,6 +1022,24 @@ not touch it.  The Metaphysicians presence can be felt behind it.
 
 ~
 S
+#3066
+The MidGaard Hospital~
+   You are in the MidGaard Hospital.  It is a very modern facility,
+providing the latest in health care.  There is a sign here.
+~
+30 8 0
+D2
+~
+~
+0 -1 3026
+E
+sign~
+
+Use "list" to get see the service available.
+Use "buy <number>" and you might be cured.
+
+~
+S
 #3070
 The Board Room~
   This is where the bulletin board should be.  Relax, the floor is soft.
@@ -1054,24 +1067,6 @@ E
 poster~
 지저분 하게 뜯긴 HITE 맥주 포스터.
 쭉쭉 빵빵 늘씬한 미녀가 앙증맞게 작은 비키니를 입고 섹시하게 웃고 있다.
-~
-S
-#3081
-The Quest Room~
-   You are standing in the quest room. There is a small poster on the wall.
-~
-30 2060 0
-D5
-You see the Midgaard.
-~
-~
-0 -1 3001
-E
-poster~
-
-   quest - QM proposes a quest to you.
-           If you make it, QM will give some gifts to you.
-
 ~
 S
 #3090
@@ -1141,88 +1136,6 @@ STORAGE ROOM~
 THIS ROOM FOR INTERNAL USE ONLY
 ~
 30 0 0
-S
-#3095
-Entrance to POLICE guild~
- 여기는 경찰청 입구입니다. 경찰청에 근무하려면, sign을 보세요.
-~
-30 4614 0
-D0
-~
-~
-0 -1 3096
-D2
-~
-~
-0 -1 3054
-E
-sign~
-You can do JOIN or LEAVE.
-You cannot go north if you are not a member of POLICE.
-~
-S
-#3096
-Practice yard of POLICE guild~
- 여기는 경찰들이 훈련을 하는 곳입니다. sign을 보세요.
-~
-30 4614 0
-D0
-~
-~
-0 -1 3097
-D1
-~
-~
-0 -1 3098
-D2
-~
-~
-0 -1 3095
-D3
-~
-~
-0 -1 3099
-E
-sign~
-train number_of_skill
-list will show you the numbers
-~
-S
-#3097
-Lounge of POLICE guild~
- 여기서 경찰들이 피곤한 몸을 쉽니다.
-~
-30 37382 0
-D2
-~
-~
-0 -1 3096
-S
-#3098
-Private Shop of POLICE guild~
- 여기서 당신은 물품들을 싼값에 구입하실수 있습니다.
-~
-30 4614 0
-D3
-~
-~
-0 -1 3096
-S
-#3099
-Locker room of POLICE guild~
- 여기서 당신은 물품을 저장하고 실제세계로 나갑니다.
-~
-30 4614 0
-D1
-~
-~
-0 -1 3096
-E
-Locker~
-Available commands:
-	SAVE
-	LOAD
-~
 S
 #99999
 $~

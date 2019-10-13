@@ -1,12 +1,15 @@
 Northern Midgaard Main City~
 3099 20 2
 *
-O 0 1000 5 3001    Sundew Machine
+O 0 1000 4 3001    Sundew Machine
+O 0 1000 4 3097	   Sundew Machine of POLICE
+O 0 1001 4 3097    Altar in POLICE
 O 0 1001 4 3054    Temple Altar
 O 0 3099 5 3070    The Board
 O 0 3098 1 3071    The Mail Box
 * // Removed board in Post Office (by Cookie)
 * O 0 3099 5 3071    The Board
+O 0 3099 5 3099	   The Police Board
 O 0 7999 1 3007    Slot Machine
 O 0 8000 1 3002    String Machine
 *
@@ -46,7 +49,7 @@ G 1 3021 100
 G 1 3022 100
 G 1 3023 100
 G 1 3024 100
-* E 1 3022 100 16            wields a longsword
+*E 1 3022 100 16            wields a longsword
 M 0 3150 24 3011
 *
 M 0 3004 1 3020       The armourer
@@ -66,7 +69,7 @@ G 1 3043 100
 G 1 3046 100
 G 1 7923 1
 G 1 7922 1
-* E 1 3022 100 16       wields a longsword
+*E 1 3022 100 16       wields a longsword
 M 0 3150 24 3020
 *
 M 0 3002 1 3010     The grocer
@@ -75,14 +78,14 @@ G 1 3031 100
 G 1 3032 100
 G 1 3034 100
 G 1 3035 100
-* E 1 3022 100 16       wields a longsword
+*E 1 3022 100 16       wields a longsword
 M 0 3150 24 3010
 *
 M 0 3001 1 3009      The baker
 G 1 1313 500           a map
 G 1 3010 500
 G 1 3011 500
-* E 1 3022 100 16        wields a longsword
+*E 1 3022 100 16        wields a longsword
 M 0 3150 24 3009
 *
 M 0 3005 1 3008       Doris
@@ -98,11 +101,11 @@ M 0 3007 1 3050       Sailor selling stuff in the warehouse
 M 0 3040 1 3007       The bartender
 G 1 3000 100
 G 1 3001 100
-* E 1 3022 100 16            wields a longsword
+*E 1 3022 100 16            wields a longsword
 *
 M 0 3042 1 3018       The Magic Users Waiter
 G 1 3005 100
-* E 1 3022 100 16            wields a longsword
+*E 1 3022 100 16            wields a longsword
 *
 M 0 3045 2 3021       A Carpenter
 E 1 1307 2 16            wields a hammer
@@ -114,10 +117,10 @@ M 0 3150 24 3027
 *
 M 0 3046 1 3048       Filthy (bartender) in Grubby Inn
 G 1 3138 100
-G 1 3008 100          Bottle of Condition	     
+G 1 1 100
 G 1 3003 100
 G 1 3004 100
-* E 1 3022 100 16            wields a longsword
+*E 1 3022 100 16            wields a longsword
 *
 M 0 3020 2 3019       The Magic Users Guildmaster
 *

@@ -1062,6 +1062,114 @@ W 35 5 16 15 9
 524312 0 500
 T 6 11 14 10 12
 5 12 8 M
+#13800
+fighter~
+A fighter~
+A fighter is ready to fight you!
+~
+~
+32872 100663322 -1000
+W 40 5 7 5 17
+100000 15 8 M
+#13801
+paladin~
+A paladin~
+A paladin is ready to fight you!
+~
+~
+36968 100745370 -1000
+W 40 5 7 6 17
+100000 15 8 M
+#13802
+cleric~
+A cleric~
+A cleric is ready to heal him!
+~
+~
+32872 100745370 -1000
+C 40 5 8 6 16
+100000 15 8 M
+#13803
+mage~
+A mage~
+A mage is ready to full fire you!
+~
+~
+32808 167839770 -1000
+M 40 5 8 6 16
+100000 15 8 M
+#13804
+dragon~
+A dragon~
+A dragon is ready to fly!
+~
+~
+8296 33622042 -1000
+M 40 5 9 6 16
+100000 15 8 M
+#13805
+thief~
+A thief~
+A thief is ready to steal your gold coins!
+~
+~
+33020 37488778 -1000
+T 40 5 7 8 18
+100000 17 8 M
+#13806
+1st keeper~
+The 1st key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 7 14 4 15
+100000 16 8 M
+#13807
+2nd keeper~
+The 2nd key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 9 15 5 15
+100000 17 8 M
+#13808
+3rd keeper~
+The 3rd key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 10 15 6 16
+100000 17 8 M
+#13809
+4th keeper~
+The 4th key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 11 14 5 17
+100000 17 8 M
+#13810
+5th keeper~
+The 5th key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 12 15 5 17
+100000 18 8 M
+#13811
+6th keeper~
+The 6th key keeper~
+A keeper is ready to flee with his key!
+~
+~
+4411466 37488778 -1000
+W 41 12 16 7 17
+100000 18 8 M
 #2101
 marauder~
 A marauder~
@@ -2018,6 +2126,105 @@ bird 새~
 8 8 1000
 W 15 7 17 15 17
 2000 12 8 N
+#15801
+field soldier~
+Field soldier~
+Field soldier is here. He looks very hungry.
+~
+~
+104 24 -999
+W 28 5 5 15 19
+1000 14 8 M
+#15802
+castle soldier~
+Castle soldier~
+Castle soldier is here. He want to escape this terrible castle..
+~
+~
+104 24 -999
+W 33 6 3 15 17
+1250 14 8 M
+#15803
+secret soldier~
+Secret soldier~
+Secret soldier is here. He will going to bed soon..
+~
+~
+104 24 -999
+W 35 7 5 15 19
+1500 13 8 M
+#15817
+general jangbi~
+General jangbi~
+General jangbi is sleeping here. His dream is drink Makgolri..
+~
+~
+4138 16777360 -500
+W 38 15 14 10 18
+3000 13 4 M
+#15827
+general chowoon~
+General chowoon~
+The general chowoon is standing here. He looks very strong..
+~
+~
+4138 16777368 -700
+W 40 12 13 18 13
+4000 16 8 M
+#15828
+general macho~
+General macho~
+The general macho is standing here. He likes fighting..
+~
+~
+4138 16777368 -600
+W 40 13 20 17 13
+5000 10 8 M
+#15832
+general gwanwoo~
+general gwanwoo~
+The great general gwanwoo is standing here. He looks at you.
+~
+~
+4106 16779416 -800
+W 40 13 13 7 9
+10000 17 8 M
+#15833
+mosa gongmyung~
+Mosa gongmyung~
+The great mosa,gongmyung is here. He is angry at your rudeness..
+~
+~
+42 33556632 -500
+M 41 9 13 8 9
+15000 12 8 M
+#15834
+king yubi~
+King yubi~
+The king of chok-kingdom,yubi is here..He looks very weak..but...
+~
+~
+4106 33556632 500
+W 41 8 12 12 8
+30000 13 8 M
+#15835
+cleric hwata~
+Cleric hwata~
+The mysterious cleric hwata is here..He is making something.
+~
+~
+10 33556632 700
+C 41 7 12 7 6
+1000 9 8 M
+#15836
+secret guard~
+Secret guard~
+The secret guard of Chok is here..He is guarding VIP of Chok.
+~
+~
+1048586 34605208 700
+C 38 5 18 8 11
+1000 10 8 M
 #2900
 knight ethereal dark~
 The Dark Ethereal Knight~
@@ -6457,38 +6664,6 @@ mirror son ogong~
 1048618 50858152 800
 W 41 2 2 20 20
 100 20 8 M
-#13601
-wang~
-Wang Comicky~
-멍텅하게 생긴 W.C.가 당신을 보고 있습니다.
-~
-찐따같이 생긴 W.C.가 당신을 보지만 두려워 마세요.그는 강하지 않으니깐요.
-하지만 사실은 당신 보다는 훨씬 괜찮아 보입니다. 너 이놈이 죽을라구...
-~
-10 33556632 700
-C 43 13 12 7 15
-1000 18 8 M
-#13602
-cap~
-Cap Comicky~
-상상을 초월하 생긴 C.C.가 당신을 보고 있습니다.
-~
-찐따같이 생긴 C.C.가 당신을 보니깐두려워하 세요.그는 강하지 않으니깐요.
-하지만 사실은 당신 보다는 훨씬 약해 보입니다. 너 이놈이 죽을라구...
-~
-10 33556632 700
-C 41 9 12 7 18
-1000 18 8 M
-#13603
-Mac~
-Mac Comicky~
-멍텅하게 생긴 M.C.가 당신을 보고 있습니다.
-~
-무서워서 두려움에 떨다보면 1234 를 볼수 있을런지.킬킬킬.
-~
-10 33556632 700
-C 41 9 12 7 14
-1000 14 8 M
 #13784
 zeus god~
 Zeus~
@@ -6585,114 +6760,6 @@ and clever.
 4106 136 0
 W 40 3 14 19 8
 0 13 8 M
-#13800
-fighter~
-A fighter~
-A fighter is ready to fight you!
-~
-~
-32872 100663322 -1000
-W 40 5 7 5 17
-100000 15 8 M
-#13801
-paladin~
-A paladin~
-A paladin is ready to fight you!
-~
-~
-36968 100745370 -1000
-W 40 5 7 6 17
-100000 15 8 M
-#13802
-cleric~
-A cleric~
-A cleric is ready to heal him!
-~
-~
-32872 100745370 -1000
-C 40 5 8 6 16
-100000 15 8 M
-#13803
-mage~
-A mage~
-A mage is ready to full fire you!
-~
-~
-32808 167839770 -1000
-M 40 5 8 6 16
-100000 15 8 M
-#13804
-dragon~
-A dragon~
-A dragon is ready to fly!
-~
-~
-8296 33622042 -1000
-M 40 5 9 6 16
-100000 15 8 M
-#13805
-thief~
-A thief~
-A thief is ready to steal your gold coins!
-~
-~
-33020 37488778 -1000
-T 40 5 7 8 18
-100000 17 8 M
-#13806
-1st keeper~
-The 1st key keeper~
-A keeper is ready to flee with his key!
-~
-~
-4411466 37488778 -1000
-W 41 7 14 4 15
-100000 16 8 M
-#13807
-2nd keeper~
-The 2nd key keeper~
-A keeper is ready to flee with his key!
-~
-~
-4411466 37488778 -1000
-W 41 9 15 5 15
-100000 17 8 M
-#13808
-3rd keeper~
-The 3rd key keeper~
-A keeper is ready to flee with his key!
-~
-~
-4411466 37488778 -1000
-W 41 10 15 6 16
-100000 17 8 M
-#13809
-4th keeper~
-The 4th key keeper~
-A keeper is ready to flee with his key!
-~
-~
-4411466 37488778 -1000
-W 41 11 14 5 17
-100000 17 8 M
-#13810
-5th keeper~
-The 5th key keeper~
-A keeper is ready to flee with his key!
-~
-~
-4411466 37488778 -1000
-W 41 12 15 5 17
-100000 18 8 M
-#13811
-6th keeper~
-The 6th key keeper~
-A keeper is ready to flee with his key!
-~
-~
-4411466 37488778 -1000
-W 41 12 16 7 17
-100000 18 8 M
 #15001
 diamond robot~
 Diamond robot~
@@ -7244,105 +7311,6 @@ The ugly human,nipporica stands here..
 42 152 500
 M 38 9 12 19 6
 100 13 8 M
-#15801
-field soldier~
-Field soldier~
-Field soldier is here. He looks very hungry.
-~
-~
-104 24 -999
-W 28 5 5 15 19
-1000 14 8 M
-#15802
-castle soldier~
-Castle soldier~
-Castle soldier is here. He want to escape this terrible castle..
-~
-~
-104 24 -999
-W 33 6 3 15 17
-1250 14 8 M
-#15803
-secret soldier~
-Secret soldier~
-Secret soldier is here. He will going to bed soon..
-~
-~
-104 24 -999
-W 35 7 5 15 19
-1500 13 8 M
-#15817
-general jangbi~
-General jangbi~
-General jangbi is sleeping here. His dream is drink Makgolri..
-~
-~
-4138 16777360 -500
-W 38 15 14 10 18
-3000 13 4 M
-#15827
-general chowoon~
-General chowoon~
-The general chowoon is standing here. He looks very strong..
-~
-~
-4138 16777368 -700
-W 40 12 13 18 13
-4000 16 8 M
-#15828
-general macho~
-General macho~
-The general macho is standing here. He likes fighting..
-~
-~
-4138 16777368 -600
-W 40 13 20 17 13
-5000 10 8 M
-#15832
-general gwanwoo~
-general gwanwoo~
-The great general gwanwoo is standing here. He looks at you.
-~
-~
-4106 16779416 -800
-W 40 13 13 7 9
-10000 17 8 M
-#15833
-mosa gongmyung~
-Mosa gongmyung~
-The great mosa,gongmyung is here. He is angry at your rudeness..
-~
-~
-42 33556632 -500
-M 41 9 13 8 9
-15000 12 8 M
-#15834
-king yubi~
-King yubi~
-The king of chok-kingdom,yubi is here..He looks very weak..but...
-~
-~
-4106 33556632 500
-W 41 8 12 12 8
-30000 13 8 M
-#15835
-cleric hwata~
-Cleric hwata~
-The mysterious cleric hwata is here..He is making something.
-~
-~
-10 33556632 700
-C 41 7 12 7 6
-1000 9 8 M
-#15836
-secret guard~
-Secret guard~
-The secret guard of Chok is here..He is guarding VIP of Chok.
-~
-~
-1048586 34605208 700
-C 38 5 18 8 11
-1000 10 8 M
 #16001
 king chocho~
 Chocho~
@@ -8168,6 +8136,38 @@ The dongulkeeper is guarding.
 8234 648 -1000
 W 40 3 11 13 17
 50000 12 8 F
+#13601
+wang~
+Wang Comicky~
+멍텅하게 생긴 W.C.가 당신을 보고 있습니다.
+~
+찐따같이 생긴 W.C.가 당신을 보지만 두려워 마세요.그는 강하지 않으니깐요.
+하지만 사실은 당신 보다는 훨씬 괜찮아 보입니다. 너 이놈이 죽을라구...
+~
+10 33556632 700
+C 43 13 12 7 15
+1000 18 8 M
+#13602
+cap~
+Cap Comicky~
+상상을 초월하 생긴 C.C.가 당신을 보고 있습니다.
+~
+찐따같이 생긴 C.C.가 당신을 보니깐두려워하 세요.그는 강하지 않으니깐요.
+하지만 사실은 당신 보다는 훨씬 약해 보입니다. 너 이놈이 죽을라구...
+~
+10 33556632 700
+C 41 9 12 7 18
+1000 18 8 M
+#13603
+Mac~
+Mac Comicky~
+멍텅하게 생긴 M.C.가 당신을 보고 있습니다.
+~
+무서워서 두려움에 떨다보면 1234 를 볼수 있을런지.킬킬킬.
+~
+10 33556632 700
+C 41 9 12 7 14
+1000 14 8 M
 #19003
 id student~
 ID Student~

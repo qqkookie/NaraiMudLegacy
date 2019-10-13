@@ -210,7 +210,7 @@ void assign_rooms(void)
     world[real_room(ROOM_GUILD_POLICE_LOCKER)].funct = locker_room;
     world[real_room(ROOM_GUILD_OUTLAW_LOCKER)].funct = locker_room;
     world[real_room(ROOM_GUILD_ASSASSIN_LOCKER)].funct = locker_room;
-    world[real_room(3000)].funct = locker_room;
+    world[real_room(ROOM_LOCKER)].funct = locker_room;
 
     /* guild practice yard */
     world[real_room(ROOM_GUILD_POLICE_PRACTICE)].funct = guild_practice_yard;
@@ -228,13 +228,13 @@ void assign_rooms(void)
  */
 
     world[real_room(3031)].funct = pet_shops;
-    world[real_room(3039)].funct = remortal;
-    world[real_room(3060)].funct = hospital;
-    world[real_room(3065)].funct = metahospital;
+    world[real_room(ROOM_REMORTAL)].funct = remortal;
+    world[real_room(ROOM_HOSPITAL)].funct = hospital;
+    world[real_room(ROOM_METAPHYSICIAN)].funct = metahospital;
     world[real_room(1)].funct = safe_house;
     world[real_room(MID_TEMPLE)].funct = safe_house;
     world[real_room(3008)].funct = safe_house;
-    /* NOTE: jail for banished PC is now re-modeled jail_room() */
+    /* NOTE: jail for banished PC is now re-modeled as jail_room() */
     /* world[real_room(6999)].funct = safe_house; */
     world[real_room(JAIL_ROOM)].funct = jail_room;
     world[real_room(3070)].funct = safe_house;
@@ -264,7 +264,7 @@ void assign_rooms(void)
     world[real_room(ROOM_POLICE_JAIL)].funct = jail_room;
 
     /* quest room */
-    world[real_room(3081)].funct = quest_room;
+    world[real_room(ROOM_QUEST)].funct = quest_room;
 
     /* GoodBadIsland */
     world[real_room(GBISLAND_SEA)].funct = gbisland_sea;
@@ -302,11 +302,10 @@ int level_quest[45] =
 };
 
 
-#define ZONE_NUMBER 45
 static struct {
     int number;
     char *name;
-} zone_data[ZONE_NUMBER] = {
+} zone_data[] = {
 
     { 99,	"the LIMBO" },
     { 299,	"the East Castle" },
@@ -314,15 +313,13 @@ static struct {
     { 1499,	"the Houses" },
     { 1599,	"Dirk's Castle" },
     { 1799,	"SHIRE" },
-    { 1899,	"The Police Jail" },
+    { 1899,	"Village of Midgaard" },
     { 1999,	"The Lands" },
-    { 2099,	"Process' Castle" },
     { 2199,	"The Wasteland" },
-    { 2300,	"Dragon Tower" },
+    { 2290,	"Dragon Tower" },
     { 2399,	"Muncie" },
     { 2699,	"The Corporation" },
     { 2799,	"The NeverLand" },
-    { 2899,	"Kingdom Of Chok" },
     { 2999,	"The Keep Of MahnTor" },
     { 3099,	"Northern Midgaard MainCity" },
     { 3199,	"Southern Part Of Midgaard" },
@@ -339,7 +336,6 @@ static struct {
     { 7099,	"SEWER" },
     { 7199,	"Second SEWER" },
     { 7399,	"SEWER MAZE" },
-    /* NOTE: { 7899,	"The Tunnels" }, 7500-7899 : Secret Room */
     { 7499,	"The Tunnels" },
     { 7999,	"Redfernes Residence" },
     { 9099,	"Arachnos" },
@@ -347,21 +343,28 @@ static struct {
     { 9699,	"Death Kingdom" },
     { 9771,	"Galaxy" },
     { 9851,	"The Death Star" },
-    { 12099,	"Easy Zone" },
-    /* NOTE: zone/mob renumbered */
-    { 12599,	"KAIST" },
-    { 12899,	"Moo Dang" },
-    { 13199,	"Kingdom Of Wee" },
-    { 13399,	"O Kingdom" },
+    { 11299,	"Dae Rim Sa" },
+    // Added zones
+    { 13399,	"Utility Zone" },
+    { 13699,	"Easy zone" },
     { 13798,	"Mount Olympus" },
+    { 13899,	"Process' Castle" },
     { 15299,	"Robot City" },
+    /* NOTE: zone/mob renumbered */
+    { 15899,	"Kingdom Of Chok" },
+    { 16199,	"Kingdom Of Wee" },
+    { 17099,	"O Kingdom" },
+    { 18199,	"Moo Dang" },
+    { 19199,	"KAIST" },
+    { 23399,	"Good-Bad-Island" },
+    { -1,	NULL }
 };
 
 char *find_zone(int number)
 {
     int i;
 
-    for (i = 0; i < ZONE_NUMBER; i++) {
+    for (i = 0; zone_data[i].number > 0; i++) {
 	if (zone_data[i].number > number)
 	    return zone_data[i].name;
     }
@@ -593,37 +596,33 @@ void do_quest(struct char_data *ch, char *arg, int cmd)
 void init_quest(void)
 {
     FILE *fp;
-    char buf[MAX_STRING_LENGTH];
+    char buf[MAX_LINE_LEN], *name;
     int num, size;
 
     if (!(fp = fopen(QUEST_FILE, "r"))) {
 	log("init quest (quest_file)");
-	exit(0);
+	exit(1);
     }
 
     topQM = 0;
     while (1) {
-	fscanf(fp, "%s", buf);
+	fgets(buf, MAX_LINE_LEN - 1, fp);
 	if (buf[0] == '$') {	/* end of file */
 	    fclose(fp);
 	    return;
 	}
+	// fscanf(fp, " %d ", &(QM[topQM].level));
 
-	num = atoi(buf);
-	/* NOTE: Check virtual number of mob at boot time. */
-	if ( real_mobile(num) < 0 )
-	    log("Oops! non-existent quest mob.");
+	sscanf(buf, " %d %d %n", &num, &(QM[topQM].level), &size);
+	name = buf + size;
 
 	QM[topQM].virtual = num;
 
-	fscanf(fp, " %d ", &(QM[topQM].level));
-
-	fgets(buf, MAX_STRING_LENGTH - 1, fp);
 	// NOTE: BUG FIX!!!
-	size = strlen(buf) +1;
-	buf[size - 1] = 0;
+	size = strlen(name) +1;
+	name[size - 2] = '\0';	//  chop off '\n'
 	CREATE(QM[topQM].name, char, size);
-	strcpy(QM[topQM].name, buf);
+	strcpy(QM[topQM].name, name);
 
 	topQM++;
 
@@ -631,6 +630,12 @@ void init_quest(void)
 	    log("Quest Mobiles are overflow.");
 	    fclose(fp);
 	    return;
+	}
+	/* NOTE: Check virtual number of mob at boot time. */
+	if ( real_mobile(num) < 0 ) {
+	    char buf2[MAX_OUT_LEN];
+	    sprintf(buf2, "Oops! non-existent quest mob: %s", buf);
+	    log(buf2);
 	}
 
     }

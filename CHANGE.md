@@ -267,4 +267,52 @@ lib/motd -> lib/MOTD
 GREETING BANNER and MENU moved ifrom "gamedb.h" to "comm.c"
 
 
-------------------------------------------------------
+=================================================================
+
+2019. 10. 11. (금) 20:40:26 KST
+
+ZONE RENUMERING MOVE
+
+MooDang 20000~20199 => 18000 ~18199
+
+KAIST   31000~31199 => 19000 ~19199
+
+Kingdom of Chok : 2800~2899 => 15800~15899
+
+Removed all exits from LIMBO #27 Secret Room
+
+REmoved zone :
+	The jale (police jail) to Midgaard Village (#1800 =>#1852)
+
+Quest Room (#3081 => #3061)
+
+Remortal room (#3039 => #3062)
+
+Meta Physician (#3065)
+
+Hospital room (#3060 -> #3066)
+
+NEW ZONE Midgaard Village
+
+Locker ROOM (#3000 => #1841)
+
+Police Jale #1800 => #1852
+
+Police 3095-3099 => 1855-1859
+
+Outlaw 3221~3226 => 1871~1876
+
+Assasin 9050~ 9053 => 1880~1883
+
+Utility 13300-13399
+ #27 => #13387
+Secret 7500~7599  => 13400-13499
+EasyLand 12000~12099 => 13500-13599
+Pride 7600~7699    => 13600-13699
+
+Process 2000-2099
+Process 2000~2099 => 13800~13899
+
+
+
+

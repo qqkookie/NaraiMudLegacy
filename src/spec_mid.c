@@ -1195,21 +1195,21 @@ int level_gate(struct char_data *ch, int cmd, char *arg)
     case CMD_EAST:		/* east */
 	break;
     case CMD_SOUTH:		/* south */
-	if (r == 1453)
+	if (r == 1453)		    // Club Safari
 	    f = (GET_LEVEL(ch) < 12);
-	else if (r == 3041)
-	    f = (GET_LEVEL(ch) < 25);
-	else if (r == 2535)
+	else if (r == 3041)	    // To Mage Tower
+	    f = (GET_LEVEL(ch) < 25);	
+	else if (r == 2535)	    // TB floor 8
 	    f = (GET_LEVEL(ch) > 15);
-	else if (r == 6001)
+	else if (r == 6001)	    // To SHIRE
 	    f = (GET_LEVEL(ch) > 12);
-	else if (r == 9400)
+	else if (r == 9400)	    // To Arena
 	    f = (GET_LEVEL(ch) > 3);
 	break;
     case CMD_WEST:		/* west */
-	if (r == 3500)
+	if (r == 3500)		    // West Castle
 	    f = (GET_LEVEL(ch) > 20);
-	else if (r == 5200)
+	else if (r == 5200)	    // to Thalos
 	    f = (GET_LEVEL(ch) > 24 || GET_LEVEL(ch) < 10);
 	break;
     case CMD_UP:		/* up */

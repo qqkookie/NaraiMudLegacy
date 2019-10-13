@@ -1117,14 +1117,16 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	    ch->player.pked_num, ch->player.pk_num);
     if ( !brief )
 	send_to_char(buf, to);
+    sprintf(buf, STRHAN("You have made  #%d QUEST(s).",
+	 "당신은 현재 %d번 QUEST를 풀었습니다.", ch), ch->quest.solved);
     if (!brief && ch->player.guild >= 1 && ch->player.guild <= MAX_GUILD_LIST) {
-	sprintf(buf, STRHAN("You are a member of %s guild.    ",
-			    "당신은  %s 길드의 회원입니다.    ", ch),
+	char buf2[100];
+	sprintf(buf2, STRHAN("  You are a member of %s guild.",
+			    "  당신은  %s 길드의 회원입니다.", ch),
 		guild_names[ch->player.guild]);
-	send_to_char(buf, to);
+	strcat(buf, buf2);
     }
-    sprintf(buf, STRHAN("You have made  #%d QUEST(s).\r\n",
-	 "당신은 현재 %d번 QUEST를 풀었습니다.\r\n", ch), ch->quest.solved);
+    strcat(buf, "\r\n");
     send_to_char(buf, to);
 
 }			/* end of do_score() */

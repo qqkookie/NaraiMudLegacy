@@ -7,6 +7,11 @@
 #define MID_TEMPLE			3001	
 #define WIZ_LOUNGE			2	
 
+#define ROOM_QUEST			3061
+#define ROOM_REMORTAL			3062
+#define ROOM_METAPHYSICIAN		3065
+#define ROOM_HOSPITAL			3066
+
 #define POTION_SOLAR			1461	
 
 #define WEAPON_LONGSWORD		3022	/* 1D8 slash sword */
@@ -22,8 +27,8 @@
 // #define TAXI_TO_KAIST			3014
 // #define TAXI_TO_PROCESS			3052
 
-#define TAXI_KAIST_ENTRY		31001	/* OLD NOTE: KAIST zone renumber 31001->12401  */
-#define TAXI_PROCESS_ENTRY		2000
+#define TAXI_KAIST_ENTRY		19001	/* OLD NOTE: KAIST zone renumber 31001->12401  */
+#define TAXI_PROCESS_ENTRY		13800	// 2000
 
 #define OBJ_LSS_BELT			9508
 #define MOB_WEE_HEAD_SOLDIER		13014
@@ -31,20 +36,21 @@
 /* ---------------    GUILD Rooms    ---------------- */
 /*	From guild_list.h		*/
 
-#define ROOM_GUILD_POLICE		3095
-#define ROOM_GUILD_OUTLAW		3221
-#define ROOM_GUILD_ASSASSIN		9650
+#define ROOM_GUILD_POLICE		1855	// 3095
+#define ROOM_GUILD_OUTLAW		1871	// 3221
+#define ROOM_GUILD_ASSASSIN		1880	// 9650
 
-#define ROOM_GUILD_POLICE_LOCKER	3099
-#define ROOM_GUILD_OUTLAW_LOCKER	3224
-#define ROOM_GUILD_ASSASSIN_LOCKER	9652
+#define ROOM_LOCKER			1841	// 3000
+#define ROOM_GUILD_POLICE_LOCKER	1859	// 3099
+#define ROOM_GUILD_OUTLAW_LOCKER	1874	// 3224
+#define ROOM_GUILD_ASSASSIN_LOCKER	1882	// 9652
 
-#define ROOM_GUILD_POLICE_PRACTICE 	3096
-#define ROOM_GUILD_OUTLAW_PRACTICE	3222
-#define ROOM_GUILD_ASSASSIN_PRACTICE 	9651
+#define ROOM_GUILD_POLICE_PRACTICE 	1856	// 3096
+#define ROOM_GUILD_OUTLAW_PRACTICE	1872	// 3222
+#define ROOM_GUILD_ASSASSIN_PRACTICE 	1881	// 9651
 
 /* NOTE: moved from JALE_ROOM definition in guild_skills.c */
-#define ROOM_POLICE_JAIL    		1800
+#define ROOM_POLICE_JAIL    		1852	// 1800
 
 /* -------------    for 대림사    ------------------------- */
 

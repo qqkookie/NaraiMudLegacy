@@ -1,61 +1,61 @@
 Process' castle~
-2099 25 2
+13899 25 2
 *
-M 0 2000 30 2010 fighter
-E 1 2000 9 17 rifle
-M 0 2000 30 2012 fighter
-E 1 2000 9 17 rifle
-M 0 2000 30 2014 fighter
-E 1 2000 9 17 rifle
-M 0 2000 30 2016 fighter
-E 1 2000 9 17 rifle
-M 0 2000 30 2018 fighter
-E 1 2000 9 17 rifle
-M 0 2001 30 2014 paladin
-E 1 2000 9 17 rifle
-M 0 2001 30 2013 paladin
-E 1 2000 9 17 rifle
-M 0 2001 30 2015 paladin
-E 1 2000 9 17 rifle
-M 0 2001 30 2017 paladin
-E 1 2000 9 17 rifle
-M 0 2002 30 2018 cleric
-E 1 2000 9 17 rifle
-M 0 2002 30 2020 cleric
-E 1 2000 9 17 rifle
-M 0 2002 30 2022 cleric
-E 1 2000 9 17 rifle
-M 0 2002 30 2024 cleric
-E 1 2000 9 17 rifle
-M 0 2002 30 2026 cleric
-E 1 2000 9 17 rifle
-M 0 2002 30 2028 cleric
-E 1 2000 9 17 rifle
-M 0 2003 30 2011 mage
-E 1 2000 9 17 rifle
-M 0 2003 30 2013 mage
-E 1 2000 9 17 rifle
-M 0 2003 30 2015 mage
-M 0 2006 1 2026 1st keeper
-E 1 2091 1 17 1st key
-M 0 2004 10 2011 dragon
-M 0 2005 10 2029 thief
+M 0 13800 30 13810 fighter
+E 1 13800 9 17 rifle
+M 0 13800 30 13812 fighter
+E 1 13800 9 17 rifle
+M 0 13800 30 13814 fighter
+E 1 13800 9 17 rifle
+M 0 13800 30 13816 fighter
+E 1 13800 9 17 rifle
+M 0 13800 30 13818 fighter
+E 1 13800 9 17 rifle
+M 0 13801 30 13814 paladin
+E 1 13800 9 17 rifle
+M 0 13801 30 13813 paladin
+E 1 13800 9 17 rifle
+M 0 13801 30 13815 paladin
+E 1 13800 9 17 rifle
+M 0 13801 30 13817 paladin
+E 1 13800 9 17 rifle
+M 0 13802 30 13818 cleric
+E 1 13800 9 17 rifle
+M 0 13802 30 13820 cleric
+E 1 13800 9 17 rifle
+M 0 13802 30 13822 cleric
+E 1 13800 9 17 rifle
+M 0 13802 30 13824 cleric
+E 1 13800 9 17 rifle
+M 0 13802 30 13826 cleric
+E 1 13800 9 17 rifle
+M 0 13802 30 13828 cleric
+E 1 13800 9 17 rifle
+M 0 13803 30 13811 mage
+E 1 13800 9 17 rifle
+M 0 13803 30 13813 mage
+E 1 13800 9 17 rifle
+M 0 13803 30 13815 mage
+M 0 13806 1 13826 1st keeper
+E 1 13891 1 17 1st key
+M 0 13804 10 13811 dragon
+M 0 13805 10 13829 thief
 *
-D 0 2000 0 1
-D 0 2030 3 1
-D 0 2038 4 2
-D 0 2040 3 1
-D 0 2045 4 2
-D 0 2050 3 1
-D 0 2051 4 2
-D 0 2054 4 2
-D 0 2060 3 1
-D 0 2062 4 2
-D 0 2070 3 1
-D 0 2073 4 2
-D 0 2080 3 1
-D 0 2081 4 2
-D 0 2090 3 1
+D 0 13800 0 1
+D 0 13830 3 1
+D 0 13838 4 2
+D 0 13840 3 1
+D 0 13845 4 2
+D 0 13850 3 1
+D 0 13851 4 2
+D 0 13854 4 2
+D 0 13860 3 1
+D 0 13862 4 2
+D 0 13870 3 1
+D 0 13873 4 2
+D 0 13880 3 1
+D 0 13881 4 2
+D 0 13890 3 1
 *
 S
 $~

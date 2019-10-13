@@ -337,7 +337,7 @@
 19034 38 phonemon
 19036 38 phase lag
 2203 38 mage wizard
-15817 38 general jangbi
+2817 38 general jangbi
 2921 38 guard minotaur elite
 9530 38 son adle first
 9804 38 imperial vice admiral
@@ -371,19 +371,19 @@
 17003 40 general jutae
 17009 40 ghost king sonkyun
 18016 40 guard mudang
-13800 40 fighter
-13801 40 paladin
-13802 40 cleric
-13803 40 mage
-13804 40 dragon
-13805 40 thief
+2000 40 fighter
+2001 40 paladin
+2002 40 cleric
+2003 40 mage
+2004 40 dragon
+2005 40 thief
 2124 40 hydra
 2202 40 master dragon
 2205 40 king draconian
 2243 40 queen draconian
-15827 40 general chowoon
-15828 40 general macho
-15832 40 general gwanwoo
+2827 40 general chowoon
+2828 40 general macho
+2832 40 general gwanwoo
 2923 40 butler minotaur
 2925 40 gorak minotaur warrior master
 2926 40 darkoth minotaur anti-paladin master
@@ -465,14 +465,14 @@
 2220 41 tiamat dragon
 2317 41 loftwick lich
 2317 41 loftwick lich
-15833 41 mosa gongmyung
-15833 41 mosa gongmyung
-15835 35 cleric hwata
-15835 35 cleric hwata
-15834 41 king yubi
-15834 41 king yubi
-15834 41 king yubi
-15834 41 king yubi
+2833 41 mosa gongmyung
+2833 41 mosa gongmyung
+2835 35 cleric hwata
+2835 35 cleric hwata
+2834 41 king yubi
+2834 41 king yubi
+2834 41 king yubi
+2834 41 king yubi
 2924 41 keeper minotaur ring-keeper
 2924 41 keeper minotaur ring-keeper
 2933 41 mahn-tor minotaur grand master

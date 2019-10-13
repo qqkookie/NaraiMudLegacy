@@ -46,7 +46,7 @@ from seeing far in any direction save north, where a broad lane leads off into
 the distance; and west, where the same lane continues towards what looks like
 a fairly large city. The muted sounds of city commotion reach your ears from a
 distance; stray dogs barking, children crying, and street salesmen shouting.
-You can "call" taxi to Process' house here.
+You can call "taxi" to Process' house here.
 ~
 30 12 1
 D0
@@ -64,7 +64,7 @@ D3
 D4
 ~
 ~
-0 -1 20000
+0 -1 18000
 D5
 ~
 ~

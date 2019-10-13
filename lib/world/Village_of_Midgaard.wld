@@ -1,0 +1,266 @@
+#1841
+The Locker room in General~
+ You can SAVE or LOAD your items here.
+~
+18 12 0
+D2
+~
+~
+0 -1 3002
+S
+#1852
+The Jale~
+~
+18 4230 0
+S
+#1855
+Entrance to POLICE guild~
+ 여기는 경찰청 입구입니다. 경찰청에 근무하려면, sign을 보세요.
+~
+18 4614 0
+D0
+~
+~
+0 -1 1856
+D2
+~
+~
+0 -1 3054
+E
+sign~
+You can do JOIN or LEAVE.
+You cannot go north if you are not a member of POLICE.
+~
+S
+#1856
+Practice yard of POLICE guild~
+ 여기는 경찰들이 훈련을 하는 곳입니다. sign을 보세요.
+~
+18 4614 0
+D0
+~
+~
+0 -1 1857
+D1
+~
+~
+0 -1 1858
+D2
+~
+~
+0 -1 1855
+D3
+~
+~
+0 -1 1859
+E
+sign~
+train number_of_skill
+list will show you the numbers
+~
+S
+#1857
+Lounge of POLICE guild~
+ 여기서 경찰들이 피곤한 몸을 쉽니다.
+~
+18 37382 0
+D2
+~
+~
+0 -1 1856
+S
+#1858
+Private Shop of POLICE guild~
+ 여기서 당신은 물품들을 싼값에 구입하실수 있습니다.
+~
+18 4614 0
+D3
+~
+~
+0 -1 1856
+S
+#1859
+Locker room of POLICE guild~
+ 여기서 당신은 물품을 저장하고 실제세계로 나갑니다.
+~
+18 4614 0
+D1
+~
+~
+0 -1 1856
+E
+Locker~
+Available commands:
+	SAVE
+	LOAD
+~
+S
+#1871
+Entrance to OUTLAW guild~
+ 여기는 깡패파 아지트의 입구입니다.
+ 매우 살벌한 기운을 느낍니다.
+JOIN or LEAVE
+~
+18 4614 0
+D0
+~
+~
+0 -1 1872
+D2
+~
+~
+0 -1 3041
+S
+#1872
+Practice yard of OUTLAW guild~
+ 여기저기서 비명 소리가 들립니다.
+ 막대기,쇠망치,깨진병을 들고 깡패들이 싸움을 합니다.
+ 당신도 저 틈에 들어가 목숨을 걸고 살아나야 합니다.
+train or list
+~
+18 4614 0
+D0
+~
+~
+0 -1 1873
+D1
+~
+~
+0 -1 1874
+D2
+~
+~
+0 -1 1871
+D3
+~
+~
+0 -1 1875
+D4
+~
+~
+0 -1 1876
+S
+#1873
+Boss room of OUTLAW guild~
+ 빨간 카페트 건너편에 당신의 보스가 파이프를 빨며 앉아있습니다.
+ 긴 탁자에 둘러싼 부하들이 험상궂게 생겼군요.
+~
+18 4614 0
+D2
+~
+~
+0 -1 1872
+S
+#1874
+Secret room of OUTLAW guild~
+ 여기선 다른 사람에 관계없이 마음대로 행동할 수 있습니다.
+ 칸칸이 막힌 방마다 사람들이 들어가 뽕을 맞고 여자를 즐깁니다.
+ 당신도 즐기시렵니까?
+~
+18 37382 0
+D3
+~
+~
+0 -1 1872
+E
+sign
+~
+SAVE
+LOAD
+~
+S
+#1875
+ E X I T~
+ 비상구
+~
+18 4614 0
+D1
+~
+~
+0 -1 1872
+D3
+~
+~
+0 -1 3001
+S
+#1876
+ Board room of OUTLAW guild~
+ 보드에 청부받은 인간을 적는 모양입니다.
+ 그 결과도 적나보죠?
+~
+18 4102 0
+D5
+~
+~
+0 -1 1872
+S
+#1880
+Entrance to ASSASIN guild~
+ 여기는 암살자 집단의 길드입니다.
+~
+18 4614 1
+D0
+~
+~
+0 -1 1881
+D5
+~
+~
+0 -1 3001
+S
+#1881
+Practice yard of ASSASIN guild~
+ 길드의 훈련소입니다.
+
+list will show you the list.
+train number of skill.
+~
+18 4614 1
+D0
+~
+~
+0 -1 1883
+D1
+~
+~
+0 -1 1882
+D4
+~
+~
+0 -1 1884
+D3
+~
+~
+0 -1 1880
+S
+#1882
+Locker room of ASSASIN guild~
+ You can SAVE or LOAD items
+~
+18 4614 1
+D3
+~
+~
+0 -1 1881
+S
+#1883
+Rest room of ASSASIN guild~
+ You can rest.
+~
+18 37382 1
+D2
+~
+~
+0 -1 1881
+S
+#1884
+Dark room~
+~
+18 4614 1
+D2
+~
+~
+0 -1 1881
+S
+#99999
+$~

@@ -156,10 +156,10 @@ void chat_history(char *str)
     char stime[MAX_NAME_LEN], buf[MAX_LINE_LEN];
     time_t tt = time(0);
     strftime(stime, MAX_NAME_LEN-1, "%F %H:%M", localtime(&tt));
-    sprintf(buf, "%s  %s", stime, str);
+    sprintf(buf, "%s %s", stime, str);
 
-    // NOTE: skip year and date part. They are for chatlog only.
-    strcpy(history[his_end], buf+12);
+    // NOTE: skip year and month part. They are for chatlog only.
+    strcpy(history[his_end], buf+8); // or 11 to cut date
 
     his_end++;
     if ((his_end % LASTCHAT_SIZE) == (his_start % LASTCHAT_SIZE)) {

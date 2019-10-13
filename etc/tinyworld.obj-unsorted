@@ -1,3 +1,35 @@
+#3008
+bottle condition~
+A bottle of condition(TM)~
+A bottle of condition(TM) has been left here.~
+~
+17 0 1
+1 1 19 3
+1 2500 -1
+#1871
+ciga cigarette tabacco 88~
+88 light~
+EIGHTY EIGHT low tar & triple filter,MADE IN KOREA~
+~
+12 1441794 16385
+23 0 0 0
+1 700 25
+#1872
+ciga cigarrette sky~
+SKY LIGHTS~
+SKY LIGHTS CHARCOAL FILTER SLIM 100's MADE IN U.S.A~
+~
+12 144794 16385
+23 0 0 0
+1 1000 25
+#1873
+drug marijuana~
+a marijuana~
+Marijuana~
+~
+12 1311234 16385
+24 0 0 0
+1 100000 25
 #201
 case glass~
 the glass case~
@@ -736,30 +768,6 @@ An egg lies here.~
 19 0 1
 12 0 0 2
 1 3 1
-#1871
-ciga cigarette tabacco 88~
-88 light~
-EIGHTY EIGHT low tar & triple filter,MADE IN KOREA~
-~
-12 1441794 16385
-23 0 0 0
-1 700 25
-#1872
-ciga cigarrette sky~
-SKY LIGHTS~
-SKY LIGHTS CHARCOAL FILTER SLIM 100's MADE IN U.S.A~
-~
-12 144794 16385
-23 0 0 0
-1 1000 25
-#1873
-drug marijuana~
-a marijuana~
-Marijuana~
-~
-12 1311234 16385
-24 0 0 0
-1 100000 25
 #1901
 crystalline longsword~
 a crystalline longsword~
@@ -1015,6 +1023,274 @@ The Bronto key to the Bronto Saurus has been left here.~
 18 0 16385
 2 0 0 0
 80 200 5000
+#13800
+rifle~
+A rifle~
+A rifle has been left here.~
+~
+6 131137 16385
+2 2 10000 0
+5 0 40
+A
+2 +5
+A
+19 +10
+#13801
+bullets ammo~
+Bullets of A rifle~
+Bullets of A rifle has been left here.~
+~
+8 4096 1
+0 0 0 0
+2 50000 -1
+#13802
+sword damaging~
+A DAMAGING sword~
+A DAMAGING sword is here.~
+slash~
+5 131137 8193
+5 20 20 3
+20 0 40
+A
+18 +020
+A
+19 +020
+#13803
+mail good really~
+A REALLY GOOD mail~
+A REALLY GOOD mail lies on the ground.~
+~
+9 131137 9
+50 0 0 0
+10 0 40
+A
+5 +10
+A
+13 +10000
+#13804
+ring cap~
+A ring of CAP~
+A ring of CAP has been left here.~
+~
+9 131137 3
+20 0 0 0
+2 0 40
+A
+18 +10
+A
+23 -10
+#13805
+knee band~
+A knee band~
+A knee band lies on the ground.~
+~
+9 131137 65537
+20 0 0 0
+4 0 40
+A
+20 -10
+A
+26 10
+#13806
+gloves~
+A pair of gloves~
+A pair of gloves lies here.~
+~
+9 131137 129
+20 0 0 0
+6 0 40
+A
+18 +10
+A
+19 +10
+#13807
+bracelet~
+bracelet~
+A bracelet is here.~
+~
+9 131137 4097
+20 0 0 0
+5 0 40
+#13808
+dagger norent~
+A NORENT dagger~
+A NORENT dagger id here.~
+pierce~
+5 131137 8193
+0 20 20 11
+20 0 40
+A
+18 +20
+A
+19 +20
+#13809
+staff zizon mage~
+A staff of ZIZON mage~
+A staff of ZIZON mage is here.~
+pound~
+5 131137 8193
+1 20 20 7
+20 0 40
+A
+18 +20
+A
+19 +20
+#13810
+shield~
+A shield~
+A shield is here.~
+~
+9 131137 513
+20 0 0 0
+12 0 40
+A
+18 -5
+A
+25 -10
+#13811
+cloak~
+A cloak~
+A cloak is here.~
+~
+9 131137 1025
+20 0 0 0
+12 0 40
+A
+3 +10
+A
+4 +10
+#13812
+boots speed~
+A pair of SPEED boots~
+A pair of SPEED boots lies on the ground~
+~
+9 131137 65
+20 0 0 0
+5 0 40
+A
+18 +10
+A
+19 +10
+#13813
+pendant light~
+A light pendant of M-A-N-A~
+A light pendant od M-A-N-A is here.~
+~
+9 131137 21
+10 0 0 0
+2 0 40
+A
+12 +5000
+A
+10 -100
+#13814
+light~
+A light~
+A light lights the room.~
+~
+1 131137 16385
+0 0 0 0
+10 0 40
+A
+19 +20
+A
+26 +30
+#13815
+legging~
+A pair of leggings~
+A pair of leggings is here.~
+~
+9 131137 33
+10 0 0 0
+1 0 40
+A
+18 +10
+A
+19 +10
+#13816
+belt~
+A belt~
+A belt is here.~
+~
+9 131137 2049
+10 0 0 0
+2 0 40
+A
+18 +10
+A
+19 +10
+#13817
+plate~
+A plate~
+A plate is here.~
+~
+9 131137 131073
+20 0 0 0
+1 0 40
+A
+18 +10
+A
+19 +10
+#13818
+cap~
+A cap~
+A cap is here.~
+~
+9 131137 17
+20 0 0 0
+1 0 40
+A
+18 +20
+A
+26 +50
+#13891
+key 1st~
+the 1st key~
+The 1st key to 2nd floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#13892
+key 2nd~
+the 2nd key~
+The 2nd key to 3rd floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#13893
+key 3rd~
+the 3rd key~
+The 3rd key to 4th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#13894
+key 4st~
+the 4st key~
+The 4st key to 5th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#13895
+key 5th~
+the 5th key~
+The 5th key to 6th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
+#13896
+key 6th~
+the 6th key~
+The 6th key to 7th floor has been left here.~
+~
+18 0 1
+0 0 0 0
+0 0 0
 #2100
 oak stick~
 an oak stick~
@@ -2765,6 +3041,162 @@ feather 깃털~
 8 256 1
 0 0 0 0
 10 5500 0
+#15801
+macho's BIG sinbal~
+Macho's BIG sinbal~
+Very BIG sinbal is here..~
+~
+9 6145 65
+4 0 0 0
+8 1000000 13
+A
+18 +3
+A
+19 +3
+#15802
+chowoon's BIG bracers~
+Chowoon's BIG bracers~
+Very BIG bracers is here...~
+~
+9 6145 257
+4 0 0 0
+9 1000000 13
+A
+18 +3
+A
+19 +3
+#15803
+gwanwoo's BIG toogoo~
+Gwanwoo's BIG toogoo~
+Very BIG toogoo is here...~
+~
+9 6145 17
+6 0 0 0
+10 1000000 18
+A
+18 +3
+A
+19 +3
+#15804
+gongmyung's BIG cloak~
+Gongmyung's BIG cloak~
+Very BIG cloak is here...~
+~
+9 6145 1025
+5 0 0 0
+5 1000000 15
+A
+18 +3
+A
+19 +3
+#15805
+yubi's BIG knee~
+Yubi's BIG knee~
+Very BIG knee is here...~
+~
+9 6145 65537
+5 0 0 0
+7 1000000 25
+A
+18 +3
+A
+19 +4
+#15806
+yubi's BIG knee~
+Yubi's BIG knee~
+Very BIG knee is here...~
+~
+9 4097 65537
+5 0 0 0
+7 1000000 25
+A
+18 +3
+A
+19 +4
+#15818
+jangbi key~
+Jangbi key~
+Very BIG jangbi key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#15824
+chok castle key~
+Chok castle key~
+Very BIG chok castle key is here..~
+~
+18 32 16385
+0 0 0 0
+2 100 0
+#15829
+1st secret key~
+1st secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#15831
+2nd secret key~
+2nd secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#15833
+3rd secret key~
+3rd secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#15834
+4th secret key~
+4th secret key~
+Very BIG secret key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#15835
+hwata shop key~
+Hwata shop key~
+Very BIG key is here..~
+~
+18 32 16385
+0 0 0 0
+3 10000 0
+#15836
+white vial~
+a white vial~
+A small white vial rests here.~
+~
+10 4097 1
+40 1 -1 -1
+1 200000 100
+#15837
+golden vial~
+a golden vial~
+A small golden vial is here.~
+~
+10 4098 1
+30 71 3 -1
+1 200000 100
+#15838
+sharon stone~
+a sharon stone~
+a beautiful sharon stone is here.~
+~
+8 4193 16387
+1 0 0 0
+3 1000000 13
+A
+25 50
+A
+18 -3
 #2900
 gloves combat~
 a pair of minotaur combat gloves~
@@ -3866,14 +4298,6 @@ A large cup has been left here.~
 17 0 1
 32 32 15 0
 33 50 0
-#3008
-bottle condition~
-A bottle of condition(TM)~
-A bottle of condition(TM) has been left here.~
-~
-17 0 1
-1 1 19 3
-1 2500 -1
 #3010
 bread~
 a bread~
@@ -8993,274 +9417,6 @@ The Olympus key to the Great Olympus has been left here.~
 18 0 16385
 2 0 0 0
 180 200 5000
-#13800
-rifle~
-A rifle~
-A rifle has been left here.~
-~
-6 131137 16385
-2 2 10000 0
-5 0 40
-A
-2 +5
-A
-19 +10
-#13801
-bullets ammo~
-Bullets of A rifle~
-Bullets of A rifle has been left here.~
-~
-8 4096 1
-0 0 0 0
-2 50000 -1
-#13802
-sword damaging~
-A DAMAGING sword~
-A DAMAGING sword is here.~
-slash~
-5 131137 8193
-5 20 20 3
-20 0 40
-A
-18 +020
-A
-19 +020
-#13803
-mail good really~
-A REALLY GOOD mail~
-A REALLY GOOD mail lies on the ground.~
-~
-9 131137 9
-50 0 0 0
-10 0 40
-A
-5 +10
-A
-13 +10000
-#13804
-ring cap~
-A ring of CAP~
-A ring of CAP has been left here.~
-~
-9 131137 3
-20 0 0 0
-2 0 40
-A
-18 +10
-A
-23 -10
-#13805
-knee band~
-A knee band~
-A knee band lies on the ground.~
-~
-9 131137 65537
-20 0 0 0
-4 0 40
-A
-20 -10
-A
-26 10
-#13806
-gloves~
-A pair of gloves~
-A pair of gloves lies here.~
-~
-9 131137 129
-20 0 0 0
-6 0 40
-A
-18 +10
-A
-19 +10
-#13807
-bracelet~
-bracelet~
-A bracelet is here.~
-~
-9 131137 4097
-20 0 0 0
-5 0 40
-#13808
-dagger norent~
-A NORENT dagger~
-A NORENT dagger id here.~
-pierce~
-5 131137 8193
-0 20 20 11
-20 0 40
-A
-18 +20
-A
-19 +20
-#13809
-staff zizon mage~
-A staff of ZIZON mage~
-A staff of ZIZON mage is here.~
-pound~
-5 131137 8193
-1 20 20 7
-20 0 40
-A
-18 +20
-A
-19 +20
-#13810
-shield~
-A shield~
-A shield is here.~
-~
-9 131137 513
-20 0 0 0
-12 0 40
-A
-18 -5
-A
-25 -10
-#13811
-cloak~
-A cloak~
-A cloak is here.~
-~
-9 131137 1025
-20 0 0 0
-12 0 40
-A
-3 +10
-A
-4 +10
-#13812
-boots speed~
-A pair of SPEED boots~
-A pair of SPEED boots lies on the ground~
-~
-9 131137 65
-20 0 0 0
-5 0 40
-A
-18 +10
-A
-19 +10
-#13813
-pendant light~
-A light pendant of M-A-N-A~
-A light pendant od M-A-N-A is here.~
-~
-9 131137 21
-10 0 0 0
-2 0 40
-A
-12 +5000
-A
-10 -100
-#13814
-light~
-A light~
-A light lights the room.~
-~
-1 131137 16385
-0 0 0 0
-10 0 40
-A
-19 +20
-A
-26 +30
-#13815
-legging~
-A pair of leggings~
-A pair of leggings is here.~
-~
-9 131137 33
-10 0 0 0
-1 0 40
-A
-18 +10
-A
-19 +10
-#13816
-belt~
-A belt~
-A belt is here.~
-~
-9 131137 2049
-10 0 0 0
-2 0 40
-A
-18 +10
-A
-19 +10
-#13817
-plate~
-A plate~
-A plate is here.~
-~
-9 131137 131073
-20 0 0 0
-1 0 40
-A
-18 +10
-A
-19 +10
-#13818
-cap~
-A cap~
-A cap is here.~
-~
-9 131137 17
-20 0 0 0
-1 0 40
-A
-18 +20
-A
-26 +50
-#13891
-key 1st~
-the 1st key~
-The 1st key to 2nd floor has been left here.~
-~
-18 0 1
-0 0 0 0
-0 0 0
-#13892
-key 2nd~
-the 2nd key~
-The 2nd key to 3rd floor has been left here.~
-~
-18 0 1
-0 0 0 0
-0 0 0
-#13893
-key 3rd~
-the 3rd key~
-The 3rd key to 4th floor has been left here.~
-~
-18 0 1
-0 0 0 0
-0 0 0
-#13894
-key 4st~
-the 4st key~
-The 4st key to 5th floor has been left here.~
-~
-18 0 1
-0 0 0 0
-0 0 0
-#13895
-key 5th~
-the 5th key~
-The 5th key to 6th floor has been left here.~
-~
-18 0 1
-0 0 0 0
-0 0 0
-#13896
-key 6th~
-the 6th key~
-The 6th key to 7th floor has been left here.~
-~
-18 0 1
-0 0 0 0
-0 0 0
 #15001
 diamond key~
 Diamond key~
@@ -9753,162 +9909,6 @@ The Curtain key is lying here..~
 18 0 16385
 0 0 0 0
 2 100 0
-#15801
-macho's BIG sinbal~
-Macho's BIG sinbal~
-Very BIG sinbal is here..~
-~
-9 6145 65
-4 0 0 0
-8 1000000 13
-A
-18 +3
-A
-19 +3
-#15802
-chowoon's BIG bracers~
-Chowoon's BIG bracers~
-Very BIG bracers is here...~
-~
-9 6145 257
-4 0 0 0
-9 1000000 13
-A
-18 +3
-A
-19 +3
-#15803
-gwanwoo's BIG toogoo~
-Gwanwoo's BIG toogoo~
-Very BIG toogoo is here...~
-~
-9 6145 17
-6 0 0 0
-10 1000000 18
-A
-18 +3
-A
-19 +3
-#15804
-gongmyung's BIG cloak~
-Gongmyung's BIG cloak~
-Very BIG cloak is here...~
-~
-9 6145 1025
-5 0 0 0
-5 1000000 15
-A
-18 +3
-A
-19 +3
-#15805
-yubi's BIG knee~
-Yubi's BIG knee~
-Very BIG knee is here...~
-~
-9 6145 65537
-5 0 0 0
-7 1000000 25
-A
-18 +3
-A
-19 +4
-#15806
-yubi's BIG knee~
-Yubi's BIG knee~
-Very BIG knee is here...~
-~
-9 4097 65537
-5 0 0 0
-7 1000000 25
-A
-18 +3
-A
-19 +4
-#15818
-jangbi key~
-Jangbi key~
-Very BIG jangbi key is here..~
-~
-18 32 16385
-0 0 0 0
-3 10000 0
-#15824
-chok castle key~
-Chok castle key~
-Very BIG chok castle key is here..~
-~
-18 32 16385
-0 0 0 0
-2 100 0
-#15829
-1st secret key~
-1st secret key~
-Very BIG secret key is here..~
-~
-18 32 16385
-0 0 0 0
-3 10000 0
-#15831
-2nd secret key~
-2nd secret key~
-Very BIG secret key is here..~
-~
-18 32 16385
-0 0 0 0
-3 10000 0
-#15833
-3rd secret key~
-3rd secret key~
-Very BIG secret key is here..~
-~
-18 32 16385
-0 0 0 0
-3 10000 0
-#15834
-4th secret key~
-4th secret key~
-Very BIG secret key is here..~
-~
-18 32 16385
-0 0 0 0
-3 10000 0
-#15835
-hwata shop key~
-Hwata shop key~
-Very BIG key is here..~
-~
-18 32 16385
-0 0 0 0
-3 10000 0
-#15836
-white vial~
-a white vial~
-A small white vial rests here.~
-~
-10 4097 1
-40 1 -1 -1
-1 200000 100
-#15837
-golden vial~
-a golden vial~
-A small golden vial is here.~
-~
-10 4098 1
-30 71 3 -1
-1 200000 100
-#15838
-sharon stone~
-a sharon stone~
-a beautiful sharon stone is here.~
-~
-8 4193 16387
-1 0 0 0
-3 1000000 13
-A
-25 50
-A
-18 -3
 #16001
 chocho shield chochoshield~
 Chocho shield~
@@ -10289,6 +10289,116 @@ A
 18 +5
 A
 19 +5
+#23301
+castle key 성문 열쇠~
+성문 열쇠(CASTLE KEY)~
+악마 모형의 성문 열쇠가 바닥에 놓여 있습니다.~
+~
+18 131074 16385
+0 0 0 0
+1 1 1
+#23302
+jail key 감옥 열쇠~
+감옥 열쇠(JAIL KEY)~
+커다란 열쇠가 바닥에 놓여 있습니다.~
+~
+18 131074 16385
+0 0 0 0
+1 1 1
+#23303
+room key 방 열쇠~
+방 열쇠(ROOM KEY)~
+방 열쇠가 놓여 있습니다.~
+~
+18 131074 16385
+0 0 0 0
+1 1 1
+#23306
+piece magic paper 부적 조각~
+부적 조각(A PIECE OF MAGIC PAPER)~
+부적 조각(A PIECE OF MAGIC PAPER)이 놓여 있습니다.~
+~
+8 131073 16385
+0 0 0 0
+1 1 1
+#23307
+piece magic paper 부적 조각~
+부적 조각(A PIECE OF MAGIC PAPER)~
+부적 조각(A PIECE OF MAGIC PAPER)이 놓여 있습니다.~
+~
+8 131073 16385
+0 0 0 0
+1 1 1
+#23308
+magic paper 부적~
+부적(MAGIC PAPER)~
+성스러운 마법의 부적이 놓여 있습니다.~
+~
+8 1025 16385
+0 0 0 0
+1 1 1
+#23309
+seed evil power 악마 씨앗~
+악마의 씨앗(SEED OF EVIL POWER)~
+만악의 근원이 되는 악마의 씨앗(SEED OF EVIL POWER)이 있습니다.~
+~
+19 131138 16385
+0 0 0 0
+1 1 1
+B
+5120
+#23311
+paper 종이~
+낡은 종이~
+낡은 종이가 놓여 있습니다.~
+~
+13 131072 1
+0 0 0 0
+1 1 1
+E
+paper text~
+용사들이여,
+
+악마성주 카암을 물리치고, 마을을 구하고, 세상을
+악의 무리에게서 구해 주세요...
+
+제발...
+
+이 글이 용사들에게 용기를 북돋아 줄 수 있도록
+신의 은총이...
+~
+#23312
+bottle 물병~
+물병~
+물병이 버려져 있습니다.~
+~
+15 131072 16385
+5 5 -1 0
+1 1 1
+#23316
+kaalm boots 카암 장화~
+카암의 부츠~
+악마성주 카암의 부츠가 바닥에 놓여 있습니다.~
+~
+9 2626 65
+4 0 0 0
+10 1 1
+A
+25 30
+A
+19 5
+#23317
+kaalm sword 카암 칼~
+카암의 칼~
+악마성주 카암의 칼이 놓여 있습니다.~
+slash~
+5 2882 8193
+0 13 17 3
+30 1 1
+A
+25 20
+A
+19 12
 #19001
 key 3rd~
 a 3rd key~
@@ -10609,116 +10719,6 @@ You can see 1 ho gwan key.~
 18 0 16385
 0 0 0 0
 5 10000 -1
-#23301
-castle key 성문 열쇠~
-성문 열쇠(CASTLE KEY)~
-악마 모형의 성문 열쇠가 바닥에 놓여 있습니다.~
-~
-18 131074 16385
-0 0 0 0
-1 1 1
-#23302
-jail key 감옥 열쇠~
-감옥 열쇠(JAIL KEY)~
-커다란 열쇠가 바닥에 놓여 있습니다.~
-~
-18 131074 16385
-0 0 0 0
-1 1 1
-#23303
-room key 방 열쇠~
-방 열쇠(ROOM KEY)~
-방 열쇠가 놓여 있습니다.~
-~
-18 131074 16385
-0 0 0 0
-1 1 1
-#23306
-piece magic paper 부적 조각~
-부적 조각(A PIECE OF MAGIC PAPER)~
-부적 조각(A PIECE OF MAGIC PAPER)이 놓여 있습니다.~
-~
-8 131073 16385
-0 0 0 0
-1 1 1
-#23307
-piece magic paper 부적 조각~
-부적 조각(A PIECE OF MAGIC PAPER)~
-부적 조각(A PIECE OF MAGIC PAPER)이 놓여 있습니다.~
-~
-8 131073 16385
-0 0 0 0
-1 1 1
-#23308
-magic paper 부적~
-부적(MAGIC PAPER)~
-성스러운 마법의 부적이 놓여 있습니다.~
-~
-8 1025 16385
-0 0 0 0
-1 1 1
-#23309
-seed evil power 악마 씨앗~
-악마의 씨앗(SEED OF EVIL POWER)~
-만악의 근원이 되는 악마의 씨앗(SEED OF EVIL POWER)이 있습니다.~
-~
-19 131138 16385
-0 0 0 0
-1 1 1
-B
-5120
-#23311
-paper 종이~
-낡은 종이~
-낡은 종이가 놓여 있습니다.~
-~
-13 131072 1
-0 0 0 0
-1 1 1
-E
-paper text~
-용사들이여,
-
-악마성주 카암을 물리치고, 마을을 구하고, 세상을
-악의 무리에게서 구해 주세요...
-
-제발...
-
-이 글이 용사들에게 용기를 북돋아 줄 수 있도록
-신의 은총이...
-~
-#23312
-bottle 물병~
-물병~
-물병이 버려져 있습니다.~
-~
-15 131072 16385
-5 5 -1 0
-1 1 1
-#23316
-kaalm boots 카암 장화~
-카암의 부츠~
-악마성주 카암의 부츠가 바닥에 놓여 있습니다.~
-~
-9 2626 65
-4 0 0 0
-10 1 1
-A
-25 30
-A
-19 5
-#23317
-kaalm sword 카암 칼~
-카암의 칼~
-악마성주 카암의 칼이 놓여 있습니다.~
-slash~
-5 2882 8193
-0 13 17 3
-30 1 1
-A
-25 20
-A
-19 12
 #40000
 $
 ~

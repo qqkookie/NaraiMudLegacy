@@ -630,7 +630,7 @@ D3
 D4
 ~
 ~
-0 -1 9650
+0 -1 1880
 S 
 #9536
 Minor Plaza~
@@ -2019,74 +2019,6 @@ D4
 ~
 january~
 2 9611 3001
-S
-#9650
-Entrance to ASSASIN guild~
- 여기는 암살자 집단의 길드입니다.
-~
-96 4614 1
-D0
-~
-~
-0 -1 9651
-D5
-~
-~
-0 -1 3001
-S
-#9651
-Practice yard of ASSASIN guild~
- 길드의 훈련소입니다.
-
-list will show you the list.
-train number of skill.
-~
-96 4614 1
-D0
-~
-~
-0 -1 9653
-D1
-~
-~
-0 -1 9652
-D4
-~
-~
-0 -1 9654
-D3
-~
-~
-0 -1 9650
-S
-#9652
-Locker room of ASSASIN guild~
- You can SAVE or LOAD items
-~
-96 4614 1
-D3
-~
-~
-0 -1 9651
-S
-#9653
-Rest room of ASSASIN guild~
- You can rest.
-~
-96 37382 1
-D2
-~
-~
-0 -1 9651
-S
-#9654
-Dark room~
-~
-96 4614 1
-D2
-~
-~
-0 -1 9651
 S
 #99999
 $~
