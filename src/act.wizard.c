@@ -840,7 +840,7 @@ void do_force(struct char_data *ch, char *argument, int cmd)
 {
   struct descriptor_data *i;
   struct char_data *vict;
-  char name[100], to_force[100],buf[200]; 
+  char name[100], to_force[100],buf[MAX_INPUT_LENGTH]; 
   int diff;
 
   if (IS_NPC(ch) || GET_LEVEL(ch) > (IMO+3))
@@ -1339,7 +1339,7 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
 	strftime(buf, 127, "%F %H:%M", localtime(&tt));
 	sprintf(buf + strlen(buf)," %s >%s\n\r", GET_NAME(ch), argument);
 	assert(his_end>=0&&his_end<20);
-	strcpy(history[his_end], &buf[5]);	// omit year part
+	strcpy(history[his_end], &buf[8]);	// omit year part
 	his_end++;
 	if((his_end%20)==(his_start%20))
 	{

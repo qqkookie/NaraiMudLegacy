@@ -11,11 +11,11 @@
 #undef OLD_ZONE_SYSTEM
 
 #define REBOOT_TIME	(4*86400)
-
-#define TIME_ZONE	(9*3600)
 #define REBOOT_WHEN	(9*60-5)
+#define TIME_ZONE	(9*3600)
 
 #pragma GCC diagnostic ignored "-Wunused-result"
+#pragma GCC diagnostic ignored "-Wunused-parameter"
 
 /*
  All flags used in souce code.
@@ -55,7 +55,6 @@ int hit_limit(struct char_data *ch);
 #define IF_STR(st) ((st) ? (st) : "\0")
 
 #define CAP(st)  (*(st) = UPPER(*(st)))
-
 
 // Removed +1 kuldge
 #define CREATE(result, type, number)  do {\

@@ -742,6 +742,7 @@ int super_musashi(struct char_data *ch, int cmd, char *arg)
 	af.modifier  = GET_LEVEL(ch)+20;
 	affect_to_char(vict, &af);
       }
+      /*FALLTHRU*/
     case 13:
     case 14:
     case 15:

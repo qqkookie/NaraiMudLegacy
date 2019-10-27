@@ -1012,7 +1012,7 @@ int old_search_block(char *argument,int begin,int length,char **list,int mode)
 	/* Search for a match */
 	if(mode)
 		while ( NOT found AND *(list[guess]) != '\n' ) {
-			found=(length==strlen(list[guess]));
+			found=(length== (int) strlen(list[guess]));
 			for(search=0;( search < length AND found );search++)
 				found=(*(argument+begin+search)== *(list[guess]+search));
 			guess++;

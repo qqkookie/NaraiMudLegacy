@@ -819,12 +819,13 @@ void cast_enchant_person( byte level, struct char_data *ch, char *arg, int type,
  struct char_data *tar_ch, struct obj_data *tar_obj)
 {
   switch(type) {
-	case SPELL_TYPE_SPELL:
+    case SPELL_TYPE_SPELL:
 	  spell_enchant_person(level, ch, tar_ch, 0);
 	  break;
     case SPELL_TYPE_SCROLL:
-	  if(!tar_ch) return;
-      spell_enchant_person(level, ch, tar_ch, 0);
+	if(!tar_ch) return;
+	spell_enchant_person(level, ch, tar_ch, 0);
+	break;
     default:
 	  log("Serious screw-up in enchant person!");
 	  break;

@@ -1,7 +1,12 @@
 Narai Mud Modern Legacy 2019 version RELEASE 
 
-**VERSION COMMITTED NOW is Legacy 2019 FINAL RELEASE **
+**VERSION COMMITTED NOW is Legacy 2019 BETA-7 **
 **Legacy 2003 + 2010 + Modern Legacy 2019**
-Released on 2019 09 29. as version 3.00 
 
-uploaded 2019.09.29 by Cookie
+Will be Released on 2019 11.XX as version 3.00 
+
+Restore world name to old style, 
+gcc-9 -Wextra warnings (unused paramters, switch fallthru),i
+util rename
+
+uploaded 2019.10.28  by Cookie

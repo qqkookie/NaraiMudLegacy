@@ -26,7 +26,8 @@ MAKE    = make
 MKDEP   = mkdep 
 LD      = $(CC)
 
-OFLAGS  = -O -g -Wall -pipe
+# OFLAGS  = -O0 -g -Wall -Wextra -pipe
+OFLAGS  = -O -g -Wall -Wextra -pipe
 
 INCLUDE = -I../$(INCDIR)
 
@@ -56,9 +57,11 @@ SRCS    = \
 	spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c \
 	spells3.c utility.c version.c weather.c daerimsa.c gbisland.c
 
-UTILS       = change_level change_pass chstashform unchstashform check_pass \
-              check_player list_player mob_create mob_edit zone_item \
-              zone_list zone_print mob_balance check_god fix_noname
+UTILS       = chlevel chpass dostashform undostashform \
+	      checkpass checkchar listchar \
+	      mobcreate mobedit mobbalance \
+	      zoneitem zonelist zoneprint \
+	      checkgod fixnoname
 
 SCRIPTS     = runmud.sh killmud.sh
 

@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <sys/types.h>
-#include "mob_create.h"
+#include "mobcreate.h"
 
 int  ask_question(void);
 long set_affected_by(void);
@@ -13,7 +13,7 @@ int main()
 {
         struct char_data mob_data;
         FILE *mobfile;
-	int i /* ,j */;
+	int i /*,j */;
 	char buff_short[128], buff_long[256], buff_name[64];
 	char buff_mob_desc[10][128];
 	char *stringcheck;

@@ -9,6 +9,8 @@
 
 #include "structs.h"
 
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+
 extern char *spells[];
 
 #define PROMPT			fprintf(stdout, "CHECK PLAYER >> ");

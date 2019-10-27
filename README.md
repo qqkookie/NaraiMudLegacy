@@ -26,6 +26,10 @@ There are few versions of the source.
 
 For current version and changes, see VERSION file.
 
+Source git respository is 
+https://github.com/qqkookie/NaraiMudLegacy
+ssh:git@github.com/qqkookie/NaraiMudLegacy
+
 Legacy 2003, 2010, 2019 versions are maintained
 as **`legacy`** branch in the **`git`** repository 
 
@@ -68,14 +72,14 @@ This is a fork of original KIT-MUD, known as **"Coconut MUD"**,
 which was forked around 1999 and operated until 2002.
 It is not outlaw-oriented, but traditional and closer to original KIT-MUD.
 It shares common ancenstor of KIT-MUD with Narai but added
-many new zones like Rome and preserved old KIT mud school zone.
+few new zones like Rome and preserved old KIT mud school zone.
 It also did quite a code clean up and improvement.
 Not directly related to old Legacy Narai or New Narai 1998.
 It is tagged as **coconut-2002** in **coconut** branch of git repository.
 
 ### New Narai 1998
 
-This is other fork of original Narai source around year 1998.
+This is other fork of original Narai source year 1997 and operated till 1998.
 The source code was extensively cleaned up and many improvements were made.
 It added many new features and improved quality of mud life,
 but preserves similar user experience of original Sun 3 days.
@@ -85,11 +89,13 @@ But text MUD itself was already out of date by then,
 and eclipsed by modern graphical PC/console online games.
 Not many people played it, so it become urban legend.
 
-I plan to restart new development based on this version 
-and merge all the versions and forks above and 
-make it definitive classic version of Narai.
-
 It is tagged as **newnarai-1998** in **master** branch of git repository.
+
+### KIT Classic 2019
+
+I plan to restart new development based on New Narai 1998 version 
+and merge all the versions and forks above and 
+make it definitive classic version of KIT MUD.
 
 ## Directories and contents
 
@@ -97,8 +103,8 @@ It is tagged as **newnarai-1998** in **master** branch of git repository.
 * `'utils'` contains source code of tools and scripts
   for operation and game development.
 * `'lib'` is directory where mud server actually run in,
-  containing all game data like zone, and player info and items.
-* You will need `'bin'` and `'log'` directory for mud operation.
+  containing all static game data like zone and mud resources. 
+* `'users'` is directory where logs, player info and item stashes are saved.
 * `'OLD'` contains unused code and data like old version,
   back up, and left-overs collected here for history.
 

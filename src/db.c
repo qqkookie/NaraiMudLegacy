@@ -3082,7 +3082,7 @@ void stash_char(struct char_data *ch)
       name[i] = tolower(name[i]);
   sprintf(stashfile, "%s/%c/%s.x.y",STASH,name[0],name);
   
-  sprintf(buf, "Stash : %s\n", stashfile);
+  sprintf(buf, "Stash : %s", stashfile);
   log(buf);
   
   sigsetmask(mask);
@@ -3218,7 +3218,7 @@ void unstash_char(struct char_data *ch, char *filename)
     }
   }
   
-  sprintf(buf, "Unstash : %s\n", stashfile);
+  sprintf(buf, "Unstash : %s", stashfile);
   log(buf);
   
   fscanf(fl,"%d",&n);

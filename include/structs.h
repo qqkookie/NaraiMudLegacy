@@ -1,13 +1,15 @@
 #include <sys/types.h>
 #include <stdlib.h>
 
-// Changed all bytes and short to int or unsigned
-typedef short sbyte;
-typedef unsigned ubyte;
+// Changed all bytes to short and short to int or unsigned
+
 typedef int sh_int;
 typedef unsigned ush_int;
-typedef char bool;
-typedef unsigned short byte;
+typedef _Bool bool;
+
+typedef short sbyte;
+typedef short byte;
+typedef unsigned short ubyte;
 
 typedef long long LONGLONG;
 
@@ -27,6 +29,7 @@ typedef long long LONGLONG;
 #define MAX_STRING_LENGTH   2000
 #define MAX_OUTPUT_LENGTH    512
 #define MAX_INPUT_LENGTH     200
+
 #define MAX_MESSAGES          61
 #define MAX_ITEMS            153
 

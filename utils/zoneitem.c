@@ -4,6 +4,8 @@
 
 #define MAX_ITEMS 1000
 
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+
 static int com_func(i,j)
 int *i,*j;
 {

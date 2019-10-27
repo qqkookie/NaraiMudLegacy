@@ -13,16 +13,16 @@ VPATH   = .:$(INCDIR):$(UTLSRC):
 # To use gdb, use gcc for Linux, cc (= clang) for FreeBSD
 # CC      = clang
 # CC      = gcc
-# CC      = cc
+CC      = cc
 # CC      = clang-8
-CC      = gcc-9
+# CC      = gcc-9
 
 # MAKE    = gmake
 MAKE    = make
 LD      = $(CC)
 
-# OFLAGS  = -O -g -Wall -pipe
-OFLAGS  = -O0 -g -Wall -pipe
+OFLAGS  = -O0 -g -Wall -Wextra -pipe
+# OFLAGS  = -O -g -Wall -Wextra -pipe
 
 INCLUDE = -I$(INCDIR)
 
@@ -35,8 +35,8 @@ INCLUDE = -I$(INCDIR)
 # MFLAGS are moved to ../include/utils.h
 
 # Set initial gold and quest in "db.c"
-# DFLAGS= -DBETA_TEST
 DFLAGS= -DBETA_TEST
+# DFLAGS=
 
 CFLAGS  = $(OFLAGS) $(DFLAGS) $(INCLUDE)
 
@@ -53,9 +53,11 @@ SRCS    = \
 	spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c \
 	spells3.c utility.c version.c weather.c daerimsa.c gbisland.c
 
-UTILS       = change_level change_pass chstashform unchstashform check_pass \
-              check_player list_player mob_create mob_edit zone_item \
-              zone_list zone_print mob_balance check_god fix_noname
+UTILS       = chlevel chpass dostashform undostashform \
+	      checkpass checkchar listchar \
+	      mobcreate mobedit mobbalance \
+	      zoneitem zonelist zoneprint \
+	      checkgod fixnoname
 
 # SCRIPTS     = everun backup RESTART RUNME shutmud
 SCRIPTS     = runmud.sh killmud.sh
@@ -68,7 +70,7 @@ CTAGS_SRC   = $(SRCS) $(INCDIR)/*.h
 $(OBJDIR)/%.o :  %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-$(OBJDIR)/% :  %.o
+$(OBJDIR)/% :  $(OBJDIR)/%.o
 	$(LD) -o $@ $< $(LDFLAGS)
 
 default :    objdir $(PROG_BIN) 
@@ -107,7 +109,7 @@ ctags :
 
 # DO NOT DELETE
 
-# act.comm.c act.informative.c act.movement.c act.obj1.c act.obj2.c act.offensive.c act.other.c act.social.c act.wizard.c board.c comm.c constants.c daerimsa.c db.c fight.c gbisland.c guild_command.c guild_constant.c guild_informative.c guild_skills.c handler.c interpreter.c limit.c mabact.c magic_weapon.c magic.c magic2.c magic3.c mail.c mob_bal.c mob_magic.c mobact.c modify.c newcom.c newshop.c quest.c shop.c spec_assign.c spec_procs.c spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c spells3.c utility.c version.c weather.c $(UTLSRC)/change_level.c $(UTLSRC)/change_pass.c $(UTLSRC)/change_stashform.c $(UTLSRC)/check_pass.c $(UTLSRC)/check_player.c $(UTLSRC)/list_player.c $(UTLSRC)/mob_balace.c $(UTLSRC)/mob_create.c $(UTLSRC)/mob_edit.c $(UTLSRC)/zone_item.c $(UTLSRC)/zone_list.c $(UTLSRC)/zone_print.c -I../include
+# act.comm.c act.informative.c act.movement.c act.obj1.c act.obj2.c act.offensive.c act.other.c act.social.c act.wizard.c board.c comm.c constants.c daerimsa.c db.c fight.c gbisland.c guild_command.c guild_constant.c guild_informative.c guild_skills.c handler.c interpreter.c limit.c mabact.c magic_weapon.c magic.c magic2.c magic3.c mail.c mob_bal.c mob_magic.c mobact.c modify.c newcom.c newshop.c quest.c shop.c spec_assign.c spec_procs.c spec_procs2.c spec_procs3.c spell_parser.c spells1.c spells2.c spells3.c utility.c version.c weather.c $(UTLSRC)/chlevel.c $(UTLSRC)/chpass.c $(UTLSRC)/dostashform.c $(UTLSRC)/checkpass.c $(UTLSRC)/checkchar.c $(UTLSRC)/listchar.c $(UTLSRC)/mobbalance.c $(UTLSRC)/mobcreate.c $(UTLSRC)/mobedit.c $(UTLSRC)/zoneitem.c $(UTLSRC)/zonelist.c $(UTLSRC)/zoneprint.c -I../include
 
 $(OBJDIR)/act.comm.o: act.comm.c \
     $(INCDIR)/structs.h \
@@ -333,29 +335,29 @@ $(OBJDIR)/weather.o: weather.c \
     $(INCDIR)/utils.h \
     $(INCDIR)/comm.h $(INCDIR)/handler.h $(INCDIR)/interpreter.h \
     $(INCDIR)/db.h
-$(OBJDIR)/change_level.o: $(UTLSRC)/change_level.c \
+$(OBJDIR)/chlevel.o: $(UTLSRC)/chlevel.c \
     $(INCDIR)/structs.h
-$(OBJDIR)/change_pass.o: $(UTLSRC)/change_pass.c \
+$(OBJDIR)/chpass.o: $(UTLSRC)/chpass.c \
     $(INCDIR)/structs.h
-$(OBJDIR)/chstashform.o: $(UTLSRC)/chstashform.c
-$(OBJDIR)/unchstashform.o: $(UTLSRC)/unchstashform.c
-$(OBJDIR)/check_pass.o: $(UTLSRC)/check_pass.c \
+$(OBJDIR)/dostashform.o: $(UTLSRC)/dostashform.c
+$(OBJDIR)/undostashform.o: $(UTLSRC)/undostashform.c
+$(OBJDIR)/checkpass.o: $(UTLSRC)/checkpass.c \
     $(INCDIR)/structs.h
-$(OBJDIR)/check_player.o: $(UTLSRC)/check_player.c \
+$(OBJDIR)/checkchar.o: $(UTLSRC)/checkchar.c \
     $(INCDIR)/structs.h
-$(OBJDIR)/list_player.o: $(UTLSRC)/list_player.c \
+$(OBJDIR)/listchar.o: $(UTLSRC)/listchar.c \
     $(INCDIR)/structs.h
-$(OBJDIR)/mob_balance.o: $(UTLSRC)/mob_balance.c
-$(OBJDIR)/mob_create.o: $(UTLSRC)/mob_create.c \
-    $(UTLSRC)/mob_create.h
-$(OBJDIR)/mob_edit.o: $(UTLSRC)/mob_edit.c \
-    $(UTLSRC)/mob_create.h
-$(OBJDIR)/zone_item.o: $(UTLSRC)/zone_item.c
-$(OBJDIR)/zone_list.o: $(UTLSRC)/zone_list.c
-$(OBJDIR)/zone_print.o: $(UTLSRC)/zone_print.c
+$(OBJDIR)/mobbalance.o: $(UTLSRC)/mobbalance.c
+$(OBJDIR)/mobcreate.o: $(UTLSRC)/mobcreate.c \
+    $(UTLSRC)/mobcreate.h
+$(OBJDIR)/mobedit.o: $(UTLSRC)/mobedit.c \
+    $(UTLSRC)/mobcreate.h
+$(OBJDIR)/zoneitem.o: $(UTLSRC)/zoneitem.c
+$(OBJDIR)/zonelist.o: $(UTLSRC)/zonelist.c
+$(OBJDIR)/zoneprint.o: $(UTLSRC)/zoneprint.c
 
-$(OBJDIR)/check_god.o: $(UTLSRC)/check_god.c $(INCDIR)/structs.h
-$(OBJDIR)/fix_noname.o: $(UTLSRC)/fix_noname.c $(INCDIR)/structs.h
+$(OBJDIR)/checkgod.o: $(UTLSRC)/checkgod.c $(INCDIR)/structs.h
+$(OBJDIR)/fixnoname.o: $(UTLSRC)/fixnoname.c $(INCDIR)/structs.h
 
 
 # ------------------------------------------------------------

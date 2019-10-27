@@ -130,8 +130,9 @@ void mobile_activity(void)
 	  REMOVE_BIT(ch->specials.act, ACT_SPEC);
 	} 
 	else {
-	  if ((*mob_index[ch->nr].func) (ch, 0, ""))
-	    /*continue;*/;
+	  (*mob_index[ch->nr].func) (ch, 0, "");
+	  // if ((*mob_index[ch->nr].func) (ch, 0, ""))
+	  //   /*continue;*/;
 	}
       }
       if (AWAKE(ch) && !(ch->specials.fighting)) {

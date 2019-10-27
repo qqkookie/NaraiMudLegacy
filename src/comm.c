@@ -72,7 +72,7 @@ int boottime;
 
 /* reboot_time = 24 hour */
 /* u_long reboot_time = 86400; */
-u_long reboot_time = REBOOT_TIME;
+long reboot_time = REBOOT_TIME;
 
 int maxdesc, avail_descs;
 int tics = 0;        /* for extern checkpointing */
@@ -1075,7 +1075,8 @@ void close_socket(struct descriptor_data *d)
       log(buf);
       d->character->desc = 0;
     } else {
-      sprintf(buf, "Losing player: %s.", GET_NAME(d->character));
+      if (GET_NAME(d->character)) {
+        sprintf(buf, "Losing player: %s.", GET_NAME(d->character));
 /*
 #ifdef  RETURN_TO_QUIT  
 	save_char(d->character,world[d->character->in_room].number);
@@ -1088,8 +1089,11 @@ void close_socket(struct descriptor_data *d)
 	  stash_char(d->character);
 #endif
 */
-      log(buf);
+        log(buf);
+      }
+
       free_char(d->character);
+      d->character = NULL;
     }
   }
   else
@@ -1405,7 +1409,7 @@ int siginterrupt(int sig, int flag)
     return (sigaction(sig, &sa, NULL));
 }
 
-int sigsetmask(unsigned mask)
+int sigsetmask(int mask)
 {
     sigset_t set;
 

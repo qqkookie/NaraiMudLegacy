@@ -1,5 +1,5 @@
 #!/bin/sh
-# OR #!/home/mud/mud/bin/bash
+# OR #!/usr/bin/bash
 #
 #	Run MUD forever.
 #

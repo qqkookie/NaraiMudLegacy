@@ -452,7 +452,7 @@ void PrintMobileQ(FILE *fp)
 	}
 }
 
-int main(int argc, char **argv)
+int main()
 {
 	FILE *fp;
 

@@ -1190,13 +1190,13 @@ void do_weather(struct char_data *ch, char *argument, int cmd)
 {
   extern struct weather_data weather_info;
   static char buf[100], buf2[100];
-  char static *sky_look[4]= {
+  static char *sky_look[4]= {
      "cloudless",
      "cloudy",
      "rainy",
      "lit by flashes of lightning"
       };
-  char static *sky_look_han[4]= {
+  static char *sky_look_han[4]= {
      "하늘이 구름 한점 없이 맑습니다.",
      "하늘에 구름이 조금 있습니다.",
      "비가 오고 있습니다.",
@@ -1928,7 +1928,7 @@ void do_data(struct char_data *ch, char *argument, int cmd)
         case  7: n=victim->specials.act; break;
         case  8: n=victim->bank; break;
         case  9: n=d->descriptor; break;
-        case 10: n=victim->player.level;
+        case 10: n=victim->player.level; break;
       }
       sprintf(buf,fmt,GET_NAME(victim),n,(i%nc) ? "|" : "\n\r");
       send_to_char(buf,ch);

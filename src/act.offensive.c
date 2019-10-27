@@ -564,7 +564,8 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
 	percent = ((300-GET_AC(victim)-GET_HITROLL(ch)-GET_SKILLED(ch, SKILL_PUNCH))>>4) + number(1, 101);
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 	if (percent > ch->skills[SKILL_PUNCH].learned ) {
-		INCREASE_SKILLED(ch, victim, SKILL_PUNCH);
+		// NOTE: No skill gain on failure
+		// INCREASE_SKILLED(ch, victim, SKILL_PUNCH);
 		send_to_char("You failed to punch him WHAT a DAMN!!!!!\n\r",ch);
 		act("$n failed to punch down $N!!!",TRUE,ch,0,victim,TO_ROOM);
 		return;

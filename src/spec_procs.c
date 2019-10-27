@@ -556,7 +556,7 @@ int thief(struct char_data *ch, int cmd, char *arg)
           case 1  : do_backstab(ch, GET_NAME(victim), 0); break;
           case 2  : do_light_move(ch, GET_NAME(victim), 0); break;
           case 3  : do_flash(ch, GET_NAME(victim), 0); break;
-          case 4  : npc_tornado(ch);
+          case 4  : npc_tornado(ch); /*FALLTHRU*/
           case 5  : do_punch(ch, GET_NAME(victim), 0); break;
     }
     return TRUE;
@@ -1070,6 +1070,7 @@ int paladin(struct char_data *ch, int cmd, char *arg)
     case 22:
     case 23:
 		do_light_move(ch,"",0);
+		/*FALLTHRU*/
     case 24:
     case 25:
       act("$n utters the words 'heal'.", 1, ch, 0, 0, TO_ROOM);
@@ -1141,14 +1142,17 @@ int dragon(struct char_data *ch, int cmd, char *arg)
     act("$n utters the words 'qassir plaffa'.", 1, ch, 0, 0, TO_ROOM);
 	cast_fire_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);
     if(mh < 400) return TRUE;
+    /*FALLTHRU*/
    case 2:
     act("$n utters the words 'qassir porolo'.", 1, ch, 0, 0, TO_ROOM);
 	cast_gas_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);
     if(mh < 400) return TRUE;
+    /*FALLTHRU*/
    case 3:
     act("$n utters the words 'qassir relata'.", 1, ch, 0, 0, TO_ROOM);
 	cast_lightning_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);
     if(mh < 400) return TRUE;
+    /*FALLTHRU*/
    case 4:
     act("$n utters the words 'qassir moolim'.", 1, ch, 0, 0, TO_ROOM);
 	cast_frost_breath(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);

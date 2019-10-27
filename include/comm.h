@@ -38,5 +38,5 @@ char baddomain[BADDOMS][32];
 
 #define sigsetmask(m)	__mysigsetmask(m)
 
-int sigsetmask(unsigned mask);
+int sigsetmask(int mask);
 

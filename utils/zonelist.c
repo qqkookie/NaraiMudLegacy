@@ -4,6 +4,8 @@
 
 #define MAX_ITEMS 1000
 
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+
 static int com_func(i,j)
 int *i,*j;
 {
@@ -114,7 +116,7 @@ int main(int argc,char *argv[])
 	}
 	qsort(items,no_item,sizeof(int),com_func);
 
-	for(i=0;i<strlen(zonename);i++)
+	for(i=0;i< (int)strlen(zonename);i++)
 	{
 		if(zonename[i]==' ') zonename[i]='_';
 	}

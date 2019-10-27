@@ -1,6 +1,8 @@
 # execute me at lib dir
+
 cd world
-mv A_Mi_Dae_Jun.wld 		AMiDaeJun.wld   	 
+
+mv A_Mi_Dae_Jun.wld 		AMiDaeJun.wld
 # Arachnos.wld  Arachnos.wld
 # Arena.wld     Arena.wld
 # DaeRimSa.wld          	DaeRimSa.wld
@@ -8,7 +10,6 @@ mv A_Mi_Dae_Jun.wld 		AMiDaeJun.wld
 mv Dirks_Castle.wld 		DirksCastle.wld
 mv Dragon_Tower.wld 		DragonTower.wld
 mv drow_city.wld 		DrowCity.wld
-# DummyZone.wld
 # Easy_world.wld
 # Galaxy.wld            Galaxy.wld
 # GoodBadIsland.wld     GoodBadIsland.wld
@@ -51,19 +52,21 @@ mv The_tunnels.wld 		TheTunnels.wld
 mv The_Wamphyri_Aerie.wld 	TheWamphyriAerie.wld
 mv The_Wasteland.wld 		TheWasteland.wld
 
-mv Easy_world.wld		DummyZone.wld
+# UtilityZone.wld
+mv Easy_world.wld		UtilityZone.wld
 
 mv world_files			world_files-ORIG
 mv world_files-camel		world_files
 
 cd ../zone
 
+mv A_Mi_Dae_Jun.zon 		AMiDaeJun.zon   	 
 mv DirkSCastle.zon		DirksCastle.zon
 mv MelSDoghouse.zon		MelsDoghouse.zon
 mv RedferneSResidence.zon	RedfernesResidence.zon
 mv OKingdom.zon			KingdomOfO.zon
 
-mv EasyZone.zon			DummyZone.zon
+mv EasyZone.zon			UtilityZone.zon
 
 mv zone_files			zone_files-ORIG
 mv zone_files-camel		zone_files

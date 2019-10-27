@@ -108,7 +108,7 @@ void string_add(struct descriptor_data *d, char *str)
   
   if (!(*d->str))
   {
-    if (strlen(str) > d->max_str)
+    if ((int) strlen(str) > d->max_str)
     {
       send_to_char("String too long - Truncated.\n\r",
          d->character);
@@ -120,7 +120,7 @@ void string_add(struct descriptor_data *d, char *str)
   }
   else
   {
-    if (strlen(str) + strlen(*d->str) > d->max_str)
+    if ((int) (strlen(str) + strlen(*d->str)) > d->max_str)
     {
       send_to_char("String too long. Last line skipped.\n\r",
          d->character);
@@ -360,7 +360,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 
   if (*string)   /* there was a string in the argument array */
   {
-    if (strlen(string) > length[field - 1])
+    if ((int)strlen(string) > length[field - 1])
     {
       send_to_char("String too long - truncated.\n\r", ch);
       *(string + length[field - 1]) = '\0';

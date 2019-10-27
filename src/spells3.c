@@ -131,6 +131,7 @@ int type,struct char_data *tar_ch,struct obj_data *tar_obj)
     GET_HIT(ch)=1;
     GET_MANA(ch)=1;
     GET_MOVE(ch)=1;
+    /*FALLTHRU*/
   case SPELL_TYPE_WAND:
   case SPELL_TYPE_STAFF:
   case SPELL_TYPE_SCROLL:
