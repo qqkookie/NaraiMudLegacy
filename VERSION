@@ -6,7 +6,7 @@ Narai Mud Modern Legacy 2019 version RELEASE
 Will be Released on 2019 11.XX as version 3.00 
 
 Restore world name to old style, 
-gcc-9 -Wextra warnings (unused paramters, switch fallthru),i
-util rename
+gcc-9 -Wextra warnings (unused paramters, switch fallthru)
+utils rename
 
 uploaded 2019.10.28  by Cookie

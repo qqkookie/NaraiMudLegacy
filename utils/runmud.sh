@@ -3,11 +3,11 @@
 #
 #	Run MUD forever.
 #
-#	mudrun is script to run narai mud in contolled way.
+#	runmud is script to run narai mud in contolled way.
 #	by Cookie on Sun Sep 14 01:50:36 KST 1997
-#	Revised by Cookie on Sun Sep 15 00:14:35 KST 2019
+#	Revised by Cookie on Sat Nov 02 13:11:07 KST 2019
 #
-# $pidfile (like "mud-5001.pid") is used as port lock.
+# $pidfile (like "mud-4001.pid") is used as port lock.
 
 # go backgorund
 if [ -z "$background" ] ; then
@@ -20,7 +20,7 @@ trap "" 1 2 3 13 14
 
 umask 0077
 
-port=5002	# $usrdir/PORT is primary
+port=4001	# $usrdir/PORT is primary
 
 # mud home and belows should be absolute path
 export MUDHOME=$HOME/mud
@@ -36,7 +36,7 @@ mudlink=run-mud
 loglink=log-run
 lastlink=log-last
 checklink=log-check
-# All logs, player files and stash files are saved in $usrdir
+# All logs, players and stash files are saved in $usrdir
 usrdir=lib
 
 if [ -f $mudhome/$usrdir/PORT ] ; then
@@ -79,8 +79,6 @@ cd $usrdir || exit 2
 
 while expr $COUNT \< 100 > /dev/null
 do
-	export TIMESTAMP="`date +%y-%m-%d_%H-%M`"
-
 	if  [ -e BLOCKMUD ] ; then break; fi
 	if  [ -e $pidfile ] ; then
 		echo Port $port lock file $pidfile already exists. >> $checkfile
@@ -162,7 +160,7 @@ do
 			acct=SYSTEM
 		fi
 
-		echo "============================================================================"
+		echo "-------------------------------------------------------------------"
 		if [ -f $pidfile ] ; then
 			check="STARTED PID: `cat $pidfile`"
 			running="Running...."
@@ -232,6 +230,7 @@ do
 	if [ -s $logfile ] ; then
 		tail -100 $logfile >> $logdir/CRASH-LOG
 
+		TIMESTAMP="`date +%y-%m-%d_%H-%M`"
 		lastlog="$logdir/mud_$TIMESTAMP-$COUNT.log"
 		echo "Moving $logfile to $lastlog" >> $checkfile
 		/bin/mv -f $logfile $lastlog

@@ -1,45 +1,49 @@
-#	ignore file for Narai Mud and Unix
+#	ignore file for KIT/Narai mud on Unix
 #
 # file types to ignore
 
-*.o
 *.log
 *.pid
 *.x.y
+*.sta
 
-# generic unix files
+# generic unix binary files
 
 *.tar
+*.gz
+*.tgz
+*.xz
 *.txz
+*.zip
 
+*.o
 *.core
 *.out
 *.tmp
 *.swp
-*.diff
-*.depend
 
-# directories to ignore
+# dir/files to ignore
 
 bin/
-[Oo]bj/
 src/[Oo]bj/
 [Tt]mp/
-log/
+
+src/.depend
+src/tags
+
+# dir/files for mud operation
+
+users/
 
 lib/boards/
 lib/mboxes/
 lib/log/
 lib/stash/
+log/
 
-# files to ignore
-
-src/.depend
 lib/players*
 lib/stash*
 run-mud
-log-check
-log-run
-log-last
+log-*
 
 # end of .gitignore

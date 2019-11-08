@@ -3,7 +3,7 @@
 # For debuging use only, not for production use
 #
 
-port=5002	# $usrdir/PORT is primary
+port=4001	# $usrdir/PORT is primary
 
 prog=mud-narai
 usrdir=$HOME/mud/lib

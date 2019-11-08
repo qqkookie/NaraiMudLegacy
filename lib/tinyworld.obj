@@ -3652,7 +3652,7 @@ A small leather pack rests here.~
 200 0 0 0
 9 1000 250
 E
-pack
+pack~
 It looks pretty big on the inside.
 ~
 #2936
@@ -10746,7 +10746,8 @@ DoRyong do~
 #25083
 HyunChul~
 현철~
-우주에서 떨어졌다는 세상에서 가장 강한 금속인 현철이 보입니다.
+우주에서 떨어졌다는 세상에서 가장 강한 금속인 현철이 보입니다.~
+~
 8 131074 1
 0 0 0 0
 1 3000 0
