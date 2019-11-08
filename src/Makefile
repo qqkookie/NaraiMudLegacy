@@ -50,15 +50,11 @@ SRCS    = \
        	magic.c mob_act.c mob_bal.c point.c spec_mid.c spec_misc.c \
        	spec_mob.c special.c spell1.c spell2.c spell_parser.c
 
-#UTILS       = change_level change_pass chstashform unchstashform check_pass \
-#              check_player list_player mob_create mob_edit zone_item \
-#              zone_list zone_print mob_balance check_god fix_noname
-
-UTILS       = chpass chcheck chdelete chlist zoneitem zonelist zoneprint \
+UTILS       = chpass checkchar purgechar listchar zoneitem zonelist zoneprint \
 	      mobbalance mobcreate mobedit testskill dostashform undostashform
 
 # SCRIPTS     = everun backup RESTART RUNME shutmud
-SCRIPTS     = runmud.sh killmud.sh backup.sh
+SCRIPTS     = runmud.sh killmud.sh
 
 OBJS        = $(SRCS:%.c=$(OBJDIR)/%.o)
 PROG_BIN    = $(OBJDIR)/$(PROG)
@@ -109,7 +105,7 @@ ctags :
 INC=$(INCDIR)
 OBJ=$(OBJDIR)
 
-# -I$(INC) act.comm.c act.info.c act.look.c act.move.c act.obj1.c act.obj2.c act.offensive.c act.player.c act.special.c act.wizard.c board.c cast1.c cast2.c comm.c constants.c db.c db.player.c db.zone.c fight.c guild.c handler.c house.c interpreter.c library.c magic.c mob_act.c mob_bal.c point.c spec_mid.c spec_misc.c spec_mob.c special.c spell_parser.c spell1.c spell2.c utils/chpass.c utils/chcheck.c utils/chdelete.c utils/chlist.c utils/zoneitem.c utils/zonelist.c utils/zoneprint.c utils/mobbalance.c utils/mobcreate.c utils/mobedit.c utils/testskill.c utils/dostashform.c utils/undostashform.c
+# -I$(INC) act.comm.c act.info.c act.look.c act.move.c act.obj1.c act.obj2.c act.offensive.c act.player.c act.special.c act.wizard.c board.c cast1.c cast2.c comm.c constants.c db.c db.player.c db.zone.c fight.c guild.c handler.c house.c interpreter.c library.c magic.c mob_act.c mob_bal.c point.c spec_mid.c spec_misc.c spec_mob.c special.c spell_parser.c spell1.c spell2.c utils/chpass.c utils/checkchar.c utils/purgechar.c utils/listchar.c utils/zoneitem.c utils/zonelist.c utils/zoneprint.c utils/mobbalance.c utils/mobcreate.c utils/mobedit.c utils/testskill.c utils/dostashform.c utils/undostashform.c
 
 $(OBJ)/act.comm.o: act.comm.c   \
     $(INC)/char.h $(INC)/typedef.h \
@@ -264,7 +260,7 @@ $(OBJ)/mob_bal.o: mob_bal.c
 $(OBJ)/point.o: point.c   \
     $(INC)/char.h $(INC)/typedef.h  \
     $(INC)/object.h $(INC)/global.h  \
-    $(INC)/comm.h $(INC)/play.h
+    $(INC)/comm.h $(INC)/play.h $(INC)/etc.h
 
 $(OBJ)/spec_mid.o: spec_mid.c   \
     $(INC)/char.h $(INC)/typedef.h \
@@ -311,15 +307,15 @@ $(OBJ)/chpass.o: utils/chpass.c   \
     $(INC)/char.h $(INC)/typedef.h \
     $(INC)/gamedb.h
 
-$(OBJ)/chcheck.o: utils/chcheck.c   \
+$(OBJ)/checkchar.o: utils/checkchar.c   \
     $(INC)/char.h $(INC)/typedef.h  \
     $(INC)/gamedb.h
 
-$(OBJ)/chdelete.o: utils/chdelete.c   \
+$(OBJ)/purgechar.o: utils/purgechar.c   \
     $(INC)/char.h $(INC)/typedef.h \
     $(INC)/gamedb.h
 
-$(OBJ)/chlist.o: utils/chlist.c   \
+$(OBJ)/listchar.o: utils/listchar.c   \
     $(INC)/char.h $(INC)/typedef.h  \
     $(INC)/gamedb.h
 

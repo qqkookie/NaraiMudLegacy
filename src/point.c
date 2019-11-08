@@ -6,6 +6,7 @@
 #include "global.h"
 #include "comm.h"
 #include "play.h"
+#include "etc.h"
 
 /* ************************************************************************
    *  file: limits.c , Limit and gain control module.        Part of DIKUMUD *
@@ -639,7 +640,7 @@ void check_idling(struct char_data *ch)
 	    act("$n disappears into the void.", TRUE, ch, 0, 0, TO_ROOM);
 	    send_to_char("You have been idle, and are pulled into a void.\n\r", ch);
 	    char_from_room(ch);
-	    char_to_room(ch, 1);	/* Into room number 0 */
+	    char_to_room(ch, LIMBO_ROOM);	/* Into room number 0 */
 	}
 	else if (ch->specials.timer >= 35) {
 	    /* NOTE: do_rent(), extract_char() and free_char(). */

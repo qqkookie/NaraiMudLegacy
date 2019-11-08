@@ -3,9 +3,10 @@
  * Definitions for specific mob / object/ room in some zone.		*
  ************************************************************************/
 
-#define JAIL_ROOM			6999
 #define MID_TEMPLE			3001	
+#define LIMBO_ROOM			1
 #define WIZ_LOUNGE			2	
+#define JAIL_ROOM			6999
 
 #define ROOM_QUEST			3061
 #define ROOM_REMORTAL			3062

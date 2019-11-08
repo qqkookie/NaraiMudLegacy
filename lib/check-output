@@ -1,0 +1,959 @@
+================================================================
+--------------- Checking Zone and world:
+OOZ       OBJ: #3099   "board bulletin"  @ LIMBO (0) 
+ZOO       OBJ: #3099   'O 0 3099 5 2    Wiz Board' @ LIMBO
+   1 LIMBO                               0  100 (  28   0      0 -    27 )
+OOZ       OBJ: #6109   "potion blue"  @ The castle (200) 
+ZOO       OBJ: #6109   'G 1 6109 1	blue potion' @ The castle
+OOZ       OBJ: #9002   "hat wizard's"  @ The castle (200) 
+ZOO       OBJ: #9002   'E 1 9002 2 6 	mages hat' @ The castle
+OOZ       OBJ: #5107   "whip snake sixheaded"  @ The castle (200) 
+ZOO       OBJ: #5107   'E 1 5107 2 16	give him sixheaded whip' @ The castle
+OOZ       OBJ: #2207   "necklace symbol holy"  @ The castle (200) 
+ZOO       OBJ: #2207   'E 1 2207 1 3	holy symbol' @ The castle
+OOZ       OBJ: #7203   "cloak purple"  @ The castle (200) 
+ZOO       OBJ: #7203   'E 1 7203 1 5	purple cloak' @ The castle
+OOZ       OBJ: #3046   "bronze breast plate"  @ The castle (200) 
+ZOO       OBJ: #3046   'P 1 3046 1 201' @ The castle
+OOZ       OBJ: #3075   "helmet bronze"  @ The castle (200) 
+ZOO       OBJ: #3075   'P 1 3075 1 201' @ The castle
+OOZ       OBJ: #3070   "gauntlets bronze"  @ The castle (200) 
+ZOO       OBJ: #3070   'P 1 3070 1 201' @ The castle
+OOZ       OBJ: #3080   "leggings bronze"  @ The castle (200) 
+ZOO       OBJ: #3080   'P 1 3080 1 201' @ The castle
+OOZ       OBJ: #3085   "sleeves bronze"  @ The castle (200) 
+ZOO       OBJ: #3085   'P 1 3085 1 201' @ The castle
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #262 @ The castle
+ZOO+MISS  KEY: #927    #263 @ The castle
+ZOO+MISS  KEY: #927    #264 @ The castle
+   2 The castle                        200  100 (  73   1    201 -   273 )
+OOZ       OBJ: #6999   "scythe"  @ Mel's Doghouse (1300) 
+ZOO       OBJ: #6999   'E 1 6999 2 16		Scythe of Death' @ Mel's Doghouse
+OOZ       MOB: #6008   "mouse"  @ Mel's Doghouse (1300) 
+ZOO       MOB: #6008   'M 0 6008 25 1303	Mouse' @ Mel's Doghouse
+   3 Mel's Doghouse                   1300  100 (   3   1   1301 -  1303 )
+OOZ       OBJ: #1327   "magnolias garland"  @ Houses (1400) 
+ZOO       OBJ: #1327   'O 0 1327 1 1403' @ Houses
+OOZ       OBJ: #1621   "bullets ammo"  @ Houses (1400) 
+ZOO       OBJ: #1621   'G 1 1621 10' @ Houses
+OOZ       OBJ: #1623   "shells ammo"  @ Houses (1400) 
+ZOO       OBJ: #1623   'G 1 1623 10' @ Houses
+ZOO      ROOM: #6137   'M 0 1465 1 6137' @ Houses
+OOZ       OBJ: #1620   "colt gun"  @ Houses (1400) 
+ZOO       OBJ: #1620   'E 1 1620 9 17' @ Houses
+OOZ       OBJ: #1316   "plates armored"  @ Houses (1400) 
+ZOO       OBJ: #1316   'E 1 1316 1 20' @ Houses
+   4 Houses                           1400  100 (  73   0   1400 -  1472 )
+OOZ       MOB: #7006   "snake"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7006   'M 0 7006 5 1528' @ Dirk's Castle
+OOZ       MOB: #7006   "snake"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7006   'M 0 7006 5 1531' @ Dirk's Castle
+OOZ       MOB: #7006   "snake"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7006   'M 0 7006 5 1526' @ Dirk's Castle
+OOZ       MOB: #7011   "morkoth"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7011   'M 0 7011 3 1529' @ Dirk's Castle
+OOZ       MOB: #7011   "morkoth"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7011   'M 0 7011 3 1535' @ Dirk's Castle
+OOZ       MOB: #7011   "morkoth"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7011   'M 0 7011 3 1533' @ Dirk's Castle
+OOZ       MOB: #7203   "wererat rat were"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7203   'M 0 7203 10 1532' @ Dirk's Castle
+OOZ       MOB: #7203   "wererat rat were"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7203   'M 0 7203 10 1533' @ Dirk's Castle
+OOZ       MOB: #7203   "wererat rat were"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7203   'M 0 7203 10 1531' @ Dirk's Castle
+OOZ       MOB: #7203   "wererat rat were"  @ Dirk's Castle (1500) 
+ZOO       MOB: #7203   'M 0 7203 10 1535' @ Dirk's Castle
+OOZ       OBJ: #1704   "silvery cloak"  @ Dirk's Castle (1500) 
+ZOO       OBJ: #1704   'E 1 1704 1 5' @ Dirk's Castle
+OOZ       OBJ: #7922   "knee protecter leather"  @ Dirk's Castle (1500) 
+ZOO       OBJ: #7922   'E 1 7922 1 19' @ Dirk's Castle
+   5 Dirk's Castle                    1500  100 (  52   0   1500 -  1551 )
+OOZ       OBJ: #3032   "bag"  @ SHIRE (1700) 
+ZOO       OBJ: #3032   'G 1 3032 999		bags' @ SHIRE
+OOZ       OBJ: #6004   "lantern"  @ SHIRE (1700) 
+ZOO       OBJ: #6004   'G 1 6004 999		lanterns' @ SHIRE
+OOZ       OBJ: #1305   "silver epee"  @ SHIRE (1700) 
+ZOO       OBJ: #1305   'G 1 1305 5		Halberd' @ SHIRE
+OOZ       OBJ: #7191   "ring gold goldring"  @ SHIRE (1700) 
+ZOO       OBJ: #7191   'G 1 7191 5		gold ring' @ SHIRE
+OOZ       OBJ: #1911   "belt leather leatherbelt"  @ SHIRE (1700) 
+ZOO       OBJ: #1911   'G 1 1911 10             backpack' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5		Leather armour' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3022   "sword long"  @ SHIRE (1700) 
+ZOO       OBJ: #3022   'E 1 3022 110 16		Long sword' @ SHIRE
+OOZ       OBJ: #3002   "ale bottle dark"  @ SHIRE (1700) 
+ZOO       OBJ: #3002   'G 1 3002 999		ale' @ SHIRE
+OOZ       OBJ: #3100   "tea cup"  @ SHIRE (1700) 
+ZOO       OBJ: #3100   'G 1 3100 999		cups' @ SHIRE
+OOZ       OBJ: #3021   "sword small"  @ SHIRE (1700) 
+ZOO       OBJ: #3021   'E 1 3021 110 16		Small sword' @ SHIRE
+OOZ       OBJ: #3021   "sword small"  @ SHIRE (1700) 
+ZOO       OBJ: #3021   'E 1 3021 110 16' @ SHIRE
+OOZ       OBJ: #3021   "sword small"  @ SHIRE (1700) 
+ZOO       OBJ: #3021   'E 1 3021 110 16' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3075   "helmet bronze"  @ SHIRE (1700) 
+ZOO       OBJ: #3075   'E 1 3075 25 6		Bronze helmet ' @ SHIRE
+OOZ       OBJ: #3046   "bronze breast plate"  @ SHIRE (1700) 
+ZOO       OBJ: #3046   'E 1 3046 11 5		Bronze breast plate' @ SHIRE
+OOZ       OBJ: #3080   "leggings bronze"  @ SHIRE (1700) 
+ZOO       OBJ: #3080   'E 1 3080 15 7		Bronze leggings' @ SHIRE
+OOZ       OBJ: #3002   "ale bottle dark"  @ SHIRE (1700) 
+ZOO       OBJ: #3002   'G 1 3002 999		ale' @ SHIRE
+OOZ       OBJ: #3100   "tea cup"  @ SHIRE (1700) 
+ZOO       OBJ: #3100   'G 1 3100 999		tea' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5		Leather armour' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5		Leather armour' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
+ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
+   6 SHIRE                            1700  100 ( 100   0   1700 -  1799 )
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #1000   'O 0 1000 5 1857    Sundew Machine of POLICE' @ Village of Midgaard
+OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #1001   'O 0 1001 4 1857    Altar of POLICE' @ Village of Midgaard
+OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #3099   'O 0 3099 5 1859    POLICE board' @ Village of Midgaard
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #1000   'O 0 1000 5 1874    Sundew machine of OUTLAW' @ Village of Midgaard
+OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #1001   'O 0 1001 4 1874    Altar of OUTLAW' @ Village of Midgaard
+OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #3099   'O 0 3099 5 1872    OUTLAW board' @ Village of Midgaard
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #1000   'O 0 1000 5 1883     Sundew Machine of ASSASIN' @ Village of Midgaard
+OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #1001   'O 0 1001 4 1883     Altar of ASSASIN' @ Village of Midgaard
+OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1800) 
+ZOO       OBJ: #3099   'O 0 3099 5 1884     ASSASIN board' @ Village of Midgaard
+   7 Village of Midgaard              1800  100 (  44  41   1841 -  1884 )
+OOZ       OBJ: #1462   "potion red"  @ The lands (1900) 
+ZOO       OBJ: #1462   'G 1 1462 200' @ The lands
+OOZ       OBJ: #13799  "key olympus"  @ The lands (1900) 
+ZOO       OBJ: #13799  'E 1 13799 1 17' @ The lands
+MISS      KEY: #1980   #1968 @ The lands
+MISS      KEY: #1980   #1979 @ The lands
+   8 The lands                        1900  100 (  99   1   1901 -  1999 )
+OOZ       OBJ: #1311   "totem"  @ The Wasteland (2100) 
+ZOO       OBJ: #1311   'G 1 1311 1      Totem' @ The Wasteland
+OOZ       OBJ: #2400   "wooden Kal"  @ The Wasteland (2100) 
+ZOO       OBJ: #2400   'E 1 2400 1 16  wooden Kal' @ The Wasteland
+ZOO       KEY: #13799  #2187 @ The Wasteland
+OOZ       OBJ: #13799  "key olympus"  @ The Wasteland (2100) 
+   9 The Wasteland                    2100  100 (  97   0   2100 -  2196 )
+OOZ       OBJ: #2299   "key gold tarnished"  @ Dragon Tower (2200) 
+ZOO       OBJ: #2299   'G 1 2299 2 ' @ Dragon Tower
+OOZ       OBJ: #2298   "cloak winged"  @ Dragon Tower (2200) 
+ZOO       OBJ: #2298   'E 1 2298 1 12' @ Dragon Tower
+ZOO       KEY: #2299   #2229 @ Dragon Tower
+OOZ       OBJ: #2299   "key gold tarnished"  @ Dragon Tower (2200) 
+ZOO       KEY: #2299   #2230 @ Dragon Tower
+OOZ       OBJ: #2299   "key gold tarnished"  @ Dragon Tower (2200) 
+  10 Dragon Tower                     2200   91 (  44   1   2201 -  2244 )
+OOZ       OBJ: #6115   "potion haste powerful"  @ Muncie (2300) 
+ZOO       OBJ: #6115   'G 1 6115 10' @ Muncie
+  11 Muncie                           2300  100 (  71   0   2300 -  2370 )
+  12 The Corporation                  2500  200 ( 193   0   2500 -  2692 )
+  13 The Never Land                   2700  100 (  25   0   2700 -  2724 )
+  14 The Keep of Mahn-Tor             2900  100 ( 100   0   2900 -  2999 )
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #1000   'O 0 1000 5 3001    Sundew Machine' @ Northern Midgaard Main City
+OOZ       OBJ: #1001   "altar"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #1001   'O 0 1001 4 3054    Temple Altar' @ Northern Midgaard Main City
+OOZ       OBJ: #7999   "slot machine"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7999   'O 0 7999 1 3007    Slot Machine' @ Northern Midgaard Main City
+OOZ       OBJ: #8000   "string machine"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #8000   'O 0 8000 1 3002    String Machine' @ Northern Midgaard Main City
+OOZ       MOB: #1000   "perhaps"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #1000   'M 0 1000 1 3001    Perhaps the great God' @ Northern Midgaard Main City
+OOZ       OBJ: #7924   "청잠바 잠바 shirt shirts"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7924   'E 0 7924 1 5	   Wear 청잠바' @ Northern Midgaard Main City
+OOZ       OBJ: #7925   "안경 퍼햅스 glass glasses"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7925   'E 0 7925 1 6	   Wear 안경' @ Northern Midgaard Main City
+OOZ       OBJ: #7926   "바지 청바지 pants blue jeans"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7926   'E 0 7926 1 7 	   Wear 청바지' @ Northern Midgaard Main City
+OOZ       OBJ: #7929   "신발 shoes"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7929   'E 0 7929 1 8	   Wear 신발' @ Northern Midgaard Main City
+OOZ       OBJ: #7927   "잠바 청잠바 coat"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7927   'E 0 7927 1 12	   Wear 잠바' @ Northern Midgaard Main City
+OOZ       OBJ: #7928   "belt 벨트"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7928   'E 0 7928 1 13	   Wear 벨트' @ Northern Midgaard Main City
+OOZ       MOB: #3152   "examiner"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3152   'M 0 3152 1 3002    The Bank Examiner' @ Northern Midgaard Main City
+OOZ       MOB: #3153   "president"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3153   'M 0 3153 1 3004    The Bank President' @ Northern Midgaard Main City
+OOZ       MOB: #3154   "undercover cop"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3154   'M 0 3154 5 3004    The Undercover Cop' @ Northern Midgaard Main City
+OOZ       MOB: #3154   "undercover cop"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3154   'M 0 3154 5 3004    The Undercover Cop' @ Northern Midgaard Main City
+OOZ       MOB: #3154   "undercover cop"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3154   'M 0 3154 5 3004    The Undercover Cop' @ Northern Midgaard Main City
+OOZ       MOB: #3154   "undercover cop"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3154   'M 0 3154 5 3004    The Undercover Cop' @ Northern Midgaard Main City
+OOZ       MOB: #3154   "undercover cop"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3154   'M 0 3154 5 3004    The Undercover Cop' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3003   Security Guard' @ Northern Midgaard Main City
+OOZ       OBJ: #7923   "knee protecter bronze"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7923   'E 1 7923 2 18      bronze knee protecter' @ Northern Midgaard Main City
+OOZ       MOB: #1460   "Grandma"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #1460   'M 0 1460 1 3003    Grandma' @ Northern Midgaard Main City
+OOZ       OBJ: #1308   "key vault"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #1308   'G 1 1308 1' @ Northern Midgaard Main City
+OOZ       OBJ: #3137   "scroll recharge"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #3137   'G 1 3137 500                Give scroll of recharge' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3033' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3011' @ Northern Midgaard Main City
+OOZ       OBJ: #7923   "knee protecter bronze"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7923   'G 1 7923 1' @ Northern Midgaard Main City
+OOZ       OBJ: #7922   "knee protecter leather"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #7922   'G 1 7922 1' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3020' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3010' @ Northern Midgaard Main City
+OOZ       OBJ: #1313   "map"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #1313   'G 1 1313 500           a map' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3009' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3049' @ Northern Midgaard Main City
+OOZ       OBJ: #1307   "hammer"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #1307   'E 1 1307 2 16            wields a hammer' @ Northern Midgaard Main City
+OOZ       MOB: #3150   "security guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3150   'M 0 3150 24 3027' @ Northern Midgaard Main City
+OOZ       OBJ: #3138   "potion opaque"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #3138   'G 1 3138 100' @ Northern Midgaard Main City
+OOZ       MOB: #3148   "unarmed cityguard guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3148   'M 0 3148 10 3014	Unarmed Guard' @ Northern Midgaard Main City
+OOZ       MOB: #3148   "unarmed cityguard guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3148   'M 0 3148 10 3014	Unarmed Guard' @ Northern Midgaard Main City
+OOZ       MOB: #3148   "unarmed cityguard guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3148   'M 0 3148 10 3014	Unarmed Guard' @ Northern Midgaard Main City
+OOZ       MOB: #3148   "unarmed cityguard guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3148   'M 0 3148 10 3014	Unarmed Guard' @ Northern Midgaard Main City
+OOZ       MOB: #3148   "unarmed cityguard guard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3148   'M 0 3148 10 3014	Unarmed Guard' @ Northern Midgaard Main City
+OOZ       OBJ: #1322   "align keywords great super sundew supersundew nogada"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #1322   'G 1 1322 10' @ Northern Midgaard Main City
+OOZ       MOB: #8006   "juggernaut"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #8006   'M 0 8006 1 3032       Juggernaut' @ Northern Midgaard Main City
+OOZ       OBJ: #6116   "potion improve haste great powerful"  @ Northern Midgaard Main City (3000) 
+ZOO       OBJ: #6116   'G 1 6116 10' @ Northern Midgaard Main City
+OOZ       MOB: #3134   "bombard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main City
+OOZ       MOB: #3134   "bombard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main City
+OOZ       MOB: #3134   "bombard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main City
+OOZ       MOB: #3134   "bombard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main City
+OOZ       MOB: #3134   "bombard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main City
+OOZ       MOB: #3134   "bombard"  @ Northern Midgaard Main City (3000) 
+ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main City
+ZOO       KEY: #1308   #3002 @ Northern Midgaard Main City
+OOZ       OBJ: #1308   "key vault"  @ Northern Midgaard Main City (3000) 
+ZOO       KEY: #1308   #3004 @ Northern Midgaard Main City
+OOZ       OBJ: #1308   "key vault"  @ Northern Midgaard Main City (3000) 
+ZOO       KEY: #3133   #3040 @ Northern Midgaard Main City
+OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
+ZOO       KEY: #3133   #3041 @ Northern Midgaard Main City
+OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
+ZOO       KEY: #3133   #3052 @ Northern Midgaard Main City
+OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
+ZOO       KEY: #3133   #3053 @ Northern Midgaard Main City
+OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
+ZOO+MISS  KEY: #15000  #3054 @ Northern Midgaard Main City
+  15 Northern Midgaard Main City      3000  100 (  94   1   3001 -  3094 )
+ZOO      ROOM: #3400   'D 0 3400 0 2          Lock graveyard from inside' @ Southern part of Midgaard
+OOZ       MOB: #6006   "squirrel"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #6006   'M 0 6006 3 3115	      Squirrel' @ Southern part of Midgaard
+OOZ       MOB: #6006   "squirrel"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #6006   'M 0 6006 3 3123	      Squirrel' @ Southern part of Midgaard
+OOZ       MOB: #6006   "squirrel"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #6006   'M 0 6006 3 3124	      Squirrel' @ Southern part of Midgaard
+OOZ       MOB: #6006   "squirrel"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #6006   'M 0 6006 3 3124	      Squirrel' @ Southern part of Midgaard
+OOZ       MOB: #6008   "mouse"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #6008   'M 0 6008 3 3140       Mouse' @ Southern part of Midgaard
+OOZ       MOB: #6008   "mouse"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #6008   'M 0 6008 3 3140       Mouse' @ Southern part of Midgaard
+OOZ       MOB: #3060   "cityguard guard"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #3060   'M 0 3060 20 3111      CityGuard 1' @ Southern part of Midgaard
+OOZ       MOB: #3060   "cityguard guard"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #3060   'M 0 3060 20 3111      CityGuard 2' @ Southern part of Midgaard
+OOZ       MOB: #3060   "cityguard guard"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #3060   'M 0 3060 20 3111      CityGuard 3' @ Southern part of Midgaard
+OOZ       MOB: #3060   "cityguard guard"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #3060   'M 0 3060 20 3111      CityGuard 4' @ Southern part of Midgaard
+OOZ       MOB: #3061   "janitor 영구"  @ Southern part of Midgaard (3100) 
+ZOO       MOB: #3061   'M 0 3061 2 3138		Janitor to clean the Mayor's Office' @ Southern part of Midgaard
+ZOO      ROOM: #3012   'M 0 3126 1 3012	      massacre' @ Southern part of Midgaard
+OOZ       OBJ: #3025   "sword particle"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3025   'E 1 3025 7 16' @ Southern part of Midgaard
+ZOO      ROOM: #3013   'M 0 3127 1 3013	      extremely hard' @ Southern part of Midgaard
+OOZ       OBJ: #3025   "sword particle"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3025   'E 1 3025 7 16' @ Southern part of Midgaard
+ZOO      ROOM: #3014   'M 0 3128 1 3014	      hit hard' @ Southern part of Midgaard
+OOZ       OBJ: #3025   "sword particle"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3025   'E 1 3025 7 16' @ Southern part of Midgaard
+ZOO      ROOM: #3015   'M 0 3129 1 3015       hit' @ Southern part of Midgaard
+OOZ       OBJ: #3025   "sword particle"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3025   'E 1 3025 7 16' @ Southern part of Midgaard
+ZOO      ROOM: #3025   'M 0 3130 1 3025	      barely hit' @ Southern part of Midgaard
+OOZ       OBJ: #3025   "sword particle"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3025   'E 1 3025 7 16' @ Southern part of Midgaard
+ZOO      ROOM: #3026   'M 0 3131 1 3026	      tickle' @ Southern part of Midgaard
+OOZ       OBJ: #3025   "sword particle"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3025   'E 1 3025 7 16' @ Southern part of Midgaard
+ZOO      ROOM: #3024   'M 0 3132 1 3024	      miss' @ Southern part of Midgaard
+OOZ       OBJ: #3025   "sword particle"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3025   'E 1 3025 7 16' @ Southern part of Midgaard
+ZOO      ROOM: #3030   'M 0 3133 1 3030       Musashi' @ Southern part of Midgaard
+OOZ       OBJ: #3026   "sword samurai"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #3026   'E 1 3026 1 16' @ Southern part of Midgaard
+ZOO      ROOM: #3035   'M 0 3134 7 3035       bombard' @ Southern part of Midgaard
+ZOO      ROOM: #3034   'M 0 3135 1 3034       Super DeathCure' @ Southern part of Midgaard
+OOZ       OBJ: #1317   "anti deathcure"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1317   'E 1 1317 1 20			Anti deathcure' @ Southern part of Midgaard
+ZOO      ROOM: #3016   'M 0 3125 1 3016       DeathCure' @ Southern part of Midgaard
+OOZ       OBJ: #1605   "brass shield brassshield"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1605   'E 1 1605 1 11' @ Southern part of Midgaard
+OOZ       OBJ: #2224   "fur hat"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #2224   'E 1 2224 1 6' @ Southern part of Midgaard
+OOZ       OBJ: #2223   "sash"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #2223   'E 1 2223 1 13 ' @ Southern part of Midgaard
+OOZ       OBJ: #2244   "brass ring brassring"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #2244   'E 1 2244 1 1		brass ring' @ Southern part of Midgaard
+OOZ       OBJ: #2222   "leggings"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #2222   'E 1 2222 1 7' @ Southern part of Midgaard
+ZOO      ROOM: #3014   'M 0 3145 1 3014       Mom' @ Southern part of Midgaard
+OOZ       OBJ: #1315   "broom"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1315   'E 1 1315 4 16		give her a broom' @ Southern part of Midgaard
+OOZ       OBJ: #1326   "pendant diamond"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1326   'E 1 1326 2 3		give her a pendant' @ Southern part of Midgaard
+OOZ       OBJ: #1302   "Boots of Bangard"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1302   'E 1 1302 2 8            give her a bangard boots' @ Southern part of Midgaard
+OOZ       OBJ: #1622   "shotgun"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1622   'E 1 1622 2 17		give her a shotgun' @ Southern part of Midgaard
+ZOO      ROOM: #3044   'M 0 3146 1 3044       Suzy' @ Southern part of Midgaard
+OOZ       OBJ: #1320   "shades sunglasses"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1320   'E 1 1320 8 6		give her some shades' @ Southern part of Midgaard
+ZOO      ROOM: #3014   'M 0 3147 5 3014       Street Urchins' @ Southern part of Midgaard
+ZOO      ROOM: #3024   'M 0 3147 5 3024' @ Southern part of Midgaard
+OOZ       OBJ: #1330   "baseball cap"  @ Southern part of Midgaard (3100) 
+ZOO       OBJ: #1330   'E 1 1330 3 6            baseball cap' @ Southern part of Midgaard
+ZOO      ROOM: #3026   'M 0 3147 5 3026' @ Southern part of Midgaard
+OOZ       MOB: #8000   "lady baglady"  @ Southern part of Midgaard (3100) 
+ZOO      ROOM: #3025   'M 0 8000 1 3025		Shredder : Bag lady' @ Southern part of Midgaard
+ZOO       MOB: #8000   'M 0 8000 1 3025		Shredder : Bag lady' @ Southern part of Midgaard
+ZOO      ROOM: #3045   'M 0 3151 1 3045		A Bogan' @ Southern part of Midgaard
+  16 Southern part of Midgaard        3100  100 (  42   0   3100 -  3141 )
+  17 River of Midgaard                3200  100 (  21   0   3200 -  3220 )
+OOZ       MOB: #1303   "ant"  @ Graveyard (3400) 
+ZOO       MOB: #1303   'M 0 1303 9 3405		Ants' @ Graveyard
+OOZ       MOB: #1303   "ant"  @ Graveyard (3400) 
+ZOO       MOB: #1303   'M 0 1303 9 3405		Ants' @ Graveyard
+OOZ       MOB: #1303   "ant"  @ Graveyard (3400) 
+ZOO       MOB: #1303   'M 0 1303 9 3405		Ants' @ Graveyard
+OOZ       MOB: #1303   "ant"  @ Graveyard (3400) 
+ZOO       MOB: #1303   'M 0 1303 9 3405		Ants' @ Graveyard
+OOZ       MOB: #1303   "ant"  @ Graveyard (3400) 
+ZOO       MOB: #1303   'M 0 1303 9 3405		Ants' @ Graveyard
+OOZ       MOB: #1303   "ant"  @ Graveyard (3400) 
+ZOO       MOB: #1303   'M 0 1303 9 3405		Ants' @ Graveyard
+OOZ       MOB: #1305   "dragon white"  @ Graveyard (3400) 
+ZOO       MOB: #1305   'M 0 1305 1 3405		White Dragon' @ Graveyard
+OOZ       OBJ: #6111   "shield large"  @ Graveyard (3400) 
+ZOO       OBJ: #6111   'E 1 6111 5 11	Shield' @ Graveyard
+OOZ       OBJ: #1331   "cape white"  @ Graveyard (3400) 
+ZOO       OBJ: #1331   'E 1 1331 1 12	White Cape' @ Graveyard
+OOZ       OBJ: #1303   "Protecter of Seraphim"  @ Graveyard (3400) 
+ZOO       OBJ: #1303   'E 1 1303 1 18   Seraphim's Knee Protecter' @ Graveyard
+OOZ       OBJ: #1303   "Protecter of Seraphim"  @ Graveyard (3400) 
+ZOO       OBJ: #1303   'E 1 1303 1 19   Seraphim's Knee Protecter' @ Graveyard
+OOZ       OBJ: #6110   "potion yellow"  @ Graveyard (3400) 
+ZOO       OBJ: #6110   'G 1 6110 10	Strength potion (Carried)' @ Graveyard
+OOZ       OBJ: #6108   "coins gold"  @ Graveyard (3400) 
+ZOO       OBJ: #6108   'G 1 6108 10	10,000 in gold' @ Graveyard
+ZOO       KEY: #3121   #3400 @ Graveyard
+OOZ       OBJ: #3121   "key rusty"  @ Graveyard (3400) 
+  18 Graveyard                        3400  100 (   6   0   3400 -  3405 )
+  19 Moria level 1-2                  3500  600 ( 575   0   3500 -  4074 )
+  20 Moria level 3-4                  4100  100 (  26   0   4100 -  4125 )
+OOZ       OBJ: #6118   "wand vitalize"  @ The Wamphyri Aerie (4200) 
+ZOO       OBJ: #6118   'E 1 6118 1 17	       Equip Vitalize wand to the harry ' @ The Wamphyri Aerie
+  21 The Wamphyri Aerie               4200  131 ( 127   1   4201 -  4327 )
+OOZ       OBJ: #7211   "sword short"  @ The Great Eastern Desert (5000) 
+ZOO       OBJ: #7211   'E 1 7211 25 16             (short sword)' @ The Great Eastern Desert
+OOZ       OBJ: #7211   "sword short"  @ The Great Eastern Desert (5000) 
+ZOO       OBJ: #7211   'E 1 7211 25 16             (short sword)' @ The Great Eastern Desert
+OOZ       OBJ: #3022   "sword long"  @ The Great Eastern Desert (5000) 
+ZOO       OBJ: #3022   'E 1 3022 25 16             (long sword)' @ The Great Eastern Desert
+OOZ       OBJ: #1319   "banner green crescent"  @ The Great Eastern Desert (5000) 
+ZOO       OBJ: #1319   'E 1 1319 1 0       	   (electric banner)' @ The Great Eastern Desert
+OOZ       OBJ: #7903   "new key"  @ The Great Eastern Desert (5000) 
+ZOO       OBJ: #7903   'E 1 7903 1 17              (new key)' @ The Great Eastern Desert
+OOZ       OBJ: #1309   "plates ancient"  @ The Great Eastern Desert (5000) 
+ZOO       OBJ: #1309   'E 1 1309 1 20               (Plates)' @ The Great Eastern Desert
+OOZ       OBJ: #3022   "sword long"  @ The Great Eastern Desert (5000) 
+ZOO       OBJ: #3022   'E 1 3022 50 16             (long sword)' @ The Great Eastern Desert
+  22 The Great Eastern Desert         5000  100 (  72   1   5001 -  5072 )
+OOZ       OBJ: #1318   "banner bloody cross"  @ drow city (5100) 
+ZOO       OBJ: #1318   'E 1 1318 1 0		   gas banner' @ drow city
+  23 drow city                        5100  100 (  51   0   5100 -  5150 )
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+OOZ       OBJ: #3020   "dagger"  @ The City of Thalos (5200) 
+ZOO       OBJ: #3020   'E 1 3020 1 16' @ The City of Thalos
+  24 The City of Thalos               5200  100 (  51   0   5200 -  5250 )
+ZOO      ROOM: #6138   'M 0 6007 1 6138	Jim the Lumberjack' @ HAON-DOR-LIGHT
+OOZ       OBJ: #1306   "scythe"  @ HAON-DOR-LIGHT (6000) 
+ZOO       OBJ: #1306   'E 1 1306 4 16		wields a scythe' @ HAON-DOR-LIGHT
+OOZ       OBJ: #5999   "boots"  @ HAON-DOR-LIGHT (6000) 
+ZOO       OBJ: #5999   'E 1 5999 4 8		good boots' @ HAON-DOR-LIGHT
+OOZ       OBJ: #1330   "baseball cap"  @ HAON-DOR-LIGHT (6000) 
+ZOO       OBJ: #1330   'O 0 1330 2 6022    Tribe cap' @ HAON-DOR-LIGHT
+  25 HAON-DOR-LIGHT                   6000  100 (  24   0   6000 -  6023 )
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6120  Forest Ranger' @ HAON-DOR-DARK
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6120  Forest Ranger' @ HAON-DOR-DARK
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6123' @ HAON-DOR-DARK
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6123' @ HAON-DOR-DARK
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6109' @ HAON-DOR-DARK
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6109' @ HAON-DOR-DARK
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6105' @ HAON-DOR-DARK
+OOZ       MOB: #3149   "ranger forest"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #3149   'M 0 3149 8 6105' @ HAON-DOR-DARK
+OOZ       MOB: #6910   "isha elf"  @ HAON-DOR-DARK (6100) 
+ZOO       MOB: #6910   'M 0 6910 1 6121  Isha the Dark Elf' @ HAON-DOR-DARK
+OOZ       OBJ: #6910   "shirt scale"  @ HAON-DOR-DARK (6100) 
+ZOO       OBJ: #6910   'E 1 6910 1 5     Dragon scale shirt   Equipped (BODY)' @ HAON-DOR-DARK
+OOZ       OBJ: #6911   "skirt scale"  @ HAON-DOR-DARK (6100) 
+ZOO       OBJ: #6911   'E 1 6911 1 7     Dragon scale skirt Equipped (LEGS)' @ HAON-DOR-DARK
+OOZ       OBJ: #6912   "cloak black hooded"  @ HAON-DOR-DARK (6100) 
+ZOO       OBJ: #6912   'E 1 6912 1 3       Black cloak  Equipped (NECK_1)' @ HAON-DOR-DARK
+OOZ       OBJ: #6913   "belt silver silverbelt"  @ HAON-DOR-DARK (6100) 
+ZOO       OBJ: #6913   'E 1 6913 1 13      Silver belt  Equipped (WAISTE)' @ HAON-DOR-DARK
+OOZ       OBJ: #6914   "sword long slender"  @ HAON-DOR-DARK (6100) 
+ZOO       OBJ: #6914   'E 1 6914 1 16      Long, slender sword   Equipped (WIELD)' @ HAON-DOR-DARK
+OOZ       OBJ: #7215   "sabre light"  @ HAON-DOR-DARK (6100) 
+ZOO       OBJ: #7215   'G 1 7215 2       Light sabre' @ HAON-DOR-DARK
+  26 HAON-DOR-DARK                    6100  400 (  44   0   6100 -  6143 )
+OOZ       OBJ: #3000   "beer barrel"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #3000   'G 1 3000 10' @ The Dwarven Kingdom
+OOZ       OBJ: #3003   "firebreather bottle"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #3003   'G 1 3003 10' @ The Dwarven Kingdom
+OOZ       OBJ: #3031   "lantern"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #3031   'G 1 3031 10' @ The Dwarven Kingdom
+OOZ       OBJ: #3010   "bread"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #3010   'G 1 3010 10' @ The Dwarven Kingdom
+OOZ       OBJ: #3011   "danish pastry"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #3011   'G 1 3011 10' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+OOZ       OBJ: #7211   "sword short"  @ The Dwarven Kingdom (6500) 
+ZOO       OBJ: #7211   'E 1 7211 10 16' @ The Dwarven Kingdom
+MISS      KEY: #6502   #6540 @ The Dwarven Kingdom
+MISS      KEY: #6502   #6541 @ The Dwarven Kingdom
+  27 The Dwarven Kingdom              6500  500 ( 500   0   6500 -  6999 )
+  28 Sewer                            7000  100 (  99   1   7001 -  7099 )
+OOZ       MOB: #7004   "beetle"  @ SecondSewer (7100) 
+ZOO       MOB: #7004   'M 0 7004 3 7102            The Earth Beetle' @ SecondSewer
+OOZ       MOB: #7005   "maggot"  @ SecondSewer (7100) 
+ZOO       MOB: #7005   'M 0 7005 7 7112            The Giant Maggot' @ SecondSewer
+OOZ       MOB: #7005   "maggot"  @ SecondSewer (7100) 
+ZOO       MOB: #7005   'M 0 7005 7 7112            The Giant Maggot' @ SecondSewer
+OOZ       MOB: #7005   "maggot"  @ SecondSewer (7100) 
+ZOO       MOB: #7005   'M 0 7005 7 7122            The Giant Maggot' @ SecondSewer
+OOZ       MOB: #7002   "rat"  @ SecondSewer (7100) 
+ZOO       MOB: #7002   'M 0 7002 7 7104             The Sewer Rat' @ SecondSewer
+OOZ       MOB: #7000   "mud monster mudmonster"  @ SecondSewer (7100) 
+ZOO       MOB: #7000   'M 0 7000 3 7103            The Horrifying Mudmonster' @ SecondSewer
+OOZ       MOB: #7000   "mud monster mudmonster"  @ SecondSewer (7100) 
+ZOO       MOB: #7000   'M 0 7000 3 7103            The Horrifying Mudmonster' @ SecondSewer
+OOZ       MOB: #7006   "snake"  @ SecondSewer (7100) 
+ZOO       MOB: #7006   'M 0 7006 7 7113            The slithering snake' @ SecondSewer
+OOZ       MOB: #7006   "snake"  @ SecondSewer (7100) 
+ZOO       MOB: #7006   'M 0 7006 7 7122            The slithering snake' @ SecondSewer
+OOZ       MOB: #7006   "snake"  @ SecondSewer (7100) 
+ZOO       MOB: #7006   'M 0 7006 7 7122            The slithering snake' @ SecondSewer
+ZOO      ROOM: #7280   'D 1 7280 4 1' @ SecondSewer
+  29 SecondSewer                      7100  100 (  99   1   7101 -  7199 )
+ZOO      ROOM: #7116   'D 0 7116 5 1                ------- || ------- ' @ SEWERMAZE
+OOZ       MOB: #7002   "rat"  @ SEWERMAZE (7200) 
+ZOO       MOB: #7002   'M 0 7002 5 7285             The Sewer Rat' @ SEWERMAZE
+OOZ       MOB: #7002   "rat"  @ SEWERMAZE (7200) 
+ZOO       MOB: #7002   'M 0 7002 5 7285             The Sewer Rat' @ SEWERMAZE
+OOZ       MOB: #7000   "mud monster mudmonster"  @ SEWERMAZE (7200) 
+ZOO       MOB: #7000   'M 0 7000 8 7286            The Horrifying Mudmonster' @ SEWERMAZE
+OOZ       MOB: #7000   "mud monster mudmonster"  @ SEWERMAZE (7200) 
+ZOO       MOB: #7000   'M 0 7000 8 7286            The Horrifying Mudmonster' @ SEWERMAZE
+OOZ       MOB: #7000   "mud monster mudmonster"  @ SEWERMAZE (7200) 
+ZOO       MOB: #7000   'M 0 7000 8 7281            The Horrifying Mudmonster' @ SEWERMAZE
+OOZ       MOB: #7000   "mud monster mudmonster"  @ SEWERMAZE (7200) 
+ZOO       MOB: #7000   'M 0 7000 8 7281            The Horrifying Mudmonster' @ SEWERMAZE
+OOZ       MOB: #7000   "mud monster mudmonster"  @ SEWERMAZE (7200) 
+ZOO       MOB: #7000   'M 0 7000 8 7280            The Horrifying Mudmonster' @ SEWERMAZE
+ZOO      ROOM: #7116   'D 1 7116 5 1' @ SEWERMAZE
+  30 SEWERMAZE                        7200  200 ( 200   0   7200 -  7399 )
+OOZ       MOB: #7040   "red dragon"  @ The tunnels (7400) 
+ZOO       MOB: #7040   'M 0 7040 1 7428         Load The Red Dragon' @ The tunnels
+OOZ       OBJ: #1305   "silver epee"  @ The tunnels (7400) 
+ZOO       OBJ: #1305   'E 1 1305 2 16           Silver Epee' @ The tunnels
+OOZ       OBJ: #7190   "ring silver silverring"  @ The tunnels (7400) 
+ZOO       OBJ: #7190   'E 1 7190 2 2            Equip Red with ring' @ The tunnels
+OOZ       OBJ: #3070   "gauntlets bronze"  @ The tunnels (7400) 
+ZOO       OBJ: #3070   'E 1 3070 50 9		Bronze Gauntlets' @ The tunnels
+OOZ       OBJ: #3080   "leggings bronze"  @ The tunnels (7400) 
+ZOO       OBJ: #3080   'E 1 3080 50 7		Bronze Leggings' @ The tunnels
+OOZ       OBJ: #3085   "sleeves bronze"  @ The tunnels (7400) 
+ZOO       OBJ: #3085   'E 1 3085 50 10		Bronze Sleeves' @ The tunnels
+OOZ       MOB: #7041   "sea hag"  @ The tunnels (7400) 
+ZOO       MOB: #7041   'M 0 7041 2 7444          Load The Sea Hag' @ The tunnels
+OOZ       MOB: #7042   "guardian naga"  @ The tunnels (7400) 
+ZOO       MOB: #7042   'M 0 7042 2 7435          Load The Good Guardian Naga' @ The tunnels
+OOZ       MOB: #7043   "scaled basilisk"  @ The tunnels (7400) 
+ZOO       MOB: #7043   'M 0 7043 3 7439          Load The Basilisk' @ The tunnels
+OOZ       MOB: #7044   "lemure blob"  @ The tunnels (7400) 
+ZOO       MOB: #7044   'M 0 7044 6 7406          Load The Lemure Blob' @ The tunnels
+OOZ       MOB: #7045   "jones cruncher ettin"  @ The tunnels (7400) 
+ZOO       MOB: #7045   'M 0 7045 1 7419          Load Jones' @ The tunnels
+OOZ       OBJ: #7192   "boots magic"  @ The tunnels (7400) 
+ZOO       OBJ: #7192   'E 1 7192 3 8               give Jones his boots' @ The tunnels
+OOZ       MOB: #7046   "herald mouse killer ettin"  @ The tunnels (7400) 
+ZOO       MOB: #7046   'M 0 7046 1 7424          Load Herald' @ The tunnels
+OOZ       MOB: #7010   "chr-eff'n chr"  @ The tunnels (7400) 
+ZOO       MOB: #7010   'M 0 7010 2 7429          Load Chr "something"' @ The tunnels
+  31 The tunnels                      7400  100 (  46   0   7400 -  7445 )
+OOZ       MOB: #7009   "grand knight paladin"  @ Redferne's Residence (7900) 
+ZOO       MOB: #7009   'M 0 7009 1 7900         The Grand Knight of Paladins' @ Redferne's Residence
+OOZ       OBJ: #7212   "sword bastard"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7212   'E 1 7212 3 16          Equip sword on Knight' @ Redferne's Residence
+OOZ       OBJ: #7217   "plate breast"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7217   'E 1 7217 1 5           Equip Breast-Plate on Knight' @ Redferne's Residence
+OOZ       OBJ: #7218   "plates leg"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7218   'E 1 7218 1 7           Equip Leg-plates on Knight' @ Redferne's Residence
+OOZ       OBJ: #7219   "gloves"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7219   'E 1 7219 1 9           Equip Gloves on Knight' @ Redferne's Residence
+OOZ       OBJ: #7220   "helmet"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7220   'E 1 7220 1 6           Equip Helmet on Knight' @ Redferne's Residence
+OOZ       OBJ: #7221   "shield"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7221   'E 1 7221 1 11          Equip Shield on Knight' @ Redferne's Residence
+OOZ       OBJ: #7223   "plates arm"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7223   'E 1 7223 1 10          Equip arm guards on Knight' @ Redferne's Residence
+OOZ       OBJ: #7222   "boots"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7222   'E 1 7222 1 8           Equip Heavy Boots on Knight' @ Redferne's Residence
+OOZ       OBJ: #6117   "staff mana"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6117   'E 1 6117 1 17	       Equip Mana boost staff to the knight' @ Redferne's Residence
+OOZ       OBJ: #7090   "waybread food"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7090   'O 0 7090 40 7907           The Waybread' @ Redferne's Residence
+OOZ       OBJ: #7090   "waybread food"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7090   'O 0 7090 40 7907           The Waybread' @ Redferne's Residence
+OOZ       OBJ: #7090   "waybread food"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7090   'O 0 7090 40 7907           The Waybread' @ Redferne's Residence
+OOZ       OBJ: #7090   "waybread food"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7090   'O 0 7090 40 7907           The Waybread' @ Redferne's Residence
+OOZ       OBJ: #7090   "waybread food"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7090   'O 0 7090 40 7907           The Waybread' @ Redferne's Residence
+OOZ       OBJ: #6013   "water barrel"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6013   'O 0 6013 10 7908           The barrel with water' @ Redferne's Residence
+OOZ       OBJ: #6013   "water barrel"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6013   'O 0 6013 10 7908           The barrel with water' @ Redferne's Residence
+OOZ       OBJ: #6013   "water barrel"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6013   'O 0 6013 10 7908           The barrel with water' @ Redferne's Residence
+OOZ       OBJ: #6013   "water barrel"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6013   'O 0 6013 10 7908           The barrel with water' @ Redferne's Residence
+OOZ       OBJ: #6013   "water barrel"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6013   'O 0 6013 10 7908           The barrel with water' @ Redferne's Residence
+OOZ       OBJ: #6013   "water barrel"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6013   'O 0 6013 10 7908           The barrel with water' @ Redferne's Residence
+OOZ       OBJ: #7190   "ring silver silverring"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7190   'P 1 7190 2 7910           The Silver Ring' @ Redferne's Residence
+OOZ       OBJ: #7224   "ring innocence innocencering"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7224   'P 1 7224 1 7910		  The Ring of Innocent' @ Redferne's Residence
+OOZ       OBJ: #7191   "ring gold goldring"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7191   'P 1 7191 2 7910           The (Invisible) Golden Ring' @ Redferne's Residence
+OOZ       OBJ: #7207   "gauntlets muddy"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7207   'P 1 7207 1 7910           Muddy gauntlets' @ Redferne's Residence
+OOZ       OBJ: #7208   "stick small light"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7208   'P 1 7208 6 7910           Light stick' @ Redferne's Residence
+OOZ       OBJ: #7212   "sword bastard"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7212   'O 0 7212 3 7903         Bastard sword' @ Redferne's Residence
+OOZ       OBJ: #6108   "coins gold"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #6108   'O 0 6108 2 7903         10,000 gold' @ Redferne's Residence
+OOZ       OBJ: #7216   "sword two-handed"  @ Redferne's Residence (7900) 
+ZOO       OBJ: #7216   'O 0 7216 2 7903         Two-handed sword' @ Redferne's Residence
+  32 Redferne's Residence             7900  100 (  21   0   7900 -  7920 )
+OOZ       OBJ: #1335   "potion speckled"  @ Arachnos (9000) 
+ZOO       OBJ: #1335   'G 1 1335 10                        give it a speckled potion' @ Arachnos
+OOZ       OBJ: #1335   "potion speckled"  @ Arachnos (9000) 
+ZOO       OBJ: #1335   'G 1 1335 10			   give it a speckled potion' @ Arachnos
+OOZ       OBJ: #6109   "potion blue"  @ Arachnos (9000) 
+ZOO       OBJ: #6109   'G 1 6109 10                        give him a blue potion' @ Arachnos
+OOZ       OBJ: #6109   "potion blue"  @ Arachnos (9000) 
+ZOO       OBJ: #6109   'G 1 6109 10                        give him a blue potion' @ Arachnos
+OOZ       OBJ: #6109   "potion blue"  @ Arachnos (9000) 
+ZOO       OBJ: #6109   'G 1 6109 10			   give him a blue potion' @ Arachnos
+OOZ       OBJ: #6109   "potion blue"  @ Arachnos (9000) 
+ZOO       OBJ: #6109   'G 1 6109 10        a blue potion' @ Arachnos
+  33 Arachnos                         9000  100 (  99   1   9001 -  9099 )
+OOZ       OBJ: #7212   "sword bastard"  @ Arena (9400) 
+ZOO       OBJ: #7212   'E 1 7212 1 16		Wields bastard sword' @ Arena
+OOZ       OBJ: #7211   "sword short"  @ Arena (9400) 
+ZOO       OBJ: #7211   'E 1 7211 1 16		wields short sword' @ Arena
+OOZ       OBJ: #7208   "stick small light"  @ Arena (9400) 
+ZOO       OBJ: #7208   'G 1 7208 1		give small stick' @ Arena
+OOZ       MOB: #3062   "fido dog ddaeng ddaeng-7 땡칠"  @ Arena (9400) 
+ZOO       MOB: #3062   'M 0 3062 3 9420		FIDO' @ Arena
+OOZ       MOB: #3063   "mercenary"  @ Arena (9400) 
+ZOO       MOB: #3063   'M 0 3063 1 9425		Merc' @ Arena
+OOZ       OBJ: #3021   "sword small"  @ Arena (9400) 
+ZOO       OBJ: #3021   'E 1 3021 10 16' @ Arena
+OOZ       OBJ: #1322   "align keywords great super sundew supersundew nogada"  @ Arena (9400) 
+ZOO       OBJ: #1322   'G 1 1322 10' @ Arena
+OOZ       MOB: #3063   "mercenary"  @ Arena (9400) 
+ZOO       MOB: #3063   'M 0 3063 1 9435		Merc' @ Arena
+OOZ       OBJ: #3021   "sword small"  @ Arena (9400) 
+ZOO       OBJ: #3021   'E 1 3021 10 16' @ Arena
+OOZ       OBJ: #1322   "align keywords great super sundew supersundew nogada"  @ Arena (9400) 
+ZOO       OBJ: #1322   'G 1 1322 10' @ Arena
+OOZ       MOB: #3063   "mercenary"  @ Arena (9400) 
+ZOO       MOB: #3063   'M 0 3063 1 9445		Merc' @ Arena
+OOZ       OBJ: #3021   "sword small"  @ Arena (9400) 
+ZOO       OBJ: #3021   'E 1 3021 10 16' @ Arena
+OOZ       OBJ: #1322   "align keywords great super sundew supersundew nogada"  @ Arena (9400) 
+ZOO       OBJ: #1322   'G 1 1322 10' @ Arena
+OOZ       OBJ: #3020   "dagger"  @ Arena (9400) 
+ZOO       OBJ: #3020   'O 0 3020 5 9410		dagger' @ Arena
+OOZ       OBJ: #3020   "dagger"  @ Arena (9400) 
+ZOO       OBJ: #3020   'O 0 3020 5 9425		dagger' @ Arena
+OOZ       MOB: #6006   "squirrel"  @ Arena (9400) 
+ZOO       MOB: #6006   'M 0 6006 15 9415	Squirrel' @ Arena
+OOZ       MOB: #6006   "squirrel"  @ Arena (9400) 
+ZOO       MOB: #6006   'M 0 6006 15 9420	Squirrel' @ Arena
+OOZ       MOB: #6006   "squirrel"  @ Arena (9400) 
+ZOO       MOB: #6006   'M 0 6006 15 9425	Squirrel' @ Arena
+OOZ       OBJ: #3021   "sword small"  @ Arena (9400) 
+ZOO       OBJ: #3021   'O 0 3021 5 9400		short sword' @ Arena
+OOZ       OBJ: #7211   "sword short"  @ Arena (9400) 
+ZOO       OBJ: #7211   'E 1 7211 1 16		wields short sword' @ Arena
+OOZ       OBJ: #7211   "sword short"  @ Arena (9400) 
+ZOO       OBJ: #7211   'E 1 7211 1 16		wields short sword' @ Arena
+OOZ       OBJ: #7211   "sword short"  @ Arena (9400) 
+ZOO       OBJ: #7211   'E 1 7211 1 16		wields short sword' @ Arena
+OOZ       OBJ: #3010   "bread"  @ Arena (9400) 
+ZOO       OBJ: #3010   'O 0 3010 20 9410	bread for poor people' @ Arena
+OOZ       OBJ: #3010   "bread"  @ Arena (9400) 
+ZOO       OBJ: #3010   'O 0 3010 20 9445' @ Arena
+  34 Arena                            9400  100 (  46   0   9400 -  9445 )
+  35 DeathKingdom                     9500  200 ( 123   0   9500 -  9622 )
+  36 Galaxy                           9700   72 (  71   1   9701 -  9771 )
+  37 The Death Star                   9800   52 (  52   0   9800 -  9851 )
+  38 Dae Rim Sa                      11100  200 (  99   1  11101 - 11199 )
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Utility Zone (13300) 
+ZOO       OBJ: #1000   'O 0 1000 5 13310    Sundew Machine' @ Utility Zone
+  39 Utility Zone                    13300  100 (  42   1  13301 - 13342 )
+  40 Easy zone                       13400  300 ( 215   0  13400 - 13614 )
+  41 Mount Olympus                   13700   99 (  19  80  13780 - 13798 )
+  42 Process' castle                 13800  100 ( 100   0  13800 - 13899 )
+  43 Robot city                      15000  300 ( 227   0  15000 - 15226 )
+  44 Kingdom Of Chok                 15800  100 (  36   0  15800 - 15835 )
+  45 Kingdom of Wee                  16000  200 ( 120   0  16000 - 16119 )
+  46 o-kingdom                       17000  100 (  95   0  17000 - 17094 )
+  47 MooDang                         18000  200 ( 151   0  18000 - 18150 )
+OOZ       OBJ: #3022   "sword long"  @ KAIST (19000) 
+ZOO       OBJ: #3022   'E 1 3022 200 16' @ KAIST
+OOZ       OBJ: #3022   "sword long"  @ KAIST (19000) 
+ZOO       OBJ: #3022   'E 1 3022 200 16' @ KAIST
+  48 KAIST                           19000  200 ( 158   1  19001 - 19158 )
+  49 Good-Bad-Island                 23300  100 (  90   1  23301 - 23390 )
+--------------- Checking Unused obj, mob, room:
+UNREF: OBJ	#1002	champion belt
+UNREF: OBJ	#1300	immo gloves magic
+UNREF: OBJ	#1301	immo wooden Kal
+UNREF: OBJ	#1304	immo vulcan mail
+UNREF: OBJ	#1310	nothing
+UNREF: OBJ	#1312	claws faust
+UNREF: OBJ	#1314	white dove
+UNREF: OBJ	#1321	blade chaos
+UNREF: OBJ	#1553	kirpan dagger
+UNREF: OBJ	#1871	ciga cigarette tabacco 88
+UNREF: OBJ	#1872	ciga cigarrette sky
+UNREF: OBJ	#1873	drug marijuana
+UNREF: OBJ	#2115	amulet
+UNREF: OBJ	#2116	shield pallas
+UNREF: OBJ	#2141	oboe golden
+UNREF: OBJ	#2208	robe black
+UNREF: OBJ	#2211	axe heavy
+UNREF: OBJ	#2220	bow diana
+UNREF: OBJ	#2221	arrow
+UNREF: OBJ	#2226	loin cloth
+UNREF: OBJ	#2227	horn
+UNREF: OBJ	#2228	spear
+UNREF: OBJ	#2230	staff echo
+UNREF: OBJ	#2231	berries
+UNREF: OBJ	#2232	a nut
+UNREF: OBJ	#2233	jug wine
+UNREF: OBJ	#2240	sling
+UNREF: OBJ	#2241	rock
+UNREF: OBJ	#2242	cape green
+UNREF: OBJ	#2243	necklace emerald
+UNREF: OBJ	#2245	broadsword black
+UNREF: OBJ	#2246	crooked dagger
+UNREF: OBJ	#2247	bonnet
+UNREF: OBJ	#2317	flail
+UNREF: OBJ	#2921	broach ivory
+UNREF: OBJ	#2922	manual arts healing book
+UNREF: OBJ	#2924	symbol holy golden
+UNREF: OBJ	#2931	horn life
+UNREF: OBJ	#2933	stone blood red
+UNREF: OBJ	#2981	seste huge spiked brass knuckles
+UNREF: OBJ	#2987	club ogre war
+UNREF: OBJ	#2988	cloak bear skin bearskin
+UNREF: OBJ	#2989	ear ring earring feathered
+UNREF: OBJ	#3027	sword bombard
+UNREF: OBJ	#3033	box
+UNREF: OBJ	#3045	jacket scale mail
+UNREF: OBJ	#3054	staff
+UNREF: OBJ	#3300	key metal
+UNREF: OBJ	#3301	key brass
+UNREF: OBJ	#3400	candlestick
+UNREF: OBJ	#3401	oops
+UNREF: OBJ	#3402	tickler
+UNREF: OBJ	#3403	plasma webbing
+UNREF: OBJ	#3410	rod key
+UNREF: OBJ	#3411	large black dirty key
+UNREF: OBJ	#3412	head jubal mummy
+UNREF: OBJ	#3413	black marble ring marblering
+UNREF: OBJ	#3414	thin rapier
+UNREF: OBJ	#3415	sarcophagus coffin
+UNREF: OBJ	#3416	iron heavy key
+UNREF: OBJ	#3417	flask wineflask
+UNREF: OBJ	#3418	coins
+UNREF: OBJ	#3419	key
+UNREF: OBJ	#3420	rat'hcor rathcor
+UNREF: OBJ	#3421	rusty sword curved scimitar
+UNREF: OBJ	#3422	piece slime
+UNREF: OBJ	#3423	smock
+UNREF: OBJ	#3424	scroll tightly rolled
+UNREF: OBJ	#3425	auburn orb
+UNREF: OBJ	#3426	bar gold
+UNREF: OBJ	#3427	cape dark black
+UNREF: OBJ	#5050	cloak blue
+UNREF: OBJ	#5051	rifle assualt
+UNREF: OBJ	#5209	shield black dark
+UNREF: OBJ	#6101	sign
+UNREF: OBJ	#6515	magic boots
+UNREF: OBJ	#6551	trapdoor
+UNREF: OBJ	#7213	helmet large
+UNREF: OBJ	#7214	helmet chaos
+UNREF: OBJ	#7909	treasure coins
+UNREF: OBJ	#7991	ticket ac
+UNREF: OBJ	#7992	ticket hr
+UNREF: OBJ	#7993	ticket dr
+UNREF: OBJ	#7994	ticket request
+UNREF: OBJ	#7997	quest weapon
+UNREF: OBJ	#7998	quest armor
+UNREF: OBJ	#9814	power capsule engine
+UNREF: OBJ	#11126	여의봉 bong
+UNREF: OBJ	#11127	금테 golden rim
+UNREF: OBJ	#11132	scroll teleport
+UNREF: OBJ	#11134	saint water bottle 성수병
+UNREF: OBJ	#13801	bullets ammo
+UNREF: OBJ	#13802	sword damaging
+UNREF: OBJ	#13803	mail good really
+UNREF: OBJ	#13804	ring cap
+UNREF: OBJ	#13805	knee band
+UNREF: OBJ	#13806	gloves
+UNREF: OBJ	#13807	bracelet
+UNREF: OBJ	#13808	dagger norent
+UNREF: OBJ	#13809	staff zizon mage
+UNREF: OBJ	#13810	shield
+UNREF: OBJ	#13811	cloak
+UNREF: OBJ	#13812	boots speed
+UNREF: OBJ	#13813	pendant light
+UNREF: OBJ	#13814	light
+UNREF: OBJ	#13815	legging
+UNREF: OBJ	#13816	belt
+UNREF: OBJ	#13817	plate
+UNREF: OBJ	#13818	cap
+UNREF: OBJ	#15036	zizon dagger
+UNREF: OBJ	#15806	yubi's BIG knee
+UNREF: OBJ	#23308	magic paper 부적
+UNREF: OBJ	#23309	seed evil power 악마 씨앗
+UNREF: MOB	#2	zombie
+UNREF: MOB	#3026	Chester Wilson
+UNREF: MOB	#4104	orc
+UNREF: MOB	#6003	rabbit
+UNREF: MOB	#6250	bug
+UNREF: MOB	#7007	wanderer
+UNREF: MOB	#7008	homonculus homo
+UNREF: MOB	#7012	esther madam
+UNREF: MOB	#8010	cowboy
+UNREF: MOB	#9520	rainbow sura
+UNREF: MOB	#9521	month sura
+UNREF: MOB	#11141	mirror son ogong
+UNREF: MOB	#13601	wang
+UNREF: MOB	#13602	cap
+UNREF: MOB	#13603	Mac
+UNREF: MOB	#13807	2nd keeper
+UNREF: MOB	#13808	3rd keeper
+UNREF: MOB	#13809	4th keeper
+UNREF: MOB	#13810	5th keeper
+UNREF: MOB	#13811	6th keeper
+UNREF: MOB	#15836	secret guard
+UNREF: MOB	#18020	guest
+UNREF: MOB	#18021	servant
+UNREF: MOB	#18022	cook
+UNREF: MOB	#18023	jumo
+UNREF: MOB	#18024	waiter
+UNREF: MOB	#19999	super musashi
+UNREF: ROOM	#0
+--------------- Checking World room exit and key:
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #262 @ The castle
+ZOO+MISS  KEY: #927    #263 @ The castle
+ZOO+MISS  KEY: #927    #264 @ The castle
+MISS      KEY: #1980   #1968 @ The lands
+MISS      KEY: #1980   #1979 @ The lands
+ZOO       KEY: #13799  #2187 @ The Wasteland
+ZOO       KEY: #2299   #2229 @ Dragon Tower
+ZOO       KEY: #2299   #2230 @ Dragon Tower
+ZOO       KEY: #1308   #3002 @ Northern Midgaard Main City
+ZOO       KEY: #1308   #3004 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3040 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3041 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3052 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3053 @ Northern Midgaard Main City
+ZOO+MISS  KEY: #15000  #3054 @ Northern Midgaard Main City
+ZOO       KEY: #3121   #3400 @ Graveyard
+MISS      KEY: #6502   #6540 @ The Dwarven Kingdom
+MISS      KEY: #6502   #6541 @ The Dwarven Kingdom
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #261 @ The castle
+ZOO+MISS  KEY: #927    #262 @ The castle
+ZOO+MISS  KEY: #927    #263 @ The castle
+ZOO+MISS  KEY: #927    #264 @ The castle
+MISS      KEY: #1980   #1968 @ The lands
+MISS      KEY: #1980   #1979 @ The lands
+ZOO       KEY: #13799  #2187 @ The Wasteland
+ZOO       KEY: #2299   #2229 @ Dragon Tower
+ZOO       KEY: #2299   #2230 @ Dragon Tower
+ZOO       KEY: #1308   #3002 @ Northern Midgaard Main City
+ZOO       KEY: #1308   #3004 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3040 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3041 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3052 @ Northern Midgaard Main City
+ZOO       KEY: #3133   #3053 @ Northern Midgaard Main City
+ZOO+MISS  KEY: #15000  #3054 @ Northern Midgaard Main City
+ZOO       KEY: #3121   #3400 @ Graveyard
+MISS      KEY: #6502   #6540 @ The Dwarven Kingdom
+MISS      KEY: #6502   #6541 @ The Dwarven Kingdom
+---------------- Checking Shops:
+MISS     ROOM: #1612   #1612 @ Shop #13~
+MISS      MOB: #1602   #1612 @ Shop #13~
+MISS      OBJ: #1600   #1612 @ Shop #13~
+MISS      OBJ: #1601   #1612 @ Shop #13~
+MISS      OBJ: #1602   #1612 @ Shop #13~
+MISS     ROOM: #1608   #1608 @ Shop #14~
+MISS      MOB: #1612   #1608 @ Shop #14~
+MISS     ROOM: #1609   #1609 @ Shop #15~
+MISS      MOB: #1613   #1609 @ Shop #15~
+MISS      OBJ: #1604   #1609 @ Shop #15~
+MISS      OBJ: #1608   #1609 @ Shop #15~
+MISS     ROOM: #1610   #1610 @ Shop #16~
+MISS      MOB: #1614   #1610 @ Shop #16~
+MISS      OBJ: #1609   #1610 @ Shop #16~
+---------------- Checking Quest mob level: 
+9536	trainer sura	trainer sura	34	30
+9522	learned sura	learned sura	35	32
+9508	sura zizon	sura zizon	40	35
+1305	dragon white	dragon white	41	43
+1305	dragon white	dragon white	41	43
+15835	cleric hwata	cleric hwata	35	41
+15835	cleric hwata	cleric hwata	35	41
+All Done.

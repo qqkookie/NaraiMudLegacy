@@ -207,7 +207,7 @@ D2
 You see the court.
 ~
 ~
-0 1 2211
+0 -1 2211
 S
 #2211
 The Court~
@@ -713,7 +713,7 @@ D5
 The well
 ~
 ~
-0 4098 2244
+0 0 2244
 E
 well~
   You peer over the side of the well.  It looks VERY, VERY deep.  It appears

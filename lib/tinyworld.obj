@@ -2392,7 +2392,7 @@ A wand that makes your soul shiver lies here.~
 #2324
 demonic ring posession demonicring~
 a demonic ring of posession~
-a ring that has demon's figure lies here.~ 
+a ring that has demon's figure lies here.~
 ~
 9 6850 3
 0 0 0 0
@@ -3220,7 +3220,7 @@ A small leather pack rests here.~
 200 0 0 0
 9 1000 250
 E
-pack
+pack~
 It looks pretty big on the inside.
 ~
 #2936
@@ -5841,7 +5841,7 @@ shield black dark~
 A large black shield~
 A large black shield bearing the symbol of the Darkside rests here.~
 In the middle of the shield you see the symbol of the Darkside; a
-black fist with a blood-red aura shining behind it.~ 
+black fist with a blood-red aura shining behind it.~
 9 0 513
 2 0 0 0
 3 100 1
@@ -7823,7 +7823,7 @@ A black leather leggings which were worn by Laiger is here.~
 #9520
 ring yuria yuriaring~
 a ring of Yuria~
-A undecorated ring is lying here.~ 
+A undecorated ring is lying here.~
 ~
 9 4097 3
 0 0 0 0
@@ -8093,7 +8093,7 @@ small hyobik key is lying here.~
 #9701
 comet's tail~
 a comet's tail~
-A long, slender whip lies here.~ 
+A long, slender whip lies here.~
 ~
 5 3 8193
 0 2 6 2
@@ -8145,7 +8145,7 @@ A massive skull of a dead Draco lies here.~
 #9706
 fleece aries~
 the Titanic Fleece of Aries~
-A fleece of the Zodiac lies here.~ 
+A fleece of the Zodiac lies here.~
 ~
 9 1089 5
 0 0 0 0
@@ -8429,7 +8429,7 @@ A leaf lies here, as if just fallen from a tree.~
 #9727
 winter branch~
 a winter branch~
-A branch lies here, still covered with snow.~ 
+A branch lies here, still covered with snow.~
 ~
 18 3 1
 0 0 0 0
