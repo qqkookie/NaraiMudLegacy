@@ -1,4 +1,5 @@
 ================================================================
+DUP: Duplicate room number: 	#6542
 --------------- Checking Zone and world:
 OOZ       OBJ: #3099   "board bulletin"  @ LIMBO (0) 
 ZOO       OBJ: #3099   'O 0 3099 5 2    Wiz Board' @ LIMBO
@@ -129,25 +130,25 @@ ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
 OOZ       OBJ: #3043   "jacket soft leather"  @ SHIRE (1700) 
 ZOO       OBJ: #3043   'E 1 3043 110 5' @ SHIRE
    6 SHIRE                            1700  100 ( 100   0   1700 -  1799 )
-OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #1000   'O 0 1000 5 1857    Sundew Machine of POLICE' @ Village of Midgaard
-OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #1001   'O 0 1001 4 1857    Altar of POLICE' @ Village of Midgaard
-OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #3099   'O 0 3099 5 1859    POLICE board' @ Village of Midgaard
-OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #1000   'O 0 1000 5 1874    Sundew machine of OUTLAW' @ Village of Midgaard
-OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #1001   'O 0 1001 4 1874    Altar of OUTLAW' @ Village of Midgaard
-OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #3099   'O 0 3099 5 1872    OUTLAW board' @ Village of Midgaard
-OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #1000   "sundew bubble machine"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #1000   'O 0 1000 5 1883     Sundew Machine of ASSASIN' @ Village of Midgaard
-OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #1001   "altar"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #1001   'O 0 1001 4 1883     Altar of ASSASIN' @ Village of Midgaard
-OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1800) 
+OOZ       OBJ: #3099   "board bulletin"  @ Village of Midgaard (1840) 
 ZOO       OBJ: #3099   'O 0 3099 5 1884     ASSASIN board' @ Village of Midgaard
-   7 Village of Midgaard              1800  100 (  44  41   1841 -  1884 )
+   7 Village of Midgaard              1840   60 (  44   1   1841 -  1884 )
 OOZ       OBJ: #1462   "potion red"  @ The lands (1900) 
 ZOO       OBJ: #1462   'G 1 1462 200' @ The lands
 OOZ       OBJ: #13799  "key olympus"  @ The lands (1900) 
@@ -160,17 +161,8 @@ ZOO       OBJ: #1311   'G 1 1311 1      Totem' @ The Wasteland
 OOZ       OBJ: #2400   "wooden Kal"  @ The Wasteland (2100) 
 ZOO       OBJ: #2400   'E 1 2400 1 16  wooden Kal' @ The Wasteland
 ZOO       KEY: #13799  #2187 @ The Wasteland
-OOZ       OBJ: #13799  "key olympus"  @ The Wasteland (2100) 
    9 The Wasteland                    2100  100 (  97   0   2100 -  2196 )
-OOZ       OBJ: #2299   "key gold tarnished"  @ Dragon Tower (2200) 
-ZOO       OBJ: #2299   'G 1 2299 2 ' @ Dragon Tower
-OOZ       OBJ: #2298   "cloak winged"  @ Dragon Tower (2200) 
-ZOO       OBJ: #2298   'E 1 2298 1 12' @ Dragon Tower
-ZOO       KEY: #2299   #2229 @ Dragon Tower
-OOZ       OBJ: #2299   "key gold tarnished"  @ Dragon Tower (2200) 
-ZOO       KEY: #2299   #2230 @ Dragon Tower
-OOZ       OBJ: #2299   "key gold tarnished"  @ Dragon Tower (2200) 
-  10 Dragon Tower                     2200   91 (  44   1   2201 -  2244 )
+  10 Dragon Tower                     2200  100 (  44   1   2201 -  2244 )
 OOZ       OBJ: #6115   "potion haste powerful"  @ Muncie (2300) 
 ZOO       OBJ: #6115   'G 1 6115 10' @ Muncie
   11 Muncie                           2300  100 (  71   0   2300 -  2370 )
@@ -276,17 +268,11 @@ ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main 
 OOZ       MOB: #3134   "bombard"  @ Northern Midgaard Main City (3000) 
 ZOO       MOB: #3134   'M 0 3134 7 3094       bombard' @ Northern Midgaard Main City
 ZOO       KEY: #1308   #3002 @ Northern Midgaard Main City
-OOZ       OBJ: #1308   "key vault"  @ Northern Midgaard Main City (3000) 
 ZOO       KEY: #1308   #3004 @ Northern Midgaard Main City
-OOZ       OBJ: #1308   "key vault"  @ Northern Midgaard Main City (3000) 
 ZOO       KEY: #3133   #3040 @ Northern Midgaard Main City
-OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
 ZOO       KEY: #3133   #3041 @ Northern Midgaard Main City
-OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
 ZOO       KEY: #3133   #3052 @ Northern Midgaard Main City
-OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
 ZOO       KEY: #3133   #3053 @ Northern Midgaard Main City
-OOZ       OBJ: #3133   "city key"  @ Northern Midgaard Main City (3000) 
 ZOO+MISS  KEY: #15000  #3054 @ Northern Midgaard Main City
   15 Northern Midgaard Main City      3000  100 (  94   1   3001 -  3094 )
 ZOO      ROOM: #3400   'D 0 3400 0 2          Lock graveyard from inside' @ Southern part of Midgaard
@@ -401,7 +387,6 @@ ZOO       OBJ: #6110   'G 1 6110 10	Strength potion (Carried)' @ Graveyard
 OOZ       OBJ: #6108   "coins gold"  @ Graveyard (3400) 
 ZOO       OBJ: #6108   'G 1 6108 10	10,000 in gold' @ Graveyard
 ZOO       KEY: #3121   #3400 @ Graveyard
-OOZ       OBJ: #3121   "key rusty"  @ Graveyard (3400) 
   18 Graveyard                        3400  100 (   6   0   3400 -  3405 )
   19 Moria level 1-2                  3500  600 ( 575   0   3500 -  4074 )
   20 Moria level 3-4                  4100  100 (  26   0   4100 -  4125 )
@@ -730,12 +715,12 @@ ZOO       OBJ: #3010   'O 0 3010 20 9445' @ Arena
   35 DeathKingdom                     9500  200 ( 123   0   9500 -  9622 )
   36 Galaxy                           9700   72 (  71   1   9701 -  9771 )
   37 The Death Star                   9800   52 (  52   0   9800 -  9851 )
-  38 Dae Rim Sa                      11100  200 (  99   1  11101 - 11199 )
+  38 Dae Rim Sa                      11100  100 (  99   1  11101 - 11199 )
 OOZ       OBJ: #1000   "sundew bubble machine"  @ Utility Zone (13300) 
 ZOO       OBJ: #1000   'O 0 1000 5 13310    Sundew Machine' @ Utility Zone
   39 Utility Zone                    13300  100 (  42   1  13301 - 13342 )
   40 Easy zone                       13400  300 ( 215   0  13400 - 13614 )
-  41 Mount Olympus                   13700   99 (  19  80  13780 - 13798 )
+  41 Mount Olympus                   13700  100 (  19  80  13780 - 13798 )
   42 Process' castle                 13800  100 ( 100   0  13800 - 13899 )
   43 Robot city                      15000  300 ( 227   0  15000 - 15226 )
   44 Kingdom Of Chok                 15800  100 (  36   0  15800 - 15835 )
@@ -766,6 +751,7 @@ UNREF: OBJ	#2116	shield pallas
 UNREF: OBJ	#2141	oboe golden
 UNREF: OBJ	#2208	robe black
 UNREF: OBJ	#2211	axe heavy
+UNREF: OBJ	#2218	key stone
 UNREF: OBJ	#2220	bow diana
 UNREF: OBJ	#2221	arrow
 UNREF: OBJ	#2226	loin cloth
@@ -835,6 +821,7 @@ UNREF: OBJ	#7993	ticket dr
 UNREF: OBJ	#7994	ticket request
 UNREF: OBJ	#7997	quest weapon
 UNREF: OBJ	#7998	quest armor
+UNREF: OBJ	#9611	key garnet
 UNREF: OBJ	#9814	power capsule engine
 UNREF: OBJ	#11126	여의봉 bong
 UNREF: OBJ	#11127	금테 golden rim
@@ -858,8 +845,16 @@ UNREF: OBJ	#13815	legging
 UNREF: OBJ	#13816	belt
 UNREF: OBJ	#13817	plate
 UNREF: OBJ	#13818	cap
+UNREF: OBJ	#13892	key 2nd
+UNREF: OBJ	#13893	key 3rd
+UNREF: OBJ	#13894	key 4st
+UNREF: OBJ	#13895	key 5th
+UNREF: OBJ	#13896	key 6th
 UNREF: OBJ	#15036	zizon dagger
+UNREF: OBJ	#15092	door key
+UNREF: OBJ	#15109	door key
 UNREF: OBJ	#15806	yubi's BIG knee
+UNREF: OBJ	#23303	room key 방 열쇠
 UNREF: OBJ	#23308	magic paper 부적
 UNREF: OBJ	#23309	seed evil power 악마 씨앗
 UNREF: MOB	#2	zombie
@@ -900,8 +895,6 @@ ZOO+MISS  KEY: #927    #264 @ The castle
 MISS      KEY: #1980   #1968 @ The lands
 MISS      KEY: #1980   #1979 @ The lands
 ZOO       KEY: #13799  #2187 @ The Wasteland
-ZOO       KEY: #2299   #2229 @ Dragon Tower
-ZOO       KEY: #2299   #2230 @ Dragon Tower
 ZOO       KEY: #1308   #3002 @ Northern Midgaard Main City
 ZOO       KEY: #1308   #3004 @ Northern Midgaard Main City
 ZOO       KEY: #3133   #3040 @ Northern Midgaard Main City
@@ -921,8 +914,6 @@ ZOO+MISS  KEY: #927    #264 @ The castle
 MISS      KEY: #1980   #1968 @ The lands
 MISS      KEY: #1980   #1979 @ The lands
 ZOO       KEY: #13799  #2187 @ The Wasteland
-ZOO       KEY: #2299   #2229 @ Dragon Tower
-ZOO       KEY: #2299   #2230 @ Dragon Tower
 ZOO       KEY: #1308   #3002 @ Northern Midgaard Main City
 ZOO       KEY: #1308   #3004 @ Northern Midgaard Main City
 ZOO       KEY: #3133   #3040 @ Northern Midgaard Main City

@@ -19,10 +19,12 @@ function lastchar(s)
 end
 
 function trim(s)
+    -- trim both
     return s and s:match('^%s*(.-)%s*$')
 end
 
 function rtrim(s)
+    -- trim right
     return s and s:match('(.-)%s*$')
 end
 
@@ -31,8 +33,9 @@ function quote(s)
 end
 
 function splitlines(s)
+    -- split string of lines into table of each lines without CRLF 
     lines = {}
-    for ln in s:gmatch('[^\r\n]*') do
+    for ln in s:gmatch('([^\r\n]*)[\r\n]') do
         table.insert(lines, ln)
     end
     return lines
@@ -43,6 +46,7 @@ function blankline(ln)
 end
 
 function intok(n)
+    -- is integer?, not float
     return n and n == math.floor(n)
 end
 
@@ -128,6 +132,8 @@ KZ_nextline = ''
 Renum_outfile = nil
 G_renum = false
 
+--[[
+-- this does not work for Windows
 function pathexists(path)
     local fh = io.open(path, 'r')
     if fh then
@@ -135,6 +141,18 @@ function pathexists(path)
     end
     return fh
 end
+]]
+
+function pathexists(path)
+    local ok, err, code = os.rename(path, path)
+    if not ok then
+       if code == 13 then
+          -- Permission denied, but it exists
+          return true
+       end
+    end
+    return ok, err
+ end
 
 function kz_openfile(fn, renum)
     if KZone_datafile then
@@ -143,12 +161,25 @@ function kz_openfile(fn, renum)
     KZ_nextline = ''
     KZone_datafile = io.open(fn)
 
+    assert(KZone_datafile, "can't open " .. fn)
     if not renum or not G_renum then return end
 
     if Renum_outfile then
         Renum_outfile:close()
     end
     Renum_outfile = io.open( 'renum/' .. fn, 'w')
+end
+
+function kz_closefile()
+    if KZone_datafile then
+        KZone_datafile:close()
+    end
+    KZone_datafile = nil
+    KZ_nextline = ''
+    if Renum_outfile then
+        Renum_outfile:close()
+    end
+    Renum_outfile = nil
 end
 
 function getline()
@@ -198,7 +229,7 @@ function getzstring()
 end
 
 function read_all_lines(fn)
-
+    -- read all lines of file, return array of lines without CRLF
     local fd = io.open(fn)
     local lines = splitlines(fd:read('*all'))
     fd:close()
