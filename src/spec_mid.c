@@ -482,7 +482,7 @@ int jail_room(struct char_data *ch, int cmd, char *arg)
 	    act("The heavy door opened slowly and $n walks way.. smiling..",
 		0, ch, 0, 0, TO_ROOM);
 	    char_from_room(ch);
-	    char_to_room(ch, real_room(3001));	/* MID */
+	    char_to_room(ch, real_room(MID_PORTAL));	/* MID */
 	    act("$n appears with ear-splitting bang.", 0, ch, 0, 0, TO_ROOM);
 	    do_look(ch, "", 15);
 	    dismiss = 0;
@@ -996,8 +996,8 @@ int charge_taxi[] =
 int room_taxi[] =
 {
     0,
-    TAXI_KAIST_ENTRY,	/* NOTE: KAIST zone renumber 31001->12401  */
-    TAXI_PROCESS_ENTRY,
+    TAXI_STOP_KAIST,	// NOTE: KAIST zone renumber 31001->17411
+    TAXI_STOP_PROCESS,
 };
 
 int level_taxi[] =
@@ -1058,7 +1058,7 @@ int taxi(struct char_data *ch, int cmd, char *arg)
 	GET_MOVE(ch) = 1;
 	/* NOTE: taxi driver takes away all the money you have */
 	GET_GOLD(ch) = 0;
-	char_to_room(ch, real_room(MID_TEMPLE));
+	char_to_room(ch, real_room(MID_PORTAL));
 	do_look(ch, "", 15);
 	return TRUE;
     }
@@ -1195,21 +1195,21 @@ int level_gate(struct char_data *ch, int cmd, char *arg)
     case CMD_EAST:		/* east */
 	break;
     case CMD_SOUTH:		/* south */
-	if (r == 1453)		    // Club Safari
+	if (r == LEVGATE_CLUBSAFARI)		    // Club Safari
 	    f = (GET_LEVEL(ch) < 12);
-	else if (r == 3041)	    // To Mage Tower
+	else if (r == LEVGATE_MAGETOWER)	    // To Mage Tower
 	    f = (GET_LEVEL(ch) < 25);	
-	else if (r == 2535)	    // TB floor 8
+	else if (r == LEVGATE_TB8TH)	    // TB floor 8
 	    f = (GET_LEVEL(ch) > 15);
-	else if (r == 6001)	    // To SHIRE
+	else if (r == LEVGATE_SHIRE)	    // To SHIRE
 	    f = (GET_LEVEL(ch) > 12);
-	else if (r == 9400)	    // To Arena
+	else if (r == LEVGATE_ARENA)	    // To Arena
 	    f = (GET_LEVEL(ch) > 3);
 	break;
     case CMD_WEST:		/* west */
-	if (r == 3500)		    // West Castle
+	if (r == LEVGATE_EASTCASTLE)		    // Eest Castle
 	    f = (GET_LEVEL(ch) > 20);
-	else if (r == 5200)	    // to Thalos
+	else if (r == LEVGATE_THALOS)	    // to Thalos
 	    f = (GET_LEVEL(ch) > 24 || GET_LEVEL(ch) < 10);
 	break;
     case CMD_UP:		/* up */

@@ -1,20 +1,22 @@
 #!/usr/bin/lua
+-- usage: zonecheck [lib-directory]
+-- To renum, set G_renum true and 'mkdir renum renum/zone renum/world' for output
 
 require('KZIOLib')
 require('KZoneCheck')
 
-
 -----------------------------------------------------------
 
 function main()
-
     -- check and renumber zone files
-    -- To renum, do 'mkdir renum renum/zone renum/world' for output
+
     G_renum = true
 
     Zone_renum_tab = Zone_renum_tab_master
 
     print('================================================================')
+
+    G_zonepath = (#arg >= 1) and arg[1] or '.'
 
     Zone_index = {}
 
@@ -90,7 +92,7 @@ function main()
 
         renum_assets = renum_obj
         renum_assets_index( Object_index, 'tinyworld.obj')
-        
+
         print("--------------- Renumbering world:")
         renum_world()
 
@@ -104,7 +106,7 @@ end
 function renum_special_cases()
 
     MID = 3000
-    ORPHAN = 2010       -- unreferenced/unused items
+    ORPHAN = 11110       -- unreferenced/unused items
 
     SLUM = 3210         -- club safari + Archmage + Guild rooms
     RIVER= 3310         -- River of MID
@@ -116,54 +118,54 @@ function renum_special_cases()
     WASTE = 12200       -- Waste land
     DESERT = 12410      -- Great eastern desert
     SHIRE = 15100       -- shire
-    HDK = 15510         -- haondor dark
+    HDK = 15410         -- haondor dark
     DWARVEN = 14610
 
     DROW = 12710
-    ARACH = 15600
-    LAND = 15300
+    ARACH = 15500
+    LAND = 15200
     DRAGON = 14510
     AERIE = 12510
     MUNCIE = 11810
-    EASY = 18710        -- Easyland
+    EASY = 18210        -- Easyland
     SOUTH = 3510        -- Sothern MID
 
     TOJAIL = SLUM+89      -- Realm of the Dead (to 3299)
 
     special_obj =
     {
+        { 1301, ORPHAN+1 },      -- UNREF: OBJ	#1301	immo wooden Kal
+        { 1304, ORPHAN+2 },     -- immo mail UNREF: OBJ	#1304	immo vulcan mail
+        { 1002, ORPHAN+3 },     -- champ belt UNREF: OBJ	#1002	champion belt
+        { 1300, ORPHAN+4 },     -- immo UNREF: OBJ	#1300	immo gloves magic
+        
+        { 7213, ORPHAN+11},    -- large helmet  UNREF: OBJ	#7213	helmet large
+        { 7214, ORPHAN+12 },    -- chaos helmet  UNREF: OBJ	#7214	helmet chaos
+        
+        { 1312, ORPHAN+13 },      --- claw of faust  UNREF: OBJ	#1312	claws faust
+        { 1321, ORPHAN+14 },     -- UNREF: OBJ	#1321	blade chaos
+        
+        { 5050, ORPHAN+15 },    -- cloak blue -- -- UNREF: OBJ	#5050	cloak blue
+        { 5051, ORPHAN+16 },    -- rifle assualt  -- UNREF: OBJ	#5051	rifle assualt
+        
+        { 1310, ORPHAN+21 },     -- nothing UNREF: OBJ	#1310	nothing        
+        { 1314, ORPHAN+22 },     -- white dove -  UNREF: OBJ	#1314	white dove      
+        { 3300, ORPHAN+23 },    -- a metal key~     UNREF: OBJ	#3300	key metal
+        { 3301, ORPHAN+24 },    --  a brass key~    UNREF: OBJ	#3301	key brass
+        
 
-        { 1002, ORPHAN+1 },     -- champ belt UNREF: OBJ	#1002	champion belt
-        { 1300, ORPHAN+2 },     -- immo UNREF: OBJ	#1300	immo gloves magic
-        { 1301, ORPHAN+3 },      -- UNREF: OBJ	#1301	immo wooden Kal
-
-        { 1304, ORPHAN+4 },     -- immo mail UNREF: OBJ	#1304	immo vulcan mail
         -- silver epee (The tunnel)/halbard (shire) {to tunnel (7400)} TODO: CHECK
         { 1305, TUNNEL+1 },      -- silver epee TO The tunnel
 
         { 1309, DESERT+41 },    -- ancient plate (great eastern deset)
-        { 1310, ORPHAN+5 },     -- nothing UNREF: OBJ	#1310	nothing
-
-        { 1312, ORPHAN+6 },      --- claw of faust  UNREF: OBJ	#1312	claws faust
-        { 1314, ORPHAN+7 },     -- white dove -  UNREF: OBJ	#1314	white dove
+ 
 
         { 1318, DROW+21 },       -- banner bloody Drow City(5100)
         { 1319, DESERT+42 },       -- green cresent banner Great easten desert
 
-        { 1321, ORPHAN+8 },     -- UNREF: OBJ	#1321	blade chaos
+-- Grave yard has many unref items
 
-        { 3121, GRAVE+41 },     -- key rusty : from Southern MID to Grave
-        -- { 6110, GRAVE?? }    -- Strenth potion(yellow)  to Grave yard
-        { 6110, GRAVE+42 },     --> strength potion (yellow) ONLY GRAVE
-        { 1303, GRAVE+43 },     -- seraphim protector to grave yard
-        { 1331, GRAVE+44 },     -- white cape to grave yard
-        { 6111, GRAVE+45 },     -- large round shield
-
-        { 2700, GRAVE+51 },     -- #2700 깃털
-        { 1325, GRAVE+52 },     -- Mauve stone to Grave (1300)
-
-        -- Grave yard has many unref items
-        --[[
+--[[
         #3400-3430
 
 UNREF: OBJ	#3400	candlestick
@@ -189,6 +191,23 @@ UNREF: OBJ	#3425	auburn orb
 UNREF: OBJ	#3426	bar gold
 UNREF: OBJ	#3427	cape dark black
 ]]
+    --[[
+        { 3400, ORPHAN+31 },  -- candlestick
+        { 3401, ORPHAN+32 }, 	-- oops
+        { 3402, ORPHAN+33 },  -- tickler
+        { 3403, ORPHAN+34 }, 	-- 	plasma webbing
+    ]]
+
+        { 3121, GRAVE+41 },     -- key rusty : from Southern MID to Grave
+        -- { 6110, GRAVE?? }    -- Strenth potion(yellow)  to Grave yard
+        { 6110, GRAVE+42 },     --> strength potion (yellow) ONLY GRAVE
+        { 1303, GRAVE+43 },     -- seraphim protector to grave yard
+        { 1331, GRAVE+44 },     -- white cape to grave yard
+        { 6111, GRAVE+45 },     -- large round shield
+
+        { 2700, GRAVE+51 },     -- #2700 깃털
+        { 1325, GRAVE+52 },     -- Mauve stone to Grave (1300)
+        
 
         { 1327, HOUSE+1 },      -- magnolias garland~ (House)
 
@@ -197,7 +216,7 @@ UNREF: OBJ	#3427	cape dark black
 
         { 1306, HDK+21 },       -- large scythe (handor Dark)
         { 1316, HDK+22 },       -- armored plate evil roy (6137) haodor dark
-        { 1620, HDK+23 },       -- colot 45
+        { 1620, HDK+23 },       -- colt 45
         { 1621, HDK+24 },       -- bullet
         { 5999, HDK+25 },       -- black leather boost, Lumber jack boot
 
@@ -244,10 +263,6 @@ UNREF: OBJ	#3427	cape dark black
         { 2298, DRAGON+58 },     -- DT, a dragon winged cloak~
         { 2299, DRAGON+59 },     -- DT, key gold tarnished~
 
-        { 3300, ORPHAN+11 },    -- a metal key~     UNREF: OBJ	#3300	key metal
-        { 3301, ORPHAN+12 },    --  a brass key~    UNREF: OBJ	#3301	key brass
-        { 5050, ORPHAN+13 },    -- cloak blue -- -- UNREF: OBJ	#5050	cloak blue
-        { 5051, ORPHAN+14 },    -- rifle assualt  -- UNREF: OBJ	#5051	rifle assualt
 
         { 6999, TOJAIL },          -- Jail
 
@@ -265,8 +280,6 @@ UNREF: OBJ	#3427	cape dark black
         { 7207, GKP+26 },    -- muddy gauntlets to Paladin ONLY
         { 7212, GKP+27 },    -- Bastard sword, TO Paladin
 
-        { 7213, ORPHAN+15 },    -- large helmet  UNREF: OBJ	#7213	helmet large
-        { 7214, ORPHAN+16 },    -- chaos helmet  UNREF: OBJ	#7214	helmet chaos
 
         -- GK Paladin ONLY
         { 7216, GKP+31 },    -- two-handed sword
@@ -337,7 +350,7 @@ UNREF: OBJ	#3427	cape dark black
         { 3060, MID+36 },     --  raft
         { 1313, MID+37 },     --  map
         { 1322, MID+38 },     --  align
-        
+
         -- Reservered for extention: 40-49
 
         -- TICKET:  7991 7992, 7993 7994
@@ -356,20 +369,21 @@ UNREF: OBJ	#3427	cape dark black
         { 3035, MID+66 },     --  paper
         { 3034, MID+67 },     --  pen
 
-        { 3027, MID+71 },     --  sword bombard
-        { 3025, MID+72 },     --  sword particle
-        { 3026, MID+73 },     --  swod saurai
+        { 3026, MID+71 },     --  swod saurai
+        { 3027, MID+72 },     --  sword bombard
+        -- { XXX, MID+73 },      -- sowrd bombard minor.
+        { 3025, MID+74 },     --  sword particle
 
-        { 1326, MID+74 },     --  pendant
-        { 1302, MID+75 },     --  bagrd boot
-        { 1622, MID+76 },     --  shotgun
-        { 1623, MID+77 },     --  shell ammo
-        { 1315, MID+78 },     --  broom
-
-        { 1605, MID+79 },     -- brass shild
-        { 1320, MID+80 },     -- sunshade
-        { 1330, MID+81 },     -- baseball cap
-        { 1307, MID+82 },     --  carpenter hammer
+        { 1605, MID+76 },     -- brass shield
+        { 1320, MID+77 },     -- sunshade
+        { 1330, MID+78 },     -- baseball cap
+        { 1307, MID+79 },     --  carpenter hammer
+        
+        { 1326, MID+81 },     --  pendant
+        { 1302, MID+82 },     --  bagrd boot
+        { 1622, MID+83 },     --  shotgun
+        { 1623, MID+84 },     --  shell ammo
+        { 1315, MID+85 },     --  broom
 
         ---------------------------------------------
 
@@ -386,7 +400,7 @@ UNREF: OBJ	#3427	cape dark black
 
         { 7923, MID+131 },     --  bronze knee
         { 7922, MID+132 },     --  leather knee
-        
+
         { 3040, MID+135 },     --  breast plate (18K)
         { 3041, MID+136 },     --  chain mail shirt (2.5k)
         { 3044, MID+137 },     --  jacket studd (0.5K)
@@ -711,11 +725,11 @@ UNREF: MOB	#19999	super musashi
         { 3091, SLUM+12 },
         { 3092, SLUM+13 },
         { 3093, SLUM+14 },
-        
+
         -- { 3020, SLUM+21 },     -- armory
 
         -- { 1852, SLUM+59 },     -- Police jail room
-        
+
         { 1855, SLUM+52 },    -- police enter
         { 1856, SLUM+53 },    -- police pr
         { 1857, SLUM+54 },    -- police Lounge
@@ -764,7 +778,7 @@ UNREF: MOB	#19999	super musashi
         { 13333, HOUSE+26 },
         { 13341, HOUSE+27 },
         { 13342, HOUSE+28 },
-        
+
         -- after util ( 3280~)
         { 1403, HOUSE+71 },     -- Mansion
         { 2369, HOUSE+72 },     -- from Muncie
@@ -784,37 +798,35 @@ UNREF: MOB	#19999	super musashi
         { 3502, RIVER+32 },     -- turning point
         { 3501, RIVER+33 },
         { 3500, RIVER+34 },
-        
-        -- Dwarven Mine #6542 : error, shift by two
-        { 6543, DWARVEN+45 },
-        { 6544, DWARVEN+46 },
-        { 6545, DWARVEN+47 },
-        { 6546, DWARVEN+48 },
-        { 6547, DWARVEN+49 },
-        { 6548, DWARVEN+50 },
-        { 6549, DWARVEN+51 },
-        { 6550, DWARVEN+52 },
-        { 6551, DWARVEN+53 },
-        { 6552, DWARVEN+54 },
-        { 6553, DWARVEN+55 },
-        
-        -- TODO: EASYLAND ZONE
-        
-        { 13427, EASY+41 },
 
+
+        { 13427, EASY+41 },     -- the secret room
+        
+        { 2720, GRAVE+60+10 },   -- NeverLand sand beach =   11280
+        { 2721, GRAVE+60+11 },
+        { 2722, GRAVE+60+12 },
+        { 2723, GRAVE+60+13 },
+        { 2724, GRAVE+60+14 },
+        
+        -- Dwarven Mine #6542 : error, shift by one
+        { 6555, DWARVEN+42 },   -- inside mine
+          
+        { 6542, DWARVEN+43 },   -- Bottom of mine
+        { 6543, DWARVEN+44 },
+        { 6544, DWARVEN+45 },
+        { 6545, DWARVEN+46 },
+        { 6551, DWARVEN+47 },   -- Mining eq. room
+        
+        { 6546, DWARVEN+50 },
+        { 6547, DWARVEN+51 },
+        { 6548, DWARVEN+52 },
+        { 6549, DWARVEN+53 },
+        { 6550, DWARVEN+54 },
+        { 6552, DWARVEN+55 },
+        { 6553, DWARVEN+56 },
+        
         --[[TODO
-
-            street of MID
-            3210-3214  safari club
-            3221 - library
-
-            X HOUSE
-            X Safari club
-            EasyLand
             13799 Olypus key
-            DT
-            Grave
-            Utils
         ]]
 
         { 3001, MID+01 },     -- temple
@@ -841,7 +853,6 @@ UNREF: MOB	#19999	super musashi
         -- used shop
         -- rounge romm
         -- game room
-
 
         { 3033, MID+31 },     -- magic shop
         { 3011, MID+32 },     -- weapon store
@@ -888,88 +899,96 @@ UNREF: MOB	#19999	super musashi
     }
 
     for ix,  renum in ipairs(special_obj) do
-        Object_index[renum[1]][RENUMINDEX] = renum[2]
+      Object_index[renum[1]][RENUMINDEX] = renum[2]
     end
-
+    
+    --[[
+    -- unref'ed Graveyard items
+    for ix in range(0, 17) do
+      Object_index[3410+ix][RENUMINDEX] = ORPHAN + 41 + ix
+    end
+    ]]
+    
     for ix, renum in ipairs(special_mob) do
         Mobile_index[renum[1]][RENUMINDEX] = renum[2]
     end
-    
+
     -- 이지렌드 (10-38)
     for ix in range(0, 28) do
         Room_index[13500+ix][RENUMINDEX] = EASY + 1 + ix
     end
-    
+
     -- SecretZone (50-79)
     for ix in range(0, 25) do
         Room_index[13400+ix][RENUMINDEX] = EASY + 43 + ix
     end
-    
+
     -- Pride land (80-99)
     for ix in range(0, 13) do
         Room_index[13601+ix][RENUMINDEX] = EASY + 71 + ix
-    end  
-    
-    for ix, renum in ipairs(special_room) do
-        Room_index[renum[1]][RENUMINDEX] = renum[2]
     end
 
-
+    for ix, renum in ipairs(special_room) do
+        if renum[1] ~= 6555 or Room_index[6555] then
+            Room_index[renum[1]][RENUMINDEX] = renum[2]
+        end
+    end
+    
 end
 
 -- New Narai (partally renumbered)
 
 Zone_renum_tab_master = {
     --                                   ORIG  RENUM SPAN
-    { "LIMBO",                              0,  2000, 20 },
-    { "The castle",                       200,  14110, 100 },
-    { "Mel's Doghouse",                  1300,  11250, 0 },   -- To Grave
+    { "LIMBO",                              0,  2900, 20 },
+    { "The castle",                       200,  14110, 90 },
+    { "Mel's Doghouse",                  1300,  11260, 0 },   -- To Grave
     { "Houses",                          1400,  3210, 90 },     -- Here is SLUM
     { "Dirk's Castle",                   1500,  14210, 90 },
     { "SHIRE",                           1700,  15100, 100 },
     { "Village of Midgaard",             1840,  3240, 0 },    -- To SLUM
-    { "The lands",                       1900,  15300, 100 },
+    { "The lands",                       1900,  15200, 100 },
     { "The Wasteland",                   2100,  12200, 100 },
     { "Dragon Tower",                    2200,  14510, 90 },
     { "Muncie",                          2300,  11810, 90 },
     { "The Corporation",                 2500,  14700, 200 },
-    { "The Never Land",                  2700,  11260, 0 },   -- To Grave
-    { "The Keep of Mahn-Tor",            2900,  16100, 100 },
-    { "Northern Midgaard Main City",     3000,  3000, 100 },
+    { "The Never Land",                  2700,  11270, 0 },   -- To Grave
+    { "The Keep of Mahn-Tor",            2900,  15800, 100 },
+    { "Northern Midgaard Main City",     3000,  3000, 200 },
     { "Southern part of Midgaard",       3100,  3510, 90 },
     { "River of Midgaard",               3200,  3310, 90 },
     { "Graveyard",                       3400,  11210, 90 },
-    { "Moria level 1-2",                 3500,  14310-500, 90+500 }, -- special 3500-3503
+    { "Moria level 1-2",                 4000,  14310, 90 }, -- special 3500-3503
     { "Moria level 3-4",                 4100,  14410, 90 },
     { "The Wamphyri Aerie",              4200,  12510, 190 },
     { "The Great Eastern Desert",        5000,  12410, 90 },
     { "drow city",                       5100,  12710, 90 },
     { "The City of Thalos",              5200,  12810, 90 },
-    { "HAON-DOR-LIGHT",                  6000,  11410, 90 },
-    { "HAON-DOR-DARK",                   6100,  11510, 90 },
+    { "HAON-DOR-LIGHT",                  6000,  15310, 90 },
+    { "HAON-DOR-DARK",                   6100,  15410, 90 },
     { "The Dwarven Kingdom",             6500,  14610, 90 }, -- special 6999
     { "Sewer",                           7000,  11300, 100 },
     { "SecondSewer",                     7100,  11400, 100 },
     { "SEWERMAZE",                       7200,  11500, 200 },
     { "The tunnels",                     7400,  11710, 90 },
     { "Redferne's Residence",            7900,  11910, 90 },
-    { "Arachnos",                        9000,  15600, 100 },
-    { "Arena",                           9400,  11110, 90 },
-    { "DeathKingdom",                    9500,  16310, 190 },
-    { "Galaxy",                          9700,  15810, 90 },
-    { "The Death Star",                  9800,  16210, 90 },
-    { "Dae Rim Sa",                     11100,  17100, 100 },
+    { "Arachnos",                        9000,  15500, 100 },
+    { "Arena",                           9400,  12110, 90 },
+    { "DeathKingdom",                    9500,  16710, 190 },
+    { "Galaxy",                          9700,  15610, 90 },
+    { "The Death Star",                  9800,  15710, 90 },
+    { "Dae Rim Sa",                     11100,  16100, 100 },
     { "Utility Zone",                   13300,   3810, 90 },  -- HERE is HOUSE
-    { "Easy zone",                      13400,  18710, 290 },
-    { "Mount Olympus",                  13700,  12310, 90 },
-    { "Process' castle",                13800,  18600, 100 },
-    { "Robot city",                     15000,  18110, 290 },
-    { "Kingdom Of Chok",                15800,  16510, 90 },
-    { "Kingdom of Wee",                 16000,  16610, 190 },
-    { "o-kingdom",                      17000,  16800, 90 },
-    { "MooDang",                        18000,  17310, 190 },
-    { "KAIST",                          19000,  18410, 190 },
-    { "Good-Bad-Island",                23300,  17200, 100 },
+    { "Easy zone",                      13400,  18210, 90 },
+    { "Mount Olympus",                  13780,  12310, 90 },
+    { "Process' castle",                13800,  18100, 100 },
+    { "Robot city",                     15000,  17110, 290 },
+    { "Kingdom Of Chok",                15800,  16310, 90 },
+    { "Kingdom of Wee",                 16000,  16410, 190 },
+    { "o-kingdom",                      17000,  16600, 100 },
+    { "MooDang",                        18000,  17610, 190 },
+    { "KAIST",                          19000,  17410, 190 },
+    { "Good-Bad-Island",                23300,  16200, 100 },
 
 }
 
@@ -1054,14 +1073,14 @@ end
 
 --[[
 
-2000-
+2900-2999
     { "LIMBO",                          0,     0 },
 
-3000
+3000-3199
     { "Northern Midgaard Main City",    3000,  3000 },
 
 
-3200
+3200-3299
    3200 (Slum /Street of Mid
  -- 3210 (30)
     { "Houses2",                         1450,  1400 },
@@ -1072,7 +1091,7 @@ end
     3290 (10)
     { "XXX Dwarven Jail",               6990,  6990
 
-3300
+3300-3399
         3310 (30)
     { "River of Midgaard",              3200,  3200 },
 
@@ -1080,15 +1099,16 @@ end
     { "XXX Turning Point",              3500,  3500 },
 
 
-3400
+3400-3499
 -- KIT School zone
 
 
-3510
+3500-3599
     { "Southern part of Midgaard",      3100,  3100 },
 
+3700
 
-3800
+3800-3899
     Village of
     3810 (10)
     House3
@@ -1108,51 +1128,53 @@ end
 
 
 
-11200
+11100 Orphan Area
 
-11210(40)
+11200-11299
+11210(40)-12
     { "Graveyard",                      3400,  3400 },
-11250   (10)
+11260   (10)
     { "Mel's Doghouse",                 1300,  1300 }
-11260 (30)
+11270 (30)
 
     { "The Never Land",                 2700,  2700 },
 
-11300
+11300-1399
     { "Sewer",                          7000,  7000 },
-11400
+11400-1499
     { "SecondSewer",                    7100,  7100 },
-11500
+11500-1699
     { "SEWERMAZE",                      7200,  7200 },
 
-11700
+11700-11799
     { "The tunnels",                    7400,  7400 },
 
 
-11800
+11800-11899
     { "Muncie",                         2300,  2300 },
 
-11900 (30)
+11900-11999 (30)
     { "Redferne's Residence",           7900,  7900 },
 
 --------------- 12000
 
 
-11100    { "Arena",                          9400,  9400 }
+12100-12199    
+    { "Arena",                          9400,  9400 }
 
-12200
+12200-12299
     { "The Wasteland",                  2100,  2100 },
-12300
+12300-12399
     { "Mount Olympus",                  13700, 13700 },
 
-12400
+12400-12499
     { "The Great Eastern Desert",       5000,  5000 },
 
-12500
+12500-12699
     { "The Wamphyri Aerie",             4200,  4200 },
-12700
+12700-12799
     { "drow city",                      5100,  5100 },
-12800
+12800-12899
     { "The City of Thalos",             5200,  5200 },
 
 --------------- 13000
@@ -1163,91 +1185,83 @@ RESERVED
 
 EAST 14000
 
-
-
-14100
+14100-14199
     { "The castle",                     200,   200 },
-14200
+14200-14299
     { "Dirk's Castle",                  1500,  1500 },
-14300
+14300-14399
     { "Moria level 1-2",                4000,  4000 },
-14400
+14400-14499
     { "Moria level 3-4",                4100,  4100 },
-14500
+14500-14599
     { "Dragon Tower",                   2200,  2200 },
-14600
+14600-14699
     { "The Dwarven Kingdom",            6500,  6500 },
 
-14700
+14700-14899
     { "The Corporation",                2500,  2500 }
 
 ---------------------15000 -------
-WEST 22000
-15100
+WEST 15000
+15100-15199
     { "SHIRE",                          1700,  1700 },
-15300
+15200-15299
     { "The lands",                      1900,  1900 },
 
-15400
-
+15300-15399
     { "HAON-DOR-LIGHT",                 6000,  6000 },
-15500
+15400-15499
     { "HAON-DOR-DARK",                  6100,  6100 },
 
-15600
+15500-15599
     { "Arachnos",                       9000,  9000 },
-
-15800
+    
+15600-15699
     { "Galaxy",                         9700,  9700 },
-
-
+15700-15799
+    { "The Death Star",                 9800,  9800 },
+15800-15899
+    { "The Keep of Mahn-Tor",           2900,  2900 }
+    
 ------------- 16000 ---------------------
 
-16100
-    { "The Keep of Mahn-Tor",           2900,  2900 },
+16100-16199
+    { "Dae Rim Sa",                     11100, 11100 },
 
-16200
-    { "The Death Star",                 9800,  9800 },
-
-16300
-    { "DeathKingdom",                   9500,  9500 },
-
-16500
+16200-16299
+    { "Good-Bad-Island",                23300, 23300 },
+    
+16300-16399  
     { "Kingdom Of Chok",                15800, 15800 },
-16600
+16400-16599
     { "Kingdom of Wee",                 16000, 16000 },
-16800,
+16600-16699
     { "o-kingdom",                      17000, 17000 },
 
-
+16700-16899
+    { "DeathKingdom",                   9500,  9500 },
+   
 ----------- 17000
-17100
-    { "Dae Rim Sa",                     11100, 11100 },
-17200
-    { "Good-Bad-Island",                23300, 23300 },
-17300
-    { "MooDang",                        18000, 18000 },
-17500
-     {아미대전 }
 
------------ 18000
-
-18100
-    { "Robot city",                     15000, 15000 },
-
-18400
+17100-17399
+    { "Robot city",                     15000, 15000 }
+    
+17400-17599
     { "KAIST",                          19000, 19000 }
 
-
-18600
+17600-17799
+    { "MooDang",                        18000, 18000 },
+17800-17899
+     {아미대전 }
+     
+---------- 18000  
+18100-18199
     { "Process' castle",                13800, 13800 },
 
-18700
+18200-18299
     { "Easy zone",                      13400, 13400 },
 
 --------------------------------------
-
-
 
    1 LIMBO                               0  100 (  28   0      0 -    27 )
    2 The castle                        200  100 (  73   1    201 -   273 )
@@ -1286,7 +1300,7 @@ WEST 22000
   35 DeathKingdom                     9500  200 ( 123   0   9500 -  9622 )
   36 Galaxy                           9700   72 (  71   1   9701 -  9771 )
   37 The Death Star                   9800   52 (  52   0   9800 -  9851 )
-  38 Dae Rim Sa                      11100  200 (  99   1  11101 - 11199 )
+  38 Dae Rim Sa                      11100  100 (  99   1  11101 - 11199 )
   39 Utility Zone                    13300  100 (  42   1  13301 - 13342 )
   40 Easy zone                       13400  300 ( 215   0  13400 - 13614 )
   41 Mount Olympus                   13700  100 (  19  80  13780 - 13798 )
@@ -1298,6 +1312,7 @@ WEST 22000
   47 MooDang                         18000  200 ( 151   0  18000 - 18150 )
   48 KAIST                           19000  200 ( 158   1  19001 - 19158 )
   49 Good-Bad-Island                 23300  100 (  90   1  23301 - 23390 )
+
 ]]
 
 

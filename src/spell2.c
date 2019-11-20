@@ -94,8 +94,8 @@ void spell_far_look(byte level, struct char_data *ch,
 	return;
     }
     if (IS_AFFECTED(victim, AFF_SHADOW_FIGURE)) {
-	if (ch->in_room != real_room(ROOM_GUILD_POLICE_LOCKER) &&
-	    ch->in_room != real_room(ROOM_GUILD_OUTLAW_LOCKER)) {
+	if (ch->in_room != real_room(GUILD_POLICE_LOCKER) &&
+	    ch->in_room != real_room(GUILD_OUTLAW_LOCKER)) {
 	    send_to_char("You tried, but you can see only shadow.\n\r", ch);
 	    return;
 	}
@@ -1597,16 +1597,16 @@ void spell_word_of_recall(byte level, struct char_data *ch,
     INCREASE_SKILLED2(ch, victim, SPELL_WORD_OF_RECALL);
     switch (GET_GUILD(ch)) {
     case POLICE:
-	loc_nr = ROOM_GUILD_POLICE;
+	loc_nr = GUILD_POLICE_GATE;
 	break;
     case ASSASSIN:
-	loc_nr = ROOM_GUILD_ASSASSIN;
+	loc_nr = GUILD_ASSASSIN_GATE;
 	break;
     case OUTLAW:
-	loc_nr = ROOM_GUILD_OUTLAW;
+	loc_nr = GUILD_OUTLAW_GATE;
 	break;
     default:
-	loc_nr = 3001;
+	loc_nr = MID_PORTAL;
 	break;
     }
     for (location = 0; location <= top_of_world; location++)

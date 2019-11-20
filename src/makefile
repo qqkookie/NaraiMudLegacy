@@ -185,7 +185,7 @@ $(OBJ)/cast2.o: cast2.c   \
 $(OBJ)/comm.o: comm.c   \
     $(INC)/char.h $(INC)/typedef.h \
     $(INC)/object.h $(INC)/global.h \
-    $(INC)/comm.h $(INC)/gamedb.h
+    $(INC)/comm.h $(INC)/gamedb.h $(INC)/etc.h
 
 $(OBJ)/constants.o: constants.c   \
     $(INC)/char.h $(INC)/typedef.h  \
@@ -247,7 +247,7 @@ $(OBJ)/magic.o: magic.c   \
     $(INC)/char.h $(INC)/typedef.h  \
     $(INC)/object.h $(INC)/global.h  \
     $(INC)/comm.h $(INC)/play.h \
-    $(INC)/spells.h
+    $(INC)/spells.h $(INC)/etc.h
 
 $(OBJ)/mob_act.o: mob_act.c   \
     $(INC)/char.h $(INC)/typedef.h  \

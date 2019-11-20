@@ -119,13 +119,13 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
     room_number = world[ch->in_room].number;
 
     switch (room_number) {
-    case ROOM_GUILD_POLICE:
+    case GUILD_POLICE_GATE:
 	guild_number = 1;
 	break;
-    case ROOM_GUILD_OUTLAW:
+    case GUILD_OUTLAW_GATE:
 	guild_number = 2;
 	break;
-    case ROOM_GUILD_ASSASSIN:
+    case GUILD_ASSASSIN_GATE:
 	guild_number = 3;
 	break;
     default:
@@ -237,13 +237,13 @@ int locker_room(struct char_data *ch, int cmd, char *arg)
     case 3000:
 	guild_number = 0;
 	break;
-    case ROOM_GUILD_POLICE_LOCKER:
+    case GUILD_POLICE_LOCKER:
 	guild_number = 1;
 	break;
-    case ROOM_GUILD_OUTLAW_LOCKER:
+    case GUILD_OUTLAW_LOCKER:
 	guild_number = 2;
 	break;
-    case ROOM_GUILD_ASSASSIN_LOCKER:
+    case GUILD_ASSASSIN_LOCKER:
 	guild_number = 3;
 	break;
     default:
@@ -346,13 +346,13 @@ int guild_practice_yard(struct char_data *ch, int cmd, char *arg)
 	return FALSE;
     room_number = world[ch->in_room].number;
     switch (room_number) {
-    case ROOM_GUILD_POLICE_PRACTICE:
+    case GUILD_POLICE_PRACTICE:
 	guild_number = 1;
 	break;
-    case ROOM_GUILD_OUTLAW_PRACTICE:
+    case GUILD_OUTLAW_PRACTICE:
 	guild_number = 2;
 	break;
-    case ROOM_GUILD_ASSASSIN_PRACTICE:
+    case GUILD_ASSASSIN_PRACTICE:
 	guild_number = 3;
 	break;
     default:
@@ -770,9 +770,9 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
 	    return;
 	}
     }
-    /* NOTE: JALE_ROOM: spell correction and renamed POLICE_JAIL_ROOM   */
+    /* NOTE: JALE_ROOM: spell correction and renamed ROOM_POLICE_JAIL   */
     /* NOTE: defintion moved to  "../include/guild_list.h"              */
-/* #define JALE_ROOM    1800    */
+/* #define ROOM_POLICE_JALE    3295    */
     if (victim == ch)
 	return;
     if ((GET_GUILD_SKILL(ch, POLICE_SKILL_ARREST) < number(1, 99) || 
@@ -984,7 +984,7 @@ void do_shadow(struct char_data *ch, char *argument, int cmd)
 /* 싸움 도중 hp가 1/6 일때 자신의 길드로 돌아감 */
 void do_solace(struct char_data *ch, char *argument, int cmd)
 {
-    int home = ROOM_GUILD_ASSASSIN, location;
+    int home = GUILD_ASSASSIN_GATE, location;
     bool found = FALSE;
     extern int top_of_world;
 

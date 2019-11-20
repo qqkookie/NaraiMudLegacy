@@ -389,7 +389,7 @@ void nanny(struct descriptor_data *d, char *arg)
 		&& IS_MORTAL(d->character)) {
 		/* NOTE: check jail term and release */
 		if (d->character->specials.jail_time > time(0))
-		    d->character->in_room = real_room(JAIL_ROOM);
+		    d->character->in_room = real_room(ROOM_JAIL);
 		else {
 		    REMOVE_BIT(d->character->specials.act, PLR_BANISHED);
 		    /* NOTE: Don't reset jail_time. It's crime record  */
@@ -401,7 +401,7 @@ void nanny(struct descriptor_data *d, char *arg)
 
 	    if (d->character->in_room <= NOWHERE ) {
 		d->character->in_room = IS_MORTAL(d->character) ?
-		    real_room(MID_TEMPLE) : real_room(WIZ_LOUNGE);
+		    real_room(MID_PORTAL) : real_room(ROOM_WIZ_LOUNGE);
 	    }
 
 	    /* NOTE: Additional pause time for read welcome messgae, mail

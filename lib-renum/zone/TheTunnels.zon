@@ -1,0 +1,28 @@
+The tunnels~
+11799 25 2
+D 0 11725 0 1
+D 0 11726 2 1
+D 0 11728 1 1
+D 0 11731 3 1
+D 0 11734 1 1
+D 0 11735 3 1
+D 0 11715 2 1
+D 0 11716 0 1
+D 0 11714 2 1
+D 0 11715 0 1
+M 0 11711 1 11738         Load The Red Dragon
+E 1 11711 2 16           Silver Epee
+E 1 11712 2 2            Equip Red with ring
+E 1 3143 50 9		Bronze Gauntlets
+E 1 3144 50 7		Bronze Leggings
+E 1 3142 50 10		Bronze Sleeves
+M 0 11713 2 11754          Load The Sea Hag
+M 0 11714 2 11745          Load The Good Guardian Naga
+M 0 11715 3 11749          Load The Basilisk
+M 0 11716 6 11716          Load The Lemure Blob
+M 0 11717 1 11729          Load Jones
+E 1 11713 3 8               give Jones his boots
+M 0 11718 1 11734          Load Herald
+M 0 11712 2 11739          Load Chr "something"
+S
+$~

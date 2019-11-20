@@ -1768,11 +1768,11 @@ void regened_mobile(struct char_data *mob)
     if ( !MAGIC_CLASS(mob) && !mob->equipment[WIELD] 
 	    && (number(10, 30) < GET_LEVEL(mob) ) ) {
 	if ( GET_CLASS(mob) == CLASS_THIEF ) {
-	    obj = read_object(WEAPON_SHORTSWORD, VIRTUAL); /* 2D4 dagger */
+	    obj = read_object(WEAPON_BASIC_THIEF, VIRTUAL); /* 2D4 dagger */
 #ifdef  NO_DEF
         /* NOTE: Warrior mobile can 'bash' without wielding sword. */ 
 	else 
-	    obj = read_object(WEAPON_LONGSWORD, VIRTUAL);  /* 1D8 sword */
+	    obj = read_object(WEAPON_BASIC_WARRIOR, VIRTUAL);  /* 1D8 sword */
 #endif		/* NO_DEF */
 	
 	    if (obj) {

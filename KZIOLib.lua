@@ -33,9 +33,9 @@ function quote(s)
 end
 
 function splitlines(s)
-    -- split string of lines into table of each lines without CRLF 
+    -- split string of lines into table of each lines without CRLF
     lines = {}
-    for ln in s:gmatch('([^\r\n]*)[\r\n]') do
+    for ln in s:gmatch('([^\r\n]*)\r?\n') do
         table.insert(lines, ln)
     end
     return lines
@@ -155,11 +155,14 @@ function pathexists(path)
  end
 
 function kz_openfile(fn, renum)
+  -- file name is always relative to G_zonepath
+  -- renum file is relative to current directory
+
     if KZone_datafile then
         KZone_datafile:close()
     end
     KZ_nextline = ''
-    KZone_datafile = io.open(fn)
+    KZone_datafile = io.open( G_zonepath .. '/' .. fn)
 
     assert(KZone_datafile, "can't open " .. fn)
     if not renum or not G_renum then return end
@@ -230,7 +233,7 @@ end
 
 function read_all_lines(fn)
     -- read all lines of file, return array of lines without CRLF
-    local fd = io.open(fn)
+    local fd = io.open( G_zonepath .. '/' .. fn)
     local lines = splitlines(fd:read('*all'))
     fd:close()
 

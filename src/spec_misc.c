@@ -34,13 +34,13 @@ int special_damage(struct char_data *ch, struct char_data *victim,
                  are added independently.   */ 
     if ( (ch->equipment[WIELD]
 	    && ch->equipment[WIELD]->item_number >= 0
-	    && GET_OBJ_VIRTUAL(ch->equipment[WIELD]) == OBJ_SON_OGONG_BONG))
+	    && GET_OBJ_VIRTUAL(ch->equipment[WIELD]) == DRS_SON_OGONG_BONG))
 	if (number(1, 10) >= 8)
 	    dam_add += dice(ch->equipment[WIELD]->obj_flags.value[1],
 			ch->equipment[WIELD]->obj_flags.value[2]);
      if ((ch->equipment[HOLD]
 	    && ch->equipment[HOLD]->item_number >= 0
-	    && GET_OBJ_VIRTUAL(ch->equipment[HOLD]) == OBJ_SON_OGONG_BONG)) 
+	    && GET_OBJ_VIRTUAL(ch->equipment[HOLD]) == DRS_SON_OGONG_BONG)) 
 	if (number(1, 10) >= 5)
 	    dam_add += dice(ch->equipment[HOLD]->obj_flags.value[1],
 			ch->equipment[HOLD]->obj_flags.value[2]);
@@ -66,24 +66,24 @@ void special_death(struct char_data *ch, struct char_data *who,
     if (!IS_NPC(ch)) /* NOTE: currently, no spcial for PC daeth */
 	return;
     /* NOTE: When Mr. Son died. Remove GOLDEN_RIM from corpse */
-    if (GET_MOB_VIRTUAL(ch) == MOB_SON_OGONG ) {
+    if (GET_MOB_VIRTUAL(ch) == DRS_SON_OGONG ) {
 	if ( ch->equipment[WEAR_HEAD]) {
 	    otmp = unequip_char(ch, WEAR_HEAD);
 	    extract_obj(otmp);
 	}
     }
     /* 삼장법사(11111) (put 금테(11127), 성수병(11134) Into corpse) */
-    else if (GET_MOB_VIRTUAL(ch) == OBJ_DAERIMSA_GOLDEN_RIM ) {
-	otmp = read_object( OBJ_DAERIMSA_GOLDEN_RIM, VIRTUAL);
+    else if (GET_MOB_VIRTUAL(ch) == DRS_GOLDEN_RIM ) {
+	otmp = read_object( DRS_GOLDEN_RIM, VIRTUAL);
 	obj_to_obj(otmp, corpse);
-	otmp = read_object( OBJ_DAERIMSA_SAINT_WATER, VIRTUAL);
+	otmp = read_object( DRS_SAINT_WATER, VIRTUAL);
 	obj_to_obj(otmp, corpse);
     }
 
     /* GoodBadIsland */
     /* NOTE: GBISLAND Renumbered */
     /* IRON GOLEM(12223) */
-    else if (GET_MOB_VIRTUAL(ch) == GBISLAND_GOLEM ) {
+    else if (GET_MOB_VIRTUAL(ch) == GBI_GOLEM ) {
 	act("거대한 철문이 열리고, 위층으로 올라가는 계단이 보입니다.",
 	    FALSE, ch, 0, 0, TO_ROOM);
 	REMOVE_BIT(EXIT(ch, 4)->exit_info, EX_LOCKED);
@@ -91,8 +91,8 @@ void special_death(struct char_data *ch, struct char_data *who,
     }
 
     /* KAALM(12201) */
-    else if (GET_MOB_VIRTUAL(ch) == GBISLAND_KAALM) { 
-	otmp = read_object( GBISLAND_SEED_EVIL_POWER , VIRTUAL);
+    else if (GET_MOB_VIRTUAL(ch) == GBI_KAALM) { 
+	otmp = read_object( GBI_SEED_EVIL_POWER , VIRTUAL);
 	obj_to_obj(otmp, corpse);
     } 
 }
@@ -236,7 +236,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    acthan( "Ogong pulls out a hair, and throws it.",
 		      "오공이 머리털 하나를 뽑하서 던집니다.",
 		      FALSE, ch, 0, 0, TO_ROOM);
-	    mob = read_mobile(MOB_SON_OGONG_CLONE, VIRTUAL);
+	    mob = read_mobile(DRS_SON_OGONG_CLONE, VIRTUAL);
 	    char_to_room(mob, ch->in_room);
 	    first_attack(mob, victim);
 	    done++;
@@ -247,7 +247,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    acthan( "Ogong gets a bong in his ear.",
 		      "오공이 귓속에서 여의봉을 꺼냅니다.",
 		      FALSE, ch, 0, 0, TO_ROOM);
-	    obj = read_object(OBJ_SON_OGONG_BONG, VIRTUAL);
+	    obj = read_object(DRS_SON_OGONG_BONG, VIRTUAL);
 	    wear(ch, obj, 12);
 	    MOB_STEP(ch) = 3;
 	    done++;
@@ -264,7 +264,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	case 0:
 	    if (action != CMD_WEAR) {
 		for (i = ch->carrying; i; i = i->next_content)
-		    if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_GOLDEN_RIM) {
+		    if (GET_OBJ_VIRTUAL(i) == DRS_GOLDEN_RIM) {
 			acthan( "Ogong asks \"What's this?\"",
 				"\"이거 머하는 거지?\"라고 묻는다.",
 				FALSE, ch, 0, 0, TO_ROOM);
@@ -276,7 +276,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 		/* wear */
 		if (ch->equipment[WEAR_HEAD]
 		    && ch->equipment[WEAR_HEAD]->item_number >= 0
-		    && GET_OBJ_VIRTUAL(ch->equipment[WEAR_HEAD]) == OBJ_DAERIMSA_GOLDEN_RIM){
+		    && GET_OBJ_VIRTUAL(ch->equipment[WEAR_HEAD]) == DRS_GOLDEN_RIM){
 		    acthan("$n looks at you.", "$n님이 당신을 바라봅니다.",
 			   TRUE, ch, 0, ch, TO_VICT);
 		    acthan("$n looks at $N.", "$n님이 $N님을 바라봅니다.",
@@ -293,7 +293,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    if (action == CMD_GIVE) {
 		/* GIVE */
 		for (i = ch->carrying; i; i = i->next_content)
-		    if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_GOLDEN_RIM)
+		    if (GET_OBJ_VIRTUAL(i) == DRS_GOLDEN_RIM)
 			break;
 		if (i) {
 		    do_wear(ch, " rim", 13);
@@ -387,9 +387,9 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 	if ( action ) {
 	    pen = paper = NULL;
 	    for (i = ch->carrying; i; i = i->next_content) {
-		if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_PEN)
+		if (GET_OBJ_VIRTUAL(i) == DRS_PEN)
 		    pen = i;
-		else if (GET_OBJ_VIRTUAL(i) == OBJ_DAERIMSA_PAPER)
+		else if (GET_OBJ_VIRTUAL(i) == DRS_PAPER)
 		    paper = i;
 	    }
 
@@ -425,7 +425,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 	    acthan( "4th jangro says \"Recite this scroll in the dark room\".",
 		   "\"어두운 방에서 이 두루마리를 읽으세요\"라고 말합니다.",
 		    FALSE, ch, 0, 0, TO_ROOM);
-	    obj = read_object(OBJ_DAERIMSA_SCROLL, VIRTUAL);
+	    obj = read_object(DRS_SCROLL, VIRTUAL);
 	    obj_to_room(obj, ch->in_room);
 	    MOB_STEP(ch) = 5;
 	    break;
@@ -476,13 +476,13 @@ int teleport_daerimsa_tower(struct char_data *ch, int cmd, char *arg)
 	    return 1;
 	}
 
-	if (GET_OBJ_VIRTUAL(scroll) != OBJ_DAERIMSA_SCROLL)
+	if (GET_OBJ_VIRTUAL(scroll) != DRS_SCROLL)
 	    return 0;
 
-	if (world[ch->in_room].number == ROOM_DAERIMSA_DARK_ROOM) {
+	if (world[ch->in_room].number == DRS_DARK_ROOM) {
 	    /* transport all memeber to TOWER */
 	    for (i = 0; i <= top_of_world; i++)
-		if (world[i].number == ROOM_DAERIMSA_TOWER)
+		if (world[i].number == DRS_TOWER)
 		    break;
 	    if (i == top_of_world) {
 		log("NO-EXIST ROOM");
@@ -540,7 +540,7 @@ int saint_water(struct char_data *ch, int cmd, char *arg)
     if (!(obj = get_obj_in_list_vis(ch, buf, ch->carrying)))
 	return FALSE;
 
-    if (GET_OBJ_VIRTUAL(obj) != OBJ_DAERIMSA_SAINT_WATER)
+    if (GET_OBJ_VIRTUAL(obj) != DRS_SAINT_WATER)
 	return FALSE;
 
     GET_ALIGNMENT(ch) = 999; 
@@ -608,7 +608,7 @@ void gbisland_move_seashore(struct char_data *ch)
     char_from_room(ch);
 
     /* goto seashore */
-    vnum_seashore = GBISLAND_SEASHORE + number(0, 2);
+    vnum_seashore = GBI_SEASHORE + number(0, 2);
     char_to_room(ch, real_room(vnum_seashore));
 
     /* break all items in ch's inventory */
@@ -743,7 +743,7 @@ void gbisland_go_out_barrier(struct char_data *ch)
     }
 
     char_from_room(ch);
-    char_to_room(ch, real_room(GBISLAND_MAGIC_BARRIER_OUT));
+    char_to_room(ch, real_room(GBI_MAGIC_BARRIER_OUT));
 
     if (!IS_AFFECTED(ch, AFF_SNEAK)) {
 	act("$n has arrived.", TRUE, ch, 0, 0, TO_ROOM);
@@ -762,7 +762,7 @@ void gbisland_go_out_barrier(struct char_data *ch)
 		}
 
 		char_from_room(k->follower);
-		char_to_room(k->follower, real_room(GBISLAND_MAGIC_BARRIER_OUT));
+		char_to_room(k->follower, real_room(GBI_MAGIC_BARRIER_OUT));
 
 		if (!IS_AFFECTED(ch, AFF_SNEAK)) {
 		    act("$n has arrived.", TRUE, k->follower, 0, 0, TO_ROOM);
@@ -791,7 +791,7 @@ void gbisland_go_back(struct char_data *ch)
     }
 
     char_from_room(ch);
-    char_to_room(ch, real_room(GBISLAND_MIRROR_SAINT));
+    char_to_room(ch, real_room(GBI_MIRROR_SAINT));
 
     if (!IS_AFFECTED(ch, AFF_SNEAK)) {
 	act("$n has arrived.", TRUE, ch, 0, 0, TO_ROOM);
@@ -833,7 +833,7 @@ int gbisland_saint_mirror(struct char_data *ch, int cmd, char *arg)
 	if (give) {
 	    for (obj = ch->carrying; obj; obj = next_obj) {
 		next_obj = obj->next_content;
-		if (GET_OBJ_VIRTUAL(obj) == GBISLAND_BOTTLE)
+		if (GET_OBJ_VIRTUAL(obj) == GBI_BOTTLE)
 		    bottle = 6;
 		extract_obj(obj);
 	    }
@@ -921,9 +921,9 @@ int gbisland_lanessa(struct char_data *ch, int cmd, char *arg)
 	    paper2 = NULL;
 	    for (obj = ch->carrying; obj; obj = next_obj) {
 		next_obj = obj->next_content;
-		if (GET_OBJ_VIRTUAL(obj) == GBISLAND_MAGIC_PAPER1)
+		if (GET_OBJ_VIRTUAL(obj) == GBI_MAGIC_PAPER1)
 		    paper1 = obj;
-		else if (GET_OBJ_VIRTUAL(obj) == GBISLAND_MAGIC_PAPER2)
+		else if (GET_OBJ_VIRTUAL(obj) == GBI_MAGIC_PAPER2)
 		    paper2 = obj;
 		else
 		    extract_obj(obj);
@@ -933,7 +933,7 @@ int gbisland_lanessa(struct char_data *ch, int cmd, char *arg)
 		extract_obj(paper1);
 		extract_obj(paper2);
 
-		rnum = real_object(GBISLAND_MAGIC_PAPER);
+		rnum = real_object(GBI_MAGIC_PAPER);
 		obj = read_object(rnum, REAL);
 
 		do_say(ch, "제 영혼으로 부적을 붙여야해요...", 0);
@@ -1022,7 +1022,7 @@ int gbisland_magic_paper(struct char_data *ch, int cmd, char *arg)
     if (!obj)
 	return FALSE;
 
-    if (GET_OBJ_VIRTUAL(obj) != GBISLAND_MAGIC_PAPER)
+    if (GET_OBJ_VIRTUAL(obj) != GBI_MAGIC_PAPER)
 	return FALSE;
 
     act("성스러운 기운이 방안에 가득히 넘쳐 흐릅니다.",
@@ -1091,7 +1091,7 @@ int gbisland_seed_evil_power(struct char_data *ch, int cmd, char *arg)
     if (!obj)
 	return FALSE;
 
-    if (GET_OBJ_VIRTUAL(obj) != GBISLAND_SEED_EVIL_POWER)
+    if (GET_OBJ_VIRTUAL(obj) != GBI_SEED_EVIL_POWER)
 	return FALSE;
 
     for (i = 0; i < 5; i++) {

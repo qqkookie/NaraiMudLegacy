@@ -1,0 +1,808 @@
+#15710
+Worm hole~
+You can't feel anything in the singularity of the universe........
+~
+157 4110 5
+D0
+~
+~
+0 -1 15711
+S
+#15711
+Near the Death Star~
+You float in the void near a huge artificial globular object.
+Death Star overwhelms you with the rising terror and the energy
+of evil and darkness.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15712
+S
+#15712
+Near the Death Star~
+You float in the void near a huge artificial glubular object.
+Death Star overwhelms you with the rising terror and the energy
+of evil and darkness.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15713
+D2
+~
+~
+0 -1 15711
+S
+#15713
+Entrance of the Death Star~
+Many spaceships enter and exit the Death Star here. Some spaceships
+are forced to dock by the Imperial Navy.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15715
+D2
+~
+~
+0 -1 15712
+S
+#15714
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15718
+D1
+~
+~
+0 -1 15715
+S
+#15715
+Air buffer room~
+You entered a calm and clean room. You think you can rest here. Here is
+some air-pressure control facilities. A sign reads : Take off space
+suit after blue light turns on.
+~
+157 4110 5
+D0
+~
+~
+0 -1 15718
+D1
+~
+~
+0 -1 15716
+D2
+~
+~
+0 -1 15713
+D3
+~
+~
+0 -1 15714
+S
+#15716
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15718
+D3
+~
+~
+0 -1 15715
+S
+#15717
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15721
+D1
+~
+~
+0 -1 15718
+S
+#15718
+Main Engine room~
+You are surrounded with a vast amount of light and heat when you enter
+this room. A large power capsule emits intense light and dangerous gas
+to animate the Death Star.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15727
+D1
+~
+~
+0 -1 15722
+D2
+~
+~
+0 -1 15715
+D3
+~
+~
+0 -1 15721
+D4
+~
+~
+0 -1 15741
+D5
+~
+grate~
+1 15710 15730
+S
+#15719
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15722
+D3
+~
+~
+0 -1 15718
+S
+#15720
+Defence Control Center of the Death Star~
+The facilities of this room controls tremendous fires mounted on the
+surface of the Death Star.
+~
+157 4106 5
+D1
+~
+~
+0 -1 15721
+S
+#15721
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15724
+D1
+~
+~
+0 -1 15718
+D2
+~
+~
+0 -1 15717
+D3
+~
+~
+0 -1 15720
+S
+#15722
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15725
+D1
+~
+~
+0 -1 15723
+D2
+~
+~
+0 -1 15719
+D3
+~
+~
+0 -1 15718
+S
+#15723
+Defence Control Center of the Death Star~
+The facilities of this room controls tremendous fires mounted on the
+surface of the Death Star.
+~
+157 4106 5
+D3
+~
+~
+0 -1 15722
+S
+#15724
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D1
+~
+~
+0 -1 15718
+D2
+~
+~
+0 -1 15721
+S
+#15725
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D2
+~
+~
+0 -1 15722
+D3
+~
+~
+0 -1 15718
+S
+#15726
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D1
+~
+~
+0 -1 15727
+D2
+~
+~
+0 -1 15718
+S
+#15727
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15729
+D1
+~
+~
+0 -1 15728
+D2
+~
+~
+0 -1 15718
+D3
+~
+~
+0 -1 15726
+S
+#15728
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D2
+~
+~
+0 -1 15718
+D3
+~
+~
+0 -1 15727
+S
+#15729
+Defence Control Center of the Death Star~
+The facilities of this room controls tremendous fires mounted on the
+surface of the Death Star.
+~
+157 4106 5
+D2
+~
+~
+0 -1 15727
+S
+#15730
+Trash room~
+This large area is filled with all kinds of dirty trashes and polluted
+liquid. You hear some strange sound beneath the water.
+~
+157 4106 5
+D0
+~
+north door~
+1 15710 15731
+D1
+~
+east door~
+1 15710 15733
+D2
+~
+south door~
+1 15710 15734
+D3
+~
+west door~
+1 15710 15732
+D4
+~
+grate~
+1 15710 15718
+D5
+~
+down door~
+1 15710 15735
+S
+#15731
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D2
+~
+door~
+1 15710 15730
+S
+#15732
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D1
+~
+door~
+1 15710 15730
+S
+#15733
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D3
+~
+door~
+1 15710 15730
+S
+#15734
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+door~
+1 15710 15730
+S
+#15735
+Axis room of the Death Star~
+This room is at the spin-axis of the Death Star. Many pipes run to all
+direction to supply energy, materials and information. The office for a
+guard commander is within this room.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15736
+D1
+~
+~
+0 -1 15737
+D2
+~
+~
+0 -1 15738
+D3
+~
+~
+0 -1 15739
+D4
+~
+door~
+1 15710 15730
+D5
+~
+hatch~
+2 15710 15740
+S
+#15736
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D2
+~
+~
+0 -1 15735
+S
+#15737
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D3
+~
+~
+0 -1 15735
+S
+#15738
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15735
+S
+#15739
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D1
+~
+~
+0 -1 15735
+S
+#15740
+South Pole of the Death Star~
+This room seems to function as the defence control center of the Death
+Star. Many imperial officers control the facility to repel the
+infiltrators from the Galactic allied force.
+~
+157 4106 5
+D4
+~
+hatch~
+2 15710 15735
+S
+#15741
+Axis room of the Death Star~
+This room is at the spin-axis of the Death Star. Many pipes run to all
+direction to supply energy, materials and information. The office for a
+guard commander is within this room.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15742
+D1
+~
+~
+0 -1 15743
+D2
+~
+~
+0 -1 15744
+D3
+~
+~
+0 -1 15745
+D4
+~
+~
+0 -1 15754
+D5
+~
+~
+0 -1 15718
+S
+#15742
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15746
+D1
+~
+~
+0 -1 15747
+D2
+~
+~
+0 -1 15741
+D3
+~
+~
+0 -1 15753
+S
+#15743
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15747
+D1
+~
+~
+0 -1 15748
+D2
+~
+~
+0 -1 15749
+D3
+~
+~
+0 -1 15741
+S
+#15744
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15741
+D1
+~
+~
+0 -1 15749
+D2
+~
+~
+0 -1 15750
+D3
+~
+~
+0 -1 15751
+S
+#15745
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15753
+D1
+~
+~
+0 -1 15741
+D2
+~
+~
+0 -1 15751
+D3
+~
+~
+0 -1 15752
+S
+#15746
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D2
+~
+~
+0 -1 15742
+S
+#15747
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D2
+~
+~
+0 -1 15743
+D3
+~
+~
+0 -1 15742
+S
+#15748
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D3
+~
+~
+0 -1 15743
+S
+#15749
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15743
+D3
+~
+~
+0 -1 15744
+S
+#15750
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15744
+S
+#15751
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15745
+D1
+~
+~
+0 -1 15744
+S
+#15752
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D1
+~
+~
+0 -1 15745
+S
+#15753
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D1
+~
+~
+0 -1 15742
+D2
+~
+~
+0 -1 15745
+S
+#15754
+Axis room of the Death Star~
+This room is at the spin-axis of the Death Star. Many pipes run to all
+direction to supply energy, materials and information. The office for a
+guard commander is within this room.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15755
+D1
+~
+~
+0 -1 15756
+D2
+~
+~
+0 -1 15757
+D3
+~
+~
+0 -1 15758
+D4
+~
+~
+0 -1 15759
+D5
+~
+~
+0 -1 15741
+S
+#15755
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D2
+~
+~
+0 -1 15754
+S
+#15756
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D3
+~
+~
+0 -1 15754
+S
+#15757
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D0
+~
+~
+0 -1 15754
+S
+#15758
+Room~
+Nothing special except guards here.
+~
+157 4106 5
+D1
+~
+~
+0 -1 15754
+S
+#15759
+Security Guard room~
+This is a heavily guarded room for the safety of the dark empire. Many
+guards are forbidding arbitrary traffic.
+~
+157 4106 5
+D4
+~
+first door~
+2 15711 15760
+D5
+~
+~
+0 -1 15754
+S
+#15760
+Control Center of the Death Star~
+Enormous computers are working for the operation of the Death Star.
+Many officers and soldiers are working for computers and their admiral.
+~
+157 4106 5
+D4
+~
+second door~
+2 15712 15761
+D5
+~
+first door~
+2 15711 15759
+S
+#15761
+Sovereign room of dark emperor~
+Atmosphere of dark sovereignty presses all the residence into dooms.
+Calmness and smell of death arise from the evil throne of the dark
+emperor. A large screen shows the current situations of the war between
+the Galactic alliance and the Empire.
+~
+157 4106 5
+D5
+~
+second door~
+2 15712 15760
+S
+#99999
+$~

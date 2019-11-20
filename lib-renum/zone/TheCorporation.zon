@@ -1,0 +1,231 @@
+The Corporation~
+14899 18 2
+*
+D 0 14850 0 1
+D 0 14850 2 1
+D 0 14851 2 1
+D 0 14853 0 1
+*
+M 0 14750 15 14710  Guard
+M 0 14750 15 14720  Guard
+M 0 14750 15 14730  Guard
+M 0 14750 15 14740  Guard
+M 0 14750 15 14750  Guard
+M 0 14750 15 14760  Guard
+M 0 14750 15 14770  Guard
+M 0 14750 15 14780  Guard
+M 0 14750 15 14790  Guard
+M 0 14750 15 14800  Guard
+M 0 14750 15 14810  Guard
+M 0 14750 15 14820  Guard
+M 0 14750 15 14830  Guard
+M 0 14750 15 14840  Guard
+*
+M 0 14700 4 14704   Temporary Clerk
+M 0 14700 4 14701   Temporary Clerk
+M 0 14700 4 14704   Temporary Clerk
+M 0 14700 4 14704   Temporary Clerk
+E 1 14700 7 5     polyester suit
+E 1 14705 7 6     polyester hat
+E 1 14710 7 7     polyester pants
+E 1 14715 7 8     vinyl shoes
+E 1 14720 7 9     vinyl gloves
+M 0 14701 4 14706   Experienced Clerk
+M 0 14701 4 14707   Experienced Clerk
+M 0 14701 4 14708   Experienced Clerk
+M 0 14701 4 14706   Experienced Clerk
+E 1 14700 7 5     polyester suit
+E 1 14705 7 6     polyester hat
+E 1 14710 7 7     polyester pants
+E 1 14715 7 8     vinyl shoes
+E 1 14720 7 9     vinyl gloves
+M 0 14702 4 14713   Head Clerk
+M 0 14702 4 14711   Head Clerk
+M 0 14702 4 14711   Head Clerk
+M 0 14702 4 14714   Head Clerk
+E 1 14700 7 5     polyester suit
+E 1 14705 7 6     polyester hat
+E 1 14710 7 7     polyester pants
+E 1 14715 7 8     vinyl shoes
+E 1 14720 7 9     vinyl gloves
+M 0 14707 4 14707   Temporary Bookkeeper
+M 0 14707 4 14705   Temporary Bookkeeper
+M 0 14707 4 14707   Temporary Bookkeeper
+M 0 14707 4 14706   Temporary Bookkeeper
+E 1 14700 7 5     polyester suit
+E 1 14705 7 6     polyester hat
+E 1 14710 7 7     polyester pants
+E 1 14715 7 8     vinyl shoes
+E 1 14720 7 9     vinyl gloves
+M 0 14708 4 14719   Experienced Bookkeeper
+M 0 14708 4 14716   Experienced Bookkeeper
+M 0 14708 4 14716   Experienced Bookkeeper
+M 0 14708 4 14715   Experienced Bookkeeper
+E 1 14700 7 5     polyester suit
+E 1 14705 7 6     polyester hat
+E 1 14710 7 7     polyester pants
+E 1 14715 7 8     vinyl shoes
+E 1 14720 7 9     vinyl gloves
+M 0 14709 4 14727   Head Bookkeeper
+M 0 14709 4 14725   Head Bookkeeper
+M 0 14709 4 14725   Head Bookkeeper
+M 0 14709 4 14725   Head Bookkeeper
+E 1 14700 7 5     polyester suit
+E 1 14705 7 6     polyester hat
+E 1 14710 7 7     polyester pants
+E 1 14715 7 8     vinyl shoes
+E 1 14720 7 9     vinyl gloves
+M 0 14714 4 14719   Temporary Accountant
+M 0 14714 4 14715   Temporary Accountant
+M 0 14714 4 14716   Temporary Accountant
+E 1 14700 7 5     polyester suit
+E 1 14705 7 6     polyester hat
+E 1 14710 7 7     polyester pants
+E 1 14715 7 8     vinyl shoes
+E 1 14720 7 9     vinyl gloves
+M 0 14714 4 14719   Temporary Accountant
+M 0 14715 4 14734   Experienced Accountant
+E 1 14701 6 5     tweed suit
+E 1 14706 6 6     tweed hat
+E 1 14711 6 7     tweed pants
+E 1 14716 6 8     rubber shoes
+E 1 14721 6 9     rubber gloves
+M 0 14715 4 14731   Experienced Accountant
+M 0 14715 4 14732   Experienced Accountant
+M 0 14715 4 14730   Experienced Accountant
+M 0 14716 3 14747   Head Accountant
+M 0 14716 3 14747   Head Accountant
+M 0 14716 3 14746   Head Accountant
+E 1 14701 6 5     tweed suit
+E 1 14706 6 6     tweed hat
+E 1 14711 6 7     tweed pants
+E 1 14716 6 8     rubber shoes
+E 1 14721 6 9     rubber gloves
+M 0 14721 4 14720   Assistant Attorney
+M 0 14721 4 14722   Assistant Attorney
+M 0 14721 4 14723   Assistant Attorney
+M 0 14721 4 14720   Assistant Attorney
+M 0 14722 4 14735   Associate Attorney
+M 0 14722 4 14736   Associate Attorney
+E 1 14701 6 5     tweed suit
+E 1 14706 6 6     tweed hat
+E 1 14711 6 7     tweed pants
+E 1 14716 6 8     rubber shoes
+E 1 14721 6 9     rubber gloves
+M 0 14722 4 14743   Associate Attorney
+M 0 14722 4 14737   Associate Attorney
+M 0 14723 3 14751   Corporate Attorney
+M 0 14723 3 14754   Corporate Attorney
+E 1 14701 6 5     tweed suit
+E 1 14706 6 6     tweed hat
+E 1 14711 6 7     tweed pants
+E 1 14716 6 8     rubber shoes
+E 1 14721 6 9     rubber gloves
+M 0 14723 3 14753   Corporate Attorney
+M 0 14728 4 14743   Branch Manager
+E 1 14701 6 5     tweed suit
+E 1 14706 6 6     tweed hat
+E 1 14711 6 7     tweed pants
+E 1 14716 6 8     rubber shoes
+E 1 14721 6 9     rubber gloves
+M 0 14728 4 14744   Branch Manager
+M 0 14728 4 14744   Branch Manager
+M 0 14728 4 14743   Branch Manager
+M 0 14729 3 14758   Regional Manager
+E 1 14701 6 5     tweed suit
+E 1 14706 6 6     tweed hat
+E 1 14711 6 7     tweed pants
+E 1 14716 6 8     rubber shoes
+E 1 14721 6 9     rubber gloves
+M 0 14729 3 14759   Regional Manager
+M 0 14729 3 14758   Regional Manager
+M 0 14730 3 14771   National Manager
+E 1 14702 3 5     cotton suit
+E 1 14707 3 6     cotton hat
+E 1 14712 3 7     cotton pants
+E 1 14717 3 8     suede shoes
+E 1 14722 3 9     suede gloves
+M 0 14730 3 14772   National Manager
+M 0 14730 3 14772   National Manager
+M 0 14735 3 14777   Junior Vice-president
+M 0 14735 3 14775   Junior Vice-president
+M 0 14735 3 14779   Junior Vice-president
+E 1 14702 3 5     cotton suit
+E 1 14707 3 6     cotton hat
+E 1 14712 3 7     cotton pants
+E 1 14717 3 8     suede shoes
+E 1 14722 3 9     suede gloves
+M 0 14736 3 14790   Senior Vice-president
+M 0 14736 3 14792   Senior Vice-president
+M 0 14736 3 14790   Senior Vice-president
+E 1 14702 3 5     cotton suit
+E 1 14707 3 6     cotton hat
+E 1 14712 3 7     cotton pants
+E 1 14717 3 8     suede shoes
+E 1 14722 3 9     suede gloves
+E 1 14753 2 17      briefcase
+M 0 14737 2 14806   Executive Vice-president
+M 0 14737 2 14805   Executive Vice-president
+E 1 14703 3 5     wool suit
+E 1 14708 3 6     wool hat
+E 1 14713 3 7     wool pants
+E 1 14718 3 8     leather shoes
+E 1 14723 3 9     leather gloves
+E 1 14753 2 17      briefcase
+M 0 14742 2 14816   Former President
+E 1 14703 3 5     wool suit
+E 1 14708 3 6     wool hat
+E 1 14713 3 7     wool pants
+E 1 14718 3 8     leather shoes
+E 1 14723 3 9     leather gloves
+M 0 14742 2 14819   Former President
+M 0 14743 2 14831   Unpopular President
+M 0 14743 2 14834   Unpopular President
+E 1 14703 3 5     wool suit
+E 1 14708 3 6     wool hat
+E 1 14713 3 7     wool pants
+E 1 14718 3 8     leather shoes
+E 1 14723 3 9     leather gloves
+M 0 14744 1 14847   Corporation President
+E 1 14704 5 5     cashmere suit
+E 1 14709 5 6     cashmere hat
+E 1 14714 5 7     cashmere pants
+E 1 14719 5 8     corfam shoes
+E 1 14724 5 9     corfam gloves
+*
+M 0 14751 4 14851   Board Member
+M 0 14751 4 14851   Board Member
+E 1 14704 5 5     cashmere suit
+E 1 14709 5 6     cashmere hat
+E 1 14714 5 7     cashmere pants
+E 1 14719 5 8     corfam shoes
+E 1 14724 5 9     corfam gloves
+E 1 14750 1 17      briefcase
+P 1 14752 1 14750    fortune
+M 0 14751 4 14851   Board Member
+G 1 14751 1        briefcase key
+M 0 14751 4 14851   Board Member
+*
+M 0 14752 1 14853   Chairman
+E 1 14760 2 7        shorts
+E 1 14770 1 17       stun-gun
+M 0 14753 1 14853   Babe
+E 1 14761 2 13       towel
+G 1 14756 1          key
+*
+O 0 14775 2 14751   Coffee machine
+P 1 14776 6 14775     cup
+*
+O 0 14755 1 14773   File Cabinet
+P 1 14771 1 14755     battery pack
+*
+M 0 14760 1 14891   Paperboy
+G 1 14777 50         newspaper
+*
+M 0 14761 1 14892   Polyester Salesclerk
+*
+M 0 14762 1 14738   Chemist
+E 1 14772 3 17
+*
+S
+$~

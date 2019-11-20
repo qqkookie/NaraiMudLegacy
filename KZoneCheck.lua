@@ -3,22 +3,23 @@
 -- Zone lib Globals
 
 RENUMINDEX = 2
-REFCNT =  7     -- used as ref counter
+REFCNT =  3     -- used as ref counter
 
 INDEX_OOB = 999999
 
 --{ zona_name, zone_base, zone_renum_base, renum_span }
 Zone_renum_tab = {}
 
--- { zone_name, renum, zone_file, world_file, zone_base, zone_top, renum_base, renum_top  }
+-- { zone_name, renum_zonenum, zone_file, world_file, 
+--    zone_base, zone_top, renum_base, renum_top}
 Zone_index = {}
 
---  { rnr, renum, rid, rinfo, rexits, rxtras, refcnt  }
+--  { rnr, renum, refcnt , rid, rdesc, rinfo, rexits, rxtras }
 Room_index = {}
 
 Exit_index = {}
 
--- { onr,  renum, oid, oinfo, oname, oxtras, refcnt }
+-- { onr,  renum, , refcnt, oid, oinfo, oname, oxtras }
 Object_index = {}
 Mobile_index = {}
 
@@ -34,11 +35,11 @@ function entry_idnum(entry)
 end
 
 function entry_id(entry)
-    return entry and entry[3]
+    return entry and entry[4]
 end
 
 function assets_name(entry)
-    return entry and entry[5]
+    return entry and entry[6]
 end
 
 function zone_number(znr)
@@ -76,7 +77,7 @@ end
 
 function find_renum_zone(idn)
     for iz, zinfo in ipairs(Zone_index) do
-        if idn >= zinfo[7] and idn <= zinfo[8] then     -- renum_base, renum_top
+        if idn >= zinfo[7] and zinfo[8] and idn <= zinfo[8] then     -- renum_base, renum_top
             return iz
         end
     end
@@ -91,9 +92,9 @@ function load_zone_index()
 
     local zflines, wflines, last_ztop = -1
 
-    zflines = read_all_lines('zone/zone_files')
+    zflines = read_all_lines( 'zone/zone_files')
 
-    wflines = read_all_lines('world/world_files')
+    wflines = read_all_lines( '/world/world_files')
 
     for iz, zfn in ipairs(zflines) do
 
@@ -111,14 +112,19 @@ function load_zone_index()
 
         assert(zname == renum_zname, 'zone name mismatch: ' .. zname .. ', ' .. renum_zname )
 
-        local renum_base, renum_top, span
+        local renum_znum, renum_base, renum_top, span
         renum_base = Zone_renum_tab[iz][3]
         span =  Zone_renum_tab[iz][4]
 
-        renum_top = span and span > 0 and (renum_base + span-1) or 0
-        -- { zone_name, renum, zone_file, world_file, zone_base, zone_top, renum_base, remum_top  }
-        Zone_index[iz] = { zname, iz, zfn:gsub( 'zone/', ''), wflines[iz]:gsub( 'world/', ''),
-                Zone_renum_tab[iz][2], ztop, renum_base, renum_top }
+        -- if renum_base (Zone_renum_tab[3]) is not set, use zone top from the the .zon file
+        -- if span (Zone_renum_tab[4]) is not set or zero, dont create renumed world file.  
+        
+        renum_ztop = span and span > 0 and (renum_base + span-1) or nil
+        -- { zone_name, renum_zonenum, zone_file, world_file,
+        --    zone_base, zone_top, renum_base, renum_top }
+        renum_znum = math.floor(renum_base/100 +0.5) --  [RENUMINDEX]
+        Zone_index[iz] = { zname, renum_znum, zfn:gsub( 'zone/', ''), wflines[iz]:gsub( 'world/', ''),
+                Zone_renum_tab[iz][2], ztop, renum_base, renum_ztop }
 
         -- buf = string.format("    { '%s', '%s', '%s', %d, %d, %d, %d, %d, %d }",
         --     zname, zfn:gsub( 'zone/', ''), wflines[iz]:gsub( 'world/', ''),
@@ -136,7 +142,7 @@ function renum_zone_list()
     wf = io.open('renum/world/world_files', 'w')
 
     for iz, zinfo in ipairs_sorted(Zone_index, renum_cmp) do
-        if zinfo[8] > 0 then
+        if zinfo[8] then
             zf:write( 'zone/' .. zinfo[3] .. '\n');
             wf:write( 'world/' .. zinfo[4] .. '\n' );
         end
@@ -144,29 +150,6 @@ function renum_zone_list()
     zf:write('$\n') ; zf:close()
     wf:write('$\n') ; wf:close()
 end
-
-
-    --[[
-function check_zone_list ()
-
-    kz_openfile('zone/zone_files')
-
-    local ln
-
-    for iz, zinfo in ipairs(Zone_index) do
-        ln = getline()
-        assert('zone/' .. zinfo[1] ==  ln )
-    end
-
-    kz_openfile('world/world_files')
-
-    for iz, zinfo in ipairs(Zone_index) do
-        ln = getline()
-        assert('world/' .. zinfo[2] ==  ln )
-    end
-
-end
-]]
 
 function read_assets()
     -- Read an obj or a mob entry
@@ -202,7 +185,7 @@ function read_assets()
         end
     end
      -- Object_index/Mobile_index assets entry struct:
-    assets = { onr, onr, oid, oinfo, oname, oxtras, 0 }
+    assets = { onr, onr, 0, oid, oinfo, oname, oxtras }
     return assets
 end
 
@@ -236,8 +219,8 @@ function renum_assets_index(assets_index, fn)
         -- { onr, renum, oid, oinfo, oname, oxtras }
 
         renum_writeln( '#' .. tostring(renum_assets(nr)))
-        renum_write(assets[4])
-        renum_write(assets[6])
+        renum_write(assets[5])
+        renum_write(assets[7])
     end
     renum_writeln(EOFENDING)
 end
@@ -250,7 +233,7 @@ end
 
 function read_room()
     -- Read a room in world
-    local rid, rnr, rname, rinfo, rexits, rxtras, rooom
+    local rid, rnr, rname, rdesc, rinfo, rexits, rxtras, rooom
     rexits = {} ; rxtras = ''
 
     -- fixed parts
@@ -259,7 +242,9 @@ function read_room()
     if EOFline(lookahead()) then return nil end
     rname = getzstring()
     assert (strok(rname), 'empty room name')
-    rinfo = rname .. EOSTR .. getzstring() .. EOSTR .. getline() .. '\n'
+    rdesc = rname .. EOSTR .. getzstring() ..  EOSTR
+
+    rinfo = getline()
 
     -- variable parts
     while true do
@@ -271,7 +256,6 @@ function read_room()
             ex_info = getline() .. '\n' .. getzstring() .. EOSTR .. getzstring() .. EOSTR
             flag =  getline() .. '\n'
             table.insert( rexits, { ex_info,  flag} )
-            table.insert( Exit_index, rid .. ' ' .. zone_number() .. ' '.. flag )
         elseif ch == 'E' then
             rxtras = rxtras .. read_xtra()
         elseif ch == COMCHAR then
@@ -292,7 +276,7 @@ function read_room()
     end
 
     -- Room_index room entry struct:  rexits is table
-    room = { rnr, rnr , rid, rinfo, rexits, rxtras, 0 }
+    room = { rnr, rnr , 0, rid, rdesc, rinfo, rexits, rxtras }
     return room
 end
 
@@ -338,18 +322,25 @@ function check_world(wf)
         if not blankline(ln) then
             room = read_room()
             if not room then break end
-            --  { rnr, renum, rid, rinfo, rexits, rxtras, refcnt }
+            --  { rnr, renum, refcnt , rid, rdesc, rinfo, rexits, rxtras }
             rnr = entry_idnum(room)
             rmin = math.min(rmin, rnr)
             rmax = math.max(rmax, rnr)
-            assert(not out_of_zone(rnr), 'out of zone room number')
+            
+            -- #3500~3503 is special case
+            if rnr < 3500 and rnr > 3510 then
+              assert(not out_of_zone(rnr), 'out of zone room number')
+            end
 
             room[RENUMINDEX] = renum_room(rnr)
             room_id = entry_id(room)
+            
 
-            for ix, ex in ipairs(room[5]) do
-                local flag = ex[2]
-                local ex1, key, to_room = flag:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
+            for ix, ex in ipairs(room[7]) do
+                local exdata = ex[2]
+                table.insert( Exit_index, room_id .. ' ' .. zone_number() .. ' '.. exdata )
+                local flag, key, to_room = exdata:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
+                
                 print_check_entry(key, 'KEY', room_id)
                 print_check_entry(to_room, 'EXIT', room_id, -1)  -- dont check oo zone exit
             end
@@ -362,7 +353,7 @@ end
 
 function renum_world()
 
-    local curr_zone, znr
+    local curr_zone, znr, renum_zinfo
     curr_zone = -1
 
     for ii, room in ipairs(Room_index) do
@@ -371,11 +362,11 @@ function renum_world()
 
     for ii, room in ipairs_sorted(Room_index, renum_cmp) do
 
-        local znr, ztop
+        local znr, ztop, zid
         znr = find_renum_zone(room[RENUMINDEX])
         if not znr then goto continue end
         ztop = Zone_index[znr][8]
-        if ztop <= 0 then goto continue end
+        if not ztop then goto continue end
         if znr ~= curr_zone then
             if curr_zone > 0 then
                 renum_writeln(EOFENDING)
@@ -386,17 +377,25 @@ function renum_world()
             curr_zone = znr
         end
 
+        --  { rnr, renum, refcnt , rid, rdesc, rinfo, rexits, rxtras }
         renum_writeln( '#' .. tostring(room[RENUMINDEX]))
-        renum_write(room[4])
+        renum_write(room[5])
 
-        for ix, ex in ipairs(room[5]) do
+        -- replace zone number of the room
+        renum_zinfo =  Zone_index[znr][RENUMINDEX] .. ' ' ..  room[6]:match('^%d+ (.+)$')
+
+        renum_writeln(renum_zinfo)
+
+        for ix, ex in ipairs(room[7]) do
+            
             renum_write (ex[1])
-            local flag = ex[2]
-            local ex1, key, to_room = flag:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
-            flag = string.format('%s %d %d', ex1, renum_obj(key), renum_room(to_room))
-            renum_writeln (flag)
+            local exdata = ex[2]
+            local flag, key, to_room = exdata:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
+                            
+            exdata = string.format('%s %d %d', flag, renum_obj(key), renum_room(to_room))
+            renum_writeln (exdata)
         end
-        renum_write(room[6])
+        renum_write(room[8])
         renum_writeln('S')
         room[REFCNT] = room[REFCNT]+1
 ::continue::
@@ -519,13 +518,8 @@ function check_zone(zf)
     assert ( zname == zone_name(), 'zone name mismatch 2')
 
     if G_renum then
-        local renum_span
-        renum_span = Zone_renum_tab[zone_number()][4]
-        if renum_span then
-            ztop =  Zone_renum_tab[zone_number()][3] + renum_span
-        else
-            ztop = ztop + renum_zone_offset(zone_number())
-        end
+        ztop = (Zone_index[zone_number()][8])
+          or (ztop + renum_zone_offset(zone_number()))
     end
 
     zheader = zname .. EOSTR .. tostring(ztop) .. ' ' .. hrest
@@ -606,7 +600,6 @@ function check_zone(zf)
 end
 
 --------------------------------------------------------
-
 
 function check_exits(zone_exit)
     -- zone_exit : show zone exits or not
@@ -709,7 +702,7 @@ function check_questmob(fn)
         print_check_entry(qnr, 'MOB', qname, 'Quest mob', -1)
 
         mob = Mobile_index[qnr]
-        mlev = mob[4]:match('\n%u (%d%d?) ')
+        mlev = mob[5]:match('\n%u (%d%d?) ')
         if mlev ~= qlev then
             print( qmobnr, qname, assets_name(mob), qlev, mlev )
         end

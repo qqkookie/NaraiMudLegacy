@@ -63,76 +63,77 @@ void assign_mobiles(void)
     int gbisland_lanessa(struct char_data *ch, int cmd, char *arg);
     int gbisland_carpie(struct char_data *ch, int cmd, char *arg);
 
-    mob_index[real_mobile(1)].func = puff;
+    mob_index[real_mobile(MOB_LIMBO_PUFF)].func = puff;
 
     /* Moksha */
-    mob_index[real_mobile(1550)].func = spell_blocker;
-    mob_index[real_mobile(2836)].func = spell_blocker;	/* Big 94,3,26 */
+    mob_index[real_mobile(MOB_GOBIND)].func = spell_blocker;
+    mob_index[real_mobile(MOB_HWATA_GUARD)].func = spell_blocker;	/* Big 94,3,26 */
 
     /* Wasteland */
-    mob_index[real_mobile(2123)].func = fido;	/* larger hound */
+    mob_index[real_mobile(MOB_LARGE_HOUND)].func = fido;	/* larger hound */
 
     /* Midgaard */
-    mob_index[real_mobile(3061)].func = janitor;
-    mob_index[real_mobile(3066)].func = fido;
-    mob_index[real_mobile(3062)].func = fido;
+    mob_index[real_mobile(MOB_MID_JANITOR)].func = janitor;
+    mob_index[real_mobile(MOB_MID_FIDO1)].func = fido;
+    mob_index[real_mobile(MOB_MID_FIDO2)].func = fido;
 
-    mob_index[real_mobile(3020)].func = guild;
-    mob_index[real_mobile(3143)].func = mayor;
-    mob_index[real_mobile(3125)].func = deathcure;
-    mob_index[real_mobile(3135)].func = super_deathcure;
-    mob_index[real_mobile(3126)].func = mud_message;
-    mob_index[real_mobile(3127)].func = mud_message;
-    mob_index[real_mobile(3128)].func = mud_message;
-    mob_index[real_mobile(3129)].func = mud_message;
-    mob_index[real_mobile(3130)].func = mud_message;
-    mob_index[real_mobile(3131)].func = mud_message;
-    mob_index[real_mobile(3132)].func = mud_message;
-    mob_index[real_mobile(3133)].func = musashi;
-    mob_index[real_mobile(19999)].func = super_musashi;
-    mob_index[real_mobile(3134)].func = Quest_bombard;
-    mob_index[real_mobile(3145)].func = mom;
-    mob_index[real_mobile(1455)].func = singer;
-    mob_index[real_mobile(3072)].func = archmage;
+    mob_index[real_mobile(MOB_MID_GUILDMASTER)].func = guild;
+    mob_index[real_mobile(MOB_MID_MAYOR)].func = mayor;
+    mob_index[real_mobile(MOB_MID_DEATHCURE)].func = deathcure;
+    mob_index[real_mobile(MOB_MID_SUPERDC)].func = super_deathcure;
+    mob_index[real_mobile(MOB_MID_MASS)].func = mud_message;
+    mob_index[real_mobile(MOB_MID_MASS+1)].func = mud_message;
+    mob_index[real_mobile(MOB_MID_MASS+2)].func = mud_message;
+    mob_index[real_mobile(MOB_MID_MASS+3)].func = mud_message;
+    mob_index[real_mobile(MOB_MID_MASS+4)].func = mud_message;
+    mob_index[real_mobile(MOB_MID_MASS+5)].func = mud_message;
+    mob_index[real_mobile(MOB_MID_MASS+6)].func = mud_message;
+    mob_index[real_mobile(MOB_MID_MUSASHI)].func = musashi;
+    mob_index[real_mobile(MOB_MID_SUPERMUSASHI)].func = super_musashi;
+    mob_index[real_mobile(MOB_MID_BOMBARD)].func = Quest_bombard;
+    mob_index[real_mobile(MOB_MID_MOM)].func = mom;
+    mob_index[real_mobile(MOB_MID_SINGER)].func = singer;
+    mob_index[real_mobile(MOB_MID_ARCHMAGE)].func = archmage;
 
     /* Perhaps */
-    mob_index[real_mobile(1000)].func = perhaps;
+    mob_index[real_mobile(MOB_MID_HELPER)].func = perhaps;
 
     /* MORIA */
-    mob_index[real_mobile(4000)].func = snake;
-    mob_index[real_mobile(4001)].func = snake;
-    mob_index[real_mobile(4053)].func = snake;
-    mob_index[real_mobile(1660)].func = snake;
-    mob_index[real_mobile(5004)].func = snake;
-    mob_index[real_mobile(4102)].func = snake;
+    mob_index[real_mobile(MOB_MORIA_SNAKE1)].func = snake;
+    mob_index[real_mobile(MOB_MORIA_SNAKE2)].func = snake;
+    mob_index[real_mobile(MOB_MORIA_SNAKE3)].func = snake;
+    mob_index[real_mobile(MOB_MORIA_SNAKE4)].func = snake;
+    mob_index[real_mobile(MOB_DESERT_WORM)].func = snake;
+    // NOTE: Missing 1660
+    // mob_index[real_mobile(1660)].func = snake;
 
     /* SEWERS */
-    mob_index[real_mobile(7006)].func = snake;
+    mob_index[real_mobile(MOB_SEWER_SNAKE)].func = snake;
 
     /* FOREST */
-    mob_index[real_mobile(6113)].func = snake;
-    mob_index[real_mobile(6114)].func = snake;
+    mob_index[real_mobile(MOB_FOREST_SPIDER1)].func = snake;
+    mob_index[real_mobile(MOB_FOREST_SPIDER2)].func = snake;
 
 
     /* Death Kingdom : cyb */
-    mob_index[real_mobile(9528)].func = helper;		/* barbaror */
-    mob_index[real_mobile(9562)].func = helper;		/* yuria */
+    mob_index[real_mobile(MOB_DK_BARBOR)].func = helper;		/* barbaror */
+    mob_index[real_mobile(MOB_DK_YURIA)].func = helper;		/* yuria */
 
     /* Robo city : big cyb */
-    mob_index[real_mobile(15182)].func = great_mazinga;	/* great mazinga */
+    mob_index[real_mobile(MOB_RC_GREAT_MAZINGA)].func = great_mazinga;	/* great mazinga */
 
     /* DaeRimSa */
     /* son_ogong = mob_index[real_mobile(SON_OGONG)]; */
     /* fourth_jangro = mob_index[real_mobile(FOURTH_JANGRO)]; */
 
-    mob_index[real_mobile(MOB_SON_OGONG)].func = son_ogong_func;
-    mob_index[real_mobile(MOB_FOURTH_JANGRO)].func = fourth_jangro_func;
-    mob_index[real_mobile(MOB_SON_OGONG_CLONE)].func = son_ogong_mirror_func;
+    mob_index[real_mobile(DRS_SON_OGONG)].func = son_ogong_func;
+    mob_index[real_mobile(DRS_FOURTH_JANGRO)].func = fourth_jangro_func;
+    mob_index[real_mobile(DRS_SON_OGONG_CLONE)].func = son_ogong_mirror_func;
 
     /* GoodBadIsland */
-    mob_index[real_mobile(SAINT_MIRROR)].func = gbisland_saint_mirror;
-    mob_index[real_mobile(LANESSA)].func = gbisland_lanessa;
-    mob_index[real_mobile(CARPIE)].func = gbisland_carpie; 
+    mob_index[real_mobile(GBI_SAINT_MIRROR)].func = gbisland_saint_mirror;
+    mob_index[real_mobile(GBI_LANESSA)].func = gbisland_lanessa;
+    mob_index[real_mobile(GBI_CARPIE)].func = gbisland_carpie; 
 }
 
 /* assign special procedures to objects */
@@ -151,20 +152,20 @@ void assign_objects(void)
     int gbisland_magic_paper(struct char_data *ch, int cmd, char *arg);
     int gbisland_seed_evil_power(struct char_data *ch, int cmd, char *arg);
 
-    obj_index[real_object(3099)].func = board;
-    obj_index[real_object(3098)].func = mbox;
-    obj_index[real_object(1311)].func = totem;
-    obj_index[real_object(2157)].func = magicseed;
+    obj_index[real_object(OBJ_BOARD)].func = board;
+    obj_index[real_object(OBJ_MAILBOX)].func = mbox;
+    obj_index[real_object(OBJ_SLOTMACHINE)].func = slot_machine;
+    obj_index[real_object(OBJ_STRINGMACHINE)].func = string_machine;
 
-    obj_index[real_object(11132)].func = teleport_daerimsa_tower;
+    obj_index[real_object(OBJ_UNKNOWNSEED)].func = magicseed;
+    obj_index[real_object(OBJ_TOTEM)].func = totem;
 
-    obj_index[real_object(7999)].func = slot_machine;
-    obj_index[real_object(8000)].func = string_machine;
-    obj_index[real_object(11134)].func = saint_water;
+    obj_index[real_object(DRS_SCROLL)].func = teleport_daerimsa_tower;
+    obj_index[real_object(DRS_SAINT_WATER)].func = saint_water;
 
     /* GoodBadIsland */
-    obj_index[real_object(GBISLAND_MAGIC_PAPER)].func = gbisland_magic_paper;
-    obj_index[real_object(GBISLAND_SEED_EVIL_POWER)].func = gbisland_seed_evil_power;
+    obj_index[real_object(GBI_MAGIC_PAPER)].func = gbisland_magic_paper;
+    obj_index[real_object(GBI_SEED_EVIL_POWER)].func = gbisland_seed_evil_power;
 }
 
 /* assign special procedures to rooms */
@@ -195,52 +196,74 @@ void assign_rooms(void)
     /* GoodBadIsland */
     extern int gbisland_sea(struct char_data *ch, int cmd, char *arg);
 
-    world[real_room(3030)].funct = dump;
-    world[real_room(3002)].funct = bank;
+    world[real_room(ROOM_LIMBO)].funct = safe_house;
+    world[real_room(MID_PORTAL)].funct = safe_house;
+    world[real_room(ROOM_BOARD)].funct = safe_house;
+    world[real_room(ROOM_RECEPTION)].funct = safe_house;
 
-    /* guild entry */
-    world[real_room(ROOM_GUILD_POLICE)].funct = guild_entry;
-    world[real_room(ROOM_GUILD_OUTLAW)].funct = guild_entry;
-    world[real_room(ROOM_GUILD_ASSASSIN)].funct = guild_entry;
+    /* quest room */
+    world[real_room(ROOM_QUEST)].funct = quest_room;
 
-    /* taxi */
-    world[real_room(3014)].funct = taxi;
-    world[real_room(3502)].funct = taxi;
-    /* locker room */
-    world[real_room(ROOM_GUILD_POLICE_LOCKER)].funct = locker_room;
-    world[real_room(ROOM_GUILD_OUTLAW_LOCKER)].funct = locker_room;
-    world[real_room(ROOM_GUILD_ASSASSIN_LOCKER)].funct = locker_room;
-    world[real_room(ROOM_LOCKER)].funct = locker_room;
-
-    /* guild practice yard */
-    world[real_room(ROOM_GUILD_POLICE_PRACTICE)].funct = guild_practice_yard;
-    world[real_room(ROOM_GUILD_OUTLAW_PRACTICE)].funct = guild_practice_yard;
-    world[real_room(ROOM_GUILD_ASSASSIN_PRACTICE)].funct = guild_practice_yard;
-
-    world[real_room(1453)].funct = level_gate;
-    world[real_room(9400)].funct = level_gate;
-
-/*
-   world[real_room(2535)].funct = level_gate;
-   world[real_room(3500)].funct = level_gate;
-   world[real_room(5200)].funct = level_gate;
-   world[real_room(6001)].funct = level_gate;
- */
-
-    world[real_room(3031)].funct = pet_shops;
+    world[real_room(ROOM_METAPHYSICIAN)].funct = metahospital;
     world[real_room(ROOM_REMORTAL)].funct = remortal;
     world[real_room(ROOM_HOSPITAL)].funct = hospital;
-    world[real_room(ROOM_METAPHYSICIAN)].funct = metahospital;
-    world[real_room(1)].funct = safe_house;
-    world[real_room(MID_TEMPLE)].funct = safe_house;
-    world[real_room(3008)].funct = safe_house;
+    world[real_room(ROOM_MID_PETSHOP)].funct = pet_shops;
+
+    world[real_room(WASTELAND_LABORATORY)].funct = portal;
+    world[real_room(NEVERLAND_CLOUD)].funct = neverland;
+    world[real_room(ROOM_MID_BANK)].funct = bank;
+    world[real_room(ROOM_MID_DUMP)].funct = dump;
+
+    /* taxi */
+    world[real_room(TAXI_START_MKTSQ)].funct = taxi;
+    world[real_room(TAXI_START_TP)].funct = taxi;
+
+    /* GoodBadIsland */
+    world[real_room(GBI_SEA)].funct = gbisland_sea;
+
+    world[real_room(LEVGATE_CLUBSAFARI)].funct = level_gate;
+    world[real_room(LEVGATE_ARENA)].funct = level_gate;
+
+/*
+   world[real_room(LEVGATE_TB8TH)].funct = level_gate;
+   world[real_room(LEVGATE_EASTCASTLE)].funct = level_gate;
+   world[real_room(LEVGATE_THALOS)].funct = level_gate;
+   world[real_room(LEVGATE_SHIRE)].funct = level_gate;
+ */
+   // NOTE: unused levelgate 
+   // world[real_room(LEVGATE_MAGETOWER)].funct = level_gate;
+
+    /* guild entry */
+    world[real_room(GUILD_POLICE_GATE)].funct = guild_entry;
+    world[real_room(GUILD_POLICE_PRACTICE)].funct = guild_practice_yard;
+    world[real_room(GUILD_POLICE_LOCKER)].funct = locker_room;
+    /* JAIL ROOM */
+    world[real_room(ROOM_POLICE_JAIL)].funct = jail_room;
+
+    world[real_room(GUILD_OUTLAW_GATE)].funct = guild_entry;
+    world[real_room(GUILD_OUTLAW_PRACTICE)].funct = guild_practice_yard;
+    world[real_room(GUILD_OUTLAW_LOCKER)].funct = locker_room;
+
+    world[real_room(GUILD_ASSASSIN_GATE)].funct = guild_entry;
+    world[real_room(GUILD_ASSASSIN_PRACTICE)].funct = guild_practice_yard;
+    world[real_room(GUILD_ASSASSIN_LOCKER)].funct = locker_room;
+
+    /* locker room */
+    world[real_room(ROOM_MID_LOCKER)].funct = locker_room;
+
     /* NOTE: jail for banished PC is now re-modeled as jail_room() */
     /* world[real_room(6999)].funct = safe_house; */
-    world[real_room(JAIL_ROOM)].funct = jail_room;
-    world[real_room(3070)].funct = safe_house;
-    world[real_room(2158)].funct = portal;
-    world[real_room(2707)].funct = neverland;
+    world[real_room(ROOM_JAIL)].funct = jail_room;
 
+    int RC_elecfield[] = {
+	125, 135, 138, 148, 116, 117, 126, 127, 128, 129,
+	136, 140, 139, 149, 150, 151, 152, 162, -1
+    };
+
+    for ( int ii = 0; RC_elecfield[ii] > 0 ; ii++)
+	world[real_room(ROBOCITY_BASE + RC_elecfield[ii])].funct = electric_shock;
+	
+    /*
     world[real_room(15125)].funct = electric_shock;
     world[real_room(15135)].funct = electric_shock;
     world[real_room(15138)].funct = electric_shock;
@@ -259,15 +282,7 @@ void assign_rooms(void)
     world[real_room(15151)].funct = electric_shock;
     world[real_room(15152)].funct = electric_shock;
     world[real_room(15162)].funct = electric_shock;
-
-    /* JAIL ROOM */
-    world[real_room(ROOM_POLICE_JAIL)].funct = jail_room;
-
-    /* quest room */
-    world[real_room(ROOM_QUEST)].funct = quest_room;
-
-    /* GoodBadIsland */
-    world[real_room(GBISLAND_SEA)].funct = gbisland_sea;
+    */
 }
 /* ================================================================ */
 /* 
@@ -287,7 +302,7 @@ struct {
 
 int topQM;
 
-int level_quest[45] =
+int level_quest[LEVEL_SIZE] =
 {
     0,
     0, 0, 0, 0, 0,
@@ -307,56 +322,56 @@ static struct {
     char *name;
 } zone_data[] = {
 
-    { 99,	"the LIMBO" },
-    { 299,	"the East Castle" },
-    { 1399,	"the Mel's Dog-House" },
-    { 1499,	"the Houses" },
-    { 1599,	"Dirk's Castle" },
-    { 1799,	"SHIRE" },
-    { 1899,	"Village of Midgaard" },
-    { 1999,	"The Lands" },
-    { 2199,	"The Wasteland" },
-    { 2290,	"Dragon Tower" },
-    { 2399,	"Muncie" },
-    { 2699,	"The Corporation" },
-    { 2799,	"The NeverLand" },
-    { 2999,	"The Keep Of MahnTor" },
-    { 3099,	"Northern Midgaard MainCity" },
-    { 3199,	"Southern Part Of Midgaard" },
-    { 3299,	"River Of Midgaard" },
-    { 3499,	"Graveyard" },
-    { 4199,	"Moria" },
-    { 4330,	"The Wamphyri Aerie" },
-    { 5099,	"The Great Eastern Desert" },
-    { 5199,	"Drow City" },
-    { 5299,	"The City Of Thalos" },
-    { 6099,	"HAON DOR LIGHT" },
-    { 6499,	"HAON DOR DARK" },
-    { 6999,	"The Dwarven Kingdom" },
-    { 7099,	"SEWER" },
-    { 7199,	"Second SEWER" },
-    { 7399,	"SEWER MAZE" },
-    { 7499,	"The Tunnels" },
-    { 7999,	"Redfernes Residence" },
-    { 9099,	"Arachnos" },
-    { 9499,	"Arena" },
-    { 9699,	"Death Kingdom" },
-    { 9771,	"Galaxy" },
-    { 9851,	"The Death Star" },
-    { 11299,	"Dae Rim Sa" },
-    // Added zones
-    { 13399,	"Utility Zone" },
-    { 13699,	"Easy zone" },
-    { 13798,	"Mount Olympus" },
-    { 13899,	"Process' Castle" },
-    { 15299,	"Robot City" },
     /* NOTE: zone/mob renumbered */
-    { 15899,	"Kingdom Of Chok" },
-    { 16199,	"Kingdom Of Wee" },
-    { 17099,	"O Kingdom" },
-    { 18199,	"Moo Dang" },
-    { 19199,	"KAIST" },
-    { 23399,	"Good-Bad-Island" },
+    { 2999,	"the LIMBO" },
+    { 3199,	"Northern Midgaard MainCity" },
+    { 3299,	"Slum of Midgaard" },
+    { 3399,	"River Of Midgaard" },
+    { 3599,	"Southern Part Of Midgaard" },
+    { 3899,	"Housing" },
+    { 11299,	"Graveyard" },
+    { 11399,	"SEWER" },
+    { 11499,	"Second SEWER" },
+    { 11699,	"SEWER MAZE" },
+    { 11799,	"The Tunnels" },
+    { 11899,	"Muncie" },
+    { 11999,	"Redfernes Residence" },
+    { 12199,	"Arena" },
+    { 12299,	"The Wasteland" },
+    { 12399,	"Mount Olympus" },
+    { 12499,	"The Great Eastern Desert" },
+    { 12699,	"The Wamphyri Aerie" },
+    { 12799,	"Drow City" },
+    { 12899,	"The City Of Thalos" },
+    { 14199,	"the East Castle" },
+    { 14299,	"Dirk's Castle" },
+    { 14499,	"Moria" },
+    { 14599,	"Dragon Tower" },
+    { 14699,	"The Dwarven Kingdom" },
+    { 14799,	"The Corporation" },
+    { 15199,	"SHIRE" },
+    { 15299,	"Western Lands" },
+    { 15399,	"HAON DOR LIGHT" },
+    { 15499,	"HAON DOR DARK" },
+    { 15599,	"Arachnos" },
+    { 15699,	"Galaxy" },
+    { 15799,	"The Death Star" },
+    { 15899,	"The Keep Of MahnTor" },
+    { 16199,	"Dae Rim Sa" },
+    { 16299,	"Good-Bad-Island" },
+    { 16399,	"Kingdom Of Chok" },
+    { 16599,	"Kingdom Of Wee" },
+    { 16699,	"O Kingdom" },
+    { 16899,	"Death Kingdom" },
+    { 17399,	"Robot City" },
+    { 17599,	"KAIST" },
+    { 17799,	"Moo Dang" },
+    { 18199,	"Process' Castle" },
+    { 18299,	"Easy zone" },
+    // { 1499,	"the Houses" },
+    // { 1899,	"Village of Midgaard" },
+    // { 1399,	"the Mel's Dog-House" },
+    // { 2799,	"The NeverLand" },
     { -1,	NULL }
 };
 

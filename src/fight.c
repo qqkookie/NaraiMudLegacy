@@ -359,7 +359,7 @@ void die(struct char_data *ch, int level, struct char_data *who)
 
     /* NOTE: Trans dead soul (not corpse) to MID */
     /* NOTE: You will return to MID even after disconnecting and re-enter */
-    ch->in_room =  real_room(MID_TEMPLE);
+    ch->in_room =  real_room(MID_PORTAL);
     /* NOTE: New save_char() can replace save_char_nocon() */
     /* For coin copy bug , fixed by dsshin */
     wipe_stash(GET_NAME(ch));

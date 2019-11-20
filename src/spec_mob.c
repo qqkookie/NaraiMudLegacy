@@ -76,7 +76,7 @@ int perhaps(struct char_data *ch, int cmd, char *arg)
 	return 0;
     }
     if (perhaps == NULL && cmd == 0 && ch != NULL
-	&& mob_index[ch->nr].virtual == 1000 ) 
+	&& mob_index[ch->nr].virtual == MOB_MID_HELPER ) 
 	perhaps  = ch;
 #endif
 
@@ -257,17 +257,17 @@ int Quest_bombard(struct char_data *ch, int cmd, char *arg)
 /* bombard room is 3035 and other room is 3094 */
 /* if ch->in_room == real_room(3035)  .... */
 
-    if (ch->in_room == real_room(3035))
-	newnum = 3027;
-    else if (ch->in_room == real_room(3094))
-	newnum = 2702;
+    if (ch->in_room == real_room(ROOM_MID_BOMBARD))
+	newnum = OBJ_SWORD_BOMBARD;
+    else if (ch->in_room == real_room(ROOM_MID_STORAGE))
+	newnum = OBJ_BOMBARD_MINOR;
     else
-	newnum = 3027;
+	newnum = OBJ_SWORD_BOMBARD;
 
     if (cmd)
 	return (FALSE);
     for (list = ch->carrying; list; list = list->next_content) {
-	if (GET_OBJ_VIRTUAL(list) == 3025)
+	if (GET_OBJ_VIRTUAL(list) == OBJ_SWORD_PARTICLE)
 	    maxnum++;
     }
     if (maxnum >= 7) {
@@ -388,7 +388,7 @@ int deathcure(struct char_data *ch, int cmd, char *arg)
     if (GET_POS(ch) == POS_FIGHTING)
 	return (TRUE);
     if (vict->equipment[WEAR_ABOUTLEGS]) {
-	if (GET_OBJ_VIRTUAL(vict->equipment[WEAR_ABOUTLEGS])== 1317) {
+	if (GET_OBJ_VIRTUAL(vict->equipment[WEAR_ABOUTLEGS])== OBJ_ANTI_DEATHCURE) {
 	    /* ANTI deathcure */
 	    act("$n tries to do something to you, but failed miserably by ANTI deathcure."
 		,1, ch, 0, 0, TO_ROOM);
@@ -507,27 +507,27 @@ int super_deathcure(struct char_data *ch, int cmd, char *arg)
 	    return (0);
 	switch (h) {
 	case 0:
-	    ran_num = 5107;
-	    break;	/* mother */
+	    ran_num = MOB_SDC_HELPER1;
+	    break;	/* Drow 2nd mother */
 	case 1:
-	    ran_num = 5010;
+	    ran_num = MOB_SDC_HELPER2;
 	    break;	/* dracolich */
 	case 2:
-	    ran_num = 5004;
-	    break;	/* worm */
+	    ran_num = MOB_SDC_HELPER3;
+	    break;	/* giant purple worm */
 	case 3:
-	    ran_num = 2109;
+	    ran_num = MOB_SDC_HELPER4;
 	    break;	/* medusa third gorgon */
 	case 4:
-	    ran_num = 2118;
+	    ran_num = MOB_SDC_HELPER5;
 	    break;	/* hecate */
 	case 5:
 	case 6:
-	    ran_num = 15107;
+	    ran_num = MOB_SDC_HELPER6;
 	    break;	/* semi robot : cyb */
 	case 7:
 	case 8:
-	    ran_num = MOB_WEE_HEAD_SOLDIER;
+	    ran_num = MOB_SDC_HELPER7;
 	    break;	/* head soldier wee : cyb */
 	default:
 	    return (1);

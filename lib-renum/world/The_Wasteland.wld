@@ -1,0 +1,1367 @@
+#12200
+The Landing~
+  You are on a weather-beaten dock.  It appears ready to collapse.
+Evidently nobody has been around to take care of things.
+~
+122 4 2
+D0
+~
+~
+0 -1 12201
+D2
+~
+~
+0 -1 3322
+S
+#12201
+An Old Path~
+  You are on a north-south path.
+~
+122 0 4
+D0
+~
+~
+0 -1 12202
+D2
+~
+~
+0 -1 12200
+S
+#12202
+An Old Path~
+  You are on a north-south path.
+~
+122 0 4
+D0
+~
+~
+0 -1 12203
+D2
+~
+~
+0 -1 12201
+S
+#12203
+An Old Path~
+  You are on a north-south path in a very desolate area.
+~
+122 0 4
+D0
+~
+~
+0 -1 12204
+D2
+~
+~
+0 -1 12202
+S
+#12204
+An Old Path~
+  You are on a north-south path in an extremely barren part of the world.
+~
+122 4 4
+D0
+~
+~
+0 -1 12205
+D2
+~
+~
+0 -1 12203
+S
+#12205
+The Wasteland~
+  You are on a dry, barren wasteland.  There is little evidence of life
+here.  The ground is littered with bones, sticks, rocks, and other debris.
+Further north of here it looks even worse.  There is a SIGN here.
+~
+122 0 4
+D0
+~
+~
+0 -1 12210
+D2
+~
+~
+0 -1 12204
+E
+sign~
+The sign says:
+
+  BEWARE.  The Wasteland is a Dangerous Area.  It is controlled
+  by gangs of marauders and packs of hyenas.  Enter at your own
+  risk.  Nearly everything here is aggressive.  There is more
+  here than meets the eye.
+
+~
+S
+#12210
+The Wasteland~
+  You are in a bleak, desolate wasteland.
+~
+122 0 4
+D1
+~
+~
+0 -1 12211
+D2
+~
+~
+0 -1 12205
+D3
+~
+~
+0 -1 12214
+S
+#12211
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12218
+D1
+~
+~
+0 -1 12212
+D3
+~
+~
+0 -1 12210
+S
+#12212
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12219
+D1
+~
+~
+0 -1 12217
+D3
+~
+~
+0 -1 12211
+S
+#12213
+The Wasteland~
+  You are on a bleak, desolate wasteland.  Barely covered by the dirt are
+the outlines of an old well.
+~
+122 0 4
+D0
+~
+~
+0 -1 12222
+D1
+~
+~
+0 -1 12218
+D3
+~
+~
+0 -1 12216
+D5
+The cover is heavy, but can be moved.
+~
+cover~
+1 0 12241
+S
+#12214
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12216
+D1
+~
+~
+0 -1 12210
+D3
+~
+~
+0 -1 12215
+S
+#12215
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12217
+D1
+~
+~
+0 -1 12214
+D3
+~
+~
+0 -1 12219
+S
+#12216
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12221
+D1
+~
+~
+0 -1 12213
+D2
+~
+~
+0 -1 12214
+D3
+~
+~
+0 -1 12217
+S
+#12217
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12220
+D1
+~
+~
+0 -1 12216
+D2
+~
+~
+0 -1 12215
+D3
+~
+~
+0 -1 12212
+S
+#12218
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12223
+D1
+~
+~
+0 -1 12219
+D2
+~
+~
+0 -1 12211
+D3
+~
+~
+0 -1 12213
+S
+#12219
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12224
+D1
+~
+~
+0 -1 12215
+D2
+~
+~
+0 -1 12212
+D3
+~
+~
+0 -1 12218
+S
+#12220
+The Wasteland~
+  You are on a bleak, desolate wasteland.  To the west, a stone structure
+appears to be intact.
+~
+122 0 4
+D0
+~
+~
+0 -1 12231
+D1
+~
+~
+0 -1 12221
+D2
+~
+~
+0 -1 12217
+D3
+~
+door~
+1 0 12240
+S
+#12221
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12225
+D1
+~
+~
+0 -1 12222
+D2
+~
+~
+0 -1 12216
+D3
+~
+~
+0 -1 12220
+S
+#12222
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12226
+D1
+~
+~
+0 -1 12223
+D2
+~
+~
+0 -1 12213
+D3
+~
+~
+0 -1 12221
+S
+#12223
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12227
+D1
+~
+~
+0 -1 12224
+D2
+~
+~
+0 -1 12218
+D3
+~
+~
+0 -1 12222
+S
+#12224
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12232
+D2
+~
+~
+0 -1 12219
+D3
+~
+~
+0 -1 12223
+S
+#12225
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12228
+D1
+~
+~
+0 -1 12226
+D2
+~
+~
+0 -1 12221
+D3
+~
+~
+0 -1 12231
+S
+#12226
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D1
+~
+~
+0 -1 12227
+D2
+~
+~
+0 -1 12222
+D3
+~
+~
+0 -1 12225
+S
+#12227
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12229
+D1
+~
+~
+0 -1 12232
+D2
+~
+~
+0 -1 12223
+D3
+~
+~
+0 -1 12226
+S
+#12228
+The Wasteland~
+  You are on a bleak, desolate wasteland.  There is a building to the
+north.  To each side of the door is a plain Doric column.  You might
+want to think twice about entering.
+~
+122 0 4
+D0
+~
+door~
+1 0 12245
+D1
+~
+~
+0 -1 12229
+D3
+~
+~
+0 -1 12230
+S
+#12229
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12233
+D1
+~
+~
+0 -1 12234
+D2
+~
+~
+0 -1 12227
+D3
+~
+~
+0 -1 12228
+S
+#12230
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12234
+D1
+~
+~
+0 -1 12228
+D2
+~
+~
+0 -1 12225
+D3
+~
+~
+0 -1 12233
+D5
+~
+plate~
+1 0 12265
+S
+#12231
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12233
+D1
+~
+~
+0 -1 12225
+D2
+~
+~
+0 -1 12220
+D3
+~
+~
+0 -1 12234
+S
+#12232
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12234
+D1
+~
+~
+0 -1 12233
+D2
+~
+~
+0 -1 12224
+D3
+~
+~
+0 -1 12227
+S
+#12233
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12229
+D1
+~
+~
+0 -1 12230
+D2
+~
+~
+0 -1 12231
+D3
+~
+~
+0 -1 12232
+S
+#12234
+The Wasteland~
+  You are on a bleak, desolate wasteland.
+~
+122 0 4
+D0
+~
+~
+0 -1 12230
+D1
+~
+~
+0 -1 12231
+D2
+~
+~
+0 -1 12232
+D3
+~
+~
+0 -1 12229
+S
+#12235
+A Cavern~
+  You are in an underground cavern that extends west from here.  There
+is barely enough room to stand up straight.
+~
+122 9 3
+D4
+~
+grate~
+1 0 12240
+D3
+~
+~
+0 -1 12236
+S
+#12236
+A Cavern~
+  You are in an underground cavern.
+~
+122 9 3
+D1
+~
+~
+0 -1 12235
+D3
+~
+~
+0 -1 12237
+S
+#12237
+A Cavern~
+  You are in an underground cavern.
+~
+122 9 3
+D0
+~
+~
+0 -1 12238
+D1
+~
+~
+0 -1 12236
+D2
+~
+~
+0 -1 12239
+S
+#12238
+A Cavern~
+  You are in an underground cavern.
+~
+122 9 3
+D0
+~
+~
+0 -1 12239
+D2
+~
+~
+0 -1 12237
+S
+#12239
+A Cavern~
+  You are in an underground cavern.
+~
+122 4105 3
+D0
+~
+~
+0 -1 12237
+D2
+~
+~
+0 -1 12238
+S
+#12240
+A Stone Shelter~
+  You are inside a stone shelter.  It may not protect you against the
+elements, but it should keep your enemies out.
+~
+122 12 0
+D1
+~
+door~
+1 0 12220
+D5
+~
+grate~
+1 0 12235
+S
+#12241
+On A Ledge In A Dry Well~
+  You are halfway down (or is it halfway up?) an old dry well.  The
+ledge here is big enough to hold several people.  There are a few
+greek letters carved in the stone.
+~
+122 1 0
+D4
+~
+cover~
+1 0 12213
+D5
+~
+~
+0 -1 12242
+E
+letters~
+You see: chi alpha delta epsilon sigma ..
+~
+S
+#12242
+At The Bottom~
+  You are at the bottom of an old dry well.
+~
+122 4097 0
+D4
+~
+~
+0 -1 12241
+S
+#12245
+In the Main Hall~
+   You are in the main hall of a large building.  There is a stairway
+leading down.  To the north you hear a dissonant screeching.   You feel a
+chill.
+~
+122 12 0
+D0
+~
+~
+0 -1 12249
+D2
+~
+door~
+1 0 12228
+D4
+~
+~
+0 -1 12280
+D5
+~
+~
+0 -1 12246
+S
+#12246
+The Tunnel~
+   You are at the northern extremity of a large north-south tunnel.
+~
+122 8 0
+D1
+~
+~
+0 -1 12270
+D2
+~
+~
+0 -1 12247
+D3
+~
+~
+0 -1 12261
+D4
+~
+~
+0 -1 12245
+S
+#12247
+The Tunnel~
+   You are in an extremely large north-south tunnel.
+There is a small opening to the east.
+~
+122 8 0
+D0
+~
+~
+0 -1 12246
+D1
+~
+~
+0 -1 12255
+D2
+~
+~
+0 -1 12248
+S
+#12248
+The Tunnel~
+   You are at the southern end of a huge north-south tunnel.
+~
+122 8 0
+D0
+~
+~
+0 -1 12247
+D2
+~
+door~
+1 0 12250
+D3
+~
+~
+0 -1 12295
+S
+#12249
+The Amphitheater~
+   You are in a large amphitheatre.  It might have been used for
+performances of some kind, a long time ago.
+~
+122 8 0
+D2
+~
+~
+0 -1 12245
+S
+#12250
+Where the Gorgons Dwell~
+   You are in a large, cold, damp room.  This is the room where the
+three Gorgons are usually found.
+~
+122 9 0
+D0
+~
+door~
+1 0 12248
+S
+#12251
+The Bath~
+   You are in the bath of Proserpina.  The floor and walls are made of
+marble.
+~
+122 4104 0
+D2
+~
+curtain~
+1 0 12260
+S
+#12255
+A Peculiar Chamber~
+   You are in a chamber that is lit by an amber light.  There is a cage
+at the north end of the room.
+~
+122 8 0
+D0
+~
+cage~
+1 0 12256
+D1
+~
+~
+0 -1 12257
+D3
+~
+~
+0 -1 12247
+S
+#12256
+The Cage~
+   You are in a very sturdy cage.  The cage was obviously built to
+contain a powerful beast.
+~
+122 6152 0
+D2
+~
+cage~
+1 0 12255
+S
+#12257
+Yet Another Hallway~
+   You're in yet another hallway.
+~
+122 8 0
+D2
+~
+~
+0 -1 12258
+D3
+~
+~
+0 -1 12255
+S
+#12258
+The Large Laboratory~
+   You're in a large laboratory.  The lab appears to have been the
+workplace of a primitive practioner of the chemical arts.  You sense
+that this place is a portal to other realms.  A strange looking
+curtain is to the south.
+~
+122 8 0
+D0
+~
+~
+0 -1 12257
+D2
+You see a shimmering wall of energized particles.
+~
+curtain~
+0 -1 -1
+S
+#12259
+Ante-chamber~
+   This is the waiting room that might have once been used by
+Proserpina, queen of the underworld, wife of Hades.
+~
+122 8 0
+D2
+~
+~
+0 -1 12263
+D3
+~
+door~
+1 0 12260
+S
+#12260
+The Parlor of Proserpina~
+   This room was the waiting room of mighty Proserpina, the wife of
+Hades, and the Queen of the Underworld.
+~
+122 8 0
+D0
+~
+curtain~
+1 0 12251
+D1
+~
+door~
+1 0 12259
+S
+#12261
+Another Large Hallway~
+   This is another large hallway.
+~
+122 8 0
+D1
+~
+~
+0 -1 12249
+D3
+~
+~
+0 -1 12262
+S
+#12262
+Another Large Hallway~
+   This is another large hallway.
+~
+122 8 0
+D1
+~
+~
+0 -1 12261
+D3
+~
+~
+0 -1 12263
+S
+#12263
+Another Large Hallway~
+   This is another large hallway.
+~
+122 8 0
+D0
+~
+~
+0 -1 12259
+D1
+~
+~
+0 -1 12262
+D3
+~
+~
+0 -1 12264
+S
+#12264
+The End of Hallway~
+   You are at the western end of a large hallway.
+~
+122 8 0
+D1
+~
+~
+0 -1 12263
+D2
+~
+door~
+1 0 12265
+S
+#12265
+A Small Chamber~
+   You are in a very small chamber.
+~
+122 14 0
+D0
+~
+door~
+1 0 12264
+D4
+There appears to be a moveable plate covering a hole in the ceiling.
+~
+plate~
+1 0 12230
+S
+#12270
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+122 8 0
+D1
+~
+~
+0 -1 12271
+D3
+~
+~
+0 -1 12246
+S
+#12271
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+122 8 0
+D1
+~
+~
+0 -1 12272
+D3
+~
+~
+0 -1 12270
+S
+#12272
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+122 8 0
+D1
+~
+~
+0 -1 12273
+D3
+~
+~
+0 -1 12271
+S
+#12273
+The East Wing~
+   You are in the main corridor of the east wing.
+~
+122 8 0
+D1
+~
+~
+0 -1 12272
+D2
+~
+door~
+0 -1 12275
+S
+#12275
+Sanctuary of the Lesser Gods~
+   You are in the room used by the lesser gods of the underworld,
+Aeacus, Radamanthus, and Minos.  You can almost hear them plotting
+against Hades...
+~
+122 8 0
+D0
+~
+~
+0 -1 12273
+D2
+~
+door~
+1 0 12276
+S
+#12276
+The Library~
+   You are in the library.  There are no books here.  Perhaps the Lesser Gods
+who sit in judgement on poor souls are here?
+~
+122 8 0
+D0
+~
+door~
+1 0 12275
+S
+#12280
+On a Winding Stairway~
+   You are near the bottom of a long, winding stairway.
+~
+122 8 5
+D4
+~
+~
+0 -1 12281
+D5
+~
+~
+0 -1 12245
+S
+#12281
+On a Winding Stairway~
+   You are very near the bottom of a long, winding stairway.
+~
+122 8 5
+D4
+~
+~
+0 -1 12282
+D5
+~
+~
+0 -1 12280
+S
+#12282
+On a Winding Stairway~
+   You are near the bottom of a long, winding stairway.
+~
+122 8 5
+D4
+~
+~
+0 -1 12283
+D5
+~
+~
+0 -1 12281
+S
+#12283
+On a Winding Stairway~
+   You are on a long, winding stairway.  The stairway gets narrower
+as you approach the top.
+~
+122 8 5
+D4
+~
+~
+0 -1 12284
+D5
+~
+~
+0 -1 12282
+S
+#12284
+On a Winding Stairway~
+   You are near the top of a long, narrowing, winding stairway.
+~
+122 8 5
+D4
+~
+~
+0 -1 12285
+D5
+~
+~
+0 -1 12283
+S
+#12285
+On a Winding Stairway~
+   You are very near the top of a long, winding stairway.
+~
+122 8 5
+D4
+~
+~
+0 -1 12286
+D5
+~
+~
+0 -1 12284
+S
+#12286
+On a Winding Stairway~
+   You are very very near the top of a long, winding stairway.  The
+stairway is very narrow here.
+~
+122 8 5
+D4
+~
+~
+0 -1 12287
+D5
+~
+~
+0 -1 12285
+S
+#12287
+On a Winding Stairway~
+   You are at the top of a long, winding stairway.  You see a door.
+~
+122 8 5
+D0
+~
+door~
+1 0 12288
+D4
+~
+olympus~
+4 12329 12310
+D5
+~
+~
+0 -1 12286
+S
+#12288
+On the Ramparts~
+   You are out in the open, high above the surrounding wasteland, which
+stretches for as for as the eye can see.  The wind is very strong up here.
+Perhaps not all of the howling you hear is due to the wind?
+~
+122 0 4
+D2
+~
+door~
+1 0 12287
+S
+#12289
+The Throne~
+   You are at the massive throne of Hades.  You might not have much
+time to read this.
+~
+122 0 4
+D2
+~
+~
+0 -1 12290
+S
+#12290
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+122 0 2
+D0
+~
+~
+0 -1 12289
+D1
+~
+~
+0 -1 12291
+D2
+~
+~
+0 -1 12293
+S
+#12291
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+122 0 2
+D0
+~
+~
+0 -1 12294
+D2
+~
+~
+0 -1 12292
+D3
+~
+~
+0 -1 12290
+S
+#12292
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+122 0 2
+D0
+~
+~
+0 -1 12291
+D3
+~
+~
+0 -1 12293
+S
+#12293
+An Underground Field~
+   You are in an expansive underground field.  There is a depression
+running through the field that might once have been a river.
+~
+122 0 2
+D0
+~
+~
+0 -1 12290
+D1
+~
+~
+0 -1 12292
+D5
+You look into what seems to be a deep pit.
+~
+grate~
+4 12252 12296
+S
+#12294
+A Wider Passage~
+   You are in another one of those passages.
+~
+122 0 3
+D0
+~
+door~
+1 0 12295
+D2
+~
+~
+0 -1 12291
+S
+#12295
+An Alcove~
+   You have stepped into a small alcove, west of the large north-south
+tunnel.
+~
+122 0 3
+D1
+~
+~
+0 -1 12248
+D2
+~
+door~
+1 0 12294
+S
+#12296
+The Pit~
+   You are in a deep dark pit.  This place seems to be inhabited by a
+disgusting creature of some sort.
+~
+122 4105 3
+D4
+It is a long way up, but you can make it.
+~
+grate~
+2 12252 12293
+S
+#99999
+$~

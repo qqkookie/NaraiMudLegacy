@@ -27,6 +27,7 @@
 bin/
 src/[Oo]bj/
 [Tt]mp/
+.vscode/
 
 src/.depend
 src/tags
@@ -34,6 +35,7 @@ src/tags
 # dir/files for mud operation
 
 users/
+renum*/
 
 lib/boards/
 lib/mboxes/
@@ -45,5 +47,6 @@ lib/players*
 lib/stash*
 run-mud
 log-*
+*.output
 
 # end of .gitignore

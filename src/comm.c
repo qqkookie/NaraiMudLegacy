@@ -39,6 +39,7 @@
 #include "global.h"
 #include "comm.h"
 #include "gamedb.h"
+#include "etc.h"
 
 #ifndef DFLT_PORT
 #define DFLT_PORT 4001	/* default port */
@@ -269,7 +270,7 @@ void run_the_game(int port)
     no_echo_local(s); 
     game_loop(s);
     log("DOWN??????????SAVE ALL CHARS???????");
-    transall(3001);
+    transall(MID_PORTAL);
     saveallplayers();
     close_sockets(s);
     shutdown(s, 2);

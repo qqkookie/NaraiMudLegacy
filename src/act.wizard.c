@@ -1694,8 +1694,8 @@ OK:
     else {
 	SET_BIT(vict->specials.act, PLR_BANISHED);
 
-	/* NOTE: Use real_room() to find JAIL_ROOM */
-	if (real_room(JAIL_ROOM) < 0 ) {
+	/* NOTE: Use real_room() to find ROOM_JAIL */
+	if (real_room(ROOM_JAIL) < 0 ) {
 	    send_to_char("Death Room is gone?\n\r", ch);
 	    return;
 	}
@@ -1718,7 +1718,7 @@ OK:
 
 	act("$n disappears in a puff of smoke.", FALSE, vict, 0, 0, TO_ROOM);
 	char_from_room(vict);
-	char_to_room(vict, real_room(JAIL_ROOM));
+	char_to_room(vict, real_room(ROOM_JAIL));
 	act("$n appears with an ear-splitting bang.",
 	    FALSE, vict, 0, 0, TO_ROOM);
 	/* NOTE: See desolate scene of jail cell you are in. :)   */

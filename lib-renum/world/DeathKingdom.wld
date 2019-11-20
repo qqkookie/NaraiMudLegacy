@@ -1,0 +1,2024 @@
+#16710
+Ocean to kingdom~
+  you see very large ocean.  you can notice there is noise in west.
+~
+167 4106 1
+D3
+~
+~
+0 -1 16711
+S
+#16711
+Ocean to kingdom~
+  you see very large ocean.  you can notice there is noise in west.
+~
+167 4106 1
+D3
+~
+~
+0 -1 16712
+S
+#16712
+Ocean to kingdom~
+  you see very large ocean.  you gasped when you found there are many pirates in west.
+~
+167 4106 1
+D3
+~
+~
+0 -1 16713
+D1
+~
+~
+0 -1 16711
+S
+#16713
+Ocean~
+  There is very large ocean.  you feel thick whiskey smell. 
+ There are many pirates.  Be Careful.
+~
+167 4106 2
+D0
+~
+~
+0 -1 16731
+D1
+~
+~
+0 -1 16712
+D2
+~
+~
+0 -1 16714
+D3
+~
+~
+0 -1 16728
+S
+#16714
+Ocean~
+  There is very large ocean.  you feel thick whiskey smell. 
+ There are many pirates.  Be Careful.
+~
+167 4106 2
+D0
+~
+~
+0 -1 16713
+D2
+~
+~
+0 -1 16715
+D3
+~
+~
+0 -1 16726
+S
+#16715
+Small path to third castle~
+  There are many trees around you. this path is too small you to go through. 
+but you can. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16714
+D2
+~
+~
+0 -1 16716
+D3
+~
+~
+0 -1 3001
+S
+#16716
+Small path to third castle~
+  There are many trees around you. this path is too small you to go through. 
+but you can. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16715
+D2
+~
+~
+0 -1 16717
+S
+#16717
+Small path to third castle~
+  There are many trees around you. this path is too small you to go through. 
+but you can. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16716
+D3
+~
+~
+0 -1 16718
+S
+#16718
+Small path to third castle~
+  There are many trees around you. this path is too small you to go through. 
+but you can. 
+~
+167 4106 1
+D1
+~
+~
+0 -1 16717
+D3
+~
+~
+0 -1 16719
+S
+#16719
+Small path to third castle~
+  There are many trees around you. this path is too small you to go through. 
+but you can. 
+~
+167 4106 1
+D1
+~
+~
+0 -1 16718
+D3
+~
+~
+0 -1 16720
+S
+#16720
+Northeast small plaza~
+  There are many weapons and skulls. it seems that there are many fights.
+you can see blood in the ground. there are four people in this plaza.
+they are alike each other. they are four twins. Flee!!!
+you can see small door in west and gate in south.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16719
+D2
+~
+gate~
+2 16712 16721
+D3
+~
+door~
+2 16712 16725
+S
+#16721
+Southeast small plaza~
+  There are many weapons and skulls. it seems that there are many fights.
+you can see blood in the ground. there are four people in this plaza.
+they are alike each other. they are four twins. Flee!!!
+~
+167 4106 1
+D0
+~
+gate~
+2 16712 16720
+D3
+~
+~
+0 -1 16722
+S
+#16722
+Gate of third castle~
+  You can see Great gate in south.
+there are many weapons and skulls. it seems that there are many fights.
+you can see blood in the ground. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16725
+D1
+~
+~
+0 -1 16721
+D2
+~
+brop~
+2 16713 16737
+D3
+~
+~
+0 -1 16723
+S
+#16723
+Southwest small plaza~
+  There are many weapons and skulls. it seems that there are many fights.
+you can see blood in the ground. there are four people in this plaza.
+they are alike each other. they are four twins. Flee!!!
+~
+167 4106 1
+D0
+~
+~
+0 -1 16724
+D1
+~
+~
+0 -1 16722
+S
+#16724
+Northwest small plaza~
+  There are many weapons and skulls. it seems that there are many fights.
+you can see blood in the ground. there are four people in this plaza.
+they are alike each other. they are four twins. Flee!!!
+~
+167 4106 1
+D1
+~
+~
+0 -1 16725
+D2
+~
+~
+0 -1 16723
+S
+#16725
+Shelter of Small plaza~
+  There are many weapons and skulls. it seems that there are many fights.
+you can see blood in the ground. you can see flashing light and hear ear
+splitting bonecrashing sound near. you feel here is safe room.
+~
+167 4110 1
+D0
+~
+~
+0 -1 16738
+D1
+~
+door~
+2 16712 16720
+D2
+~
+~
+0 -1 16722
+D3
+~
+~
+0 -1 16724
+S
+#16726
+Southern Ocean~
+  There is very large ocean.  you smell thick whiskey smell.
+There are many pirates.  Be Careful.
+~
+167 4106 2
+D0
+~
+~
+0 -1 16728
+D1
+~
+~
+0 -1 16714
+D3
+~
+~
+0 -1 16727
+S
+#16727
+Southwest Ocean~
+  There is very large ocean.  you smell thick whiskey smell.
+There are many pirates.  Be Careful.
+~
+167 4106 2
+D0
+~
+~
+0 -1 16730
+D1
+~
+~
+0 -1 16726
+S
+#16728
+Mid Ocean~
+  There is very large ocean.  you smell thick whiskey smell.
+There are many pirates.  Be Careful.
+~
+167 4106 2
+D0
+~
+~
+0 -1 16729
+D1
+~
+~
+0 -1 16713
+D2
+~
+~
+0 -1 16726
+D3
+~
+~
+0 -1 16730
+S
+#16729
+Northern Ocean~
+  There is very large ocean.  you smell thick whiskey smell.
+There are many pirates.  Be Careful.
+~
+167 4106 2
+D1
+~
+~
+0 -1 16731
+D2
+~
+~
+0 -1 16728
+S
+#16730
+Western Ocean~
+  You can see the large gate of DeathKingdom in west.
+there is beautiful see shore.  you smell thick whiskey smell.
+there are many pirates.  be careful.
+~
+167 4106 2
+D1
+~
+~
+0 -1 16728
+D2
+~
+~
+0 -1 16727
+D3
+~
+~
+0 -1 16742
+S
+#16731
+Northeast Ocean~
+  There is very large white sea shore.  you smell thick whiskey smell.
+There are many pirates.  Be Careful.
+~
+167 4106 2
+D2
+~
+~
+0 -1 16713
+D3
+~
+~
+0 -1 16729
+S
+#16732
+Broad path from fourth castle.~
+  It seems to be path to next castle. There are many Suras. they are ready to
+fight with anyone. many trees grow near broad path.
+~
+167 4106 2
+D2
+~
+~
+0 -1 16731
+S
+#16733
+Broad path from fourth castle.~
+  It seems to be path to next castle. There are many Suras. they are ready to
+fight with anyone. many trees grow near broad path.
+~
+167 4106 2
+D2
+~
+~
+0 -1 16732
+S
+#16734
+Broad path from fourth castle.~
+  It seems to be path to next castle. There are many Suras. they are ready to
+fight with anyone. many trees grow near broad path.
+~
+167 4106 2
+D2
+~
+~
+0 -1 16733
+S
+#16735
+Broad path from fourth castle.~
+  It seems to be path to next castle. There are many Suras. they are ready to
+fight with anyone. many trees grow near broad path.
+~
+167 4106 2
+D2
+~
+~
+0 -1 16734
+S
+#16736
+Great gate of fourth castle.~
+  There is Great gate in east. it makes you more small.  there is skillful
+Gatekeeper who seems to very powerful.  many corpses and blood is all over
+the ground broad path lies in south. It seems to be path to next castle. 
+~
+167 4106 2
+D1
+~
+gate~
+2 16714 16754
+D2
+~
+~
+0 -1 16735
+D3
+~
+~
+0 -1 16753
+S
+#16737
+Hall of Geron~
+You can see Geron and Barborer. Barborer shaves Geron with eager. Barborer
+seems to seek a tick when he can kill Geron. Barborer pocarisweats. 
+~
+167 4106 1
+D0
+~
+brop~
+2 16713 16722
+S
+#16738
+Short Way~
+  This way is very short.  this way links main stage and third castle. 
+you hear death cry around you.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16739
+D2
+~
+~
+0 -1 16725
+S
+#16739
+Short Way~
+  This way is very short.  this way links main stage and third castle.
+you hear death cry around you.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16740
+D2
+~
+~
+0 -1 16738
+S
+#16740
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16741
+D1
+~
+~
+0 -1 16765
+D2
+~
+~
+0 -1 16739
+D3
+~
+~
+0 -1 16755
+S
+#16741
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16743
+D1
+~
+gate~
+2 16711 16742
+D2
+~
+~
+0 -1 16740
+D3
+~
+~
+0 -1 16756
+S
+#16742
+Entrance of DeathKingdom~
+  There is ancient legend that a lonely fighter will come this kingdom. when
+he come there are peace and happiness. his name is Laow. Only he can defeat
+Gaiot and bring peace and freedom to inhabitant of this kingdom. where is
+Laow?.....  Are you Laow? If you are not Laow, return to your home.
+it is told that Gaiot is brother of Laow...
+Here is 4 najangs. Their names are Gaiot, Hyobik, Geron and Brop. 
+there is only death in this kingdom. why do you wanna go this kingdom?
+Path goes to west.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16730
+D3
+~
+gate~
+2 16711 16741
+S
+#16743
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16744
+D1
+~
+~
+0 -1 16767
+D2
+~
+~
+0 -1 16741
+D3
+~
+~
+0 -1 16757
+S
+#16744
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16745
+D1
+~
+~
+0 -1 16768
+D2
+~
+~
+0 -1 16743
+D3
+~
+~
+0 -1 16758
+S
+#16745
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16746
+D1
+~
+~
+0 -1 16769
+D2
+~
+~
+0 -1 16744
+D3
+~
+~
+0 -1 16759
+D4
+~
+~
+0 -1 3282
+S
+#16746
+Minor Plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16747
+D1
+~
+~
+0 -1 16749
+D2
+~
+~
+0 -1 16745
+S
+#16747
+Minor Plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16748
+D2
+~
+~
+0 -1 16746
+S
+#16748
+Minor Plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16751
+D2
+~
+~
+0 -1 16749
+D3
+~
+~
+0 -1 16747
+S
+#16749
+Minor Plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16748
+D1
+~
+~
+0 -1 16750
+D3
+~
+~
+0 -1 16746
+S
+#16750
+Minor Plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16751
+D3
+~
+~
+0 -1 16749
+S
+#16751
+Minor Plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16752
+D2
+~
+~
+0 -1 16750
+D3
+~
+~
+0 -1 16748
+S
+#16752
+Bend~
+  You can see very big castle in east.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16753
+D2
+~
+~
+0 -1 16751
+S
+#16753
+T-clossing~
+  There is big castle in east.  there is northern path in north.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16788
+D1
+~
+~
+0 -1 16736
+D3
+~
+~
+0 -1 16752
+S
+#16754
+Inside castle~
+  You are inside castle. you can see many horses and smith in this castle.
+you found stair to fourth najang upward.
+~
+167 4106 1
+D3
+~
+gate~
+2 16714 16736
+D4
+~
+~
+0 -1 16810
+S
+#16755
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken 
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16756
+D1
+~
+~
+0 -1 16740
+D2
+~
+~
+0 -1 16759
+D3
+~
+~
+0 -1 16764
+S
+#16756
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16757
+D1
+~
+~
+0 -1 16741
+D2
+~
+~
+0 -1 16755
+D3
+~
+~
+0 -1 16763
+S
+#16757
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16758
+D1
+~
+~
+0 -1 16743
+D2
+~
+~
+0 -1 16756
+D3
+~
+~
+0 -1 16762
+S
+#16758
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16759
+D1
+~
+~
+0 -1 16744
+D2
+~
+~
+0 -1 16757
+D3
+~
+~
+0 -1 16761
+S
+#16759
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16755
+D1
+~
+~
+0 -1 16745
+D2
+~
+~
+0 -1 16758
+D3
+~
+~
+0 -1 16760
+S
+#16760
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16770
+D1
+~
+~
+0 -1 16759
+D2
+~
+~
+0 -1 16761
+D3
+~
+~
+0 -1 16769
+S
+#16761
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16760
+D1
+~
+~
+0 -1 16758
+D2
+~
+~
+0 -1 16762
+D3
+~
+~
+0 -1 16768
+S
+#16762
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16761
+D1
+~
+~
+0 -1 16757
+D2
+~
+~
+0 -1 16763
+D3
+~
+~
+0 -1 16767
+S
+#16763
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16762
+D1
+~
+~
+0 -1 16756
+D2
+~
+~
+0 -1 16764
+D3
+~
+~
+0 -1 16766
+S
+#16764
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16763
+D1
+~
+~
+0 -1 16755
+D2
+~
+~
+0 -1 16760
+D3
+~
+~
+0 -1 16765
+S
+#16765
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16766
+D1
+~
+~
+0 -1 16764
+D2
+~
+~
+0 -1 16776
+D3
+~
+~
+0 -1 16740
+S
+#16766
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16767
+D1
+~
+~
+0 -1 16763
+D2
+~
+~
+0 -1 16765
+D3
+~
+~
+0 -1 16741
+S
+#16767
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16766
+D1
+~
+~
+0 -1 16762
+D2
+~
+~
+0 -1 16766
+D3
+~
+~
+0 -1 16743
+S
+#16768
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16769
+D1
+~
+~
+0 -1 16761
+D2
+~
+~
+0 -1 16767
+D3
+~
+~
+0 -1 16744
+S
+#16769
+Main Stage~
+  Here is very large stage.
+many Suras and Fighters train eagerly.  there are many corpses and broken
+weapons.  stage is red because of blood. there are too many suras.
+you are almost faint to death.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16765
+D1
+~
+~
+0 -1 16760
+D2
+~
+~
+0 -1 16768
+D3
+~
+~
+0 -1 16745
+S
+#16770
+Northern minor plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16771
+D2
+~
+~
+0 -1 16760
+D3
+~
+~
+0 -1 16775
+S
+#16771
+Northern minor plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16772
+D2
+~
+~
+0 -1 16770
+D3
+~
+~
+0 -1 16774
+S
+#16772
+Northern minor plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16771
+D3
+~
+~
+0 -1 16773
+S
+#16773
+Northern minor plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+you can see very big castle in west.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16772
+D2
+~
+~
+0 -1 16774
+D3
+~
+~
+0 -1 16795
+S
+#16774
+Northern minor plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16773
+D1
+~
+~
+0 -1 16771
+D2
+~
+~
+0 -1 16775
+S
+#16775
+Northern minor plaza~
+  This plaza is small. there are a few people in this plaza.  Sura candidates 
+train very hard.  you hear very big shout.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16774
+D1
+~
+~
+0 -1 16770
+S
+#16776
+Bend~
+  You can see a very large plaza in west.
+There are very many people in west. you think you had better not going to west.
+you feel much dangerous.  you wanna to recite recall. but you have something to
+do here.  Go through them.
+~
+167 4106 1
+D0
+~
+~
+0 -1 16765
+D3
+~
+~
+0 -1 16779
+S
+#16777
+SE Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras.  this plaza is filled with evil sal-ki.  you hardly endure that sal-ki. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16778
+D3
+~
+~
+0 -1 16780
+S
+#16778
+Eastern Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras.  this plaza is filled with evil sal-ki.  you hardly endure that sal-ki. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16779
+D2
+~
+~
+0 -1 16777
+D3
+~
+~
+0 -1 16781
+S
+#16779
+NE Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras.  this plaza is filled with evil sal-ki.  you hardly endure that sal-ki. 
+~
+167 4106 1
+D1
+~
+~
+0 -1 16776
+D2
+~
+~
+0 -1 16778
+D3
+~
+~
+0 -1 16782
+S
+#16780
+Southern Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras. this plaza is filled with evil sal-ki. you hardly endure that sal-ki. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16781
+D1
+~
+~
+0 -1 16777
+D2
+~
+~
+1 -1 16786
+D3
+~
+~
+0 -1 16785
+S
+#16781
+Mid Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras. this plaza is filled with evil sal-ki. you hardly endure that sal-ki. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16782
+D1
+~
+~
+0 -1 16778
+D2
+~
+~
+0 -1 16780
+D3
+~
+~
+0 -1 16784
+S
+#16782
+Northern Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras. this plaza is filled with evil sal-ki. you hardly endure that sal-ki. 
+~
+167 4106 1
+D1
+~
+~
+0 -1 16779
+D2
+~
+~
+0 -1 16781
+D3
+~
+~
+0 -1 16783
+S
+#16783
+NW Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras. this plaza is filled with evil sal-ki. you hardly endure that sal-ki. 
+you can see the Greatest castle in west.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16782
+D2
+~
+~
+0 -1 16784
+D3
+~
+~
+0 -1 16804
+S
+#16784
+Western Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras. this plaza is filled with evil sal-ki. you hardly endure that sal-ki. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16783
+D1
+~
+~
+0 -1 16781
+D2
+~
+~
+0 -1 16785
+S
+#16785
+SW Large plaza~
+  This plaza seems to special.
+this plaza is for first class suras. there are many women who serve first class
+suras. this plaza is filled with evil sal-ki. you hardly endure that sal-ki. 
+~
+167 4106 1
+D0
+~
+~
+0 -1 16784
+D1
+~
+~
+0 -1 16780
+D3
+~
+~
+0 -1 16787
+S
+#16786
+Losers nest~
+  This is poor nest for losers.
+there are many losers who lost some of his body. they are gloomy.
+~
+167 4106 1
+D0
+~
+~
+1 -1 16780
+S
+#16787
+Room of 1st Sura~
+  There are many bottles of whiskey which 1st Sura drinks. this room is full of
+dirty smell. Sura seems to sleep. but don't wake him. he will kill you.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16785
+S
+#16788
+Northern Road~
+  There are many swamps around road.  you feel there are Suras who hide in 
+Swamps.  this road is for second castle. don't die here. you can't get your 
+equip back.
+~
+167 4106 2
+D2
+~
+~
+0 -1 16753
+D3
+~
+~
+0 -1 16789
+S
+#16789
+Northern Road~
+  There are many swamps around road.  you feel there are Suras who hide in 
+Swamps.  this road is for second castle. don't die here. you can't get your 
+equip back.
+~
+167 4106 2
+D3
+~
+~
+0 -1 16790
+S
+#16790
+Northern Road~
+  There are many swamps around road.  you feel there are Suras who hide in 
+Swamps.  this road is for second castle. don't die here. you can't get your 
+equip back.
+~
+167 4106 2
+D3
+~
+~
+0 -1 16791
+S
+#16791
+Northern Road~
+  There are many swamps around road.  you feel there are Suras who hide in 
+Swamps.  this road is for second castle. don't die here. you can't get your 
+equip back.
+~
+167 4106 2
+D3
+~
+~
+0 -1 16792
+S
+#16792
+Northern Road~
+  There are many swamps around road.  you feel there are Suras who hide in 
+Swamps.  this road is for second castle. don't die here. you can't get your 
+equip back.
+~
+167 4106 2
+D3
+~
+~
+0 -1 16793
+S
+#16793
+Northern Road~
+  There are many swamps around road.  you feel there are Suras who hide in 
+Swamps.  this road is for second castle. don't die here. you can't get your 
+equip back.
+~
+167 4106 2
+D3
+~
+~
+0 -1 16794
+S
+#16794
+Northern Road~
+  There are many swamps around road.  you feel there are Suras who hide in 
+Swamps.  this road is for second castle. don't die here. you can't get your 
+equip back.
+~
+167 4106 2
+D2
+~
+~
+0 -1 16773
+D3
+~
+~
+0 -1 16807
+S
+#16795
+Great gate of second castle~
+  There is Great gate in west. you think you never open this gate.
+This gate is too big. there is tough Gatekeeper. watch out.
+~
+167 4106 1
+D1
+~
+~
+0 -1 16773
+D3
+~
+gate~
+2 16715 16796
+S
+#16796
+Inside of second castle~
+  You are standing inside castle. there are stair way to 2nd floor.
+you can notice that there are many people upstairs. Secret Western Road is lied
+in west. 
+~
+167 4106 1
+D1
+~
+gate~
+2 16715 16795
+D3
+~
+secret~
+1 16716 16797
+D4
+~
+geron~
+2 16716 16812
+S
+#16797
+Western Road~
+  There is very serious sand wind. this road is full of sand.
+skulls and broken weapons lie here. there must be wicked Suras.
+you can't return from now. fight to death.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16798
+S
+#16798
+Western Road~
+  There is very serious sand wind. this road is full of sand.
+skulls and broken weapons lie here. there must be wicked Suras.
+you can't return from now. fight to death.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16799
+S
+#16799
+Western Road~
+  There is very serious sand wind. this road is full of sand.
+skulls and broken weapons lie here. there must be wicked Suras.
+you can't return from now. fight to death.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16800
+S
+#16800
+Western Road~
+  There is very serious sand wind. this road is full of sand.
+skulls and broken weapons lie here. there must be wicked Suras.
+you can't return from now. fight to death.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16801
+S
+#16801
+Western Road~
+  There is very serious sand wind. this road is full of sand.
+skulls and broken weapons lie here. there must be wicked Suras.
+you can't return from now. fight to death.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16802
+S
+#16802
+Western Road~
+  There is very serious sand wind. this road is full of sand.
+skulls and broken weapons lie here. there must be wicked Suras.
+you can't return from now. fight to death.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16803
+S
+#16803
+Western Road~
+  There is very serious sand wind. this road is full of sand.
+skulls and broken weapons lie here. there must be wicked Suras.
+you can't return from now. fight to death.
+~
+167 4106 1
+D2
+~
+~
+0 -1 16804
+S
+#16804
+Last Junctions~
+  You can see the Greatest castle in west. Do decide your mind. 
+this is your last chance to live. you can't return if you enter this castle.
+Do what you wanna do........
+~
+167 4106 1
+D1
+~
+~
+0 -1 16783
+D3 
+~
+~
+0 -1 16805
+S
+#16805
+The Greatest gate~
+  There is Greatest gate in west.  Gate..Gate..Gate...
+it can be Gate of your Death. Please return to your house...
+Good luck to you...
+~
+167 4106 1
+D1
+~
+~
+0 -1 16804
+D3
+~
+gate~
+2 16717 16820
+S
+#16807
+Great Cave~
+  you can't escape from here... hahahahaha....
+how about recall?...................................
+..........................................................
+.................................................................
+~
+167 4106 1
+S
+#16810
+Room~
+  You are inside room. there are too many expensive clothing, furniture,
+accesaries. you can see great shield on the wall. you can see very sharp
+grintting sword on the other side wall. you feel that there are some people
+who are very tough and skillful and good trained. they are sons and daughter
+of the fourth najang Brop.
+~
+167 4106 1
+D4
+~
+door~
+1 0 16811
+D5
+~
+~
+0 -1 16754
+S
+#16811
+Hall of Brop~
+  This hall is very large. you see there is Brop in far front of you. there is long carpet to Brop. it is too quiet.
+~
+167 4106 1 
+D5
+~
+door~
+1 0 16810
+S
+#16812
+Stair way~
+  You can see very high and big Stair way above you. It seems the Stair way to Heaven(or Hell??). this stair way is spiral. there are many Suras near you.
+you think that the high you go up the more difficult to survive. stair way lies upward and downward.
+~
+167 4106 1
+D4
+~
+red~
+2 16810 16813
+D5
+~
+geron~
+2 16716 16796
+S
+#16813
+Stair way~
+  You can see very high and big Stair way above you. It seems the Stair way to Heaven(or Hell??). this stair way is spiral. there are many Suras near you.
+you think that the high you go up the more difficult to survive. stair way lies upward and downward.
+~
+167 4106 1
+D4
+~
+orange~
+2 16811 16814
+D5
+~
+red~
+2 16810 16812
+S
+#16814
+Stair way~
+  You can see very high and big Stair way above you. It seems the Stair way to Heaven(or Hell??). this stair way is spiral. there are many Suras near you.
+you think that the high you go up the more difficult to survive. stair way lies upward and downward.
+~
+167 4106 1
+D4
+~
+yellow~
+2 16812 16815
+D5
+~
+orange~
+2 16811 16813
+S
+#16815
+Stair way~
+  You can see very high and big Stair way above you. It seems the Stair way to Heaven(or Hell??). this stair way is spiral. there are many Suras near you.
+you think that the high you go up the more difficult to survive. stair way lies upward and downward.
+~
+167 4106 1
+D4
+~
+green~
+2 16813 16816
+D5
+~
+yellow~
+2 16812 16814
+S
+#16816
+Stair way~
+  You can see very high and big Stair way above you. It seems the Stair way to Heaven(or Hell??). this stair way is spiral. there are many Suras near you.
+you think that the high you go up the more difficult to survive. stair way lies upward and downward.
+~
+167 4106 1
+D4
+~
+blue~
+2 16814 16817
+D5
+~
+green~
+2 16813 16815
+S
+#16817
+Stair way~
+  You can see very high and big Stair way above you. It seems the Stair way to Heaven(or Hell??). this stair way is spiral. there are many Suras near you.
+you think that the high you go up the more difficult to survive. stair way lies upward and downward.
+~
+167 4106 1
+D4
+~
+indigo~
+2 16815 16818
+D5
+~
+blue~
+2 16814 16816
+S
+#16818
+Stair way~
+  You can see very high and big Stair way above you. It seems the Stair way to Heaven(or Hell??). this stair way is spiral. there are many Suras near you.
+you think that the high you go up the more difficult to survive. stair way lies upward and downward.
+~
+167 4106 1
+D4
+~
+violet~
+2 16816 16819
+D5
+~
+indigo~
+2 16815 16817
+S
+#16819
+Top of Second Castle~
+  You are in the top of second castle. top is shaped large round. the hinge of the top seems cliff. don't go far or you fall into bottom of castle.  
+You can see one person who sits with closing eyes. he looks like stone figure.
+~
+167 4106 1
+D5
+~
+violet~
+2 16816 16818
+S
+#16820
+January Hall~
+  You feel some cold. this hall is surrounded by Garnet. Ground of Hall is covered with thin snow. it is windy. only exit is up.
+~
+167 4106 1
+D4
+~
+february~
+2 16822 16821
+S
+#16821
+February Hall~
+  You feel some warm. this hall is surrounded by Amethyst. Ground of Hall is covered with thin snow. wind becomes milder. only exit is up.
+~
+167 4106 1
+D4
+~
+march~
+2 16823 16822
+S
+#16822
+March Hall~
+  You feel it becomes warmer. this hall is surrounded by Blood Stone. this hall is filled with flower perfume. warm breeze comes from somewhere. only exit is up.
+~
+167 4106 1
+D4
+~
+april~
+2 16824 16823
+S
+#16823
+April Hall~
+  You feel you are some sleepy. this hall is surrounded by Diamond. Ground of Hall is filled with fragrant flowers. perfume of flowers...perfume..perfume..
+only exit is up. 
+~
+167 4106 1
+D4
+~
+may~
+2 16825 16824
+S
+#16824
+May Hall~
+  You feel it is warm. this hall is surrounded by Emerald. Ground of Hall is filled with many flowers. warm breeze make flowers wave. only exit is up.
+~
+167 4106 1
+D4
+~
+june~
+2 16826 16825
+S
+#16825
+June Hall~
+  You feel it becomes warmer and warmer. this hall is surrounded by Pearl. Ground of Hall is covered with beautiful flowers. only exit is up.
+~
+167 4106 1
+D4
+~
+july~
+2 16827 16826
+S
+#16826
+July Hall~
+  You feel it becomes hotter. this hall is surrounded by Ruby. hot wind make you breathless. only exits is up.
+~
+167 4106 1
+D4
+~
+august~
+2 16828 16827
+S
+#16827
+August Hall~
+  You feel it is very hot.  this hall is surrounded by Sardonyx. Ground of Hall is covered with sand. wind make you see hardly. only exit is up.
+~
+167 4106 1
+D4
+~
+september~
+2 16829 16828
+S
+#16828
+September Hall~
+  You feel hot wind becomes milder. this hall is surrounded by Sapphire. Ground of Hall is covered with many leaves. it is windy. only exit is up.
+~
+167 4106 1
+D4
+~
+october~
+2 16830 16829
+S
+#16829
+October Hall~
+  You feel it is some cool. this hall is surrounded by Opal. Ground of Hall is filled with many leaves. wind is cool. only exit is up.
+~
+167 4106 1
+D4
+~
+november~
+2 16831 16830
+S
+#16830
+November Hall~
+  You feel it becomes cold. this hall is surrounded by Topaz. snow is falling from sky. it is windy. only exit is up.
+~
+167 4106 1
+D4
+~
+december~
+2 16832 16831
+S
+#16831
+December Hall~
+  You feel it is very cold. cold wind make you shiver. this ahll is surrounded by Turquoise. snow is full in this room. only exit is up.
+~
+167 4106 1
+D4
+~
+hyobik~
+2 16833 16832
+S
+#16832
+Gaiot's Room~
+  You are sorrounded by evil sal-ki from Gaiot. you hardly balance your body.
+you think it is cold or hot... strange...
+You lost your concentration.
+~
+167 4106 1
+D4
+~
+january~
+2 16821 3001
+S
+#99999
+$~

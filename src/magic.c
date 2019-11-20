@@ -13,6 +13,7 @@
 #include "comm.h"
 #include "play.h"
 #include "spells.h"
+#include "etc.h"
 
 /* NOTE:  Weapon special magic constant #define WEPON_* moved to "spells.h"
    Value of weapon special magic is same as spell/skill/damage type number. */
@@ -493,12 +494,6 @@ void increase_skilled(struct char_data *ch, struct char_data *victim,
 {
     char buf[MAX_BUFSIZ];
     int mob_nr;
-#define KITTEN		3090
-#define PUPPY		3091
-#define BEAGLE		3092
-#define ROTTWEILER	3093
-#define WOLF		3094
-#define JUGGERNAUT	8006 
 
     if(IS_NPC(ch) || number(0, GET_SKILLED(ch, sk_no) * mul + add))
 	return;
@@ -517,9 +512,8 @@ void increase_skilled(struct char_data *ch, struct char_data *victim,
     /* NOTE: Check null or cloned/reanimated victim mobile */
     if( victim && IS_NPC(victim)) {
 	mob_nr = GET_MOB_VIRTUAL(victim);
-	if (mob_nr == KITTEN || mob_nr == PUPPY
-	    || mob_nr == BEAGLE || mob_nr == ROTTWEILER
-	    || mob_nr == WOLF || mob_nr == JUGGERNAUT)
+
+	if (IS_PETSHOP_MOB(mob_nr))
 	    return;
 	if (GET_EXP(victim) == 0)
 	    return;

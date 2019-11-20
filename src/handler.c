@@ -193,7 +193,7 @@ void affect_remove_special(struct char_data *ch, struct affected_type *af )
     }
     else if (af->type == SKILL_ARREST ) {
 	char_from_room(ch);
-	char_to_room(ch, real_room(MID_TEMPLE));
+	char_to_room(ch, real_room(MID_PORTAL));
     }
     /* NOTE: Don't die from SPELL_DEATH removal if it is not expired.  */
     else if (af->type == SPELL_DEATH && af->duration < 0 ) {

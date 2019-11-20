@@ -624,27 +624,11 @@ continues to the west.
 D5
 ~
 ~
-0 -1 6542
+0 -1 6555
 D3
 ~
 door~
 1 6502 6540
-S
-#6542
-Inside the mine~
-There are holes everywhere from the places that the workers blew
-away the rock to get to whatever they were looking for.  A path leads
-down and up.
-~
-65 9 0
-D4
-~
-~
-0 -1 6541
-D5
-~
-~
-0 -1 6543
 S
 #6542
 Bottom of mineshaft~
@@ -655,7 +639,7 @@ it is very hard to breath.  The mineshaft leads up and east.
 D4
 ~
 ~
-0 -1 6541
+0 -1 6555
 D1
 ~
 ~
@@ -851,6 +835,22 @@ D0
 ~
 ~
 0 -1 6552
+S
+#6555
+Inside the mine~
+There are holes everywhere from the places that the workers blew
+away the rock to get to whatever they were looking for.  A path leads
+down and up.
+~
+65 9 0
+D4
+~
+~
+0 -1 6541
+D5
+~
+~
+0 -1 6542
 S
 #6999
 The Realm of the Dead~

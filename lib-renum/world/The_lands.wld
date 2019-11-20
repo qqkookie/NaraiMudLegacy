@@ -1,0 +1,1527 @@
+#15201
+The glade~
+Soft grass and moss cover the ground here.  A peaceful feeling seems
+to take over your thoughts as you wander around.
+~
+152 0 2
+D0
+~
+~
+0 0 15202
+D2
+~
+~
+0 0 15310
+S
+#15202
+The glade~
+Soft grass and moss cover the ground here.  Exits lead in all directions.
+~
+152 0 2
+D0
+~
+~
+0 0 15206
+D1
+~
+~
+0 0 15204
+D3
+~
+~
+0 0 15203
+D2
+~
+~
+0 0 15201
+S
+#15203
+The glade~
+A cool breeze comes from the north.  A small patch of flowers cover the 
+here.  You may leave north or east from here.  
+~
+152 0 2
+D0
+~
+~
+0 0 15207
+D1
+~
+~
+0 0 15202
+E
+flowers~
+The are deep blue, with a fire red center.  They have a very
+strong, pleasant aroma.
+~
+S
+#15204
+The glade~
+You see exits leading west and north.  
+~
+152 0 2
+D0
+~
+~
+0 0 15205
+D3
+~
+~
+0 0 15202
+S
+#15205
+The glade~
+You see small tracks in the ground here.  Exits lead south and west.
+~
+152 0 2
+D1
+~
+~
+0 0 15215
+D2
+~
+~
+0 0 15204
+D3
+~
+~
+0 0 15206
+E
+tracks~
+They are small tracks.  They look as if made by in creature with 
+many legs.
+~
+S
+#15206
+The glade~
+Soft grass and moss cover the ground here.  A peaceful feeling seems
+to take over your thoughts as you wander around.
+~
+152 0 2
+D1
+~
+~
+0 0 15205
+D2
+~
+~
+0 0 15202
+D3
+~
+~
+0 0 15207
+S
+#15207
+The glade~
+The green fades to the north as the ground slowly turns into a 
+path.  Exits also lead east and south.
+~
+152 0 2
+D0
+~
+~
+0 0 15208
+D2
+~
+~
+0 0 15203
+D1
+~
+~
+0 0 15208
+S
+#15208
+The sloping path~
+To the south you see the glade.  The path continues to the north
+and also to the west.  There are many small pebbles and twigs on the 
+ground.
+~
+152 0 3
+D0
+The path continues.~
+~
+0 0 15209
+D2
+~
+~
+0 0 15207
+D3
+The path continues.~
+~
+0 0 15210
+E
+pebbles~
+They are small and smooth.  It appears that they were
+placed here by someone...or something.
+~
+E
+twigs~
+Normal twigs from the trees.
+~
+S
+#15209
+The sloping path~
+The path leads to the north and south.
+~
+152 0 3
+D0
+~
+~
+0 0 15211
+D2
+~
+~
+0 0 15208
+S
+#15210
+The path~
+You find yourself at the edge of a large marsh.  In the distance
+you hear sounds of animals moving in different directions.  It is
+none to pleasant.  You may go either west or east from here.
+~
+152 4 2
+D1
+~
+~
+0 0 15208
+D3
+You stomach turns as you get a snout full of the smell from the west.~
+~
+0 0 15214
+S
+#15211
+The forest~
+The trees stand high above making the land seem firm and healthy.  
+To the west the land starts to loose substance, and to the
+north the forest continues.
+~
+152 0 3
+D0
+~
+~
+0 0 15212
+D3
+~
+~
+0 0 15213
+D2
+~
+~
+0 0 15209
+S
+#15212
+Within the forest~
+You see the forest to the north and south.  Just as you think
+you are alone, you hear a screech owl in the distance...the 
+silence is broken.
+~
+152 0 3
+D0
+~
+~
+0 0 15218
+D2
+~
+~
+0 0 15211
+S
+#15213
+The edge of the marsh~
+Your boots sink deep into the ground here.  Many small insects scurry
+along on some unknown task.
+~
+152 4 2
+D1
+~
+~
+0 0 15211
+D3
+~
+~
+0 0 15219
+E
+insects~
+They are small and ugly.
+~
+S
+#15214
+The marsh~
+You are in a marsh.  Tree tops cover the sky, making it very dark and 
+gloomy here.  As you move along, you feel something rub against your
+leg from underneath the water.  It is possible to to leave west from 
+here, or to go back east.
+~
+152 0 3
+D1
+~
+~
+0 0 15208
+D3
+~
+~
+0 0 15220
+S
+#15215
+Beside the logs~
+There are hundreds of small tracks in the ground here.  A large 
+stack of logs are stacked to the north.  Exits lead to the 
+west and east.
+~
+152 0 2 
+D3
+~
+~
+0 0 15205
+D1
+~
+~
+0 0 15221
+D0
+~
+logs~
+1 -1 15216
+E
+logs~
+There are many logs.  They almost appear to be set here by something.
+As you examine them, you hear a deep moaning sound from the north.
+~
+S
+#15216
+The woolly bear den~
+It is warm here.  You can see why this place was chosen by the woolly
+bears to call home.
+~
+152 1 2
+D5
+~
+~
+0 0 15222
+D2
+~
+logs~
+1 -1 15215
+S
+#15217
+The forest~
+The air is fresh, making you want to take in a deep breath and a rest.
+~
+152 0 2
+D0
+~
+~
+0 0 15223
+D1
+~
+~
+0 0 15224
+D2
+~
+~
+0 0 15221
+S
+#15218
+The forest~
+You feel the trees towering above you.  Exits lead in all directions.
+~
+152 0 3
+D0
+~
+~
+0 0 15225
+D1
+~
+~
+0 0 15226
+D2
+~
+~
+0 0 15212
+D3
+~
+~
+0 0 15227
+S
+#15219
+The marsh~
+The water goes past your knees. Trees have moss and lichen on them.
+The stench is very strong here.  It is very unpleasant and you decide
+to leave in the only possible exit, west.
+~
+152 0 4
+D3
+The marsh continues.~
+~
+0 0 15228
+S
+#15220
+The Marsh~
+From the looks of the broken limbs of the many trees here, you 
+can guess that something lies ahead.  There are many bubbles coming
+from beneath the water.
+~
+152 0 4
+D0
+~
+~
+0 0 15229
+D3
+You see a cave in the distance.~
+~
+0 0 15230
+S
+#15221
+The forest~
+A small ray of light filters through the trees here.
+~
+152 0 2
+D0
+~
+~
+0 0 15217
+D3
+~
+~
+0 0 15215
+S
+#15222
+The inner den~
+This is the home of the woolly bears.  A large nest is here.
+~
+152 0 2 
+D4
+~
+~
+0 0 15216
+S
+#15223
+The forest~
+Soft grass and moss cover the ground here.
+~
+152 0 2
+D1
+~
+~
+0 0 15231
+D2
+~
+~
+0 0 15217
+S
+#15224
+The forest~
+A large rock protrudes from the ground here.  The forest continues
+to the north and west.
+~
+152 0 2
+D0
+~
+~
+0 0 15231
+D3 
+~
+~
+0 0 15217
+E
+rock~
+Long live the Jirans.
+~
+S
+#15225
+The trail~
+It is much easier walking here.  The trail not only gives comfort to your
+feet, it seems to be safe.  You can go south, north or east from here.
+~
+152 0 1
+D0
+~
+~
+0 0 15232
+D2
+~
+~
+0 0 15227
+D1
+~
+~
+0 0 15247
+S
+#15226
+The forest~
+The trees loom above you.  It is hard to make progress here because
+at every step you must beat back a new found obstacle.
+~
+152 0 3
+D3
+~
+~
+0 0 15227
+D2
+~
+~
+0 0 15218
+S
+#15227
+The forest~
+The forest you can make out a trail to the north.  You may leave 
+in that direction or go back into the forest.
+~
+152 0 3
+D0
+~
+~
+0 0 15225
+D2
+~
+~
+0 0 15226
+S
+#15228
+The marsh~
+This looks very much the same as the direction you came from.  The 
+bugs here bite at you, making you want to run.
+~
+152 0 4
+D2
+~
+~
+0 0 15229
+D3
+~
+~
+0 0 15233
+S
+#15229
+The marsh~
+What could possibly be making this horrible smell?  You cover your 
+nose as you walk here.  You move along quickly, exits lead south,
+west, and north.
+~
+152 0 4
+D0
+~
+~
+0 0 15228
+D2
+~
+~
+0 0 15220
+D3
+~
+~
+0 0 15234
+S
+#15230
+The marsh~
+Something slithers below the surface of the water here.
+~
+152 0 4
+D1
+~
+~
+0 0 15220
+D3
+~
+~
+0 0 15236
+S
+#15231
+A small path~
+You find what appears to be a small path.  It isn't well traveled, but
+it looks like a good road to travel in safety.
+~
+152 0 1
+D2
+~
+~
+0 0 15224
+D3
+~
+~
+0 0 15223
+D0
+~
+~
+0 0 15244
+S
+#15232
+The edge of the field~
+Not far from here you see a few farmers tending the soil.  The trees 
+stand behind you, and a large field is before you.  In the distance you
+can see the top of a castle above the tree line.
+~
+152 0 2
+D2
+~
+~
+0 0 15225
+D1
+~
+~
+0 0 15245
+S
+#15233
+The marsh~
+The brush is very tangled here.  With every step you find a new 
+obstacle to overcome.
+~
+152 0 4
+D1
+~
+~
+0 0 15228
+D3
+~
+~
+0 0 15237
+S
+#15234
+The marsh~
+You hear something shuffle in the trees, but when you look up, nothing 
+is to be seen.  It's probably not a good idea to stay here for long.
+~
+152 0 4
+D1
+~
+~
+0 0 15229
+D3
+~
+~
+0 0 15235
+S
+#15235
+The marsh~
+You have come to a dead end.  Trees cover the north, west, and south, 
+making it impossible to pass.  The only obvious exit leads back the 
+way you came from, south.
+~
+152 4738 4
+D1
+~
+~
+0 0 15234
+D3
+~
+bronto~
+2 15250 15290
+D5
+~
+cover~
+1 -1 15241
+S
+#15236
+Near the cave~
+The ground becomes more solid here, easing you a bit.  The entrance to a large 
+cave lies the west, while the marsh is to the east.
+~
+152 0 2
+D1
+~
+~
+0 0 15230
+D3
+It looks very dark inside.~
+~
+0 0 15238
+E
+cave~
+The entrance has many weeds grown around it.  You see something carved 
+into one wall.
+~
+E
+wall~
+A carving is here, it seems to depict a large beast of some sort...
+     and people running from it....
+~
+S
+#15237
+The rock~
+You have walked onto a large rock.  It's a little nicer here than the 
+rest of the marsh, and probably safer.  You could even take a nap here.
+Exits lead west and east.
+~
+152 4 1
+D1
+~
+~
+0 0 15233
+D3
+~
+~
+0 0 15240
+S
+#15238
+The cave~
+You walk down sharp incline to find yourself at a large pool.  The 
+reflection from the pool is better than a mirror.  You see large fish 
+swim in the pool.
+~
+152 1 2
+D1
+~
+~
+0 0 15236
+D0
+~
+~
+0 0 15239
+E
+fish~
+The have extremely large, bulging eyes.
+~
+S
+#15239
+Near the cave~
+A cave is the the south, and the marsh is to the north.  
+~
+152 0 2
+D2
+~
+~
+0 0 15238
+D0
+~
+~
+0 0 15240
+S
+#15240
+The marsh~
+It looks the same here, as anywhere in the marsh.  Bubbles break the 
+surface of the water and the trees look old and dying.
+~
+152 0 4
+D2
+~
+~
+0 0 15239
+D1
+~
+~
+0 0 15237
+D0
+~
+exit~
+1 -1 15242
+S
+#15241
+Under the marsh~
+As you enter, trees fall in from above, making it impossible to leave the
+way from which you came.  It is VERY hot here.
+~
+152 0 2
+D3
+~
+~
+0 0 15239
+S
+#15242
+Leaving the marsh~
+You have discovered an exit from the marsh.  From here you can leave the 
+stench behind, or go back into it.
+~
+152 0 2
+D2
+~
+exit~
+1 -1 15240
+D1
+~
+~
+0 0 15243
+S
+#15243
+The solid ground~
+You may be able to squeeze through to the east, but making it back would be 
+impossible.  The marsh still lies back to the west.
+~
+152 0 2
+D3
+~
+~
+0 0 15242
+D1
+~
+~
+0 0 15227
+S
+#15244
+The trail~
+You are on a trail that leads north and south.  The ground is worn here.
+~
+152 0 2
+D0
+~
+~
+0 0 15246
+D2
+~
+~
+0 0 15231
+S
+#15245
+The field~
+It looks as if the crops will be plentiful this year.  The farmers have 
+taken great care in plowing the soil and sewing the seeds.  Exits leave 
+south, west and east.
+~
+152 0 3
+D3
+~
+~
+0 0 15232
+D2
+~
+~
+0 0 15247
+D1
+~
+~
+0 0 15248
+S
+#15246
+Beside the cabin~
+A small wood cabin is to the east of here.  The trail continues to the 
+north and south.
+~
+152 0 2
+D1
+~
+door~
+1 -1 15249
+D2
+~
+~
+0 0 15244
+D0
+~
+~
+0 0 15250
+S
+#15247
+The field~
+There are a few apple trees being grown here as well as crops 
+in the ground.
+~
+152 0 3
+D0
+~
+~
+0 0 15245
+D3
+~
+~
+0 0 15225
+S
+#15248
+The road~
+You are on one of the only roads within hours of walking.  It is well 
+travelled.  The fields are to the west and a castle lies to the north.
+~
+152 0 2
+D0
+~
+~
+0 0 15251
+D2
+~
+~
+0 0 15250
+D3
+~
+~
+0 0 15245
+S
+#15249
+The cabin~
+You are in a dim cabin.  Shelves line the walls here, holding various 
+containers.  A small table makes up the furnishings for this 
+home.  A small ladder leads up.
+~
+152 0 2
+D3
+~
+door~
+1 -1 15246
+D4
+~
+~
+0 0 15252
+S
+#15250
+The trail~
+To the south east you can make out a small cabin, to the north a 
+castle, and to the west a field.
+~
+152 0 2
+D2
+~
+~
+0 0 15246
+D0
+~
+~
+0 0 15248
+D3
+~
+~
+0 0 15247
+S
+#15251
+The entrance~
+You are in the large entrance to Castle Flacon.  There are holes in 
+the top of the wall to the left and right.  The the north there is a 
+very large gate.
+~
+152 0 2
+D0
+~
+~
+0 0 15253
+D2
+~
+~
+0 0 15248
+S
+#15252
+The hayloft~
+A small mattress is on the ground here.  The ladder goes back down.
+You here pigeons on the roof.
+~
+152 1 2
+D5
+~
+~
+0 0 15249
+E
+mattress~
+It is made of hay and looks very comfortable.
+~
+S
+#15253
+The gallery~
+A large gate lies to the south.  It appears that it would be very 
+effective in holding out unwanted people in case of siege.  You still 
+notice holes in the top left and right of the walls here.  You may go 
+north or south from here.
+~
+152 0 2
+D0
+~
+~
+0 0 15254
+D2
+~
+~
+0 0 15251
+S
+#15254
+In front of the gate~
+You are at the entrance to the inner castle.  To the north you hear people 
+trying to make a deal.  There are many small carts and street venders there.  
+You notice a sign on the gate.
+~
+152 0 2
+D0
+~
+~
+0 0 15255
+D2
+~
+~
+0 0 15253
+E
+sign~
+Welcome stranger, to castle Flacon.  You will find safety here.
+~
+S
+#15255
+The market~
+This is the place where to people of the castle and surrounding lands 
+come to trade various items and stories.  Many bags and carts are here.
+The commons are to the east and west, while the heart of the city lies 
+to the north.
+~
+152 0 2
+D2
+~
+~
+0 0 15254
+D0
+~
+~
+0 0 15260
+D1
+~
+~
+0 0 15256
+D3
+~
+~
+0 0 15264
+E
+bags~
+They are full of various things that will be traded today.
+~
+E
+carts~
+They are full of various things to be traded today.
+~
+S
+#15256
+Zyashy way~
+People run about on various tasks here.  A small boy runs up to you 
+pretends to kill you with his mighty sword, that of the King.  Exits 
+lead to the east and west.
+~
+152 0 2
+D3
+~
+~
+0 0 15255
+D1
+~
+~
+0 0 15257
+S
+#15257
+Zyashy way~
+>From here you can see a tower to the north-west.  The road continues 
+to the north and west.
+~
+152 0 2
+D0
+~
+~
+0 0 15258
+D3
+~
+~
+0 0 15256
+S
+#15258
+Zyashy way~
+To the east you can see the trees above the wall.  It appears to be 
+less busy here.  You can go north or south.
+~
+152 0 2
+D0
+~
+~
+0 0 15269
+D2
+~
+~
+0 0 15257
+S
+#15259
+The office~
+This is the local meeting place for the business officials of the 
+city, as well as a guard check point.
+~
+152 0 2
+D3
+~
+door~
+1 -1 15260
+S
+#15260
+Main street~
+The street venders are to the south, while the citadel lies to the 
+north.  A small building is to the east and you can tell there is a 
+small shop to the west from the sign above the door.
+~
+152 0 2
+D0
+~
+~
+0 0 15267
+D2
+~
+~
+0 0 15255
+D1
+~
+door~
+1 -1 15259
+D3
+~
+~
+0 0 15261
+E
+sign~
+It has the mark of the tradesman on it.
+~
+S
+#15261
+Sphen's shop~
+The owner of this shop is a very old man.  There are many shelves and 
+cabinets along the wall here.
+~
+152 0 2
+D1
+~
+~
+0 0 15260
+S
+#15262
+Zyashy way~
+People roam about on various tasks here.  You see houses along the street 
+both east and west.  The road continues north and south.
+~
+152 0 2
+D0
+~
+~
+0 0 15265
+D2
+~
+~
+0 0 15263
+S
+#15263
+Zyashy way~
+You are at a turn in the road.  It continues to the north and east.
+~
+152 0 2
+D0
+~
+~
+0 0 15262
+D1
+~
+~
+0 0 15264
+S
+#15264
+Zyashy way~
+To the east you can hear the voices of many people.  You can 
+go west or east from here.
+~
+152 0 2
+D1
+~
+~
+0 0 15255
+D3
+~
+~
+0 0 15263
+S
+#15265
+Zyashy way~
+To the south you see the forest towering above the walls.  You 
+also hear the roar of an ocean.  You may go south or east from here.
+~
+152 0 2
+D2
+~
+~
+0 0 15262
+D1
+~
+~
+0 0 15266
+S
+#15266
+The end of the road~
+You are at the end of Zyashy way.  The only exit is back to the west.
+~
+152 0 2
+D3
+~
+~
+0 0 15265
+D1
+~
+trapdoor~
+1 -1 15274
+S
+#15267
+The entrance~
+You see to the north a citadel.  It is the largest structure you have 
+seen here.  The gate to it is open now.  
+~
+152 0 2
+D2
+~
+~
+0 0 15260
+D0
+~
+~
+0 0 15270
+S
+#15268
+The dark alley~
+You are at the end of a dark alley.  The only exit leads to the east.
+You hear something suffle (?) in the darkness.
+~
+152 1 2
+D1
+~
+~
+0 0 15269
+D5
+~
+trapdoor~
+1 1980 15279
+S
+#15269
+The alley~
+If there is any, this is the slums of the town.  It is very 
+unpleasant here.
+~
+152 0 2
+D3
+~
+~
+0 0 15268
+D2
+~
+~
+0 0 15258
+S
+#15270
+The parlor~
+Huge columns line the walls.  Exits lead in all directions.  You 
+see servants running quickly on some unknown task.
+~
+152 0 2
+D0
+~
+~
+0 0 15273
+D2
+~
+~
+0 0 15267
+D3
+~
+door~
+1 -1 15274
+D1
+~
+~
+0 0 15271
+E
+column~
+It has a torch hanging from it.  Above it is a statue of some unknown
+person.
+~
+S
+#15271
+Below the first tower~
+Stairs lead up here to some unknown place.  You see no one here.
+~
+152 4 0
+D0 
+~
+~
+0 0 15272
+D3
+~
+~
+0 0 15270
+D4
+~
+~
+0 0 15280
+S
+#15272
+The citadel~
+The ceiling is very high, almost making you feel dizzy as you look 
+up.  A large tapestry hangs here.   You can go south, west, and 
+north from here.
+~
+152 0 0
+D2
+~
+~
+0 0 15271
+D0
+~
+~
+0 0 15278
+D3
+~
+~
+0 0 15273
+E
+tapestry~
+It shows a great king and his army in battle.  The flag of the Jirans 
+flies high, but it appears the battle turns against the Jirans.
+~
+S
+#15273
+The grand stairway~
+You very large stairway gives you passage to the second floor.
+You may go up, west, east, or back south to the city from here.
+~
+152 0 0 
+D3
+~
+~
+0 0 15275
+D1
+~
+~
+0 0 15272
+D2
+~
+~
+0 0 15270
+D4
+~
+~
+0 0 15281
+S
+#15274
+The guard barracks~
+There are many small cots here and a few desks.  A small winding 
+ladder leads up from here where you can hear loud shuffling.
+~
+152 0 0 
+D1
+~
+door~
+1 -1 15270
+D4
+~
+~
+0 0 15282
+D3
+~
+trapdoor~
+1 -1 15266
+S
+#15275
+The citadel~
+A pleasant aroma comes from the north.  A large tapestry hangs on the 
+wall here.
+~
+152 0 0
+D0
+~
+door~
+1 -1 15276
+D1
+~
+~
+0 0 15273
+E
+tapestry~
+It shows a great funeral for some unknown king.  The many people in it
+all wear robes which cover their faces.
+~
+S
+#15276
+The kitchen~
+A large fireplace is here to cook the food for the people within 
+the citadel.  Pots and pans hang from hooks in the ceiling.
+~
+152 0 0 
+D2
+~
+door~
+1 -1 15275
+D4
+~
+~
+0 0 15283
+S
+#15277
+The citadel~
+A large window is to the north.  You see yet another tapestry on the 
+wall here.  The only exit is to the east.  This room is obviously where 
+the tired come and rest.  The benches here look very comfortable.
+~
+152 0 0 
+D1
+~
+~
+0 0 15278
+E
+tapestry~
+This tapestry depicts a great moving.  It shows a whole land of people 
+moving to a new and different home.  In another part of the tapestry it 
+shows that they have found a place to start their new home.  It is on 
+the edge of a great cliff.  Forests surround the area, and below the 
+cliff, a vast ocean.
+~
+E
+window~
+It is very large.  When you look outside you see that you are many feet 
+above sea level.  The ocean expands as far as the eye can see to the 
+north.  You can see why this place was chosen by the people, it's safety.
+~
+S
+#15278
+Below a tower~
+You find yourself below what appears to be a tower.  A stone 
+staircase leads up from here and on the wall you see a simple wooden
+cross.
+~
+152 0 0 
+D3
+~
+~
+0 0 15277
+D2
+~
+~
+0 0 15272
+D4
+~
+~
+0 0 15284
+S
+#15279
+The hideout~
+Bags of grain are stacked here, and a few barrels add to the decor also.
+This seems to be a place of refuge.
+~
+152 1 2
+D4
+~
+trapdoor~
+1 1980 15268
+S
+#15280
+The mage's study~
+There are various vials sitting in cabinets and on shelves here.
+The attendant must take great care with them, the room is spotless.
+~
+152 0 0 
+D5
+~
+~
+0 0 15271
+S
+#15281
+The outer sanctum~
+A large set of doors lie to the north.  You may leave down, or continue 
+to the north.
+~
+152 0 0
+D5
+~
+~
+0 0 15273
+D0
+~
+~
+0 0 15285
+S
+#15282
+The warrior's academy~
+There are many diagrams of humans here, obviously telling various 
+pressure points and lethal blow areas.  A few straw dummies are here 
+also to help the young warriors learn.
+~
+152 0 0 
+D5
+~
+~
+0 0 15274
+S
+#15283
+Above the kitchen~
+A set of stairs go back down into the kitchen from here.  This
+room is connected to the corridor which servants use to take
+essentials to the people of the court.
+~
+152 0 0 
+D5
+~
+~
+0 0 15276
+D1
+~
+~
+0 0 15286
+S
+#15284
+The cleric's study~
+This is a very plain room, a simple bench and table are the only
+things you notice besides a large wooden cross.
+~
+152 0 0 
+D5
+~
+~
+0 0 15278
+S
+#15285
+The sanctum~
+Surely you have reached the heart of this city.  At the far end of this 
+you see a large throne with a figure resting in it.  A peaceful feeling 
+seems to take over your state of being.
+~
+152 0 0
+D1
+~
+~
+0 0 15288
+D2
+~
+~
+0 0 15281
+D5
+~
+throne~
+4 15239 15287
+S
+#15286
+The corridor~
+It is very plain here, probably to keep it easy to move in.
+~
+152 0 0 
+D3
+~
+~
+0 0 15283
+D1
+~
+~
+0 0 15288
+S
+#15287
+The treasury~
+Many treasures cover the floor here.  The room has a light of its' 
+own.
+~
+152 0 0 
+D4
+~
+throne~
+2 15239 15285
+S
+#15288
+The waiting quarters~
+The Queen waits here for her husband to take care of the matters 
+of state.  This room also serves to purpose of a tea room for her 
+guests at times.
+~
+152 0 0 
+D2
+~
+~
+0 0 15285
+D3
+~
+~
+0 0 15286
+S
+#15290
+The Hot Springs~
+     You have reached a marshy lake.  Great billows of steam rise from it's
+center.  This artificial temperature has spawned a wealth of tropical flora.
+~
+152 4610 2
+D1
+~
+bronto~
+2 15250 15235
+S
+#99999
+$~

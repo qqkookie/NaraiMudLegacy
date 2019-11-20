@@ -1,0 +1,348 @@
+#3811
+The Robert Bell Building~
+  This is the Robert Bell Building.  How nice.  You ask
+yourself, 'Who's Robert Bell?'
+  Beware of AGGRESSIVE Labbies in Room 134.
+~
+38 520 0
+D1
+~
+~
+0 -1 3812
+D2
+~
+~
+0 -1 3067
+D3
+~
+~
+0 -1 3813
+S
+#3812
+Room 134~
+  This is one of the Labs in the famous Robert Bell Building.  There
+are lots of terminals around here.  Looks like some DEC salesman made
+a real killing.
+~
+38 520 0
+D3
+~
+~
+0 -1 3811
+S
+#3813
+A BSU Dorm~
+  This is Ball State dorm room.  It's a mess, it stinks, it's full
+of junk.  It's like any dorm room anywhere.
+~
+38 2568 0
+D1
+~
+~
+0 -1 3811
+S
+#3821
+Villa DoorWay~
+   호화 빌라의 현관. 바로크풍의 화려한 샹드리에가 드리워져 있습니다.
+어디선가 은은한 음악이 들리고 바닥에는 페르시아 양탄자가 깔려있습니다. 
+~
+38 4238 0
+D0
+Cookie 님이 조용히 사색과 독서를 하시고 계십니다.. 쉿 조용히.
+~
+~
+0 -1 3831
+D1
+~
+~
+0 -1 3822
+D2
+신들이 모여 나래의 미래를 걱정하고 있습니다.
+~
+~
+0 -1 3832
+D5
+~
+~
+0 -1 3001
+S
+#3822
+Villa White Corridor~
+    피카소풍의 모던한 추상화가 밝은 햇빛을 받으며 걸려있습니다.
+그 아래에 하얀 백합꽃이 가득 꽂힌 화병이 탁자위에 놓여있습니다.
+~
+38 4238 0
+D0
+Scarab님이 낮잠을 주무시고 계십니다.
+~
+~
+0 -1 3834
+D1
+~
+~
+0 -1 3823
+D2
+JINNY님이 조용히 운공조식을 하며 기를 끌어 모으고 있습니다.
+~
+~
+0 -1 3837
+D3
+~
+~
+0 -1 3821
+S
+#3823
+Villa Red Corridor~
+   르노와르풍의 그림속에서 아름다운 소녀가 당신에게 미소를 보내고 있습니다.
+빨간 장미 한송이가 외롭게 화병에 꽂혀있습니다. 
+~
+38 4238 0
+D0
+Khan 님이 무언가 궁시렁거리며 분주히 왔다갔다하고 있습니다. 
+~
+~
+0 -1 3835
+D1
+~
+~
+0 -1 3824
+D2
+Dos 님이 컴퓨터앞에서 열심히 외계인을 잡아죽이고 있습니다.
+~
+~
+0 -1 3838
+D3
+~
+~
+0 -1 3822
+S
+#3824
+Villa Yellow Corridor~
+   돌로 만든 벽난로에서 장작이 타들어가고 있습니다.
+오래된 할아버지 시계의 시계추가 느릿느릿 흔들리고 있습니다.
+~
+38 4238 0
+D0
+Rook님이 낄낄거리며 만화를 읽고있습니다.
+~
+~
+0 -1 3836
+D1
+~
+~
+0 -1 3825
+D3
+~
+~
+0 -1 3823
+S
+#3825
+Villa Dark Corridor~
+   침침한 회랑끝. 은촛대위에 촛불이 조용히 타들어가고 있습니다.
+~
+38 4238 0
+D3
+~
+~
+0 -1 3824
+S
+#3831
+Cookie's Suit Room~
+   당신은 천재이십니다. 당신은 아름답습니다. 누구나 당신을 사랑합니다.
+당신은 뭐든 해낼 수 있습니다. 행운은 항상 당신과 함께 합니다.
+~
+38 38410 0
+D2
+~
+~
+0 -1 3821
+S
+#3832
+Imple/Odin's Room~
+  위대한 Imple과 Wizard들이 조용히 휴식을 취하는 방. 
+~
+38 1544 0
+D0
+~
+~
+0 -1 3821
+S
+#3834
+Scarab's Room 1~
+   당신은 Scarab 님입니다.
+~
+38 526 0
+D2
+~
+~
+0 -1 3822
+S
+#3835
+Khan's Room 3~
+   당신은 Khan 님입니다.
+~
+38 526 0
+D2
+~
+~
+0 -1 3823
+S
+#3836
+Rook's Room 5~
+   당신은 Rook 님입니다.
+~
+38 526 0
+D2
+~
+~
+0 -1 3824
+S
+#3837
+JINNY's Room 2~
+   당신은 JINNY 님입니다.
+~
+38 526 0
+D0
+~
+~
+0 -1 3822
+S
+#3838
+Dos's Room 4~
+   당신은 Dos 님입니다.
+~
+38 526 0
+D0
+~
+~
+0 -1 3823
+S
+#3881
+A Southern Mansion~
+   You are in the main room of a Southern mansion.  There is a huge roaring
+fire, a huge rug, simple country furniture, wine by the fire, old books
+in a bookcase, and Roo's dog Cinnamon is by the fire.
+~
+38 2568 0
+S
+#3882
+Sinat's Library~
+You stand in a very comfortable library. The shelves of books run all
+the way to the ceiling. The room is filled with luxurious furniture and 
+items. In the corner is a large four posted bed. A large ornate desk sits 
+against North wall on the desk sits a strange object you have never seen, 
+an inscription on it says "AMIGA 2000 HD".
+~
+38 2560 0
+D2
+~
+~
+0 0 3883
+D4
+~
+~
+0 0 3004
+S
+#3883
+Karn's Sanctum~
+If you are here you better have been invited, or be mel :)
+There is a huge fireplace against the South wall. There is no fire but it 
+does give off heat. There is a huge canopy bed against the North wall. And 
+against the west wall is a very elaborate desk, and on this desk sits an 
+Amiga 2000 HD.
+~
+38 2560 0
+D2
+~
+~
+0 0 3882
+D4
+~
+~
+0 0 3004
+S
+#3884
+Scott's place~
+A large sofa sets in one corner of this room, a large bed in another. 
+There are no windows here, no doors.  The ceiling is made from a blue rock
+that seems to light the whole room effectively.
+~
+38 0 0 
+S
+#3886
+Toot's Dwelling~
+  Toot's is a simple, yet exquisite abode.  The walls are painted a light
+gray, with one square window on the far wall.  Photos of her friends are
+neatly tacked up.  The delightful sounds of Rush echo through the room.
+A Golden Retriever, named Steph, lies curled up in a corner.  There is a
+pile of black hair under the bed where another dog obviously once lay.
+~
+38 2568 0
+D5
+~
+~
+0 -1 3023
+S
+#3887
+Elbo's House~
+  This is a modified A-frame Ranch House with immaculate rugs
+and solid wooden frame furniture built by her husband.
+You are most welcome here, you are our guest!
+~
+38 2568 0
+S
+#3888
+Pokerthief's hideout~
+  You are now standing on the roof top of the Grunting Boar.
+Around you are piles and piles of broken beer bottles and
+cigarette butts. As you can see, this place is where Poker
+spends most of his spare time.
+~
+38 2568 0
+D5
+~
+~
+0 -1 3037
+S
+#3889
+God's House~
+  This house is God's House.  I guess that says it all.
+~
+38 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#3890
+Syn's House~
+  This house is under construction.
+~
+38 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#3891
+Dave's House~
+  This house is done.
+~
+38 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#3892
+A House~
+  This house, being built by Norton, is under construction.
+~
+38 2568 0
+D5
+~
+~
+0 -1 3001
+S
+#99999
+$~

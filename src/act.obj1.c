@@ -409,7 +409,7 @@ void give_gold(struct char_data *ch, struct char_data *vict, int amount )
      * Prohibit it to prevent gold inflation. See group_gain() in fight.c.
      * NOTE: Exception: Darimsa 4th jangro accepts money. See daerimsa.c.
      */
-    if (IS_NPC(vict) && GET_MOB_VIRTUAL(vict) != MOB_FOURTH_JANGRO) {
+    if (IS_NPC(vict) && GET_MOB_VIRTUAL(vict) != DRS_FOURTH_JANGRO) {
 	send_to_char("Don't feed mob. It will bite your hand.\n\r",ch);
 	return;
     }
