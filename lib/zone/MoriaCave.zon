@@ -1,0 +1,33 @@
+Moria Cave~
+15699 30 2
+*
+* Level 1
+*
+M 0 15610 1 15624    The mage
+G 1 15612 2         Scroll of identify.
+*
+M 0 15611 1 15632    The troll
+G 1 15610 2         The blade
+*
+M 0 15612 3 15621    The snakes
+G 1 15613 10        Slime
+M 0 15612 3 15621    The snakes
+G 1 15614 3         Poisoned slime
+*
+M 0 15612 3 15613    A thief
+G 1 15613 10        Slime
+G 1 15614 3         Poisoned slime
+*
+M 0 15613 3 15634    A orc
+G 1 15614 10        Slime
+*
+M 0 15615 3 15618    A centipede
+*
+M 0 15616 2 15623    A warrior
+G 1 15611 1         Some gloves
+*
+M 0 15617 1 15629    A kobold
+G 1 15614 10        Slime
+*
+S
+$~

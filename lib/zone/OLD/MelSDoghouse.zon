@@ -1,0 +1,15 @@
+Mel's Doghouse~
+14259 25 2
+M 0 14111 1 14162		Alley Cat
+M 0 14117 1 14162		Peter Pan
+E 1 3299 2 16		Scythe of Death
+E 1 14162 2 17		Mauve Stone
+*
+M 0 14112 9 14163		Ants
+M 0 14112 9 14163		Ants
+M 0 14112 9 14163		Ants
+M 0 16318 25 14163	Mouse
+*
+D 0 14162 0 1		window
+S
+$~

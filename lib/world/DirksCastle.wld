@@ -1,0 +1,623 @@
+#15410
+Private Library~
+   This is a quiet old-style library with a large warm fire in the fireplace.
+Shelves lined the walls holding the books that contain the secrets of the
+universe.  To the east is a shimmering portal, through which you seem to
+see the temple.  A set of strangly glowing stairs lead down.
+~
+154 520 0
+D1
+~
+~
+0 -1 3001
+D5
+~
+~
+0 -1 15413
+S
+#15411
+Drawbridge~
+  You are on the drawbridge leading to Dirk's Castle.  Funny though, there
+is no moat so why is there a drawbridge?
+~
+154 0 1
+D1
+~
+~
+0 -1 15412
+D3
+~
+~
+0 -1 3442
+S
+#15412
+Castle Gate~
+   Here is the grand gate of Dirk's castle.  No guards are around, but then
+why would a god need guards.  Even so, you feel welcome.
+~
+154 8 0
+D0
+~
+~
+0 -1 15415
+D1
+~
+~
+0 -1 15413
+D2
+~
+~
+0 -1 15419
+D3
+~
+~
+0 -1 15411
+S
+#15413
+Main Hall~
+  You are standing in the main hall of Dirk's Castle.  You see a
+shimmering set of stairs.  They do not seem solid looking at them 
+from below.  At the top you see the entrance to Dirk's private
+library.
+~
+154 8 0
+D0
+~
+~
+0 -1 15414
+D2
+~
+~
+0 -1 15418
+D3
+~
+~
+0 -1 15412
+S
+#15414
+North Foyer~
+   This is the northern foyer in Dirk's castle.  He has added the coat
+closet that he has always wanted but he still needs to get a coat.
+~
+154 8 0
+D0
+~
+~
+0 -1 15415
+D1
+~
+~
+0 -1 15413
+D2
+~
+~
+0 -1 15418
+D3
+~
+closet~
+1 -1 15426
+S
+#15415
+North Tower Base~
+   You are in the base of the north tower.  A large stair case leads up to
+the north tower from here.  To the south is the main gate.
+~
+154 8 0
+D1
+~
+~
+0 -1 15414
+D2
+~
+~
+0 -1 15412
+D4
+~
+~
+0 -1 15416
+D5
+Step
+~
+step~
+2 15410 15424
+E
+step~
+It appears to be a secret door with a stone keyhole.
+~
+S
+#15416
+North Stairs~
+   You are on the stairs leading up to the top of the north tower.  Down
+you see the base of the tower.
+~
+154 8 0
+D4
+~
+~
+0 -1 15417
+D5
+~
+~
+0 -1 15415
+S
+#15417
+North Parapet~
+   You are standing on the top of the northern parapet of Dirk's Castle.
+You see the hills of moria to the north and the city of MidGaard to the
+west.
+~
+154 8 0
+D5
+~
+~
+0 -1 15416
+S
+#15418
+South Foyer~
+   You are standing in the south foyer of Dirk's Castle.  To the north
+is the north end of the foyer and to the east is the main hall.  Some
+stairs lead up to the upstairs hall.
+~
+154 8 0
+D0
+~
+~
+0 -1 15414
+D1
+~
+~
+0 -1 15413
+D2
+~
+~
+0 -1 15419
+D4
+~~
+~
+0 -1 15422
+S
+#15419
+South Tower Base~
+   You are at the base of the south tower.  A great stair case leads up
+to the south tower.  To the north is the main gate.
+~
+154 8 0
+D0
+~
+~
+0 -1 15412
+D1
+~
+~
+0 -1 15418
+D4
+~
+~
+0 -1 15420
+S
+#15420
+South Stairs~
+   You are standing on the south stairs that lead up to the south 
+parapet.  Down is the base of the south tower.
+~
+154 8 0
+D4
+~
+~
+0 -1 15421
+D5
+~
+~
+0 -1 15419
+S
+#15421
+South Parapet~
+   You are standing on the south parapet of Dirk's Castle.  To the north
+you see the northern parapet.  To the west you see the fine city of
+Midgaard.
+~
+154 8 0
+D5
+~
+~
+0 -1 15420
+S
+#15422
+Upstairs Hall~
+   This is the hall upstairs that leads to the master bedroom.
+~
+154 8 0
+D0
+~
+~
+0 -1 15423
+D5
+~
+~
+0 -1 15418
+S
+#15423
+Master Bedroom~
+   This is Dirk's master bedroom.  This place is his private room.  On
+the headstand of the waterbed is a photo of a dark haired girl.  The 
+inscription on it reads: Loveya Kitty.
+~
+154 8 0
+D3
+~
+~
+0 -1 15422
+S
+#15424
+Secret Stairs~
+   These are secrets steps leading down to what looks like a private
+cellar.  It might be dangerous down there.
+~
+154 1 0
+D4
+~
+step~
+2 15410 15415
+D5
+~
+~
+0 -1 15425
+S
+#15425
+Dirk's Cellar~
+   It looks like an ordinary cellar but looks are not always what they
+seem.  Most people store stuff in cellars, but what would a god store?
+~
+154 1 0
+D4
+~
+~
+0 -1 15424
+S
+#15426
+Alcove~
+   This is a small alcove behind Dirk's coat closet.  To the south is the
+north foyer.  To the east you see a small passage way through the wall.
+~
+154 9 0
+D1
+~
+~
+0 -1 15427
+D2
+~
+closet~
+1 -1 15414
+S
+#15427
+In the Wall~
+   You are inside the walls of Dirk's castle.  The air is musty and thick
+but is laced with the smell of old oil.
+~
+154 9 0
+D1
+~
+~
+0 -1 15428
+D3
+~
+~
+0 -1 15426
+S
+#15428
+In the Wall~
+   You are at the end of a small passage way in the walls of Dirk's castle.
+The smell of old oil is strong here.  The passage way continues to the
+west.  There are some concrete stairs leading down, but it is too dark to
+see where they lead.
+~
+154 13 0
+D3
+~
+~
+0 -1 15427
+D5
+~
+~
+0 -1 15431
+S
+#15429
+The subway cavein~
+  You are standing at the west end of a subway tunnel.  The tunnel is
+blocked to the west by a cavein.  The tunnel continues to the east.
+~
+154 9 0
+D1
+~
+~
+0 -1 15430
+S
+#15430
+Subway Tunnel~
+   You are standing in a long east-west subway tunnel.  It continues
+on to the east and the west.
+~
+154 9 0
+D1
+~
+~
+0 -1 15431
+D3
+~
+~
+0 -1 15429
+S
+#15431
+Subway Tunnel~
+   You are standing in a long east-west subway tunnel.  The tunnel continues
+on to the east and the west.  There are some stairs leading up here though
+the sign over the stairs has faded to illegibility.
+~
+154 9 0
+D1
+~
+~
+0 -1 15432
+D3
+~
+~
+0 -1 15430
+D4
+~
+~
+0 -1 15428
+S
+#15432
+Subway Tunnel~
+   You are standing in a long east-west tunnel.  There is a small hole
+through the wall to the south.
+~
+154 9 0
+D0
+~
+~
+0 -1 15435
+D1
+~
+~
+0 -1 15433
+D3
+~
+~
+0 -1 15431
+S
+#15433
+Subway Tunnel~
+  You are standing in a long east-west tunnel.  There is a broken caution
+sign half blocking the way to the east, but its light still casts a dim
+glow on what looks like a split in the earth.
+~
+154 8 0
+D1
+Split in the Earth.~
+~
+0 -1 15434
+D3
+~
+~
+0 -1 15432
+S
+#15434
+Split in the Earth~
+   You realize your mistake as you tumble head over heels down the steep
+bank.  You feel stupid.  Hell, you ARE stupid.
+~
+154 0 0
+S
+#15435
+Small service access~
+   You are in a service access tunnel for the subway.  There is a hole to
+the south leading to the main subway tunnel.  There is a service ladder
+leading down to the main service tunnels here.
+~
+154 13 0
+D2
+~
+~
+0 -1 15432
+D5
+~
+~
+0 -1 15442
+S
+#15436
+The Northern Bend~
+   You are standing in a northern bend of the subway service tunnel.  The
+tunnel continues to the east and south.
+~
+154 9 0
+D1
+~
+~
+0 -1 15437
+D2
+~
+~
+0 -1 15441
+S
+#15437
+Northeastern Bend~
+   This is the northeastern bend of the subway service tunnel.  The service
+tunnel continues to the west and the south.
+~
+154 9 0
+D2
+~
+~
+0 -1 15438
+D3
+~
+~
+0 -1 15436
+S
+#15438
+Curve in tunnel~
+   This is a curve in the subway service tunnel.  The tunnel continues on
+to the east and the south.
+~
+154 9 0
+D1
+~
+~
+0 -1 15437
+D2
+~
+~
+0 -1 15442
+S
+#15439
+Eastern Bend~
+   This is the eastern bend in the service tunnel for the subway.  The
+tunnel continues to the east and south.
+~
+154 9 0
+D1
+~
+~
+0 -1 15440
+D2
+~
+~
+0 -1 15443
+S
+#15440
+Service Tunnel~
+   You are in the service tunnel for the subway.  The tunnel continues on
+to the east and west.
+~
+154 9 0
+D1
+~
+~
+0 -1 15441
+D3
+~
+~
+0 -1 15439
+S
+#15441
+Service Tee~
+   You are in a tee in the service tunnel.  The tunnel continues north and
+south.  There is a passage way to the west.
+~
+154 9 0
+D0
+~
+~
+0 -1 15436
+D2
+~
+~
+0 -1 15445
+D3
+~
+~
+0 -1 15440
+S
+#15442
+Service Entrance~
+   You are in the entrance to the service tunnels for the subway.  The
+tunnel continues on to the north and south.  There is a service ladder
+leading up.
+~
+154 9 0
+D0
+~
+~
+0 -1 15438
+D2
+~
+~
+0 -1 15445
+D4
+~
+~
+0 -1 15435
+S
+#15443
+Southwestern Bend~
+   You are in the southwestern bend of the subway service tunnel.  The
+tunnel continues to the north.  To the east is an abandoned service office.
+There is a smell of crackling ozone in the air.
+~
+154 9 0
+D0
+~
+~
+0 -1 15439
+D1
+~
+~
+0 -1 15444
+S
+#15444
+Service Office~
+   You are in the service office.  Its old occupants have been removed
+(or eaten) long ago.  Now the place is a shambled dragon's lair.
+~
+154 9 0
+D3
+~
+~
+0 -1 15443
+S
+#15445
+Southern Bend~
+   You are in the southern bend of the subway service tunnel.  The tunnel
+continues to the north and east.
+~
+154 9 0
+D0
+~
+~
+0 -1 15441
+D1
+~
+~
+0 -1 15442
+S
+#15460
+Path to Moksha~
+  You are a dusty path leading to what most Indian religions
+call Moksha, or release from the continuous cycle of death and
+rebirth.  There is total nothingness in the air.
+~
+154 0 0
+D1
+~
+~
+0 -1 15461
+D3
+~
+~
+0 -1 15510
+S
+#15461
+Gurdwara of Durga~
+   The Gurdwara of Durga is a small room with a statue against the
+northern wall.  Here, the great Sikhu warriors worship the
+Hindu goddess of death -- Durga.  You sense nothingness, no evil
+and no powers of good.
+~
+154 8200 0
+D3
+~
+~
+0 -1 15460
+E
+statue wall durga~
+  It is a statue of the Hindu Goddess of Death, Durga.  She is also
+known in the Hindu religion as Kali.  The statue is wearing a
+necklace of human skulls.  In this statue she is depicted drinking
+human blood from a flask and ripping the flesh off of a human
+warrior.  The very thought of meeting Durga face-to-face brings
+chills through your body.
+~
+S
+#99999
+$~

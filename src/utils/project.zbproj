@@ -1,0 +1,7 @@
+showmemoryusage = true
+
+ide.filenames = {
+    "KZIOLib.lua",
+    "KZoneCheck.lua",
+    "KZMain.lua",
+}

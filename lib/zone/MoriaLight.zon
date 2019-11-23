@@ -1,0 +1,66 @@
+Moria Light~
+15599 30 2
+*
+* Level 1
+*
+M 0 15510 1 15540     The large snake
+G 1 15511 1          Carry a goblin corpse
+P 1 15512 1 15511     Which contains 500 coins.
+*
+M 0 15511 2 15535     a green snake
+M 0 15511 2 15525     a green snake
+*
+M 0 15512 3 15533     a centipede
+M 0 15512 3 15527     a centipede
+M 0 15512 3 15530     a centipede
+*
+M 0 15513 6 15531     a kobold
+M 0 15513 6 15531     a kobold
+M 0 15513 6 15523     a kobold
+M 0 15513 6 15523     a kobold
+M 0 15513 6 15537     a kobold
+M 0 15513 6 15537     a kobold
+*
+M 0 15514 3 15525     an orc
+M 0 15514 3 15538     an orc
+M 0 15514 3 15538     an orc
+*
+M 0 15515 1 15532     a large orc
+E 1 15510 5 1        ring of weakness on left finger
+*
+* Moria level 2
+*
+M 0 15560 1 15572     a warrior
+G 1 15561 3          give him a helmet of savin' throw
+*
+M 0 15561 4 15580     a warrior
+M 0 15561 4 15560     a warrior
+M 0 15561 4 15583     a warrior
+M 0 15561 4 15565     a warrior
+*
+M 0 15562 3 15566     a hobgoblin
+M 0 15562 3 15575     a hobgoblin
+M 0 15562 3 15569     a hobgoblin
+*
+M 0 15563 2 15568     a snake
+M 0 15563 2 15578     a snake@
+*
+M 0 15564 3 15570     a centipede
+M 0 15564 3 15563     a centipede
+M 0 15564 3 15562     a centipede
+*
+M 0 15565 2 15574     a hobgoblin
+G 1 15560 100         give him a purple potion
+M 0 15565 2 15581     a hobgoblin
+G 1 15560 100         give him a purple potion
+*
+M 0 15566 2 15577     an orc
+M 0 15566 2 15567     an orc
+*
+O 0 15562 8 15578     plant a mushroom
+O 0 15562 8 15579     plant a mushroom
+O 0 15562 8 15580     plant a mushroom
+O 0 15562 8 15581     plant a mushroom
+*
+S
+$~

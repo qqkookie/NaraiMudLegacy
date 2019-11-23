@@ -1,0 +1,198 @@
+KAIST~
+19199 30 1
+*
+M 0 19003 20 19010  Id student
+M 0 19003 20 19010
+M 0 19003 10 19010
+M 0 19004 20 19010  Biri
+M 0 19007 10 19010  takkari
+M 0 19008 10 19010  female
+M 0 19009 5 19010   joykyo
+G 0 19010 1 1       Stair key
+M 0 19010 3 19061   Professor
+E 1 19000 2 16      sword
+E 1 19004 1 5       Armor
+E 1 19007 2 1       ring
+M 0 19003 20 19021  Id student
+M 0 19003 20 19021
+M 0 19003 10 19021
+M 0 19004 20 19021  Biri
+M 0 19005 20 19021  Bibi
+M 0 19006 5 19021   Boss
+M 0 19008 10 19021  female
+M 0 19009 5 19021   joykyo
+M 0 19003 20 19023  Id student
+M 0 19003 10 19023
+M 0 19004 20 19023  Biri
+M 0 19008 10 19023  female
+M 0 19003 20 19025  Id student
+M 0 19003 20 19025
+M 0 19003 10 19025
+M 0 19004 20 19025  Biri
+M 0 19005 20 19025  Bibi
+M 0 19003 20 19021  Id student
+M 0 19003 20 19024  Id student
+M 0 19003 20 19024
+M 0 19003 10 19041
+M 0 19004 20 19041  Biri
+M 0 19005 20 19041  Bibi
+M 0 19006 5 19041   Boss
+M 0 19007 10 19042  takkari
+M 0 19008 10 19042  female
+M 0 19009 5 19042   joykyo
+*
+M 0 19013 1 19019   Zuzius
+E 1 19003 1 0       light
+M 0 19014 2 19019   Surin
+E 1 19011 1 17      Zuzius key
+M 0 19003 20 19045  Id student
+M 0 19003 20 19045
+M 0 19003 10 19045
+M 0 19004 20 19045  Biri
+M 0 19005 20 19045  Bibi
+M 0 19006 5 19044   Boss
+M 0 19007 10 19044  takkari
+M 0 19006 5 19044   Boss
+M 0 19008 10 19065  female
+M 0 19014 5 19045   joykyo
+M 0 19015 1 19045   3 zuzius
+E 1 19007 2 1       ring
+E 1 19012 1 17      4th floor key
+E 1 19005 1 20      leg-plate
+*
+M 0 19003 20 19064  Id student
+M 0 19003 20 19064  Id student
+M 0 19003 20 19064  Id student
+M 0 19003 20 19063
+M 0 19003 10 19063
+M 0 19004 20 19061  Biri
+M 0 19005 20 19061  Bibi
+M 0 19006 5 19061   Boss
+M 0 19007 10 19061  takkari
+M 0 19008 10 19063  female
+M 0 19008 10 19063  female
+M 0 19008 10 19063  female
+M 0 19009 5 19061   joykyo
+M 0 19016 1 19061   Nimpus 
+E 1 19013 1 17      Prof key
+E 1 19006 1 13      belt
+M 0 19003 20 19059
+M 0 19003 20 19059
+M 0 19003 10 19059
+M 0 19004 20 19039  Biri
+M 0 19005 20 19039  Bibi
+M 0 19006 7 19039   Boss
+M 0 19007 10 19039  takkari
+*
+M 0 19011 1 19005   Auto keeper
+E 1 19001 1 17      auto key
+E 1 3022 200 16
+M 0 19012 1 19008   Door keeper
+E 1 19002 1 17      door key
+E 1 3022 200 16
+M 0 19017 1 19070   Queen ID
+E 1 19008 1 16      pencile chok
+E 1 19009 1 1       2hogwan key
+M 0 19018 1 19070   Lover
+D 0 19005 3 2       auto
+D 0 19007 1 2
+D 0 19010 2 2       door 3101
+D 0 19008 0 2
+D 0 19011 4 2       stair
+D 0 19013 4 2       panty
+D 0 19033 4 2       two
+D 0 19059 4 2       prof
+*
+M 0 19020 20 19095  Student
+M 0 19020 20 19095  Student
+M 0 19020 20 19099  Student
+M 0 19020 20 19099  Student
+M 0 19020 20 19094  Student
+M 0 19020 20 19094  Student
+M 0 19020 20 19092
+M 0 19020 20 19093
+M 0 19008 10 19095  Female
+M 0 19008 10 19097
+M 0 19008 10 19092
+M 0 19008 10 19094
+M 0 19021 1 19093   Massmon
+E 1 19022 1 17      Mascot
+M 0 19022 2 19093   Velomon
+E 1 19023 1 3       Scarf
+M 0 19022 2 19092   
+M 0 19023 1 19092   Accelemon
+E 1 19024 1 9       Gloves
+M 0 19024 1 19097   Super model
+M 0 19025 1 19096   Cashmon
+E 1 19014 1 17      chuem key
+*
+M 0 19020 20 19114  Student
+M 0 19020 20 19113  Student
+M 0 19020 20 19115  Student
+M 0 19020 20 19112 
+M 0 19020 20 19117
+M 0 19026 10 19114   Chief Student
+M 0 19026 10 19115
+M 0 19026 10 19113
+M 0 19027 1 19112   Satteleton
+E 1 19025 1 7        bohos
+M 0 19028 1 19116   Controller
+M 0 19029 3 19118   Proffesor kim
+E 1 19015 1 17      duche key
+M 0 19029 3 19113
+M 0 19030 2 19117   Doctor park
+E 1 19026 1 6       hat
+*
+M 0 19026 10 19126  chief student
+M 0 19026 10 19130
+M 0 19026 10 19128
+M 0 19030 2 19122   Doctor park
+E 1 19016 1 17      seche key
+M 0 19029 3 19125   Proffesor kim
+M 0 19031 2 19127   ph doctor
+E 1 19027 1 11      shield
+M 0 19031 2 19130
+*
+M 0 19032 1 19152   computer
+E 1 19028 1 12      mangto
+E 1 19017 1 17      computer key
+M 0 19033 1 19147   wave
+E 1 19029 2 15      band
+E 1 19018 1 17      micro key
+M 0 19034 1 19150   phonemon
+E 1 19029 2 15      band
+E 1 19019 1 17      communcation key
+M 0 19035 1 19149   breadboard
+E 1 19030 1 1       ring
+E 1 19020 1 17      circuit key
+M 0 19036 1 19151   phase lag
+E 1 19031 1 10      arm plate
+E 1 19021 1 17      control key
+M 0 19039 1 19158   electrical king
+E 1 19033 1 17      1ho gwan key
+E 1 19032 2 18      knee band
+M 0 19019 1 19158   electrical queen
+E 1 19032 2 18      knee band
+M 0 19026 10 19146  chief student
+M 0 19026 10 19148
+M 0 19026 10 19139
+M 0 19026 10 19144
+*
+M 0 19037 3 19074  CC M
+M 0 19037 3 19075 
+M 0 19037 3 19078
+M 0 19038 3 19076  CC F
+M 0 19038 3 19077   
+M 0 19038 3 19078
+*
+D 0 19087 4 2      chueum
+D 0 19104 4 2      duche
+D 0 19124 4 2      seche
+D 0 19153 2 2      computer
+D 0 19154 2 2      micro
+D 0 19155 2 2      communication
+D 0 19156 2 2      circuit
+D 0 19157 2 2      control
+*
+S
+$~

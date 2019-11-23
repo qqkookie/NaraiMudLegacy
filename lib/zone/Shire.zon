@@ -1,0 +1,143 @@
+SHIRE~
+16299 25 2
+O 0 16212 1 16213		Sign
+M 0 16228 1 16215  	General Store Shopkeeper
+G 1 3062 999		bags
+G 1 16314 999		lanterns
+M 0 16230 1 16217		Blacksmith
+G 1 14611 5		Halberd
+G 1 16231 5		gold ring
+G 1 16111 10             backpack
+M 0 16214 2 16218		Nursemaids
+M 0 16214 2 16218
+M 0 16213 6 16218		Toddlers
+M 0 16213 6 16218
+M 0 16213 6 16218
+M 0 16213 6 16218
+M 0 16213 6 16218
+M 0 16213 6 16218
+M 0 16220 8 16220		Non-mobile shiriffs
+E 1 16219 3 16		Tiny dagger
+E 1 3146 110 5		Leather armour
+M 0 16220 8 16220
+E 1 3146 110 5
+M 0 16221 4 16221		Mobile shiriff
+E 1 3146 110 5
+M 0 16222 1 16221		Thain
+E 1 3025 110 16		Long sword
+E 1 16218 5 13
+M 0 16238 4 16224		Country bumpkin
+M 0 16238 4 16225		Country bumpkin
+M 0 16223 1 16226		Innkeeper - Ivy Bush
+G 1 16220 999		eggs
+G 1 3113 999		ale
+G 1 3310 999		cups
+M 0 16233 4 16226		Seasoned adventurers
+M 0 16233 4 16226
+M 0 16234 2 16226		Gossips
+M 0 16234 2 16226
+M 0 16237 7 16226		Chic urbanites
+M 0 16237 7 16226
+M 0 16237 7 16226
+M 0 16231 1 16227		Battle master
+M 0 16236 3 16227		Trainees
+E 1 3021 110 16		Small sword
+M 0 16236 3 16227
+E 1 3021 110 16
+M 0 16236 3 16227
+E 1 3021 110 16
+M 0 16220 8 16229		Non-mobile shiriffs
+E 1 16219 3 16		Tiny dagger
+E 1 3146 110 5
+M 0 16221 8 16229
+E 1 3146 110 5
+M 0 16221 4 16229		Mobile shiriff
+E 1 3146 110 5
+M 0 16229 1 16231		Grocer
+G 1 16213 999		pipeweed bread
+M 0 16225 6 16233		Mill workers
+M 0 16225 6 16233
+M 0 16225 6 16234
+M 0 16225 6 16234
+M 0 16225 6 16234
+M 0 16224 1 16234		Miller
+M 0 16225 6 16235		Mill workers
+M 0 16232 9 16237		Halfing youths
+M 0 16232 9 16237
+M 0 16232 9 16237
+M 0 16232 9 16239
+M 0 16232 9 16239
+M 0 16232 9 16239
+M 0 16232 9 16240
+M 0 16232 9 16240
+M 0 16232 9 16240
+M 0 16235 1 16238		Beauty
+M 0 16210 1 16238		Wizard
+E 1 16214 2 12		Silvery cloak
+E 1 16210 1 0		Rainbow staff
+M 0 16226 1 16246		Elven warrior
+E 1 16216 1 16		Elven bow
+E 1 3140 25 6		Bronze helmet 
+M 0 16227 1 16246		Dwarven prince
+E 1 16217 1 16		Mithril axe
+E 1 3141 11 5		Bronze breast plate
+M 0 16211 1 16247		Ring keeper
+E 1 16211 1 16		Sting
+E 1 16215 1 1		One ring
+E 1 3144 15 7		Bronze leggings
+M 0 16218 1 16248		Bull
+M 0 16216 5 16249		Pigs
+M 0 16216 5 16249
+M 0 16216 5 16249
+M 0 16216 5 16249
+M 0 16216 5 16249
+M 0 16212 1 16251		Farmer Gamgee
+M 0 16215 3 16252		Cows
+M 0 16215 3 16252
+M 0 16215 3 16252
+M 0 16219 4 16252		Horses
+M 0 16219 4 16252
+M 0 16219 4 16252
+M 0 16219 4 16252
+M 0 16217 6 16253		Chickens
+G 1 16220 110		egg
+M 0 16217 6 16253
+G 1 16220 110
+M 0 16217 6 16253
+G 1 16220 110
+M 0 16217 6 16253
+G 1 16220 110
+M 0 16217 6 16253
+G 1 16220 110
+M 0 16217 6 16253
+G 1 16220 110
+M 0 16240 1 16254		Innkeeper - Green Dragon
+G 1 16220 999		eggs
+G 1 3113 999		ale
+G 1 3310 999		tea
+M 0 16241 1 16267         receptionist - green dragon
+M 0 16233 6 16254		Seasoned adventurers
+M 0 16233 6 16254
+M 0 16233 6 16254
+M 0 16237 7 16254		Chic urbanites
+M 0 16237 7 16254
+M 0 16237 7 16254
+M 0 16237 7 16254
+M 0 16220 8 16255		Non-mobile shiriffs
+E 1 16219 3 16		Tiny daggers
+E 1 3146 110 5		Leather armour
+M 0 16221 8 16255
+E 1 3146 110 5
+M 0 16221 4 16255		Mobile shiriff
+E 1 3146 110 5
+M 0 16220 8 16263		Non-mobile shiriffs
+E 1 16219 3 16		Tiny daggers
+E 1 3146 110 5		Leather armour
+M 0 16220 8 16263
+E 1 3146 110 5
+M 0 16221 4 16263		Mobile shiriff
+E 1 3146 110 5
+M 0 16238 4 16264		Country bumpkin
+M 0 16238 4 16265		Country bumpkin
+S
+$~

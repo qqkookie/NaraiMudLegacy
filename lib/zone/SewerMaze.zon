@@ -1,0 +1,66 @@
+Sewer MAZE~
+14599 25 2
+* The lair
+D 0 14501 3 2     Lock stone door
+D 0 14501 2 1     Close wood door
+D 0 14502 0 1     Close wood door
+D 0 14508 0 1     Close door
+*
+M 0 14500 1 14501  Load master mindflayer
+E 1 14500 4 16      Equip master with devil rod
+E 1 14503 4 3     Equip master with cloak
+G 1 14505 7200    Give key to master
+O 1 14504 6 14500  Potion into treasury
+O 1 14510 1 14500  Treasure into treasury
+M 0 14501 1 14503  Load senior mindflayer
+E 1 14501 4 16 Equip with large mace
+M 0 14502 2 14505  Junior mindflayer
+E 1 14502 8 16 Equip with large mace
+M 0 14502 2 14507  Load junior mindflayer
+E 1 14502 8 16 Equip with small mace
+O 0 14506 4 14506  Load Skull
+* The sewermaze
+O 0 14508 20 14511 Load light stick
+O 0 14508 20 14518        "
+O 0 14508 20 14530	"
+O 0 14509 4 14514  Load MUD-boots
+M 0 14503 10 14514 Load wererat
+E 1 3026 16 16 Equip with short sword
+M 0 14503 10 14513 Load wererat
+E 1 3026 16 16 Equip with short sword
+M 0 14503 10 14515 Load wererat
+E 1 3026 16 16 Equip
+M 0 14503 10 14517 Load wererat
+E 1 3026 16 16 Equip
+M 0 14503 10 14519 Load wererat
+E 1 3026 16 16 Equip
+M 0 14503 10 14521 Load wererat
+E 1 3026 16 16 Equip
+M 0 14503 10 14523 Load wererat
+E 1 3026 16 16 Equip
+M 0 14503 10 14525 Load wererat
+E 1 3026 16 16 Equip
+M 0 14503 10 14533 Load wererat
+E 1 3026 16 16 Equip
+M 0 14503 10 14533 Load wererat
+E 1 3026 16 16 Equip
+M 0 14504 1 14534  Load gigantic rat
+* The small Hell
+D 0 14580 4 1               Close Secret entrance
+D 0 14426 5 1                ------- || -------
+M 0 14312 5 14585             The Sewer Rat
+M 0 14312 5 14585             The Sewer Rat
+M 0 14411 8 14586            The Horrifying Mudmonster
+M 0 14411 8 14586            The Horrifying Mudmonster
+M 0 14411 8 14581            The Horrifying Mudmonster
+M 0 14411 8 14581            The Horrifying Mudmonster
+M 0 14411 8 14580            The Horrifying Mudmonster
+D 1 14426 5 1
+D 1 14580 4 1
+*
+*       Move FROM "SecondSewer.zon" (Duplicate)
+*D 1 14426 5 1
+*D 1 14580 4 1
+*
+S
+$~

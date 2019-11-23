@@ -1,0 +1,44 @@
+Haon Dor Light~
+16399 20 2
+* Mobiles & equipment
+M 0 16310 1 16319  John the Lumberjack
+E 1 16310 10 16     Axe Equipped (WIELD)
+E 1 16311 10 5      shirt Equipped (BODY)
+E 1 16312 10 8      boots Equipped (FEET)
+D 0 16319 0 1     Cabin door must be closed
+*
+*       Move TO "HaonDorDark.zon"
+*M 0 16432 1 16448	Jim the Lumberjack
+*E 1 16431 4 16		wields a scythe
+*E 1 16435 4 8		good boots
+*
+M 0 16318 3 16323  Mouse
+M 0 16311 5 16322  Rabbit 1
+M 0 16311 5 16325         2
+M 0 16311 5 16327         3
+M 0 16311 5 16329         4
+M 0 16312 1 16332  Brown bear
+O 0 3078 2 16332    Tribe cap
+M 0 16314 1 16333  Fallow deer
+M 0 16315 3 16324  Brown fox
+M 0 16315 3 16325  Brown fox
+M 0 16315 3 16326  Brown fox
+M 0 16316 4 16333  Squirrel
+M 0 16316 4 16327
+M 0 16316 4 16326
+M 0 16316 4 16325
+M 0 16316 4 16324
+* Objects
+O 0 16313 1 16320  John's fireplace
+O 0 16314 1 16320  John's lantern
+O 0 16315 1 16320  John's wooden chest
+P 1 16317 1 16315    Coins (In chest)
+P 1 16316 1 16313  John's brass key (In fireplace)
+O 0 16323 3 16320  Water barrel
+O 0 16320 2 16333  Blackberries
+O 0 16321 3 16316  Mushroom 1
+O 0 16321 3 16323           2
+O 0 16321 3 16326           3
+O 0 16322 1 16310  The news sign
+S
+$~

@@ -1,34 +1,34 @@
-#0
+#2900
 The Void~
   You don't think that you are not floating in nothing.
 ~
-0 8 1
+29 8 1
 D4
 void~
 ~
 0 -1 3001
 S
-#1
+#2901
 Limbo~
    You are floating in a formless void, detached from all sensation of physical
 matter, surrounded by swirling glowing light, which fades into the relative
 darkness around you without any trace of edges or shadow.
    There is a "No Tipping" notice pinned to the darkness.
 ~
-0 8 1
+29 8 1
 D4
 void~
 ~
 0 -1 3001
 S
-#2
+#2902
 The Wizards Lounge~
 
   Say!  Isn't this a nifty room?
   There is a NOTE here.  You might want to "look note".
 
 ~
-0 47246 0
+29 47246 0
 D5
 ~
 ~
@@ -48,19 +48,13 @@ The note says:
 
 ~
 S
-#12
+#2912
 The Chat Room~
    You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
 which twinkles happily in a warm fireplace.  There are no doors out.  Clearly
 the owner of this room needs none.
 ~
-0 520 0
-S
-#27
-The Secret Room~
-   I guess it's no secret anymore?
-~
-0 6656 0
+29 520 0
 S
 #99999
 $~

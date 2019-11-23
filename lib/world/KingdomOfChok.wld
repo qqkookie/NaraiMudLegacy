@@ -1,0 +1,666 @@
+#18310
+In front of Chok field.~
+    You are on the in front of Chok field.
+~
+183 0 1
+D0
+~
+~
+0 -1 3412
+D1
+~
+~
+0 -1 18410
+D2
+~
+~
+0 -1 18311
+D3
+~
+~
+0 -1 18600
+D4
+~
+~
+0 -1 3001
+S
+#18311
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0
+~
+~
+0 -1 18310
+D1
+~
+~
+0 -1 18312
+D2
+~
+~
+0 -1 18315
+S
+#18312
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D1
+~
+~
+0 -1 18313
+D2
+~
+~
+0 -1 18316
+D3
+~
+~
+0 -1 18311
+S
+#18313
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D1
+~
+~
+0 -1 18314
+D2
+~
+~
+0 -1 18317
+D3
+~
+~
+0 -1 18312
+S
+#18314
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D2
+~
+~
+0 -1 18318
+D3
+~
+~
+0 -1 18313
+S
+#18315
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0
+~
+~
+0 -1 18311
+D1
+~
+~
+0 -1 18316
+D2
+~
+~
+0 -1 18319
+D3
+~
+~
+0 -1 18318
+S
+#18316
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18312
+D1
+~
+~
+0 -1 18317
+D2
+~
+~
+0 -1 18320
+D3
+~
+~
+0 -1 18315
+S
+#18317
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18313
+D1
+~
+~
+0 -1 18318
+D2
+~
+~
+0 -1 18321
+D3
+~
+~
+0 -1 18316
+S
+#18318
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18314
+D1
+~
+~
+0 -1 18315
+D2
+~
+~
+0 -1 18322
+D3
+~
+~
+0 -1 18317
+S
+#18319
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18315
+D1
+~
+~
+0 -1 18320
+D2
+~
+~
+0 -1 18323
+D3
+~
+~
+0 -1 18322
+S
+#18320
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18316
+D1
+~
+~
+0 -1 18321
+D2
+~
+~
+0 -1 18324
+D3
+~
+~
+0 -1 18319
+S
+#18321
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18317
+D1
+~
+~
+0 -1 18322
+D2
+~
+~
+0 -1 18325
+D3
+~
+~
+0 -1 18320
+S
+#18322
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18318
+D1
+~
+~
+0 -1 18319
+D2
+~
+~
+0 -1 18326
+D3
+~
+~
+0 -1 18321
+S
+#18323
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0
+~
+~
+0 -1 18319
+D1
+~
+~
+0 -1 18324
+S
+#18324
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0
+~
+~
+0 -1 18320
+D1
+~
+~
+0 -1 18325
+D3
+~
+~
+0 -1 18323
+S
+#18325
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0
+~
+~
+0 -1 18321
+D1
+~
+~
+0 -1 18326
+D3
+~
+~
+0 -1 18324
+S
+#18326
+The Chok field.~
+    You are on the Chok field.
+~
+183 1 2
+D0 
+~
+~
+0 -1 18322
+D2
+~
+~
+0 -1 18327
+D3
+~
+~
+0 -1 18325
+S
+#18327
+In front of Chok castle.~
+   You are standing in front of Chok castle.
+   There is sleeping very big general named Jangbi..
+~
+183 4097 1
+D0
+~
+~
+0 -1 18326
+D2
+~
+gate~
+4 18328 18328
+S
+#18328
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D0
+~
+gate~
+4 18328 18327
+D1
+~
+~
+0 -1 18330
+D2
+~
+~
+0 -1 18331
+D3
+~
+~
+0 -1 18329
+S
+#18329
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D0
+~
+~
+0 -1 18335
+D1
+~
+~
+0 -1 18328
+D2
+~
+~
+0 -1 18332
+D3
+~
+~
+0 -1 18330
+S
+#18330
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D1
+~
+~
+0 -1 18329
+D2
+~
+~
+0 -1 18333
+D3
+~
+~
+0 -1 18328
+S
+#18331
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D0
+~
+~
+0 -1 18328
+D1
+~
+~
+0 -1 18333
+D2
+~
+~
+0 -1 18334
+D3
+~
+~
+0 -1 18332
+S
+#18332
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D0
+~
+~
+0 -1 18329
+D1
+~
+~
+0 -1 18331
+D2
+~
+~
+0 -1 18335
+D3
+~
+~
+0 -1 18333
+S
+#18333
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D0
+~
+~
+0 -1 18330
+D1
+~
+~
+0 -1 18332
+D2
+~
+~
+0 -1 18336
+D3
+~
+~
+0 -1 18331
+S
+#18334
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D0
+~
+~
+0 -1 18331
+D1
+~
+door~
+1 18334 18337
+D3
+~
+~
+0 -1 18335
+S
+#18335
+The Chok castle.~
+    You are on the Chok castle.
+~
+183 4099 1
+D0
+~
+~
+0 -1 18332
+D1
+~
+~
+0 -1 18334
+D2
+~
+~
+0 -1 18329
+D3
+~
+~
+0 -1 18336
+S
+#18336
+The Chok castle.~
+    You are one the Chok castle.
+~
+183 4099 1
+D0
+~
+~
+0 -1 18333
+D1
+~
+~
+0 -1 18335
+D2
+~
+door~
+4 18339 18339
+D3
+~
+door~
+1 18334 18338
+S
+#18337
+The general Chowoon's room.~
+    There is standing general chowoon.
+~
+183 4099 1
+D3
+~
+door~
+1 18334 18334
+S
+#18338
+The general Macho's room.~
+    There is standing general Macho.
+~
+183 4099 1
+D1
+~
+door~
+1 18334 18336
+S
+#18339
+The #1 room to secret room.~
+    You are on the #1 room.
+~
+183 4099 1
+D0
+~
+door~
+4 18339 18336
+D2
+~
+~
+0 -1 18340
+S
+#18340
+The #2 room to secret room.~
+    You are on the #2 room.
+~
+183 4099 1
+D0 
+~
+~
+0 -1 18339
+D3
+~
+~
+0 -1 18341
+S
+#18341
+The #3 room to secret room.~
+    You are one the #3 room.
+~
+183 4099 1
+D0
+~
+door~
+4 18341 18342
+D1
+~
+~
+0 -1 18340
+S
+#18342
+The great general Gwanwoo's room.~
+    Great general Gwanwoo is here.
+    DO NOT TOUCH HIM IF YOU DON WANT DEATH...
+~
+183 4099 1
+D1
+~
+door~
+4 18343 18343
+D2
+~
+door~
+4 18341 18341
+S
+#18343
+The Gongmyung's room.~
+    Chok's great mosa GongMyung is here.
+~
+183 4099 1
+D1
+~
+door~
+4 18344 18344
+D3
+~
+door~
+4 18343 18342
+S
+#18344
+The king of chok room.~
+    The king of chok,Yubi is here. 
+    He thinking about future of kingdom
+~
+183 4099 1
+D1
+~
+door~
+4 18345 18345
+D3 
+~
+door~
+4 18344 18343
+S
+#18345
+THE HWATA'S MYSTERIOUS SHOP.~
+    This shop has very strange potions..
+    These have impossible power..BUT very expensive..
+~
+183 4099 1
+D1
+~
+~
+0 -1 3001
+D3
+~
+door~
+4 18345 18344
+S
+#99999
+$~

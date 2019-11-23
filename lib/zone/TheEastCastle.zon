@@ -1,0 +1,75 @@
+The East Castle~
+15399 25 2
+*
+M 0 15311 1 15345	butler
+M 0 15311 1 15334	butler
+M 0 15312 1 15383 	merlin
+G 1 16419 1	blue potion
+E 1 16502 2 6 	mages hat
+M 0 15313 20 15340 	servant
+M 0 15313 20 15342 	servant
+M 0 15313 20 15340 	servant
+M 0 15313 20 15342	servant
+M 0 15313 20 15340	servant
+M 0 15313 20 15340	servant
+M 0 15313 20 15337	servant
+M 0 15314 3 15338	cook
+M 0 15314 3 15338	cook
+M 0 15314 3 15338	cook
+M 0 15315 1 15371	jailer
+E 1 17317 2 16	give him sixheaded whip
+M 0 15316 1 15343	clergyman
+E 1 15717 1 3	holy symbol
+M 0 15317 1 15345	king
+E 1 14503 1 5	purple cloak
+M 0 15318 1 15345	queen
+O 1 15312 1 15343	chalice
+M 0 15319 3 15372	prisoner
+M 0 15319 3 15373	prisoner
+M 0 15319 3 15374	prisoner
+M 0 15320 20 15311	guard
+M 0 15320 20 15313	guard
+M 0 15320 20 15314	guard
+M 0 15320 20 15333	guard
+M 0 15320 20 15337	guard
+M 0 15320 20 15346	guard
+M 0 15320 20 15346	guard
+M 0 15320 20 15346	guard
+M 0 15320 20 15370	guard
+M 0 15320 20 15370	guard
+M 0 15320 20 15361	guard
+M 0 15321 10 15323	peasant
+M 0 15321 10 15324	peasant
+M 0 15321 10 15321	peasant
+M 0 15321 10 15322	peasant
+M 0 15321 10 15319	peasant
+M 0 15321 10 15320	peasant
+M 0 15321 10 15317	peasant
+M 0 15321 10 15318	peasant
+M 0 15321 10 15316	peasant
+M 0 15321 10 15315	peasant
+*
+D 0 15331 3 1
+D 0 15315 1 1
+*
+D 0 15329 3 1
+D 0 15317 1 1
+*
+D 0 15325 1 1
+D 0 15323 3 1
+*
+D 0 15327 1 1
+D 0 15321 3 1
+*
+D 0 15338 0 1
+D 0 15339 2 1
+*
+O 0 15311 1 15347             glass cabinet
+P 1 3141 1 15311
+P 1 3140 1 15311
+P 1 3143 1 15311
+P 1 3144 1 15311
+P 1 3142 1 15311
+*
+S
+$~

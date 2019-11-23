@@ -1,0 +1,436 @@
+#15610
+The tunnel~
+   Suddenly you feel that the tunnel leads slightly down.. The only 
+exit is to the west, and it leads down..
+~
+156 13 3
+D3
+~
+~
+0 0 15611
+S
+#15611
+The long tunnel~
+   You are in a long east-west leading tunnel. The tunnel is quite
+wide at this point.
+~
+156 9 3
+D1
+~
+~
+0 0 15610
+D3
+~
+~
+0 0 15612
+S
+#15612
+The long tunnel~
+   You are in a long east-west leading tunnel. The tunnel becomes
+narrow to the west.
+~
+156 9 3
+D1
+~
+~
+0 0 15611
+D3
+~
+~
+0 0 15613
+S
+#15613
+The long tunnel~
+   You are in a long east-west leading tunnel. The tunnel is quite
+narrow at this point. You notice a small hole leading south.
+~
+156 9 3
+D1
+~
+~
+0 0 15612
+D2
+~
+~
+0 0 15616
+D3
+~
+~
+0 0 15614
+S
+#15614
+The long tunnel~
+   You are in a long east-west leading tunnel. The tunnel starts sloping
+down towards the west.
+~
+156 9 3
+D1
+~
+~
+0 0 15613
+S
+#15615
+The golden cave~
+   You are in a giant cave, all the walls are shining with a soft golden
+light. The cave continues to the south and west.
+~
+156 8 1
+D2
+~
+~
+0 0 15618
+D3
+~
+~
+0 0 15616
+E
+light gold golden~
+It looks good, but as you look closely you notice that it has no value.
+~
+S
+#15616
+The golden cave~
+   You are in a giant cave, all the walls are shining with a soft golden
+light. The cave continues to the south and east, to the north i a narrow
+tunnel.
+~
+156 8 1
+D0
+~
+~
+0 0 15613
+D1
+~
+~
+0 0 15615
+D2
+~
+~
+0 0 15619
+E
+light gold golden~
+It looks good, but as you look closely you notice that it has no value.
+~
+S
+#15617
+The passage~
+   You are in a small passage, it leads south, to the east is a golden
+cave.
+~
+156 9 3
+D2
+~
+~
+0 0 15623
+D3
+~
+~
+0 0 15618
+S
+#15618
+The golden cave~
+   You are in a giant cave, all the walls are shining with a soft golden
+light. The cave continues to the north and west, east from you there is
+a small passage.
+~
+156 8 1
+D0
+~
+~
+0 0 15615
+D1
+~
+~
+0 0 15617
+D3
+~
+~
+0 0 15619
+E
+light gold golden~
+It looks good, but as you look closely you notice that it has no value.
+~
+S
+#15619
+The golden cave~
+   You are in a giant cave, all the walls are shining with a soft golden
+light. The cave continues to the south, east and north.
+~
+156 8 1
+D0
+~
+~
+0 0 15616
+D1
+~
+~
+0 0 15618
+D2
+~
+~
+0 0 15624
+E
+light gold golden~
+It looks good, but as you look closely you notice that it has no value.
+~
+S
+#15620
+The hole~
+   You are standing by a large hole in the floor, when you looks down
+into the darkness you feel frightened.
+~
+156 13 3
+D3
+~
+~
+0 0 15621
+S
+#15621
+The tunnel~
+   You are in a small tunnel, it leads from east to the west.
+~
+156 9 3
+D1
+~
+~
+0 0 15620
+D3
+~
+~
+0 0 15622
+S
+#15622
+The tunnel~
+   You are in a larger tunnel, it leads from west to east.
+~
+156 9 3
+D1
+~
+~
+0 0 15621
+D3
+~
+~
+0 0 15623
+S
+#15623
+The passage~
+   You are in a passage that leads towards the south. To the east 
+you see a tunnel.
+~
+156 9 3
+D0
+~
+~
+0 0 15617
+D1
+~
+~
+0 0 15622
+D2
+~
+~
+0 0 15626
+S
+#15624
+The golden cave~
+   You are in a giant cave, all the walls are shining with a soft golden
+light. The cave continues to the north, to the west you see a dark 
+passsage.
+~
+156 8 1
+D0
+~
+~
+0 0 15619
+D3
+~
+~
+0 0 15625
+E
+light gold golden~
+It looks good, but as you look closely you notice that it has no value.
+~
+S
+#15625
+The dark passage.~
+   You are in a dark passage, that leads east. In the ceiling you notice
+a small hole, just big enough to pass through.
+~
+156 9 3
+D1
+~
+~
+0 0 15624
+D4
+~
+~
+0 0 15531
+S
+#15626
+The passage~
+   You are in a passage that leads north-south. You notice a small
+light to the south.
+~
+156 9 3
+D0
+~
+~
+0 0 15623
+D2
+~
+~
+0 0 15630
+E
+light~
+Well you can't see where it comes from..
+~
+S
+#15627
+The secret tunnel~
+   You are in a secret tunnel that leads north, to the south you see
+a small chamber.
+~
+156 9 3
+D0
+~
+~
+0 0 15624
+D2
+~
+~
+0 0 15632
+S
+#15628
+The cave~
+   You are in a light cave, from torches several feets abouve your
+head fire lights the room. The cave continues to the west and south.
+To the north a small hole leads to a tunnel.
+~
+156 8 1
+D0
+~
+~
+0 0 15621
+D2
+~
+~
+0 0 15633
+D3
+~
+~
+0 0 15629
+S
+#15629
+The cave~
+   You are in a light cave, from torches several feets abouve your
+head fire lights the room. The cave continues to the east and south.
+~
+156 8 1
+D1
+~
+~
+0 0 15628
+D2
+~
+~
+0 0 15634
+D3
+~
+~
+0 0 15631
+S
+#15630
+The passage~
+   You are in a north-south leading passage. To the south you see
+light.
+~
+156 9 3
+D0
+~
+~
+0 0 15626
+D2
+~
+~
+0 0 15635
+E
+light~
+It nearly is enough to light the passage.
+~
+S
+#15631
+The secret tunnel~
+   You are in a secret tunnel that leads west, you feel evilness
+approaching you as you continue west.
+~
+156 9 3
+D3
+~
+~
+0 0 15632
+S
+#15632
+The secret chamber~
+   You are in a secret chamber, the room is filled with an evil
+feeling.
+~
+156 9 3
+D0
+~
+~
+0 0 15627
+S
+#15633
+The cave~
+   You are in a light cave, from torches several feets abouve your
+head fire lights the room. The cave continues to the north and west.
+~
+156 8 1
+D0
+~
+~
+0 0 15628
+D3
+~
+~
+0 0 15634
+S
+#15634
+The cave~
+   You are in a light cave, from torches several feets abouve your
+head fire lights the room. The cave continues to the east and north.
+To the west a passage leads north.
+~
+156 8 1
+D0
+~
+~
+0 0 15629
+D1
+~
+~
+0 0 15633
+D3
+~
+~
+0 0 15635
+S
+#15635
+The passage~
+   You are in a passage, to the east you see a cave. Light from the
+cave lights up the passage. To the north the passage leads into
+the darkness..
+~
+156 8 3
+D0
+~
+~
+0 0 15630
+D1
+~
+~
+0 0 15634
+S
+#99999
+$~

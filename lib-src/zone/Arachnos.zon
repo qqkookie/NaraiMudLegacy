@@ -1,0 +1,74 @@
+Arachnos~
+9099 22 2
+*
+M 0 9001 10 9001		young spider
+*
+M 0 9001 10 9006		young spider
+*
+M 0 9001 10 9006                young spider
+*
+M 0 9001 10 9004		young spider
+*
+M 0 9005 1 9003			wasp
+*
+M 0 9010 1 9042			bird spider
+*
+M 0 9003 1 9013			wolf spider
+*
+M 0 9008 5 9008			slave
+*
+M 0 9008 5 9008                 slave
+*
+M 0 9008 5 9008                 slave
+*
+M 0 9008 5 9008                 slave
+*
+M 0 9008 5 9008                 slave
+*
+M 0 9009 2 9027			quasit
+*
+M 0 9007 5 9035			ethereal spider
+*
+M 0 9007 5 9033			ethereal spider
+*
+M 0 9004 1 9032			stuck orc
+*
+M 0 9006 3 9021			drone spider
+G 1 1335 10                        give it a speckled potion
+*
+M 0 9006 3 9031			drone spider
+G 1 1335 10			   give it a speckled potion
+*
+M 0 9011 1 9073			Hermit
+G 1 9002 2			  give him a wizard's hat
+*
+M 0 9015 1 9050			Ki-Rin
+G 1 6109 10                        give him a blue potion
+G 1 6109 10                        give him a blue potion
+*
+M 0 9014 1 9099			Arachnos
+G 1 9001 5			  give her a thief's knife
+*G 1 9002 4			  give her a wizard's hat
+G 1 9003 4			  give her a pontiff's headdress
+G 1 9004 4			  give her a black knight's visor
+*
+M 0 9012 1 9070			Donjonkeeper
+G 1 9001 5			   give him the thief's knife
+G 1 6109 10			   give him a blue potion
+*
+M 0 9013 1 9067			guardian
+*
+M 0 9006 3 9030			drone spider
+*
+M 0 9002 1 9060  Yevaud
+E 1 9004 2 6	   give him a black knight's visor
+G 1 6109 10        a blue potion
+*
+M 0 9016 1 9030			baby dragon
+*
+M 0 9017 1 9040			elder wormkin
+*
+D 0 9092 0 1
+D 0 9099 2 1
+S
+$~

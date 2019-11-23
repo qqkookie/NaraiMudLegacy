@@ -1,0 +1,2056 @@
+#16800
+The dark woods~
+You are travelling through woods that are as dark as night. The trees above
+block all light and wind. The air is stagnant and smells of death and decay.
+The lack of sounds and other signs of life make your skin crawl and you feel
+very much like turning back and heading for safer areas. The path leads north
+into more open lands while it also leads south into the darkness of the forest.
+A small sign is posted here.
+~
+168 4 3
+D2
+~
+~
+0 -1 16801
+E
+sign~
+    []================================[]
+     |      BEWARE!      | Hope you   |
+     |   Travellers are  | enjoy it!  |
+     |  advised to stay  | <------->  |
+     |   in groups for   |  Skurge    |
+     |      safety.      | Ragnarok   |
+    []================================[]
+~
+S
+#16801
+The dark woods~
+You wearily travel through the darkness of the forest. Huge skeletal trees
+line the edges of the path and tower above you. Errant rays of light spear
+down through the gaps in the canopy above and provide small spots of light
+that seem to attract what little foliage can grow on the dark forest floor.
+The path winds north and south into darkness.
+~
+168 5 3
+D0
+~
+~
+0 -1 16800
+D2
+~
+~
+0 -1 16802
+S
+#16802
+The small intersection in the forest~
+The forest path splits here in three directions. Small paths lead to the east,
+north, and south. The trees above leave a gap which allows light to fill the
+intersection. It is almost as though you are in a circle of light that
+provides sanctuary in this land of darkness.
+Something has been scrawled in the dirt in blood here.
+~
+168 0 3
+D0
+~
+~
+0 0 16801
+D1
+~
+~
+0 0 16804
+D2
+~
+~
+0 0 16803
+E
+blood dirt scrawl~
+BeWAre tHe SwAmP oGreS......
+~
+S
+#16803
+The edge of the forest and hills~
+You stand at the edge of a dark forest. A path leads north into the forest and
+its deadly darkness and silence. Looking west, you see a path that leads up
+into a foothills region. Standing here on the boundary between light and
+darkness, you feel very vulnerable and alone.
+~
+168 0 4
+D0
+~
+~
+0 -1 16802
+D3
+~
+~
+0 -1 16809
+S
+#16804
+In the dense forest~
+You walk along a small path leading through a dark forest. No sounds can be
+heard and little light penetrates the canopy of trees above you. The air here
+smells musty and you long for a fresh breath. You see an intersection of paths
+to the west. The path you are on leads south into the darkening woods.
+~
+168 1 3
+D2
+~
+~
+0 0 16805
+D3
+~
+~
+0 0 16802
+S
+#16805
+The dark forest path~
+You continue on through darkness and gloom. The path below you has become a
+wet quagmire. It is difficult to walk and you make squishing sounds as you
+move on. Looking east, you see a swampy path. The main path leads north and
+south into darkness.
+~
+168 1 3
+D0
+~
+~
+0 0 16804
+D1
+~
+~
+0 -1 16827
+D2
+~
+~
+0 0 16806
+S
+#16806
+A turn in the path~
+The forest path turns here towards the north and west. To the north, you see
+that the ground has become dank and swampy. While, the western path appears
+to be entering a hilly area. You hear sounds of swamp creatures to the north
+east.
+~
+168 1 3
+D0
+~
+~
+0 0 16805
+D3
+~
+~
+0 0 16807
+S
+#16807
+The bloody intersection~
+This is a small intersection. Paths lead east, west, and south. You are struck
+by the carnage here when you enter the clearing. There appears to have been a
+great battle here. Blood is everywhere and the ground is all torn up. Pieces
+of beaten armour and broken blades lie all around. Examining the tracks here
+lead you to believe that the dead and wounded were drug off in two directions,
+south and east.
+~
+168 1 4
+D1
+~
+~
+0 0 16806
+D2
+~
+~
+0 0 16810
+D3
+~
+~
+0 0 16808
+S
+#16808
+The rocky path~
+The path here winds among the low rocky hills. The long trek up and down the
+hills begins to tire you greatly. Looking east, you see a small clearing. More
+hills are to the north of here.
+~
+168 0 4
+D0
+~
+~
+0 0 16809
+D1
+~
+~
+0 0 16807
+S
+#16809
+The rocky path~
+The path here is very rocky and treacherous. The travelling is rough and you
+slip and fall often. Looking north, you see that the path continues into the
+hills. Smoother ground is to the east, but the path seems to lead into a dark
+forest in that direction.
+~
+168 0 4
+D1
+~
+~
+0 0 16803
+D2
+~
+~
+0 0 16808
+S
+#16810
+Up the rocky hillside~
+You are climbing on a rocky hillside. As you scramble about, loose rocks and
+small boulders bounce and fall down below you. Looking to the east and west,
+you see more stable ground. The hillside itself goes on higher to the south
+and it drops away to the north.
+~
+168 4 5
+D0
+~
+~
+0 0 16807
+D1
+~
+~
+0 0 16812
+D2
+~
+~
+0 0 16814
+D3
+~
+~
+0 0 16811
+S
+#16811
+The sparse foothills~
+You are in foothills that are sparsely covered by scraggy bushes and weather
+beaten trees. There are little signs of life here. Only bare rock and dry dirt
+can be seen. Looking east, you see a small pass that will allow you to leave
+the foothills. The foothills themselves extend to the south.
+~
+168 0 4
+D1
+~
+~
+0 0 16810
+D2
+~
+~
+0 0 16813
+S
+#16812
+Standing on level ground~
+You are standing at the edge of a steep set of foothills. Looking down, you
+see what appears to be a marshy, dark forest. It reeks of death and decay.
+Even here, you catch its scent on the winds. From here, you can travel south
+deeper into the foothills or to the west where a small pass will allow you to
+climb down.
+~
+168 0 4
+D2
+~
+~
+0 0 16815
+D3
+~
+~
+0 0 16810
+S
+#16813
+In the foothills~
+You are in a barren set of foothills. Looking around, all you see are dead
+plants and boulders. From the south, you get a whiff of salty air. Barren paths
+lead east, north, and south into more barren hills.
+~
+168 0 4
+D0
+~
+~
+0 0 16811
+D1
+~
+~
+0 0 16814
+D2
+~
+~
+0 0 16817
+S
+#16814
+Before the huge tree~
+You enter a large ring of boulders. Sheltered by this wall of stones, a small
+cluster of plants have sprung up. In the center of this group of trees and
+bushes, is a huge gnarled tree. It appears to have been twisted and torn by
+the forces of nature. It sways and moans as a strong wind from the south tears
+through its old feeble branches. The hills themselves lead in all directions.
+~
+168 0 4
+D0
+~
+~
+0 0 16810
+D1
+~
+~
+0 0 16815
+D2
+~
+~
+0 0 16818
+D3
+~
+~
+0 0 16813
+S
+#16815
+Before the dark cave~
+You stand directly before a huge dark cave. The rocks and boulders outside the
+cave are covered with blood stains and all types of broken and shattered bones
+lie around. An unbearable stench comes from within the cave itself. The dark
+cave entrance looms to the east. The hills themselves lead towards the
+north, south, and west.
+~
+168 0 4
+D0
+~
+~
+0 0 16812
+D1
+~
+~
+0 0 16816
+D2
+~
+~
+0 0 16819
+D3
+~
+~
+0 0 16814
+S
+#16816
+Inside the horrid cave~
+The stench is overwhelming. You can hardly breathe as you enter the cave.
+Looking around, you realize that some bizarre and horrible creature uses this
+cave as a home. Skeletal remains lie all over. Several half-eaten corpses are
+rotting away slowly in the gloomy darkness. In the back of the cave, you see a
+large pile of rotting cloth, fur, and plant matter. Light and safety is
+towards the west.
+~
+168 9 0
+D3
+~
+~
+0 0 16815
+E
+pile~
+It appears to be some sort of nest......
+~
+S
+#16817
+The hills overlooking the shore~
+Standing at the edge of the foothills, you are able to look down upon a rocky
+shoreline. It appears as though a vast ocean is to the south. Sea birds have
+made thier nests here in the rocks and you are heartened by the presence of
+life here. It is possible to climb down to the shore here. The hills
+themselves are to the north. The edge of the hills leads to the east along the
+shoreline.
+~
+168 0 4
+D0
+~
+~
+0 0 16813
+D1
+~
+~
+0 0 16818
+D5
+~
+~
+0 0 16820
+S
+#16818
+The hills overlooking the shoreline~
+You stand on a barren section of hills that overlook a rocky shoreline. The
+stiff ocean wind has blown the rocks smooth here and you have to lean forward
+a bit to keep your balance. The salty sea air fills your nostrils and you
+notice signs of life in the rocky crags here. You can climb down towards the
+shore or head north into the hills themselves. The rocky summit you are
+standing leads east and west along the shoreline.
+~
+168 0 4
+D0
+~
+~
+0 0 16814
+D1
+~
+~
+0 0 16819
+D3
+~
+~
+0 0 16817
+D5
+~
+~
+0 0 16821
+S
+#16819
+The hills above the shoreline~
+You stand on a rocky summit overlooking a rough shoreline below. The sea wind
+blows hard across the rocks here and they have been worn smooth with time.
+Looking around, you notice that you can safely climb down towards the shore.
+The hills themselves stretch towards the north. The rough summit you stand
+upon leads west along the shoreline.
+~
+168 0 4
+D0
+~
+~
+0 0 16815
+D3
+~
+~
+0 0 16818
+D5
+~
+~
+0 0 16822
+S
+#16820
+The rocky shore~
+You are at the base of the rocky hills. Stretching to the south and east, you
+see a rocky shore. To the southeast, you see a small altar of some sorts that
+glows with an eerie blue light. It is possible to climb up into the hills here.
+~
+168 0 0
+D1
+~
+~
+0 0 16821
+D2
+~
+~
+0 0 16823
+D4
+~
+~
+0 0 16817
+S
+#16821
+The rocky shoreline~
+You are on a rocky shore that borders a vast sea. A stiff wind blows here and
+whistles among the rocks. You see an altar of some sort built on the shore to
+the south. The shore itself leads east and west. Looking up, you see foothills
+and rocky crags.
+~
+168 0 0
+D1
+~
+~
+0 0 16822
+D2
+~
+~
+0 0 16824
+D3
+~
+~
+0 0 16820
+D4
+~
+~
+0 0 16818
+S
+#16822
+The rocky shore~
+You stand at the base of some rocky hills, where they meet a rocky shore. A
+vast sea is to your south. Looking to the southwest, you see a small altar
+that glows with a eerie blue light. The shore stretches out to the south and
+west. It is possible to climb up into the hills here.
+~
+168 0 0
+D2
+~
+~
+0 0 16825
+D3
+~
+~
+0 0 16821
+D4
+~
+~
+0 0 16819
+S
+#16823
+The edge of the sea~
+You walk along the water's edge. The vastness of the ocean is staggering as
+you look out across it. You notice a small altar that glows with blue light
+to the east. The shore itself extends north away from the water's edge.
+~
+168 0 0
+D0
+~
+~
+0 0 16820
+D1
+~
+~
+0 0 16824
+S
+#16824
+The Blood Sea Portal~
+You stand on a small pedistal like altar that has been built on the shore here.
+Standing here, you can look out across the sea. You can almost imagine that
+you see a far away island. Dominating the altar is a small blue portal of
+light. It is possible to walk south into the portal. The shore itself extends
+to the north, east, and west.
+There are small inscriptions on the rock at the base of the portal.
+~
+168 128 0
+D0
+~
+~
+0 0 16821
+D1
+~
+~
+0 0 16825
+D2
+~
+~
+0 0 16826
+D3
+~
+~
+0 0 16823
+E
+small inscriptions inscription~
+"Enter all ye who wish to join the Brotherhood!"
+~
+E
+portal blue~
+You see a swirling blue portal of light. You think you can see glimpses of
+something moving on the "other side".
+~
+S
+#16825
+The edge of the sea~
+You walk along the water's edge. The tide appears to have risen. Very little
+debris is washed up on shore. You slip and slide as you tread across the
+slippery rocks that make up the shore. To the west you see a small altar that
+radiates blue light. The shore extends north away from the water's edge.
+~
+168 0 0
+D0
+~
+~
+0 0 16822
+D3
+~
+~
+0 0 16824
+S
+#16826
+Floating in blue light~
+You seem to be floating in blue weightlessness. You tumble head over heels and
+finally right yourself. Gaining your bearings, you notice that there are two
+"windows" in the sea of blue here. One to the south shows an image of a snowy
+plain. Another window the the north shows an image of a rocky shore.
+~
+168 140 0
+D0
+~
+~
+0 0 16824
+D2
+~
+~
+0 -1 16853
+S
+#16827
+The swampy path~
+This damp path seems to lead into a deep, dark swamp. The trees above block
+out all light and stifle the wind. You smell swamp gas and hear damp squashing
+sounds all around you. The path leads east deeper into the swamp. You also see
+a dark forest to the west.
+~
+168 13 3
+D1
+~
+~
+0 0 16828
+D3
+~
+~
+0 0 16805
+S
+#16828
+The swampy path~
+You tread lightly in a wet, swampy path. All around you, you see pools of
+quicksand and rotting vegetation. Unlike the forest to the west, the swamp is
+teeming with life. Some of it is harmless, some is not. The path leads east
+and west into more swamp.
+~
+168 9 3
+D1
+~
+~
+0 0 16829
+D3
+~
+~
+0 0 16827
+S
+#16829
+The swampy path~
+You weave your way through the treacherous swamp. Gas rises all around you and
+a damp mist covers the ground, making it impossible to travel safely, without
+carefully picking your way around obstacles. Large, gnarled trees rise above
+you. Thier moss covered branches block out all traces of the sun. The path
+here leads east and west.
+~
+168 9 3
+D1
+~
+~
+0 -1 16830
+D3
+~
+~
+0 0 16828
+S
+#16830
+The turn in the swampy path~
+You come upon a bend in the swampy path. The ground here is fairly sturdy,
+as this place is elevated above the rest of the swamp. Looking around, you see
+a dark, mist filled swamp. Small paths lead south and west into the mist.
+~
+168 137 3
+D2
+~
+~
+0 0 16831
+D3
+~
+~
+0 0 16829
+S
+#16831
+The swampy path~
+You tread lightly through the mirky water and sludge that makes up the path
+you follow. To the south, there is a thick wall of mist. You can see nothing
+within it. Harder ground rises to the north.
+~
+168 137 3
+D0
+~
+~
+0 0 16830
+D2
+~
+~
+0 0 16833
+S
+#16832
+Lost in the Mist~
+You wander, hopelessly lost. Swirling mist obscures your vision and clouds
+your mind. You lose all concept of direction. Small, silent giggles can be
+heard all around. You can wander in any direction.
+~
+168 137 4
+D0
+~
+~
+0 0 16836
+D1
+~
+~
+0 0 16833
+D2
+~
+~
+0 0 16835
+D3
+~
+~
+0 0 16833
+S
+#16833
+Lost in the Mist~
+You are in a thick misty area. The mist swirls around you, seeming to taunt
+you and dare you to escape. You feel a slight electric charge in the mist. It
+almost caresses your body as it floats about you. You can wander in any
+direction.......
+~
+168 137 3
+D0
+~
+~
+0 0 16833
+D1
+~
+~
+0 0 16833
+D2
+~
+~
+0 0 16836
+D3
+~
+~
+0 0 16832
+S
+#16834
+Lost in the Mist~
+You try to peer through the mist......You see nothing. It swirls about you,
+covering you in a damp sheen. There is no sound, all light is eagerly devoured
+by the mist. You feel totally and hopelessly lost.
+~
+168 137 4
+D0
+~
+~
+0 0 16835
+D1
+~
+~
+0 0 16838
+D2
+~
+~
+0 0 16837
+D3
+~
+~
+0 0 16833
+S
+#16835
+Lost in the Mist~
+You stumble through the marsh here. The swamp seems to have swallowed you up
+and denied you exit. This mist is your jailor. You cannot tell where you are.
+You hear quiet laughter all about you.
+~
+168 137 4
+D0
+~
+~
+0 0 16832
+D1
+~
+~
+0 0 16836
+D2
+~
+~
+0 0 16832
+D3
+~
+~
+0 0 16831
+S
+#16836
+Lost in the Mist~
+You wander, lost hopelessly. The mist swirls all about you. You can discern no
+direction. You stumble blindly through the mist, oblivious to your
+surroundings.
+~
+168 137 4
+D0
+~
+~
+0 0 16833
+D1
+~
+~
+0 0 16837
+D2
+~
+~
+0 0 16832
+D3
+~
+~
+0 0 16835
+S
+#16837
+Lost in the Mist~
+You wander through the thick mist. It swirls all about you and makes it hard
+to breathe. The ground below you makes a soft squishing sound as you trudge
+on, but this noise is absorbed by the mist and does not travel. You can wander
+in any direction.
+~
+168 137 4
+D0
+~
+~
+0 0 16834
+D1
+~
+~
+0 0 16835
+D2
+~
+~
+0 0 16836
+D3
+~
+~
+0 0 16833
+S
+#16838
+Lost in the Mist~
+You wander, lost, for what seems an eternity. Then....From nowhere....You see
+what appears to be trees and hills to the east. The mist itself thickens to
+the west, while it grows thin to the east.
+~
+168 137 3
+D1
+~
+~
+0 0 16839
+D3
+~
+~
+0 0 16834
+S
+#16839
+The solid path~
+A solid path rises out of the misty swamp. It leads north, into what appears
+to be a forested area. The trees, above, allow light and air to penetrate and
+you can see the sky above. A thick bank of mist is to your west.
+~
+168 0 4
+D0
+~
+~
+0 0 16840
+D3
+~
+~
+0 0 16838
+S
+#16840
+A forested path~
+The path here leads north through a thick forest. High bushes and forest
+undergrowth line both sides of the trail. Looking north, you see a thin line
+of smoke rising up above the tree line. You also notice a crude wooden gate
+farther north on the trail. The trail itself leads south into murky territory.
+~
+168 4 3
+D0
+~
+~
+0 0 16841
+D2
+~
+~
+0 0 16839
+S
+#16841
+The gate before the Ogre Village~
+You stand before a huge pair of crude, wooden gates. They are thrown open.
+Looking inside the gates, you see a crude village. Large humanoid creatures
+are milling to and fro.......Ogres! You can head north through the gate or
+south into the forest.
+~
+168 0 3
+D0
+~
+~
+0 0 16843
+D2
+~
+~
+0 0 16840
+S
+#16842
+Among the crude huts~
+You walk among the huts of the ogre village. The village appears to be cut
+from the heart of the forest itself. The swamp, nearby, provides the ogres
+with a prime hunting ground. Small paths lead north and east.
+~
+168 0 1
+D0
+~
+~
+0 0 16845
+D1
+~
+~
+0 0 16843
+S
+#16843
+Inside the gates~
+You stand just north of the gates to the village. Looking around, you see many
+crude huts and cooking fires. To the north, you see a huge fire pit. Behind it
+there appears to be a hut of sorts. Small paths lead east and west among the
+crude huts. The gates to the south provide an exit from the village.
+~
+168 0 1
+D0
+~
+~
+0 0 16846
+D1
+~
+~
+0 0 16844
+D2
+~
+~
+0 0 16841
+D3
+~
+~
+0 0 16842
+S
+#16844
+Among the crude huts~
+You walk through the crude village. Small huts made of wood and thatch
+surround you. Every so often, you can hear grunts and snarls inside the huts.
+The smell here is unbearable. You wonder what type of creature could possibly
+live in such squallor. Small paths lead west and north here.
+~
+168 0 1
+D0
+~
+~
+0 0 16847
+D3
+~
+~
+0 0 16843
+S
+#16845
+The gathering place~
+This appears to be the clearing the ogres use to assemble. It is quite large
+and has a raised mound in the center that contains a crude throne. The ground
+in front of the throne is quite worn, as if it is sat on quite often. You get
+the impression that this place is a crude sort of auditorium. Small paths lead
+east and south.
+~
+168 0 1
+D1
+~
+~
+0 0 16846
+D2
+~
+~
+0 0 16842
+S
+#16846
+The firepit before the lodge~
+You stand at the edge of a huge firepit. The heat from the burning embers
+makes you sweat as you stand here. Large spits above the pit are empty but
+they appear to be quite large enough to hold hapless adventurers. A large
+lodge is towards the north, while paths lead east, west, and south into the
+village itself.
+~
+168 0 1
+D0
+~
+door~
+1 -1 16848
+D1
+~
+~
+0 0 16847
+D2
+~
+~
+0 0 16843
+D3
+~
+~
+0 0 16845
+S
+#16847
+The village dump~
+The smell here overpowers you. All around you are the rotting remains of the
+village's refuse. Partially eaten corpses, rotting food, and other truly
+disgusting things have been discarded here. Paths lead south and west towards
+fresher air.
+~
+168 0 1
+D2
+~
+~
+0 0 16844
+D3
+~
+~
+0 0 16846
+S
+#16848
+The entryway to the lodge~
+You are at the entry hall to a large lodge. Animal pelts and other trophies
+line the walls here. Large chests on either side of the door appear to be
+locked. The lodge stretches north, while the doors to the south provide an
+exit into the village.
+~
+168 8 0
+D0
+~
+~
+0 -1 16849
+D2
+~
+door~
+1 -1 16846
+S
+#16849
+The throne room~
+You stand in a large, crudely decorated throne room. A huge throne adorned
+with humanoid skulls sits against the west wall. A crude, blood stained altar
+is against the east wall. A doorway is directly to the north, long strands of
+beads block the view of the other side. Crude torches light the hall and smoke
+clings to the ceiling.
+~
+168 8 0
+D0
+~
+~
+0 0 16850
+D2
+~
+~
+0 0 16848
+S
+#16850
+The chieftain's room~
+This appears to be the ogre chieftain's private quarters. A huge pile of furs
+is in the far corner. Large chests fill the room. All of them have heavy pad
+locks. The room is filled with trophies of dead enemies. It is quite lavishly
+decorated for such a crude inhabitant as an ogre. A beaded doorway is to the
+south.
+~
+168 8 0
+D2
+~
+~
+0 0 16849
+S
+#16851
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bone. Swirling snow and wind make impossible for you to
+discern any directions.
+~
+168 0 5
+D0
+~
+~
+0 0 16851
+D1
+~
+~
+0 0 16852
+D2
+~
+~
+0 0 16855
+D3
+~
+~
+0 0 16851
+S
+#16852
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bine. Swirling snow and wind make it impossible to
+discern any directions.
+~
+168 0 5
+D0
+~
+~
+0 -1 16852
+D1
+~
+~
+0 -1 16852
+D2
+~
+~
+0 -1 16856
+D3
+~
+~
+0 0 16856
+S
+#16853
+The Glacier Temple~
+You are in a small temple. It appears to be built entirely from ice. The ice
+walls are frosted and are opaque. There is a small blue portal here. You can
+go north, to enter the portal. Looking south, you see a world of white outside
+the open doorway. Swirling snow and bright light obscur your view.
+~
+168 8 0
+D0
+~
+~
+0 0 16826
+D2
+~
+~
+0 0 16851
+S
+#16854
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bone. Swirling snow and wind make it impossible for you
+to discern any directions.
+~
+168 0 5
+D0
+~
+~
+0 0 16858
+D1
+~
+~
+0 0 16855
+D2
+~
+~
+0 0 16857
+D3
+~
+~
+0 0 16857
+S
+#16855
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bone. Swirling snow and wind make it impossible for you
+to discern any directions.
+~
+168 0 5
+D0
+~
+~
+0 0 16854
+D1
+~
+~
+0 0 16859
+D2
+~
+~
+0 0 16857
+D3
+~
+~
+0 0 16854
+S
+#16856
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bone. Swirling snow and wind make it impossible for you
+to discern any directions.
+~
+168 0 5
+D0
+~
+~
+0 0 16852
+D1
+~
+~
+0 0 16851
+D2
+~
+~
+0 0 16859
+D3
+~
+~
+0 0 16854
+S
+#16857
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bone. Swirling snow and wind make it impossible for you
+to discern any directions.
+~
+168 0 5
+D0
+~
+~
+0 0 16854
+D1
+~
+~
+0 0 16858
+D2
+~
+~
+0 0 16854
+D3
+~
+~
+0 0 16859
+S
+#16858
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bone. Swirling snow and wind make it impossible for you
+to discern any direction.
+~
+168 0 5
+D0
+~
+~
+0 0 16855
+D1
+~
+~
+0 0 16855
+D2
+~
+~
+0 0 16860
+D3
+~
+~
+0 0 16857
+S
+#16859
+The frigid wastelands~
+You wander through the frigid wastelands. Your breath is a cloud before you.
+The cold cuts to the bone. Swirling snow and wind make it impossible for you
+to discern any directions.
+~
+168 0 5
+D0
+~
+~
+0 0 16859
+D1
+~
+~
+0 0 16856
+D2
+~
+~
+0 0 16852
+D3
+~
+~
+0 0 16855
+S
+#16860
+The edge of the frigid wastes~
+You stand at the base of a steep rocky cliff. To the north, a vast arctic
+wasteland stretches out. The snow falls lightly here and the wind is not
+very fierce. You can climb up the rocky cliff or head north into the arctic
+wastes.
+~
+168 4 5
+D0
+~
+~
+0 0 16858
+D4
+~
+~
+0 0 16861
+S
+#16861
+On the cliffside~
+You cling to the side of the cliff. Looking down, you are terrified by the
+sheer distance to the ground below. You can climb up higher into the cliffs,
+but the area above is obscured by clouds and you cannot tell what lies waiting
+above.
+~
+168 4 5
+D4
+~
+~
+0 0 16862
+D5
+~
+~
+0 0 16860
+S
+#16862
+Before the gates of Mahn-Tor~
+You stand at the edge of a high cliff. Directly south, set back off the
+cliff's edge, you see a huge pair of gates. These gates appear to be carved
+almost completely out of ice. A huge city and keep appear to be on the other
+side of these gates. There is also a possibility of climbing down the cliff 
+face.
+~
+168 0 5
+D2
+~
+gate huge gates ice~
+1 -1 16864
+D5
+~
+~
+0 0 16861
+E
+gate gates ice huge~
+The gates to the city are made almost completely of ice. Looking closely, you
+can see intricate carvings in the gates. They appear to be of creatures that
+are half man and half bull.
+~
+S
+#16863
+The city streets of Mahn-Tor~
+You walk among the ice and snow covered shops and homes. Most of the doors are
+closed and only the light from the windows betrays the presence of inhabitants.
+A cold wind blows through here, scattering fine clouds of snow all about. Small
+streets lead south and east.
+~
+168 0 1
+D1
+~
+~
+0 0 16864
+D2
+~
+~
+0 0 16866
+S
+#16864
+Inside the gates of Mahn-Tor~
+You stand just inside the gates to the city of Mahn-Tor. The city itself
+spreads out in front of you. The buildings are sturdy, as they appear to be
+made from the very rock of this mountain. Snow falls all around and a fine
+sheet of ice can be seen covering all but the most used walk ways. Small city
+streets lead east and west, while a main road appears to lead south.
+~
+168 0 1
+D0
+~
+gates gate huge ice~
+1 -1 16862
+D1
+~
+~
+0 -1 16865
+D2
+~
+~
+0 0 16867
+D3
+~
+~
+0 -1 16863
+S
+#16865
+The city streets of Mahn-Tor~
+You trudge among the icy streets of Mahn-Tor. The streets themselves are made
+of cobblestone and are quite treacherous. Small homes and businesses along
+the street are closed tight and light from thier windows throws eery shadows
+across the dark street. Small streets lead west and south here.
+~
+168 0 1
+D2
+~
+~
+0 0 16868
+D3
+~
+~
+0 0 16864
+S
+#16866
+The city streets of Mahn-Tor~
+You trudge through the snow covered streets. The street itself is made of
+cobblestones and the footing is quite treacherous. To the south, you see what
+appears to be a small tavern. Bright lights shine through the windows. Small
+streets also lead north and east.
+A small sign hangs outside the tavern.
+~
+168 0 1
+D0
+~
+~
+0 0 16863
+D1
+~
+~
+0 -1 16867
+D2
+~
+~
+0 -1 16869
+E
+sign small~
+[]=============[]
+ |   The Inn   |
+ |    of the   |
+ |    Broken   |
+ |     Horn    |
+[]=============[]
+~
+S
+#16867
+The Square of Mahn-Tor~
+This appears to be the main square of Mahn-Tor. A huge fountain graces the
+center of the square, but the extreme cold has turned it into an ice
+sculpture. The water has frozen in arcs through the air. Snow and ice covers
+the square and small streets lead east and west. To the north, you see
+the gates to the city. You also notice a small store to the south.
+A small sign hangs outside the store.
+~
+168 0 1
+D0
+~
+~
+0 0 16864
+D1
+~
+~
+0 0 16868
+D2
+~
+~
+0 0 16870
+D3
+~
+~
+0 0 16866
+E
+sign~
+[]=========[]
+ |  Equip  |
+ |   Shop  |
+[]=========[]
+~
+S
+#16868
+The streets of Mahn-Tor~
+You walk among the small stores and homes of Mahn-Tor. The cobblestone streets
+are covered with ice and snow. Small snow drifts have formed at the edges of
+the streets. The wind blows fiercely. Small streets lead in all directions.
+There appears to be a large building to the east, but the snow obscurs your
+view.
+~
+168 0 1
+D0
+~
+~
+0 0 16865
+D1
+~
+~
+0 0 16875
+D2
+~
+~
+0 0 16871
+D3
+~
+~
+0 0 16867
+S
+#16869
+The Inn of the Broken Horn~
+You enter a warm tavern. The room is lit mainly by two huge fireplaces at each
+end of the room. Small tables and a large bar furnish the room. The
+inhabitants of the inn are all minotaurs of varying size and disposition. Most
+seem to regard you with suspicion. But few approach you. A large door leads
+north, out of the bar and back out into the cold.
+~
+168 8 0
+D0
+~
+~
+0 0 16866
+S
+#16870
+The Mahn-Tor Equipment Shop~
+You are in a crude equipment shop. The store is filled with racks of various
+items that adventurers could use. Large fireplaces light and heat the room.
+A large desk occupies the back of the room. The door to the shop lies to the
+north.
+~
+168 8 0
+D0
+~
+~
+0 0 16867
+S
+#16871
+The Mahn-Tor General Store~
+You enter a small store that is dark and cold. Old empty shelves line the
+walls and snow blows across the dirty stone floor. It is evident that this
+store was once used, but it is no more. A small doorway leads north out into
+the chilling snow and wind.
+~
+168 8 0
+D0
+~
+~
+0 0 16868
+S
+#16872
+Gorak's Training Room~
+This room is full of all sorts of weapons and armours. Pieces of old targets
+and practice dummies lie all around. The walls are chipped and scored from
+weapon blows. This is obviously the room of an avid warrior. A red door leads
+east.
+~
+168 8 0
+D1
+~
+red~
+2 16851 16888
+E
+red~
+It looks like it leads back to the hall.
+~
+S
+#16873
+Darkoth's Dark Study~
+This room is dark. It reaks of death and evil. Arcane symbols and a small
+altar fill the room. Blood runs from the altar. It is evident that this room
+is used for unholy purposes. A black door leads west.
+~
+168 9 0
+D1
+~
+black~
+2 16852 16889
+E
+black~
+It looks like it leads back to the hall.
+~
+S
+#16874
+Tyrgoth's Inner Sanctum~
+Idols to the gods of good fill the room. White furniture and decorations give
+the room a holy appearance. It is evident that some being of supreme goodness
+lives here. A white door leads east.
+~
+168 8 0
+D1
+~
+white~
+2 16853 16892
+E
+white~
+It looks like it leads out to the hall.
+~
+S
+#16875
+The road to the Keep of Mahn-Tor~
+You walk up a steep rocky road. It leads up a steep grade to the east. At the
+end of this steep road, you see a huge keep. Snow swirls all about you and you
+feel your breath freeze as it leaves your lungs. Blurry lights to the east and
+west are all you can see from here.
+~
+168 4 5
+D1
+~
+~
+0 0 16877
+D3
+~
+~
+0 0 16868
+S
+#16876
+A small guard house~
+You enter a small guard house. A huge fireplace lights and warms the room.
+Looking around, you see that the room is fairly well furnished. Thick rugs
+and curtains help insulate the room and the beds themselves look quite warm.
+A table in the center of the room has the remnants of a card game strewn
+across it. A small door leads south.
+~
+168 8 0
+D2
+~
+~
+0 0 16877
+S
+#16877
+Before the Keep of Mahn-Tor~
+You stand before a huge keep that has been carved into the side of the
+mountain. Huge wooden gates before you provide entrance to the keep. It
+appears as though the cold here has convinced the guards to seek warmth
+inside. You see the lights of the city to the west. You also notice small
+guard houses to the north and south.
+~
+168 0 1
+D0
+~
+~
+0 0 16876
+D1
+~
+gate~
+2 16850 16879
+D2
+~
+~
+0 0 16878
+D3
+~
+~
+0 0 16875
+S
+#16878
+A small guard house~
+You enter a small, but warm, guard house. Deep rugs and thick curtains
+insulate the room. A huge fireplace lights and warms the room. Outside, you
+hear the roar of the freezing wind. A small door leads north out into the cold.
+~
+168 8 0
+D0
+~
+~
+0 0 16877
+S
+#16879
+The entryway to the Keep of Mahn-Tor~
+You are at the entry hall to the huge keep. The high vaulted ceiling is carved
+from solid stone. Huge stone pillars rise up from the floor to meet the
+ceiling far above. The architecture appears to be dwarven. A huge pair of
+gates stand to the west, protecting the keep from the harsh cold outside. A
+large hall leads east, deeper into the keep.
+~
+168 8 0
+D1
+~
+~
+0 0 16880
+D3
+~
+gate~
+2 16850 16877
+S
+#16880
+The Hall~
+You are in a huge hall. Large tapestries line the walls and huge statues of
+various make and appearance are spread about. The ceiling above supports huge
+candelabras, which light the room. To the east, you see a bright light and
+hear sounds of inhabitation. Looking west, you see the entry gates to the keep.
+~
+168 8 0
+D1
+~
+~
+0 0 16881
+D3
+~
+~
+0 0 16879
+S
+#16881
+The Grand Hall~
+You are in the main hall of the Keep of Mahn-Tor. This hall is huge. The wide
+floor of the hall is an expanse of marble. Its shimmers in the light thrown
+off by the torches, that line the walls. To the east, you see what appears to
+be a huge golden throne. The hall itself stretches south and a smaller hall
+leads to the west.
+~
+168 8 0
+D1
+~
+~
+0 0 16883
+D2
+~
+~
+0 0 16882
+D3
+~
+~
+0 0 16880
+S
+#16882
+The Great Hall~
+You stand in the great hall of the keep. Huge pillars rise up to the vaulted
+ceiling and torch light glimmers off the marble floor here. You are amazed at
+the sheer size of the hall. The hall itself leads north and east. You notice a
+smaller hall leading south, deeper into the keep.
+~
+168 8 0
+D0
+~
+~
+0 -1 16881
+D1
+~
+~
+0 0 16884
+D2
+~
+~
+0 -1 16887
+S
+#16883
+Standing before the throne~
+You stand before the throne of Mahn-Tor. This golden throne is so huge that it
+takes up almost the entire wall, stretching far above the floor. Sitting upon
+it, you feel small and feeble. It is evident that this throne is more of a
+decoration than anything else. Only the largest of kings could sit upon it.
+The hall leads south and west into other parts of the keep.
+~
+168 8 0
+D1
+~
+throne huge golden gold~
+3 0 16885
+D2
+~
+~
+0 0 16884
+D3
+~
+~
+0 0 16881
+E
+throne huge gold golden~
+The golden throne is huge. It takes up the whole wall.........
+~
+S
+#16884
+The Great Hall~
+You are in a great hall. Huge torches light the room and their light shimmers
+off the marble floor below you. To the north, you see a huge golden throne.
+Looking up, you grow dizzy at the height to which the vaulted ceiling rises.
+The hall itself leads north and west.
+~
+168 8 0
+D0
+~
+~
+0 0 16883
+D3
+~
+~
+0 0 16882
+S
+#16885
+The secret hallway~
+You are in a small, torch lit hall. It leads from east to west. A large gold
+door is to the west. To the east, you see a heavy stone door.
+~
+168 8 0
+D1
+~
+door huge stone~
+2 16859 16886
+D3
+~
+gold throne huge secret~
+3 0 16883
+E
+gold door~
+Looks like the back of a secret door of sorts.
+~
+E
+huge stone door~
+A very formidable looking door.
+~
+S
+#16886
+Entry to the Royal Chambers~
+You are at the entrance to the royal chambers of the keep. A plush shag rug
+covers the stone floor. Large candelabras hang from the ceiling, lighting the
+room. A huge fireplace warms the room. Beaded doorways lead south and east. A
+huge stone door stands in the west wall.
+~
+168 8 0
+D1
+~
+~
+0 0 16895
+D2
+~
+~
+0 0 16893
+D3
+~
+door huge stone~
+2 16859 16885
+E
+door huge stone~
+A huge stone door.......
+~
+S
+#16887
+The Guard Post~
+The hall here has been built into a guard post of sorts. It appears as though
+it would be quite easy to defend in times of emergency. Obviously, something
+important lies beyond. A small hall leads south, while the main hall can be
+seen to the north.
+~
+168 8 0
+D0
+~
+~
+0 0 16882
+D2
+~
+~
+0 0 16888
+S
+#16888
+The guarded hall~
+You walk down a torch lit hallway. It has been carved out of pure stone. It is
+very quiet in this hall. You notice rows of colored doors on each wall. To
+your east, you see a yellow door. To your west, you see a red door. The hall
+itself leads south and north.
+~
+168 8 0
+D0
+~
+~
+0 0 16887
+D1
+~
+yellow~
+2 16855 16890
+D2
+~
+~
+0 0 16889
+D3
+~
+red~
+2 16851 16872
+E
+red~
+You see a red door. It has the name "Gorak" written on it.
+~
+E
+yellow~
+You see a yellow door. It has the name "Sumaron" written on it.
+~
+S
+#16889
+The guarded hall~
+You walk down a small, quiet, torch lit hallway. Doors of different colors are
+in each wall. To your east, you see a maroon door. To your west, you see a
+black door. The hall itself leads north and south.
+~
+168 8 0
+D0
+~
+~
+0 0 16888
+D1
+~
+maroon~
+2 16856 16891
+D2
+~
+~
+0 0 16892
+D3
+~
+black~
+2 16852 16873
+E
+black~
+You see a black door. It has the name "Darkoth" inscribed on it.
+~
+E
+maroon~
+You see a maroon door here. It has the name "Amyrok" written on it.
+~
+S
+#16890
+Sumaron's Sanctum~
+You enter a temple of sorts. A small altar is here and relics of many
+religions lie around. It is evident that this is the room of a studying cleric.
+A yellow door leads west.
+~
+168 8 0
+D3
+~
+yellow~
+2 16855 16888
+E
+yellow~
+It looks like it leads back to the hall.
+~
+S
+#16891
+Amyrok's Arcane Study~
+This room is full of shelves which hold various spell components. The center
+of the room is occupied by a huge pentagram. The entire room smells of smoke
+and incense. The room is obviously used extensively by a practicing mage. A
+maroon door leads west.
+~
+168 8 0
+D3
+~
+maroon~
+2 16856 16889
+E
+maroon~
+It looks like it leads back to the hall.
+~
+S
+#16892
+The guarded hall~
+You walk down a quiet hall. The stone walls here are wet with moisture.
+Colored doors can be seen in the walls here. To your east, you see a green
+door. To your west, you see a white door. The hall itself leads north and
+south.
+~
+168 8 0
+D0
+~
+~
+0 0 16889
+D1
+~
+green~
+2 16857 16894
+D2
+~
+~
+0 0 16897
+D3
+~
+white~
+2 16853 16874
+E
+white~
+You see a white door here. It has the name "Tyrgoth" inscribed on it.
+~
+E
+green~
+You see a green door here. It has the name "Nasturn" written on it.
+~
+S
+#16893
+The Harem Room~
+This appears to be the harem room of the Keep. Huge piles of furs and beds
+fill the room. The lighting is dim, but the room is very warm. You can hear
+music playing quietly from somewhere. Beaded doorways lead north and east.
+~
+168 8 0
+D0
+~
+~
+0 0 16886
+D1
+~
+~
+0 0 16896
+S
+#16894
+Nasturn's Humble Abode~
+This room is filled with all types of natural items. Trees and plants have
+been lovingly cultivated and grown by hand, in large pots. The room is like an
+indoor garden. A green door leads west.
+~
+168 8 0
+D3
+~
+green~
+2 16857 16892
+E
+green~
+It looks like it leads back to the hall.
+~
+S
+#16895
+The main living room~
+This room is decorated with sturdy stone furniture that is carved and gilded.
+Large candles light the room. A thick rug covers the floor. Thick furs and
+tapestries decorate the walls. Beaded doorways lead south and west.
+~
+168 8 0
+D2
+~
+~
+0 0 16896
+D3
+~
+~
+0 0 16886
+S
+#16896
+The Master Bedroom~
+This appears to be the master bedroom. A huge bed fills the rooms. Piles of
+furs and other rich furnishings adorn the room. Candles are everywhere and
+they help a huge fireplace light the room. The lavishness of the room
+overwhelms you. Beaded doorways lead north and west.
+~
+168 136 0
+D0
+~
+~
+0 0 16895
+D3
+~
+~
+0 0 16893
+S
+#16897
+The end of the guarded hall~
+You are at the end of the hall. Colored doors line the walls to the north. To
+your west, you see a brown door. To you east, you see a grey door. The hall
+itself leads north back along the rows of doors.
+~
+168 8 0
+D0
+~
+~
+0 0 16892
+D1
+~
+grey~
+2 16858 16898
+D3
+~
+brown~
+2 16854 16899
+E
+brown~
+You see a brown door here. It has the name "Belrak" written on it.
+~
+E
+grey~
+You see a grey door here. It has the name "Drogar" written on it.
+~
+S
+#16898
+Drogar's Dismal Domicile~
+This room is dirty and unkept. Odds and ends of different items lie all over.
+It is apparent that some type of pack-rat lives here. It appears as though
+nothing has ever entered this room and ever left again. A grey door leads west.
+~
+168 8 0
+D3
+~
+grey~
+2 16858 16897
+E
+grey~
+It looks like it leads back to the hall.
+~
+S
+#16899
+Belrak's Green Room~
+This room is full of green. The furniture and all other items show the color
+of nature. The room smells of pine and forest odors. From the items here, it
+appears as though a woodsman of some sorts lives here. A brown door leads east.
+~
+168 8 0
+D1
+~
+brown~
+2 16854 16897
+E
+brown~
+It looks like it leads to the hall.
+~
+S
+#99999
+$~

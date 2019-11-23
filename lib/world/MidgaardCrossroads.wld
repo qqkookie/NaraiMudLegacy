@@ -1,0 +1,362 @@
+#3410
+Under the Bridge~
+   The arch under the bridge is covered by seaweed for one foot above the
+surface of the river.  The water gently flows through an opening in the lower
+part of the city wall.
+~
+34 0 7
+D1
+~
+~
+0 -1 3411
+D3
+~
+~
+0 -1 17710
+E
+wall~
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  Looks pretty solid.
+~
+S
+#3411
+On the River~
+   North of here you see the miserable buildings of the poor alley.  The
+river flows east from the bridge.  The riverbanks are too steep to climb.
+~
+34 0 7
+D1
+~
+~
+0 -1 3412
+D3
+~
+~
+0 -1 3410
+S
+#3412
+On the River~
+   North of here you see the dump.  The river flows from west to east.  The
+riverbanks are too steep to climb.
+~
+34 0 7
+D1
+~
+~
+0 -1 3413
+D2
+~
+~
+0 -1 18310
+D3
+~
+~
+0 -1 3411
+S
+#3413
+On the River~
+   The levee is directly north of here.  The river flows in a west to east
+direction.
+~
+34 12 7
+D0
+~
+~
+0 -1 3042
+D1
+~
+~
+0 -1 3414
+D2
+~
+~
+0 -1 17211
+D3
+~
+~
+0 -1 3412
+S
+#3414
+On the River~
+   You see the warehouse on the northern riverbank.  East of here you see the
+city wall.  The river flows east from the levee.
+~
+34 0 7
+D1
+~
+~
+0 -1 3415
+D3
+~
+~
+0 -1 3413
+S
+#3415
+On the River~
+   The river flows through the city here.
+~
+34 0 7
+D1
+~
+~
+0 -1 3416
+D3
+~
+~
+0 -1 3414
+S
+#3416
+On the River~
+   The river flows smoothly here.
+~
+34 0 7
+D1
+~
+~
+0 -1 3417
+D3
+~
+~
+0 -1 3415
+S
+#3417
+On the River~
+   The river continues.  
+~
+34 0 7
+D1
+~
+~
+0 -1 3418
+D3
+~
+~
+0 -1 3416
+S
+#3418
+On the River~
+   The river exhibits a little turbulence here.
+~
+34 0 7
+D1
+~
+~
+0 -1 3419
+D3
+~
+~
+0 -1 3417
+S
+#3419
+On the river~
+   From here, the river flows east to the ocean.  West of here is Midgaard.
+~
+34 0 7
+D1
+~
+~
+0 -1 3420
+D3
+~
+~
+0 -1 3418
+S
+#3420
+On the river~
+   From here, the river flows east to the ocean.
+~
+34 0 7
+D1
+~
+~
+0 -1 3421
+D3
+~
+~
+0 -1 3419
+S
+#3421
+On the river~
+   From here, the river flows east to the ocean. To the west is Midgaard.
+~
+34 0 7
+D1
+~
+~
+0 -1 3422
+D3
+~
+~
+0 -1 3420
+S
+#3422
+On the river~
+   From here, the river flows east to the ocean.  On the north bank is an old
+dock.  To the south you see a very large tree.
+~
+34 0 7
+D0
+~
+~
+0 -1 17100
+D1
+~
+~
+0 -1 3423
+D3
+~
+~
+0 -1 3421
+S
+#3423
+On the river~
+   From here, the river flows east to the ocean.  West of here is Midgaard.
+~
+34 0 7
+D1
+~
+~
+0 -1 3424
+D3
+~
+~
+0 -1 3422
+S
+#3424
+On the river~
+   From here, the river flows east to the ocean.
+~
+34 0 7
+D1
+~
+~
+0 -1 3425
+D2
+~
+~
+0 -1 18201
+D3
+~
+~
+0 -1 3423
+S
+#3425
+The Mouth of the River~
+   You are at the mouth of the river.  To the east, the river opens
+into the ocean.
+~
+34 0 7
+D1
+~
+~
+0 -1 3428
+D3
+~
+~
+0 -1 3424
+S
+#3428
+The Ocean~
+   You are on the ocean.  The mouth of the river is west of here.
+~
+34 0 7
+D1
+~
+~
+0 -1 17511
+D3
+~
+~
+0 -1 3425
+S
+#3441
+City Entrance~
+   You stand on the outskirts of a large city - Midgaard; the capital of this
+land. The road leads east into the peace and quiet - and dangers - of the
+forest; and to the west it becomes the main street of the town; surrounded by
+a confusion of shops, bars, and market places.
+~
+34 4 1
+D1
+~
+~
+0 0 3442
+D3
+~
+~
+0 0 3075
+S
+#3442
+The Turning Point~
+  The trees stand close here, and the tall, bushy undergrowth prevents you
+from seeing far in any direction save north, where a broad lane leads off into
+the distance; and west, where the same lane continues towards what looks like
+a fairly large city. The muted sounds of city commotion reach your ears from a
+distance; stray dogs barking, children crying, and street salesmen shouting.
+You can call "taxi" to Process' house here.
+~
+34 12 1
+D0
+~
+~
+0 0 3443
+D1
+~
+~
+0 0 15411
+D3
+~
+~
+0 0 3441
+D4
+~
+~
+0 -1 18710
+D5
+~
+~
+0 -1 15810
+S
+#3443
+The Lane~
+   You are strolling along a pleasant, shady lane. The road is lined on both
+sides by tall, stately trees which lend the scene with a sense of quiet
+serenity. You can follow the road north or south.
+~
+34 0 1
+D0
+~
+~
+0 0 3444
+D2
+~
+~
+0 0 3442
+S
+#3444
+The Plains~
+   You are on the plains, to the north you notice a small path into the hills.
+There is a small poster here.
+~
+34 0 1
+D0
+~
+~
+0 0 15510
+D2
+~
+~
+0 0 3443
+D3
+~
+~
+0 -1 15311
+E
+poster~
+  This castle is only for 20 level and below.
+  Or come back after being the KNIGHT.
+  -- Now, all are allowed.
+~
+S
+#99999
+$~

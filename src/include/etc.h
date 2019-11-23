@@ -6,7 +6,7 @@
 #define MID_BASE		3000
 
 #define ROOM_VOID		2900
-#define ROOM_WIZ_LOUNGE		2902	
+#define ROOM_WIZ_LOUNGE		2902
 
 // safe house
 #define MID_PORTAL		(MID_BASE+1)
@@ -28,26 +28,26 @@
 
 // taxi stop
 #define TAXI_START_MKTSQ	(MID_BASE+60)	// Market Squre
-#define TAXI_START_TP		3342	// Turning point
+#define TAXI_START_TP		3442	// Turning point
 
-#define TAXI_STOP_KAIST		17411	// NOTE: KAIST zone renumber 31001->17411
-#define TAXI_STOP_PROCESS	18100	// 2000
+#define TAXI_STOP_KAIST		19411	// NOTE: KAIST zone renumber 31001->19411
+#define TAXI_STOP_PROCESS	19600	// 2000
 
-#define NEVERLAND_CLOUD		11277	    // 섬이 보이는 구름 위
-#define NEVERLAND_SANDBEACH	11280	    // 모래밭
+#define NEVERLAND_CLOUD		14177	    // 섬이 보이는 구름 위
+#define NEVERLAND_SANDBEACH	14180	    // 모래밭
 
-#define WASTELAND_LABORATORY	12258	    // Wasteland, Large laboratory
+#define WASTELAND_LABORATORY	17158	    // Wasteland, Large laboratory
 
 // RC electric shock
-#define ROBOCITY_BASE		17110
+#define ROBOCITY_BASE		19110
 
 // level gate
 #define LEVGATE_CLUBSAFARI	3211	    // south
-#define LEVGATE_ARENA		12110	    // south
-#define LEVGATE_TB8TH		14735	    // south, TB 8th floor, chemist
-#define LEVGATE_EASTCASTLE	3344	    // west, East Castle 
-#define LEVGATE_THALOS		12810	    // west, City of Thalos
-#define LEVGATE_SHIRE		12810	    // south, Shire
+#define LEVGATE_ARENA		3230	    // south
+#define LEVGATE_TB8TH		15135	    // south, TB 8th floor, chemist
+#define LEVGATE_EASTCASTLE	3444	    // west, East Castle 
+#define LEVGATE_THALOS		17410	    // west, City of Thalos
+#define LEVGATE_SHIRE		16311	    // south, Shire (in Haondor light)
 #define LEVGATE_MAGETOWER	(MID_BASE+74)	    // south, Mage Tower
 
 /* ---------------    GUILD Rooms    ---------------- */
@@ -59,7 +59,7 @@
 #define GUILD_POLICE_LOCKER	(GUILD_BASE+15)	// 3099
 
 /* NOTE: moved from JALE_ROOM definition in guild_skills.c */
-#define ROOM_POLICE_JAIL    		(GUILD_BASE+18)	// 1800
+#define ROOM_POLICE_JAIL    	(GUILD_BASE+18)	// 1800
 
 #define GUILD_OUTLAW_GATE	(GUILD_BASE+22)	// 3221
 #define GUILD_OUTLAW_PRACTICE	(GUILD_BASE+23)	// 3222
@@ -81,20 +81,19 @@
 #define OBJ_STRINGMACHINE	(MID_BASE+8)
 #define OBJ_REPAIRMACHINE
 
-#define OBJ_UNKNOWNSEED		12261
-#define OBJ_TOTEM		12262
+#define OBJ_UNKNOWNSEED		17161
+#define OBJ_TOTEM		17162
 #define OBJ_ANTI_DEATHCURE	(MID_BASE+31)
 
 #define POTION_SOLAR		3211
 
-// TODO: change to 2D8 dagger
-#define WEAPON_BASIC_THIEF	11511	/* 2D4 pierce short sword (dagger) */
-#define WEAPON_BASIC_WARRIOR	(MID_BASE+21)	/* 1D8 slash long sword */
+#define WEAPON_BASIC_WARRIOR	(MID_BASE+25)	/* 1D8 slash long sword */
+#define WEAPON_BASIC_THIEF	(MID_BASE+26)	// 2D4 pierce short sword (dagger)
 
-#define OBJ_BIRD_FEATHER	11261
-#define OBJ_PEGASUS_WING	15613
+#define OBJ_BIRD_FEATHER	14161		// Graveyard(Doghouse)
+#define OBJ_PEGASUS_WING	16613		// Galaxy
 
-#define OBJ_LSS_BELT		16118
+#define OBJ_LSS_BELT		17718		// DK
 
 #define OBJ_SWORD_BOMBARD	(MID_BASE+72)
 #define OBJ_BOMBARD_MINOR	(MID_BASE+73)
@@ -105,7 +104,7 @@
 #define MOB_LIMBO_PUFF		2901
 #define MOB_MID_HELPER		(MID_BASE+3)	    // Perhaps
 
-#define MOB_MID_MAYOR	    	3553
+#define MOB_MID_MAYOR	    	3311
 #define MOB_MID_GUILDMASTER	(MID_BASE+14)	    // Practice room
 #define MOB_MID_MUSASHI		(MID_BASE+32)
 #define MOB_MID_SUPERMUSASHI	(MID_BASE+99)
@@ -142,40 +141,40 @@ if (mob_nr == KITTEN || mob_nr == PUPPY
 #define IS_PETSHOP_MOB(nr) ((nr) >= MOB_MID_KITTEN && (nr) <= MOB_MID_JUGGERNAUT)
 
 // spell blockers
-#define MOB_GOBIND		14260	    // Mokcha gobind
-#define MOB_HWATA_GUARD		16346	    // hwata secret guard
+#define MOB_GOBIND		15460	    // Moksha gobind (Dirk's catle)
+#define MOB_HWATA_GUARD		18346	    // hwata secret guard
 
 // helper
-#define MOB_DK_BARBOR		16738	    // DK Barbor
-#define MOB_DK_YURIA		16772	    // DK Yuria
+#define MOB_DK_BARBOR		17738	    // DK Barbor
+#define MOB_DK_YURIA		17772	    // DK Yuria
 
 // misc.
-#define MOB_RC_GREAT_MAZINGA	17292	    // Great Mazinga
-#define MOB_LARGE_HOUND		12223	    // large hound of hades
+#define MOB_RC_GREAT_MAZINGA	19292	    // Great Mazinga
+#define MOB_LARGE_HOUND		17123	    // larger hound of hades
 
 // Super DC summon mobs
-#define MOB_SDC_HELPER1		12717	    // 2nd Matron Mother
-#define MOB_SDC_HELPER2		12410	    // dracolich lich
-#define MOB_SDC_HELPER3		12414	    // giant purple worm
-#define MOB_SDC_HELPER4		12209	    // Medusa gorgon
-#define MOB_SDC_HELPER5		12218	    // Hecate in Greek
-#define MOB_SDC_HELPER6		17217	    // Semi robot in RC
-#define MOB_SDC_HELPER7		16424	    // Wee Head Soldier
+#define MOB_SDC_HELPER1		17317	    // 2nd Matron Mother
+#define MOB_SDC_HELPER2		17220	    // dracolich lich
+#define MOB_SDC_HELPER3		17214	    // giant purple worm
+#define MOB_SDC_HELPER4		17109	    // Medusa gorgon
+#define MOB_SDC_HELPER5		17118	    // Hecate in Greek
+#define MOB_SDC_HELPER6		19217	    // Semi robot in RC
+#define MOB_SDC_HELPER7		18424	    // Wee Head Soldier
 
 // snake
-#define MOB_MORIA_SNAKE1	14310	    // dreadful snake
-#define MOB_MORIA_SNAKE2	14311	    // small green snake
-#define MOB_MORIA_SNAKE3	14363	    // brown snake
-#define MOB_MORIA_SNAKE4	14412	    // large green snake
-#define MOB_DESERT_WORM		12414	    // iant purple worm
+#define MOB_MORIA_SNAKE1	15510	    // dreadful snake
+#define MOB_MORIA_SNAKE2	15511	    // small green snake
+#define MOB_MORIA_SNAKE3	15563	    // brown snake
+#define MOB_MORIA_SNAKE4	15612	    // large green snake
+#define MOB_DESERT_WORM		17214	    // giant purple worm
 #define MOB_SNAKE_ERROR		1660	    // Missing snake 1660?	
 
-#define MOB_SEWER_SNAKE		11306	    // slithering snake
-#define MOB_FOREST_SPIDER1	15423	    // poisonous spider
-#define MOB_FOREST_SPIDER2	15424	    // Queen spider
+#define MOB_SEWER_SNAKE		14414	    // slithering snake
+#define MOB_FOREST_SPIDER1	16423	    // poisonous spider
+#define MOB_FOREST_SPIDER2	16424	    // Queen spider
 
 /* -------------    for 대림사    ------------------------- */
-#define DRS_BASE			16100
+#define DRS_BASE			18100
 
 #define DRS_DARK_ROOM		(DRS_BASE+34)
 #define DRS_TOWER		(DRS_BASE+61)
@@ -199,7 +198,7 @@ if (mob_nr == KITTEN || mob_nr == PUPPY
 
 /* --------------      Good-Bad Island	   ----------------- */
 
-#define GBI_BASE			16200
+#define GBI_BASE			18200
 
 #define GBI_SEA			(GBI_BASE+1)
 #define GBI_SEASHORE		(GBI_BASE+2)

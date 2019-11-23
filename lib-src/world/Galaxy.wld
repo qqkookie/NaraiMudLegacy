@@ -1,0 +1,983 @@
+#9701
+Inside a tavern~
+You are inside a dimly-lit room. The atmosphere makes you feel uncomfortable. In front of you stands a mysterious looking gypsy. She whispered 'Your fate and destiny lie beyond this world.' You are still wondering what she means when you suddenly notice the crystal ball...It glows fiercely and displays the Universe!
+~
+97 8 0
+D0
+~
+~
+0 -1 9702
+D1
+~
+~
+0 -1 6103
+D2
+~
+~
+0 -1 3001
+S
+#9702
+Inside the crystal ball~
+You have touched the crystal ball and find that you have gone inside it: a worldof stars and wonders! As you look back you figure out there is no choice but to go forward.
+~
+97 0 2
+D0
+~
+~
+0 -1 9703
+S
+#9703
+Inside the galaxy~
+You are now inside the galaxy, around you you see stars and nebulae smiling at your presence, and comets and meteors wandering around you. You realize that this world may not be the true galaxy afterall, but just another fantasy zone. Exits lie virtually in all directions.~
+97 0 1
+D0
+~
+~
+0 -1 9704
+D1
+~
+~
+0 -1 9708
+D2
+~
+~
+0 -1 9702
+D3
+~
+~
+0 -1 9721
+S
+#9704
+On a InterGalatic Walkway~
+You are on a well-paven path which seems that it was made deliberately for vistors like you. The walkway continues north and a small exit lies west.
+~
+97 0 1
+D0
+~
+~
+0 -1 9705
+D2
+~
+~
+0 -1 9703
+D3
+~
+~
+0 -1 9722
+S
+#9705
+End of the InterGalatic walkway~
+You notice the walkway has come to an abrupt end and you wonder why. You see that there is still a small path which leads north and one to the west. To the east lies a bridge.
+~
+97 0 1
+D0
+~
+~
+0 -1 9706
+D1
+~
+~
+0 -1 9709
+D2
+~
+~
+0 -1 9704
+D3
+~
+~
+0 -1 9723
+S
+#9706
+At the undeveloped part of the Galaxy~
+This place looks deserted, covered with space debris. Not a sign of life is around.
+~
+97 0 1
+D0
+~
+~
+0 -1 9706
+D2
+~
+~
+0 -1 9724
+D3
+~
+~
+0 -1 9723
+S
+#9708
+On the Bridge of Stars~
+This bridge has been made by the stars to honour their ancestors. The bridge itself shines brightly and makes you feel that you are walking on a path of light. An entrance to an ancient building lies north and to the east lies the Milky Way.
+~
+97 0 1
+D0
+~
+~
+0 -1 9731
+D1
+~
+~
+0 -1 9712
+D3
+~
+~
+0 -1 9703
+S
+#9709
+On the Bridge of Nebulae~
+This bridge, like the other, was made as a memorial. The nebulae had to make one just to show that they are as capable as the stars. North lies a throne room.
+~
+97 1 1
+D0
+~
+~
+0 -1 9710
+D1
+~
+~
+0 -1 9714
+D3
+~
+~
+0 -1 9705
+S
+#9710
+The throne room of the Nebula King~
+You can only faintly make out that it is a throne room as it is too dark in here. In the middle is an empty throne. You wonder where the King has gone, maybe he is hiding from you?
+~
+97 9 0
+D2
+~
+~
+0 -1 9709
+S
+#9712
+At the start of the Milky Way~
+It is here that the famous old Milky Way starts flowing. You are surrounded by streams of mist the moment you tread on it. You can't see well in here...Luckily you haven't fallen yet!
+~
+97 0 4
+D0
+~
+~
+0 -1 9713
+D3
+~
+~
+0 -1 9708
+S
+#9713
+Along the Milky Way~
+You are still travelling inside this path of mist. You notice a small opening lies to the east.
+~
+97 0 4
+D0
+~
+~
+0 -1 9714
+D1
+~
+~
+0 -1 9717
+D2
+~
+~
+0 -1 9712 
+S
+#9714
+At the end of the Milky Way~
+Just as you started enjoying this journey inside the mist you have come to the end of it. West leads to a bridge and east leads to somewhere else.
+~
+97 0 4
+D1
+~
+~
+0 -1 9718
+D2
+~
+~
+0 -1 9713
+D3
+~
+~
+0 -1 9709
+S
+#9717
+A small clearing~
+You are inside a small clearing. You can see that there are signs of a living creature nearby.
+~
+97 0 2
+D0
+~
+~
+0 -1 9718
+D3
+~
+~
+0 -1 9713
+S
+#9718
+An edge of the galaxy~
+You are on the very edge of the galaxy. Nothing is here except that there is a path which leads down.
+~
+97 0 1
+D2
+~
+~
+0 -1 9717
+D3
+~
+~
+0 -1 9714
+D5
+~
+~
+0 -1 9719
+S
+#9719
+Very near to a gigantic star~
+You are very near to a gigantic red star. While you are still fascinated by its beauty, the star keeps on growing...Suddenly you realise that you'd better leave.
+~
+97 0 1
+D0
+~
+~
+0 -1 9720
+D1
+~
+~
+0 -1 9720
+D2
+~
+~
+0 -1 9720
+D3
+~
+~
+0 -1 9720
+S
+#9720
+Too bright to tell~
+Indeed it is too bright to tell. Because what you are witnessing is the rare event of a Supernova, how a star explodes itself into galatic dust. You may find yourself lucky to witness this rare event but even luckier, you have finally got out of this galaxy as your body turns into dust. That really HURTS!  
+~
+97 6 0
+S
+#9721
+The star cluster~
+You are inside the home of the stars. All you can see around you are stars and nothing else. You eyes become pretty hurt as you look at them.
+~
+97 8 1
+D0
+~
+~
+0 -1 9722
+D1
+~
+~
+0 -1 9703
+S
+#9722
+Another edge of the galaxy~
+This is another uninhabited place. Exit lies north, east and south.
+~
+97 0 2
+D0
+~
+~
+0 -1 9723
+D1
+~
+~
+0 -1 9704 
+D2
+~
+~
+0 -1 9721
+S
+#9723
+Corner of the galaxy~
+You wonder why the galaxy is limited. All you have done in Astronomy courses now prove worthless. Well who told you to take one at the start?  
+~
+97 0 1
+D0
+~
+~
+0 -1 9724 
+D1
+~
+~
+0 -1 9705
+D2
+~
+~
+0 -1 9723
+D3
+~
+~
+0 -1 9724
+S
+#9724
+Lost in space~
+You are now lost in space. Compasses don't work here,sorry. What's more you can sense darkness engulfing you. You'd better get out quick.
+~
+97 1 2
+D0
+~
+~
+0 -1 9725
+D1
+~
+~
+0 -1 9706
+D2
+~
+~
+0 -1 9723
+D3
+~
+~
+0 -1 9723
+S
+#9725
+BlackHole~
+Well you have chosen the wrong path, Sorry. Nothing can escape from this monster, not even light. PANIC! You can't escape!
+~
+97 3 0
+D0
+~
+~
+0 -1 9800
+S
+#9726
+The Homes of the Pleiades~
+This is where the famous Seven Sisters live. You 'd better not disturb them.
+~
+97 0 1
+D1
+~
+~
+0 -1 9729
+D2
+~
+~
+0 -1 9727
+S
+#9727
+Western side of the Temple~
+You are still wandering around this temple. You notice exits lie in all directions except west.
+~
+97 0 1
+D0
+~
+~
+0 -1 9726
+D1
+~
+~
+0 -1 9730
+D2
+~
+~
+0 -1 9728
+S
+#9728
+Orion's hunting lodge~
+This is dedicated to the Great Hunter of all times-Orion.Scattered on the floor is the famous hunting equipment used by him.
+~
+97 0 1
+D0
+~
+~
+0 -1 9727
+D1
+~
+~
+0 -1 9731
+S
+#9729
+Northern side of the Temple~
+You are still wandering around this temple. You notice exits lie in all directions except north.
+~
+97 0 1
+D1
+~
+~
+0 -1 9732
+D2
+~
+~
+0 -1 9730
+D3
+~
+~
+0 -1 9726
+S
+#9730
+The Offering Chamber~
+This is the sacred offering chamber in which sacrifices are made. Strangly you see a young girl here, chained to the wall, as if she is waiting for execution. You look up and realise the chains are sent down directly from above. Below you recognize the temple of Midgaard.
+~
+97 0 1
+D0
+~
+~
+0 -1 9729
+D1
+~
+~
+0 -1 9733 
+D2
+~
+~
+0 -1 9731
+D3
+~
+~
+0 -1 9727
+D4
+~
+~
+0 -1 9739
+D5
+~
+~
+0 -1 3001
+S
+#9731
+The Entrance of the ancinet Temple~
+You have entered into this old temple, which was built originally for the gods in Mount Olympia, but it is now deserted as someone took over this part of the Universe.
+~
+97 0 1
+D0
+~
+~
+0 -1 9730
+D1
+~
+~
+0 -1 9734
+D2
+~
+~
+0 -1 9708
+D3
+~
+~
+0 -1 9728
+S
+#9732
+Hercules' mighty throne~
+You stand before the throne of a long-forgotton hero. It is full of bounty that he got from the Ten Labours. 
+~
+97 0 1
+D2
+~
+~
+0 -1 9733
+D3
+~
+~
+0 -1 9729
+S
+#9733
+Eastern side of the Temple~
+You are still wandering around this temple. You notice exits lie in all directions except east.
+~
+97 0 1
+D0
+~
+~
+0 -1 9732
+D2
+~
+~
+0 -1 9734
+D3
+~
+~
+0 -1 9730
+S
+#9734
+Perseus' Chamber~
+It is the chamber of the prince, Perseus. However, he seems not to be here. Maybe he has gone to get Pegasus to save Andromeda?
+~
+97 0 1
+D0
+~
+~
+0 -1 9733
+D3
+~
+~
+0 -1 9731
+S
+#9739
+On the mystic chains~
+You are dangling on the chains. You notice exits lie in all directions. Up above you see the chains continue upwards. But a forcefield prevents you from going further upwards.
+~
+97 0 5
+D0
+~
+~
+0 -1 9748
+D1
+~
+~
+0 -1 9751
+D2
+~
+~
+0 -1 9742
+D3
+~
+~
+0 -1 9745
+D4
+You see the forcefield of Spring~
+forcefield~
+2 9724 9754  
+D5
+~
+~
+0 -1 9730
+S
+#9742
+On a hill~
+Suddenly you find yourself on a hillside. As you look around you, you notice that Spring has descended upon you.
+~
+97 0 4
+D0
+~
+~
+0 -1 9739 
+D1
+~
+~
+0 -1 9753
+D3
+~
+~
+0 -1 9743
+S
+#9743
+Inside a Spanish Bull-Ring~
+You are inside what used to be a ground for bull fighting. But you notice there are no Matadors around. Maybe they are all dead?
+~
+97 0 2
+D1
+~
+~
+0 -1 9742
+D3
+~
+~
+0 -1 9744
+S 
+#9744
+Inside a study~
+This is a strange study. Besides the desks and chairs you also see a large mirror in the middle. So, you wonder, is this how you make a Gemini into 2 Gemini?
+~
+97 0 0
+D1
+~
+~
+0 -1 9743
+D3
+~
+~
+0 -1 9745
+S
+#9745
+Along the seashore~
+You start to feel the heat of Summer. Amongst the rocky beach you notice hidden forms which could be camouflagued crabs. 
+~
+97 0 2
+D0
+~
+~
+0 -1 9739
+D1
+~
+~
+0 -1 9744
+D3
+~
+~
+0 -1 9746
+S
+#9746
+Within the deep jungle~
+Nearby you can hear the roar of an animal. Peering through the dense overgrowth you think you glimpse a pair of menacing eyes.
+~
+97 0 3
+D1
+~
+~
+0 -1 9745
+D3
+~
+~
+0 -1 9747
+S
+#9747
+Inside a luxurious bedroom~
+A peaceful feeling overtakes you. You see a magnificent four-poster bed, (It's a double bed and there is only room for one more!) Well, what now...?
+~
+97 8 1
+D1
+~
+~
+0 -1 9746
+D3
+~
+~
+0 -1 9748
+S
+#9748
+The supreme court~
+You are standing inside the dock of a court. You feel an overwhelming sense of guilt and you want to protest your innocence! You fear retruibution and feel yourself exposed, just like the trees in Autumn.
+~
+97 8 1
+D0
+~
+~
+0 -1 9739
+D1
+~
+~
+0 -1 9747
+D3
+~
+~
+0 -1 9749
+S
+#9749
+In the dry desert~
+You are confused by the shifting sands around you. Through the shimmering heat you see the hazy outline of a giant scorpion...Is this a mirage?
+~
+97 0 2
+D1
+~
+~
+0 -1 9748
+D3
+~
+~
+0 -1 9750
+S
+#9750
+In the woods~
+You find yourself in the centre of a Centaurion hunting party. You'd better hide yourself before you become the 'centre attraction'!
+~
+97 0 3
+D1
+~
+~
+0 -1 9749
+D3
+~
+~
+0 -1 9751
+S
+#9751
+On a mountain peak~
+You are on the highest peak of the Universe. You look around and notice clouds below you. One of the clouds resembles a goat-like form.
+~
+97 0 5
+D0
+~
+~
+0 -1 9739
+D1
+~
+~
+0 -1 9750
+D3
+~
+~
+0 -1 9752
+S
+#9752
+Inside a waterfall~
+The noise is deafening. You are about to take a drink when you realize that the water is being poured out of a vessel of mind-boggling proprotions!
+~
+97 0 5
+D1
+~
+~
+0 -1 9751
+D3
+~
+~
+0 -1 9753
+S
+#9753
+Inside a gigantic clam~
+You feel uneasy here as if some evil magic is being cast on you. You suspect something fishy is going on in here.
+~
+97 0 5
+D1
+~
+~
+0 -1 9752
+D3
+~
+~
+0 -1 9742  
+S
+#9754
+End of the mystic chains~
+You have reached the end of the mystic chains. Looking up, you notice a small landing on which you can climb. However there seems to be another forcefield blocking your way.  
+~
+97 0 5
+D4
+forcefield~
+You see the forcefield of Summer.~
+2 9725 9755
+D5
+~
+~
+2 9724 9739
+S
+#9755
+On the Draco~
+You realize you are standing on scaly ground. As you wonder what the ground is made of, you feel the ground move.
+~
+97 1 4
+D0
+~
+~
+0 -1 9756 
+D5
+~
+~
+2 9725 9754
+S
+#9756
+Tail of the Draco~
+At last you realise that you are on a giant snake-like dragon called the Draco, the guardian of the inner galaxy. You realise that the Draco is actually flying now! 
+~
+97 1 4
+D2
+~
+~
+0 -1 9755
+D3
+~
+~
+0 -1 9757
+S
+#9757
+Path of the Draco~
+As you struggle along this scaly creature you realize that the only way you can reach to the inner galaxy is by going all the way to the head.
+~
+97 1 4
+D0
+~
+~
+0 -1 9758
+D1 
+~
+~
+0 -1 9756
+S
+#9758
+Near the legs of Draco~
+You are approaching the leg part of this creature. You look around and see that the surrounding is all dark except for some faint lights from the distant stars.
+~
+97 1 4
+D0
+~
+~
+0 -1 9759
+D2
+~
+~
+0 -1 9757
+S
+#9759
+On the back of Draco~
+At last you are half way through this long, weary journey. You can see the wings are to the east but it seems that another forcefield is in the way.
+~
+97 1 4
+D1
+forcefield~
+You see the forcefield of Autumn~ 
+2 9726 9760
+D2
+~
+~
+0 -1 9758
+S
+#9760
+Between the Wings of Draco~
+You hear some giant flapping sounds nearby. You desperately try to get hold of something as the forceful gusts sweep you away.
+~
+97 1 4
+D1
+~
+~
+0 -1 9761
+D3
+~
+~
+2 9726 9759
+S
+#9761
+Near the arms of Draco~
+From above you can faintly make out the gigantic arms which extend far beyond into the darkness.
+~
+97 1 4  
+D2
+~
+~
+0 -1 9762
+D3
+~
+~
+0 -1 9760
+S
+#9762
+On the neck of Draco~
+Your journey is now approaching the end. However, this neck seems to be endless.
+~
+97 1 4
+D0
+~
+~
+0 -1 9761
+D3
+~
+~
+0 -1 9763
+S
+#9763
+Approaching the Head of Draco~
+You have come to the end of Draco, but you can't find the head! You see a forcefield to the south, some distance away, beyond reach. If only the head was here...   
+~
+97 1 4
+D1
+~
+~
+0 -1 9762
+D2
+forcefield~
+You see the forcefield of Winter~
+2 9727 9764
+S
+#9764
+At the entrance of the Great Dipper~
+Now you are in the innermost part of the galaxy. What you are walking on now is the path of the Great Dipper or the Plough. You notice that there are seven rooms in this zone, representing the seven stars of the Dipper.
+~
+97 0 1  
+D0
+~
+~
+2 9727 9763
+D2
+~
+~
+0 -1 9765
+D3
+~
+~
+0 -1 9766
+S
+#9765
+Cassiopeia's Throne~
+This is the Throne room of the Queen of the Universe. From here you can see every star and constellation in the Universe. 
+~
+97 0 1
+D0
+~
+~
+0 -1 9764
+D3
+~
+~
+0 -1 9767
+S
+#9766
+Along the path of the Dipper~
+You see stars around you but nothing of special interest.
+~
+97 0 1
+D1
+~
+~
+0 -1 9764
+D2
+~
+~
+0 -1 9767
+S
+#9767
+Cepheus' Throne~
+This is the Throne room of the King of the Universe. From here you can see every star and constellation in the Universe. 
+~
+97 0 1
+D0
+~
+~
+0 -1 9766
+D1 
+~
+~
+0 -1 9765
+D2
+~
+~
+0 -1 9768
+S
+#9768
+Along the path of the Dipper~
+You see stars around you but nothing of special interest.
+~
+97 0 1
+D0
+~
+~
+0 -1 9767
+D3
+~
+~
+0 -1 9769
+S
+#9769
+Along the path of the Dipper~
+You see stars around you but nothing of special interest.
+~
+97 0 1
+D1
+~
+~
+0 -1 9768
+D2
+~
+~
+0 -1 9770
+S
+#9770
+End of the Dipper~
+You have finished the path of the Dipper. Here, the most prominent feature is a set of claw-marks. You also notice a room to the south, it looks as if Polaris could lie here. 
+~
+97 0 1
+D0
+~
+~
+0 -1 9769
+D2
+~
+~
+0 -1 9771
+S
+#9771
+The Polar Star~
+You have entered the private chamber of Polaris. This is a room of great significance. You can see a powerful telescope pointing down towards the Universe(SNOOPING!). It is from here that Polaris commands the Universe. You feel you have come to end of your search in this galaxy...
+~
+97 0 1
+D0
+~
+~
+0 -1 9770
+S
+#99999
+$~

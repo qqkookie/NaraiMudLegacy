@@ -1,0 +1,67 @@
+Haon Dor Dark~
+16499 20 2
+* Mobiles and equipment
+M 0 16410 2 16426  Vicious warg
+M 0 16410 2 16426  Vicious warg
+M 0 16411 2 16437  Ferocious warg
+M 0 16411 2 16437  Ferocious warg
+M 0 16412 4 16418  Grey wolf 1
+M 0 16412 4 16418  Grey wolf 1
+M 0 16412 4 16414            2
+M 0 16412 4 16414            2
+M 0 16413 4 16422  Black wolf 1
+M 0 16413 4 16422  Black wolf 1
+M 0 16413 4 16428             2
+M 0 16413 4 16428             2
+M 0 16420 4 16430  Tree 1.1
+M 0 16419 8 16430  Forest Ranger
+M 0 16419 8 16430  Forest Ranger
+M 0 16420 4 16433       1.2
+M 0 16419 8 16433
+M 0 16419 8 16433
+M 0 16421 4 16419       2.1
+M 0 16419 8 16419
+M 0 16419 8 16419
+M 0 16421 4 16415       2.2
+M 0 16419 8 16415
+M 0 16419 8 16415
+M 0 16433 1 16431  Isha the Dark Elf
+E 1 16441 1 5     Dragon scale shirt   Equipped (BODY)
+E 1 16442 1 7     Dragon scale skirt Equipped (LEGS)
+E 1 16443 1 3       Black cloak  Equipped (NECK_1)
+E 1 16444 1 13      Silver belt  Equipped (WAISTE)
+E 1 16445 1 16      Long, slender sword   Equipped (WIELD)
+M 0 16422 1 16453  Green dragon
+G 1 16446 2       Light sabre
+G 1 16422 1       Iron crown (Carried)
+M 0 16423 3 16443  Poisonous spider 1
+M 0 16423 3 16443                   2
+M 0 16423 3 16443                   3
+M 0 16424 1 16444  Queen Spider
+G 1 16418 10        10,000 gold     Carried
+G 1 16419 10        give her a blue potion
+G 1 16423 1         Iron sceptre       Carried
+M 0 16425 1 16410  Shargugh the Forest Brownie
+E 1 16424 1 1       Iron ring (Equipped (FINGER_R))
+* Objects
+O 0 16412 1 16413  Hollow tree
+O 0 16413 1 16423  Branch, light
+O 0 16414 1 16435  Branch, weapon
+O 0 16415 1 16415  Branch, unusable
+O 0 16416 4 16414  Toadstool 1.1
+O 0 16416 4 16421            1.2
+O 0 16416 4 16432            1.3
+O 0 16417 4 16429            2.1 (poisonous)
+*
+*       Move FROM "HaonDorLight.zon"
+M 0 16432 1 16448	Jim the Lumberjack
+E 1 16431 4 16		wields a scythe
+E 1 16435 4 8		good boots
+*
+*       Move FROM "SlumOfMidgaard.zon"
+M 0 16431 1 16447
+E 1 16433 9 17
+E 1 16432 1 20
+*
+S
+$~

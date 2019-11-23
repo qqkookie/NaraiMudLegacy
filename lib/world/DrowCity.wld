@@ -1,0 +1,810 @@
+#17310
+City Entrance~
+     You are at the entrance to a small underground city. A great adamantite
+gate lies open to the west allowing entrance into the city.
+~
+173 9 0
+D3
+A huge gate opens to the west allowing enrance into the city.~
+gate~
+0 0 17311
+E
+gate~
+A large adamantite gate with giant spider shaped emblems stands here.~
+S
+#17311
+City street~
+     You walk along a highgly ornate street going north-south. A large gate
+lies to the east while a building lies to the west.
+~
+173 9 0
+D0
+~
+~
+0 0 17333
+D1
+~
+~
+0 0 17310
+D2
+~
+~
+0 0 17312
+D3
+~
+~
+0 0 17332
+S
+#17312
+City street~
+     You walk along a highly ornate citystreet going north and west.
+~
+173 9 0
+D0
+~
+~
+0 0 17311
+D3
+~
+~
+0 0 17313
+S
+#17313
+City street~
+     You walk along a highly ornate citystreet going east-west. A large house
+stands to the south.
+~
+173 9 0 
+D1
+~
+~
+0 0 17312
+D2
+~
+~
+0 0 17314
+D3
+~
+~
+0 0 17316
+S
+#17314
+3rd House~
+     You stand inside the 3rd house of the city; it is fairly well decorated
+by drow standards having a few statues, murals and such. A door leads to the 
+south.
+~
+173 9 0
+D0
+~
+~
+0 0 17313
+D2
+~
+~
+1 -1 17315
+S
+#17315
+Throne Room~
+     The throne room of the 3rd house is about as decorated as the inner
+courtyard except with a blood covered altar in the center of the room.
+~
+173 9 0
+D0
+~
+~
+1 -1 17314
+S
+#17316
+City street~
+     You walk along a highly ornate citystreet going east-west. To the north
+is a large building.
+~
+173 9 0
+D0
+~
+~
+0 0 17328
+D1
+~
+~
+0 0 17313
+D3
+~
+~
+0 0 17317
+S
+#17317
+City street~
+     You walk along a highly ornate citystreet leading north and east. To the
+south is an extremely large house.
+~
+173 9 0
+D0
+~
+~
+0 0 17320
+D1
+~
+~
+0 0 17316
+D2
+~
+~
+0 0 17318
+S
+#17318
+2nd House~
+     You stand inside the 2nd house of the city. The room is highly decorated
+with statues of spiders and murals everywhere.
+~
+173 9 0
+D0
+~
+~
+0 0 17317
+D3
+~
+~
+1 -1 17319
+S
+#17319
+Throne Room~
+     The throne room of the 2nd house is just a little more decorative than
+the inner courtyard having an altar in the center of the room.
+~
+173 9 0
+D1
+~
+~
+1 -1 17318
+S
+#17320
+Main Gate~
+     You are at the entrance to the 1st house of the city. A large gate, almost
+as big and elegant as the one at the entrance to the city, stands here.
+~
+173 9 0
+D0
+~
+~
+0 0 17324
+D2
+~
+~
+0 0 17317
+D3
+A large gate lies to the west.~
+gate~
+1 -1 17321
+S
+#17321
+1st House~
+     You stand in the inner courtyard of the 1st and largest house in the city.
+The room is extremely large and decorative. Mural and paintings hang on the 
+walls depicting some battles and a spider queen.
+~
+173 9 0
+D1
+~
+~
+1 -1 17320
+D3
+~
+~
+0 0 17322
+S
+#17322
+Throne Room~
+     The throne room of the 1st house is in one word...awesome. It is so
+horrifying it is almost beautiful.
+~
+173 9 0
+D0
+~
+~
+1 -1 17323
+D1
+~
+~
+0 0 17321
+S
+#17323
+Main Chamber~
+     This is the council chamber for the Matron Mother herself. A huge table
+and chairs surrounding it sits in the center of the room.
+~
+173 9 0
+D2
+~
+~
+1 -1 17322
+S
+#17324
+City street~
+     You walk along a highly arnate citystreet leading north-south and east.
+~
+173 9 0
+D0
+~
+~
+0 0 17325
+D1
+~
+~
+0 0 17327
+D2
+~
+~
+0 0 17320
+S
+#17325
+City street~
+     You walk along a highle ornate citystreet leading south. A building is
+to the west.
+~
+173 9 0
+D2
+~
+~
+0 0 17324
+D3
+~
+~
+1 -1 17326
+S
+#17326
+Cleric Academy~
+     This is the most lavish of the academies being that it is for the clerics.
+~
+173 9 0
+D1
+~
+~
+1 -1 17325
+S
+#17327
+City street~
+     You walk along a highly ornate citystreet going east-west. To the north
+is a giant temple.
+~
+173 9 0
+D0
+The entrance to the temple of Lloth.~
+~
+1 -1 17329
+D1
+~
+~
+0 0 17331
+D3
+~
+~
+0 0 17324
+S
+#17328
+Warrior's Academy~
+     This looks more like a barracks than a school.
+~
+173 9 0
+D2
+~
+~
+0 0 17316
+S
+#17329
+Entrance to the Temple of Lloth~
+     The temple is the largest building in the city. Even it's doors are beyond
+imagination. Inside of the temple entrance, the walls are made of gold and 
+adamantite.
+~
+173 9 0
+D2
+~
+~
+1 -1 17327
+D5
+~
+~
+0 0 17336
+S
+#17330
+Mage's Academy~
+     The mages academy is fairly well decorated see that the drow prefer magic
+over physical power greatly.
+~
+173 9 0
+D2
+~
+~
+1 -1 17331
+S
+#17331
+City street~
+     You walk along a highly ornate citystreet going eastward. To the north is
+a building.
+~
+173 9 0
+D0
+~
+~
+1 -1 17330
+D1
+~
+~
+0 0 17333
+D2
+~
+~
+0 0 17332
+D3
+~
+~
+0 0 17327
+S
+#17332
+Slave Chamber~
+     The room is in shambles. Traw is strewn all about the room as beds for the
+unfortunate creatures who have fallen prey to drow empirialism.
+~
+173 9 0
+D0
+~
+~
+0 0 17331
+D1
+~
+~
+0 0 17311
+S
+#17333
+City street~
+     You walk along a highly ornate citystreet leading west and south. To the
+north is a relatively small house.
+~
+173 9 0
+D0
+~
+~
+1 -1 17334
+D2
+~
+~
+0 0 17311
+D3
+~
+~
+0 0 17331
+S
+#17334
+4th house~
+    You stand inside the 4th house of the city. Its inner courtyard is rather 
+dull by drow standards and rather small as well.
+~
+173 9 0
+D1
+~
+~
+0 0 17335
+D2
+~
+~
+1 -1 17333
+S
+#17335
+Throne Room~
+     The throne room is basically similiar to the inner courtyard in regards
+to decor. there is a small throne behind the altar but that is about it.
+~
+173 9 0
+D3
+~
+~
+0 0 17334
+S
+#17336
+Entrance Way~
+     You stand in the entrance way to the temple which opens up to the north
+into a large hallway going east and west. Small statues os spiders line the
+entrance way's walls.
+~
+173 9 0
+D0
+~
+~
+0 0 17337
+D4
+~
+~
+0 0 17329
+S
+#17337
+Hallway~
+     You are in a long hallway lined with adamantite. The walls are engraved
+with pictures of elves and spiders. The hallway continues east and west. As you
+look down the hallway you can make out one or two figures moving away from you.
+To the north is a obsidian stairway.
+~
+173 9 0
+D0
+~
+~
+0 0 17345
+D2
+~
+~
+0 0 17336
+D1
+~
+~
+0 0 17338
+D3
+~
+~
+0 0 17341
+S
+#17338
+Long Hallway~
+     You are in a long hallway lined with adamantite. The walls are engraved
+with pictures of elves and spiders. The hallway continues east and west. As you
+look down the hallway you can make out one or two figures moving away from you.
+~
+173 9 0
+D1
+~
+~
+0 0 17339
+D3
+~
+~
+0 0 17337
+S
+#17339
+Long Hallway~
+     You are in a long hallway lined with adamantite. The walls are engraved
+with pictures of elves and spiders. The hallway continues east and west. As you
+look down the hallway you can make out one or two figures moving away from you.
+To the north is a door.
+~
+173 9 0
+D0
+~
+~
+1 -1 17360
+D1
+~
+~
+0 0 17340
+D3
+~
+~
+0 0 17338
+S
+#17340
+Long Hallway~
+     You are in a long hallway lined with adamantite. The walls are engraved
+with pictures of elves and spiders. The hallway continues east and west. As you
+look down the hallway you can make out one or two figures moving away from you.
+~
+173 9 0
+D1
+~
+~
+0 0 17344
+D3
+~
+~
+0 0 17339
+S
+#17341
+Long Hallway~
+     You are in a long hallway lined with adamantite. The walls are engraved
+with pictures of elves and spiders. The hallway continues east and west. As you
+look down the hallway you can make out one or two figures moving away from you.
+~
+173 9 0
+D1
+~
+~
+0 0 17337
+D3
+~
+~
+0 0 17342
+S
+#17342
+Long Hallway~
+     You are in a long hallway lined with adamantite. The walls are engraved
+with pictures of elves and spiders. The hallway continues east and west. As you
+look down the hallway you can make out one or two figures moving away from you.
+To the south is a door.
+~
+173 9 0
+D1
+~
+~
+0 0 17341
+D2
+~
+~
+1 -1 17343
+D3
+~
+~
+0 0 17344
+S
+#17343
+Warrior's Barracks~
+     The room is a complete mess. None of the beds are made, clothes and other
+items have been left all about the room. Well drow warriors never were known
+for neatness.
+~
+173 9 0
+D0
+~
+~
+1 -1 17341
+S
+#17344
+Long Hallway~
+     You are in a long hallway lined with adamantite. The walls are engraved
+with pictures of elves and spiders. The hallway continues east and west. As you
+look down the hallway you can make out one or two figures moving away from you.
+~
+173 9 0
+D1
+~
+~
+0 0 17342
+D3
+~
+~
+0 0 17340
+S
+#17345
+Grand Stairway~
+     You are standing at the bottpom of a giant obsidian and adamantite 
+stairway. The edges are trimmed with gold.
+~
+173 9 0
+D2
+~
+~
+0 0 17337
+D4
+~
+~
+0 0 17346
+S
+#17346
+Grand Hallway~
+     You are standing in the middle of a grand hallway. The walls are 
+of the purest adamantite with gold trim. Mosiacs line the walls.
+~
+173 9 0
+D0
+~
+~
+0 0 17348
+D1
+~
+~
+1 -1 17347
+D5
+~
+~
+0 0 17345
+S
+#17347
+Mage's Barrracks~
+     The mage's living quarters is rather clean with the exception of a few
+used component containers. It is rather well decorated as well. Cots line the
+floor for the mages to sleep on. the only door is to the west.
+~
+173 9 0
+D3
+~
+~
+1 -1 17346
+S
+#17348
+Grand Hallway~
+     You are walking down a grand hallway, heavily decorated with adamantite
+and gold. To the north the hall goes down a flight of stairs while a door is 
+too the west.
+~
+173 9 0
+D2
+~
+~
+0 0 17346
+D3
+~
+~
+1 -1 17349
+D5
+~
+~
+0 0 17350
+S
+#17349
+Cleric's Barracks~
+     The bed chamber is brightly decorated with spider shaped statues, murals
+and the like. Large beds line the floor making this a comfortable room to live 
+in.
+~
+173 9 0
+D1
+~
+~
+1 -1 17348
+S
+#17350
+Grand Stairway~
+     You are climbing a set of obsidian stairs surrounded by adamantite walls.
+To the north are a set of large golden doors.
+~
+173 9 0
+D0
+~
+~
+1 -1 17351
+D4
+~
+~
+0 0 17348
+S
+#17351
+Main Chamber~
+     This is the south side of a large auditorium used for services by the
+drow priestesses. In the center is a large sacrificial pit and beyond that is
+an altar.
+~
+173 9 0
+D1
+~
+~
+0 0 17352
+D2
+~
+~
+1 -1 17350
+D3
+~
+~
+0 0 17354
+S
+#17352
+Easternside of Chamber~
+     You are on the easternside of the chamber overlooking the pit. To the east
+is a door while to the north is an altar.
+~
+173 9 0
+D0
+~
+~
+0 0 17355
+D1
+~
+~
+1 -1 17356
+D2
+~
+~
+0 0 17351
+S
+#17353
+Sacrificial Pit~
+A you climb down into the pit thoughsands of spiders cover you tearing your
+body to shreds. 
+ 
+Lloth thanks you for your sacrifice.
+~
+173 6 0
+S
+#17354
+Westernside of Chamber~
+     You are on the westernside of the main chamber overlooking a sacrificial
+pit. To the north is an altar.
+~
+173 9 0
+D0
+~
+~
+0 0 17355
+D2
+~
+~
+0 0 17351
+S
+#17355
+The Altar~
+     You are standing infront of a highly and freshly bloodstained altar. 
+Engraved on the top of the altar is a giant spider witha human head. Looking 
+down from the altar you see a large sacrificial pit.
+~
+173 9 0
+D0
+~
+~
+0 0 17358
+D1
+~
+~
+0 0 17352
+D3
+~
+~
+0 0 17354
+D5
+~
+~
+0 0 17353
+S
+#17356
+Slave Cells~
+     This is the main room to the cell chambers for the slaves to be 
+sacrificed. You notice there are no guards around.
+~
+173 9 0
+D0
+~
+~
+1 -1 17357
+D3
+~
+~
+0 0 17352
+S
+#17357
+Slave Pen~
+     Rotten meat and breads lie about the floor while shackles hang from the 
+walls. The room wreaks of death. You almost become nausious and ecide to leave
+the room since you were obviously too late to save the slave.
+~
+173 9 0
+D2
+~
+~
+1 -1 17356
+S
+#17358
+Dias~
+     You stand upon a dias behind the altar. Above you is a enormous illusion
+of a female drow turning into a giant spider and back again. There is a door 
+to the west.
+~
+173 9 0
+D2
+~
+~
+0 0 17355
+D3
+~
+~
+1 -1 17359
+S
+#17359
+The Treasury~
+     This is obviously only a temporary storage place for the collected 
+treasure being rather bare.
+~
+173 9 0
+D1
+~
+~
+1 -1 17358
+S
+#17360
+Weaponsmaster's Chamber~
+     This one person bedchamber is very elegant. The owner must be held in high 
+to get this kind of treatment.
+~
+173 9 0
+D2
+~
+~
+1 -1 17339
+S
+#99999
+$~

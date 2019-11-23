@@ -1,231 +1,231 @@
 The Corporation~
-2699 18 2
+15299 18 2
 *
-D 0 2650 0 1
-D 0 2650 2 1
-D 0 2651 2 1
-D 0 2653 0 1
+D 0 15260 0 1
+D 0 15260 2 1
+D 0 15261 2 1
+D 0 15263 0 1
 *
-M 0 2550 15 2510  Guard
-M 0 2550 15 2520  Guard
-M 0 2550 15 2530  Guard
-M 0 2550 15 2540  Guard
-M 0 2550 15 2550  Guard
-M 0 2550 15 2560  Guard
-M 0 2550 15 2570  Guard
-M 0 2550 15 2580  Guard
-M 0 2550 15 2590  Guard
-M 0 2550 15 2600  Guard
-M 0 2550 15 2610  Guard
-M 0 2550 15 2620  Guard
-M 0 2550 15 2630  Guard
-M 0 2550 15 2640  Guard
+M 0 15160 15 15120  Guard
+M 0 15160 15 15130  Guard
+M 0 15160 15 15140  Guard
+M 0 15160 15 15150  Guard
+M 0 15160 15 15160  Guard
+M 0 15160 15 15170  Guard
+M 0 15160 15 15180  Guard
+M 0 15160 15 15190  Guard
+M 0 15160 15 15200  Guard
+M 0 15160 15 15210  Guard
+M 0 15160 15 15220  Guard
+M 0 15160 15 15230  Guard
+M 0 15160 15 15240  Guard
+M 0 15160 15 15250  Guard
 *
-M 0 2500 4 2504   Temporary Clerk
-M 0 2500 4 2501   Temporary Clerk
-M 0 2500 4 2504   Temporary Clerk
-M 0 2500 4 2504   Temporary Clerk
-E 1 2500 7  5     polyester suit
-E 1 2505 7  6     polyester hat
-E 1 2510 7  7     polyester pants
-E 1 2515 7  8     vinyl shoes
-E 1 2520 7  9     vinyl gloves
-M 0 2501 4 2506   Experienced Clerk
-M 0 2501 4 2507   Experienced Clerk
-M 0 2501 4 2508   Experienced Clerk
-M 0 2501 4 2506   Experienced Clerk
-E 1 2500 7  5     polyester suit
-E 1 2505 7  6     polyester hat
-E 1 2510 7  7     polyester pants
-E 1 2515 7  8     vinyl shoes
-E 1 2520 7  9     vinyl gloves
-M 0 2502 4 2513   Head Clerk
-M 0 2502 4 2511   Head Clerk
-M 0 2502 4 2511   Head Clerk
-M 0 2502 4 2514   Head Clerk
-E 1 2500 7  5     polyester suit
-E 1 2505 7  6     polyester hat
-E 1 2510 7  7     polyester pants
-E 1 2515 7  8     vinyl shoes
-E 1 2520 7  9     vinyl gloves
-M 0 2507 4 2507   Temporary Bookkeeper
-M 0 2507 4 2505   Temporary Bookkeeper
-M 0 2507 4 2507   Temporary Bookkeeper
-M 0 2507 4 2506   Temporary Bookkeeper
-E 1 2500 7  5     polyester suit
-E 1 2505 7  6     polyester hat
-E 1 2510 7  7     polyester pants
-E 1 2515 7  8     vinyl shoes
-E 1 2520 7  9     vinyl gloves
-M 0 2508 4 2519   Experienced Bookkeeper
-M 0 2508 4 2516   Experienced Bookkeeper
-M 0 2508 4 2516   Experienced Bookkeeper
-M 0 2508 4 2515   Experienced Bookkeeper
-E 1 2500 7  5     polyester suit
-E 1 2505 7  6     polyester hat
-E 1 2510 7  7     polyester pants
-E 1 2515 7  8     vinyl shoes
-E 1 2520 7  9     vinyl gloves
-M 0 2509 4 2527   Head Bookkeeper
-M 0 2509 4 2525   Head Bookkeeper
-M 0 2509 4 2525   Head Bookkeeper
-M 0 2509 4 2525   Head Bookkeeper
-E 1 2500 7  5     polyester suit
-E 1 2505 7  6     polyester hat
-E 1 2510 7  7     polyester pants
-E 1 2515 7  8     vinyl shoes
-E 1 2520 7  9     vinyl gloves
-M 0 2514 4 2519   Temporary Accountant
-M 0 2514 4 2515   Temporary Accountant
-M 0 2514 4 2516   Temporary Accountant
-E 1 2500 7  5     polyester suit
-E 1 2505 7  6     polyester hat
-E 1 2510 7  7     polyester pants
-E 1 2515 7  8     vinyl shoes
-E 1 2520 7  9     vinyl gloves
-M 0 2514 4 2519   Temporary Accountant
-M 0 2515 4 2534   Experienced Accountant
-E 1 2501 6  5     tweed suit
-E 1 2506 6  6     tweed hat
-E 1 2511 6  7     tweed pants
-E 1 2516 6  8     rubber shoes
-E 1 2521 6  9     rubber gloves
-M 0 2515 4 2531   Experienced Accountant
-M 0 2515 4 2532   Experienced Accountant
-M 0 2515 4 2530   Experienced Accountant
-M 0 2516 3 2547   Head Accountant
-M 0 2516 3 2547   Head Accountant
-M 0 2516 3 2546   Head Accountant
-E 1 2501 6  5     tweed suit
-E 1 2506 6  6     tweed hat
-E 1 2511 6  7     tweed pants
-E 1 2516 6  8     rubber shoes
-E 1 2521 6  9     rubber gloves
-M 0 2521 4 2520   Assistant Attorney
-M 0 2521 4 2522   Assistant Attorney
-M 0 2521 4 2523   Assistant Attorney
-M 0 2521 4 2520   Assistant Attorney
-M 0 2522 4 2535   Associate Attorney
-M 0 2522 4 2536   Associate Attorney
-E 1 2501 6  5     tweed suit
-E 1 2506 6  6     tweed hat
-E 1 2511 6  7     tweed pants
-E 1 2516 6  8     rubber shoes
-E 1 2521 6  9     rubber gloves
-M 0 2522 4 2543   Associate Attorney
-M 0 2522 4 2537   Associate Attorney
-M 0 2523 3 2551   Corporate Attorney
-M 0 2523 3 2554   Corporate Attorney
-E 1 2501 6  5     tweed suit
-E 1 2506 6  6     tweed hat
-E 1 2511 6  7     tweed pants
-E 1 2516 6  8     rubber shoes
-E 1 2521 6  9     rubber gloves
-M 0 2523 3 2553   Corporate Attorney
-M 0 2528 4 2543   Branch Manager
-E 1 2501 6  5     tweed suit
-E 1 2506 6  6     tweed hat
-E 1 2511 6  7     tweed pants
-E 1 2516 6  8     rubber shoes
-E 1 2521 6  9     rubber gloves
-M 0 2528 4 2544   Branch Manager
-M 0 2528 4 2544   Branch Manager
-M 0 2528 4 2543   Branch Manager
-M 0 2529 3 2558   Regional Manager
-E 1 2501 6  5     tweed suit
-E 1 2506 6  6     tweed hat
-E 1 2511 6  7     tweed pants
-E 1 2516 6  8     rubber shoes
-E 1 2521 6  9     rubber gloves
-M 0 2529 3 2559   Regional Manager
-M 0 2529 3 2558   Regional Manager
-M 0 2530 3 2571   National Manager
-E 1 2502 3  5     cotton suit
-E 1 2507 3  6     cotton hat
-E 1 2512 3  7     cotton pants
-E 1 2517 3  8     suede shoes
-E 1 2522 3  9     suede gloves
-M 0 2530 3 2572   National Manager
-M 0 2530 3 2572   National Manager
-M 0 2535 3 2577   Junior Vice-president
-M 0 2535 3 2575   Junior Vice-president
-M 0 2535 3 2579   Junior Vice-president
-E 1 2502 3  5     cotton suit
-E 1 2507 3  6     cotton hat
-E 1 2512 3  7     cotton pants
-E 1 2517 3  8     suede shoes
-E 1 2522 3  9     suede gloves
-M 0 2536 3 2590   Senior Vice-president
-M 0 2536 3 2592   Senior Vice-president
-M 0 2536 3 2590   Senior Vice-president
-E 1 2502 3  5     cotton suit
-E 1 2507 3  6     cotton hat
-E 1 2512 3  7     cotton pants
-E 1 2517 3  8     suede shoes
-E 1 2522 3  9     suede gloves
-E 1 2553 2 17      briefcase
-M 0 2537 2 2606   Executive Vice-president
-M 0 2537 2 2605   Executive Vice-president
-E 1 2503 3  5     wool suit
-E 1 2508 3  6     wool hat
-E 1 2513 3  7     wool pants
-E 1 2518 3  8     leather shoes
-E 1 2523 3  9     leather gloves
-E 1 2553 2 17      briefcase
-M 0 2542 2 2616   Former President
-E 1 2503 3  5     wool suit
-E 1 2508 3  6     wool hat
-E 1 2513 3  7     wool pants
-E 1 2518 3  8     leather shoes
-E 1 2523 3  9     leather gloves
-M 0 2542 2 2619   Former President
-M 0 2543 2 2631   Unpopular President
-M 0 2543 2 2634   Unpopular President
-E 1 2503 3  5     wool suit
-E 1 2508 3  6     wool hat
-E 1 2513 3  7     wool pants
-E 1 2518 3  8     leather shoes
-E 1 2523 3  9     leather gloves
-M 0 2544 1 2647   Corporation President
-E 1 2504  5  5     cashmere suit
-E 1 2509  5  6     cashmere hat
-E 1 2514  5  7     cashmere pants
-E 1 2519  5  8     corfam shoes
-E 1 2524  5  9     corfam gloves
+M 0 15110 4 15114   Temporary Clerk
+M 0 15110 4 15111   Temporary Clerk
+M 0 15110 4 15114   Temporary Clerk
+M 0 15110 4 15114   Temporary Clerk
+E 1 15110 7 5     polyester suit
+E 1 15115 7 6     polyester hat
+E 1 15120 7 7     polyester pants
+E 1 15125 7 8     vinyl shoes
+E 1 15130 7 9     vinyl gloves
+M 0 15111 4 15116   Experienced Clerk
+M 0 15111 4 15117   Experienced Clerk
+M 0 15111 4 15118   Experienced Clerk
+M 0 15111 4 15116   Experienced Clerk
+E 1 15110 7 5     polyester suit
+E 1 15115 7 6     polyester hat
+E 1 15120 7 7     polyester pants
+E 1 15125 7 8     vinyl shoes
+E 1 15130 7 9     vinyl gloves
+M 0 15112 4 15123   Head Clerk
+M 0 15112 4 15121   Head Clerk
+M 0 15112 4 15121   Head Clerk
+M 0 15112 4 15124   Head Clerk
+E 1 15110 7 5     polyester suit
+E 1 15115 7 6     polyester hat
+E 1 15120 7 7     polyester pants
+E 1 15125 7 8     vinyl shoes
+E 1 15130 7 9     vinyl gloves
+M 0 15117 4 15117   Temporary Bookkeeper
+M 0 15117 4 15115   Temporary Bookkeeper
+M 0 15117 4 15117   Temporary Bookkeeper
+M 0 15117 4 15116   Temporary Bookkeeper
+E 1 15110 7 5     polyester suit
+E 1 15115 7 6     polyester hat
+E 1 15120 7 7     polyester pants
+E 1 15125 7 8     vinyl shoes
+E 1 15130 7 9     vinyl gloves
+M 0 15118 4 15129   Experienced Bookkeeper
+M 0 15118 4 15126   Experienced Bookkeeper
+M 0 15118 4 15126   Experienced Bookkeeper
+M 0 15118 4 15125   Experienced Bookkeeper
+E 1 15110 7 5     polyester suit
+E 1 15115 7 6     polyester hat
+E 1 15120 7 7     polyester pants
+E 1 15125 7 8     vinyl shoes
+E 1 15130 7 9     vinyl gloves
+M 0 15119 4 15137   Head Bookkeeper
+M 0 15119 4 15135   Head Bookkeeper
+M 0 15119 4 15135   Head Bookkeeper
+M 0 15119 4 15135   Head Bookkeeper
+E 1 15110 7 5     polyester suit
+E 1 15115 7 6     polyester hat
+E 1 15120 7 7     polyester pants
+E 1 15125 7 8     vinyl shoes
+E 1 15130 7 9     vinyl gloves
+M 0 15124 4 15129   Temporary Accountant
+M 0 15124 4 15125   Temporary Accountant
+M 0 15124 4 15126   Temporary Accountant
+E 1 15110 7 5     polyester suit
+E 1 15115 7 6     polyester hat
+E 1 15120 7 7     polyester pants
+E 1 15125 7 8     vinyl shoes
+E 1 15130 7 9     vinyl gloves
+M 0 15124 4 15129   Temporary Accountant
+M 0 15125 4 15144   Experienced Accountant
+E 1 15111 6 5     tweed suit
+E 1 15116 6 6     tweed hat
+E 1 15121 6 7     tweed pants
+E 1 15126 6 8     rubber shoes
+E 1 15131 6 9     rubber gloves
+M 0 15125 4 15141   Experienced Accountant
+M 0 15125 4 15142   Experienced Accountant
+M 0 15125 4 15140   Experienced Accountant
+M 0 15126 3 15157   Head Accountant
+M 0 15126 3 15157   Head Accountant
+M 0 15126 3 15156   Head Accountant
+E 1 15111 6 5     tweed suit
+E 1 15116 6 6     tweed hat
+E 1 15121 6 7     tweed pants
+E 1 15126 6 8     rubber shoes
+E 1 15131 6 9     rubber gloves
+M 0 15131 4 15130   Assistant Attorney
+M 0 15131 4 15132   Assistant Attorney
+M 0 15131 4 15133   Assistant Attorney
+M 0 15131 4 15130   Assistant Attorney
+M 0 15132 4 15145   Associate Attorney
+M 0 15132 4 15146   Associate Attorney
+E 1 15111 6 5     tweed suit
+E 1 15116 6 6     tweed hat
+E 1 15121 6 7     tweed pants
+E 1 15126 6 8     rubber shoes
+E 1 15131 6 9     rubber gloves
+M 0 15132 4 15153   Associate Attorney
+M 0 15132 4 15147   Associate Attorney
+M 0 15133 3 15161   Corporate Attorney
+M 0 15133 3 15164   Corporate Attorney
+E 1 15111 6 5     tweed suit
+E 1 15116 6 6     tweed hat
+E 1 15121 6 7     tweed pants
+E 1 15126 6 8     rubber shoes
+E 1 15131 6 9     rubber gloves
+M 0 15133 3 15163   Corporate Attorney
+M 0 15138 4 15153   Branch Manager
+E 1 15111 6 5     tweed suit
+E 1 15116 6 6     tweed hat
+E 1 15121 6 7     tweed pants
+E 1 15126 6 8     rubber shoes
+E 1 15131 6 9     rubber gloves
+M 0 15138 4 15154   Branch Manager
+M 0 15138 4 15154   Branch Manager
+M 0 15138 4 15153   Branch Manager
+M 0 15139 3 15168   Regional Manager
+E 1 15111 6 5     tweed suit
+E 1 15116 6 6     tweed hat
+E 1 15121 6 7     tweed pants
+E 1 15126 6 8     rubber shoes
+E 1 15131 6 9     rubber gloves
+M 0 15139 3 15169   Regional Manager
+M 0 15139 3 15168   Regional Manager
+M 0 15140 3 15181   National Manager
+E 1 15112 3 5     cotton suit
+E 1 15117 3 6     cotton hat
+E 1 15122 3 7     cotton pants
+E 1 15127 3 8     suede shoes
+E 1 15132 3 9     suede gloves
+M 0 15140 3 15182   National Manager
+M 0 15140 3 15182   National Manager
+M 0 15145 3 15187   Junior Vice-president
+M 0 15145 3 15185   Junior Vice-president
+M 0 15145 3 15189   Junior Vice-president
+E 1 15112 3 5     cotton suit
+E 1 15117 3 6     cotton hat
+E 1 15122 3 7     cotton pants
+E 1 15127 3 8     suede shoes
+E 1 15132 3 9     suede gloves
+M 0 15146 3 15200   Senior Vice-president
+M 0 15146 3 15202   Senior Vice-president
+M 0 15146 3 15200   Senior Vice-president
+E 1 15112 3 5     cotton suit
+E 1 15117 3 6     cotton hat
+E 1 15122 3 7     cotton pants
+E 1 15127 3 8     suede shoes
+E 1 15132 3 9     suede gloves
+E 1 15163 2 17      briefcase
+M 0 15147 2 15216   Executive Vice-president
+M 0 15147 2 15215   Executive Vice-president
+E 1 15113 3 5     wool suit
+E 1 15118 3 6     wool hat
+E 1 15123 3 7     wool pants
+E 1 15128 3 8     leather shoes
+E 1 15133 3 9     leather gloves
+E 1 15163 2 17      briefcase
+M 0 15152 2 15226   Former President
+E 1 15113 3 5     wool suit
+E 1 15118 3 6     wool hat
+E 1 15123 3 7     wool pants
+E 1 15128 3 8     leather shoes
+E 1 15133 3 9     leather gloves
+M 0 15152 2 15229   Former President
+M 0 15153 2 15241   Unpopular President
+M 0 15153 2 15244   Unpopular President
+E 1 15113 3 5     wool suit
+E 1 15118 3 6     wool hat
+E 1 15123 3 7     wool pants
+E 1 15128 3 8     leather shoes
+E 1 15133 3 9     leather gloves
+M 0 15154 1 15257   Corporation President
+E 1 15114 5 5     cashmere suit
+E 1 15119 5 6     cashmere hat
+E 1 15124 5 7     cashmere pants
+E 1 15129 5 8     corfam shoes
+E 1 15134 5 9     corfam gloves
 *
-M 0 2551 4 2651   Board Member
-M 0 2551 4 2651   Board Member
-E 1 2504  5  5     cashmere suit
-E 1 2509  5  6     cashmere hat
-E 1 2514  5  7     cashmere pants
-E 1 2519  5  8     corfam shoes
-E 1 2524  5  9     corfam gloves
-E 1 2550 1 17      briefcase
-P 1 2552 1 2550    fortune
-M 0 2551 4 2651   Board Member
-G 1 2551  1        briefcase key
-M 0 2551 4 2651   Board Member
+M 0 15161 4 15261   Board Member
+M 0 15161 4 15261   Board Member
+E 1 15114 5 5     cashmere suit
+E 1 15119 5 6     cashmere hat
+E 1 15124 5 7     cashmere pants
+E 1 15129 5 8     corfam shoes
+E 1 15134 5 9     corfam gloves
+E 1 15160 1 17      briefcase
+P 1 15162 1 15160    fortune
+M 0 15161 4 15261   Board Member
+G 1 15161 1        briefcase key
+M 0 15161 4 15261   Board Member
 *
-M 0 2552 1 2653   Chairman
-E 1 2560 2 7        shorts
-E 1 2570 1 17       stun-gun
-M 0 2553 1 2653   Babe
-E 1 2561 2 13       towel
-G 1 2556 1          key
+M 0 15162 1 15263   Chairman
+E 1 15170 2 7        shorts
+E 1 15180 1 17       stun-gun
+M 0 15163 1 15263   Babe
+E 1 15171 2 13       towel
+G 1 15166 1          key
 *
-O 0 2575 2 2551   Coffee machine
-P 1 2576 6 2575     cup
+O 0 15185 2 15161   Coffee machine
+P 1 15186 6 15185     cup
 *
-O 0 2555 1 2573   File Cabinet
-P 1 2571 1 2555     battery pack
+O 0 15165 1 15183   File Cabinet
+P 1 15181 1 15165     battery pack
 *
-M 0 2560 1 2691   Paperboy
-G 1 2577 50         newspaper
+M 0 15170 1 15272   Paperboy
+G 1 15187 50         newspaper
 *
-M 0 2561 1 2692   Polyester Salesclerk
+M 0 15171 1 15273   Polyester Salesclerk
 *
-M 0 2562 1 2538   Chemist
-E 1 2572 3 17
+M 0 15172 1 15148   Chemist
+E 1 15182 3 17
 *
 S
 $~

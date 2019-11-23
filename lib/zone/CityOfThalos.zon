@@ -1,0 +1,117 @@
+The City of Thalos~
+17499 25 2
+*
+M 0 17410 1 17460             Beholder
+E 1 17418 1 11                 (iron shield)
+E 1 17433 1 3                  (green cloak)
+*
+M 0 17411 50 17444             Lamia (all lamias have daggers)
+E 1 3022 1 16
+M 0 17411 50 17442             Lamia
+E 1 3022 1 16
+M 0 17411 50 17439             Lamia
+E 1 3022 1 16
+M 0 17411 50 17446             Lamia
+E 1 3022 1 16
+M 0 17411 50 17447             Lamia
+E 1 3022 1 16
+M 0 17411 50 17450             Lamia
+E 1 3022 1 16
+M 0 17411 50 17452             Lamia
+E 1 3022 1 16
+M 0 17411 50 17428             Lamia
+E 1 3022 1 16
+M 0 17411 50 17426             Lamia
+E 1 3022 1 16
+M 0 17411 50 17429             Lamia
+E 1 3022 1 16
+M 0 17411 50 17430             Lamia
+E 1 3022 1 16
+M 0 17411 50 17431             Lamia
+E 1 3022 1 16
+M 0 17411 50 17435             Lamia
+E 1 3022 1 16
+M 0 17411 50 17436             Lamia
+E 1 3022 1 16
+M 0 17411 50 17434             Lamia
+E 1 3022 1 16
+M 0 17411 50 17413             Lamia
+E 1 3022 1 16
+M 0 17411 50 17414             Lamia
+E 1 3022 1 16
+M 0 17411 50 17415             Lamia
+E 1 3022 1 16
+M 0 17411 50 17416             Lamia
+E 1 3022 1 16
+M 0 17411 50 17418             Lamia
+E 1 3022 1 16
+M 0 17411 50 17419             Lamia (lots of 'em, eh?)
+E 1 3022 1 16
+*
+M 0 17412 1 17439             Mimic chest
+E 1 17424 1 17                 (ball o' light)
+M 0 17413 1 17436             Mimic boulder
+G 1 17425 1                    (tattered scroll - enchant weapon)
+M 0 17414 1 17429             Mimic floor
+G 1 17428 1                    (talisman)
+M 0 17415 1 17448             Mimic potery
+E 1 17424 1 17                 (ball o' light)
+M 0 17416 1 17446             Mimic planks
+E 1 17432 1 12                 (black robe)
+*
+M 0 17417 4 17442             lizard
+M 0 17417 4 17427             lizard
+M 0 17417 4 17437             lizard
+M 0 17417 4 17454             lizard
+*
+M 0 17418 3 17457             golem SW
+E 1 17434 1 17                 (ebony seal)
+E 1 17410 5 5                  (chainmail vest)
+M 0 17418 3 17456             golem NW
+E 1 17436 1 17                 (ivory seal)
+M 0 17418 3 17458             golem NE
+E 1 17431 5 16                 (2-handed sword)
+*
+O 0 17435 1 17441             curved desk
+P 1 17425 1 17435                (scroll of enchant weapon)
+P 1 17426 2 17435                (scroll of detection)
+* 
+O 0 17437 1 17443             glass cabinet
+P 1 17411 1 17437               (iron helm)
+P 1 17412 1 17437               (iron gauntlets)
+P 1 17413 1 17437               (iron sleeves)
+P 1 17414 1 17437               (iron boots)
+P 1 17415 1 17437               (iron leggings)
+P 1 17416 1 17437               (iron girth)
+*    
+O 0 17438 10 17452            rotten arm
+O 0 17429 5 17427             venison
+O 0 17430 1 17444             cracked fountain
+O 0 17417 5 17439             battered armor
+*
+O 0 17420 2 17448             black potion
+O 0 17421 2 17448             orange potion
+O 0 17423 2 17448             serp. staff
+*
+O 0 17427 2 17440             silver flute
+O 0 17460 2 17440             mandolin
+O 0 17461 2 17440             harp
+*
+O 0 17440 1 17412             pale blue (all stones) (str+1)
+O 0 17441 1 17415             scar. and blue	(int+1)
+O 0 17442 1 17418             inc. blue 		(wis+1)
+O 0 17443 1 17421             deep red		(dex+1)
+O 0 17444 1 17424             pink		(con+1)
+O 0 17445 1 17427             white		(hit+1)
+O 0 17446 1 17430             pale lavander	(saving spell -2)
+O 0 17447 1 17434             green and lav.	(saving spell -4)
+O 0 17448 1 17437             dusty rose		(AC -1) -> better
+O 0 17449 1 17440             dull grey		none
+O 0 17450 1 17444             viv. purple		(hit -20)
+O 0 17451 1 17448             pink and green	(hr -5)
+O 0 17452 1 17451             pale green		(dr -5)
+O 0 17453 1 17456             clear		(AC +3) -> worse
+O 0 17454 1 17460             irrad.  		(hit -50)
+*
+S
+$~

@@ -1,0 +1,812 @@
+#15510
+The hills~
+   You are on a path leading north, small hills surrounds you. You feel
+the forces of evil approach you from the north. 
+~
+155 4 4
+D0
+~
+~
+0 0 15511
+D1
+~
+~
+0 0 15460
+D2
+~
+~
+0 0 3444
+S
+#15511
+The hills~
+   You are on a small path leading north, dark threatening hills
+surrounds you to almost all sides.
+~
+155 4 4
+D0
+~
+~
+0 0 15512
+D2
+~
+~
+0 0 15510
+S
+#15512
+End of the path~
+   The path stops here, to the north is a single mountain and around you
+are some threatening hills. There is a dark cave to the north. You see a
+large sign on the mountain.
+~
+155 4 4
+D0
+~
+~
+0 0 15520
+D2
+~
+~
+0 0 15511
+E
+sign~
+The sign says:
+***********************************************************************
+*                                                                     *
+* ******************************************************************* *
+* *                                                                 * *
+* *                    The Mines of Moria                           * *
+* *                                                                 * *
+* *                  Enter at your own risk.                        * *
+* *                                                                 * *
+* *     Welcome to the mines of Moria.. At present there are only   * *
+* *           3 levels. Later the plan is to build 20...            * *
+* *                                                                 * *
+* *     Are you below level 3 Don't enter..                         * *
+* *     Are you below level 8 Don't enter alone..                   * *
+* *                                                                 * *
+* ******************************************************************* *
+*                                                                     *
+***********************************************************************
+~
+S
+#15520
+The cave~
+   You are in a cave, to the south you sense fresh air. To the north a
+small tunnel continues into the mountain.
+~
+155 9 2
+D0 
+~
+~
+0 0 15521
+D2
+~
+~
+0 0 15512
+S
+#15521
+The tunnel~
+   You force your way through a small tunnel, to you south you sense 
+a little fresh air, and to the north the tunnel continues.
+~
+155 9 3
+D0
+~
+~
+0 0 15524
+D1
+~
+~
+0 -1 18101
+D2
+~
+~
+0 0 15520
+S
+#15522
+The tunnel~
+   You are in a small tunnel, to the north there is a cave. The tunnel
+continues to the east.
+~
+155 9 3
+D0
+~
+~
+0 0 15526
+D1
+~
+~
+0 0 15523
+S
+#15523
+The tunnel~
+   You are in a small tunnel leading east-west. The floor is covered by
+dust.
+~
+155 9 3
+D1
+~
+~
+0 0 15524
+D3
+~
+~
+0 0 15522
+S
+#15524
+The tunnel~
+   You are in a tunnel, the tunnel continues to the south and to the 
+west, to the north there is a cave.
+~
+155 9 3
+D0
+~
+~
+0 0 15528
+D2
+~
+~
+0 0 15521
+D3
+~
+~
+0 0 15523
+S
+#15525
+The tunnel~
+   You are in a small tunnel, the tunnel continues west.
+~
+155 9 3
+D0
+~
+~
+0 0 15529
+D3
+~
+~
+0 0 15524
+S
+#15526
+The large cave~
+   You are in a large cave, the cave continues east and west, to the south
+you notice a small tunnel.
+~
+155 9 2
+D1
+~
+~
+0 0 15527
+D2
+~
+~
+0 0 15522
+D3
+~
+~
+0 0 15533
+S
+#15527
+The large cave~
+   You are in the east end of the large cave.
+~
+155 9 2
+D3
+~
+~
+0 0 15526
+S
+#15528
+The cave~
+   You are in the south end of a cave, to the south you see a tunnel. You
+notice a large pile of bones in the corner.
+~
+155 9 2
+D0
+~
+~
+0 0 15535
+D2
+~
+~
+0 0 15524
+E
+pile bones~
+Well you better watch out - some of the bones are human !
+~
+S
+#15529
+The tunnel~
+   You are in a north-south leading tunnel.
+~
+155 9 3
+D0
+~
+~
+0 0 15536
+D2
+~
+~
+0 0 15525
+S
+#15530
+The hole~
+   You are by a hole in the floor, you can leave down, or north.
+~
+155 13 3
+D0
+~
+~
+0 0 15537
+D5
+~
+~
+0 0 15574
+S
+#15531
+The hole~
+   You are by a hole in the floor, exits are down or east.
+~
+155 13 3
+D1
+~
+~
+0 0 15532
+D5
+~
+~
+0 0 15625
+S
+#15532
+The damp tunnel~
+   You are in a damp tunnel, your clothes feel wet. The tunnel continues
+to the north, to the west you see a hole in the floor and to the east
+there is a large cave.
+~
+155 9 3
+D0
+~
+~
+0 0 15534
+D1
+~
+~
+0 0 15533
+D3
+~
+~
+0 0 15531
+S
+#15533
+The large cave~
+   You are in the western part of the large cave, to the west you see
+a damp tunnel.
+~
+155 9 2
+D1
+~
+~
+0 0 15526
+D3
+~
+~
+0 0 15532
+S
+#15534
+The damp tunnel~
+   You are in a damp tunnel, that leads west.
+~
+155 9 3
+D2
+~
+~
+0 0 15532
+D3
+~
+~
+0 0 15569
+S
+#15535
+The cave~
+   You are in the north end of a cave. To the east you see some tunnels
+which leads in many directions.
+~
+155 9 2
+D1
+~
+~
+0 0 15536
+D2
+~
+~
+0 0 15528
+S
+#15536
+The many tunnels~
+   You are in a tunnel, that leads of in all directions.
+~
+155 9 3
+D0
+~
+~
+0 0 15538
+D1
+~
+~
+0 0 15537
+D2
+~
+~
+0 0 15529
+D3
+~
+~
+0 0 15535
+S
+#15537
+The tunnel~
+   You are in a north-south leading tunnel, you also notice a tunnel to
+the west. From the north you sense the fresh air!
+~
+155 9 3
+D0
+~
+~
+0 0 15539
+D2
+~
+~
+0 0 15530
+D3
+~
+~
+0 0 15536
+S
+#15538
+The smelly tunnel~
+   You are in a north-south leading tunnel, you see a small light
+to the north. You notice a strange smell from the north..
+~
+155 9 3
+D0
+~
+~
+0 0 15540
+D2
+~
+~
+0 0 15536
+S
+#15539
+The cave~
+   You are in a cave that is filled with fresh air, you sense the
+wind blowing from the north. To the south you see a small tunnel
+continue into the mountain.
+~
+155 9 2
+D0
+~
+~
+0 0 15541
+D2
+~
+~
+0 0 15537
+S
+#15540
+The light cave~
+   You are in a light cave, through a hole large above you, you see 
+the sky. A small tunnel to the south is the only way out.
+~
+155 0 2
+D2
+~
+~
+0 0 15538
+S
+#15541
+The valley~
+   You are in a small valley, surrounded by hills and a mountain to 
+the south. In the mountain there is a cave.  A river runs north from
+here.
+~
+155 0 2
+D2
+~
+~
+0 0 15539
+D3
+~
+~
+0 -1 15711
+E
+cave~
+Well it doesn't look nice, but it's the only way out..
+~
+S
+#15560
+The tunnel~
+   You are in a tunnel, which turns here. The tunnel continues to the
+east and the south.
+~
+155 9 3
+D1
+~
+~
+0 0 15561
+D2
+~
+~
+0 0 15563
+S
+#15561
+The tunnel~
+   You are in an east-west leading tunnel. The tunnel is very narrow
+here.
+~
+155 9 3
+D1
+~
+~
+0 0 15562
+D3
+~
+~
+0 0 15560
+S
+#15562
+The tunnel~
+   You are in an east-west leading tunnel.
+~
+155 9 3
+D1
+~
+~
+0 0 15610
+D3
+~
+~
+0 0 15561
+S
+#15563
+The tunnel~
+   You are at a turn, the tunnel continues north and east.
+~
+155 9 3
+D0
+~
+~
+0 0 15560
+D1
+~
+~
+0 0 15564
+S
+#15564
+The light cave~
+   You are in a cave, to south from you there is a large fire that lights
+the entire cave, to the east and west tunnels leads off.
+~
+155 8 2
+D1
+~
+~
+0 0 15565
+D2
+~
+~
+0 0 15566
+D3
+~
+~
+0 0 15563
+S
+#15565
+The maze~
+   You are in a maze of small damp tunnels. Only exit is west to a 
+light cave.
+~
+155 9 3
+D1
+~
+~
+0 0 15568
+D3
+~
+~
+0 0 15564
+S
+#15566
+The light cave~
+   You are in a light cave, a large fire in front of you lights the room.
+The cave continues to the north and south.
+~
+155 8 2
+D0
+~
+~
+0 0 15564
+D2
+~
+~
+0 0 15571
+E
+fire~
+Well, errh - It looks somehow quite warm..!
+~
+S
+#15567
+The maze~
+   You are in a maze of small damp tunnels. Exits leads both north
+and south.
+~
+155 9 3
+D0
+~
+~
+0 0 15565
+D2
+~
+~
+0 0 15572
+S
+#15568
+The maze~
+   You are in a maze of small damp tunnels. Exits leads west and south.
+~
+155 9 3
+D2
+~
+~
+0 0 15573
+D3
+~
+~
+0 0 15567
+S
+#15569
+The tunnel~
+   You are in a tunnel, only exit is to the east. You sense that the
+tunnel leads slightly down.
+~
+155 13 3
+D1
+~
+~
+0 0 15570
+S
+#15570
+The tunnel~
+   You are in a small tunnel, to the west the tunnel continues and 
+to the east you see some light.
+~
+155 9 3
+D1
+~
+~
+0 0 15571
+D3
+~
+~
+0 0 15569
+S
+#15571
+The light cave~
+   You are in the south end of a light cave, tunnels leads of to the
+south and west.
+~
+155 8 2
+D0
+~
+~
+0 0 15566
+D2
+~
+~
+0 0 15575
+D3
+~
+~
+0 0 15570
+S
+#15572
+The maze~
+   You are in a maze of small damp tunnels. Exits leads east and west.
+~
+155 9 3
+D1
+~
+~
+0 0 15573
+D3
+~
+~
+0 0 15571
+S
+#15573
+The maze~
+   You are in a maze of small damp tunnels. Exits leads north and east.
+~
+155 9 3
+D0
+~
+~
+0 0 15564
+D1
+~
+~
+0 0 15574
+S
+#15574
+The tunnel~
+   You are in a tunnel, only exit is west - Only exit, well there is 
+also a hole in the ceiling.
+~
+155 9 3
+D3
+~
+~
+0 0 15573
+D4
+~
+~
+0 0 15530
+S
+#15575
+The maze~
+   You are in a maze of small damp tunnels. The tunnel continues east.
+To the north there is a light cave.
+~
+155 9 3
+D0
+~
+~
+0 0 15571
+D1
+~
+~
+0 0 15576
+S
+#15576
+The maze~
+   You are in a maze of small damp tunnels. Exits leads east and
+north. To the south is a large cave.
+~
+155 9 3
+D0
+~
+~
+0 0 15572
+D1
+~
+~
+0 0 15577
+D2
+~
+~
+0 0 15579
+S
+#15577
+The maze~
+   You are in a maze of small damp tunnels. Exits leads west and
+north.
+~
+155 9 3
+D0
+~
+~
+0 0 15573
+D3
+~
+~
+0 0 15576
+S
+#15578
+The large cave~
+   You are in the northwest end of a large cave.
+~
+155 9 2
+D1
+~
+~
+0 0 15579
+D2
+~
+~
+0 0 15580
+S
+#15579
+The large cave~
+   You are in the northeast end of a large cave. To the north the
+is a small damp tunnel.
+~
+155 9 2
+D0
+~
+~
+0 0 15576
+D2
+~
+~
+0 0 15581
+D3
+~
+~
+0 0 15578
+S
+#15580
+The large cave~
+   You are in the southwest end of a large cave.
+~
+155 9 2
+D0
+~
+~
+0 0 15578
+D1
+~
+~
+0 0 15581
+S
+#15581
+The large cave~
+   You are in the southeast end of a large cave. To the east you
+notice a small tunnel.
+~
+155 9 2
+D0
+~
+~
+0 0 15579
+D1
+~
+~
+0 0 15582
+D3
+~
+~
+0 0 15580
+S
+#15582
+The tunnel~
+   You are in a narrow tunnel, which leads both to the east and the
+south. There is also an exit towards the west, where you see a large
+cave.
+~
+155 9 3
+D1
+~
+~
+0 0 15583
+D2
+~
+~
+0 0 15584
+D3
+~
+~
+0 0 15581
+S
+#15583
+End of tunnel~
+   The tunnel stops here. There is no other exits than the one you
+came from.
+~
+155 9 3
+D3
+~
+~
+0 0 15582
+S
+#15584
+The hole~
+   You are at a small hole in the floor, you can either leave north
+or try your luck and leave down into the unknown!
+~
+155 9 3
+D0
+~
+~
+0 0 15582
+S
+#99999
+$~

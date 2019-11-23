@@ -19,6 +19,7 @@
 *.o
 *.core
 *.out
+*.luac
 *.tmp
 *.swp
 

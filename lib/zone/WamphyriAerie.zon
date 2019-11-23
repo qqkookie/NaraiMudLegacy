@@ -1,0 +1,215 @@
+The Wamphyri Aerie~
+17699 30 2
+*
+M 0 17510 1 17636             the Lady Karen
+E 1 17510 1 16                 (wamphyri war gauntlet)
+E 1 17511 1 5                  (white leather dress)
+E 1 17538 1 17                 (key to throne)
+*
+M 0 17511 1 17636             Harry Keogh
+E 1 17512 1 16                 (silver sycthe)
+E 1 17513 1 12                 (long black coat)
+E 1 17514 1 6                  (widebrimmed black hat)
+E 1 17541 1 17	       Equip Vitalize wand to the harry 
+*
+M 0 17513 1 17635             the Dweller
+E 1 17516 1 3                  (blood talisman)
+G 1 17518 5                    (blood scroll)
+G 1 17518 5                    (blood scroll)
+*
+M 0 17514 1 17620             Dramal Doombody
+E 1 17519 1 1                  (ring of weakness)
+*
+M 0 17515 1 17627             Shaithis
+E 1 17520 2 3                  (bloodsoaked cloak)
+G 1 17517 1                    (the vacuous grimoire)
+*
+M 0 17516 1 17613             Lascula Longtooth
+E 1 17523 1 12                 (black cape)
+*
+M 0 17517 1 17608             Lesk the Glut
+E 1 17524 1 6                  (leather patch)
+E 1 17525 1 13                 (fine silk sash)
+*
+M 0 17518 1 17589             Volse Pinescu
+E 1 17526 1 10                 (spiked sleeves)
+*
+M 0 17519 1 17587             Fess Ferenc
+E 1 17527 1 11                 (warrior scale)
+*
+M 0 17520 1 17578             Menor Maimbite
+E 1 17528 1 7                  (smooth leggings)
+*
+M 0 17521 1 17575             Grigis
+G 1 17532 3                    (blood potion)
+G 1 17532 3                    (blood potion)
+G 1 17532 3                    (blood potion)
+G 1 17536 10                   (murky grey vial)
+*
+M 0 17522 1 17561             Faethor Ferenczy
+E 1 17529 1 3                  (ornate necklace)
+*
+M 0 17523 1 17563             Thibor Ferenczy
+E 1 17530 1 2                  (ring of delusion)
+*
+M 0 17524 1 17556             Janos Ferenczy
+E 1 17531 1 17                 (black urn)
+*   
+M 0 17525 1 17516             Boris Dragosani
+E 1 17533 1 9                  (white gloves)
+G 1 17536 10                   (murky grey vial)
+*
+M 0 17526 1 17522             Yulian Bodescu
+E 1 17534 1 16                 (bloody pickaxe)
+*
+M 0 17527 1 17527             Jazz Simmons
+E 1 17515 1 17                 (silver crucifix)
+*
+M 0 17528 1 17538             Lardis Lidesci
+E 1 17535 1 17                 (wooden spike)
+*
+M 0 17529 1 17541             Zek Foener
+E 1 17521 1 5                  (white jumpsuit)
+*
+M 0 17530 8 17543             warrior beast
+G 1 17536 10                   (murky grey vial)
+M 0 17530 8 17543             warrior beast
+M 0 17530 8 17543             warrior beast
+G 1 17522 2                    (warrior tusk)
+M 0 17530 8 17543             warrior beast
+M 0 17530 8 17634             warrior beast
+G 1 17536 10                   (murky grey vial)
+M 0 17530 8 17634             warrior beast
+M 0 17530 8 17634             warrior beast
+G 1 17522 2                    (warrior tusk)
+M 0 17530 8 17634             warrior beast
+*
+M 0 17531 2 17529             blader beast
+M 0 17531 2 17529             blader beast
+*
+M 0 17533 7 17535             male trog
+M 0 17533 7 17550             male trog
+M 0 17533 7 17572             male trog
+M 0 17533 7 17585             male trog
+G 1 17536 10                   (murky grey vial)
+M 0 17533 7 17606             male trog
+M 0 17533 7 17622             male trog
+M 0 17533 7 17632             male trog
+*
+M 0 17534 14 17535            female trog
+M 0 17534 14 17535            female trog
+M 0 17534 14 17550            female trog
+M 0 17534 14 17550            female trog
+G 1 17536 10                   (murky grey vial)
+M 0 17534 14 17572            female trog
+M 0 17534 14 17572            female trog
+M 0 17534 14 17585            female trog
+M 0 17534 14 17585            female trog
+M 0 17534 14 17606            female trog
+G 1 17536 10                   (murky grey vial)
+M 0 17534 14 17606            female trog
+M 0 17534 14 17622            female trog
+M 0 17534 14 17622            female trog
+M 0 17534 14 17632            female trog
+M 0 17534 14 17632            female trog
+*
+M 0 17535 4 17598             flyer beast
+M 0 17535 4 17598             flyer beast
+M 0 17535 4 17600             flyer beast
+M 0 17535 4 17600             flyer beast
+*
+M 0 17536 3 17565             siphoner beast
+M 0 17536 3 17554             siphoner beast
+M 0 17536 3 17634             siphoner beast
+*
+M 0 17537 10 17528            cartilidge beast
+M 0 17537 10 17534            cartilidge beast
+M 0 17537 10 17543            cartilidge beast
+M 0 17537 10 17567            cartilidge beast
+M 0 17537 10 17571            cartilidge beast
+M 0 17537 10 17594            cartilidge beast
+M 0 17537 10 17601            cartilidge beast
+M 0 17537 10 17611            cartilidge beast
+M 0 17537 10 17621            cartilidge beast
+M 0 17537 10 17631            cartilidge beast
+*
+M 0 17538 8 17580             wamphyri lieutenant
+M 0 17538 8 17580             wamphyri lieutenant
+G 1 17536 10                   (murky grey vial) 
+M 0 17538 8 17592             wamphyri lieutenant
+M 0 17538 8 17592             wamphyri lieutenant
+M 0 17538 8 17610             wamphyri lieutenant
+M 0 17538 8 17610             wamphyri lieutenant
+G 1 17536 10                   (murky grey vial)
+M 0 17538 8 17624             wamphyri lieutenant
+M 0 17538 8 17624             wamphyri lieutenant
+*
+M 0 17539 1 17559             old grey wolf
+G 1 17536 10                   (murky grey vial)
+*
+M 0 17540 7 17546             giant bat
+M 0 17540 7 17546             giant bat
+M 0 17540 7 17546             giant bat
+M 0 17540 7 17546             giant bat
+M 0 17540 7 17546             giant bat
+M 0 17540 7 17559             giant bat
+M 0 17540 7 17559             giant bat
+*
+O 0 17537 1 17637             treasure
+*
+D 0 17511 0 1                great doors
+D 0 17512 2 1
+*
+D 0 17515 0 1                boris' doors
+D 0 17516 2 1
+D 0 17516 1 1
+D 0 17517 3 1
+*
+D 0 17524 5 1                trapdoor to lowlevs
+D 0 17525 4 1
+*
+D 0 17542 1 1                door to vats
+D 0 17543 3 1
+*
+D 0 17553 1 1                entr to lev feren
+D 0 17556 3 1
+D 0 17556 2 1
+D 0 17555 0 1
+*
+D 0 17567 1 1                entr to lev lower
+D 0 17569 3 1
+D 0 17569 0 1
+D 0 17568 2 1
+*
+D 0 17581 1 1                entr to lev mid
+D 0 17582 3 1
+D 0 17582 2 1
+D 0 17582 1 1
+D 0 17573 3 1
+D 0 17576 0 1
+*
+D 0 17593 0 1                entr to flyer lev
+D 0 17595 2 1
+D 0 17595 1 1
+D 0 17594 3 1
+*
+D 0 17614 1 1                entr to lev high
+D 0 17616 3 1
+D 0 17616 2 1
+D 0 17616 1 1
+D 0 17625 0 1
+D 0 17611 3 1
+*
+D 0 17628 0 1                entr to upper levs
+D 0 17629 2 1
+D 0 17629 1 1
+D 0 17618 3 1
+*
+D 0 17634 4 1                entr to karens cham
+D 0 17635 5 1
+*
+D 0 17636 1 2                treasure room bh throne
+D 0 17637 3 2
+*
+S
+$~
