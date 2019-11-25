@@ -301,18 +301,18 @@ UNREF: OBJ	#3427	cape dark black
 
         { 1461, SLUM+1 },      -- solar flair
         { 1455, SLUM+2 },      -- boddari
-        { 1460, SLUM+3 },      -- nectar glass
-        { 1454, SLUM+4 },      -- iron-banded scroll
-        { 1462, SLUM+5 },      -- red portion
+        { 1460, SLUM+5},      -- nectar glass
+        { 1454, SLUM+6 },      -- iron-banded scroll
+        { 1462, SLUM+7 },      -- red portion
 
-        { 1450, SLUM+6 },      -- bras knuckle
-        { 1451, SLUM+7},      -- dockers levis
-        { 1452, SLUM+8 },      -- shirts chambreay
-        { 1453, SLUM+9 },      -- reebok pumps
+        { 1450, SLUM+11 },      -- bras knuckle
+        { 1451, SLUM+12},      -- dockers levis
+        { 1452, SLUM+13 },      -- shirts chambreay
+        { 1453, SLUM+14 },      -- reebok pumps
 
-        { 3090, SLUM+15 },      -- archmage robe
-        { 3091, SLUM+16 },      -- magi staff
-        { 6116, SLUM+17 },      -- imp haste powerful potion
+        { 3090, SLUM+31 },      -- archmage robe
+        { 3091, SLUM+32 },      -- magi staff
+        { 6116, SLUM+33 },      -- imp haste powerful potion
 
         { 1871, SLUM+61 },      -- 88 light
         { 1872, SLUM+62 },      -- sky light
@@ -592,21 +592,22 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
         { 1454, SLUM+1 },       -- too too
         { 1455, SLUM+2 },       -- bob dylan
         { 1450, SLUM+4 },       -- bouncer
+        { 1470, SLUM+6 },       -- labbie
 
-        { 3070, SLUM+11 },   -- crank lib
-        { 3071, SLUM+12 },   -- furniture
-        { 3072, SLUM+13 },   -- grand mage
+        { 3070, SLUM+31 },      -- crank lib
+        { 3071, SLUM+32 },      -- furniture
+        { 3072, SLUM+33 },      -- grand mage
         
-        { 9400, SLUM+21 },    -- rejected guard
-        { 9405, SLUM+22 },    -- roland
-        { 9410, SLUM+23 },    -- stringray
-        { 9420, SLUM+24 },    -- areana guard
-        { 9425, SLUM+25 },    -- DJ
-        { 9430, SLUM+26 },    -- ericol
+        { 9400, SLUM+41 },    -- rejected guard
+        { 9405, SLUM+42 },    -- roland
+        { 9410, SLUM+43 },    -- stringray
+        { 9420, SLUM+44 },    -- areana guard
+        { 9425, SLUM+45 },    -- DJ
+        { 9430, SLUM+46 },    -- ericol
 
         -- { 3004, SLUM+21 },   -- armorer
 
-        { 1470, HOUSE+1 },     -- labbie
+
         { 1400, HOUSE+3 },     -- cinnamon
         { 1924, HOUSE+5 },     -- Charon: deathreaper
 
@@ -617,17 +618,13 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
         { 7004, SEWER2+2 },  -- earth beetle
         { 7005, SEWER2+3 },  -- giant maggot
         { 7006, SEWER2+4 },  -- slithering snake
-        
+                
         { 7011, MOKSHA+3 },   -- morkoth
         
         { 7009, GKP+1 },      -- Grnd Knight Paladin to Redfrens Residance (7900)
 
         -- #4104   -- orc 4th in Moria 3-4 UNREF: MOB	#4104	orc
-        -- #6003    UNREF: MOB	#6003	rabbit
-        --  UNREF: MOB	#7008	homonculus homo
-        --  UNREF: MOB	#7012	esther madam
-        --  #7007     -- UNREF: MOB	#7007	wanderer
-  
+        -- #6003    UNREF: MOB	#6003	rabbit  
 
         { 7040, TUNNEL+1 },     -- red dragon
         { 7010, TUNNEL+2 },     -- chr-eff'n chr
@@ -637,10 +634,13 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
         { 7044, TUNNEL+6 },     -- lemure blob
         { 7045, TUNNEL+7 },     -- jones cruncher ettin
         { 7046, TUNNEL+8 },     -- herald mouse killer ettin
-
+        
         { 6250, ORPHAN+1 },     -- com bug UNREF: MOB	#6250	bug
-        { 8010, ORPHAN+2 },      -- cowboy UNREF: MOB	#8010	cowboy
-        { 7012, ORPHAN+3 },     -- Madam esther
+        { 7007, ORPHAN+2 },     -- wanderer~ UNREF: MOB	#7007	wanderer
+        { 7008, ORPHAN+3 },     -- homonculus homo UNREF: MOB	#7008	homonculus homo
+        { 7012, ORPHAN+4 },     -- Madam esther UNREF: MOB	#7012	esther madam
+        { 8010, ORPHAN+5 },      -- cowboy UNREF: MOB	#8010	cowboy
+ 
 
         -- Unref mobs in Pride land (easyzone)
         { 13601, EASY+71 },     -- UNREF: MOB	#13601	wang
@@ -767,25 +767,30 @@ UNREF: MOB	#19999	super musashi
         { 1454, SLUM+3 },      --  bar
         { 1452, SLUM+4 },      -- small room
         { 1450, SLUM+5 },      -- office
+        
+        -- Robert bell building
+        { 1470, SLUM+7 },     -- building
+        { 1471, SLUM+8 },     -- rom 134
+        { 1472, SLUM+9 },     -- BSU Dorm
 
-        { 3090, SLUM+11 },     -- mage tower/archmage
-        { 3091, SLUM+12 },
-        { 3092, SLUM+13 },
-        { 3093, SLUM+14 },
+        { 3090, SLUM+31 },     -- mage tower/archmage
+        { 3091, SLUM+32 },
+        { 3092, SLUM+33 },
+        { 3093, SLUM+34 },
 
         -- { 3020, SLUM+21 },     -- armory
         
         -- Areana to SLUM
-        { 9400, SLUM+20 },
-        { 9405, SLUM+21 },
-        { 9410, SLUM+22 },
-        { 9415, SLUM+23 },
-        { 9420, SLUM+24 },
-        { 9425, SLUM+25 },
-        { 9430, SLUM+26 },
-        { 9435, SLUM+27 },
-        { 9440, SLUM+28 },
-        { 9445, SLUM+29 },
+        { 9400, SLUM+40 },
+        { 9405, SLUM+41 },
+        { 9410, SLUM+42 },
+        { 9415, SLUM+43 },
+        { 9420, SLUM+44 },
+        { 9425, SLUM+45 },
+        { 9430, SLUM+46 },
+        { 9435, SLUM+47 },
+        { 9440, SLUM+48 },
+        { 9445, SLUM+49 },
 
         -- { 1852, SLUM+59 },     -- Police jail room
 
@@ -818,25 +823,20 @@ UNREF: MOB	#19999	super musashi
         { 1425, SOUTH+51 },       -- Tree
         { 1426, SOUTH+52 },       -- Nest
 
-        -- Robert bell building
-        { 1470, HOUSE+1 },     -- building
-        { 1471, HOUSE+2 },     -- rom 134
-        { 1472, HOUSE+3 },     -- BSU Dorm
+        -- here comes Utility as 3210 ~3210+41(3251)
 
-        -- here comes Utility as 3220 ~3220+41(3261)
-
-        { 13310, HOUSE+11 },
-        { 13311, HOUSE+12 },
-        { 13312, HOUSE+13 },
-        { 13313, HOUSE+14 },
-        { 13314, HOUSE+15 },
-        { 13301, HOUSE+21 },
-        { 13302, HOUSE+22 },
-        { 13331, HOUSE+24 },
-        { 13332, HOUSE+25 },
-        { 13333, HOUSE+26 },
-        { 13341, HOUSE+27 },
-        { 13342, HOUSE+28 },
+        { 13310, HOUSE+1 },
+        { 13311, HOUSE+2 },
+        { 13312, HOUSE+3 },
+        { 13313, HOUSE+4 },
+        { 13314, HOUSE+5 },
+        { 13301, HOUSE+11 },
+        { 13302, HOUSE+12 },
+        { 13331, HOUSE+14 },
+        { 13332, HOUSE+15 },
+        { 13333, HOUSE+16 },
+        { 13341, HOUSE+17 },
+        { 13342, HOUSE+18 },
 
         -- after util ( 3280~)
         { 1403, HOUSE+71 },     -- Mansion
@@ -919,14 +919,16 @@ UNREF: MOB	#19999	super musashi
         { 3003, MID+12 },     -- enter bank
         { 3002, MID+13 },     -- bank
         { 3004, MID+14 },     -- valut
-        { 3065, MID+15 },     -- meta
-        { 3062, MID+16 },     -- remortal
-        { 3066, MID+17 },     -- hospital
-
-        { 3019, MID+21 },     -- pr room
-        { 3030, MID+22 },     -- dump
-        { 3031, MID+23 },     -- pet shop
-        { 3032, MID+24 },     -- pet shop store
+        
+        --- New rooms 16, 17, 18
+        
+        { 3065, MID+21 },     -- meta
+        { 3062, MID+22 },     -- remortal
+        { 3066, MID+23 },     -- hospital
+        { 3019, MID+24 },     -- pr room
+        { 3030, MID+25 },     -- dump
+        { 3031, MID+26 },     -- pet shop
+        { 3032, MID+27 },     -- pet shop store
         -- used shop
         -- rounge romm
         -- game room
@@ -949,28 +951,28 @@ UNREF: MOB	#19999	super musashi
         { 3035, MID+46 },     -- bombard
         { 3094, MID+47 },     -- storage
         { 3034, MID+48 },     -- Super DC
+        
+        { 3014, MID+70 },      -- market sq
+        { 3012, MID+71 },      -- main str (magic)
+        { 3013, MID+72 },      -- main str (bakery)
+        { 3015, MID+73 },      -- main (gen store)
+        { 3016, MID+74 },      -- main (weapon)
+        { 3021, MID+75 },      -- ent TB
 
-        { 3014, MID+60 },      -- market sq
-        { 3012, MID+61 },      -- main str (magic)
-        { 3013, MID+62 },      -- main str (bakery)
-        { 3015, MID+63 },      -- main (gen store)
-        { 3016, MID+64 },      -- main (weapon)
-        { 3021, MID+65 },      -- ent TB
+        { 3025, MID+76 },     -- comm sq
+        { 3044, MID+77 },     -- poor alley
+        { 3024, MID+78 },     -- Eastern end of poor ally
+        { 3026, MID+79 },     -- dark alley
+        { 3045, MID+80 },     -- ally at levee
+        { 3046, MID+81 },     -- eastern end of alley
 
-        { 3025, MID+66 },     -- comm sq
-        { 3044, MID+67 },     -- poor alley
-        { 3024, MID+68 },     -- Eastern end of poor ally
-        { 3026, MID+69 },     -- dark alley
-        { 3045, MID+70 },     -- ally at levee
-        { 3046, MID+71 },     -- eastern end of alley
-
-        { 3040, MID+72 },     -- in west gate
-        { 3052, MID+73 },     -- outside west gate
-        { 3041, MID+74 },     -- in east gate
-        { 3053, MID+75 },     -- outside east gate
-        { 3042, MID+76 },     -- wall road 1
-        { 3043, MID+77 },     -- wall road 2
-        { 3047, MID+78 },     -- wall road 3
+        { 3040, MID+82 },     -- in west gate
+        { 3052, MID+83 },     -- outside west gate
+        { 3041, MID+84 },     -- in east gate
+        { 3053, MID+85 },     -- outside east gate
+        { 3042, MID+86 },     -- wall road 1
+        { 3043, MID+87 },     -- wall road 2
+        { 3047, MID+88 },     -- wall road 3
 
         -- UNREF: ROOM	#0
     }
@@ -1022,7 +1024,7 @@ Zone_renum_tab_master = {
     { "Mel's Doghouse",                  1300,  14160,  0 },   -- To Grave
     { "Houses",                          1400,  3210,   90,  'SlumOfMidgaard', 'Slum of Midgaard' },    -- Here is SLUM
     { "Dirk's Castle",                   1500,  15410,  90,  'DirksCastle' },
-    { "SHIRE",                           1700,  16210,  90, 'Shire' },
+    { "SHIRE",                           1700,  16210,  90,  'Shire' },
     { "Village of Midgaard",             1840,  3260,   0 },    -- To SLUM
     { "The lands",                       1900,  16100,  100, 'TheZyekianLands', 'The Zyekian Lands' },
     { "The Wasteland",                   2100,  17100,  100, 'Wasteland' },
@@ -1050,12 +1052,12 @@ Zone_renum_tab_master = {
     { "The tunnels",                     7400,  14610,  90,   true, 'The Tunnels' },
     { "Redferne's Residence",            7900,  14210,  90,   'GrandKnight', "Knight's Residence" },
     { "Arachnos",                        9000,  16500,  100 },
-    { "Arena",                           9400,  3230,   0 },  -- to SLUM
+    { "Arena",                           9400,  3250,   0 },  -- to SLUM
     { "DeathKingdom",                    9500,  17710,  190, true, 'Death Kingdom' },
     { "Galaxy",                          9700,  16610,  90 },
     { "The Death Star",                  9800,  16710,  90,   'DeathStar' },
     { "Dae Rim Sa",                     11100,  18100,  100 },
-    { "Utility Zone",                   13300,   3810,  90,   'VillaHouse', 'Villa House' },  -- HERE is HOUSE
+    { "Utility Zone",                   13300,   3810,  90,   'TownHouse', 'Town House' },  -- HERE is HOUSE
     { "Easy zone",                      13400,  19710,  90,   'EasyLand', 'Easy Land' },
     { "Mount Olympus",                  13780,  17910,  90,   true },
     { "Process' castle",                13800,  19600,  100,  'ProcessCastle' },
@@ -1160,18 +1162,16 @@ end
 3200-3299
     
    3200 (Slum /Street of Mid
- -- 3210 (30)
+ -- 3210-30 (20)
     { "Houses2",                         1450,  1400 },
-
+    + Robert Bell Building
         
-    3220-3229 (10){ Mage Tower 3090 ~ 3093  }
+    3230-3239 (10) Unused
     
-    3230-3239    
+    3240-3249 (10){ Mage Tower 3090 ~ 3093  }
+    
+    3250-3259    
     { "Arena",                          9400,  9400 }
-
-
-    3240-3259 (20) Unused
-
      
     3260 (30)
     { "Village of Midgaard",            1850,  1800 },
@@ -1203,9 +1203,7 @@ end
 
 
 3800-3899
-    Village of
-    3810 (10)
-    House3
+    "TownHouse"
     3820 (50)
     { "Utility Zone",                   13300, 13300 },
     3870 (30)

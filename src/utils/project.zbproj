@@ -1,7 +1,21 @@
 showmemoryusage = true
 
 ide.filenames = {
+    ide.arg[3] .."/",       -- "%CD%"
     "KZIOLib.lua",
     "KZoneCheck.lua",
     "KZMain.lua",
-}
+ }
+
+local _startfile = "KZMain.lua"
+local _params = "lib-src"
+local _interpreter = "luadeb53"
+
+package {
+    onAppLoad=
+        function() 
+            ide:GetProjectTree():SetStartFile(_startfile)
+            ide:SetCommandLineParameters(_params)
+            ide:SetInterpreter(_interpreter)
+        end
+ }

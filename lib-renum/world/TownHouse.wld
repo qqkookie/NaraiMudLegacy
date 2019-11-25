@@ -1,47 +1,4 @@
 #3811
-The Robert Bell Building~
-  This is the Robert Bell Building.  How nice.  You ask
-yourself, 'Who's Robert Bell?'
-  Beware of AGGRESSIVE Labbies in Room 134.
-~
-38 520 0
-D1
-~
-~
-0 -1 3812
-D2
-~
-~
-0 -1 3067
-D3
-~
-~
-0 -1 3813
-S
-#3812
-Room 134~
-  This is one of the Labs in the famous Robert Bell Building.  There
-are lots of terminals around here.  Looks like some DEC salesman made
-a real killing.
-~
-38 520 0
-D3
-~
-~
-0 -1 3811
-S
-#3813
-A BSU Dorm~
-  This is Ball State dorm room.  It's a mess, it stinks, it's full
-of junk.  It's like any dorm room anywhere.
-~
-38 2568 0
-D1
-~
-~
-0 -1 3811
-S
-#3821
 Villa DoorWay~
    호화 빌라의 현관. 바로크풍의 화려한 샹드리에가 드리워져 있습니다.
 어디선가 은은한 음악이 들리고 바닥에는 페르시아 양탄자가 깔려있습니다. 
@@ -51,22 +8,22 @@ D0
 Cookie 님이 조용히 사색과 독서를 하시고 계십니다.. 쉿 조용히.
 ~
 ~
-0 -1 3831
+0 -1 3821
 D1
 ~
 ~
-0 -1 3822
+0 -1 3812
 D2
 신들이 모여 나래의 미래를 걱정하고 있습니다.
 ~
 ~
-0 -1 3832
+0 -1 3822
 D5
 ~
 ~
 0 -1 3001
 S
-#3822
+#3812
 Villa White Corridor~
     피카소풍의 모던한 추상화가 밝은 햇빛을 받으며 걸려있습니다.
 그 아래에 하얀 백합꽃이 가득 꽂힌 화병이 탁자위에 놓여있습니다.
@@ -76,22 +33,22 @@ D0
 Scarab님이 낮잠을 주무시고 계십니다.
 ~
 ~
-0 -1 3834
+0 -1 3824
 D1
 ~
 ~
-0 -1 3823
+0 -1 3813
 D2
 JINNY님이 조용히 운공조식을 하며 기를 끌어 모으고 있습니다.
 ~
 ~
-0 -1 3837
+0 -1 3827
 D3
 ~
 ~
-0 -1 3821
+0 -1 3811
 S
-#3823
+#3813
 Villa Red Corridor~
    르노와르풍의 그림속에서 아름다운 소녀가 당신에게 미소를 보내고 있습니다.
 빨간 장미 한송이가 외롭게 화병에 꽂혀있습니다. 
@@ -101,22 +58,22 @@ D0
 Khan 님이 무언가 궁시렁거리며 분주히 왔다갔다하고 있습니다. 
 ~
 ~
-0 -1 3835
+0 -1 3825
 D1
 ~
 ~
-0 -1 3824
+0 -1 3814
 D2
 Dos 님이 컴퓨터앞에서 열심히 외계인을 잡아죽이고 있습니다.
 ~
 ~
-0 -1 3838
+0 -1 3828
 D3
 ~
 ~
-0 -1 3822
+0 -1 3812
 S
-#3824
+#3814
 Villa Yellow Corridor~
    돌로 만든 벽난로에서 장작이 타들어가고 있습니다.
 오래된 할아버지 시계의 시계추가 느릿느릿 흔들리고 있습니다.
@@ -126,17 +83,17 @@ D0
 Rook님이 낄낄거리며 만화를 읽고있습니다.
 ~
 ~
-0 -1 3836
+0 -1 3826
 D1
 ~
 ~
-0 -1 3825
+0 -1 3815
 D3
 ~
 ~
-0 -1 3823
+0 -1 3813
 S
-#3825
+#3815
 Villa Dark Corridor~
    침침한 회랑끝. 은촛대위에 촛불이 조용히 타들어가고 있습니다.
 ~
@@ -144,9 +101,9 @@ Villa Dark Corridor~
 D3
 ~
 ~
-0 -1 3824
+0 -1 3814
 S
-#3831
+#3821
 Cookie's Suit Room~
    당신은 천재이십니다. 당신은 아름답습니다. 누구나 당신을 사랑합니다.
 당신은 뭐든 해낼 수 있습니다. 행운은 항상 당신과 함께 합니다.
@@ -155,9 +112,9 @@ Cookie's Suit Room~
 D2
 ~
 ~
-0 -1 3821
+0 -1 3811
 S
-#3832
+#3822
 Imple/Odin's Room~
   위대한 Imple과 Wizard들이 조용히 휴식을 취하는 방. 
 ~
@@ -165,9 +122,9 @@ Imple/Odin's Room~
 D0
 ~
 ~
-0 -1 3821
+0 -1 3811
 S
-#3834
+#3824
 Scarab's Room 1~
    당신은 Scarab 님입니다.
 ~
@@ -175,9 +132,9 @@ Scarab's Room 1~
 D2
 ~
 ~
-0 -1 3822
+0 -1 3812
 S
-#3835
+#3825
 Khan's Room 3~
    당신은 Khan 님입니다.
 ~
@@ -185,9 +142,9 @@ Khan's Room 3~
 D2
 ~
 ~
-0 -1 3823
+0 -1 3813
 S
-#3836
+#3826
 Rook's Room 5~
    당신은 Rook 님입니다.
 ~
@@ -195,9 +152,9 @@ Rook's Room 5~
 D2
 ~
 ~
-0 -1 3824
+0 -1 3814
 S
-#3837
+#3827
 JINNY's Room 2~
    당신은 JINNY 님입니다.
 ~
@@ -205,9 +162,9 @@ JINNY's Room 2~
 D0
 ~
 ~
-0 -1 3822
+0 -1 3812
 S
-#3838
+#3828
 Dos's Room 4~
    당신은 Dos 님입니다.
 ~
@@ -215,7 +172,7 @@ Dos's Room 4~
 D0
 ~
 ~
-0 -1 3823
+0 -1 3813
 S
 #3881
 A Southern Mansion~
@@ -281,7 +238,7 @@ pile of black hair under the bed where another dog obviously once lay.
 D5
 ~
 ~
-0 -1 3023
+0 -1 3026
 S
 #3887
 Elbo's House~

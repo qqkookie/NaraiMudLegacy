@@ -16,9 +16,9 @@
 
 #define ROOM_QUEST		(MID_BASE+7)
 #define ROOM_MID_BANK		(MID_BASE+13)
-#define ROOM_METAPHYSICIAN	(MID_BASE+15)
-#define ROOM_REMORTAL		(MID_BASE+16)
-#define ROOM_HOSPITAL		(MID_BASE+17)
+#define ROOM_METAPHYSICIAN	(MID_BASE+21)
+#define ROOM_REMORTAL		(MID_BASE+22)
+#define ROOM_HOSPITAL		(MID_BASE+23)
 
 #define ROOM_MID_DUMP		(MID_BASE+22)
 #define	ROOM_MID_PETSHOP	(MID_BASE+23)
@@ -27,7 +27,7 @@
 #define ROOM_MID_STORAGE	(MID_BASE+47)
 
 // taxi stop
-#define TAXI_START_MKTSQ	(MID_BASE+60)	// Market Squre
+#define TAXI_START_MKTSQ	(MID_BASE+70)	// Market Squre
 #define TAXI_START_TP		3442	// Turning point
 
 #define TAXI_STOP_KAIST		19411	// NOTE: KAIST zone renumber 31001->19411
@@ -43,31 +43,31 @@
 
 // level gate
 #define LEVGATE_CLUBSAFARI	3211	    // south
-#define LEVGATE_ARENA		3230	    // south
+#define LEVGATE_ARENA		3250	    // south
 #define LEVGATE_TB8TH		15135	    // south, TB 8th floor, chemist
 #define LEVGATE_EASTCASTLE	3444	    // west, East Castle 
 #define LEVGATE_THALOS		17410	    // west, City of Thalos
 #define LEVGATE_SHIRE		16311	    // south, Shire (in Haondor light)
-#define LEVGATE_MAGETOWER	(MID_BASE+74)	    // south, Mage Tower
+#define LEVGATE_MAGETOWER	(MID_BASE+84)	    // south, Mage Tower
 
 /* ---------------    GUILD Rooms    ---------------- */
 /*	From guild_list.h		*/
 #define GUILD_BASE		3250
 
-#define GUILD_POLICE_GATE	(GUILD_BASE+12)	// 3095
-#define GUILD_POLICE_PRACTICE 	(GUILD_BASE+13)	// 3096
-#define GUILD_POLICE_LOCKER	(GUILD_BASE+15)	// 3099
+#define GUILD_POLICE_GATE	(GUILD_BASE+2)	// 3095
+#define GUILD_POLICE_PRACTICE 	(GUILD_BASE+3)	// 3096
+#define GUILD_POLICE_LOCKER	(GUILD_BASE+5)	// 3099
 
 /* NOTE: moved from JALE_ROOM definition in guild_skills.c */
-#define ROOM_POLICE_JAIL    	(GUILD_BASE+18)	// 1800
+#define ROOM_POLICE_JAIL    	(GUILD_BASE+8)	// 1800
 
-#define GUILD_OUTLAW_GATE	(GUILD_BASE+22)	// 3221
-#define GUILD_OUTLAW_PRACTICE	(GUILD_BASE+23)	// 3222
-#define GUILD_OUTLAW_LOCKER	(GUILD_BASE+24)	// 3224
+#define GUILD_OUTLAW_GATE	(GUILD_BASE+12)	// 3221
+#define GUILD_OUTLAW_PRACTICE	(GUILD_BASE+13)	// 3222
+#define GUILD_OUTLAW_LOCKER	(GUILD_BASE+14)	// 3224
 
-#define GUILD_ASSASSIN_GATE	(GUILD_BASE+32)	// 9650
-#define GUILD_ASSASSIN_PRACTICE (GUILD_BASE+33)	// 9651
-#define GUILD_ASSASSIN_LOCKER	(GUILD_BASE+36)	// 9652
+#define GUILD_ASSASSIN_GATE	(GUILD_BASE+22)	// 9650
+#define GUILD_ASSASSIN_PRACTICE (GUILD_BASE+23)	// 9651
+#define GUILD_ASSASSIN_LOCKER	(GUILD_BASE+26)	// 9652
 
 #define ROOM_MID_LOCKER		3295	// 3000
 
@@ -120,7 +120,7 @@
 #define MOB_MID_FIDO2		(MID_BASE+57)
 
 #define MOB_MID_SINGER		3212	    // Bob Dylan
-#define MOB_MID_ARCHMAGE	3223
+#define MOB_MID_ARCHMAGE	3243
 
 /*
 #define KITTEN		3090

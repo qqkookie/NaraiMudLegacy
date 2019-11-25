@@ -30,6 +30,41 @@ DikuMUD is known to be one of their favourite habitats.
 W 1 10 8 8 9
 0 9 8 N
 #2922
+wanderer~
+The evil wanderer~
+The evil wanderer stares at you
+~
+The evil wanderer is very thin. He is dressed in a grey cloak.
+~
+140 0 -1000
+O 13 7 17 10 13
+300 14 8 M
+#2923
+homonculus homo~
+the creature homonculous~
+The creature homonculous is here, looking at you with an evil look.
+~
+The Homonculous appers in a man-like form, about 18'' tall, have a
+greenish, reptilian skin, leathery wings, and a batlike mouth, with
+teeth passing on a venom.
+~
+8 8 -780
+O 11 7 16 10 13
+500 10 8 N
+#2924
+esther madam~
+Madam Esther~
+Madam Esther is standing here, trying to sell dust.
+~
+She is very big standing here, smiling to you. She looks like the
+mother of the town, sometimes playing with the children, sometimes 
+helping the old people, with their daily work. All this in spite of
+her own hard work.
+~
+8 0 1000
+W 8 9 10 10 12
+6 9 8 F
+#2925
 cowboy~
 the cowboy~
 A hard-eyed cowboy is here, going about his business.
@@ -43,19 +78,6 @@ that are apparently not so solid now.
 8 0 400
 W 15 11 13 17 16
 40 18 8 M
-#2923
-esther madam~
-Madam Esther~
-Madam Esther is standing here, trying to sell dust.
-~
-She is very big standing here, smiling to you. She looks like the
-mother of the town, sometimes playing with the children, sometimes 
-helping the old people, with their daily work. All this in spite of
-her own hard work.
-~
-8 0 1000
-W 8 9 10 10 12
-6 9 8 F
 #3003
 perhaps~
 Perhaps~
@@ -636,7 +658,18 @@ The Big Brawny Bouncer regards you with suspicion.
 65610 8 700
 W 35 4 14 16 3
 1000 11 8 M
-#3221
+#3216
+labbie~
+The Labbie~
+The dumb looking Labbie is here, trying to kick you off the MUD.
+~
+The Labbie is a low-level lifeform found in the Computer Labs
+near Muncie, Indiana.
+~
+110 0 -999
+W 9 8 15 10 13
+1500 14 8 M
+#3241
 cranky librarian~
 The Cranky Librarian~
 A Cranky Librarian snoozes with a copy of Mein Kampf.
@@ -648,7 +681,7 @@ you have know since childhood.  Wake her and suffer her wrath!
 42 128 0
 M 28 7 14 18 13
 2 14 4 F
-#3222
+#3242
 furniture throne~
 A Vengeful Piece of Furniture~
 A Rickety, Wooden Throne sits on a dais.
@@ -658,7 +691,7 @@ The throne looks like its on its last legs literally. Hmm, did it just fidget?
 42 1048576 200
 W 34 7 16 7 16
 0 18 8 M
-#3223
+#3243
 grand mage archmage guildmaster~
 The Grand Archmage~
 The Grand Archmage sits on his wooden throne.
@@ -670,7 +703,7 @@ from beneath silver-white brows and a grandfatherly smile greets your entrance.
 43 128 1000
 M 36 13 14 15 7
 0 16 8 M
-#3231
+#3251
 reject guard~
 The reject guard~
 A Rejected Cityguard candidate is here, he looks like he is in a bad mood.
@@ -681,7 +714,7 @@ not look like he is going to fall over and die for you.
 12 8 1000
 O 4 12 5 11 9
 400 12 8 M
-#3232
+#3252
 roland~
 The roland~
 A roland is here, shoveling something.
@@ -691,7 +724,7 @@ The roland is an ugly cuss.
 24 0 -400
 T 2 10 8 11 11
 5 12 8 N
-#3233
+#3253
 stingray~
 The stingray~
 A stingray is here, whining about something.
@@ -701,7 +734,7 @@ The stingray is a cute little fellow.
 76 0 -400
 O 3 8 11 9 9
 20 9 8 M
-#3234
+#3254
 arena guard~
 Guard~
 The Arena guard is here, looking grim.
@@ -712,7 +745,7 @@ level people if i was you i would not mess with him.
 10 8 1000
 W 23 6 3 7 11
 3500 4 8 M
-#3235
+#3255
 dj~
 The DJ~
 The DJ is here, looking pathetic, as usual.
@@ -722,7 +755,7 @@ The DJ is harmless, just noisy.
 8 0 -400
 O 2 10 5 10 8
 10 9 8 M
-#3236
+#3256
 ericol~
 the ericol~
 The ericol is here making sure you don't use any of his toys.
@@ -857,17 +890,6 @@ The sparrow looks like it is enjoying life.
 200 0 1000
 O 1 12 10 9 10
 0 9 8 N
-#3811
-labbie~
-The Labbie~
-The dumb looking Labbie is here, trying to kick you off the MUD.
-~
-The Labbie is a low-level lifeform found in the Computer Labs
-near Muncie, Indiana.
-~
-110 0 -999
-W 9 8 15 10 13
-1500 14 8 M
 #3813
 Cinnamon~
 Cinnamon~
@@ -997,28 +1019,6 @@ The small hairy Spider
 40 524288 -700
 O 4 12 8 11 11
 0 9 8 M
-#14317
-wanderer~
-The evil wanderer~
-The evil wanderer stares at you
-~
-The evil wanderer is very thin. He is dressed in a grey cloak.
-~
-140 0 -1000
-O 13 7 17 10 13
-300 14 8 M
-#14318
-homonculus homo~
-the creature homonculous~
-The creature homonculous is here, looking at you with an evil look.
-~
-The Homonculous appers in a man-like form, about 18'' tall, have a
-greenish, reptilian skin, leathery wings, and a batlike mouth, with
-teeth passing on a venom.
-~
-8 8 -780
-O 11 7 16 10 13
-500 10 8 N
 #14411
 mud monster mudmonster~
 The horrifying Mudmonster~

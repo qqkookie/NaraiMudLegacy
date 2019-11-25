@@ -31,7 +31,7 @@ D4
 D5
 ~
 ~
-0 -1 3016
+0 -1 3022
 S
 #3004
 By the Temple Altar~
@@ -153,7 +153,7 @@ D1
 D2
 ~
 ~
-0 -1 3060
+0 -1 3070
 D3
 ~
 ~
@@ -213,7 +213,7 @@ D1
 vault~
 2 3032 3013
 S
-#3015
+#3021
 The Metaphysician's~
    You are in a dim and dusty building.  Strange sounds and odd odors
 surround you.  There are no chairs, no tables, and nothing to decorate
@@ -243,7 +243,7 @@ not touch it.  The Metaphysicians presence can be felt behind it.
 
 ~
 S
-#3016
+#3022
 Remortal Place~
     You are standing at the place of remortaling and demoting.
 You want to be new bie again. You can feel the baby in your heart.
@@ -258,7 +258,7 @@ D0
 ~
 0 0 3001
 S
-#3017
+#3023
 The MidGaard Hospital~
    You are in the MidGaard Hospital.  It is a very modern facility,
 providing the latest in health care.  There is a sign here.
@@ -267,7 +267,7 @@ providing the latest in health care.  There is a sign here.
 D2
 ~
 ~
-0 -1 3069
+0 -1 3079
 E
 sign~
 
@@ -276,7 +276,7 @@ Use "buy <number>" and you might be cured.
 
 ~
 S
-#3021
+#3024
 The Practice Room~
    This is the room where most great adventurers come to practice.
 ~
@@ -292,7 +292,7 @@ impossible to climb back up.
 ~
 0 -1 14327
 S
-#3022
+#3025
 The Dump~
    The dump, where the people from the city drop their garbage.  Through the
 garbage you can see a large junction of pipes, looks like the entrance to the
@@ -302,17 +302,17 @@ sewer system.
 D0
 ~
 ~
-0 -1 3066
+0 -1 3076
 D2
 ~
 ~
-0 -1 3230
+0 -1 3250
 D5
 ~
 ~
 0 -1 14340
 S
-#3023
+#3026
 The Pet Shop~
    The Pet Shop is a small crowded store, full of cages and animals of
 various sizes.  There is a sign on the wall.
@@ -321,7 +321,7 @@ various sizes.  There is a sign on the wall.
 D0
 ~
 ~
-0 -1 3063
+0 -1 3073
 E
 sign~
 The sign reads:
@@ -339,7 +339,7 @@ The sign reads:
 
 ~
 S
-#3024
+#3027
 Pet Shop Store~
    This  is the small dark room in which the Pet shop keeps his pets.
 It is vital that this room's virtual number is exactly one larger
@@ -356,7 +356,7 @@ presumably most of them are magic.
 D2
 ~
 ~
-0 -1 3061
+0 -1 3071
 S
 #3032
 The Weapon Shop~
@@ -367,7 +367,7 @@ D2
 You see the main street.
 ~
 ~
-0 -1 3064
+0 -1 3074
 E
 note~
 The note reads:
@@ -389,7 +389,7 @@ On the wall is a small note.
 D0
 ~
 ~
-0 -1 3062
+0 -1 3072
 E
 note~
   You can use these commands for trading:
@@ -412,7 +412,7 @@ D2
 You see the main street.
 ~
 ~
-0 -1 3063
+0 -1 3073
 E
 note~
 The note reads:
@@ -436,7 +436,7 @@ D2
 You see the main street.
 ~
 ~
-0 -1 3062
+0 -1 3072
 E
 sign~
 Free instructions provided by the store:
@@ -484,7 +484,7 @@ D4
 You see enterence to Luxurious Villas.
 ~
 ~
-0 -1 3821
+0 -1 3811
 E
 sign~
 The sign reads:
@@ -508,7 +508,7 @@ Entrance to the Guild~
 D0
 ~
 ~
-0 -1 3061
+0 -1 3071
 D2
 ~
 ~
@@ -527,7 +527,7 @@ D0
 D1
 ~
 ~
-0 -1 3021
+0 -1 3024
 E
 picture~
    You see a picture of a little black and white dog.
@@ -542,7 +542,7 @@ restaurant in MidGaard.
 D0
 ~
 ~
-0 -1 3069
+0 -1 3079
 S
 #3042
 Levee~
@@ -553,7 +553,7 @@ The river bank is very low making it possible to enter the river.
 D0
 ~
 ~
-0 -1 3070
+0 -1 3080
 D2
 ~
 ~
@@ -569,7 +569,7 @@ opening in the wall ten feet below the bridge.
 D0
 ~
 ~
-0 -1 3078
+0 -1 3088
 D2
 ~
 ~
@@ -594,11 +594,11 @@ several decades, vile smells make you dizzy.
 D0
 ~
 ~
-0 -1 3068
+0 -1 3078
 D4
 ~
 ~
-0 -1 3015
+0 -1 3021
 S
 #3045
 Warehouse~
@@ -609,7 +609,7 @@ items from ships.
 D0
 ~
 ~
-0 -1 3071
+0 -1 3081
 D4
 ~
 ~
@@ -639,7 +639,7 @@ here is only death. NO CURE AND HEAL. WU HA HA HA .
 ~
 30 2 0
 S
-#3060
+#3070
 Market Square~
    You are standing on the market square, the famous Square of Midgaard.
 A large, pecualiar looking statue is standing in the middle of the square.
@@ -655,17 +655,17 @@ D0
 D1
 ~
 ~
-0 -1 3063
+0 -1 3073
 D2
 ~
 ~
-0 -1 3066
+0 -1 3076
 D3
 ~
 ~
-0 -1 3062
+0 -1 3072
 S
-#3061
+#3071
 Main Street~
    You are at the end of the main street of Midgaard.  South of here is the
 entrance to the Guild of Magic Users.  The street continues east towards the
@@ -680,7 +680,7 @@ D0
 D1
 ~
 ~
-0 -1 3062
+0 -1 3072
 D2
 ~
 ~
@@ -688,9 +688,9 @@ D2
 D3
 ~
 ~
-0 -1 3072
+0 -1 3082
 S
-#3062
+#3072
 Main Street~
    You are on the main street passing through the City of Midgaard.  South of
 here is the entrance to the Armoury, and the bakery is to the north.  East of
@@ -704,7 +704,7 @@ D0
 D1
 ~
 ~
-0 -1 3060
+0 -1 3070
 D2
 ~
 ~
@@ -712,9 +712,9 @@ D2
 D3
 ~
 ~
-0 -1 3061
+0 -1 3071
 S
-#3063
+#3073
 The Main Street~
    You are on the main street crossing through town.  To the north is the
 general store, and the main street continues east.  To the west you see and
@@ -728,17 +728,17 @@ D0
 D1
 ~
 ~
-0 -1 3064
+0 -1 3074
 D2
 ~
 ~
-0 -1 3023
+0 -1 3026
 D3
 ~
 ~
-0 -1 3060
+0 -1 3070
 S
-#3064
+#3074
 The Main Street~
    You are on Main Street, in beautiful downtown Midgaard.
 ~
@@ -750,17 +750,17 @@ D0
 D1
 ~
 ~
-0 -1 3074
+0 -1 3084
 D2
 ~
 ~
-0 -1 3065
+0 -1 3075
 D3
 ~
 ~
-0 -1 3063
+0 -1 3073
 S
-#3065
+#3075
 Entrance to a Tall Building~
   You are in a small plaza in front of a newly constructed skyscraper,
 the pride of MidGaard.
@@ -769,13 +769,13 @@ the pride of MidGaard.
 D0
 ~
 ~
-0 -1 3064
+0 -1 3074
 D2
 ~
 ~
 0 -1 15271
 S
-#3066
+#3076
 The Common Square~
    The common square, people pass you, talking to each other.  To the west is
 the poor alley and to the east is the dark alley.  To the north, this square
@@ -785,21 +785,21 @@ is connected to the market square.  From the south you notice a nasty smell.
 D0
 ~
 ~
-0 -1 3060
+0 -1 3070
 D1
 ~
 ~
-0 -1 3069
+0 -1 3079
 D2
 ~
 ~
-0 -1 3022
+0 -1 3025
 D3
 ~
 ~
-0 -1 3068
+0 -1 3078
 S
-#3067
+#3077
 Poor Alley~
    You are in the poor alley, which continues further east. You see the
 city wall to the west.
@@ -808,11 +808,11 @@ city wall to the west.
 D0
 ~
 ~
-0 -1 3811
+0 -1 3217
 D1
 ~
 ~
-0 -1 3068
+0 -1 3078
 D2
 ~
 ~
@@ -820,9 +820,9 @@ D2
 D3
 ~
 ~
-0 -1 3077
+0 -1 3087
 S
-#3068
+#3078
 Eastern End of Poor Alley~
    You are at the poor alley.  South of here is the Grubby Inn and to the
 east you see common square.  The alley continues further west.
@@ -831,7 +831,7 @@ east you see common square.  The alley continues further west.
 D1
 ~
 ~
-0 -1 3066
+0 -1 3076
 D2
 ~
 ~
@@ -839,9 +839,9 @@ D2
 D3
 ~
 ~
-0 -1 3067
+0 -1 3077
 S
-#3069
+#3079
 The Dark Alley~
    The dark alley, to the west is the common square and to the south is
 the new McDonalds.  The alley continues east.
@@ -850,11 +850,11 @@ the new McDonalds.  The alley continues east.
 D0
 ~
 ~
-0 -1 3017
+0 -1 3023
 D1
 ~
 ~
-0 -1 3070
+0 -1 3080
 D2
 ~
 ~
@@ -862,9 +862,9 @@ D2
 D3
 ~
 ~
-0 -1 3066
+0 -1 3076
 S
-#3070
+#3080
 Alley at Levee~
    You are standing in the alley which continues east and west.  South of
 here you see the levee.
@@ -873,7 +873,7 @@ here you see the levee.
 D1
 ~
 ~
-0 -1 3071
+0 -1 3081
 D2
 ~
 ~
@@ -881,9 +881,9 @@ D2
 D3
 ~
 ~
-0 -1 3069
+0 -1 3079
 S
-#3071
+#3081
 Eastern end of Alley~
    You are standing at the eastern end of the alley, the city wall is just
 east, blocking any further movement.  A small warehouse is directly south of
@@ -897,9 +897,9 @@ D2
 D3
 ~
 ~
-0 -1 3070
+0 -1 3080
 S
-#3072
+#3082
 Inside the West Gate of Midgaard~
    You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  Main Street leads
@@ -909,18 +909,18 @@ east and Wall Road leads south from here.
 D1
 ~
 ~
-0 -1 3061
+0 -1 3071
 D2
 ~
 ~
-0 -1 3076
+0 -1 3086
 D3
 The city gate is to the west.
 ~
 gate~
-1 3033 3073
+1 3033 3083
 S
-#3073
+#3083
 Outside the West Gate of Midgaard~
    You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  To the west you
@@ -931,7 +931,7 @@ D1
 The city gate is to the east.
 ~
 gate~
-1 3033 3072
+1 3033 3082
 D3
 ~
 ~
@@ -948,7 +948,7 @@ It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
 ~
 S
-#3074
+#3084
 Inside the East Gate of Midgaard~
    You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  Main Street leads
@@ -963,17 +963,17 @@ D1
 You see the city gate.
 ~
 gate~
-1 3033 3075
+1 3033 3085
 D2
 ~
 force~
-2 0 3221
+2 0 3241
 D3
 ~
 ~
-0 -1 3064
+0 -1 3074
 S
-#3075
+#3085
 Outside the East Gate of Midgaard~
    You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  To the east the
@@ -988,7 +988,7 @@ D3
 You see the city gate.
 ~
 gate~
-1 3033 3074
+1 3033 3084
 E
 gate~
 It is a set of very big double doors made from hard wood.  They have been
@@ -1001,7 +1001,7 @@ It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
 ~
 S
-#3076
+#3086
 Wall Road~
    You are walking next to the western city wall.  The road continues further
 south and the city gate is just north of here.
@@ -1010,18 +1010,18 @@ south and the city gate is just north of here.
 D0
 ~
 ~
-0 -1 3072
+0 -1 3082
 D2
 ~
 ~
-0 -1 3077
+0 -1 3087
 E
 wall~
 It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
 ~
 S
-#3077
+#3087
 Wall Road~
    You are walking next to the western city wall.  Wall Road continues further
 north and south.  A small, poor alley leads east.
@@ -1031,15 +1031,15 @@ Some letters have been written on the wall here.
 D0
 ~
 ~
-0 -1 3076
+0 -1 3086
 D1
 ~
 ~
-0 -1 3067
+0 -1 3077
 D2
 ~
 ~
-0 -1 3078
+0 -1 3088
 E
 letters~
 It says 'Who watches the watchmen?'
@@ -1050,7 +1050,7 @@ It is built from large grey rocks that have been fastened to each other with
 some kind of mortar.  It is far too high to climb.
 ~
 S
-#3078
+#3088
 Wall Road~
    You are standing on the road next to the western city wall, which
 continues north.  South of here is a bridge across the river.  There
@@ -1060,7 +1060,7 @@ is a doghouse to the east.
 D0
 ~
 ~
-0 -1 3077
+0 -1 3087
 D1
 ~
 ~

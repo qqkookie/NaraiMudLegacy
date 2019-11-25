@@ -10,10 +10,7 @@ M 0 14411 3 14413            The Horrifying Mudmonster
 M 0 14414 7 14423            The slithering snake
 M 0 14414 7 14432            The slithering snake
 M 0 14414 7 14432            The slithering snake
-*
-*       Move TO "SewerMaze.zon"
-*D 1 14426 5 1
-*D 1 14580 4 1
-*
+D 1 14426 5 1
+D 1 14580 4 1
 S
 $~

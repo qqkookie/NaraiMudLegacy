@@ -1039,7 +1039,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	    send_to_char(buf, to);
     }
 
-    sprintf(buf,STRHAN("You have scored  %s exp,  and have  %s gold coins.\n\r",
+    sprintf(buf,STRHAN("You have scored  %s exp and have  %s gold coins.\n\r",
 	   "당신은  %s 의 경험치와  %s 원의 돈을 가지고 있습니다.\n\r", ch),
 	    monetary(GET_EXP(ch)), monetary(GET_GOLD(ch)));
     send_to_char(buf, to);

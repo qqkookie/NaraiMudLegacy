@@ -1043,7 +1043,7 @@ int taxi(struct char_data *ch, int cmd, char *arg)
     }
     sprintf(buf, "Welcome to %s!!!\n\r", where_to);
     send_to_char(buf, ch);
-    send_to_char("Sit down on your seat,and wait for a while\n\r", ch);
+    send_to_char("Sit down on your seat, and wait for a while\n\r", ch);
     sprintf(buf, "The taxi with %s starts to leave for %s.", GET_NAME(ch), where_to);
     act(buf, TRUE, ch, 0, 0, TO_ROOM);
     char_from_room(ch);

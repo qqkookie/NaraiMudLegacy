@@ -1,0 +1,53 @@
+Arena~
+3349 20 1
+M 0 3254 1 3250		Entrance Guard
+E 1 14237 1 16		Wields bastard sword
+M 0 3251 4 3251		reject guard
+E 1 3026 1 16		wields short sword
+M 0 3252 10 3251	Snail (roland)
+G 1 14508 1		give small stick
+M 0 3253 1 3252		BLACK CAT
+M 0 3252 10 3253	Snail 1
+M 0 3252 10 3253	Snail 2
+M 0 3252 10 3253	Snail 3
+M 0 3056 3 3254		FIDO
+M 0 3058 1 3255		Merc
+E 1 3021 10 16
+G 1 3038 10
+M 0 3058 1 3257		Merc
+E 1 3021 10 16
+G 1 3038 10
+M 0 3058 1 3259		Merc
+E 1 3021 10 16
+G 1 3038 10
+O 0 3022 5 3252		dagger
+O 0 3022 5 3255		dagger
+M 0 16316 15 3253	Squirrel
+M 0 16316 15 3254	Squirrel
+M 0 16316 15 3255	Squirrel
+M 0 3252 10 3256	Snail
+M 0 3253 5 3256		CAT
+M 0 3253 5 3257		CAT
+O 0 3021 5 3250		short sword
+M 0 3251 4 3257		REJECT GUARD
+E 1 3026 1 16		wields short sword
+M 0 3252 10 3258	Snail 1
+M 0 3252 10 3258	Snail 2
+M 0 3252 10 3258	Snail 3
+M 0 3251 4 3259		REJECT GUARD
+E 1 3026 1 16		wields short sword
+M 0 3251 4 3259		REJECT GUARD
+E 1 3026 1 16		wields short sword
+M 0 3256 4 3259		load gopher
+M 0 3256 4 3252		load gopher
+O 0 3118 20 3252	bread for poor people
+O 0 3118 20 3259
+M 0 3256 4 3253		load gopher
+M 0 3256 4 3256		load gopher
+M 0 3255 5 3251		load rabbit
+M 0 3255 5 3255		Load rabbit
+M 0 3255 5 3254		load rabbit
+M 0 3255 5 3259		load rabbit
+M 0 3255 5 3257		load rabbit
+S
+$~

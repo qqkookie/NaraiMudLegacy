@@ -8,7 +8,7 @@ There is a sign here.
 D0
 ~
 ~
-0 -1 3067
+0 -1 3077
 D2
 ~
 ~
@@ -78,7 +78,50 @@ D5
 ~
 0 -1 3212
 S
-#3221
+#3217
+The Robert Bell Building~
+  This is the Robert Bell Building.  How nice.  You ask
+yourself, 'Who's Robert Bell?'
+  Beware of AGGRESSIVE Labbies in Room 134.
+~
+32 520 0
+D1
+~
+~
+0 -1 3218
+D2
+~
+~
+0 -1 3077
+D3
+~
+~
+0 -1 3219
+S
+#3218
+Room 134~
+  This is one of the Labs in the famous Robert Bell Building.  There
+are lots of terminals around here.  Looks like some DEC salesman made
+a real killing.
+~
+32 520 0
+D3
+~
+~
+0 -1 3217
+S
+#3219
+A BSU Dorm~
+  This is Ball State dorm room.  It's a mess, it stinks, it's full
+of junk.  It's like any dorm room anywhere.
+~
+32 2568 0
+D1
+~
+~
+0 -1 3217
+S
+#3241
 Guild Entrance to the Mage's Tower~
      Sigils and wards carved on the stone archway glow a soft, bluish hue.
 An arcane inscription over the threshold reads:
@@ -89,13 +132,13 @@ Past the archway is an empty stone hallway with stairs leading up at the end.
 D0 
 ~
 ~
-0 -1 3074
+0 -1 3084
 D4
 ~
 ~
-0 -1 3222
+0 -1 3242
 S
-#3222
+#3242
 The Library~
      A plush carpet muffles your footsteps as you tread past shelf after
 shelf of musty tomes, compendiums, scrolls and sheafs of various unearthed
@@ -106,13 +149,13 @@ magic or loud speech in this place of stored lore.
 D4
 ~
 ~
-0 -1 3223
+0 -1 3243
 D5
 ~
 ~
-0 -1 3221
+0 -1 3241
 S
-#3223
+#3243
 The Meditation Chamber~
      This windowless chamber is furnished only with mats.  There is a peace
 and quiet here to soothe the soul.
@@ -121,13 +164,13 @@ and quiet here to soothe the soul.
 D4
 ~
 ~
-0 -1 3224
+0 -1 3244
 D5
 ~
 ~
-0 -1 3222
+0 -1 3242
 S
-#3224
+#3244
 Audience of the Grand Archmage~
      You stand in a high-vaulted chamber.  Light streams in from open
 balconies.  Majestic tapestries cascade from ceiling to floor along the 
@@ -138,9 +181,9 @@ furnishings include a rug and a rickety, wooden throne.
 D5
 ~
 ~
-0 -1 3223
+0 -1 3243
 S
-#3230
+#3250
 The Training arena entrance~
 This is the entrance to the training arena, to the south you can hear 
 the sounds of trainees fighting everything in sight, you also hear the
@@ -152,11 +195,11 @@ There is a SIGN here you might want to READ it.
 D0
 ~
 ~
-0 -1 3022
+0 -1 3025
 D2
 ~
 ~
-0 -1 3231
+0 -1 3251
 E
 sign~
 The sign says:
@@ -169,7 +212,7 @@ XP points you get).
                  THERE WILL BE NO PLAYER KILLING ALLOWED
 ~
 S
-#3231
+#3251
 The Arena~
 You have entered the training arena and something tells you that you had better
 be prepared to fight for your life!
@@ -178,21 +221,21 @@ be prepared to fight for your life!
 D0
 ~
 ~
-0 -1 3230
+0 -1 3250
 D1
 ~
 ~
-0 -1 3232
+0 -1 3252
 D2
 ~
 ~
-0 -1 3238
+0 -1 3258
 D3
 ~
 ~
-0 -1 3239
+0 -1 3259
 S
-#3232
+#3252
 NE corner of the Arena~
 You are in the North East corner of the Arena.
 ~
@@ -200,13 +243,13 @@ You are in the North East corner of the Arena.
 D2
 ~
 ~
-0 -1 3233
+0 -1 3253
 D3
 ~
 ~
-0 -1 3231
+0 -1 3251
 S
-#3233
+#3253
 East wall of the Arena~
 You are  standing next to the East  wall of the arena. The bottom of the wall
 looks as if it has been burrowed through as there is a big hole in the bottom
@@ -217,17 +260,17 @@ it is big enough to let in some unwanted visitors.
 D0
 ~
 ~
-0 -1 3232
+0 -1 3252
 D2
 ~
 ~
-0 -1 3234
+0 -1 3254
 D3
 ~
 ~
-0 -1 3238
+0 -1 3258
 S
-#3234
+#3254
 SE Corner~
 You have arrived in the south east corner of the arena. You can see what looks 
 like a slide leading up into the walls but they are to steep and slick to climb.
@@ -238,13 +281,13 @@ something big and nasty comes sliding down one of those slides.
 D0
 ~
 ~
-0 -1 3233
+0 -1 3253
 D3
 ~
 ~
-0 -1 3235
+0 -1 3255
 S
-#3235
+#3255
 The far end of the Arena~
 This is the Far end of the Arena if you look to the north you can just make out
 the entrance.
@@ -253,17 +296,17 @@ the entrance.
 D0
 ~
 ~
-0 -1 3238
+0 -1 3258
 D1
 ~
 ~
-0 -1 3234
+0 -1 3254
 D3
 ~
 ~
-0 -1 3236
+0 -1 3256
 S
-#3236
+#3256
 The SW corner~
 This is the South West corner and it looks much the same as the South East
 corner with slides and all.
@@ -272,13 +315,13 @@ corner with slides and all.
 D0
 ~
 ~
-0 -1 3237
+0 -1 3257
 D1
 ~
 ~
-0 -1 3235
+0 -1 3255
 S
-#3237
+#3257
 The West wall~
 This wall looks like someone with a huge sledge hammer attacked it. There is a
 crack all the  way down it about 6 inches wide and you can hear strange sounds
@@ -288,17 +331,17 @@ coming from within.
 D0
 ~
 ~
-0 -1 3239
+0 -1 3259
 D1
 ~
 ~
-0 -1 3238
+0 -1 3258
 D2
 ~
 ~
-0 -1 3236
+0 -1 3256
 S
-#3238
+#3258
 The middle of the Arena~
 Here is the center of the arena you can go anywhere you wish from here.
 ~
@@ -306,21 +349,21 @@ Here is the center of the arena you can go anywhere you wish from here.
 D0
 ~
 ~
-0 -1 3231
+0 -1 3251
 D1
 ~
 ~
-0 -1 3233
+0 -1 3253
 D2
 ~
 ~
-0 -1 3235
+0 -1 3255
 D3
 ~
 ~
-0 -1 3237
+0 -1 3257
 S
-#3239
+#3259
 The NW corner~
 Your are standing in the North West corner of the arena. There is not much here
 to interest you.
@@ -329,11 +372,11 @@ to interest you.
 D1
 ~
 ~
-0 -1 3231
+0 -1 3251
 D2
 ~
 ~
-0 -1 3237
+0 -1 3257
 S
 #3262
 Entrance to POLICE guild~
@@ -436,7 +479,7 @@ D0
 D2
 ~
 ~
-0 -1 3074
+0 -1 3084
 S
 #3273
 Practice yard of OUTLAW guild~
