@@ -3,8 +3,11 @@ Southern part of Midgaard~
 *
 D 0 3320 1 2          Lock door from HQ to road
 D 0 3321 3 2          Lock door from road to HQ
-D 0 3339 2 2          Lock graveyard from outside
-D 0 14110 0 2          Lock graveyard from inside
+* ----------------
+*       Move TO "Graveyard.zon"
+*D 0 3339 2 2          Lock graveyard from outside
+*D 0 14110 0 2          Lock graveyard from inside
+* ----------------
 *
 O 0 3327 3 3311       Bench 1 at promenade
 O 0 3327 3 3312       Bench 2 at promenade
@@ -58,48 +61,56 @@ E 1 3033 1 17              Has the City Key
 M 0 3055 2 3348		Janitor to clean the Mayor's Office
 *
 M 0 3314 1 3330       Town Crier
-M 0 3041 1 3071	      massacre
-E 1 3074 7 16
-M 0 3042 1 3072	      extremely hard
-E 1 3074 7 16
-M 0 3043 1 3070	      hit hard
-E 1 3074 7 16
-M 0 3044 1 3073       hit
-E 1 3074 7 16
-M 0 3045 1 3076	      barely hit
-E 1 3074 7 16
-M 0 3046 1 3079	      tickle
-E 1 3074 7 16
-M 0 3047 1 3078	      miss
-E 1 3074 7 16
-M 0 3032 1 3025       Musashi
-E 1 3071 1 16
-M 0 3040 7 3046       bombard
-M 0 3035 1 3048       Super DeathCure
-E 1 3031 1 20			Anti deathcure
-M 0 3034 1 3074       DeathCure
-E 1 3076 1 11
-E 1 15734 1 6
-E 1 15733 1 13 
-E 1 15754 1 1		brass ring
-E 1 15732 1 7
-M 0 3033 1 3070       Mom
-E 1 3085 4 16		give her a broom
-E 1 3081 2 3		give her a pendant
-E 1 3082 2 8            give her a bangard boots
-E 1 3083 2 17		give her a shotgun
-M 0 3064 1 3077       Suzy
-E 1 3077 8 6		give her some shades
-M 0 3061 5 3070       Street Urchins
-M 0 3061 5 3078
-E 1 3078 3 6            baseball cap
-M 0 3061 5 3079
-M 0 3024 1 3076		Shredder : Bag lady
-*
-M 0 3062 1 3080		A Bogan
-*
+
 O 0 3328 1 3351       Fountain on Penny Lane
 O 0 3316 1 3351       20 coins on Penny Lane
+*
+* ----------------
+*       Move FROM "SlumOfMidgaard.zon"
+D 0 3361 4 1      Eagles Nest
+D 0 3362 5 1
+* ----------------
+*       Move TO "NorthernMidgaardCity.zon"
+*M 0 3041 1 3071	      massacre
+*E 1 3074 7 16
+*M 0 3042 1 3072	      extremely hard
+*E 1 3074 7 16
+*M 0 3043 1 3070	      hit hard
+*E 1 3074 7 16
+*M 0 3044 1 3073       hit
+*E 1 3074 7 16
+*M 0 3045 1 3076	      barely hit
+*E 1 3074 7 16
+*M 0 3046 1 3079	      tickle
+*E 1 3074 7 16
+*M 0 3047 1 3078	      miss
+*E 1 3074 7 16
+*M 0 3032 1 3025       Musashi
+*E 1 3071 1 16
+*M 0 3040 7 3046       bombard
+*M 0 3035 1 3048       Super DeathCure
+*E 1 3031 1 20			Anti deathcure
+*M 0 3034 1 3074       DeathCure
+*E 1 3076 1 11
+*E 1 15734 1 6
+*E 1 15733 1 13
+*E 1 15754 1 1		brass ring
+*E 1 15732 1 7
+*M 0 3033 1 3070       Mom
+*E 1 3085 4 16		give her a broom
+*E 1 3081 2 3		give her a pendant
+*E 1 3082 2 8            give her a bangard boots
+*E 1 3083 2 17		give her a shotgun
+*M 0 3064 1 3077       Suzy
+*E 1 3077 8 6		give her some shades
+*M 0 3061 5 3070       Street Urchins
+*M 0 3061 5 3078
+*E 1 3078 3 6            baseball cap
+*M 0 3061 5 3079
+*M 0 3024 1 3076		Shredder : Bag lady
+**
+*M 0 3062 1 3080		A Bogan
+* ----------------
 *
 S
 $~

@@ -6,9 +6,12 @@ E 1 16310 10 16     Axe Equipped (WIELD)
 E 1 16311 10 5      shirt Equipped (BODY)
 E 1 16312 10 8      boots Equipped (FEET)
 D 0 16319 0 1     Cabin door must be closed
-M 0 16432 1 16448	Jim the Lumberjack
-E 1 16431 4 16		wields a scythe
-E 1 16435 4 8		good boots
+* ----------------
+*       Move TO "HaonDorDark.zon"
+*M 0 16432 1 16448	Jim the Lumberjack
+*E 1 16431 4 16		wields a scythe
+*E 1 16435 4 8		good boots
+* ----------------
 M 0 16318 3 16323  Mouse
 M 0 16311 5 16322  Rabbit 1
 M 0 16311 5 16325         2

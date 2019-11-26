@@ -124,7 +124,10 @@ D 0 15860 2 2
 D 0 15841 0 2
 D 0 15842 2 2
 O 0 15830 1 15810
-M 0 3299 1 3299  Death
-E 1 3299 1 16      Scythe Equipped (WIELD)
+* -----------------
+*       Move TO "SlumOfMidgaard.zon"
+*M 0 3299 1 3299  Death
+*E 1 3299 1 16      Scythe Equipped (WIELD)
+* -----------------
 S
 $~

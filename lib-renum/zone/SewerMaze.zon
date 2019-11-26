@@ -8,7 +8,7 @@ D 0 14508 0 1     Close door
 *
 M 0 14500 1 14501  Load master mindflayer
 E 1 14500 4 16      Equip master with devil rod
-E 1 14503 4 3     Equip master with cloak 
+E 1 14503 4 3     Equip master with cloak
 G 1 14505 7200    Give key to master
 O 1 14504 6 14500  Potion into treasury
 O 1 14510 1 14500  Treasure into treasury
@@ -47,7 +47,7 @@ E 1 3026 16 16 Equip
 M 0 14504 1 14534  Load gigantic rat
 * The small Hell
 D 0 14580 4 1               Close Secret entrance
-D 0 14426 5 1                ------- || ------- 
+D 0 14426 5 1                ------- || -------
 M 0 14312 5 14585             The Sewer Rat
 M 0 14312 5 14585             The Sewer Rat
 M 0 14411 8 14586            The Horrifying Mudmonster
@@ -57,5 +57,10 @@ M 0 14411 8 14581            The Horrifying Mudmonster
 M 0 14411 8 14580            The Horrifying Mudmonster
 D 1 14426 5 1
 D 1 14580 4 1
+* ----------------
+*       Move FROM "SecondSewer.zon" (Duplicate)
+*D 1 14426 5 1
+*D 1 14580 4 1
+* ----------------
 S
 $~

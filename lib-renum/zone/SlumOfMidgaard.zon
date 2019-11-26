@@ -1,12 +1,14 @@
 Slum of Midgaard~
 3299 22 2
-*
-D 0 3361 4 1      Eagles Nest
-D 0 3362 5 1
-*
-M 0 3813 1 3881
-O 0 3811 1 3881
-*
+* ----------------
+*       Move TO "SouthernMidgaard.zon"
+*D 0 3361 4 1      Eagles Nest
+*D 0 3362 5 1
+* ----------------
+*       Move TO "TownHouse.zon"
+*M 0 3813 1 3881
+*O 0 3811 1 3881
+* ----------------
 M 0 3214 2 3211
 E 1 3221 8 9
 E 1 3222 8 7
@@ -39,8 +41,90 @@ G 1 3084 10
 *
 M 0 3216 2 3218
 *
-M 0 16431 1 16447
-E 1 16433 9 17
-E 1 16432 1 20
+* ----------------
+*       Move TO "HaonDorDark.zon"
+*M 0 16431 1 16447
+*E 1 16433 9 17
+*E 1 16432 1 20
+* ----------------
+*       Move FROM  "DwarvenKingdom.zon"
+M 0 3299 1 3299  Death
+E 1 3299 1 16      Scythe Equipped (WIELD)
+* ----------------
+*       Move FROM "NorthernMidgaardCity.zon"
+D 0 3084 2 1          Force
+D 0 3241 0 1          Force
+*
+M 0 3241 1 3242        Librarian
+M 0 3242 1 3244        Throne of archmage
+G 1 3243 10
+M 0 3243 1 3244        Grand Archmage
+E 1 3241 1 5           Robe of archmage
+E 1 3242 1 17          Staff of archmage
+* ----------------
+*       Move FROM "GuildOfMidgaard.zon"
+O 0 3002 5 3264    Sundew Machine of POLICE
+O 0 3003 4 3264    Altar of POLICE
+O 0 3005 5 3265    POLICE board
+*
+O 0 3002 5 3274    Sundew machine of OUTLAW
+O 0 3003 4 3274    Altar of OUTLAW
+O 0 3005 5 3273    OUTLAW board
+*
+O 0 3002 5 3284     Sundew Machine of ASSASIN
+O 0 3003 4 3284     Altar of ASSASIN
+O 0 3005 5 3285     ASSASIN board
+* ----------------
+*        Move FROM "Arena.zon"
+M 0 3254 1 3250		Entrance Guard
+E 1 14237 1 16		Wields bastard sword
+M 0 3251 4 3251		reject guard
+E 1 3026 1 16		wields short sword
+M 0 3252 10 3251	Snail (roland)
+G 1 14508 1		give small stick
+M 0 3253 1 3252		BLACK CAT
+M 0 3252 10 3253	Snail 1
+M 0 3252 10 3253	Snail 2
+M 0 3252 10 3253	Snail 3
+M 0 3056 3 3254		FIDO
+M 0 3058 1 3255		Merc
+E 1 3021 10 16
+G 1 3038 10
+M 0 3058 1 3257		Merc
+E 1 3021 10 16
+G 1 3038 10
+M 0 3058 1 3259		Merc
+E 1 3021 10 16
+G 1 3038 10
+O 0 3022 5 3252		dagger
+O 0 3022 5 3255		dagger
+M 0 16316 15 3253	Squirrel
+M 0 16316 15 3254	Squirrel
+M 0 16316 15 3255	Squirrel
+M 0 3252 10 3256	Snail
+M 0 3253 5 3256		CAT
+M 0 3253 5 3257		CAT
+O 0 3021 5 3250		short sword
+M 0 3251 4 3257		REJECT GUARD
+E 1 3026 1 16		wields short sword
+M 0 3252 10 3258	Snail 1
+M 0 3252 10 3258	Snail 2
+M 0 3252 10 3258	Snail 3
+M 0 3251 4 3259		REJECT GUARD
+E 1 3026 1 16		wields short sword
+M 0 3251 4 3259		REJECT GUARD
+E 1 3026 1 16		wields short sword
+M 0 3256 4 3259		load gopher
+M 0 3256 4 3252		load gopher
+O 0 3118 20 3252	bread for poor people
+O 0 3118 20 3259
+M 0 3256 4 3253		load gopher
+M 0 3256 4 3256		load gopher
+M 0 3255 5 3251		load rabbit
+M 0 3255 5 3255		Load rabbit
+M 0 3255 5 3254		load rabbit
+M 0 3255 5 3259		load rabbit
+M 0 3255 5 3257		load rabbit
+* ----------------
 S
 $~
