@@ -628,7 +628,7 @@ void gbisland_move_seashore(struct char_data *ch)
 	send_to_char("당신은 죽습니다.\n\r", ch);
 
 	/* NOTE: Use simpler die(), not raw_kill() */
-#ifdef	NO_DEF
+#ifdef	UNUSED_CODE
 	wipe_stash(GET_NAME(ch));
 	GET_GOLD(ch) = 0;
 	save_char(ch);
@@ -638,7 +638,7 @@ void gbisland_move_seashore(struct char_data *ch)
 	}
 
 	raw_kill(ch, 44);
-#endif  	/* NO_DEF */
+#endif  	/* UNUSED_CODE */
 
 	die(ch, 44, NULL);
 

@@ -101,7 +101,7 @@ void do_who(struct char_data *ch, char *argument, int cmd)
 		if (!flag)
 		    continue;
 	    }
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: following code is obsolete, so it is removed */
 	    if (d->character) {
 		switch (GET_CLASS(d->character)) {
@@ -131,7 +131,7 @@ void do_who(struct char_data *ch, char *argument, int cmd)
 		sprintf(buf, "< %c %2d > %s %s", class, GET_LEVEL(d->character),
 			  GET_NAME(d->character), GET_TITLE(d->character));
 	    }
- #endif		/* NO_DEF */ 
+ #endif		/* UNUSED_CODE */ 
 	    
 	    /*NOTE: BUG FIX: GET_TITLE(ch) may be null */
 	    if (d->original) {  /* If switched */
@@ -196,7 +196,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
 
 /* NOTE: do_users(), recored_player_number() have similar code.
 	Common code is merged into list_users().	*/
-#ifdef	NO_DEF
+#ifdef	UNUSED_CODE
     line[0] = 0;
     for (d = descriptor_list; d; d = d->next) {
 	++m;
@@ -244,7 +244,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
 	    (n % 2) ? "\n\r" : "", m, most);
     if (IS_GOD(ch))
 	send_to_char(line, ch);
-#endif		/* NO_DEF */ 
+#endif		/* UNUSED_CODE */ 
 
     t = 30 + time(0) - boottime;
     sprintf(line, STRHAN("Running time:   %d:%02d\n\r", 
@@ -298,7 +298,7 @@ int list_users(struct char_data *ch, char *line )
 		d->descriptor, "UNDEF", connected_types[d->connected], ""); 
 	buf += strlen(buf);
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 	/* NOTE: Show domain name instead of numeric IP addr, if possible.*/
 	/* NOTE: inet_makeaddr() is more portable than inet_aton().    */
 
@@ -307,7 +307,7 @@ int list_users(struct char_data *ch, char *line )
 	    strcat(buf, h_ent->h_name );
 	else
 	    strcat(buf, d->host );
-#endif 		/*  NO_DEF  */
+#endif 		/*  UNUSED_CODE  */
 	/* NOTE: d->host is set to DNS name in new_descriptor() in comm.c */
 	strncpy(buf, (d->host[0] ? d->host : "Unknown Host" ), sizeof(d->host));
 	buf[24] = '\0' ; 	/* Truncate */

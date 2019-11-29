@@ -34,7 +34,7 @@
 /* #define GET_IDNUM(ch) ((ch)->player.time.birth) */
 #define debuglog(str, type, level, file) (log(str))
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: This part moved to "include/object.h"                          */
 #define ROOM_FLAGS(rn)		(world[(rn)].room_flags)
 
@@ -45,7 +45,7 @@
 #define TOROOM(room, dir) (world[room].dir_option[dir] ? \
 			    world[room].dir_option[dir]->to_room : NOWHERE)
 
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 /* NOTE: ROOM_ATRIUM not used. No atrium room. */
 
 #define ROOM_PRIVATE		(PRIVATE)	/* Can't teleport in         */
@@ -244,7 +244,7 @@ int Obj_to_store(struct obj_data *obj, FILE * fl);
 /* ------------------------------------------------------------------ */
 /* NOTE: These were part of CircleMUD "house.c".                      */
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 
 #include "conf.h"
 #include "sysdep.h"
@@ -843,7 +843,7 @@ int House_can_enter(struct char_data *ch, sh_int house)
 #define BFS_ALREADY_THERE       -2
 #define BFS_NO_PATH             -3
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 
 #include "conf.h"
 #include "sysdep.h"
@@ -863,7 +863,7 @@ extern int top_of_world;
 extern const char *dirs[];
 extern struct room_data *world;
 
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 #include "spells.h"
 #include "play.h"
 
@@ -952,12 +952,12 @@ int find_first_step(sh_int src, sh_int target)
     if (src == target)
 	return BFS_ALREADY_THERE;
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     /* NOTE: BFS_MARK room bit is cleared *after* search */
     /* clear marks first */
     for (curr_room = 0; curr_room <= top_of_world; curr_room++)
 	UNMARK(curr_room);
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
     MARK(src);
 
@@ -1058,7 +1058,7 @@ void do_track(struct char_data *ch, char *argument, int cmd)
     }
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: Not used currently */
 void hunt_victim(struct char_data *ch)
 {
@@ -1094,4 +1094,4 @@ void hunt_victim(struct char_data *ch)
 	    hit(ch, GET_HUNTING(ch), TYPE_UNDEFINED);
     }
 }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */

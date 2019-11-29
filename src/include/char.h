@@ -127,7 +127,7 @@ struct char_special_data {
     time_t jail_time;	/* NOTE: Now used. Time to be released from jail  */
     /* int jail_time ; */
     int wimpyness;
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     /* belows are for future use */
     int arena;		/* arena flag */
     int arena_move;

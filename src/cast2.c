@@ -638,7 +638,7 @@ void cast_recharger(byte level, struct char_data *ch, char *arg, int type,
 	spell_recharger(level, ch, 0, tar_obj);
 	break;
     default:
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 	{ /* NOTE: for debugging : DONE!*/
 	    char buf[MAX_BUFSIZ];
 	    extern char *CMD_LINE;
@@ -646,7 +646,7 @@ void cast_recharger(byte level, struct char_data *ch, char *arg, int type,
 		    type, arg, CMD_LINE);
 	    log(buf);
 	} 
-#endif 	/* NO_DEF */
+#endif 	/* UNUSED_CODE */
 	log("Serious screw-up in recharger!");
 	break;
     }

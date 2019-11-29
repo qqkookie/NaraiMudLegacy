@@ -33,7 +33,7 @@ int top_of_zone_table = 0;
 struct player_index_element *player_table;  /* index to player file */
 int top_of_p_table = -1;		/* ref to top of table		*/
 
-#ifdef    NO_DEF
+#ifdef    UNUSED_CODE
 char credits[MAX_STRING_LENGTH];	/* the Credits List		*/
 char news[MAX_STRING_LENGTH];		/* the news			*/
 char imotd[MAX_STRING_LENGTH];		/* MOTD for immortals		*/
@@ -41,7 +41,7 @@ char motd[MAX_STRING_LENGTH];		/* the messages of today	*/
 char plan[MAX_STRING_LENGTH];		/* the info text		*/
 char wizards[MAX_STRING_LENGTH];	/* the wizards text		*/
 char help[MAX_STRING_LENGTH];		/* the main help page		*/
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 /* NOTE: Old credits[], news[], plan[], wizard[] was not used now. 
 	news, plan, credits, wizards is read on the fly.	*/

@@ -464,7 +464,7 @@ void extract_char(struct char_data *ch)
 	ch->carrying = 0;
     } 
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: make_corpse() already transfered objects to corpse obj */
     if (ch->carrying) {
 	/* transfer ch's objects to room */
@@ -490,7 +490,7 @@ void extract_char(struct char_data *ch)
     for (l = 0; l < MAX_WEAR; l++)
 	if (ch->equipment[l])
 	    obj_to_room(unequip_char(ch, l), was_in);
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
     /* pull the char from the list */
     if (!character_list)
@@ -515,7 +515,7 @@ void extract_char(struct char_data *ch)
     else { 
 	/* remove all affected by spell */
 	affect_remove_all(ch);
-#ifdef  NO_DEF 
+#ifdef  UNUSED_CODE 
 	/* NOTE: This list traversal is incorrect. SEGV error on do_rent()   */
 	/*    *af is free()'d in affect_remove(). So, af->next is invalid
 	      pointer. save af->next before free() and use it for traversal  */
@@ -529,7 +529,7 @@ void extract_char(struct char_data *ch)
 	/* NOTE: moved this code to die() and do_rent() */
 	ch->desc->connected = CON_RMOTD;
 	SEND_TO_Q(MENU, ch->desc);
-#endif 		/* NO_DEF */
+#endif 		/* UNUSED_CODE */
     }
 }
 
@@ -1060,7 +1060,7 @@ void clear_object(struct obj_data *obj)
     obj->in_room = NOWHERE;
 } 
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: NEW! remove all objects and equips from char and junk them. */
 void wipe_obj_from_char(struct char_data *ch)
 {
@@ -1075,7 +1075,7 @@ void wipe_obj_from_char(struct char_data *ch)
 	ch->carrying = 0;
     }
 }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 /* NOTE: NEW! free char and obj and kick player out of game. */
 void purge_player(struct char_data *ch)

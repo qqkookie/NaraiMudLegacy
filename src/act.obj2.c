@@ -181,7 +181,7 @@ drink_ok:
     return;
 }
 
-#ifdef  NO_DEF
+#ifdef  UNUSED_CODE
 void do_sip(struct char_data *ch, char *argument, int cmd)
 {
     struct affected_type af;
@@ -258,7 +258,7 @@ void do_sip(struct char_data *ch, char *argument, int cmd)
 
     return; 
 }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 void do_pour(struct char_data *ch, char *argument, int cmd)
 {
@@ -437,7 +437,7 @@ void do_eat(struct char_data *ch, char *argument, int cmd)
 	extract_obj(temp);
 }
 
-#ifdef  NO_DEF
+#ifdef  UNUSED_CODE
 void do_taste(struct char_data *ch, char *argument, int cmd)
 {
     struct affected_type af;
@@ -489,7 +489,7 @@ void do_taste(struct char_data *ch, char *argument, int cmd)
     } 
     return; 
 }
-#endif		/*  NO_DEF  */ 
+#endif		/*  UNUSED_CODE  */ 
 
 void do_junk(struct char_data *ch, char *argument, int cmd)
 {
@@ -776,6 +776,7 @@ void do_use(struct char_data *ch, char *argument, int cmd)
 
 #define MAX_TRADE 5
 #define MAX_PROD 5
+// #define MAX_PROD 10
 
 struct shop_data {
     int producing[MAX_PROD];	/* Which item to produce (virtual)      */
@@ -1264,7 +1265,7 @@ void assign_the_shopkeepers(void)
 	mob_index[shop_index[temp1].keeper].func = shop_keeper;
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 
 /* **********************************************************************
    *  file: newshop.h, newshop.c , New Shop module.			*
@@ -1341,4 +1342,4 @@ int used_shop(struct char_data *ch, int cmd, char *arg)
     return FALSE;
 }
 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */

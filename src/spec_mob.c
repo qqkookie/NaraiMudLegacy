@@ -76,8 +76,10 @@ int perhaps(struct char_data *ch, int cmd, char *arg)
 	return 0;
     }
     if (perhaps == NULL && cmd == 0 && ch != NULL
-	&& mob_index[ch->nr].virtual == MOB_MID_HELPER ) 
+	&& mob_index[ch->nr].virtual == MOB_MID_HELPER ) {
 	perhaps  = ch;
+	REMOVE_BIT( ch->specials.affected_by, AFF_SANCTUARY|AFF_LOVE );
+    }
 #endif
 
     if (cmd) return (0);	/* If void return */

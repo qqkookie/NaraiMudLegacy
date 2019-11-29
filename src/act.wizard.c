@@ -796,7 +796,7 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 	}
 
 /* NOTE: It's meaningless to change passworod of active player */
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 	else if (strcmp("passwd", buf3) == 0) {
 	    /* NOTE: password should be encryted   */
 	    if (strlen(buf4) > 0) {
@@ -807,7 +807,7 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 /* NOTE: should save victim, not ch */
 	    }
 	}
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 
 	else {
 	    /* NOTE: show help when failed */
@@ -1105,7 +1105,7 @@ void do_goto(struct char_data *ch, char *argument, int cmd)
 	return;
     one_argument(argument, buf);
 
-#ifdef	NO_DEF
+#ifdef	UNUSED_CODE
     if (!*buf) {
 	send_to_char("You must supply a room number or a name.\n\r", ch);
 	return;
@@ -1134,7 +1134,7 @@ void do_goto(struct char_data *ch, char *argument, int cmd)
 	send_to_char("No such creature or object around.\n\r", ch);
 	return;
     }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
     /* a location has been found. */
 
     if( (location = find_target_room(ch, buf)) < 0 )
@@ -1453,13 +1453,13 @@ void do_noaffect(struct char_data *ch, char *argument, int cmd)
 		0, ch, 0, vict, TO_CHAR);
 	else {
 	    send_to_char("You are normal again.\n\r", vict);
-#ifdef 	NO_DEF
+#ifdef 	UNUSED_CODE
 	    /* NOTE: hjp->next is invalid. See affect_remove() in handler.c */
 	    for (hjp = vict->affected; hjp; hjp = hjp_next) {
 		hjp_next = hjp->next;
 		affect_remove(vict, hjp);
 	    }
-#endif	/* NO_DEF */
+#endif	/* UNUSED_CODE */
 	    affect_remove_all(vict);
 	}
     }

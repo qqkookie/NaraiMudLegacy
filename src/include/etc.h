@@ -10,6 +10,7 @@
 
 // safe house
 #define MID_PORTAL		(MID_BASE+1)
+#define MID_TEMPLE		(MID_BASE+3)
 #define ROOM_LIMBO		2901
 #define ROOM_RECEPTION		(MID_BASE+8)
 #define ROOM_BOARD		(MID_BASE+5)
@@ -20,8 +21,8 @@
 #define ROOM_REMORTAL		(MID_BASE+22)
 #define ROOM_HOSPITAL		(MID_BASE+23)
 
-#define ROOM_MID_DUMP		(MID_BASE+22)
-#define	ROOM_MID_PETSHOP	(MID_BASE+23)
+#define ROOM_MID_DUMP		(MID_BASE+25)
+#define	ROOM_MID_PETSHOP	(MID_BASE+26)
 
 #define ROOM_MID_BOMBARD	(MID_BASE+46)
 #define ROOM_MID_STORAGE	(MID_BASE+47)
@@ -52,7 +53,7 @@
 
 /* ---------------    GUILD Rooms    ---------------- */
 /*	From guild_list.h		*/
-#define GUILD_BASE		3250
+#define GUILD_BASE		3260
 
 #define GUILD_POLICE_GATE	(GUILD_BASE+2)	// 3095
 #define GUILD_POLICE_PRACTICE 	(GUILD_BASE+3)	// 3096
@@ -69,7 +70,7 @@
 #define GUILD_ASSASSIN_PRACTICE (GUILD_BASE+23)	// 9651
 #define GUILD_ASSASSIN_LOCKER	(GUILD_BASE+26)	// 9652
 
-#define ROOM_MID_LOCKER		3295	// 3000
+#define ROOM_MID_LOCKER		3297	// 3000
 
 #define ROOM_JAIL		3299
 

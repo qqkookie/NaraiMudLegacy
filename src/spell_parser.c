@@ -20,7 +20,7 @@ struct spell_info_type spell_info[MAX_SPL_LIST];
 
 char *spells[MAX_SPL_LIST] ; 
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 char *spells[MAX_SPL_LIST] = 
 {   "", 		/* NOTE: spells[] index starts from 1, not zero.   */
     "armor",		/* 1 */
@@ -151,7 +151,7 @@ char *spells[MAX_SPL_LIST] =
     "track",
     "\n"
 };
-#endif 		/*  NO_DEF */
+#endif 		/*  UNUSED_CODE */
 
 char *spell_alias[] = {
     "",		"",
@@ -308,7 +308,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 	return;
     }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     argument = skip_spaces(argument);
 
     /* If there is no chars in argument */
@@ -336,7 +336,7 @@ void do_cast(struct char_data *ch, char *argument, int cmd)
 			 "the magic symbols: '\n\r", ch);
 	return;
     }
-#endif		/*  NO_DEF  */
+#endif		/*  UNUSED_CODE  */
 
     /* NOTE: one_argument() will handle quoatation	*/
     /*  SIDE EFFECTS: Single word spell don't need quation. (cast sanc)
@@ -989,11 +989,11 @@ void assign_spell_pointers(void)
     spells[MAXSPELL] =  "\n";
 }
 
-#ifdef NO_DEF 
+#ifdef UNUSED_CODE 
 /* NOTE: NEW to access spell_info structure. get minimum level of that class.*/
 int min_level(int spell , int class)
 {
     ASSERT( spell >= 0 && spell <= MAXSPELL);
     return(spell_info[spell].min_level[class-1]);
 }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */

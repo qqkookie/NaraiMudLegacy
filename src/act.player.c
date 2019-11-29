@@ -152,7 +152,7 @@ void nanny(struct descriptor_data *d, char *arg)
 		return;
 	    }
 	}
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 	/* NOTE: show DNS host name instead of IP addr, if possibale */
 	addr = inet_makeaddr(inet_network(d->host),inet_addr(d->host));
 	sprintf(buf, "%s(%d)[%s] has connected.",
@@ -401,7 +401,7 @@ void nanny(struct descriptor_data *d, char *arg)
 
 	    if (d->character->in_room <= NOWHERE ) {
 		d->character->in_room = IS_MORTAL(d->character) ?
-		    real_room(MID_PORTAL) : real_room(ROOM_WIZ_LOUNGE);
+		    real_room(ROOM_RECEPTION) : real_room(ROOM_WIZ_LOUNGE);
 	    }
 
 	    /* NOTE: Additional pause time for read welcome messgae, mail
@@ -1168,7 +1168,7 @@ void do_post(struct char_data *ch, char *argument, int cmd)
     send_to_char("You can only post on board.\n\r", ch);
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: do_solo(), do_brief(), do_compact(), do_hangul() is replaced by
 	do_set(). Command 'solo' etc. is replaced by 'set solo yes/no' etc.*/
 void do_solo(struct char_data *ch, char *argument, int cmd)
@@ -1184,4 +1184,4 @@ void do_solo(struct char_data *ch, char *argument, int cmd)
 	SET_BIT(ch->specials.act, PLR_SOLO);
     }
 } 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */

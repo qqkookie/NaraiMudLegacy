@@ -1,4 +1,23 @@
 #3001
+The Midgaard Portal~
+   Wecome back to Midgaard. You are on the portal of the temple.
+Luxurious steps lead down to grand hall in the Temple of Midgaard.
+~
+30 4 0
+D1
+~
+~
+0 -1 3007
+D3
+~
+~
+0 -1 3013
+D5
+~
+~
+0 -1 3003
+S
+#3003
 The Temple Of Midgaard~
    You are in the southern end of the temple hall in the Temple of Midgaard.
 The temple has been constructed from giant marble blocks, eternal in
@@ -28,10 +47,6 @@ D4
 ~
 ~
 0 -1 3007
-D5
-~
-~
-0 -1 3022
 S
 #3004
 By the Temple Altar~
@@ -40,22 +55,14 @@ A huge altar made from white polished marble is standing in front of you and
 behind it is a ten foot tall sitting statue of Odin, the King of the Gods.
 ~
 30 8 0
-D0
-~
-~
-0 -1 3262
 D1
 ~
 ~
-1 15000 19110
+1 -1 19110
 D2
 ~
 ~
-0 -1 3001
-D5
-~
-~
-0 -1 3048
+0 -1 3003
 E
 altar~
 Even though the altar is more than ten feet long it appears to be made from a
@@ -79,7 +86,7 @@ be along any minute to take care of you.
 D3
 ~
 ~
-0 -1 3001
+0 -1 3003
 S
 #3006
 The Post Office~
@@ -91,7 +98,7 @@ be along any minute to take care of you. There is a poster on the wall.
 D1
 ~
 ~
-0 -1 3001
+0 -1 3003
 E
 poster~
 지저분 하게 뜯긴 HITE 맥주 포스터.
@@ -102,12 +109,12 @@ S
 The Quest Room~
    You are standing in the quest room. There is a small poster on the wall.
 ~
-30 2060 0
+30 12 0
 D5
 You see the Midgaard.
 ~
 ~
-0 -1 3001
+0 -1 3003
 E
 poster~
 
@@ -145,7 +152,7 @@ square, the center of Midgaard.
 D0
 ~
 ~
-0 -1 3001
+0 -1 3003
 D1
 ~
 ~
@@ -165,15 +172,23 @@ The Entrance to the Bank~
 and floors here are made of marble.  There are gold plated plaques of
 famous bankers on the walls.  Know any famous bankers?
 ~
-30 8 0
+30 12 0
 D0
 ~
 ~
-0 -1 3013
+0 -1 3017
 D1
 ~
 ~
 0 -1 3011
+D2
+~
+~
+0 -1 3018
+D3
+~
+~
+0 -1 3013
 S
 #3013
 The Bank~
@@ -185,8 +200,8 @@ should read the sign.  And take your hat off, please.
 D0
 ~
 ~
-0 -1 3295
-D2
+0 -1 3016
+D1
 ~
 ~
 0 -1 3012
@@ -213,6 +228,36 @@ D1
 vault~
 2 3032 3013
 S
+#3016
+Bank Guest Room~
+   You are in the guest room.
+~
+30 8 0
+D2
+~
+~
+0 -1 3013
+S
+#3017
+Small House~
+   You are in the small neighborhood building.
+~
+30 8 0
+D2
+~
+~
+0 -1 3012
+S
+#3018
+Parking Lot~
+   You are in the bank parking lot.
+~
+30 0 0
+D0
+~
+~
+0 -1 3012
+S
 #3021
 The Metaphysician's~
    You are in a dim and dusty building.  Strange sounds and odd odors
@@ -221,6 +266,10 @@ the walls save one SIGN.  At the far end of the room is a dark curtain.
 You may hear a voice behind the curtain.
 ~
 30 8 0
+D4
+~
+~
+0 -1 3022
 D5
 ~
 ~
@@ -253,10 +302,10 @@ You should type this. <say CLASS>, in which CLASS can be 'W' 'M' 'C' 'T'.
 E.G> remort W <<---You will be reborn with Warrior character!!!!
 ~
 30 136 1
-D0
+D5
 ~
 ~
-0 0 3001
+0 0 3021
 S
 #3023
 The MidGaard Hospital~
@@ -268,6 +317,10 @@ D2
 ~
 ~
 0 -1 3079
+D5
+~
+~
+0 -1 3048
 E
 sign~
 
@@ -303,10 +356,6 @@ D0
 ~
 ~
 0 -1 3076
-D2
-~
-~
-0 -1 3250
 D5
 ~
 ~
@@ -356,7 +405,7 @@ presumably most of them are magic.
 D2
 ~
 ~
-0 -1 3071
+0 -1 3072
 S
 #3032
 The Weapon Shop~
@@ -382,14 +431,14 @@ S
 #3033
 The Armoury~
    The armoury with all kinds of armours on the walls and in the window.  You
-see helmets, shields and chain mails.  To the north is the main street.
+see helmets, shields and chain mails.  To the south is the main street.
 On the wall is a small note.
 ~
 30 8 0
-D0
+D2
 ~
 ~
-0 -1 3072
+0 -1 3071
 E
 note~
   You can use these commands for trading:
@@ -402,10 +451,9 @@ note~
 ~
 S
 #3034
-The General Store~
-   You are inside the general store.  All sorts of items are stacked on shelves
-behind the counter, safely out of your reach.
-A small note hangs on the wall.
+McDonalds~
+   Difficult as thought it may be to believe, McDonalds has opened a
+restaurant in MidGaard.
 ~
 30 8 0
 D2
@@ -413,16 +461,6 @@ You see the main street.
 ~
 ~
 0 -1 3073
-E
-note~
-The note reads:
-
-  List  - Show which various items are in the store.
-  Buy   - Buy an item.
-  Value - The shopkeeper will (free of charge) tell how much he will
-          pay for your item.
-  Sell  - Sell an item.
-~
 S
 #3035
 The Bakery~
@@ -432,11 +470,11 @@ on the shelves, and seem to be of the finest quality.
 A small sign is on the counter.
 ~
 30 8 0
-D2
+D0
 You see the main street.
 ~
 ~
-0 -1 3072
+0 -1 3071
 E
 sign~
 Free instructions provided by the store:
@@ -508,14 +546,14 @@ Entrance to the Guild~
 D0
 ~
 ~
-0 -1 3071
+0 -1 3072
 D2
 ~
 ~
 0 -1 3039
 S
 #3039
-The Guild Bar~
+The Adventurer's Bar~
    The bar is one of the newest in the land.  Potted plants abound.
 An interesting PICTURE is on the west wall.
 ~
@@ -528,21 +566,37 @@ D1
 ~
 ~
 0 -1 3024
+D2
+~
+~
+0 -1 3250
 E
 picture~
    You see a picture of a little black and white dog.
 ~
 S
 #3041
-McDonalds~
-   Difficult as thought it may be to believe, McDonalds has opened a
-restaurant in MidGaard.
+The General Store~
+   You are inside the general store.  All sorts of items are stacked on shelves
+behind the counter, safely out of your reach.
+A small note hangs on the wall.
 ~
 30 8 0
 D0
+You see the dark alley.
 ~
 ~
-0 -1 3079
+0 -1 3074
+E
+note~
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item.
+~
 S
 #3042
 Levee~
@@ -617,7 +671,7 @@ D4
 S
 #3046
 Room of Bombard~
-   You are in room of Bombard. this room seems to be birthplace of decent 
+   You are in room of Bombard. this room seems to be birthplace of decent
 weapon. if you have luck on decent weapon, you will get powerful weapon.
 ~
 30 14 0
@@ -637,7 +691,7 @@ Room of SUPER DeathCure (only death)~
    You dare stand here . R.I.P. you will be a corpse . you chose wrong option .
 here is only death. NO CURE AND HEAL. WU HA HA HA .
 ~
-30 2 0
+30 6 0
 S
 #3070
 Market Square~
@@ -666,11 +720,35 @@ D3
 0 -1 3072
 S
 #3071
-Main Street~
-   You are at the end of the main street of Midgaard.  South of here is the
-entrance to the Guild of Magic Users.  The street continues east towards the
-market square.  The magic shop is to the north and to the west is the city
-gate.
+Main Street 1st~
+   You are at the western end of the main street of Midgaard. North of
+here is the Armoury.  The street continues east towards the market square.
+The bakery is to the south and to the west is the city gate.
+~
+30 0 1
+D0
+~
+~
+0 -1 3033
+D1
+~
+~
+0 -1 3072
+D2
+~
+~
+0 -1 3035
+D3
+~
+~
+0 -1 3082
+S
+#3072
+Main Street 2nd~
+   You are on the main street passing through the City of Midgaard.
+South of here is the entrance to the Arena and practice centre,
+and the Adventurers bar.  The magic shop is to the north.
+East of here is the market square.
 ~
 30 0 1
 D0
@@ -680,7 +758,7 @@ D0
 D1
 ~
 ~
-0 -1 3072
+0 -1 3070
 D2
 ~
 ~
@@ -688,36 +766,12 @@ D2
 D3
 ~
 ~
-0 -1 3082
-S
-#3072
-Main Street~
-   You are on the main street passing through the City of Midgaard.  South of
-here is the entrance to the Armoury, and the bakery is to the north.  East of
-here is the market square.
-~
-30 0 1
-D0
-~
-~
-0 -1 3035
-D1
-~
-~
-0 -1 3070
-D2
-~
-~
-0 -1 3033
-D3
-~
-~
 0 -1 3071
 S
 #3073
-The Main Street~
+The Main Street 3rd~
    You are on the main street crossing through town.  To the north is the
-general store, and the main street continues east.  To the west you see and
+new McDonalds, and the main street continues east.  To the west you see and
 hear the market place, to the south a small door leads into the Pet Shop.
 ~
 30 0 1
@@ -739,8 +793,9 @@ D3
 0 -1 3070
 S
 #3074
-The Main Street~
-   You are on Main Street, in beautiful downtown Midgaard.
+The Main Street 4th~
+   You are on eastern end of Main Street, in beautiful downtown Midgaard.
+To the north is weapon shop, and to the south a tall skyscraper building.
 ~
 30 0 1
 D0
@@ -800,7 +855,7 @@ D3
 0 -1 3078
 S
 #3077
-Poor Alley~
+Poor Alley Slum~
    You are in the poor alley, which continues further east. You see the
 city wall to the west.
 ~
@@ -823,7 +878,7 @@ D3
 0 -1 3087
 S
 #3078
-Eastern End of Poor Alley~
+Grubby Poor Alley~
    You are at the poor alley.  South of here is the Grubby Inn and to the
 east you see common square.  The alley continues further west.
 ~
@@ -844,7 +899,7 @@ S
 #3079
 The Dark Alley~
    The dark alley, to the west is the common square and to the south is
-the new McDonalds.  The alley continues east.
+the general store.  The alley continues east.
 ~
 30 0 1
 D0
@@ -906,6 +961,10 @@ connected with a footbridge across the heavy wooden gate.  Main Street leads
 east and Wall Road leads south from here.
 ~
 30 0 1
+D0
+~
+~
+0 -1 3262
 D1
 ~
 ~
@@ -967,7 +1026,7 @@ gate~
 D2
 ~
 force~
-2 0 3241
+1 -1 3241
 D3
 ~
 ~
@@ -1002,7 +1061,7 @@ some kind of mortar.  It is far too high to climb.
 ~
 S
 #3086
-Wall Road~
+Wall Road 1st~
    You are walking next to the western city wall.  The road continues further
 south and the city gate is just north of here.
 ~
@@ -1022,7 +1081,7 @@ some kind of mortar.  It is far too high to climb.
 ~
 S
 #3087
-Wall Road~
+Wall Road 2nd~
    You are walking next to the western city wall.  Wall Road continues further
 north and south.  A small, poor alley leads east.
 Some letters have been written on the wall here.
@@ -1051,7 +1110,7 @@ some kind of mortar.  It is far too high to climb.
 ~
 S
 #3088
-Wall Road~
+Wall Road 3rd~
    You are standing on the road next to the western city wall, which
 continues north.  South of here is a bridge across the river.  There
 is a doghouse to the east.

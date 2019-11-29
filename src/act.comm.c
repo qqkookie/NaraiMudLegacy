@@ -372,7 +372,7 @@ void do_whisper(struct char_data *ch, char *argument, int cmd)
     }
 }
 
-# ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* 물어보기 */
 void do_ask(struct char_data *ch, char *argument, int cmd)
 {
@@ -399,7 +399,7 @@ void do_ask(struct char_data *ch, char *argument, int cmd)
 	act("$n asks $N a question.", FALSE, ch, 0, vict, TO_NOTVICT);
     }
 }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 void do_emote(struct char_data *ch, char *argument, int cmd)
 {
@@ -479,7 +479,7 @@ void do_wiznet(struct char_data *ch, char *argument, int cmd)
     send_to_char("Ok.\n\r", ch);
 } 
 
-#ifdef NO_DEF 
+#ifdef UNUSED_CODE 
 /* NOTE: do_nochat(), do_notell() are replaced by NEW do_set(). */
 /*	Command 'nochat' etc. is now 'set chat <yes/no>'. etc.  */
 void do_nochat(struct char_data *ch, char *argument, int cmd)
@@ -512,7 +512,7 @@ void do_notell(struct char_data *ch, char *argument, int cmd)
     }
 }
 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 /* ************************************************************************
    *  OLD file: act.social.c ,   Usage : Social action commands.  
@@ -1071,7 +1071,7 @@ void expand_actvar(char *buf, char *str, struct char_data *ch,
     *(point) = '\0';
 }
 
-#ifdef NO_DEF 
+#ifdef UNUSED_CODE 
 void acthan(char *streng, char *strhan, int hide_invisible,
 	struct char_data *ch, struct obj_data *obj, void *vict_obj, int type)
 {
@@ -1181,7 +1181,7 @@ void acthan(char *streng, char *strhan, int hide_invisible,
     }
 }
 
-#endif		/* NO_DEF */ 
+#endif		/* UNUSED_CODE */ 
 
 void show_string(struct descriptor_data *d, char *input)
 {

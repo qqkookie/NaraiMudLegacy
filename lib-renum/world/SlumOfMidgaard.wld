@@ -97,6 +97,10 @@ D3
 ~
 ~
 0 -1 3219
+D4
+~
+~
+0 -1 3811
 S
 #3218
 Room 134~
@@ -129,10 +133,10 @@ An arcane inscription over the threshold reads:
 Past the archway is an empty stone hallway with stairs leading up at the end.
 ~
 32 8 0
-D0 
+D0
 ~
-~
-0 -1 3084
+force~
+1 -1 3084
 D4
 ~
 ~
@@ -142,7 +146,7 @@ S
 The Library~
      A plush carpet muffles your footsteps as you tread past shelf after
 shelf of musty tomes, compendiums, scrolls and sheafs of various unearthed
-arcana.  Faint magical wards glow in midair, preventing the exercise of 
+arcana.  Faint magical wards glow in midair, preventing the exercise of
 magic or loud speech in this place of stored lore.
 ~
 32 136 0
@@ -173,8 +177,8 @@ S
 #3244
 Audience of the Grand Archmage~
      You stand in a high-vaulted chamber.  Light streams in from open
-balconies.  Majestic tapestries cascade from ceiling to floor along the 
-surrounding walls.  You are truly awed by the display.  The only other 
+balconies.  Majestic tapestries cascade from ceiling to floor along the
+surrounding walls.  You are truly awed by the display.  The only other
 furnishings include a rug and a rickety, wooden throne.
 ~
 32 8 0
@@ -185,7 +189,7 @@ D5
 S
 #3250
 The Training arena entrance~
-This is the entrance to the training arena, to the south you can hear 
+This is the entrance to the training arena, to the south you can hear
 the sounds of trainees fighting everything in sight, you also hear the
 occasional spell or two uttered. Something makes you think that this would
 be a great place to gain some experience and learn this great game!
@@ -195,7 +199,7 @@ There is a SIGN here you might want to READ it.
 D0
 ~
 ~
-0 -1 3025
+0 -1 3039
 D2
 ~
 ~
@@ -204,11 +208,11 @@ E
 sign~
 The sign says:
 This is the Training arena, it is for level 3 and below only. This does NOT
-mean you are  safe in  here you  CAN  die so be careful what you attack, the 
+mean you are  safe in  here you  CAN  die so be careful what you attack, the
 monsters here are meant to be easy but not simple. There  ARE  some that are
 difficult and you may need  help  with them (the harder the monster the more
 XP points you get).
-                  
+
                  THERE WILL BE NO PLAYER KILLING ALLOWED
 ~
 S
@@ -272,7 +276,7 @@ D3
 S
 #3254
 SE Corner~
-You have arrived in the south east corner of the arena. You can see what looks 
+You have arrived in the south east corner of the arena. You can see what looks
 like a slide leading up into the walls but they are to steep and slick to climb.
 Something  makes you  think  maybe you  had better not stand  here just  incase
 something big and nasty comes sliding down one of those slides.
@@ -390,7 +394,11 @@ D0
 D2
 ~
 ~
-0 -1 3004
+0 -1 3082
+D3
+~
+~
+0 -1 3297
 E
 sign~
 You can do JOIN or LEAVE.
@@ -632,15 +640,15 @@ D3
 ~
 0 -1 3283
 S
-#3295
+#3297
 The Locker room in General~
  You can SAVE or LOAD your items here.
 ~
 32 12 0
-D2
+D1
 ~
 ~
-0 -1 3013
+0 -1 3262
 S
 #3299
 The Realm of the Dead~

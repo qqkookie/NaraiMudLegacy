@@ -30,7 +30,7 @@ char *CMD_LINE; /* NOTE: New! to get full command line from action proc. */
 
 /* ---------------------------------------------------------------- */
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 
 char *command[] =
 { "",
@@ -345,7 +345,7 @@ char *command[] =
  "\n",
 };
 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 char *alias[] = {
     "",		"",
@@ -436,12 +436,12 @@ int command_interpreter(struct char_data *ch, char *argument)
 
     /* NOTE: Break from hide state *after* executing command. */
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     /* Find first non blank */
     for (begin = 0; (*(argument + begin) == ' '); begin++) ;
     /* Find length of first word */
     for (look_at = 0; ISLETTER(*(argument + begin + look_at)); look_at++) ;
-#endif    /* NO_DEF */
+#endif    /* UNUSED_CODE */
 
     for ( args = argument; isspace(*args) ; args++ ) ; 
     /* NOTE: NEW GLOBAL varable to access full command line */
@@ -1099,7 +1099,7 @@ no_wizcmd:;
     page_string(ch->desc, buf, 1);
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: NEW to access command_info structure.
 	Check ch's class, minimum level, minimum position for that command. */
 int cando_action( struct char_data *ch, int cmd_nr )
@@ -1126,4 +1126,4 @@ int cando_action( struct char_data *ch, int cmd_nr )
 	return(FALSE);
     return(TRUE); 
 }
-#endif 		/* NO_DEF */
+#endif 		/* UNUSED_CODE */

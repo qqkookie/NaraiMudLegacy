@@ -531,7 +531,7 @@ int change_player_name(struct char_data *ch, char *arg)
 	return FALSE;
     }
 
-#ifdef  NO_DEF
+#ifdef  UNUSED_CODE
     /* NOTE: find_name(newname) will check all player name, playing or not. */
 
     /* check if already playing */ 
@@ -554,7 +554,7 @@ int change_player_name(struct char_data *ch, char *arg)
 	    }
 	}
     }
-#endif 		/* NO_DEF */
+#endif 		/* UNUSED_CODE */
 
     /* check player index table. You don't need to check player file */
     /* for detail, see load_char() and find_name() */

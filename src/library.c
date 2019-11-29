@@ -555,7 +555,7 @@ int isname(char *str, char *namelist)
     }
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: Old isname() function  */
 int old_isname(char *str, char *namelist)
 {
@@ -623,7 +623,7 @@ int isexactname(char *str, char *namelist)
     }
 } 
 
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 
 /**************************************************************************
 *  file: utility.c, Utility module.                       Part of DIKUMUD *
@@ -972,7 +972,7 @@ int search_block(char *arg, char **list, int exact)
     return (-1);
 }
 
-#ifdef	NO_DEF
+#ifdef	UNUSED_CODE
 /* NOTE: old_search_block() no longer used. Commented out  */
 int old_search_block(char *argument, int begin, unsigned length, char **list, int mode)
 {
@@ -1001,7 +1001,7 @@ int old_search_block(char *argument, int begin, unsigned length, char **list, in
     }
     return (found ? guess : -1);
 }
-#endif 		/*  NO_DEF  */
+#endif 		/*  UNUSED_CODE  */
 
 /* #define ISLETTER(c)	( c  > ' ' || c < 0 ) */
 /* NOTE: Above may not work for Hangul char. on unsigned char  */
@@ -1031,7 +1031,7 @@ int fill_word(char *argument)
     return (search_block(argument, fill, TRUE) >= 0);
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 void argument_interpreter(char *argument, char *first_arg, char *second_arg)
 {
     int look_at, found, begin;
@@ -1072,7 +1072,7 @@ void argument_interpreter(char *argument, char *first_arg, char *second_arg)
     while (fill_word(second_arg));
 }
 
-#endif				/* NO_DEF  */
+#endif				/* UNUSED_CODE  */
 
 /* NOTE: New one_argument() will take quoted args as single arg.        */
 /* NOTE: Surround multiple words with quotation marks. ( 'like this' )

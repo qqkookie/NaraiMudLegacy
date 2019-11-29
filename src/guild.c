@@ -800,7 +800,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
 	do_look(victim, "", 15);
     }
     else {
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 	sprintf(buf, "%s died in the JAIL room!!!!\n\r", GET_NAME(victim));
 	send_to_all(buf);
 	if (IS_AFFECTED(ch, AFF_GROUP))
@@ -814,7 +814,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
 	    change_alignment(ch, victim);
 	}
 	die(victim, GET_LEVEL(ch), ch);
-#endif		/* NO_DEF*/
+#endif		/* UNUSED_CODE*/
 	sprintf(buf, "%s died in the JAIL room!!!!\n\r", GET_NAME(victim));
 	send_to_room(buf, ch->in_room);;
 	/* NOTE: indirect way to kill victim and get exp from it. */

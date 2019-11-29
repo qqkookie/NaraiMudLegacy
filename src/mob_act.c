@@ -268,7 +268,7 @@ int aggressive(struct char_data *ch, int cmd, char *arg)
    *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
    ************************************************************************* */
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: If you want it, use spell_fire_storm(), instead. */
 void mob_spell_fire_storm(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj)
@@ -304,7 +304,7 @@ void mob_bash(struct char_data *ch, char *argument, int cmd)
     do_bash(ch, argument, cmd);
     do_wield(ch, "", 0);	/* NOTE: Unwield */
 }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 
 void mob_light_move(struct char_data *ch, char *argument, int cmd)
@@ -1769,11 +1769,11 @@ void regened_mobile(struct char_data *mob)
 	    && (number(10, 30) < GET_LEVEL(mob) ) ) {
 	if ( GET_CLASS(mob) == CLASS_THIEF ) {
 	    obj = read_object(WEAPON_BASIC_THIEF, VIRTUAL); /* 2D4 dagger */
-#ifdef  NO_DEF
+#ifdef  UNUSED_CODE
         /* NOTE: Warrior mobile can 'bash' without wielding sword. */ 
 	else 
 	    obj = read_object(WEAPON_BASIC_WARRIOR, VIRTUAL);  /* 1D8 sword */
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 	
 	    if (obj) {
 		obj_to_char( obj, mob );

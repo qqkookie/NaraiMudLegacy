@@ -528,7 +528,7 @@ void increase_skilled(struct char_data *ch, struct char_data *victim,
 }
 
 /* NOTE: This is FYI on INCREASE_SKILLED() */
-#if NO_DEF
+#if UNUSED_CODE
 #define INCREASE_SKILLED(ch, sk_no) in "utils.h"
 Original:
     if (!number(0, 99 + (GET_SKILLED(ch, sk_no) << 2))) { .....  }
@@ -560,7 +560,7 @@ void increase_skilled(struct char_data *ch, struct char_data *victim,
 		      int sk_no, int mul, int add);
 
 /* end of FYI */
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 
 bool saves_spell(struct char_data *ch, int save_type)
 {

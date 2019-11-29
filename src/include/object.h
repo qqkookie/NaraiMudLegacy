@@ -198,7 +198,7 @@ struct obj_data {
 /* NOTE: NEW! macro to get VIRUAL number of the object */
 #define GET_OBJ_VIRTUAL(obj) (obj_index[(obj)->item_number].virtual)
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: Remove hardly used macro */
 #define CAN_CARRY_OBJ(ch,obj)  \
    (((GET_CARRYING_W(ch) + GET_OBJ_WEIGHT(obj)) <= CAN_CARRY_W(ch)) &&   \
@@ -207,7 +207,7 @@ struct obj_data {
 #define CAN_GET_OBJ(ch, obj)   \
    (CAN_WEAR((obj), ITEM_TAKE) && CAN_CARRY_OBJ((ch),(obj)) &&  \
     CAN_SEE_OBJ((ch),(obj)))
-#endif 		/* NO_DEF */ 
+#endif 		/* UNUSED_CODE */ 
 
 /* ========================= Structure for room ========================== */
 /*  NOTE: Room exit direction	info 				*/

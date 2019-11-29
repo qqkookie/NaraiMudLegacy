@@ -479,7 +479,7 @@ int post_board(struct char_data *ch, struct board_data *cb, char *arg)
     return TRUE;
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: NEW! Wrapper proc of post_board() for string_add() in modify.c */
 /* NOTE:        This proc don't take current board argument.    */
 int post_board_char(struct char_data *ch, char *arg)
@@ -492,7 +492,7 @@ int post_board_char(struct char_data *ch, char *arg)
     log("board.c:post_board_char(): can't find board.");
     return (FALSE);
 }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 /******************************************************************************
 * mail.c ( mail routine of KIT Mud a.k.a. jinsil mud )                      *
@@ -960,7 +960,7 @@ void string_add(struct descriptor_data *d, char *str)
 	if (!strncmp(d->scratch,"paper", 5)) { 
 	    cur_board = find_board(d->character);
 	    post_board(d->character, cur_board, d->scratch);
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 	    post_board_char(d->character, d->scratch);
 #endif
 	    d->scratch[0] = 0;

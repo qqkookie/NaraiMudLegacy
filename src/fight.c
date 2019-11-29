@@ -178,14 +178,14 @@ void make_corpse(struct char_data *ch, struct char_data *who)
 
     for (i = 0; i < MAX_WEAR; i++) {
 	if (ch->equipment[i]) {
-#ifdef  NO_DEF
+#ifdef  UNUSED_CODE
 	    /* NOTE: Move this code to special_death() */
 	    /* 손오공 */ 
 	    if (mob_index[ch->nr].virtual == 11101 && i == WEAR_HEAD) {
 		otmp = unequip_char(ch, i);
 		extract_obj(otmp);
 	    }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 	    otmp = unequip_char(ch, i);
 	    obj_to_obj(otmp, corpse); 
@@ -202,7 +202,7 @@ void make_corpse(struct char_data *ch, struct char_data *who)
 
     object_list_new_owner(corpse, 0);
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     /* NOTE: Move this code to special_death() proc. */
 
     /* 삼장법사(11111) (put 금테(11127), 성수병(11134) Into corpse) */
@@ -227,7 +227,7 @@ void make_corpse(struct char_data *ch, struct char_data *who)
 	o = read_object(23309, VIRTUAL);
 	obj_to_obj(o, corpse);
     } 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
     obj_to_room(corpse, ch->in_room);
 
@@ -308,7 +308,7 @@ void die(struct char_data *ch, int level, struct char_data *who)
 	return;
     }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     GET_PLAYER_MAX_HIT(ch) -= GET_LEVEL(ch);
     GET_PLAYER_MAX_MANA(ch) -= GET_LEVEL(ch);
     GET_PLAYER_MAX_MOVE(ch) -= GET_LEVEL(ch);
@@ -336,7 +336,7 @@ void die(struct char_data *ch, int level, struct char_data *who)
 	    TRUE,ch,0,0,TO_ROOM);
 	}
     }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
     GET_GOLD(ch) = 0;
 
@@ -895,7 +895,7 @@ int die_special(struct char_data *ch, struct char_data *victim)
     /* NOTE: No second call by DEATH_SPELL, so no need to remove the affect.
             See remove_affect_special() in "handler.c"	*/
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     /* to forbid 2 calls, by ares */
     if (IS_AFFECTED(ch, AFF_DEATH)) {
     /* NOTE: Use affect_from_char() */
@@ -903,7 +903,7 @@ int die_special(struct char_data *ch, struct char_data *victim)
             if (af->type == SPELL_DEATH)
                 break;
     }
-#endif		/* NO_DEF*/ 
+#endif		/* UNUSED_CODE*/ 
 
     /* chase modified this for reraise */
     if (IS_AFFECTED(victim, AFF_RERAISE )) {
@@ -1239,7 +1239,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
     dam = MAX(1, dam);
 
-#ifdef  NO_DEF 
+#ifdef  UNUSED_CODE 
     if (type == SKILL_BACKSTAB) {
 	if (IS_AFFECTED(ch, AFF_HIDE))
 	    dam <<= 1;
@@ -1290,7 +1290,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 		damage(ch, victim, dam, w_type);
 	}
     }
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
     /* NOTE: Duplicative and confusing code, Clean up the code */ 
     if ( type == SKILL_BACKSTAB ) {

@@ -873,7 +873,7 @@ void victory(struct char_data *ch, struct char_data *victim)
     no_members = MAX(1, no_members);
     total_level = MAX(1, total_level);
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /*
     money = GET_GOLD(victim) * ((no_members >> 1) + 1);
     money += (GET_LEVEL(victim) * GET_LEVEL(victim) * GET_LEVEL(victim));
@@ -889,7 +889,7 @@ void victory(struct char_data *ch, struct char_data *victim)
     money /= ( no_members * no_members );
     level_exp = GET_EXP(victim) * ((no_members >> 1) + 1) / total_level;
  */
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 
     /* NOTE: New rule. Old rule was too unfair to large group. */
     /* NOTE: potential gold inflation (coin copy bug) pitfall. */
@@ -920,7 +920,7 @@ void victory(struct char_data *ch, struct char_data *victim)
     }
 
 /* NOTE: adjust_gain() will do same thing. Comment out. */
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
     if (IS_AFFECTED(k, AFF_GROUP) && (k->in_room == ch->in_room)) {
 	share = level_exp * GET_LEVEL(k);
 	sprintf(buf, "You receive %d experience and %d gold coins.",
@@ -952,5 +952,5 @@ void victory(struct char_data *ch, struct char_data *victim)
 	    change_alignment(f->follower, victim);
 	}
     }
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 }

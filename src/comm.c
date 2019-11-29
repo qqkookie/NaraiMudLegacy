@@ -1148,7 +1148,7 @@ void close_socket(struct descriptor_data *d)
 }
 
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* NOTE: This is_korean() is hopelessly out of date, now    */
 /* NOTE: more_than_20() is obsolete and meaningless */
 
@@ -1197,7 +1197,7 @@ int more_than_20(struct descriptor_data *d)
     else
 	return 0;
 }
-#endif				/* NO_DEF */ 
+#endif				/* UNUSED_CODE */ 
 
 int unfriendly_domain(char *h)
 {

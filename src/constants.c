@@ -1322,7 +1322,7 @@ char *weapon_type_desc[] = {
 /* NOTE: moved from OLD fight.c */ 
 
 /* NOTE: Currently, all damages messages are brief. So no need of data below */
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 
      struct dam_weapon_type dam_weapons[] =
     {
@@ -1394,7 +1394,7 @@ char *weapon_type_desc[] = {
 	 "$n PROCESSES YOU into ---==<< V A C U U M >>==--- with $s #W."}
     };
 
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 
 /* brief mode */
     struct dam_weapon_type brief_dam_weapons[] =
@@ -1540,7 +1540,7 @@ char *weapon_type_desc[] = {
     };
 
 /* NOTE: Currently, all damages messages are brief. So no need of data below */
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 
     struct dam_weapon_type han_weapons[] =
     {
@@ -1609,7 +1609,7 @@ char *weapon_type_desc[] = {
 	 "$n 님이 당신을 진공상태가 되도록 #W."}
     };
 
-#endif				/* NO_DEF */
+#endif				/* UNUSED_CODE */
 
     /* brief mode */
     struct dam_weapon_type brief_han_weapons[] =

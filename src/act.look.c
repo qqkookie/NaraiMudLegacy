@@ -1145,7 +1145,7 @@ void do_report(struct char_data *ch, char *argument, int cmd)
     /* send_to_char("ok.\n\r",ch); */
 }
 
-#ifdef NO_DEF
+#ifdef UNUSED_CODE
 /* From msd mud : cyb */
 void do_attribute(struct char_data *ch, char *argument, int cmd)
 {
@@ -1207,7 +1207,7 @@ void do_attribute(struct char_data *ch, char *argument, int cmd)
 }
 
 /* end of Attribute Module... */ 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 void do_data(struct char_data *ch, char *argument, int cmd)
 {

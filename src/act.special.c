@@ -232,7 +232,7 @@ bool circle_follow(struct char_data *ch, struct char_data *victim)
     return (FALSE);
 }
 
-#ifdef  NO_DEF
+#ifdef  UNUSED_CODE
 /* NOTE: stop_group() is merged to stop_follower().
 	It does essentially same thing to stop_follower(). */
 void stop_group(struct char_data *ch)
@@ -273,7 +273,7 @@ void stop_group(struct char_data *ch)
     ch->master = 0;
     REMOVE_BIT(ch->specials.affected_by, AFF_GROUP);
 } 
-#endif		/* NO_DEF */
+#endif		/* UNUSED_CODE */
 
 /* NOTE: Merged functionality of OLD stop_group() */
 /* Called when stop following persons, or stopping charm */
