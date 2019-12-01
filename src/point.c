@@ -377,7 +377,7 @@ void gain_gold(struct char_data *ch, LONGLONG money)
 	if (GET_GOLD(ch) + money > 0)
 	    GET_GOLD(ch) += money;
 	else
-	    send_to_char("Your perse is almost bursting.\n\r", ch);
+	    send_to_char("Your perse is almost bursting.\r\n", ch);
     }
     else {
 	if (GET_GOLD(ch) > (-money))
@@ -396,7 +396,7 @@ void gain_exp(struct char_data *ch, LONGLONG gain)
 	    if (GET_EXP(ch) + gain > 0)
 		GET_EXP(ch) += gain;
 	    else
-		send_to_char("You seems too much experinced.\n\r", ch);
+		send_to_char("You seems too much experinced.\r\n", ch);
 	}
 	else {		/* NOTE : prevent negative exp. */
 	    if (GET_EXP(ch) > (-gain))
@@ -419,7 +419,7 @@ void gain_exp_regardless(struct char_data *ch, LONGLONG gain)
 	    for (i = 0; (i <= LEV_GOD) &&
 		 (titles[GET_CLASS(ch) - 1][i].exp <= GET_EXP(ch)); i++) {
 		if (i > GET_LEVEL(ch)) {
-		    send_to_char("You raise a level.\n\r", ch);
+		    send_to_char("You raise a level.\r\n", ch);
 		    GET_LEVEL(ch) = i;
 		    advance_level(ch, 1);
 		    is_altered = TRUE;
@@ -436,7 +436,7 @@ void gain_exp_regardless(struct char_data *ch, LONGLONG gain)
 }
 
 void gain_condition(struct char_data *ch, int condition, int value)
-{ 
+{
     if (GET_COND(ch, condition) == -1)	/* No change */
 	return;
 
@@ -449,30 +449,30 @@ void gain_condition(struct char_data *ch, int condition, int value)
 /* NOTE: NEW! reportting condition called by point_update() */
 void report_condition(struct char_data *ch )
 {
-    if (GET_COND(ch, FULL) < 5 && GET_COND(ch, FULL) > 0 ) 
-	send_to_char_han ( "Your stomach will be empty soon.\n\r",
-	    "약간 배가 고파오기 시작합니다.\n\r", ch);
+    if (GET_COND(ch, FULL) < 5 && GET_COND(ch, FULL) > 0 )
+	send_to_char_han ( "Your stomach will be empty soon.\r\n",
+	    "약간 배가 고파오기 시작합니다.\r\n", ch);
     else if ( GET_COND(ch, FULL) == 0 ) {
-	send_to_char("You are hungry.\n\r", ch);
+	send_to_char("You are hungry.\r\n", ch);
 	ch->points.hit = ( ch->points.hit * 9 ) /10;
     }
     if (GET_COND(ch, THIRST) < 5 && GET_COND(ch, THIRST) > 0 )
-	send_to_char_han ( "You need some water now.\n\r",
-	    "약간 목이 말라오기 시작합니다.\n\r", ch);
+	send_to_char_han ( "You need some water now.\r\n",
+	    "약간 목이 말라오기 시작합니다.\r\n", ch);
     else if (GET_COND(ch, THIRST) == 0 ) {
-	send_to_char("You are thirsty.\n\r", ch);
+	send_to_char("You are thirsty.\r\n", ch);
 	ch->points.hit = ( ch->points.hit * 9 ) /10 ;
     }
     /* NOTE: Reduce move point when you are drunk */
     if ( GET_COND(ch, DRUNK) >= 20 ) {
-	send_to_char("You are drunk.\n\r", ch);
+	send_to_char("You are drunk.\r\n", ch);
 	ch->points.move = ( ch->points.move * 9 ) /10 ;
     }
-    else if ( GET_COND(ch, DRUNK) > 15 ) 
-	send_to_char_han ( "You feel you begin to be sober.\n\r",
-	    "조금 술이 깨는것 같습니다.\n\r", ch);
-    else if ( GET_COND(ch, DRUNK) == 2 || GET_COND(ch, DRUNK)== 1) 
-	send_to_char("You are now sober.\n\r", ch);
+    else if ( GET_COND(ch, DRUNK) > 15 )
+	send_to_char_han ( "You feel you begin to be sober.\r\n",
+	    "조금 술이 깨는것 같습니다.\r\n", ch);
+    else if ( GET_COND(ch, DRUNK) == 2 || GET_COND(ch, DRUNK)== 1)
+	send_to_char("You are now sober.\r\n", ch);
 }
 
 /* Update both PC's & NPC's and objects */
@@ -500,8 +500,8 @@ void point_update(void)
 		/* GET_HIT(ch) -= dice(30 - GET_CON(i), 30 - GET_CON(i)); */
 		/* NOTE: More poison damage : Avrg: 72 -> 510  */
 		damage( i, i, dice(30 - GET_CON(i), GET_LEVEL(i)*2 + 5),
-			SPELL_POISON );  
-		/* 
+			SPELL_POISON );
+		/*
 		GET_HIT(ch) -= dice(GET_LEVEL(i), GET_LEVEL(i));
 		if (IS_NPC(ch))
 		   GET_HIT(ch) -= dice(GET_LEVEL(i), GET_LEVEL(i));
@@ -513,17 +513,17 @@ void point_update(void)
 	    GET_MANA(i) = MIN(GET_MANA(i) + mana_gain(i), mana_limit(i));
 	    GET_MOVE(i) = MIN(GET_MOVE(i) + move_gain(i), move_limit(i));
 	    update_pos(i);
-	} 
+	}
 	/* NOTE: OLD suffering.
-	else if (GET_POS(i) == POS_INCAP) 
+	else if (GET_POS(i) == POS_INCAP)
 	    damage(i, i, 1, TYPE_SUFFERING);
 	else if (!IS_NPC(i) && (GET_POS(i) == POS_MORTALLYW))
 	    damage(i, i, 2, TYPE_SUFFERING);
-	*/ 
+	*/
 	/* NOTE: More damage to suffering char */
 	else if (!IS_NPC(i) && (GET_POS(i) <= POS_MORTALLYW))
 	    damage(i, i, 20, TYPE_SUFFERING);
-	else 
+	else
 	    damage(i, i, 10, TYPE_SUFFERING);
 
 	gain_condition(i, FULL, -1);
@@ -531,34 +531,34 @@ void point_update(void)
 	gain_condition(i, DRUNK, -2);
 	gain_condition(i, THIRST, -1);
 
-	if (IS_NPC(i)) 
+	if (IS_NPC(i))
 	    continue;
 
 	/* NOTE: gain_coindition() and report_condition() separated */
-	report_condition(i); 
+	report_condition(i);
 
 	update_char_objects(i);
 
 	/* auto level up by Perhaps */
 	if ((titles[GET_CLASS(i) - 1][GET_LEVEL(i) + 1].exp + 1000) < GET_EXP(i)
-		&& !IS_NPC(i) && (GET_LEVEL(i) < 40) 
+		&& !IS_NPC(i) && (GET_LEVEL(i) < 40)
 		&& ((i->quest.solved) >= level_quest[GET_LEVEL(i)])) {
 	    GET_LEVEL(i)++;
 	    advance_level(i, 1);
-	    sprintf(buf, "\n\r %s LEVEL UP !! ---==Congratulations==--- \n",
+	    sprintf(buf, "\r\n %s LEVEL UP !! ---==Congratulations==--- \n",
 		i->player.name);
 	    send_to_all(buf);
 	}
 
 	/* auto level down by Perhaps */
 	/* remove level-down */
-	/* 
-	if( ( titles[GET_CLASS(i)-1][GET_LEVEL(i)].exp > GET_EXP(i) 
-		&&!IS_NPC(i) &&(GET_LEVEL(i)>5)&&(GET_LEVEL(i)<=40) ) 
+	/*
+	if( ( titles[GET_CLASS(i)-1][GET_LEVEL(i)].exp > GET_EXP(i)
+		&&!IS_NPC(i) &&(GET_LEVEL(i)>5)&&(GET_LEVEL(i)<=40) )
 		&& (GET_GUILD(i)==0) ) {
 	    advance_level(i, 0);
 	    GET_LEVEL(i)--;
-	    sprintf(buf,"\n\r %s LEVEL DOWN!! <--==Congratulations?!?!==-->\n",
+	    sprintf(buf,"\r\n %s LEVEL DOWN!! <--==Congratulations?!?!==-->\n",
 	    i->player.name);
 	    send_to_all(buf);
 	}
@@ -566,7 +566,7 @@ void point_update(void)
 
 	/* NOTE: char i may be free()'d in check_idling()  */
 	if (IS_MORTAL(i))
-	    check_idling(i); 
+	    check_idling(i);
     }			/* for */
 
     /* objects */
@@ -584,7 +584,7 @@ void point_update(void)
 		if (j->carried_by)
 		    act("$p decay in your hands.",
 			FALSE, j->carried_by, j, 0, TO_CHAR);
-		else if ((j->in_room != NOWHERE) 
+		else if ((j->in_room != NOWHERE)
 			&& (world[j->in_room].people)) {
 		    act("A quivering hoard of maggots consume $p.",
 			TRUE, world[j->in_room].people, j, 0, TO_ROOM);
@@ -622,7 +622,7 @@ void point_update(void)
 	    }
 	}
     }
-} 
+}
 
 void check_idling(struct char_data *ch)
 {
@@ -638,7 +638,7 @@ void check_idling(struct char_data *ch)
 		stop_fighting(ch);
 	    }
 	    act("$n disappears into the void.", TRUE, ch, 0, 0, TO_ROOM);
-	    send_to_char("You have been idle, and are pulled into a void.\n\r", ch);
+	    send_to_char("You have been idle, and are pulled into a void.\r\n", ch);
 	    char_from_room(ch);
 	    char_to_room(ch, ROOM_VOID);	/* Into room number 0 */
 	}
@@ -766,8 +766,8 @@ void adjust_gain(struct char_data *ch, struct char_data *victim,
 	change_alignment(ch, victim);
 	/* Quest : check quest */
 	/* NOTE: check master/and peer only when ch is grouped. */
-	/* NOTE: This is bug found by BADA  */ 
-	check_quest_mob_die( ch, victim ); 
+	/* NOTE: This is bug found by BADA  */
+	check_quest_mob_die( ch, victim );
 	/* NOTE:  Check for victim is 'target' which char is hunting for. */
 	if( ch->specials.hunting == victim )
 		ch->specials.hunting = NULL;
@@ -789,7 +789,7 @@ void adjust_gain(struct char_data *ch, struct char_data *victim,
 
 /* NOTE: NEW! Separate code for add winner kill gain from damage() */
 void victory(struct char_data *ch, struct char_data *victim)
-{ 
+{
     int exp, money;
     unsigned no_members, share;
     struct char_data *k;
@@ -798,7 +798,7 @@ void victory(struct char_data *ch, struct char_data *victim)
     unsigned total_level;
     unsigned level_exp;
 
-    if (!ch || !victim || ch == victim 
+    if (!ch || !victim || ch == victim
 	/* NOTE: NO GAIN  from Reanimated or cloned mob */
 	|| (IS_NPC(victim) && GET_EXP(victim) == 0))
 	return;
@@ -814,7 +814,7 @@ void victory(struct char_data *ch, struct char_data *victim)
 	exp = MAX(exp, 1);
 	GET_GOLD(ch) += GET_GOLD(victim);
 	GET_GOLD(ch) += (GET_LEVEL(victim)*GET_LEVEL(victim)*500);
-	*/ 
+	*/
 	/* NOTE: New solo player gain code is here. */
 	/* NOTE: more elaborate exp gain calculation. */
 	/* NOTE: potential gold inflation pitfall. */
@@ -829,22 +829,22 @@ void victory(struct char_data *ch, struct char_data *victim)
 	return;
     }
 
-    /* NOTE: Group gain */ 
+    /* NOTE: Group gain */
     if (!(k = ch->master))
 	k = ch;
 
     /* NOTE: To apply group gain, make sure leader is grouped.  */
-    if (!k || !IS_AFFECTED(k, AFF_GROUP)) 
+    if (!k || !IS_AFFECTED(k, AFF_GROUP))
 	return;
 
-    /* NOTE: To get point, leader/follower should be in same room 
+    /* NOTE: To get point, leader/follower should be in same room
 		with victim, not character.    */
-    if (k->in_room == victim->in_room) { 
-	no_members = 1; 
+    if (k->in_room == victim->in_room) {
+	no_members = 1;
 	total_level = GET_LEVEL(k);
     }
     else {
-	no_members = 0; 
+	no_members = 0;
 	total_level = 0;
     }
 
@@ -878,7 +878,7 @@ void victory(struct char_data *ch, struct char_data *victim)
     money = GET_GOLD(victim) * ((no_members >> 1) + 1);
     money += (GET_LEVEL(victim) * GET_LEVEL(victim) * GET_LEVEL(victim));
     money /= no_members;
-    level_exp = GET_EXP(victim) * ((no_members >> 1) + 1) / total_level; 
+    level_exp = GET_EXP(victim) * ((no_members >> 1) + 1) / total_level;
   */
 
     /* group advantage */
@@ -897,7 +897,7 @@ void victory(struct char_data *ch, struct char_data *victim)
     if (IS_NPC(victim)) {
 /* NOTE: This *WAS* NEW NARAI exp system.. but not yet... */
 /*
-    share = ( GET_GOLD(victim) + 
+    share = ( GET_GOLD(victim) +
     (GET_LEVEL(victim) * GET_LEVEL(victim) )*GOLDSCALE)/no_members ;
  */
 	share = eval_gold(victim) / no_members;

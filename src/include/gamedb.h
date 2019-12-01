@@ -5,7 +5,7 @@
 
 #include "typedef.h"
 
-/* ------------   data files used by the game system   ------------------*/ 
+/* ------------   data files used by the game system   ------------------*/
 /*  default directory is defined in comm.h : usually lib */
 
 #define WORLD_FILE        "tinyworld.wld"	/* room definitions */
@@ -13,7 +13,7 @@
 #define OBJ_FILE          "tinyworld.obj"	/* object prototypes */
 #define ZONE_FILE         "tinyworld.zon"	/* zone defs & command tables */
 
-#define SHOP_FILE "tinyworld.shp" 
+#define SHOP_FILE "tinyworld.shp"
 #define ALL_WORLD_FILE "world/world_files"
 
 
@@ -92,7 +92,7 @@ struct char_file_u {
 struct player_index_element {
     char *name;
     int index;
-}; 
+};
 
 extern struct player_index_element *player_table;  /* index to player file */
 extern int top_of_p_table;
@@ -102,14 +102,14 @@ extern int top_of_p_table;
 #define REAL 0
 #define VIRTUAL 1
 
-struct char_data *read_mobile(int nr, int type); 
+struct char_data *read_mobile(int nr, int type);
 /* read an object from OBJ_FILE */
 extern struct obj_data *read_object(int nr, int type);
 
 void save_char(struct char_data *ch);
 /* void init_player(struct char_data *ch); */
 
-void stash_char(struct char_data *ch); 
+void stash_char(struct char_data *ch);
 void unstash_char(struct char_data *ch, char *stashname);
 void wipe_stash(char *name);
 

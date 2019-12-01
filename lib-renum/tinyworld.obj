@@ -185,7 +185,7 @@ board bulletin~
 a bulletin board~
 A large bulletin board is mounted on a wall here.~
 ~
-13 0 0
+12 0 0
 0 0 0 0
 500 0 0
 E
@@ -198,7 +198,7 @@ board mbox mail~
 a mail box~
 A large mail box is mounted on a wall here.~
 ~
-13 0 0
+12 0 0
 0 0 0 0
 500 0 0
 #3007
@@ -206,7 +206,7 @@ slot machine~
 a slot machine~
 A slot machine is here.~
 ~
-13 0 0
+12 0 0
 0 0 0 0
 200 1 1
 E
@@ -224,7 +224,7 @@ string machine~
 a string machine~
 A string machine is here.~
 ~
-13 0 0
+12 0 0
 0 0 0 0
 200 1 1
 E
@@ -436,8 +436,8 @@ canoe~
 a canoe~
 A canoe has been left here.~
 ~
-12 0 1
-22 0 0 0
+22 0 1
+0 0 0 0
 32 1000 100
 E
 canoe~
@@ -448,8 +448,8 @@ raft~
 a raft~
 A raft has been left here.~
 ~
-12 0 1
-22 0 0 0
+22 0 1
+0 0 0 0
 75 400 200
 E
 raft~
@@ -466,8 +466,8 @@ A map has been dropped here.~
 E
 map~
 ------------------------------------------------------
-|            					     |
-|    DS	   	       altar-RC     Dragon Tower     |
+|                                                    |
+|    DS	               altar-RC     Dragon Tower     |
 |Arachnos     Glade       ||      Moria ||           |
 |     Galaxy   Forest +--------+  Castle||Sikhs      |
 |   ==================Main Street=======DK(Dwarven)  |
@@ -475,7 +475,7 @@ map~
 |Forest        Forest |  Dump  |     Greece          |
 |                     |(Arena) | Wasteland     Aerie |
 |      DK River======River================Ocean==    |
-|	   	    	 KC KW       ||  Drow 	     |
+|	                       KC KW       ||  Drow        |
 |                            ====tunnel======= Desert|
 |                                                    |
 |                                        Thalos      |
@@ -771,7 +771,7 @@ shells ammo~
 two shotgun shells~
 A pair of shotgun shells is here.~
 ~
-8 4096 1
+7 4096 1
 0 0 0 0
 2 20000 -1
 #3085
@@ -1756,7 +1756,7 @@ feather 깃털~
 아름다운 새의 깃털~
 아름다운 새의 깃털이 하나 떨어져 있습니다.~
 ~
-8 256 1
+25 256 1
 0 0 0 0
 10 5500 0
 #14162
@@ -2721,7 +2721,7 @@ battery pack~
 a battery pack~
 A small battery pack has been left here.~
 ~
-8 4096 1
+7 4096 1
 0 0 0 0
 2 10000 1
 #15182
@@ -3216,7 +3216,7 @@ arrow~
 An arrow for Diana's bow~
 An arrow for Diana's bow has been left here.~
 ~
-8 4096 16385
+7 4096 16385
 0 0 0 0
 3 10000 1
 #15732
@@ -3774,7 +3774,7 @@ a chunk of coal~
 There is a chunk of coal here.~
 ~
 12 0 16385
-0 0 0 0
+13 0 0 0
 100 0 0
 #15828
 pick~
@@ -3857,8 +3857,8 @@ an old, wooden trapdoor~
 There is an old, wooden trapdoor here on the floor.
 ~
 ~
-13 32 0
-0 0 0 0
+12 32 0
+14 0 0 0
 400 0 0
 #16101
 crystalline longsword~
@@ -4485,8 +4485,8 @@ branch~
 a long, grey branch~
 A long, grey branch rests heavily on the ground.~
 ~
-13 0 1
-0 0 0 0
+12 0 1
+13 0 0 0
 40 0 0
 E
 branch~
@@ -4615,7 +4615,7 @@ bullets ammo~
 some bullets for a Colt 45~
 A small supply of bullets for a Colt 45 is here.~
 ~
-8 4096 1
+7 4096 1
 0 0 0 0
 2 50000 -1
 #16435
@@ -4980,24 +4980,14 @@ A
 18 3
 A
 19 1
+
 #16625
-arrow sagittarius~
-the Arrow of Sagittarius~
-THE arrow of the Zodiac lies here.~
-~
-3 1089 16385
-10 20 20 30
-7 5000 5000
-E
-arrow~
-It's THE arrow of lightning; it will never miss any target.~
-#16626
 bow sagittarius~
 the Titanic Bow of Sagittarius~
 THE bow of the zodiac lies here.~
 ~
-5 1089 8193
-5 3 8 7
+6 1089 16385
+20 20 50 1
 20 10000 20
 E
 bow~
@@ -5006,6 +4996,17 @@ A
 18 2
 A
 19 3
+#16626
+arrow sagittarius~
+the Arrow of Sagittarius~
+THE arrow of the Zodiac lies here.~
+~
+7 5185 1
+20 0 0 30
+7 5000 -1
+E
+arrow~
+It's THE arrow of lightning; it will never miss any target.~
 #16627
 horns capricon~
 the Titanic Horns of Capriocon~
@@ -5144,8 +5145,8 @@ chains andromeda~
 chains of Andromeda~
 Some chains lie on the floor.~
 ~
-13 3 1
-0 0 0 0
+12 3 1
+13 0 0 0
 25 0 0
 E
 chains~
@@ -9056,8 +9057,8 @@ paper 종이~
 낡은 종이~
 낡은 종이가 놓여 있습니다.~
 ~
-13 131072 1
-0 0 0 0
+12 131072 1
+13 0 0 0
 1 1 1
 E
 paper text~
@@ -9795,18 +9796,6 @@ A
 18 +10
 A
 19 +10
-#19133
-robocop gun~
-A head robocop's gun~
-A head robocop's gun has been left here.~
-~
-6 4096 16385
-16 16 300 0
-5 10000 0
-A
-1 +10
-A
-17 -2
 #19134
 cray robo mail~
 A C-R-A-Y robo M-A-I-L~
@@ -9935,6 +9924,26 @@ A
 18 +7
 A
 19 +7
+#19148
+robocop gun~
+A head robocop's gun~
+A head robocop's gun has been left here.~
+~
+6 4096 16385
+16 16 300 0
+5 10000 0
+A
+1 +10
+A
+17 -2
+#19149
+gun bullets~
+robocop gun bullets~
+A round of robocop gun bullets are left here.~
+~
+7 4096 1
+0 0 0 0
+3 10000 -1
 #19178
 chip key~
 Chip key~
@@ -10468,7 +10477,7 @@ bullets ammo~
 Bullets of A rifle~
 Bullets of A rifle has been left here.~
 ~
-8 4096 1
+7 4096 1
 0 0 0 0
 2 50000 -1
 #19602

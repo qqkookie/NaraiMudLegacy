@@ -35,7 +35,7 @@ M 0 16807 5 16844
 *
 M 0 16808 4 16847      Ogre Warrior
 E 1 16886 25 16       Ogre Spear
-M 0 16808 4 16842 
+M 0 16808 4 16842
 E 1 16886 25 16
 M 0 16808 4 16848
 E 1 16886 25 16
@@ -44,7 +44,7 @@ E 1 16886 25 16
 *
 M 0 16809 4 16848      Ogre Guard
 *E 0 16887 25 16       Ogre Club
-M 0 16809 4 16842 
+M 0 16809 4 16842
 *E 0 16887 25 16
 M 0 16809 4 16841
 *E 0 16887 25 16
@@ -61,15 +61,15 @@ E 1 16891 10 16       Massive Club
 M 0 16812 3 16851      Plains Barbarian
 E 1 16892 20 4        Thick Fur Cape
 E 1 16893 20 5        Fur Lined Tunic
-E 1 16860 20 8        Fur Lined Boots 
+E 1 16860 20 8        Fur Lined Boots
 M 0 16812 3 16854
-E 1 16892 20 4        
-E 1 16893 20 5        
-E 1 16860 20 8         
-M 0 16812 3 16859 
-E 1 16892 20 4        
-E 1 16893 20 5        
-E 1 16860 20 8         
+E 1 16892 20 4
+E 1 16893 20 5
+E 1 16860 20 8
+M 0 16812 3 16859
+E 1 16892 20 4
+E 1 16893 20 5
+E 1 16860 20 8
 *
 M 0 16813 3 16857        White Yeti
 E 1 16861 20 12         Pelt of the Yeti
@@ -84,7 +84,7 @@ M 0 16814 3 16856
 *
 M 0 16815 5 16863         Minotaur Citizen
 E 1 16862 35 16             Kopesh Sword
-M 0 16815 5 16867 
+M 0 16815 5 16867
 E 1 16862 35 16
 M 0 16815 5 16865
 E 1 16862 35 16
@@ -129,7 +129,7 @@ E 1 16871 15 10                Blue Steel Vambraces
 E 1 16866 15 5                Steel Plate
 E 1 16872 10 16               Two-Handed Sword
 M 0 16819 2 16879
-E 1 16869 15 6                 
+E 1 16869 15 6
 E 1 16870 15 7
 E 1 16871 15 10
 E 1 16866 15 5
@@ -146,9 +146,9 @@ E 1 16873 10 6
 E 1 16874 10 7
 E 1 16875 10 10
 E 1 16866 15 5
-E 1 16876 10 16     
+E 1 16876 10 16
 *
-M 0 16821 2 16885               Minotaur Elite Guard         
+M 0 16821 2 16885               Minotaur Elite Guard
 E 1 16877 5 6                  Crimson Steel Visor
 E 1 16878 5 7                  Crimson Steel Greaves
 E 1 16879 5 10                 Crimson Steel Vambraces

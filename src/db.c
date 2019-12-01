@@ -14,8 +14,8 @@
 #include "global.h"
 #include "comm.h"
 #include "play.h"
-#include "gamedb.h" 
-#include "spells.h" 
+#include "gamedb.h"
+#include "spells.h"
 
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
@@ -43,7 +43,7 @@ char wizards[MAX_STRING_LENGTH];	/* the wizards text		*/
 char help[MAX_STRING_LENGTH];		/* the main help page		*/
 #endif		/* UNUSED_CODE */
 
-/* NOTE: Old credits[], news[], plan[], wizard[] was not used now. 
+/* NOTE: Old credits[], news[], plan[], wizard[] was not used now.
 	news, plan, credits, wizards is read on the fly.	*/
 
 char motd[MAX_STRING_LENGTH];		/* the messages of today	*/
@@ -56,7 +56,7 @@ struct index_data *mob_index;		/* index table for mobile file	*/
 struct index_data *obj_index;		/* index table for object file	*/
 
 int top_of_mobt = 0;			/* top of mobile index table	*/
-int top_of_objt = 0;			/* top of object index table	*/ 
+int top_of_objt = 0;			/* top of object index table	*/
 
 
 /*************************************************************************
@@ -90,7 +90,7 @@ void boot_db(void)
     extern void assign_rooms(void);
     extern void assign_command_pointers(void);
     extern void assign_spell_pointers(void);
-    extern void assign_the_shopkeepers(void); 
+    extern void assign_the_shopkeepers(void);
 
     extern void House_boot(void);
 
@@ -110,8 +110,8 @@ void boot_db(void)
     file_to_string(WIZARDS_FILE, wizards);
 */
     /* NOTE: news, plan, credits, wizards is not loaded at boot time.	*/
-    /* NOTE: Main help page is merged to "help_table" file itself. 	*/ 
-    /* NOTE: Motd/Immortal motd are merged to single "motd" file 	*/ 
+    /* NOTE: Main help page is merged to "help_table" file itself. 	*/
+    /* NOTE: Motd/Immortal motd are merged to single "motd" file 	*/
     /* 	     separated by form-feed(^L) char				*/
     log("Reading motd.");
     if( file_to_string(MOTD_FILE, motd)) {
@@ -154,7 +154,7 @@ void boot_db(void)
 
     /* NOTE: Renumber room *after* loading object file */
     log("Renumbering rooms.");
-    renum_world(); 
+    renum_world();
     check_zone_data();
 
     log("Renumbering zone table.");
@@ -174,7 +174,7 @@ void boot_db(void)
 
     /* NOTE: Init quest after loading mobile file */
     log("quest manager : initialize.");
-    init_quest(); 
+    init_quest();
 
     /* NOTE: In "house.c". Init house rooms and load items in it */
     log("Loading Houses.");
@@ -198,7 +198,7 @@ void boot_db(void)
     assign_spell_pointers();
 
     reset_all_zone();		/* NOTE: Boot time zone reset in "db.zone.c" */
-    log("Boot db -- DONE."); 
+    log("Boot db -- DONE.");
 }
 
 /* reset the time in the game from file */
@@ -207,9 +207,8 @@ void reset_time(void)
     char buf[MAX_BUFSIZ];
 
     /* long beginning_of_time = 650336715; */
-    /* NOTE: b.o.t = 0 In Real World: Sat Sep 27 16:05:40 KST 1997, Mud Time: 
-       The 33rd Day of the Month of the Heat, Year 1021.  */
-    long beginning_of_time = 0;
+    /* NOTE: b.o.t, in real world: Sat Jan 1 00:00:00 UTC 2000, Mud Time: */
+    long beginning_of_time = 946684800 ;
     struct time_info_data mud_time_passed(time_t t2, time_t t1);
 
     time_info = mud_time_passed(time(0), beginning_of_time);
@@ -297,7 +296,7 @@ struct index_data *generate_indices(FILE * fl, int *top)
     }
     *top = i - 2;
     return (index);
-} 
+}
 
 /*************************************************************************
 *  procedures for resetting, both play-time and boot-time      *
@@ -314,12 +313,12 @@ struct char_data *read_mobile(int nr, int type)
     char buf[MAX_BUFSIZ];
     /* #include "mob_bal.c" */
 
-    extern int mob_bal_hit[][20]; 
-    extern int mob_bal_ac[][20]; 
-    extern int mob_bal_hit[][20]; 
-    extern int mob_bal_hr[][20]; 
-    extern int mob_bal_dr[][20]; 
-    extern int mob_bal_exp[][20]; 
+    extern int mob_bal_hit[][20];
+    extern int mob_bal_ac[][20];
+    extern int mob_bal_hit[][20];
+    extern int mob_bal_hr[][20];
+    extern int mob_bal_dr[][20];
+    extern int mob_bal_exp[][20];
 
 	i = nr;
     if (type == VIRTUAL)
@@ -342,8 +341,8 @@ struct char_data *read_mobile(int nr, int type)
     GET_TITLE(mob)= 0;
 
     /* NOTE: Default description is same as long description.  */
-    if(!mob->player.description && mob->player.long_descr) 
-	mob->player.description = strdup(mob->player.long_descr); 
+    if(!mob->player.description && mob->player.long_descr)
+	mob->player.description = strdup(mob->player.long_descr);
 
     /* *** Numeric data *** */
 
@@ -569,7 +568,7 @@ struct char_data *read_mobile(int nr, int type)
     case CLASS_CLERIC:
 	if (level >= 30 && (number(1,10) <= 7 )) {
 	    SET_BIT(mob->specials.affected_by, AFF_REFLECT_DAMAGE);
-	} 
+	}
 	if (level >= 13 && (number(1,10) <= 8 )) {
 	    SET_BIT(mob->specials.affected_by, AFF_SANCTUARY);
 	}
@@ -591,7 +590,7 @@ struct char_data *read_mobile(int nr, int type)
 	}
 	break;
     }
-	
+
     if ( class == CLASS_MAGIC_USER || class == CLASS_CLERIC ) {
 	mob->specials.apply_saving_throw[SAVING_HIT_SKILL] =
 	    100 - number(GET_LEVEL(mob) >> 1, GET_LEVEL(mob));
@@ -619,14 +618,14 @@ struct char_data *read_mobile(int nr, int type)
 
     for (i = 0; i < MAX_SKILLS; i++) {
 	if (spell_info[i].min_level[class - 1] <= level) {
-	    /* NOTE: More well learned mobs */ 
+	    /* NOTE: More well learned mobs */
 	    mob->skills[i].learned
 		= (level > 40) ? 99 : spell_info[i].max_skill[class - 1];
 	}
 	else {
 	    mob->skills[i].learned = 0;
 	}
-	/* NOTE: More well skilled mobs */ 
+	/* NOTE: More well skilled mobs */
 	/* mob->skills[i].skilled = (level > 40) ? level : 0; */
 	mob->skills[i].skilled = (level >= 30) ? 30 + (level-30)*5 : level;
 	mob->skills[i].recognise = 0;
@@ -650,13 +649,13 @@ struct char_data *read_mobile(int nr, int type)
 
     mob_index[nr].number++;
 
-    /* NOTE: this code moved to assign_mobile() */ 
+    /* NOTE: this code moved to assign_mobile() */
 /*
     if (mob_index[nr].virtual == SON_OGONG)
 	son_ogong = mob;
     else if (mob_index[nr].virtual == FOURTH_JANGRO)
 	fourth_jangro = mob;
- */ 
+ */
     mob->regened = 0;
     mob->specials.fighting = 0;
 
@@ -664,7 +663,7 @@ struct char_data *read_mobile(int nr, int type)
 	Mobile hit, maxhit, HR, DR, AC Adjustment. May be controversal. */
     /*
     mob->points.hit = mob->points.max_hit =  mob->points.max_hit /4;
-    GET_HITROLL(mob) *= 2; 
+    GET_HITROLL(mob) *= 2;
     GET_DAMROLL(mob) *= 2;
     GET_AC(mob) -=  level*2 + 50 ;
     */
@@ -932,8 +931,8 @@ struct char_data *read_mobile(int nr, int type)
 	mob->abilities.wis = number(abil >> 1, abil);
 	mob->abilities.dex = number(abil >> 1, abil);
 	mob->abilities.con = number(abil >> 1, abil);
-	/* 
-	   mob->abilities.str   = 18; mob->abilities.intel = 11; 
+	/*
+	   mob->abilities.str   = 18; mob->abilities.intel = 11;
 	   mob->abilities.wis   = 11; mob->abilities.dex   = 18;
 	   mob->abilities.con   = 11; */
 
@@ -1066,7 +1065,7 @@ struct obj_data *read_object(int nr, int type)
     fscanf(obj_f, " %d \n", &tmp);
     obj->obj_flags.gpd = tmp;
 
-    // NOTE: Weapon magic spell type translation 
+    // NOTE: Weapon magic spell type translation
     if ( obj->obj_flags.type_flag == ITEM_WEAPON ) {
 	if (obj->obj_flags.value[0] == 1000)
 	    obj->obj_flags.value[0] = WEAPON_ANY_MAGIC;
@@ -1115,7 +1114,7 @@ struct obj_data *read_object(int nr, int type)
 
 
     return (obj);
-} 
+}
 
 
 /* returns the real number of the room with given virtual number */
@@ -1187,7 +1186,7 @@ int real_object(int virtual)
 	else
 	    bot = mid + 1;
     }
-} 
+}
 
 /* read and allocate space for a '~'-terminated string from a given file */
 char *fread_string(FILE * fl)
@@ -1240,7 +1239,7 @@ char *fread_string(FILE * fl)
     else
 	rslt = 0;
     return (rslt);
-} 
+}
 
 /* NOTE: Increase max buf size to 10-fold (20K), and save memory, too  */
 /*     If 2nd parameter is null, use malloc()'ed memory and return it.   */
@@ -1248,7 +1247,7 @@ char *fread_string(FILE * fl)
 char *file_to_string(char *name, char *sbuf)
 {
     FILE *fl;
-    char *buf, *bp, tmp[100] ; 
+    char *buf, *bp, tmp[100] ;
     int buflen;
 
     if(sbuf) {
@@ -1260,16 +1259,16 @@ char *file_to_string(char *name, char *sbuf)
 	buflen = MAX_STRING_LENGTH*10;
     }
     *buf = '\0';
-    bp = buf; 
+    bp = buf;
 
     if (!(fl = fopen(name, "r"))) {
 	/* NOTE: Log failed file name. */
-	sprintf(tmp, "file-to-string: %s", name ); 
-	perror(tmp); 
+	sprintf(tmp, "file-to-string: %s", name );
+	perror(tmp);
 	return (NULL);
     }
 
-    while( fgets( bp, MAX_LINE_LEN-3, fl) != NULL ) { 
+    while( fgets( bp, MAX_LINE_LEN-3, fl) != NULL ) {
 	bp += strlen(bp);
 	// NOTE: not \n\r => \n
 	// strcpy( bp, "\r" );
@@ -1282,16 +1281,16 @@ char *file_to_string(char *name, char *sbuf)
 		*buf = '\0';
 		return (NULL);
 	    }
-	} 
+	}
     }
 
-    fclose(fl); 
-    /* NOTE: Shrink buf to return back unused core	*/ 
+    fclose(fl);
+    /* NOTE: Shrink buf to return back unused core	*/
     if ( !sbuf )
-	RECREATE(buf, char, ( bp - buf + 8 ) ); 
+	RECREATE(buf, char, ( bp - buf + 8 ) );
 
     return (buf);
-} 
+}
 
 /*
 int compare(struct player_index_element *arg1, struct player_index_element
@@ -1313,7 +1312,7 @@ char *lookup_db(char *keyword)
 	return(MESS_FILE);
     if( !strcmp(keyword,"help"))
 	return(HELP_KWRD_FILE);
-    else 
+    else
 	return(NULL);
 }
 

@@ -25,7 +25,7 @@ struct command_info {
 };
 
 /* global varible */
-struct command_info *cmd_info[MAX_CMD_LIST]; 
+struct command_info *cmd_info[MAX_CMD_LIST];
 char *CMD_LINE; /* NOTE: New! to get full command line from action proc. */
 
 /* ---------------------------------------------------------------- */
@@ -369,7 +369,7 @@ char *alias[] = {
     "z",	"z",
 
     "/",	"chat",
-    "\"",	"gtell", 
+    "\"",	"gtell",
     "gi",	"give",
     "gr",	"group",
     "wr",	"wear",
@@ -408,20 +408,20 @@ char *alias[] = {
     "fire",	"cast 'firestorm'",
     "li",	"light",
     "sho",	"shouryuken",
-    "spin",	"spin", 
+    "spin",	"spin",
     "\n",	"\n",
 };
 
 /* internal proc's */
-int special(struct char_data *ch, int cmd, char *arg ); 
+int special(struct char_data *ch, int cmd, char *arg );
 void log_command(struct char_data *ch, char *argument, int cmd);
 
 /* NOTE: NEW! Break from hide state after executing command.
     This needs much refinement like determine breaking hide depending
-    on command and action. */ 
+    on command and action. */
 void break_hide(struct char_data *ch, char *argument, int cmd)
 {
-	REMOVE_BIT(ch->specials.affected_by, AFF_HIDE); 
+	REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
 }
 
 int command_interpreter(struct char_data *ch, char *argument)
@@ -431,7 +431,7 @@ int command_interpreter(struct char_data *ch, char *argument)
     int lev, alias_found, len , i;
     char *args, *to, *msg ;
     char cmdbuf[MAX_BUFSIZ] ;
-    extern int no_specials; 
+    extern int no_specials;
     extern int find_action(char *action_name, int *min_lev, int *min_pos );
 
     /* NOTE: Break from hide state *after* executing command. */
@@ -443,7 +443,7 @@ int command_interpreter(struct char_data *ch, char *argument)
     for (look_at = 0; ISLETTER(*(argument + begin + look_at)); look_at++) ;
 #endif    /* UNUSED_CODE */
 
-    for ( args = argument; isspace(*args) ; args++ ) ; 
+    for ( args = argument; isspace(*args) ; args++ ) ;
     /* NOTE: NEW GLOBAL varable to access full command line */
     CMD_LINE = args;
     for ( to = cmdbuf ; *args && !isspace(*args) ; args++, to++ )
@@ -455,19 +455,19 @@ int command_interpreter(struct char_data *ch, char *argument)
     if(( alias_found = search_block( cmdbuf, alias, 2 )) > 0 ) {
 	strcpy( cmdbuf, alias[alias_found+1] );
 	strcat( cmdbuf, args );
-        for( args = cmdbuf ; *args && !isspace(*args); args++ ) ; 
-	if( *args) 
-	    *(args++)= '\0' ; 
-    } 
+        for( args = cmdbuf ; *args && !isspace(*args); args++ ) ;
+	if( *args)
+	    *(args++)= '\0' ;
+    }
     /* NOTE: Strip blanks between command and arguments */
-    while( isspace(*args)) args++ ; 
+    while( isspace(*args)) args++ ;
 /*
     cmd = old_search_block(argument, begin, look_at, command, 0);
 */
     /* NOTE: find command in cmd_info.command_str[]: inexact match */
     cmd_nr = 0;
     len = strlen(cmdbuf);
-    if(len == 0) 
+    if(len == 0)
 	return(0);
     for( i = 1 ; i < MAX_CMD_LIST ; i++) {
 	if ( !cmd_info[i] || cmd_info[i]->command_nr <=0 )
@@ -477,18 +477,18 @@ int command_interpreter(struct char_data *ch, char *argument)
 	    req_level = cmd_info[i]->minimum_level[GET_CLASS(ch)-1];
 	    req_pos = cmd_info[i]->minimum_position;
 	    cmd_proc = cmd_info[i]->command_pointer;
-	    goto found; 
+	    goto found;
 	}
     }
-    /* NOTE: if not found in command list, it may be social action */ 
+    /* NOTE: if not found in command list, it may be social action */
     /* NOTE: If it is social action, find_action will return
 	positive index to soc_mess[] table, and set req_level, req_pos.	*/
-    cmd_nr = find_action( cmdbuf, &req_level, &req_pos ); 
+    cmd_nr = find_action( cmdbuf, &req_level, &req_pos );
     cmd_proc = do_action;
 
-found: 
+found:
     if ( cmd_nr <= 0) {
-	lev = GET_LEVEL(ch); 
+	lev = GET_LEVEL(ch);
 	if (lev > LEVEL_LIMIT)
 	    msg = STRHAN("What did you say, Sir ?\r\n",
 	"오 신이시여 무식한 제가 잘못입니다.. 좀더 쉬운 말씀으로..\r\n", ch);
@@ -499,10 +499,10 @@ found:
 	else
 	    msg = STRHAN( "Huh?\r\n", "뭐라고?\r\n", ch);
     }
-    else if ( cmd_proc == 0 ) 
-	msg = "Sorry, but that command has yet to be implemented...\r\n"; 
+    else if ( cmd_proc == 0 )
+	msg = "Sorry, but that command has yet to be implemented...\r\n";
     else if ( GET_LEVEL(ch) < req_level )
-	msg = "Huh?\r\n"; 
+	msg = "Huh?\r\n";
     else if ( GET_POS(ch) < req_pos ) {
 	switch (GET_POS(ch)) {
 	case POS_DEAD:
@@ -529,35 +529,35 @@ found:
     else if ( cmd_proc == do_action ) {
 	do_action( ch, args, cmd_nr );
 
-	/* NOTE: BUG: char is still hided after action command : fixed it. */ 
+	/* NOTE: BUG: char is still hided after action command : fixed it. */
 	return (1);
     }
     else {
-	log_command(ch, argument, cmd_nr); 
+	log_command(ch, argument, cmd_nr);
 	if (no_specials || !special(ch, cmd_nr, args))
 	((*cmd_proc) (ch, args, cmd_nr));
 
-	/* NOTE: char breaks hide *after* executing first command  */ 
+	/* NOTE: char breaks hide *after* executing first command  */
 	break_hide(ch, args, cmd_nr);
 	return (1);
     }
-    send_to_char(msg, ch); 
+    send_to_char(msg, ch);
     return(0);
 }
 
-void log_command(struct char_data *ch, char *argument, int cmd) 
-{ 
+void log_command(struct char_data *ch, char *argument, int cmd)
+{
     char buf[MAX_BUFSIZ];
-    extern int loglevel; 
+    extern int loglevel;
 /* level  0 : No command/extract/stash log.
  * level  1 : shout, chat, cant, echo, wall, wizset, demote, shutdown, banish.
- * level  2 : level 1 + say, tell, ', reply, ask. (except gtell, whisper.) 
+ * level  2 : level 1 + say, tell, ', reply, ask. (except gtell, whisper.)
  * level  3 : All commands except simple movement.
  * level  4 : level 3 + extract_char/ stash_char.
  * level  5 : level 1 + debugging info (marked with "DEBUG:").  */
 
     if ( loglevel <= 0 || cmd <= CMD_DOWN )
-	return; 
+	return;
     /* NOTE: log PC player only, not mob */
     if ( !IS_NPC(ch) && IS_SET(ch->specials.act, PLR_XYZZY)) {
 	sprintf(buf, "%s:: %s", GET_NAME(ch), argument);
@@ -566,14 +566,14 @@ void log_command(struct char_data *ch, char *argument, int cmd)
     /* NOTE: Log some commands according to log level   */
     else if(( cmd==CMD_SHOUT || cmd==CMD_CHAT || cmd==CMD_CANT || cmd==CMD_ECHO
 	    || cmd==CMD_WALL || cmd==CMD_WIZSET || cmd==CMD_DEMOTE
-	    || cmd==CMD_SHUTDOWN || cmd==CMD_BANISH || cmd==CMD_FLAG ) 
-	|| (loglevel == 2 && ( cmd == CMD_SAY || cmd == CMD_TELL 
+	    || cmd==CMD_SHUTDOWN || cmd==CMD_BANISH || cmd==CMD_FLAG )
+	|| (loglevel == 2 && ( cmd == CMD_SAY || cmd == CMD_TELL
 	    || cmd == CMD_QUOTE || cmd == CMD_REPLY || cmd == CMD_ASK ))
        || (loglevel == 3 || loglevel == 4)) {
 
-	sprintf(buf,"$ %-8s %s", GET_NAME(ch), argument); 
+	sprintf(buf,"$ %-8s %s", GET_NAME(ch), argument);
 	log(buf);
-    } 
+    }
 }
 
 /* NOTE: special() has changed argument order  */
@@ -615,33 +615,33 @@ int special(struct char_data *ch, int cmd, char *arg )
 	if (i->item_number >= 0)
 	    if (obj_index[i->item_number].func)
 		if ((*obj_index[i->item_number].func) (ch, cmd, arg))
-		    return (1); 
+		    return (1);
 
     return (0);
 }
 
-/* NOTE: subst_show() will notify do_show() will substitute 
+/* NOTE: subst_show() will notify do_show() will substitute
 	do_news(), do_credits(), do_wizards(), do_plan(), do_version(). */
 void subst_show(struct char_data *ch, char *argument, int cmd)
 {
     send_to_char("This command is removed. Try 'show <topic>'.\r\n", ch );
-} 
-/* NOTE: subst_set() will notify do_set() will substitute 
+}
+/* NOTE: subst_set() will notify do_set() will substitute
 	do_nochat(), do_notell(), doshout(), do_compact(), do_brief(),
-	do_hangul(), do_solo(), do_title(). */ 
+	do_hangul(), do_solo(), do_title(). */
 void subst_set(struct char_data *ch, char *argument, int cmd)
 {
     send_to_char("This command is removed. "
 	"Try 'set <attribute> <yes/no/value>'.\r\n", ch );
-} 
-/* NOTE: subst_holdwield() will notify do_hold(), do_wield() will substitute 
+}
+/* NOTE: subst_holdwield() will notify do_hold(), do_wield() will substitute
 	do_unhold(), do_unwield()	*/
 void subst_holdwield(struct char_data *ch, char *argument, int cmd)
 {
     send_to_char("This command is removed. "
 	"Try 'hold' or 'wield' with no argument.\r\n", ch );
 }
-/* NOTE: subst_flag() will notify do_flag()will substitute 
+/* NOTE: subst_flag() will notify do_flag()will substitute
 	do_log(), do_dumb() */
 void subst_flag(struct char_data *ch, char *argument, int cmd)
 {
@@ -651,13 +651,13 @@ void subst_flag(struct char_data *ch, char *argument, int cmd)
 
 void do_not_here(struct char_data *ch, char *argument, int cmd)
 {
-    send_to_char("Sorry, but you cannot do that here!\n\r", ch);
-} 
+    send_to_char("Sorry, but you cannot do that here!\r\n", ch);
+}
 
 /* NOTE: Now it is function. not macro */
-void COMMANDO(char *str, sh_int number, byte min_pos, 
+void COMMANDO(char *str, sh_int number, byte min_pos,
 	void (*pointer)(), byte min_lm, byte min_lc, byte min_lt, byte min_lw)
-{ 
+{
     static int counter = 0;
     struct command_info *command;
     CREATE(command, struct command_info, 1 );
@@ -727,7 +727,7 @@ void assign_command_pointers(void)
     COMMANDO( "help", CMD_HELP, POS_DEAD, do_help, 0, 0, 0, 0);
     COMMANDO( "who", CMD_WHO, POS_DEAD, do_who, 0, 0, 0, 0);
     COMMANDO( "emote", CMD_EMOTE, POS_SLEEPING, do_emote, 1, 1, 1, 1);
-    COMMANDO( "echo", CMD_ECHO, POS_SLEEPING, do_echo, IMO, IMO, IMO, IMO); 
+    COMMANDO( "echo", CMD_ECHO, POS_SLEEPING, do_echo, IMO, IMO, IMO, IMO);
     /* NOTE: do_stand(), do_sit(), do_rest()
     	have their own minimum position checking 	*/
     COMMANDO( "stand", CMD_STAND, POS_SLEEPING, do_stand, 0, 0, 0, 0);
@@ -736,7 +736,7 @@ void assign_command_pointers(void)
     COMMANDO( "rest", CMD_REST, POS_SLEEPING, do_rest, 0, 0, 0, 0);
 
     COMMANDO( "sleep", CMD_SLEEP, POS_SLEEPING, do_sleep, 0, 0, 0, 0);
-    COMMANDO( "wake", CMD_WAKE, POS_SLEEPING, do_wake, 0, 0, 0, 0); 
+    COMMANDO( "wake", CMD_WAKE, POS_SLEEPING, do_wake, 0, 0, 0, 0);
     COMMANDO( "force", CMD_FORCE, POS_SLEEPING, do_force, IMO + 2, IMO + 2, IMO + 2, IMO + 2);
     COMMANDO( "transfer", CMD_TRANSFER, POS_SLEEPING, do_trans, IMO + 1, IMO + 1, IMO + 1, IMO + 1);
     /* COMMANDO( "hug", ACTN_HUG,  POS_RESTING, do_action, 0, 0, 0, 0); */
@@ -760,7 +760,7 @@ void assign_command_pointers(void)
     COMMANDO( "grab", CMD_GRAB, POS_RESTING, do_grab, 0, 0, 0, 0);
     COMMANDO( "remove", CMD_REMOVE, POS_RESTING, do_remove, 0, 0, 0, 0);
     COMMANDO( "put", CMD_PUT, POS_RESTING, do_put, 0, 0, 0, 0);
-    /* NOTE: do_shutdown() will check it */ 
+    /* NOTE: do_shutdown() will check it */
    /*  COMMANDO( "shutdow", CMD_SHUTDOW, POS_DEAD, do_shutdow, IMO + 3, IMO + 3, IMO + 3, IMO + 3); */
     COMMANDO( "save", CMD_SAVE, POS_SLEEPING, do_save, 0, 0, 0, 0);
     COMMANDO( "hit", CMD_HIT, POS_FIGHTING, do_hit, 0, 0, 0, 0);
@@ -781,11 +781,11 @@ void assign_command_pointers(void)
     /* COMMANDO(84, POS_SITTING, do_cast, 1, 1, 1, 1); */
     COMMANDO( "cast", CMD_CAST, POS_STUNNED, do_cast, 1, 1, 1, 1);
     COMMANDO( "at", CMD_AT, POS_DEAD, do_at, IMO, IMO, IMO, IMO);
-    /* NOTE: do_ask() is essentailly same function with do_whisper() */ 
+    /* NOTE: do_ask() is essentailly same function with do_whisper() */
     /* COMMANDO(86, POS_RESTING, do_ask, 1, 1, 1, 1); */
     COMMANDO( "ask", CMD_ASK, POS_RESTING, do_whisper, 1, 1, 1, 1);
     COMMANDO( "order", CMD_ORDER, POS_RESTING, do_order, 1, 1, 1, 1);
-    /* NOTE: do_sip(), do_taste() are replaced by do_drink(), do_eat() */ 
+    /* NOTE: do_sip(), do_taste() are replaced by do_drink(), do_eat() */
     /* COMMANDO( "sip", CMD_SIP, POS_RESTING, do_sip, 0, 0, 0, 0); */
     COMMANDO( "sip", CMD_SIP, POS_RESTING, do_drink, 0, 0, 0, 0);
     /* COMMANDO( "taste", CMD_TASTE, POS_RESTING, do_taste, 0, 0, 0, 0); */
@@ -1040,9 +1040,9 @@ void assign_command_pointers(void)
     COMMANDO( "show", CMD_SHOW, POS_SLEEPING, do_show, 1, 1, 1, 1);
     COMMANDO( "power bash", CMD_POWER_BASH, POS_FIGHTING, do_power_bash, 15, 15, 15, 15);
     COMMANDO( "evil strike", CMD_EVIL_STRIKE, POS_FIGHTING, do_evil_strike, 25, 25, 25, 25);
-    // NOTE: 'call' => 'taxi <zone>' ('taxi kaist', 'taxi process') 
+    // NOTE: 'call' => 'taxi <zone>' ('taxi kaist', 'taxi process')
     COMMANDO( "taxi", CMD_TAXI, POS_STANDING, do_not_here, 1, 1, 1, 1);
-    COMMANDO( "charge", CMD_CHARGE, POS_FIGHTING, do_charge, 20, 20, 20, 20); 
+    COMMANDO( "charge", CMD_CHARGE, POS_FIGHTING, do_charge, 20, 20, 20, 20);
     /* NOTE: 'solo' command is substituted by 'set solo on/off'.  */
     /* COMMANDO(296, POS_STANDING, do_solo, 1, 1, 1, 1); */
     COMMANDO( "solo", CMD_SOLO, POS_STANDING, subst_set, 1, 1, 1, 1);
@@ -1077,25 +1077,25 @@ void do_wizhelp(struct char_data *ch, char *argument, int cmd)
 
     if (IS_NPC(ch))
 	return;
-    send_to_char("The following privileged commands are available:\n\r", ch);
+    send_to_char("The following privileged commands are available:\r\n", ch);
     *buf = '\0';
     no = 1;
     /* NOTE: Modified according to changue of struct command_info. */
     for ( i = 1; i < MAX_CMD_LIST ; i++) {
-	if ( !cmd_info[i]  
+	if ( !cmd_info[i]
 		|| GET_LEVEL(ch) < cmd_info[i]->minimum_level[GET_CLASS(ch)-1])
 	    continue;
 	for (j = 0; j < 4; j++)
 	    if ( LEVEL_LIMIT >= cmd_info[i]->minimum_level[j])
 		goto no_wizcmd;
-	
+
 	sprintf(buf + strlen(buf), "%-15s", cmd_info[i]->command_str);
 	if (!(no % 4))
-	    strcat(buf, "\n\r");
+	    strcat(buf, "\r\n");
 	no++;
 no_wizcmd:;
     }
-    strcat(buf, "\n\r");
+    strcat(buf, "\r\n");
     page_string(ch->desc, buf, 1);
 }
 
@@ -1124,6 +1124,6 @@ int cando_action( struct char_data *ch, int cmd_nr )
     if( ( cmd_info[mid]->minimum_position > GET_POS(ch))
 	|| (cmd_info[mid]->minimum_level[GET_CLASS(ch)-1] > GET_LEVEL(ch)))
 	return(FALSE);
-    return(TRUE); 
+    return(TRUE);
 }
 #endif 		/* UNUSED_CODE */

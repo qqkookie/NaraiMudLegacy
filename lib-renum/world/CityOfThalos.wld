@@ -6,7 +6,7 @@ gust of wind blows by you into the deserted, and seemingly destroyed,
 city. Please read the sign.
 ~
 174 0 1
-D1 
+D1
 The desert sands stretch on for miles and miles.~
 ~
 0 0 17254
@@ -54,7 +54,7 @@ Main Street~
      This was once a magnificant street, but now is in total ruin. The
 streets are barren and windswept and the silence is unending. On one
 side is a collapsed house while on the other is the entrance to a large
-ruined mansion. Eerie sounds echo within the mansion. Near the center of 
+ruined mansion. Eerie sounds echo within the mansion. Near the center of
 town you see a large domed building, relatively intact.
 ~
 174 0 1
@@ -131,7 +131,7 @@ S
 A garden path~
      A circular path surrounds a magificant domed temple in the center
 of the city. Flowers have withered away and the once lush trees are bare.
-Vines and ivy creep up the sides of the temple and entangle themselves 
+Vines and ivy creep up the sides of the temple and entangle themselves
 around your feet.
 ~
 174 0 1
@@ -155,9 +155,9 @@ What looks like a market place lies this way.~
 S
 #17416
 A garden path~
-     A circular path surrounds a magnificant domed temple in the center 
+     A circular path surrounds a magnificant domed temple in the center
 of the city. Flowers have withered away and the once lush trees are bare.
-Vines and ivy creep up the sides of the temple and entangle themselves 
+Vines and ivy creep up the sides of the temple and entangle themselves
 around your feet.
 ~
 174 0 1
@@ -193,7 +193,7 @@ onto the ground.~
 ~
 0 0 17435
 D1
-A small garden path encircles a large domed temple in the center of the 
+A small garden path encircles a large domed temple in the center of the
 city.~
 ~
 0 0 17415
@@ -250,7 +250,7 @@ S
 #17420
 A side street~
      You are in the common section of the city. Ruined buildings made of
-clay and stone is all the view has to offer. Most of these homes are 
+clay and stone is all the view has to offer. Most of these homes are
 nothing but piles of rubble, but some look almost safe enough to venture
 into. The street continues north and south and buildings line the street.
 ~
@@ -427,7 +427,7 @@ D2
 S
 #17428
 A back alley~
-     A narrow alley leads east to a wider street and west to one of 
+     A narrow alley leads east to a wider street and west to one of
 the city watchtowers.
 ~
 174 0 1
@@ -444,7 +444,7 @@ S
 The guild house~
      You are standing in what once was this city's ONLY guild house.
 Tables and chairs have been smashed and broken weapons lie strewn about
-the floor as if some massive battle had taken place here. Draped along 
+the floor as if some massive battle had taken place here. Draped along
 the back wall is a tattered, jet-black banner with the symbol of the
 Darkside set upon it.
 ~
@@ -456,7 +456,7 @@ A small side street runs past the building.~
 S
 #17430
 The produce stand~
-    A large cart sits here carrying rotted fruit and vegitables. Flys 
+    A large cart sits here carrying rotted fruit and vegitables. Flys
 swarm all about what seems to be the last remaining bits of food left
 in the city.
 ~
@@ -485,7 +485,7 @@ S
 #17432
 The tapestry stand~
      Tattered and torn tapestries and rugs lie heaped in piles. Fancy
-robes and various articles of clothing are now just rags. You stare at 
+robes and various articles of clothing are now just rags. You stare at
 the strange piles for a long time until a piercing howl makes you
 think these might be beds.
 ~
@@ -540,7 +540,7 @@ S
 #17435
 The jewelery stand~
     A table has been tipped over, spilling fine jewelery and gems
-across the market place. Most of these trinkets are battered and 
+across the market place. Most of these trinkets are battered and
 tarnished and few would have any value anymore.
 ~
 174 0 1
@@ -610,8 +610,8 @@ The Tavern of the Sun~
      A glorious place in it's prime, this tavern now lies in ruin; tables
 and chairs are broken scattered, bottles and glasses shattered, and
 a small performance stage crushed. Musical instruments and personal
-belongings lie under the rubble, but the people they once belonged to are 
-not with them. Looking up you see that the entire second floor and roof 
+belongings lie under the rubble, but the people they once belonged to are
+not with them. Looking up you see that the entire second floor and roof
 has fallen in, leaving a gaping hole above.
 ~
 174 0 1
@@ -622,7 +622,7 @@ A small side street runs past the tavern.~
 S
 #17441
 South wing of the city hall~
-     You stand in a large room attached to this end of the hallway which 
+     You stand in a large room attached to this end of the hallway which
 leads back north to the reception area. Pedistals and columns have fallen
 and most of the valuable items have been taken, leaving worthless debris.
 A few chairs have survived, as well as a large curved desk. To the east
@@ -643,7 +643,7 @@ The city hall~
      This is the main reception area of Thalos' city hall. The walls have
 been charred and scored massively and debris is spread from wall to wall.
 A large gaping hole in the west wall allows you to see out to one of
-the city's side streets. Obviously noone will be seeing you through today. 
+the city's side streets. Obviously noone will be seeing you through today.
 Hallways lead south and east.
 ~
 174 8 1
@@ -689,7 +689,7 @@ beautiful place. The temple's garden path has nothing on this garden.
 Flowers and trees have been smashed into the ground and lawn benches
 thrown through walls. A large marble fountain in the center of the
 courtyard still stands, though, defying any attempts to destroy its
-beauty. Above stands the reminants of one of the watchtowers. Archways 
+beauty. Above stands the reminants of one of the watchtowers. Archways
 north and west lead back into the city hall.
 ~
 174 0 1
@@ -717,7 +717,7 @@ S
 #17446
 A collapsed home~
     All that's left of this house is a few scattered piles of rubble
-and a very large blast crater. Obviously someone or something important 
+and a very large blast crater. Obviously someone or something important
 was once housed here. A shreeking howl chills your blood.
 ~
 174 0 1
@@ -730,7 +730,7 @@ S
 A tall dwelling~
      This seems to be the tallest structure remaining in the city. At
 one time this could have been an inn of some sort, but now it's just
-a mess. The back wall as been completely knocked down revealing an 
+a mess. The back wall as been completely knocked down revealing an
 entrance into another building through yet another collapsed wall.
 Between the two buildings are a few blast craters and boulders. An old
 set of wooden steps leads up to a creaking second floor.
@@ -837,7 +837,7 @@ in it.~
 S
 #17453
 A back alley~
-    A narrow back alley leads west to a small side street and east to one 
+    A narrow back alley leads west to a small side street and east to one
 of the city watchtowers. Great amounts of steam issue forth from the
 building to the south.
 ~
@@ -928,12 +928,12 @@ S
 #17460
 The Temple of Thalos~
     You stand within one of the most holy places in the realm. This
-stunning domed temple once housed the city's worshipers en masse. 
+stunning domed temple once housed the city's worshipers en masse.
 Unfortunately, it succumed to the destruction brought on this city.
 Long benches lie toppled and the altar desicrated. Large chunks of stone
 have fallen from the walls and roof, sending sunlight streaming in on
 you. A few books lie about, conveying to you a holy message in a
-strange tounge. 
+strange tounge.
      Wind gusts through the four archways and howls and screams can be
 heard from all parts of the city.
 ~

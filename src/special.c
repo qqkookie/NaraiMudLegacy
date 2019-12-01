@@ -133,7 +133,7 @@ void assign_mobiles(void)
     /* GoodBadIsland */
     mob_index[real_mobile(GBI_SAINT_MIRROR)].func = gbisland_saint_mirror;
     mob_index[real_mobile(GBI_LANESSA)].func = gbisland_lanessa;
-    mob_index[real_mobile(GBI_CARPIE)].func = gbisland_carpie; 
+    mob_index[real_mobile(GBI_CARPIE)].func = gbisland_carpie;
 }
 
 /* assign special procedures to objects */
@@ -188,7 +188,7 @@ void assign_rooms(void)
     extern int guild_entry(struct char_data *ch, int cmd, char *arg);
     extern int locker_room(struct char_data *ch, int cmd, char *arg);
     extern int guild_practice_yard(struct char_data *ch, int cmd, char *arg);
-    extern int taxi(struct char_data *ch, int cmd, char *arg); 
+    extern int taxi(struct char_data *ch, int cmd, char *arg);
 
     /* jail */
     extern int jail_room(struct char_data *ch, int cmd, char *arg);
@@ -230,7 +230,7 @@ void assign_rooms(void)
    world[real_room(LEVGATE_THALOS)].funct = level_gate;
    world[real_room(LEVGATE_SHIRE)].funct = level_gate;
  */
-   // NOTE: unused levelgate 
+   // NOTE: unused levelgate
    // world[real_room(LEVGATE_MAGETOWER)].funct = level_gate;
 
     /* guild entry */
@@ -262,7 +262,7 @@ void assign_rooms(void)
 
     for ( int ii = 0; RC_elecfield[ii] > 0 ; ii++)
 	world[real_room(ROBOCITY_BASE + RC_elecfield[ii])].funct = electric_shock;
-	
+
     /*
     world[real_room(15125)].funct = electric_shock;
     world[real_room(15135)].funct = electric_shock;
@@ -285,7 +285,7 @@ void assign_rooms(void)
     */
 }
 /* ================================================================ */
-/* 
+/*
    Quest Management module(source file)
    made by atre@paradise.kaist.ac.kr at 1995/11/09
  */
@@ -398,7 +398,7 @@ int get_quest(struct char_data *ch)
 	188,		/* 40 *//* 27 level */
 	263,		/* 50 *//* 30 level */
 	/* 304, */	/* 60 *//* 32 level */
-	/* NOTE: quest mob adjustment */ 
+	/* NOTE: quest mob adjustment */
 	302, 		/* 60 *//* 36 level */
 	344,		/* 70 *//* 38 level */
 	360,		/* 80 *//* 39 level */
@@ -443,8 +443,8 @@ void do_request(struct char_data *ch, char *arg, int cmd)
     char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
     if (IS_WIZARD(ch)) {		/* IMO */
-	send_to_char_han("QUEST : You can do something.\n\r",
-			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
+	send_to_char_han("QUEST : You can do something.\r\n",
+			 "QUEST : 당신은 무엇이든 할 수 있습니다.\r\n", ch);
 	return;
     }
 
@@ -466,8 +466,8 @@ void do_request(struct char_data *ch, char *arg, int cmd)
 	if (IS_ALL_REMOED(ch)) {
 	    if (ch->quest.solved < 30) {
 
-		send_to_char_han("QUEST : You can't request.\n\r",
-			   "QUEST : 다른 임무를 맡을 수 없습니다.\n\r", ch);
+		send_to_char_han("QUEST : You can't request.\r\n",
+			   "QUEST : 다른 임무를 맡을 수 없습니다.\r\n", ch);
 		return;
 	    }
 	    else {
@@ -490,8 +490,8 @@ void do_request(struct char_data *ch, char *arg, int cmd)
 		GET_EXP(ch) -= xp;
 	    }
 	    else {
-		send_to_char_han("QUEST : You can't request.\n\r",
-			   "QUEST : 다른 임무를 맡을 수 없습니다.\n\r", ch);
+		send_to_char_han("QUEST : You can't request.\r\n",
+			   "QUEST : 다른 임무를 맡을 수 없습니다.\r\n", ch);
 		return;
 	    }
 	}
@@ -513,8 +513,8 @@ void do_request(struct char_data *ch, char *arg, int cmd)
 
     /* ch solved quest */
     if (ch->quest.type < 0) {
-	send_to_char_han("QUEST : Congratulations, You made! Go to QM.\n\r",
-		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\n\r", ch);
+	send_to_char_han("QUEST : Congratulations, You made! Go to QM.\r\n",
+		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\r\n", ch);
 	return;
     }
 }
@@ -526,8 +526,8 @@ void do_hint(struct char_data *ch, char *arg, int cmd)
     char *zone;
 
     if (IS_WIZARD(ch)) {		/* IMO */
-	send_to_char_han("QUEST : You can do something.\n\r",
-			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
+	send_to_char_han("QUEST : You can do something.\r\n",
+			 "QUEST : 당신은 무엇이든 할 수 있습니다.\r\n", ch);
 	return;
     }
 
@@ -536,15 +536,15 @@ void do_hint(struct char_data *ch, char *arg, int cmd)
 
     /* not initialized */
     if (ch->quest.type == 0) {
-	send_to_char_han("QUEST : First, you should type quest.\n\r",
-			 "QUEST : 먼저 quest라고 해 보세요.\n\r", ch);
+	send_to_char_han("QUEST : First, you should type quest.\r\n",
+			 "QUEST : 먼저 quest라고 해 보세요.\r\n", ch);
 	return;
     }
 
     /* ch solved quest */
     if (ch->quest.type < 0) {
-	send_to_char_han("QUEST : Congratulations, You made! Go to QM.\n\r",
-		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\n\r", ch);
+	send_to_char_han("QUEST : Congratulations, You made! Go to QM.\r\n",
+		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\r\n", ch);
 	return;
     }
 
@@ -570,8 +570,8 @@ void do_quest(struct char_data *ch, char *arg, int cmd)
     char buf1[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 
     if (IS_WIZARD(ch)) {		/* IMO */
-	send_to_char_han("QUEST : You can do something.\n\r",
-			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
+	send_to_char_han("QUEST : You can do something.\r\n",
+			 "QUEST : 당신은 무엇이든 할 수 있습니다.\r\n", ch);
 	return;
     }
 
@@ -595,8 +595,8 @@ void do_quest(struct char_data *ch, char *arg, int cmd)
 
     /* ch solved quest */
     if (ch->quest.type < 0) {
-	send_to_char_han("QUEST : Congratulations, You made! Go to QM.\n\r",
-		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\n\r", ch);
+	send_to_char_han("QUEST : Congratulations, You made! Go to QM.\r\n",
+		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\r\n", ch);
 	return;
     }
 
@@ -710,7 +710,7 @@ int give_gift_for_quest(struct char_data *ch)
 	return (gift_array[num]);
     }
     /* NOTE: Half quest prize for negative solved quest number */
-    else if ( ch->quest.solved < 0 && number(0,9) < 5) 
+    else if ( ch->quest.solved < 0 && number(0,9) < 5)
 	return(0);
     else {
 	num = number(0, 39);
@@ -720,7 +720,7 @@ int give_gift_for_quest(struct char_data *ch)
 #endif
 
 
-/* 
+/*
 NOTE: OLD: void check_quest_mob_die(struct char_data *ch, int mob )
       OLD check ch's quest number with real mobile num
       NEW: Change type of 2nd argument. (mob number -> pointer to mob itself)
@@ -730,13 +730,13 @@ void check_quest_mob_die(struct char_data *ch, struct char_data *victim)
     if ( !ch || !victim )
 	return ;
 
-    if ( IS_NPC(victim)  && (ch->quest.type > 0 )) 
+    if ( IS_NPC(victim)  && (ch->quest.type > 0 ))
 	if ( real_mobile(QM[ch->quest.data].virtual) == victim->nr ) {
 	    ch->quest.type = -1;
-	    send_to_char_han("QUEST : Congratulations, You made! Go to QM.\n\r",
-		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\n\r", ch);
-	} 
-    /* NOTE: checking char's hunting target died moved to adjust_gain()  */ 
+	    send_to_char_han("QUEST : Congratulations, You made! Go to QM.\r\n",
+		"QUEST : 성공했군요, 축하합니다. QM에게 가보세요.\r\n", ch);
+	}
+    /* NOTE: checking char's hunting target died moved to adjust_gain()  */
 }
 
 int quest_room(struct char_data *ch, int cmd, char *arg)
@@ -812,18 +812,18 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 	    tmp_obj = get_obj_in_list_vis(ch, buf, ch->carrying);
 	    if (tmp_obj) {
 		if (IS_ALL_REMOED(ch))
-		    send_to_char("You can't use that ticket .\n\r", ch);
+		    send_to_char("You can't use that ticket .\r\n", ch);
 		else if (obj_index[tmp_obj->item_number].virtual == 7994) {
 		    ch->quest.type = 0;
 		    do_quest(ch, arg, 302);
 		    extract_obj(tmp_obj);
 		}
 		else {
-		    send_to_char("You can't use that ticket here.\n\r", ch);
+		    send_to_char("You can't use that ticket here.\r\n", ch);
 		}
 	    }
 	    else {
-		send_to_char("You do not have that item.\n\r", ch);
+		send_to_char("You do not have that item.\r\n", ch);
 	    }
 
 	    return TRUE;
@@ -833,8 +833,8 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
     }
 
     if (IS_WIZARD(ch)) {		/* IMO */
-	send_to_char_han("QUEST : You can do something.\n\r",
-			 "QUEST : 당신은 무엇이든 할 수 있습니다.\n\r", ch);
+	send_to_char_han("QUEST : You can do something.\r\n",
+			 "QUEST : 당신은 무엇이든 할 수 있습니다.\r\n", ch);
 	return TRUE;
     }
 
@@ -843,7 +843,7 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 	    int lev2;
 
 	case 1:	/* some gold */
-	    /* 
+	    /*
 	       GET_GOLD(ch) += number(100000, (500000 * GET_LEVEL(ch)) >> 2); */
 	    /* NOTE: Too much quest prize money for low level */
 	    assert(GET_LEVEL(ch) > 9);
@@ -852,15 +852,15 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 	    gain_gold(ch, number(lev2 * 1000, lev2 * 4000));
 
 	    send_to_char_han(
-			"QUEST : QM gives some coins for your success.\n\r",
-		"QUEST : 당신의 성공을 축하하며 QM이 돈을 줍니다.\n\r", ch);
+			"QUEST : QM gives some coins for your success.\r\n",
+		"QUEST : 당신의 성공을 축하하며 QM이 돈을 줍니다.\r\n", ch);
 	    break;
 	case 3:	/* request ticket */
 	    obj = read_object(7994, VIRTUAL);
 	    obj_to_char(obj, ch);
 	    send_to_char_han(
-	      "QUEST : QM gives a ticket for request for your success.\n\r",
-				"QUEST : 당신의 성공을 축하하며 QM이 REQUEST용 티켓을 줍니다.\n\r", ch);
+	      "QUEST : QM gives a ticket for request for your success.\r\n",
+				"QUEST : 당신의 성공을 축하하며 QM이 REQUEST용 티켓을 줍니다.\r\n", ch);
 	    break;
 	case 5:	/* armor */
 	    obj = read_object(7998, VIRTUAL);
@@ -906,8 +906,8 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 
 	    obj_to_char(obj, ch);
 	    send_to_char_han(
-			  "QUEST : QM gives an armor for your success.\n\r",
-	      "QUEST : 당신의 성공을 축하하며 QM이 갑옷을 줍니다.\n\r", ch);
+			  "QUEST : QM gives an armor for your success.\r\n",
+	      "QUEST : 당신의 성공을 축하하며 QM이 갑옷을 줍니다.\r\n", ch);
 	    break;
 	case 6:	/* weapon */
 	    obj = read_object(7997, VIRTUAL);
@@ -946,37 +946,37 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 
 	    obj_to_char(obj, ch);
 	    send_to_char_han(
-			  "QUEST : QM gives a weapon for your success.\n\r",
-	      "QUEST : 당신의 성공을 축하하며 QM이 무기를 줍니다.\n\r", ch);
+			  "QUEST : QM gives a weapon for your success.\r\n",
+	      "QUEST : 당신의 성공을 축하하며 QM이 무기를 줍니다.\r\n", ch);
 	    break;
 	case 7:	/* ticket for AC */
 	    obj = read_object(7991, VIRTUAL);
 	    obj_to_char(obj, ch);
 	    send_to_char_han(
-		 "QUEST : QM gives a ticket for meta for your success.\n\r",
-				"QUEST : 당신의 성공을 축하하며 QM이 메타용 티켓을 줍니다.\n\r", ch);
+		 "QUEST : QM gives a ticket for meta for your success.\r\n",
+				"QUEST : 당신의 성공을 축하하며 QM이 메타용 티켓을 줍니다.\r\n", ch);
 	    break;
 	case 8:	/* ticket for HR */
 	    obj = read_object(7992, VIRTUAL);
 	    obj_to_char(obj, ch);
 	    send_to_char_han(
-		 "QUEST : QM gives a ticket for meta for your success.\n\r",
-				"QUEST : 당신의 성공을 축하하며 QM이 메타용 티켓을 줍니다.\n\r", ch);
+		 "QUEST : QM gives a ticket for meta for your success.\r\n",
+				"QUEST : 당신의 성공을 축하하며 QM이 메타용 티켓을 줍니다.\r\n", ch);
 	    break;
 	case 9:	/* ticket for DR */
 	    obj = read_object(7993, VIRTUAL);
 	    obj_to_char(obj, ch);
 	    send_to_char_han(
-		 "QUEST : QM gives a ticket for meta for your success.\n\r",
-				"QUEST : 당신의 성공을 축하하며 QM이 메타용 티켓을 줍니다.\n\r", ch);
+		 "QUEST : QM gives a ticket for meta for your success.\r\n",
+				"QUEST : 당신의 성공을 축하하며 QM이 메타용 티켓을 줍니다.\r\n", ch);
 	    break;
 	case 0:
 	case 2:
 	case 4:
 	default:
 	    send_to_char_han(
-		  "QUEST : Hmm. I can't find a gift for you this time.\n\r",
-		      "QUEST : 음. 이번에는 줄만한 선물이 없네요.\n\r", ch);
+		  "QUEST : Hmm. I can't find a gift for you this time.\r\n",
+		      "QUEST : 음. 이번에는 줄만한 선물이 없네요.\r\n", ch);
 	}
 	ch->quest.type = 0;
 	ch->quest.solved++;
@@ -998,7 +998,7 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
     }
 
     /* not made */
-    send_to_char_han("QUEST : Come to me, if you made your quest!\n\r",
-		     "QUEST : quest를 마치고 제게 오세요!\n\r", ch);
+    send_to_char_han("QUEST : Come to me, if you made your quest!\r\n",
+		     "QUEST : quest를 마치고 제게 오세요!\r\n", ch);
     return TRUE;
 }

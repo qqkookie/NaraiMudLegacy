@@ -4,7 +4,7 @@
 
 #include "typedef.h"
 
-/* The following defs and structures are related to char_data   */ 
+/* The following defs and structures are related to char_data   */
 
 /* ---------------     For 'char_payer_data'     --------------*/
 
@@ -28,7 +28,7 @@ struct char_player_data {
     char *title;
     ubyte guild;			/* which guild you are joining */
     /* NOTE: Not used member. */
-    /* ubyte no_of_change_guild; */ 
+    /* ubyte no_of_change_guild; */
     /* int skilled; */
     ubyte guild_skills[MAX_GUILD_SKILLS];	/* by process */
     sh_int pk_num;			/* how many did you kill assholes! */
@@ -40,7 +40,7 @@ struct char_player_data {
     ubyte weight;
     ubyte height;
     ubyte remortal;		/* remortal to class */
-}; 
+};
 
 /* 'class' for PC's */
 #define CLASS_MAGIC_USER	1
@@ -136,7 +136,7 @@ struct char_special_data {
     struct char_data *arrest_by;
     struct char_data *arrest_link;
 #endif
-}; 
+};
 
 #define SAVING_PARA   		0
 #define SAVING_HIT_SKILL	1
@@ -233,30 +233,30 @@ struct char_special_data {
 #define PLR_DONTSET		8		/* Dont EVER set */
 #define PLR_RESERVED2		16
 /* NOTE: PLR_SHUTUP is OLD PLR_NOSHOUT (prohibit shouting) */
-#define PLR_SHUTUP		32 
+#define PLR_SHUTUP		32
 #define PLR_BANISHED		64
 #define PLR_DUMB_BY_WIZ		128
 
 #define PLR_WIMPY		256
-#define PLR_SOLO		512 
+#define PLR_SOLO		512
 /* NOTE: PLR_NOSHOUT is OLD PLR_EARMUFFS (Won't hear shouting) */
 #define PLR_NOSHOUT		1024
 #define PLR_NOCHAT		2048
 #define PLR_NOTELL		4096
 #define PLR_BRIEF		8192
 #define PLR_COMPACT		16384
-#define PLR_KOREAN		32768 
+#define PLR_KOREAN		32768
 
 /* NOTE: NEW! Player will open door upon unlocking it. */
-#define PLR_AUTOOPEN		65536 
+#define PLR_AUTOOPEN		65536
 #define PLR_CRIMINAL		131072
 #define PLR_RESERVED4		262144
-#define PLR_RESERVED5		524288 
+#define PLR_RESERVED5		524288
 
 /* #define PLR_AGGR		0 */
 /* #define PLR_NOCHAT_BY_WIZ	0 */
 
-/* -----------   end of struct char_special_data  -------------- */ 
+/* -----------   end of struct char_special_data  -------------- */
 
 /* Used in CHAR_FILE_U *DO*NOT*CHANGE* */
 struct affected_type {
@@ -321,7 +321,7 @@ struct quest_data {
 struct follow_type {
     struct char_data *follower;
     struct follow_type *next;
-}; 
+};
 
 struct char_data {
     int nr;
@@ -444,10 +444,10 @@ struct char_data {
 #define GET_HUNTING(ch) ((ch)->specials.hunting)
 
 /* NOTE: Remove rarely used macros */
-/* #define GET_REGENERATION(ch) ((ch)->regeneration) */ 
-/* #define GET_HEIGHT(ch)  ((ch)->player.height) */ 
+/* #define GET_REGENERATION(ch) ((ch)->regeneration) */
+/* #define GET_HEIGHT(ch)  ((ch)->player.height) */
 /* #define GET_WEIGHT(ch)  ((ch)->player.weight) */
-/* #define GET_AGE(ch)     (age(ch).year)  */ 
+/* #define GET_AGE(ch)     (age(ch).year)  */
 
 /* ------------       Predicates for char      ---------------- */
 
@@ -461,7 +461,7 @@ struct char_data {
 
 #define IS_AFFECTED(ch,skill) ( IS_SET((ch)->specials.affected_by, (skill)) )
 
-#define IS_ACTPLR( ch, flag ) ( IS_SET(GET_ACT(ch), flag )) 
+#define IS_ACTPLR( ch, flag ) ( IS_SET(GET_ACT(ch), flag ))
 
 #define IS_GOOD(ch)    (GET_ALIGNMENT(ch) >= 350)
 #define IS_EVIL(ch)    (GET_ALIGNMENT(ch) <= -350)
@@ -471,7 +471,7 @@ struct char_data {
 /* guild related definitions made by Process */
 
 #define GET_GUILD(x) ((x)->player.guild)
-#define GET_GUILD_SKILL(x,i) ((x)->player.guild_skills[(i)]) 
+#define GET_GUILD_SKILL(x,i) ((x)->player.guild_skills[(i)])
 /* NOTE: Remove unused macros */
 /* #define GET_GUILD_SKILLS(x,i) ((x)->player.guild_skills[(i)]) */
 /* #define GET_GUILD_NAME(i) (guild_names[(i)]) */

@@ -37,7 +37,7 @@ void name_from_drinkcon(struct obj_data *obj)
 	free(obj->name);
 	obj->name = new_name;
     }
-} 
+}
 
 void name_to_drinkcon(struct obj_data *obj, int type)
 {
@@ -49,7 +49,7 @@ void name_to_drinkcon(struct obj_data *obj, int type)
     sprintf(new_name, "%s %s", drinknames[type], obj->name);
     free(obj->name);
     obj->name = new_name;
-} 
+}
 
 /* NOTE: do_drink(), do_sip() have merged. */
 void do_drink(struct char_data *ch, char *argument, int cmd)
@@ -66,17 +66,17 @@ void do_drink(struct char_data *ch, char *argument, int cmd)
     one_argument(argument, buf);
     if (!*buf) {
 	send_to_char("Drink what?\r\n", ch);
-	return; 
+	return;
     }
     else if (!strcmp("sundew", buf))
 	temp = get_obj_in_list_vis(ch, buf, world[ch->in_room].contents);
-    else 
+    else
 	temp = get_obj_in_list_vis(ch, buf, ch->carrying);
 
-    if (!temp) 
+    if (!temp)
 	act("You can't find it!", FALSE, ch, 0, 0, TO_CHAR);
-    else if (temp->obj_flags.type_flag != ITEM_DRINKCON) 
-	act("You can't drink from that!", FALSE, ch, 0, 0, TO_CHAR); 
+    else if (temp->obj_flags.type_flag != ITEM_DRINKCON)
+	act("You can't drink from that!", FALSE, ch, 0, 0, TO_CHAR);
 
     /* NOTE: raised drunk level to fail to drink */
     /* 	OLD: sip 10, drink 20. NEW: sip 30, drink 25 */
@@ -84,24 +84,24 @@ void do_drink(struct char_data *ch, char *argument, int cmd)
 	/* The pig is drunk */
 	act("You simply fail to reach your mouth!", FALSE, ch, 0, 0, TO_CHAR);
 	act("$n tried to drink but missed $s mouth!", TRUE, ch, 0, 0, TO_ROOM);
-    } 
-    else if ( cmd != CMD_SIP && 
+    }
+    else if ( cmd != CMD_SIP &&
 	    (GET_COND(ch, FULL) > 32) && (GET_COND(ch, THIRST) > 0))
 	/* Stomach full */
 	act("Your stomach can't contain anymore!", FALSE, ch, 0, 0, TO_CHAR);
     else if (temp->obj_flags.value[1] <= 0) 	/* empty */
 	act("It's empty already.", FALSE, ch, 0, 0, TO_CHAR);
-    else 
+    else
 	goto drink_ok ;
     return;
 
 drink_ok:
-    liq = temp->obj_flags.value[2]; 
+    liq = temp->obj_flags.value[2];
     sprintf(buf, "$n drinks %s from $p.", drinks[liq]);
-    act(buf, TRUE, ch, temp, 0, TO_ROOM); 
+    act(buf, TRUE, ch, temp, 0, TO_ROOM);
 
     if ( cmd == CMD_SIP ) {
-	sprintf(buf, "It tastes like %s.\n\r", drinks[liq]);
+	sprintf(buf, "It tastes like %s.\r\n", drinks[liq]);
 	send_to_char(buf, ch);
 	amount = 1;
     }
@@ -111,10 +111,10 @@ drink_ok:
 	if ( liq == LIQ_NECTAR)
 	    cast_cure_critic(GET_LEVEL(ch), ch, "", SPELL_TYPE_POTION, ch, 0);
 	else if ( liq == LIQ_GOLDEN_NECTAR)
-	    cast_heal(GET_LEVEL(ch), ch, "", SPELL_TYPE_POTION, ch, 0); 
+	    cast_heal(GET_LEVEL(ch), ch, "", SPELL_TYPE_POTION, ch, 0);
 
 	if ( liq == LIQ_SUNDEW || liq == LIQ_WATER )
-	    amount = 12; 
+	    amount = 12;
 	else  if (drink_aff[liq][DRUNK] > 0 )
 	    amount = ( 50 - GET_COND(ch,THIRST)) / (drink_aff[liq][DRUNK]+3);
 	else
@@ -124,14 +124,14 @@ drink_ok:
 
     weight_change_object(temp, -amount);	/* Subtract amount */
 
-    gain_condition(ch, DRUNK, ( drink_aff[liq][DRUNK] * amount) / 4); 
-    gain_condition(ch, FULL, ( drink_aff[liq][FULL] * amount) / 4); 
+    gain_condition(ch, DRUNK, ( drink_aff[liq][DRUNK] * amount) / 4);
+    gain_condition(ch, FULL, ( drink_aff[liq][FULL] * amount) / 4);
     gain_condition(ch, THIRST, ( drink_aff[liq][THIRST] * amount) / 4);
 
     if (GET_COND(ch, DRUNK) > 20)
-	act("You feel drunk.", FALSE, ch, 0, 0, TO_CHAR); 
+	act("You feel drunk.", FALSE, ch, 0, 0, TO_CHAR);
     if (GET_COND(ch, THIRST) > 32)
-	act("You do not feel thirsty.", FALSE, ch, 0, 0, TO_CHAR); 
+	act("You do not feel thirsty.", FALSE, ch, 0, 0, TO_CHAR);
     if (GET_COND(ch, FULL) > 32)
 	act("You are full.", FALSE, ch, 0, 0, TO_CHAR);
 
@@ -169,7 +169,7 @@ drink_ok:
     case 0:	/* nothing */
     default:
 	break;
-    } 
+    }
     temp->obj_flags.value[1] -= amount;
 
     /* empty the container, and no longer poison. */
@@ -213,7 +213,7 @@ void do_sip(struct char_data *ch, char *argument, int cmd)
     }
 
     act("$n sips from the $o", TRUE, ch, temp, 0, TO_ROOM);
-    sprintf(buf, "It tastes like %s.\n\r", drinks[temp->obj_flags.value[2]]);
+    sprintf(buf, "It tastes like %s.\r\n", drinks[temp->obj_flags.value[2]]);
     send_to_char(buf, ch);
 
     gain_condition(ch, DRUNK,
@@ -256,7 +256,7 @@ void do_sip(struct char_data *ch, char *argument, int cmd)
 	name_from_drinkcon(temp);
     }
 
-    return; 
+    return;
 }
 #endif		/* UNUSED_CODE */
 
@@ -308,7 +308,7 @@ void do_pour(struct char_data *ch, char *argument, int cmd)
 	from_obj->obj_flags.value[3] = 0;
 	name_from_drinkcon(from_obj);
 
-	return; 
+	return;
     }
 
     if (!(to_obj = get_obj_in_list_vis(ch, arg2, ch->carrying))) {
@@ -387,7 +387,7 @@ void do_eat(struct char_data *ch, char *argument, int cmd)
 	do_drink( ch, argument, CMD_SIP ); /* NOTE : Was do_sip() */
 	return;
     }
-    if ((temp->obj_flags.type_flag != ITEM_FOOD) 
+    if ((temp->obj_flags.type_flag != ITEM_FOOD)
 	    && !IS_DIVINE(ch)) {
 	act("Your stomach refuses to eat that!?!", FALSE, ch, 0, 0, TO_CHAR);
 	return;
@@ -486,10 +486,10 @@ void do_taste(struct char_data *ch, char *argument, int cmd)
     if (!temp->obj_flags.value[0]) {	/* Nothing left */
 	act("There is nothing left now.", FALSE, ch, 0, 0, TO_CHAR);
 	extract_obj(temp);
-    } 
-    return; 
+    }
+    return;
 }
-#endif		/*  UNUSED_CODE  */ 
+#endif		/*  UNUSED_CODE  */
 
 void do_junk(struct char_data *ch, char *argument, int cmd)
 {
@@ -513,7 +513,7 @@ void do_junk(struct char_data *ch, char *argument, int cmd)
 
 /* NOTE: Simplified reloading firearm syntex. (NEW: reload [gun [ammo]]) */
 /*  Now, you can reload gun while holding it. No need to specify ammo.
-    If gun name (1st arg) is ommited, reload gun you are holding. 
+    If gun name (1st arg) is ommited, reload gun you are holding.
     If ammo name (2nd arg) is ommited, inventory is searched for ammo.   */
 void do_reload(struct char_data *ch, char *argument, int cmd)
 {
@@ -525,7 +525,7 @@ void do_reload(struct char_data *ch, char *argument, int cmd)
     int ammo_nr ;
 
     if (GET_POS(ch) < POS_STANDING) {
-	send_to_char("You need to be standing still for that.\n\r", ch);
+	send_to_char("You need to be standing still for that.\r\n", ch);
 	return;
     }
     argument_interpreter(argument, arg1, arg2);
@@ -534,57 +534,57 @@ void do_reload(struct char_data *ch, char *argument, int cmd)
 	/* NOTE: Look holding item before inventory.  */
 	tmp_obj = ch->equipment[HOLD];
 	if ( tmp_obj && isname(arg1, tmp_obj->name )
-	    && (GET_ITEM_TYPE(tmp_obj) == ITEM_FIREWEAPON)) 
+	    && (GET_ITEM_TYPE(tmp_obj) == ITEM_FIREWEAPON))
 	    gun = tmp_obj ;
-	else { 
+	else {
 	    gun = get_obj_in_list_vis(ch, arg1, ch->carrying);
 	    if (!gun) {
-		sprintf(buffer, "You dont have the %s.\n\r", arg1);
+		sprintf(buffer, "You dont have the %s.\r\n", arg1);
 		send_to_char(buffer, ch);
 		return;
 	    }
 	    if (GET_ITEM_TYPE(gun) != ITEM_FIREWEAPON) {
-		send_to_char("You can't reload that!\n\r", ch);
+		send_to_char("You can't reload that!\r\n", ch);
 		return;
 	    }
 	}
     }
     /* NOTE: If no arg is given, reload holding firearm */
-    else if (!( gun = ch->equipment[HOLD] ) 
+    else if (!( gun = ch->equipment[HOLD] )
 		|| (GET_ITEM_TYPE(gun) != ITEM_FIREWEAPON)) {
-	    send_to_char("Reload what with what?\n\r", ch);
+	    send_to_char("Reload what with what?\r\n", ch);
 	    return;
     }
 
     if (*arg2) {
 	ammo = get_obj_in_list_vis(ch, arg2, ch->carrying);
 	if (!ammo) {
-	    sprintf(buffer, "You dont have the %s.\n\r", arg2);
+	    sprintf(buffer, "You dont have the %s.\r\n", arg2);
 	    send_to_char(buffer, ch);
 	    return;
 	}
 	if ((GET_OBJ_VIRTUAL(gun) + 1) != GET_OBJ_VIRTUAL(ammo)) {
-	    sprintf(buffer, "%s cannot be used as ammo for %s\n\r", arg2, arg1);
+	    sprintf(buffer, "%s cannot be used as ammo for %s\r\n", arg2, arg1);
 	    send_to_char(buffer, ch);
 	    return;
 	}
     }
     else {
-	/* NOTE: No ammo name specified. Serach inventory for ammo. */
+	/* NOTE: No ammo name specified. Search inventory for ammo. */
 	ammo_nr = obj_index[GET_OBJ_VIRTUAL(gun) + 1 ].virtual;
 	ammo = NULL;
-	for ( tmp_obj = ch->carrying ; tmp_obj ; 
+	for ( tmp_obj = ch->carrying ; tmp_obj ;
 		tmp_obj = tmp_obj->next_content )
 	    if (CAN_SEE_OBJ(ch, tmp_obj)
 		&& ( GET_OBJ_VIRTUAL(tmp_obj) == ammo_nr )) {
 		ammo = tmp_obj ;
 		break ;
 	    }
-	    
+
 	if (!ammo) {
-	    sprintf(buffer, "You dont have ammo for %s.\n\r", gun->name );
+	    sprintf(buffer, "You dont have ammo for %s.\r\n", gun->name );
 	    send_to_char(buffer, ch);
-	    return; 
+	    return;
 	}
     }
 
@@ -593,9 +593,9 @@ void do_reload(struct char_data *ch, char *argument, int cmd)
 	--gun->obj_flags.value[2];
     extract_obj(ammo);
     act("$n reloads $p", TRUE, ch, gun, 0, TO_ROOM);
-    send_to_char("You reload.\n\r", ch);
+    send_to_char("You reload.\r\n", ch);
 
-} 
+}
 
 void do_quaff(struct char_data *ch, char *argument, int cmd)
 {
@@ -634,7 +634,7 @@ void do_quaff(struct char_data *ch, char *argument, int cmd)
 	unequip_char(ch, HOLD);
 
     extract_obj(temp);
-} 
+}
 
 void do_recite(struct char_data *ch, char *argument, int cmd)
 {
@@ -651,7 +651,7 @@ void do_recite(struct char_data *ch, char *argument, int cmd)
     if (!ch)
 	return;
     if (IS_SET(world[ch->in_room].room_flags, NO_MAGIC)) {
-	send_to_char("Some misterious power prevent you reading scroll\n\r", ch);
+	send_to_char("Some misterious power prevent you reading scroll\r\n", ch);
 	return;
     }
     argument = one_argument(argument, buf);
@@ -674,7 +674,7 @@ void do_recite(struct char_data *ch, char *argument, int cmd)
 	bits = generic_find(argument, FIND_OBJ_INV | FIND_OBJ_ROOM |
 			    FIND_OBJ_EQUIP, ch, &victim, &obj);
 	if (bits == 0) {
-	    send_to_char("No such thing around to recite the scroll on.\n\r", ch);
+	    send_to_char("No such thing around to recite the scroll on.\r\n", ch);
 	    return;
 	}
     }
@@ -688,7 +688,7 @@ void do_recite(struct char_data *ch, char *argument, int cmd)
     for (i = 1; i < 4; i++)
 	if (scroll->obj_flags.value[i] >= 1)
 	    ((*spell_info[scroll->obj_flags.value[i]].spell_pointer)
-	     ((byte) scroll->obj_flags.value[0], ch, "", 
+	     ((byte) scroll->obj_flags.value[0], ch, "",
 		    SPELL_TYPE_SCROLL, victim, obj));
 
     if (equipped)
@@ -732,7 +732,7 @@ void do_use(struct char_data *ch, char *argument, int cmd)
 
 	}
 	else {
-	    send_to_char("The staff seems powerless.\n\r", ch);
+	    send_to_char("The staff seems powerless.\r\n", ch);
 	}
     }
     else if (stick->obj_flags.type_flag == ITEM_WAND) {
@@ -756,15 +756,15 @@ void do_use(struct char_data *ch, char *argument, int cmd)
 		 ((byte) stick->obj_flags.value[0], ch, "", SPELL_TYPE_WAND, tmp_char, tmp_object));
 	    }
 	    else {
-		send_to_char("The wand seems powerless.\n\r", ch);
+		send_to_char("The wand seems powerless.\r\n", ch);
 	    }
 	}
 	else {
-	    send_to_char("What should the wand be pointed at?\n\r", ch);
+	    send_to_char("What should the wand be pointed at?\r\n", ch);
 	}
     }
     else {
-	send_to_char("Use is normally only for wand's and staff's.\n\r", ch);
+	send_to_char("Use is normally only for wand's and staff's.\r\n", ch);
     }
 }
 
@@ -918,14 +918,14 @@ int shopping_buy(char *arg, struct char_data *ch,
     }
 
     if ((GET_CARRYING_N(ch) + 1 > CAN_CARRY_N(ch))) {
-	sprintf(buf, "%s : You can't carry that many items.\n\r",
+	sprintf(buf, "%s : You can't carry that many items.\r\n",
 		fname(temp1->name));
 	send_to_char(buf, ch);
 	return -1;
     }
 
     if ((GET_CARRYING_W(ch) + temp1->obj_flags.weight) > CAN_CARRY_W(ch)) {
-	sprintf(buf, "%s : You can't carry that much weight.\n\r",
+	sprintf(buf, "%s : You can't carry that much weight.\r\n",
 		fname(temp1->name));
 	send_to_char(buf, ch);
 	return -1;
@@ -936,7 +936,7 @@ int shopping_buy(char *arg, struct char_data *ch,
     sprintf(buf, shop_index[shop_nr].message_buy, GET_NAME(ch),
 	    (int) (temp1->obj_flags.cost * shop_index[shop_nr].profit_buy));
     do_tell(keeper, buf, 0);
-    sprintf(buf, "You now have %s.\n\r", temp1->short_description);
+    sprintf(buf, "You now have %s.\r\n", temp1->short_description);
     send_to_char(buf, ch);
     if (!IS_DIVINE(ch))
 	GET_GOLD(ch) -= (int) (temp1->obj_flags.cost *
@@ -1003,22 +1003,21 @@ void shopping_sell(char *arg, struct char_data *ch,
 
     act("$n sells $p.", FALSE, ch, temp1, 0, TO_ROOM);
 
-    sprintf(buf, shop_index[shop_nr].message_sell, GET_NAME(ch), 
+    sprintf(buf, shop_index[shop_nr].message_sell, GET_NAME(ch),
 	    (int) (temp1->obj_flags.cost * shop_index[shop_nr].profit_sell));
     do_tell(keeper, buf, 0);
-    sprintf(buf, "The shopkeeper now has %s.\n\r", temp1->short_description);
+    sprintf(buf, "The shopkeeper now has %s.\r\n", temp1->short_description);
     send_to_char(buf, ch);
     GET_GOLD(ch) += (int) (temp1->obj_flags.cost *
 			   shop_index[shop_nr].profit_sell);
     /* to prevent shop keeper's death */
-    /* 
+    /*
     GET_GOLD(keeper) -= (int) (temp1->obj_flags.cost*
 	shop_index[shop_nr].profit_sell);
     */
 
     if ((get_obj_in_list(argm, keeper->carrying)) ||
     /* NOTE: Item type to junk when sold to shopkeeper: was ITEM_TRASH */
-	    (GET_ITEM_TYPE(temp1) == ITEM_TRASH) ||
 	    (GET_ITEM_TYPE(temp1) == ITEM_OTHER))
 	extract_obj(temp1);
     else {
@@ -1078,7 +1077,7 @@ void shopping_list(char *arg, struct char_data *ch,
     if (!(is_ok(keeper, ch, shop_nr)))
 	return;
 
-    strcpy(buf, "You can buy:\n\r");
+    strcpy(buf, "You can buy:\r\n");
     found_obj = FALSE;
     if (keeper->carrying)
 	for (temp1 = keeper->carrying;
@@ -1087,7 +1086,7 @@ void shopping_list(char *arg, struct char_data *ch,
 	    if ((CAN_SEE_OBJ(ch, temp1)) && (temp1->obj_flags.cost > 0)) {
 		found_obj = TRUE;
 		if (temp1->obj_flags.type_flag != ITEM_DRINKCON)
-		    sprintf(buf2, "%s for %d gold coins.\n\r"
+		    sprintf(buf2, "%s for %d gold coins.\r\n"
 			    ,(temp1->short_description)
 			    ,(int) (temp1->obj_flags.cost *
 				    shop_index[shop_nr].profit_buy));
@@ -1097,7 +1096,7 @@ void shopping_list(char *arg, struct char_data *ch,
 				,drinks[temp1->obj_flags.value[2]]);
 		    else
 			sprintf(buf3, "%s", (temp1->short_description));
-		    sprintf(buf2, "%s for %d gold coins.\n\r", buf3,
+		    sprintf(buf2, "%s for %d gold coins.\r\n", buf3,
 			    (int) (temp1->obj_flags.cost * shop_index[shop_nr].profit_buy));
 		}
 		CAP(buf2);
@@ -1105,7 +1104,7 @@ void shopping_list(char *arg, struct char_data *ch,
 	    };
 
     if (!found_obj)
-	strcat(buf, "Nothing!\n\r");
+	strcat(buf, "Nothing!\r\n");
 
     send_to_char(buf, ch);
     return;
@@ -1121,7 +1120,7 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
     for (temp_char = world[ch->in_room].people; (!keeper) && (temp_char);
 	 temp_char = temp_char->next_in_room)
 	/* NOTE: not IS_NPC(temp_char) */
-	if (IS_MOB(temp_char) && temp_char->nr >= 0 ) 
+	if (IS_MOB(temp_char) && temp_char->nr >= 0 )
 	    if (mob_index[temp_char->nr].func == shop_keeper)
 		keeper = temp_char;
     for (shop_nr = 0; shop_index[shop_nr].keeper != keeper->nr; shop_nr++) ;
@@ -1154,13 +1153,13 @@ int shop_keeper(struct char_data *ch, int cmd, char *arg)
 	shopping_list(arg, ch, keeper, shop_nr);
     }
     else if (cmd == CMD_STEAL ) {	/* Steal 156 */
-	send_to_char("Oops.\n\r", ch);
+	send_to_char("Oops.\r\n", ch);
 	hit(keeper, ch, TYPE_UNDEFINED);
     }
     else if (((cmd == CMD_CAST) || (cmd == CMD_RECITE) || (cmd == CMD_USE))
 	&& IS_MORTAL(ch)) {
 	/* Cast 84 , recite 207 , use  172 */
-	act("$N tells you 'No magic here - kid!'.", 
+	act("$N tells you 'No magic here - kid!'.",
 		FALSE, ch, 0, keeper, TO_CHAR);
     }
     else
@@ -1188,7 +1187,7 @@ void boot_the_shops(void)
 	    if (!number_of_shops)	/* first shop */
 		CREATE(shop_index, struct shop_data, 1);
 
-	    else if (!(shop_index = (struct shop_data *) realloc( shop_index, 
+	    else if (!(shop_index = (struct shop_data *) realloc( shop_index,
 		 (number_of_shops + 1) * sizeof(struct shop_data)))) {
 		perror("Error in boot shop\n");
 		exit(0);
@@ -1274,14 +1273,14 @@ void assign_the_shopkeepers(void)
 /*
    used goods shops
    made by Process(wdshin@eve.kaist.ac.kr)
- */ 
+ */
 
 #define GET_SHOP_STORAGE(x) (used_shop_storage_rooms[(x)])
 #define GET_SHOP_ROOM(x) (used_shop_roomsl[(x)])
 
 /* virtual number of room */
-int used_shop_rooms[] = { 0,	};			/* NOT USED */ 
-int used_shop_storage_rooms[] = { 0,	};		/* NOT USED */ 
+int used_shop_rooms[] = { 0,	};			/* NOT USED */
+int used_shop_storage_rooms[] = { 0,	};		/* NOT USED */
 
 int find_shop_index(int room_nr)
 {
@@ -1312,7 +1311,7 @@ int used_shop(struct char_data *ch, int cmd, char *arg)
     shop_num = find_shop_index(world[ch->in_room].number);
     if (shop_num == 0) {
 	log("ERROR in find_shop_index!");
-	send_to_char("Ooops. bug???\n\r", ch);
+	send_to_char("Ooops. bug???\r\n", ch);
 	return TRUE;
     }
 

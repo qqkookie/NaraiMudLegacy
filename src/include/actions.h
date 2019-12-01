@@ -158,7 +158,7 @@
 #define CMD_UNGROUP 		263
 #define CMD_WIZLIST 		264
 #define CMD_HANGUL 		265
-/* #define CMD_NEWS 		266 */ 
+/* #define CMD_NEWS 		266 */
 #define CMD_SET 		267
 #define CMD_DISARM 		268
 #define CMD_SHOURYUKEN 		269
@@ -170,7 +170,7 @@
 #define CMD_TRAIN 		275
 #define CMD_CANT 		276
 /* #define CMD_SAVE 		277 */
-/* #define CMD_LOAD 		278 */ 
+/* #define CMD_LOAD 		278 */
 #define CMD_QUERY 		279
 #define CMD_BROADCAST 		280
 #define CMD_SIMULTANEOUS 	281
@@ -375,7 +375,7 @@ extern void do_charge(struct char_data *ch, char *arg, int cmd);     /* by proce
 /* extern void do_solo(struct char_data *ch, char *arg, int cmd); */	/* by process */
 extern void do_auto_assist(struct char_data *ch, char *arg, int cmd);/* by process */
 extern void do_spin_bird_kick(struct char_data *ch, char *arg, int cmd);/* by ares */
-extern void do_reply(struct char_data *ch, char *arg, int cmd);      /* by process */ 
+extern void do_reply(struct char_data *ch, char *arg, int cmd);      /* by process */
 /* quest */
 extern void do_quest(struct char_data *ch, char *arg, int cmd);	/* by atre */
 extern void do_request(struct char_data *ch, char *arg, int cmd);	/* by atre */

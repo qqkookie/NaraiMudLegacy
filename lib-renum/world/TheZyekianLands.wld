@@ -37,8 +37,8 @@ D2
 S
 #16103
 The glade~
-A cool breeze comes from the north.  A small patch of flowers cover the 
-here.  You may leave north or east from here.  
+A cool breeze comes from the north.  A small patch of flowers cover the
+here.  You may leave north or east from here.
 ~
 161 0 2
 D0
@@ -57,7 +57,7 @@ strong, pleasant aroma.
 S
 #16104
 The glade~
-You see exits leading west and north.  
+You see exits leading west and north.
 ~
 161 0 2
 D0
@@ -88,7 +88,7 @@ D3
 0 0 16106
 E
 tracks~
-They are small tracks.  They look as if made by in creature with 
+They are small tracks.  They look as if made by in creature with
 many legs.
 ~
 S
@@ -113,7 +113,7 @@ D3
 S
 #16107
 The glade~
-The green fades to the north as the ground slowly turns into a 
+The green fades to the north as the ground slowly turns into a
 path.  Exits also lead east and south.
 ~
 161 0 2
@@ -133,7 +133,7 @@ S
 #16108
 The sloping path~
 To the south you see the glade.  The path continues to the north
-and also to the west.  There are many small pebbles and twigs on the 
+and also to the west.  There are many small pebbles and twigs on the
 ground.
 ~
 161 0 3
@@ -191,7 +191,7 @@ You stomach turns as you get a snout full of the smell from the west.~
 S
 #16111
 The forest~
-The trees stand high above making the land seem firm and healthy.  
+The trees stand high above making the land seem firm and healthy.
 To the west the land starts to loose substance, and to the
 north the forest continues.
 ~
@@ -212,7 +212,7 @@ S
 #16112
 Within the forest~
 You see the forest to the north and south.  Just as you think
-you are alone, you hear a screech owl in the distance...the 
+you are alone, you hear a screech owl in the distance...the
 silence is broken.
 ~
 161 0 3
@@ -246,9 +246,9 @@ They are small and ugly.
 S
 #16114
 The marsh~
-You are in a marsh.  Tree tops cover the sky, making it very dark and 
+You are in a marsh.  Tree tops cover the sky, making it very dark and
 gloomy here.  As you move along, you feel something rub against your
-leg from underneath the water.  It is possible to to leave west from 
+leg from underneath the water.  It is possible to to leave west from
 here, or to go back east.
 ~
 161 0 3
@@ -263,11 +263,11 @@ D3
 S
 #16115
 Beside the logs~
-There are hundreds of small tracks in the ground here.  A large 
-stack of logs are stacked to the north.  Exits lead to the 
+There are hundreds of small tracks in the ground here.  A large
+stack of logs are stacked to the north.  Exits lead to the
 west and east.
 ~
-161 0 2 
+161 0 2
 D3
 ~
 ~
@@ -355,7 +355,7 @@ The marsh continues.~
 S
 #16120
 The Marsh~
-From the looks of the broken limbs of the many trees here, you 
+From the looks of the broken limbs of the many trees here, you
 can guess that something lies ahead.  There are many bubbles coming
 from beneath the water.
 ~
@@ -387,7 +387,7 @@ S
 The inner den~
 This is the home of the woolly bears.  A large nest is here.
 ~
-161 0 2 
+161 0 2
 D4
 ~
 ~
@@ -417,7 +417,7 @@ D0
 ~
 ~
 0 0 16131
-D3 
+D3
 ~
 ~
 0 0 16117
@@ -462,7 +462,7 @@ D2
 S
 #16127
 The forest~
-The forest you can make out a trail to the north.  You may leave 
+The forest you can make out a trail to the north.  You may leave
 in that direction or go back into the forest.
 ~
 161 0 3
@@ -477,7 +477,7 @@ D2
 S
 #16128
 The marsh~
-This looks very much the same as the direction you came from.  The 
+This looks very much the same as the direction you came from.  The
 bugs here bite at you, making you want to run.
 ~
 161 0 4
@@ -492,7 +492,7 @@ D3
 S
 #16129
 The marsh~
-What could possibly be making this horrible smell?  You cover your 
+What could possibly be making this horrible smell?  You cover your
 nose as you walk here.  You move along quickly, exits lead south,
 west, and north.
 ~
@@ -545,7 +545,7 @@ D0
 S
 #16132
 The edge of the field~
-Not far from here you see a few farmers tending the soil.  The trees 
+Not far from here you see a few farmers tending the soil.  The trees
 stand behind you, and a large field is before you.  In the distance you
 can see the top of a castle above the tree line.
 ~
@@ -561,7 +561,7 @@ D1
 S
 #16133
 The marsh~
-The brush is very tangled here.  With every step you find a new 
+The brush is very tangled here.  With every step you find a new
 obstacle to overcome.
 ~
 161 0 4
@@ -576,7 +576,7 @@ D3
 S
 #16134
 The marsh~
-You hear something shuffle in the trees, but when you look up, nothing 
+You hear something shuffle in the trees, but when you look up, nothing
 is to be seen.  It's probably not a good idea to stay here for long.
 ~
 161 0 4
@@ -591,8 +591,8 @@ D3
 S
 #16135
 The marsh~
-You have come to a dead end.  Trees cover the north, west, and south, 
-making it impossible to pass.  The only obvious exit leads back the 
+You have come to a dead end.  Trees cover the north, west, and south,
+making it impossible to pass.  The only obvious exit leads back the
 way you came from, south.
 ~
 161 4738 4
@@ -611,7 +611,7 @@ cover~
 S
 #16136
 Near the cave~
-The ground becomes more solid here, easing you a bit.  The entrance to a large 
+The ground becomes more solid here, easing you a bit.  The entrance to a large
 cave lies the west, while the marsh is to the east.
 ~
 161 0 2
@@ -625,7 +625,7 @@ It looks very dark inside.~
 0 0 16138
 E
 cave~
-The entrance has many weeds grown around it.  You see something carved 
+The entrance has many weeds grown around it.  You see something carved
 into one wall.
 ~
 E
@@ -636,7 +636,7 @@ A carving is here, it seems to depict a large beast of some sort...
 S
 #16137
 The rock~
-You have walked onto a large rock.  It's a little nicer here than the 
+You have walked onto a large rock.  It's a little nicer here than the
 rest of the marsh, and probably safer.  You could even take a nap here.
 Exits lead west and east.
 ~
@@ -652,8 +652,8 @@ D3
 S
 #16138
 The cave~
-You walk down sharp incline to find yourself at a large pool.  The 
-reflection from the pool is better than a mirror.  You see large fish 
+You walk down sharp incline to find yourself at a large pool.  The
+reflection from the pool is better than a mirror.  You see large fish
 swim in the pool.
 ~
 161 1 2
@@ -672,7 +672,7 @@ The have extremely large, bulging eyes.
 S
 #16139
 Near the cave~
-A cave is the the south, and the marsh is to the north.  
+A cave is the the south, and the marsh is to the north.
 ~
 161 0 2
 D2
@@ -686,7 +686,7 @@ D0
 S
 #16140
 The marsh~
-It looks the same here, as anywhere in the marsh.  Bubbles break the 
+It looks the same here, as anywhere in the marsh.  Bubbles break the
 surface of the water and the trees look old and dying.
 ~
 161 0 4
@@ -716,7 +716,7 @@ D3
 S
 #16142
 Leaving the marsh~
-You have discovered an exit from the marsh.  From here you can leave the 
+You have discovered an exit from the marsh.  From here you can leave the
 stench behind, or go back into it.
 ~
 161 0 2
@@ -731,7 +731,7 @@ D1
 S
 #16143
 The solid ground~
-You may be able to squeeze through to the east, but making it back would be 
+You may be able to squeeze through to the east, but making it back would be
 impossible.  The marsh still lies back to the west.
 ~
 161 0 2
@@ -760,8 +760,8 @@ D2
 S
 #16145
 The field~
-It looks as if the crops will be plentiful this year.  The farmers have 
-taken great care in plowing the soil and sewing the seeds.  Exits leave 
+It looks as if the crops will be plentiful this year.  The farmers have
+taken great care in plowing the soil and sewing the seeds.  Exits leave
 south, west and east.
 ~
 161 0 3
@@ -780,7 +780,7 @@ D1
 S
 #16146
 Beside the cabin~
-A small wood cabin is to the east of here.  The trail continues to the 
+A small wood cabin is to the east of here.  The trail continues to the
 north and south.
 ~
 161 0 2
@@ -799,7 +799,7 @@ D0
 S
 #16147
 The field~
-There are a few apple trees being grown here as well as crops 
+There are a few apple trees being grown here as well as crops
 in the ground.
 ~
 161 0 3
@@ -814,7 +814,7 @@ D3
 S
 #16148
 The road~
-You are on one of the only roads within hours of walking.  It is well 
+You are on one of the only roads within hours of walking.  It is well
 travelled.  The fields are to the west and a castle lies to the north.
 ~
 161 0 2
@@ -833,8 +833,8 @@ D3
 S
 #16149
 The cabin~
-You are in a dim cabin.  Shelves line the walls here, holding various 
-containers.  A small table makes up the furnishings for this 
+You are in a dim cabin.  Shelves line the walls here, holding various
+containers.  A small table makes up the furnishings for this
 home.  A small ladder leads up.
 ~
 161 0 2
@@ -849,7 +849,7 @@ D4
 S
 #16150
 The trail~
-To the south east you can make out a small cabin, to the north a 
+To the south east you can make out a small cabin, to the north a
 castle, and to the west a field.
 ~
 161 0 2
@@ -868,8 +868,8 @@ D3
 S
 #16151
 The entrance~
-You are in the large entrance to Castle Flacon.  There are holes in 
-the top of the wall to the left and right.  The the north there is a 
+You are in the large entrance to Castle Flacon.  There are holes in
+the top of the wall to the left and right.  The the north there is a
 very large gate.
 ~
 161 0 2
@@ -899,9 +899,9 @@ It is made of hay and looks very comfortable.
 S
 #16153
 The gallery~
-A large gate lies to the south.  It appears that it would be very 
-effective in holding out unwanted people in case of siege.  You still 
-notice holes in the top left and right of the walls here.  You may go 
+A large gate lies to the south.  It appears that it would be very
+effective in holding out unwanted people in case of siege.  You still
+notice holes in the top left and right of the walls here.  You may go
 north or south from here.
 ~
 161 0 2
@@ -916,8 +916,8 @@ D2
 S
 #16154
 In front of the gate~
-You are at the entrance to the inner castle.  To the north you hear people 
-trying to make a deal.  There are many small carts and street venders there.  
+You are at the entrance to the inner castle.  To the north you hear people
+trying to make a deal.  There are many small carts and street venders there.
 You notice a sign on the gate.
 ~
 161 0 2
@@ -936,9 +936,9 @@ Welcome stranger, to castle Flacon.  You will find safety here.
 S
 #16155
 The market~
-This is the place where to people of the castle and surrounding lands 
+This is the place where to people of the castle and surrounding lands
 come to trade various items and stories.  Many bags and carts are here.
-The commons are to the east and west, while the heart of the city lies 
+The commons are to the east and west, while the heart of the city lies
 to the north.
 ~
 161 0 2
@@ -969,8 +969,8 @@ They are full of various things to be traded today.
 S
 #16156
 Zyashy way~
-People run about on various tasks here.  A small boy runs up to you 
-pretends to kill you with his mighty sword, that of the King.  Exits 
+People run about on various tasks here.  A small boy runs up to you
+pretends to kill you with his mighty sword, that of the King.  Exits
 lead to the east and west.
 ~
 161 0 2
@@ -985,7 +985,7 @@ D1
 S
 #16157
 Zyashy way~
->From here you can see a tower to the north-west.  The road continues 
+>From here you can see a tower to the north-west.  The road continues
 to the north and west.
 ~
 161 0 2
@@ -1000,7 +1000,7 @@ D3
 S
 #16158
 Zyashy way~
-To the east you can see the trees above the wall.  It appears to be 
+To the east you can see the trees above the wall.  It appears to be
 less busy here.  You can go north or south.
 ~
 161 0 2
@@ -1015,7 +1015,7 @@ D2
 S
 #16159
 The office~
-This is the local meeting place for the business officials of the 
+This is the local meeting place for the business officials of the
 city, as well as a guard check point.
 ~
 161 0 2
@@ -1026,8 +1026,8 @@ door~
 S
 #16160
 Main street~
-The street venders are to the south, while the citadel lies to the 
-north.  A small building is to the east and you can tell there is a 
+The street venders are to the south, while the citadel lies to the
+north.  A small building is to the east and you can tell there is a
 small shop to the west from the sign above the door.
 ~
 161 0 2
@@ -1054,7 +1054,7 @@ It has the mark of the tradesman on it.
 S
 #16161
 Sphen's shop~
-The owner of this shop is a very old man.  There are many shelves and 
+The owner of this shop is a very old man.  There are many shelves and
 cabinets along the wall here.
 ~
 161 0 2
@@ -1065,7 +1065,7 @@ D1
 S
 #16162
 Zyashy way~
-People roam about on various tasks here.  You see houses along the street 
+People roam about on various tasks here.  You see houses along the street
 both east and west.  The road continues north and south.
 ~
 161 0 2
@@ -1094,7 +1094,7 @@ D1
 S
 #16164
 Zyashy way~
-To the east you can hear the voices of many people.  You can 
+To the east you can hear the voices of many people.  You can
 go west or east from here.
 ~
 161 0 2
@@ -1109,7 +1109,7 @@ D3
 S
 #16165
 Zyashy way~
-To the south you see the forest towering above the walls.  You 
+To the south you see the forest towering above the walls.  You
 also hear the roar of an ocean.  You may go south or east from here.
 ~
 161 0 2
@@ -1138,8 +1138,8 @@ trapdoor~
 S
 #16167
 The entrance~
-You see to the north a citadel.  It is the largest structure you have 
-seen here.  The gate to it is open now.  
+You see to the north a citadel.  It is the largest structure you have
+seen here.  The gate to it is open now.
 ~
 161 0 2
 D2
@@ -1168,7 +1168,7 @@ trapdoor~
 S
 #16169
 The alley~
-If there is any, this is the slums of the town.  It is very 
+If there is any, this is the slums of the town.  It is very
 unpleasant here.
 ~
 161 0 2
@@ -1183,7 +1183,7 @@ D2
 S
 #16170
 The parlor~
-Huge columns line the walls.  Exits lead in all directions.  You 
+Huge columns line the walls.  Exits lead in all directions.  You
 see servants running quickly on some unknown task.
 ~
 161 0 2
@@ -1214,7 +1214,7 @@ Below the first tower~
 Stairs lead up here to some unknown place.  You see no one here.
 ~
 161 4 0
-D0 
+D0
 ~
 ~
 0 0 16172
@@ -1229,8 +1229,8 @@ D4
 S
 #16172
 The citadel~
-The ceiling is very high, almost making you feel dizzy as you look 
-up.  A large tapestry hangs here.   You can go south, west, and 
+The ceiling is very high, almost making you feel dizzy as you look
+up.  A large tapestry hangs here.   You can go south, west, and
 north from here.
 ~
 161 0 0
@@ -1248,7 +1248,7 @@ D3
 0 0 16173
 E
 tapestry~
-It shows a great king and his army in battle.  The flag of the Jirans 
+It shows a great king and his army in battle.  The flag of the Jirans
 flies high, but it appears the battle turns against the Jirans.
 ~
 S
@@ -1257,7 +1257,7 @@ The grand stairway~
 You very large stairway gives you passage to the second floor.
 You may go up, west, east, or back south to the city from here.
 ~
-161 0 0 
+161 0 0
 D3
 ~
 ~
@@ -1277,10 +1277,10 @@ D4
 S
 #16174
 The guard barracks~
-There are many small cots here and a few desks.  A small winding 
+There are many small cots here and a few desks.  A small winding
 ladder leads up from here where you can hear loud shuffling.
 ~
-161 0 0 
+161 0 0
 D1
 ~
 door~
@@ -1296,7 +1296,7 @@ trapdoor~
 S
 #16175
 The citadel~
-A pleasant aroma comes from the north.  A large tapestry hangs on the 
+A pleasant aroma comes from the north.  A large tapestry hangs on the
 wall here.
 ~
 161 0 0
@@ -1316,10 +1316,10 @@ all wear robes which cover their faces.
 S
 #16176
 The kitchen~
-A large fireplace is here to cook the food for the people within 
+A large fireplace is here to cook the food for the people within
 the citadel.  Pots and pans hang from hooks in the ceiling.
 ~
-161 0 0 
+161 0 0
 D2
 ~
 door~
@@ -1331,37 +1331,37 @@ D4
 S
 #16177
 The citadel~
-A large window is to the north.  You see yet another tapestry on the 
-wall here.  The only exit is to the east.  This room is obviously where 
+A large window is to the north.  You see yet another tapestry on the
+wall here.  The only exit is to the east.  This room is obviously where
 the tired come and rest.  The benches here look very comfortable.
 ~
-161 0 0 
+161 0 0
 D1
 ~
 ~
 0 0 16178
 E
 tapestry~
-This tapestry depicts a great moving.  It shows a whole land of people 
-moving to a new and different home.  In another part of the tapestry it 
-shows that they have found a place to start their new home.  It is on 
-the edge of a great cliff.  Forests surround the area, and below the 
+This tapestry depicts a great moving.  It shows a whole land of people
+moving to a new and different home.  In another part of the tapestry it
+shows that they have found a place to start their new home.  It is on
+the edge of a great cliff.  Forests surround the area, and below the
 cliff, a vast ocean.
 ~
 E
 window~
-It is very large.  When you look outside you see that you are many feet 
-above sea level.  The ocean expands as far as the eye can see to the 
+It is very large.  When you look outside you see that you are many feet
+above sea level.  The ocean expands as far as the eye can see to the
 north.  You can see why this place was chosen by the people, it's safety.
 ~
 S
 #16178
 Below a tower~
-You find yourself below what appears to be a tower.  A stone 
+You find yourself below what appears to be a tower.  A stone
 staircase leads up from here and on the wall you see a simple wooden
 cross.
 ~
-161 0 0 
+161 0 0
 D3
 ~
 ~
@@ -1391,7 +1391,7 @@ The mage's study~
 There are various vials sitting in cabinets and on shelves here.
 The attendant must take great care with them, the room is spotless.
 ~
-161 0 0 
+161 0 0
 D5
 ~
 ~
@@ -1399,7 +1399,7 @@ D5
 S
 #16181
 The outer sanctum~
-A large set of doors lie to the north.  You may leave down, or continue 
+A large set of doors lie to the north.  You may leave down, or continue
 to the north.
 ~
 161 0 0
@@ -1414,11 +1414,11 @@ D0
 S
 #16182
 The warrior's academy~
-There are many diagrams of humans here, obviously telling various 
-pressure points and lethal blow areas.  A few straw dummies are here 
+There are many diagrams of humans here, obviously telling various
+pressure points and lethal blow areas.  A few straw dummies are here
 also to help the young warriors learn.
 ~
-161 0 0 
+161 0 0
 D5
 ~
 ~
@@ -1430,7 +1430,7 @@ A set of stairs go back down into the kitchen from here.  This
 room is connected to the corridor which servants use to take
 essentials to the people of the court.
 ~
-161 0 0 
+161 0 0
 D5
 ~
 ~
@@ -1445,7 +1445,7 @@ The cleric's study~
 This is a very plain room, a simple bench and table are the only
 things you notice besides a large wooden cross.
 ~
-161 0 0 
+161 0 0
 D5
 ~
 ~
@@ -1453,8 +1453,8 @@ D5
 S
 #16185
 The sanctum~
-Surely you have reached the heart of this city.  At the far end of this 
-you see a large throne with a figure resting in it.  A peaceful feeling 
+Surely you have reached the heart of this city.  At the far end of this
+you see a large throne with a figure resting in it.  A peaceful feeling
 seems to take over your state of being.
 ~
 161 0 0
@@ -1475,7 +1475,7 @@ S
 The corridor~
 It is very plain here, probably to keep it easy to move in.
 ~
-161 0 0 
+161 0 0
 D3
 ~
 ~
@@ -1487,10 +1487,10 @@ D1
 S
 #16187
 The treasury~
-Many treasures cover the floor here.  The room has a light of its' 
+Many treasures cover the floor here.  The room has a light of its'
 own.
 ~
-161 0 0 
+161 0 0
 D4
 ~
 throne~
@@ -1498,11 +1498,11 @@ throne~
 S
 #16188
 The waiting quarters~
-The Queen waits here for her husband to take care of the matters 
-of state.  This room also serves to purpose of a tea room for her 
+The Queen waits here for her husband to take care of the matters
+of state.  This room also serves to purpose of a tea room for her
 guests at times.
 ~
-161 0 0 
+161 0 0
 D2
 ~
 ~

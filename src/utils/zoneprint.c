@@ -1,4 +1,4 @@
-/* 
+/*
 	zone list program by atre@paradise.kaist.ac.kr
 	usage : zone [options] zone-file
 	options
@@ -172,7 +172,7 @@ void ReadZone(FILE *fp)
 			continue;
 		}
 
-		fscanf(fp, " %d %d %d", 
+		fscanf(fp, " %d %d %d",
 			&if_flag,
 			&arg1,
 			&arg2);
@@ -287,7 +287,7 @@ char *fread_string(FILE *fl)
       strcat(buf, tmp);
 
     for (point = buf + strlen(buf) - 2; point >= buf && isspace(*point);
-      point--);    
+      point--);
     if ((flag = (*point == '~')))
       if (*(buf + strlen(buf) - 3) == '\n')
       {

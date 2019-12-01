@@ -1,7 +1,7 @@
 #15510
 The hills~
    You are on a path leading north, small hills surrounds you. You feel
-the forces of evil approach you from the north. 
+the forces of evil approach you from the north.
 ~
 155 4 4
 D0
@@ -75,7 +75,7 @@ The cave~
 small tunnel continues into the mountain.
 ~
 155 9 2
-D0 
+D0
 ~
 ~
 0 0 15521
@@ -86,7 +86,7 @@ D2
 S
 #15521
 The tunnel~
-   You force your way through a small tunnel, to you south you sense 
+   You force your way through a small tunnel, to you south you sense
 a little fresh air, and to the north the tunnel continues.
 ~
 155 9 3
@@ -135,7 +135,7 @@ D3
 S
 #15524
 The tunnel~
-   You are in a tunnel, the tunnel continues to the south and to the 
+   You are in a tunnel, the tunnel continues to the south and to the
 west, to the north there is a cave.
 ~
 155 9 3
@@ -394,7 +394,7 @@ D2
 S
 #15540
 The light cave~
-   You are in a light cave, through a hole large above you, you see 
+   You are in a light cave, through a hole large above you, you see
 the sky. A small tunnel to the south is the only way out.
 ~
 155 0 2
@@ -405,7 +405,7 @@ D2
 S
 #15541
 The valley~
-   You are in a small valley, surrounded by hills and a mountain to 
+   You are in a small valley, surrounded by hills and a mountain to
 the south. In the mountain there is a cave.  A river runs north from
 here.
 ~
@@ -502,7 +502,7 @@ D3
 S
 #15565
 The maze~
-   You are in a maze of small damp tunnels. Only exit is west to a 
+   You are in a maze of small damp tunnels. Only exit is west to a
 light cave.
 ~
 155 9 3
@@ -576,7 +576,7 @@ D1
 S
 #15570
 The tunnel~
-   You are in a small tunnel, to the west the tunnel continues and 
+   You are in a small tunnel, to the west the tunnel continues and
 to the east you see some light.
 ~
 155 9 3
@@ -638,7 +638,7 @@ D1
 S
 #15574
 The tunnel~
-   You are in a tunnel, only exit is west - Only exit, well there is 
+   You are in a tunnel, only exit is west - Only exit, well there is
 also a hole in the ceiling.
 ~
 155 9 3

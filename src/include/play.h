@@ -52,7 +52,7 @@ struct spell_info_type {
 #define SPELL_TYPE_SCROLL  4
 
 /* ----------------------------------------------------------------- */
-/* NOTE: Also defined in "spells.h"	*/ 
+/* NOTE: Also defined in "spells.h"	*/
 
 #define TYPE_UNDEFINED               -1
 #define SPELL_CHARM_PERSON            7
@@ -71,8 +71,8 @@ struct spell_info_type {
 #define SKILL_ARREST		    124
 
 #define TYPE_HIT		    150
-#define TYPE_MISC		    191		/* NO MESSAGES  */ 
-#define TYPE_SUFFERING		    200 
+#define TYPE_MISC		    191		/* NO MESSAGES  */
+#define TYPE_SUFFERING		    200
 
 /* ----------------------------------------------------------------- */
 /* NOTE: Move following type, defintion to "fight.c"
@@ -81,12 +81,12 @@ struct spell_info_type {
 	struct message_type ;
 	struct message_list;
 	struct attack_hit_type;
-*/ 
+*/
 
 int WAIT_STATE(struct char_data *ch, int cycle);
 
-/* NOTE: PULSE_VIOLENCE defined in "comm.c"	*/ 
-#define PULSE_VIOLENCE		12 
+/* NOTE: PULSE_VIOLENCE defined in "comm.c"	*/
+#define PULSE_VIOLENCE		12
 
 /* skilled */
 #define GET_LEARNED(ch, sk_no)		((ch)->skills[(sk_no)].learned)
@@ -97,11 +97,11 @@ extern void print_increased_skilled(struct char_data *ch, int sk_no);
 extern void increase_skilled(struct char_data *ch, struct char_data *victim,
 			     int sk_no, int mul, int add);
 
-/* NOTE: INCREASE_SKILLED(ch,victim, sk_no)'s are too big for macro. 
+/* NOTE: INCREASE_SKILLED(ch,victim, sk_no)'s are too big for macro.
    Use function version for space efficency             */
 /*      probability = 1/( skilled(ch, sk_no) * mul + add )      */
 /*  NOTE: Guild membership check for PK is deleted. It is pointless */
-/*  NOTE: It checks victim is pet to prevent skill drill by robot play 
+/*  NOTE: It checks victim is pet to prevent skill drill by robot play
    in petshop   - by Hjpark */
 /*  NOTE: increase_skilled() is in utility.c. See FYI: there for details */
 
@@ -149,9 +149,9 @@ extern void increase_skilled(struct char_data *ch, struct char_data *victim,
 #define MODE_LOW_LEVEL	15	/* level 1 - 12 */
 
 #define MODE_LEVEL_MAX	16	/* max level.. */
-#define MODE_LEVEL_MIN	16	/* min level.. */ 
+#define MODE_LEVEL_MIN	16	/* min level.. */
 
-/* ------------  for PLAYER / MOB balancing ------------------- */ 
+/* ------------  for PLAYER / MOB balancing ------------------- */
 /* NOTE: from constant.c	*/
 
 struct dex_skill_type {
@@ -190,20 +190,20 @@ struct dam_weapon_type {
 
 /* ----------------------------------------------------------------- */
 
-extern struct dex_skill_type dex_app_skill[]; 
+extern struct dex_skill_type dex_app_skill[];
 extern struct int_app_type int_app[];
 extern struct wis_app_type wis_app[];
 extern struct dex_app_type dex_app[];
 extern struct con_app_type con_app[];
 
-extern struct spell_info_type spell_info[]; 
+extern struct spell_info_type spell_info[];
 
-extern void hit(struct char_data *ch, struct char_data *victim, int type); 
+extern void hit(struct char_data *ch, struct char_data *victim, int type);
 extern void stop_fighting(struct char_data *ch);
 
-extern void first_attack(struct char_data *ch, struct char_data *victim); 
+extern void first_attack(struct char_data *ch, struct char_data *victim);
 extern void die(struct char_data *ch, int level, struct char_data *who);
-extern void damage(struct char_data *ch, struct char_data *victim, 
+extern void damage(struct char_data *ch, struct char_data *victim,
 	int damage, int weapontype);
 
 extern bool saves_spell(struct char_data *ch, int spell);

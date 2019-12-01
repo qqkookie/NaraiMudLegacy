@@ -67,7 +67,7 @@ $(OBJDIR)/%.o :  %.c
 $(OBJDIR)/% :  $(OBJDIR)/%.o
 	$(LD) -o $@ $< $(LDFLAGS)
 
-default :    objdir $(PROG_BIN) 
+default :    objdir $(PROG_BIN)
 
 all:    $(PROG_BIN) utils
 
@@ -80,7 +80,7 @@ objdir:
 utils : $(U_BINS)
 
 clean:
-	- /bin/rm -f $(OBJS) $(UTILS:%=$(OBJDIR)/%.o) tags core 
+	- /bin/rm -f $(OBJS) $(UTILS:%=$(OBJDIR)/%.o) tags core
 	- /bin/rm -f $(PROG_BIN) $(U_BINS)
 
 install : $(PROG_BIN) $(U_BINS)
@@ -319,11 +319,11 @@ $(OBJ)/listchar.o: utils/listchar.c   \
     $(INC)/char.h $(INC)/typedef.h  \
     $(INC)/gamedb.h
 
-$(OBJ)/zoneitem.o: utils/zoneitem.c 
+$(OBJ)/zoneitem.o: utils/zoneitem.c
 
-$(OBJ)/zonelist.o: utils/zonelist.c 
+$(OBJ)/zonelist.o: utils/zonelist.c
 
-$(OBJ)/zoneprint.o: utils/zoneprint.c 
+$(OBJ)/zoneprint.o: utils/zoneprint.c
 
 $(OBJ)/mobbalance.o: utils/mobbalance.c
 
@@ -333,7 +333,7 @@ $(OBJ)/mobedit.o: utils/mobedit.c utils/mobcreate.h
 
 $(OBJ)/testskill.o: utils/testskill.c
 
-$(OBJ)/dostashform.o: utils/dostashform.c 
+$(OBJ)/dostashform.o: utils/dostashform.c
 
-$(OBJ)/undostashform.o: utils/undostashform.c 
+$(OBJ)/undostashform.o: utils/undostashform.c
 

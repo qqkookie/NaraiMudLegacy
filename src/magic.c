@@ -28,7 +28,7 @@
 #define WEAPON_MAGIC_MISSILE 		SPELL_MAGIC_MISSILE
 
 /*
-#define WEAPON_GIANT_SLAYER 9 
+#define WEAPON_GIANT_SLAYER 9
 #define WEAPON_POLICE 10
 #define WEAPON_OUTLAW 11
 #define WEAPON_ASSASSIN 12
@@ -53,7 +53,7 @@ void sweapon_smash(ch, victim, weapon)
     act("$p smashes $n with bone crushing sound.", TRUE, victim, weapon, 0, TO_ROOM);
     act("You are smashed by $p. You are hard to stand.", TRUE, victim, weapon, 0, TO_CHAR);
 
-    /* NOTE: damage type : TYPE_UNDEFINED -> WEAPON_* */ 
+    /* NOTE: damage type : TYPE_UNDEFINED -> WEAPON_* */
     damage(ch, victim, dam, WEAPON_SMASH);
     if (GET_POS(victim) > POS_SITTING)
 	GET_POS(victim) = POS_SITTING;
@@ -270,7 +270,7 @@ void sweapon_god(ch, victim, weapon)
 	spell_disintegrate(50, ch, victim, 0);
     WAIT_STATE(victim, PULSE_VIOLENCE * 3);
     GET_POS(victim) = POS_STUNNED;
-} 
+}
 
 void magic_weapon_hit(struct char_data *ch, struct char_data *victim,
 		      struct obj_data *weapon)
@@ -331,7 +331,7 @@ void magic_weapon_hit(struct char_data *ch, struct char_data *victim,
 	case WEAPON_MAGIC_MISSILE:
 	    spell_magic_missile(GET_LEVEL(ch), ch, victim, 0);
 	    break;
-	/* 
+	/*
 	case WEAPON_GOD:
 	    sweapon_god ( ch, victim, weapon );
 	    break;
@@ -367,18 +367,18 @@ void magic_weapon_hit(struct char_data *ch, struct char_data *victim,
 		break;
 	    }
 	    break;
-	default: 
-	    /* NOTE: Log illegal type of weapon magic. */ 
+	default:
+	    /* NOTE: Log illegal type of weapon magic. */
 	    sprintf(buf,"magic_weapon_hit(): Unknown magic %d of %s (#%d)",
-		weapon->obj_flags.value[0], 
-		weapon->name, GET_OBJ_VIRTUAL(weapon)); 
+		weapon->obj_flags.value[0],
+		weapon->name, GET_OBJ_VIRTUAL(weapon));
 
 	    /* NOTE: REMOVE THIS CODE AFTER JAN '98 */
-	    if ( weapon->obj_flags.value[0] > 0 && weapon->obj_flags.value[0] <= 9 ) 
+	    if ( weapon->obj_flags.value[0] > 0 && weapon->obj_flags.value[0] <= 9 )
 		weapon->obj_flags.value[0] += 170;
-	    if ( weapon->obj_flags.value[0] == 14 ) 
+	    if ( weapon->obj_flags.value[0] == 14 )
 		weapon->obj_flags.value[0] = 30;
-		
+
 	    log(buf);
 	}
     }
@@ -391,7 +391,7 @@ void enchant_weapon_special( struct char_data *ch, struct obj_data *obj)
 {
     int type;
 
-    if (!obj || !ch ) 
+    if (!obj || !ch )
 	    return;
     SET_BIT(obj->obj_flags.extra_flags, ITEM_MAGIC);
 
@@ -407,7 +407,7 @@ void enchant_weapon_special( struct char_data *ch, struct obj_data *obj)
 	SET_BIT(obj->obj_flags.extra_flags, ITEM_ANTI_WARRIOR);
 
     /* NOTE:  More varied weapon magic type.
-              Change according to WEPON_* renumbering. */ 
+              Change according to WEPON_* renumbering. */
     do {
 	type = number(1, 200); /* MAX DAMGE TYPE */
 	obj->obj_flags.value[0] = type;
@@ -418,7 +418,7 @@ void enchant_weapon_special( struct char_data *ch, struct obj_data *obj)
 	    obj->name = "dragon slayer";
 	    obj->short_description = "Mystic Dragon Slayer";
 	    obj->description =
-		"Mystic Dragon Slayer lies here.\n\r";
+		"Mystic Dragon Slayer lies here.\r\n";
 	    break;
 	case WEAPON_ANTI_EVIL_WEAPON:
 	    SET_BIT(obj->obj_flags.extra_flags, ITEM_ANTI_EVIL);
@@ -426,7 +426,7 @@ void enchant_weapon_special( struct char_data *ch, struct obj_data *obj)
 	    obj->name = "silver spear";
 	    obj->short_description = "Silver Spear";
 	    obj->description =
-		"Silver Spear lies here.\n\r";
+		"Silver Spear lies here.\r\n";
 	    break;
 	case WEAPON_ANTI_GOOD_WEAPON:
 	    SET_BIT(obj->obj_flags.extra_flags, ITEM_ANTI_GOOD);
@@ -434,14 +434,14 @@ void enchant_weapon_special( struct char_data *ch, struct obj_data *obj)
 	    obj->name = "demon blade";
 	    obj->short_description = "Mighty Demon Blade";
 	    obj->description =
-		"Mighty Demon Blade lies here.\n\r";
+		"Mighty Demon Blade lies here.\r\n";
 	    break;
 	case WEAPON_DISINTEGRATE:
 	    obj->obj_flags.value[3] = 3;
 	    obj->name = "sword disintegrate";
 	    obj->short_description = "runed longsword";
 	    obj->description =
-		"Longsword runed by a word 'Disintergrate' lies here.\n\r";
+		"Longsword runed by a word 'Disintergrate' lies here.\r\n";
 	    break;
 
 	case WEAPON_ANY_MAGIC:
@@ -459,7 +459,7 @@ void enchant_weapon_special( struct char_data *ch, struct obj_data *obj)
 	case WEAPON_FROST_BREATH:
 	case WEAPON_ENERGY_DRAIN:
 	case WEAPON_MAGIC_MISSILE:	/* NOTE: Added */
-	    break; 
+	    break;
 
 	case TYPE_HIT:
 	case TYPE_BLUDGEON:
@@ -479,7 +479,7 @@ void enchant_weapon_special( struct char_data *ch, struct obj_data *obj)
     obj->obj_flags.gpd = number(1, 12);
 }
 
-/********************************************************************/ 
+/********************************************************************/
 /* NOTE: defintion of saving_throw[] moved to constants.c */
 
 /* NOTE: print_increased_skilled() is merged to increase_skilled() */
@@ -497,15 +497,15 @@ void increase_skilled(struct char_data *ch, struct char_data *victim,
 
     if(IS_NPC(ch) || number(0, GET_SKILLED(ch, sk_no) * mul + add))
 	return;
-/* NOTE: IMHO, Checking char or victim guild is pointless. 
-   Even if case applying skill to same guild member is excluded, 
+/* NOTE: IMHO, Checking char or victim guild is pointless.
+   Even if case applying skill to same guild member is excluded,
    there are plenty of ways to drill skills without harming player.
    And what about good skill like cast 'heal'?  */
 
     /* jhpark, skilled increase시 같은 길드멤버가 아닌지 확인 */
 /*
    if(IS_NPC(victim) ||( ch == victim )
-   || (ch->player.guild != victim->player.guild)) 
+   || (ch->player.guild != victim->player.guild))
  */
     /* NOTE: test validity of increase after rolling dice       */
     /* victim이 pet이 아닌지 확인....       - jhpark        */
@@ -522,9 +522,9 @@ void increase_skilled(struct char_data *ch, struct char_data *victim,
 	GET_SKILLED(ch, sk_no) = GET_SKILLED(ch, sk_no) + 1;
 	/* NOTE: This is OLD print_increase_skilled() */
 	/* NOTE: spells index starts from 1, not zero.   */
-	sprintf(buf, "Your %s POWER is more skilled!\n\r", spells[sk_no]);
+	sprintf(buf, "Your %s POWER is more skilled!\r\n", spells[sk_no]);
 	send_to_char(buf, ch);
-    } 
+    }
 }
 
 /* NOTE: This is FYI on INCREASE_SKILLED() */
@@ -579,30 +579,30 @@ bool saves_spell(struct char_data *ch, int save_type)
 
 /* **********************************************************************
  * 		spell 'identify'					*
- * ******************************************************************** */ 
+ * ******************************************************************** */
 
 void identify_char(struct char_data *ch, struct char_data *victim )
 {
-    char buf[MAX_BUFSIZ]; 
-    sprintf(buf, STRHAN( "%d Years,  %d Months,  %d Days,  %d Hours old.\n\r",
-			"나이 %d 년 %d 달 %d 일 %d 시간 입니다.\n\r", ch ),
+    char buf[MAX_BUFSIZ];
+    sprintf(buf, STRHAN( "%d Years,  %d Months,  %d Days,  %d Hours old.\r\n",
+			"나이 %d 년 %d 달 %d 일 %d 시간 입니다.\r\n", ch ),
 	    age(victim).year, age(victim).month,
 	    age(victim).day, age(victim).hours);
     send_to_char(buf, ch);
 
-    sprintf(buf, STRHAN( "Height %d cm  Weight %d pounds \n\r",
-    		"키 %d cm  몸무게 %d 파운드 \n\r", ch ),
+    sprintf(buf, STRHAN( "Height %d cm  Weight %d pounds \r\n",
+    		"키 %d cm  몸무게 %d 파운드 \r\n", ch ),
 	    victim->player.height, victim->player.weight);
     send_to_char(buf, ch);
 
     /* NOTE: Show carrying items number and total weight. */
-    sprintf(buf, STRHAN( "You are carring %d items of %d pounds total.\n\r",
-	"당신은 %d 개의 물건 (총중량 %d 파운드)을 가지고 있습니다.\n\r", ch),
+    sprintf(buf, STRHAN( "You are carring %d items of %d pounds total.\r\n",
+	"당신은 %d 개의 물건 (총중량 %d 파운드)을 가지고 있습니다.\r\n", ch),
 	    GET_CARRYING_N(victim), GET_CARRYING_W(victim));
     send_to_char(buf, ch);
 
     if (GET_LEVEL(victim) > 5) {
-	sprintf(buf, "Str %d/%d,  Int %d,  Wis %d,  Dex %d,  Con %d\n\r",
+	sprintf(buf, "Str %d/%d,  Int %d,  Wis %d,  Dex %d,  Con %d\r\n",
 	GET_STR(victim), GET_ADD(victim), GET_INT(victim),
 	GET_WIS(victim), GET_DEX(victim), GET_CON(victim));
 	send_to_char(buf, ch);
@@ -611,9 +611,9 @@ void identify_char(struct char_data *ch, struct char_data *victim )
 
 void identify_object(struct char_data *ch, struct obj_data *obj )
 {
-    char buf[MAX_LINE_LEN], buf2[MAX_NAME_LEN], bufh[MAX_LINE_LEN], *msg; 
+    char buf[MAX_LINE_LEN], buf2[MAX_NAME_LEN], bufh[MAX_LINE_LEN], *msg;
     int i, found;
-    extern int ac_applicable(struct obj_data *obj_object); 
+    extern int ac_applicable(struct obj_data *obj_object);
 
     /* For Objects */
     extern char *item_types[];
@@ -621,11 +621,11 @@ void identify_object(struct char_data *ch, struct obj_data *obj )
     extern char *apply_types[];
     extern char *affected_bits[];
 
-    send_to_char_han("You feel informed:\n\r",
-		     "이런 정보를 알 수 있습니다:\n\r", ch);
+    send_to_char_han("You feel informed:\r\n",
+		     "이런 정보를 알 수 있습니다:\r\n", ch);
 
     sprinttype(GET_ITEM_TYPE(obj), item_types, buf2);
-    sprintf(buf, STRHAN( "Object '%s', Item type: %s\r\n", 
+    sprintf(buf, STRHAN( "Object '%s', Item type: %s\r\n",
 		    "물건 '%s', 종류: %s\r\n", ch), obj->name, buf2 );
     send_to_char(buf, ch);
 
@@ -640,111 +640,111 @@ void identify_object(struct char_data *ch, struct obj_data *obj )
     sprintf(buf, STRHAN("Item is: %s\r\n", "성질: %s\r\n", ch), buf2);
     send_to_char(buf, ch);
 
-    sprintf(buf, 
-	    STRHAN( "Weight: %d, Value: %d\n\r", "무게: %d, 값: %d\n\r", ch), 
+    sprintf(buf,
+	    STRHAN( "Weight: %d, Value: %d\r\n", "무게: %d, 값: %d\r\n", ch),
 	obj->obj_flags.weight, obj->obj_flags.cost);
     send_to_char(buf, ch);
 
     switch (GET_ITEM_TYPE(obj)) {
     case ITEM_SCROLL:
     case ITEM_POTION:
-	sprintf(buf, STRHAN("Level %d spells of:\n\r", 
-		"%d 레벨에 해당하는 마법:\n\r", ch), obj->obj_flags.value[0]);
+	sprintf(buf, STRHAN("Level %d spells of:\r\n",
+		"%d 레벨에 해당하는 마법:\r\n", ch), obj->obj_flags.value[0]);
 	send_to_char(buf, ch);
 	/* NOTE: spells index starts from 1, not zero.   */
 	if (obj->obj_flags.value[1] > 0) {
 	    sprinttype(obj->obj_flags.value[1] , spells, buf);
-	    strcat(buf, "\n\r");
+	    strcat(buf, "\r\n");
 	    send_to_char(buf, ch);
 	}
 	if (obj->obj_flags.value[2] > 0) {
 	    sprinttype(obj->obj_flags.value[2] , spells, buf);
-	    strcat(buf, "\n\r");
+	    strcat(buf, "\r\n");
 	    send_to_char(buf, ch);
 	}
 	if (obj->obj_flags.value[3] > 0) {
 	    sprinttype(obj->obj_flags.value[3] , spells, buf);
-	    strcat(buf, "\n\r");
+	    strcat(buf, "\r\n");
 	    send_to_char(buf, ch);
 	}
 	break;
     case ITEM_WAND:
     case ITEM_STAFF:
-	sprintf(buf, "Has %d charges, with %d charges left.\n\r",
+	sprintf(buf, "Has %d charges, with %d charges left.\r\n",
 		obj->obj_flags.value[1], obj->obj_flags.value[2]);
 	send_to_char(buf, ch);
 
-	sprintf(buf, STRHAN("Level %d spell of:\n\r", 
-		"%d 레벨에 해당하는 마법:\n\r", ch), obj->obj_flags.value[0]);
+	sprintf(buf, STRHAN("Level %d spell of:\r\n",
+		"%d 레벨에 해당하는 마법:\r\n", ch), obj->obj_flags.value[0]);
 	send_to_char(buf, ch);
 
 	/* NOTE: spells index starts from 1, not zero.   */
 	if (obj->obj_flags.value[3] > 0) {
 	    sprinttype(obj->obj_flags.value[3], spells, buf);
-	    strcat(buf, "\n\r");
+	    strcat(buf, "\r\n");
 	    send_to_char(buf, ch);
 	}
 	break;
     case ITEM_WEAPON:
     case ITEM_FIREWEAPON:
-	sprintf(buf, "Damage Dice %s '%dD%d'\n\r", STRHAN("is", "는", ch ),
+	sprintf(buf, "Damage Dice %s '%dD%d'\r\n", STRHAN("is", "는", ch ),
 		obj->obj_flags.value[1], obj->obj_flags.value[2]);
 	send_to_char(buf, ch);
 	if (obj->obj_flags.gpd) {
-	    sprintf(buf, "This is magic weapon.\n\r");
+	    sprintf(buf, "This is magic weapon.\r\n");
 	    switch (obj->obj_flags.value[0]) {
 	    case WEAPON_SMASH:
-		msg = "smash\n\r"; break;
+		msg = "smash\r\n"; break;
 	    case WEAPON_FLAME:
-		msg = "flame\n\r"; break;
+		msg = "flame\r\n"; break;
 	    case WEAPON_ICE:
-		msg = "ice beam\n\r"; break;
+		msg = "ice beam\r\n"; break;
 	    case WEAPON_BOMBARD:
-		msg = "bombard\n\r"; break;
+		msg = "bombard\r\n"; break;
 	    case WEAPON_SHOT:
-		msg = "shot\n\r"; break;
+		msg = "shot\r\n"; break;
 	    case WEAPON_DRAGON_SLAYER:
-		msg = "dragon slayer\n\r"; break;
+		msg = "dragon slayer\r\n"; break;
 	    case WEAPON_ANTI_EVIL_WEAPON:
-		msg = "anti evil\n\r"; break;
+		msg = "anti evil\r\n"; break;
 	    case WEAPON_ANTI_GOOD_WEAPON:
-		msg = "anti good\n\r"; break;
+		msg = "anti good\r\n"; break;
 	    /*
 	    case WEAPON_GIANT_SLAYER:
-		msg = "giant slayer\n\r"; break;
+		msg = "giant slayer\r\n"; break;
 	    case WEAPON_BEHEAD:
-		msg = "behead\n\r"; break;
+		msg = "behead\r\n"; break;
 	    */
 	    case WEAPON_LIGHTNING:
-		msg = "lightning\n\r"; break;
+		msg = "lightning\r\n"; break;
 	    case WEAPON_CALL_LIGHTNING:
-		msg = "call lightning\n\r"; break;
+		msg = "call lightning\r\n"; break;
 	    case WEAPON_FIREBALL:
-		msg = "fireball\n\r"; break;
+		msg = "fireball\r\n"; break;
 	    case WEAPON_FIRE_BREATH:
-		msg = "fire breath\n\r"; break;
+		msg = "fire breath\r\n"; break;
 	    case WEAPON_FROST_BREATH:
-		msg = "frost breath\n\r"; break;
+		msg = "frost breath\r\n"; break;
 	    case WEAPON_ENERGY_DRAIN:
-		msg = "energy drain\n\r"; break;
+		msg = "energy drain\r\n"; break;
 	    case WEAPON_DISINTEGRATE:
-		msg = "disintegrate\n\r"; break;
+		msg = "disintegrate\r\n"; break;
 	    /*
 	    case WEAPON_GOD:
-		msg ="god blessed\n\r";
+		msg ="god blessed\r\n";
 	    break;
 	    */
 	    case WEAPON_ANY_MAGIC:
-		msg = "random magic\n\r"; break;
+		msg = "random magic\r\n"; break;
 	    default:
-		msg = "unknown magic\n\r";
+		msg = "unknown magic\r\n";
 	    }
 	    send_to_char(msg, ch);
 	}
 	break;
     case ITEM_ARMOR:
 	if (ac_applicable(obj)) {
-	    sprintf(buf, STRHAN("AC-apply is %d\n\r", "무장: %d\n\r", ch),
+	    sprintf(buf, STRHAN("AC-apply is %d\r\n", "무장: %d\r\n", ch),
 		obj->obj_flags.value[0]);
 	    send_to_char(buf, ch);
 	}
@@ -756,20 +756,20 @@ void identify_object(struct char_data *ch, struct obj_data *obj )
 	if ((obj->affected[i].location != APPLY_NONE) &&
 	    (obj->affected[i].modifier != 0)) {
 	    if (!found) {
-		send_to_char_han("Can affect you as :\n\r",
-				 "다음과 같은 작용을 합니다 :\n\r", ch);
+		send_to_char_han("Can affect you as :\r\n",
+				 "다음과 같은 작용을 합니다 :\r\n", ch);
 		found = TRUE;
 	    }
 
 	    sprinttype(obj->affected[i].location, apply_types, buf2);
-	    sprintf(buf, "    Affects : %s By %d\n\r", buf2,
+	    sprintf(buf, "    Affects : %s By %d\r\n", buf2,
 		    obj->affected[i].modifier);
-	    sprintf(bufh, "    기능 : %d 만큼의 %s\n\r",
+	    sprintf(bufh, "    기능 : %d 만큼의 %s\r\n",
 		    obj->affected[i].modifier, buf2);
 	    send_to_char_han(buf, bufh, ch);
 	}
     }
-} 
+}
 
 /* NOTE: Divide spell_identify() to 3 pieces:
     spell_identify(), identify_char() and identify_object() */
@@ -778,15 +778,15 @@ void spell_identify(byte level, struct char_data *ch,
 {
     INCREASE_SKILLED2(ch, ch, SPELL_IDENTIFY);
 
-    if (obj) 
+    if (obj)
 	identify_object(ch, obj );
 
     else if (victim && !IS_NPC(victim))  /* victim */
-	identify_char(ch, victim); 
-    else 
-	send_to_char_han("You learn nothing new.\n\r",
-			 "별다른게 없네요.\n\r", ch);
-   
+	identify_char(ch, victim);
+    else
+	send_to_char_han("You learn nothing new.\r\n",
+			 "별다른게 없네요.\r\n", ch);
+
 }
 
 /* ***************************************************************************

@@ -5,10 +5,10 @@
     Merged function of OLD change_pass.c and change_level.c
     ****************************************************** */
 
-#include <stdio.h> 
-#include <string.h> 
-#include <unistd.h> 
-#include <stdlib.h> 
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 #ifndef __FreeBSD__
 #include <crypt.h>
@@ -81,34 +81,34 @@ int main()
 
 found:
     printf("\nFound player NAME : \"%s\" ( LEVEL %d )\n",
-	player.name, player.level ); 
+	player.name, player.level );
 
     if ( job == 2 ) {
 	if ( strncmp(player.pwd, crypt(buf, player.pwd), 10) == 0)
-	    printf("Checking passowrd OK!\n"); 
+	    printf("Checking passowrd OK!\n");
 	else
-	    printf("Checking passowrd does NOT match!\n"); 
+	    printf("Checking passowrd does NOT match!\n");
 	fclose (p_file);
 	return 0;
     }
 
-    if ( job == 1 ) { 
-	printf("Changing passowrd "); 
+    if ( job == 1 ) {
+	printf("Changing passowrd ");
 	strncpy(player.pwd, crypt(buf, player.pwd), 10);
 	player.pwd[10] = '\0' ;
     }
     else if ( job == 3 ) {
-	printf("Setting level "); 
-	player.level = newlevel ; 
+	printf("Setting level ");
+	player.level = newlevel ;
     }
-    else 
+    else
 	return 1;
 
     if( (fseek( p_file , -CHUCK, SEEK_CUR ) == 0 )
 	    && ( fwrite( &player , CHUCK , 1 , p_file ) > 0) )
-	printf( "Ok!.\n"); 
+	printf( "Ok!.\n");
     else
-	printf( "FAILED!.\n"); 
+	printf( "FAILED!.\n");
     fclose(p_file);
     return(0);
 }

@@ -120,10 +120,10 @@ do
 
 		if [ -n "$DEBUGGER" ] ; then
 			#----------------------------------------
-		
+
 			# lldb -f $prog_run <<- DBG_INPUT
 			exec $DEBUGGER <<- DBG_INPUT
-		
+
 			handle SIGHUP nostop print pass
 			# handle SIGINT nostop print pass
 			handle SIGPIPE nostop print pass
@@ -138,7 +138,7 @@ do
 			DBG_INPUT
 			exit
 			#----------------------------------------
-		
+
 		else
 			# run mud in the $usrdir
 			exec $prog_run $port
@@ -189,7 +189,7 @@ do
 
 	(
 		echo "Mud: run finished. loop: $COUNT"
-		env LC_ALL=C date +"$datefmt" 
+		env LC_ALL=C date +"$datefmt"
 
 		if [ -s $logfile -a -f $pidfile ] ; then
 			echo "Killed or crashed: log ==> "

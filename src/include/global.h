@@ -1,6 +1,6 @@
 /********************************************************************
  *  File: global.h: Global definition and external vars and procs   *
- *								    *	
+ *								    *
  ********************************************************************/
 
 #include <assert.h>
@@ -15,13 +15,13 @@
 
 #define	LEV_IMMO		41
 
-/*  NOTE: also defined in "comm.c"	*/ 
-#define DFLT_PORT		4001  /* default port */ 
-#define DFLT_DIR		"users"  /* default directory */ 
+/*  NOTE: also defined in "comm.c"	*/
+#define DFLT_PORT		4001  /* default port */
+#define DFLT_DIR		"users"  /* default directory */
 
-#define REBOOT_TIME		(4*86400)
+#define REBOOT_TIME		(4*86400)   // 4 days
 #define TIME_ZONE		(9*3600)
-#define REBOOT_WHEN		(9*60-5)
+#define REBOOT_WHEN		(9*60-5)    // AM 08:55
 
 #define CARRY_WEIGHT_BASE	500	// NOTE: more carrying weight
 #define CARRY_NUM_BASE		10	// NOTE: more carry num
@@ -85,7 +85,7 @@ struct index_data {
     int (*func) (struct char_data * ch, int cmd, char *arg);
     /* int (*func) (); */
     /* special procedure for this mob/obj       */
-}; 
+};
 
 struct title_type {
     char *title_m;
@@ -127,14 +127,14 @@ struct weather_data {
 struct time_info_data {
     ubyte hours, day, month;
     sh_int year;
-}; 
+};
 
 /* **********************************************************************
    *  OLD file: utils.h, Utility module.  Part of DIKUMUD 		*
    *  Usage: Utility macros						*
    ********************************************************************** */
 
-#define TRUE  1 
+#define TRUE  1
 #define FALSE 0
 
 #define IS_SET(flag,bit)  ((flag) & (bit))
@@ -143,14 +143,14 @@ struct time_info_data {
                       (b) ^= (a); \
                       (a) ^= (b); }
 
-#define SET_BIT(var,bit)  ((var) = (var) | (bit)) 
+#define SET_BIT(var,bit)  ((var) = (var) | (bit))
 #define REMOVE_BIT(var,bit)  ((var) = (var) & ~(bit) )
 
 /* NOTE: string/character handling macros */
-#define LOWER(c) (((c)>='A'  && (c) <= 'Z') ? ((c)+('a'-'A')) : (c)) 
+#define LOWER(c) (((c)>='A'  && (c) <= 'Z') ? ((c)+('a'-'A')) : (c))
 #define UPPER(c) (((c)>='a'  && (c) <= 'z') ? ((c)+('A'-'a')) : (c) )
 
-#define ISDIGIT(c) ((c) >='0' && (c) <= '9') 
+#define ISDIGIT(c) ((c) >='0' && (c) <= '9')
 #define ISNEWL(ch) ((ch) == '\n' || (ch) == '\r')
 
 /* NOTE: NEW! Prevent NULL pointer to string : it replaces OLD IF_STR()  */
@@ -180,7 +180,7 @@ struct time_info_data {
 
 #define RECREATE(result,type,number) do {\
   if (!((result) = (type *) realloc ((result), sizeof(type) * (number))))\
-    { perror("realloc failure"); abort(); } } while(0) 
+    { perror("realloc failure"); abort(); } } while(0)
 
 /* NOTE: NEW MACRO: Similar to assert(). but don't abort(),
    just print log() where ASSERT() failed.      */
@@ -202,7 +202,7 @@ extern int MAX(int a, int b);
 
 #define MAX(a,b) (((a) > (b)) ? (a) : (b))
 #define MIN(a,b) (((a) < (b)) ? (a) : (b))
-#endif 
+#endif
 
 extern int number(int from, int to);
 extern int dice(int number, int size);
@@ -220,16 +220,16 @@ extern char *monetary(LONGLONG n);
 extern char *monetary4(LONGLONG n);
 
 extern int isname(char *str, char *namelist);
-extern char *fname(char *namelist); 
+extern char *fname(char *namelist);
 extern int is_abbrev(char *arg, char *full);
 
 extern char *one_argument(char *argument, char *first_arg);
 extern void half_chop(char *string, char *arg1, char *arg2);
 extern void argument_interpreter(char *argument, char *arg1, char *arg2);
-extern int search_block(char *arg, char **list, int exact); 
+extern int search_block(char *arg, char **list, int exact);
 
 /* One_Word is like one_argument, execpt that words in quotes "" are */
-/* regarded as ONE word                                              */ 
+/* regarded as ONE word                                              */
 extern char *one_word(char *argument, char *first_arg);
 /* -------------------------------------------------------------- */
 /* some  of public procedures in db.c */
@@ -237,7 +237,7 @@ extern char *one_word(char *argument, char *first_arg);
 #define REAL 0
 #define VIRTUAL 1
 
-extern struct char_data *read_mobile(int nr, int type); 
+extern struct char_data *read_mobile(int nr, int type);
 /* read an object from OBJ_FILE */
 extern struct obj_data *read_object(int nr, int type);
 
@@ -246,7 +246,7 @@ extern char *lookup_db(char *keyword);
 extern void save_char(struct char_data *ch);
 
 /* returns the real number of the monster with given virtual number */
-extern int real_mobile(int virtual); 
+extern int real_mobile(int virtual);
 
 /* returns the real number of the room with given virtual number */
 extern int real_room(int virtual);
@@ -258,7 +258,7 @@ extern int real_object(int virtual);
 extern char *file_to_string(char *name, char *sbuf);
 
 /* read and allocate space for a '~'-terminated string from a given file */
-extern char *fread_string(FILE * fl); 
+extern char *fread_string(FILE * fl);
 
 /* ************************************************************************
    *  file: handler.h , Handler module.                      Part of DIKUMUD *
@@ -269,7 +269,7 @@ extern char *fread_string(FILE * fl);
 void affect_to_char(struct char_data *ch, struct affected_type *af);
 void affect_from_char(struct char_data *ch, byte skill);
 void affect_join(struct char_data *ch, struct affected_type *af,
-		 bool avg_dur, bool avg_mod); 
+		 bool avg_dur, bool avg_mod);
 bool affected_by_spell(struct char_data *ch, byte skill);
 void affect_remove(struct char_data *ch, struct affected_type *af);
 /* ******* characters ********* */
@@ -288,7 +288,7 @@ void obj_from_char(struct obj_data *object);
 void obj_to_room(struct obj_data *object, int room);
 void obj_from_room(struct obj_data *object);
 
-void extract_obj(struct obj_data *obj); 
+void extract_obj(struct obj_data *obj);
 
 void update_pos(struct char_data *victim);
 
@@ -306,7 +306,7 @@ struct obj_data *get_obj_vis(struct char_data *ch, char *name);
 /* NOTE: Function version of OLD macro CAN_SEE()  */
 extern int CAN_SEE(struct char_data *ch, struct char_data *vic );
 
-/* Generic Find */ 
+/* Generic Find */
 
 #define FIND_CHAR_ROOM     1
 #define FIND_CHAR_WORLD    2
@@ -323,8 +323,8 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 
 extern int command_interpreter(struct char_data *ch, char *argument);
 
-extern void clear_object(struct obj_data *obj); 
-extern void clear_char(struct char_data *ch); 
+extern void clear_object(struct obj_data *obj);
+extern void clear_char(struct char_data *ch);
 
 extern int do_simple_move(struct char_data *ch, int cmd , int following);
 extern void wear(struct char_data *ch, struct obj_data *obj, int where_flag);
@@ -345,6 +345,6 @@ extern char *spells[];
 extern struct time_info_data time_info;
 extern struct str_app_type str_app[];
 extern struct title_type titles[4][LEVEL_SIZE] ;
-extern struct weather_data weather_info; /* the infomation about the weather */ 
+extern struct weather_data weather_info; /* the infomation about the weather */
 
 /* -------------------------------------------------------------- */

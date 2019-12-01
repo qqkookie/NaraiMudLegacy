@@ -1,7 +1,7 @@
 /* *************************************************************************
    *  file: comm.h , Communication module.                Part of DIKUMUD  *
    *  Usage: connection structures and messaging 			   *
-   ************************************************************************* */ 
+   ************************************************************************* */
 
 // Kuldge to convert deprecated sigsetmask() call to sigprocmask() call
 
@@ -17,7 +17,7 @@ struct snoop_data {
     struct char_data *snoop_by;
 };
 
-/* NOTE: Input/Output queue structures  */ 
+/* NOTE: Input/Output queue structures  */
 struct txt_block {
     char *text;
     struct txt_block *next;
@@ -33,8 +33,8 @@ struct txt_q {
 /* ==========+++     PC Player connection data     +++=========== */
 
 struct descriptor_data {
-    char name[20];	/* NOTE: NEW! player name of this connection */ 
-    int descriptor;	/* file descriptor for socket */ 
+    char name[20];	/* NOTE: NEW! player name of this connection */
+    int descriptor;	/* file descriptor for socket */
     /* NOTE: Old :char host[16] (Numeric IP addr) is extended to  */
     /*       New :char host[30] to accomodate full DNS hostname. */
     char host[30];	/* hostname                   */
@@ -55,7 +55,7 @@ struct descriptor_data {
     byte page_len;	/* NOTE: page_string() page length */
 
     int prompt_mode;			/* control of prompt-printing	*/
-    char ibuf[MAX_STRING_LENGTH];	/* buffer for raw input		*/ 
+    char ibuf[MAX_STRING_LENGTH];	/* buffer for raw input		*/
     /* NOTE: OLD: char buf[MAX_STRING_LENGTH]. To avoid confusion    */
     char last_input[MAX_LAST_INPUT_COUNT][MAX_INPUT_LENGTH]; /* for use of !! */
     int last_input_count;
@@ -65,7 +65,7 @@ struct descriptor_data {
     struct char_data *original;		/* original char		*/
     struct snoop_data snoop;		/* to snoop people.		*/
     struct descriptor_data *next;	/* link to next descriptor	*/
-}; 
+};
 
 /* modes of connectedness */
 
@@ -98,21 +98,22 @@ struct descriptor_data {
 /*	Global varaible	*/
 extern struct descriptor_data  *descriptor_list;
 
-
+/*
 #define STORY     \
 "Once upon a time, long and long years ago...... Ummm...\r\n\
- ....Cookie doesn't say more. You'd better entering the Game.\r\n\r\n"
+....Cookie doesn't say more. You'd better entering the Game.\r\n\r\n"
+*/
 
 extern char login_menu[];
-extern char login_banner[]; 
-extern char login_welcome[];  
+extern char login_banner[];
+extern char login_welcome[];
 
 /* ==============    Genral Printing proc's    ============== */
 
 #define SEND_TO_Q(messg, desc)  write_to_q((messg), &(desc)->output)
 
 extern int write_to_descriptor(int desc, char *txt);
-extern void write_to_q(char *txt, struct txt_q *queue); 
+extern void write_to_q(char *txt, struct txt_q *queue);
 
 /* ---------------------------------------------------------- */
 extern void send_to_all(char *messg);
@@ -124,8 +125,8 @@ extern char *MSGSTR(char *msg, struct char_data *ch);
 extern void send_to_room(char *messg, int room);
 extern void send_to_room_except(char *messg, int room, struct char_data *ch);
 
-void page_string(struct descriptor_data *d, char *str, int keep_internal); 
-void do_say(struct char_data *ch, char *arg, int cmd); 
+void page_string(struct descriptor_data *d, char *str, int keep_internal);
+void do_say(struct char_data *ch, char *arg, int cmd);
 
 void act(char *str, int hide_invisible, struct char_data *ch,
 	 struct obj_data *obj, void *vict_obj, int type);
@@ -137,7 +138,7 @@ void acthan(char *seng, char *shan, int hide_invisible, struct char_data *ch,
 #define TO_NOTVICT 2
 #define TO_CHAR    3
 
-/* NOTE: NEW MACRO:  Select english or korean message string according 
+/* NOTE: NEW MACRO:  Select english or korean message string according
    to ch's locale selection. Useful for sprintf().      */
 #define STRHAN( a, b, ch ) \
 	((IS_SET((ch)->specials.act, PLR_KOREAN)) ? (b):(a))

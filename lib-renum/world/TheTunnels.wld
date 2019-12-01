@@ -870,10 +870,10 @@ The hay is very dirty. The smell of it makes you feel sick.
 S
 #14650
 South-western part of basilisks cave~
-You can see nothing but smoke. 
+You can see nothing but smoke.
 ~
 146 9 5
-D0 
+D0
 ~
 ~
 0 -1 14649
@@ -932,7 +932,7 @@ You are swimming in water. It is getting deep here.
 It is also dark in this end.
 ~
 146 9 6
-D3 
+D3
 You see calm water.
 ~
 ~
@@ -949,7 +949,7 @@ You standing in water up to you neck.
 You can only see water.
 ~
 146 8 5
-D0 
+D0
 You can see calm water.
 ~
 ~
@@ -966,7 +966,7 @@ You are swimming in DARKNESS. You feel something
 touching your right leg.
 ~
 146 9 6
-D0 
+D0
 To dark to tell.
 ~
 ~

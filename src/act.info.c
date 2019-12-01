@@ -1,31 +1,31 @@
 /* **************************************************************************
    *  file: act.info.c , Implementation of commands.        Part of DIKUMUD *
    *  Usage : Commands about world, players info. help, time and weather    *
-   *	NOTE: Merged OLD weather.c and help related procs.		    * 
+   *	NOTE: Merged OLD weather.c and help related procs.		    *
    ************************************************************************* */
 /*
    this file is for version control of mud.
    and fileid is also used in 'show version'.
  */
-char version_id[] = 
-"@(#) KIT Clasic version v4.00  2019/10/05  by Cookie (cantata@gmail.com)\n\r"
-" New Narai 1998  v2.92.3   97/12/09  by Cookie.\n\r"
-" Forked from Narai  v2.90   97/09/11  by cookie (cookie0@chollian.net)\n\r"
-" Legacy v2.00   94/10/10  Greatly Improved by process(wdshin@eve)\n\r"
-"        v1.13   94/04/13  by Source Manager Cold.\n\r" ; 
+char version_id[] =
+"@(#) KIT Clasic version v4.00  2019/10/05  by Cookie (cantata@gmail.com)\r\n"
+" New Narai 1998  v2.92.3   97/12/09  by Cookie.\r\n"
+" Forked from Narai  v2.90   97/09/11  by cookie (cookie0@chollian.net)\r\n"
+" Legacy v2.00   94/10/10  Greatly Improved by process(wdshin@eve)\r\n"
+"        v1.13   94/04/13  by Source Manager Cold.\r\n" ;
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <time.h> 
+#include <time.h>
 
 #include "char.h"
 #include "object.h"
 #include "global.h"
 #include "comm.h"
-#include "play.h" 
-#include "gamedb.h" 
+#include "play.h"
+#include "gamedb.h"
 
 
 void do_who(struct char_data *ch, char *argument, int cmd)
@@ -70,7 +70,7 @@ void do_who(struct char_data *ch, char *argument, int cmd)
     }
 
     strcpy(page_buffer,
-	    STRHAN( "Players\n\r-------\n\r", "사람들\n\r-------\n\r", ch));
+	    STRHAN( "Players\r\n-------\r\n", "사람들\r\n-------\r\n", ch));
 
     for (d = descriptor_list; d; d = d->next) {
 	if (!d->connected && CAN_SEE(ch, d->character)) {
@@ -131,31 +131,31 @@ void do_who(struct char_data *ch, char *argument, int cmd)
 		sprintf(buf, "< %c %2d > %s %s", class, GET_LEVEL(d->character),
 			  GET_NAME(d->character), GET_TITLE(d->character));
 	    }
- #endif		/* UNUSED_CODE */ 
-	    
+ #endif		/* UNUSED_CODE */
+
 	    /*NOTE: BUG FIX: GET_TITLE(ch) may be null */
 	    if (d->original) {  /* If switched */
 		/* NOTE: simplified CLASS code printing */
 		class = "UMCTWU"[GET_CLASS(d->original)];
-		sprintf(buf, "< %c %2d > %s %s", class, 
-		    GET_LEVEL(d->original), GET_NAME(d->original), 
+		sprintf(buf, "< %c %2d > %s %s", class,
+		    GET_LEVEL(d->original), GET_NAME(d->original),
 		    (GET_TITLE(d->original) ? GET_TITLE(d->original) : ""));
 	    }
 	    else if (d->character) {
 		    class = "UMCTWU"[GET_CLASS(d->character)];
-		    sprintf(buf, "< %c %2d > %s %s", class, 
+		    sprintf(buf, "< %c %2d > %s %s", class,
 		    GET_LEVEL(d->character), GET_NAME(d->character),
 		    (GET_TITLE(d->character) ? GET_TITLE(d->character): ""));
-		    
+
 		    if (IS_SET(d->character->specials.act, PLR_CRIMINAL))
 			strcat(buf, " (CRIMINAL)");
 
 		if (IS_MORTAL(ch)) {
-		    sprintf(buf2, " PK#(%d)\n\r", d->character->player.pk_num);
+		    sprintf(buf2, " PK#(%d)\r\n", d->character->player.pk_num);
 		    strcat(buf, buf2);
 		}
 		else if ( d->character->player.guild <= MAX_GUILD_LIST) {
-		    sprintf(buf2," PK#(%d) %s\n\r", d->character->player.pk_num,
+		    sprintf(buf2," PK#(%d) %s\r\n", d->character->player.pk_num,
 			    guild_names[d->character->player.guild]);
 		    strcat(buf, buf2);
 		}
@@ -165,15 +165,15 @@ void do_who(struct char_data *ch, char *argument, int cmd)
 		strcat(page_buffer, buf);
 	    else {
 		if (IS_MORTAL(ch))
-		    strcat(page_buffer, "A shadow figure\n\r");
+		    strcat(page_buffer, "A shadow figure\r\n");
 		else
 		    strcat(page_buffer, buf);
 	    }
 	    num_player++;
 	}
     }
-    sprintf( buf, STRHAN("\n\rYou can see %d players.\n\r", 
-			 "\n\r%d 명이 있습니다.\n\r", ch), num_player);
+    sprintf( buf, STRHAN("\r\nYou can see %d players.\r\n",
+			 "\r\n%d 명이 있습니다.\r\n", ch), num_player);
     strcat(page_buffer, buf );
     page_string(ch->desc, page_buffer, 1);
 }
@@ -188,7 +188,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
 
     one_argument(argument, line);
     if (IS_WIZARD(ch) && (strcmp("-t", line) != 0)) {
-	strcpy( line, "------------ ------------\r\n" ); 
+	strcpy( line, "------------ ------------\r\n" );
 	list_users( ch, line + strlen(line) );
 	strcat(line , "\r\n" );
 	page_string(ch->desc, line, 1);
@@ -216,7 +216,7 @@ void do_users(struct char_data *ch, char *argument, int cmd)
 	    sprintf(line + strlen(line), "%3d%2d:", d->descriptor,
 		    d->character->specials.timer);
 	    sprintf(line + strlen(line), "%-14s%2d ",
-		    (d->connected == CON_PLYNG) 
+		    (d->connected == CON_PLYNG)
 		    ? GET_NAME(d->character) : "Not in game",
 		    GET_LEVEL(d->character));
 	}
@@ -228,37 +228,37 @@ void do_users(struct char_data *ch, char *argument, int cmd)
 	    strcat(line, "|");
 	}
 	else {
-	    strcat(line, "\n\r");
+	    strcat(line, "\r\n");
 	    send_to_char(line, ch);
 	    line[0] = 0;
 	}
 	++n;
     }
     if ((!flag) && (n % 2)) {
-	strcat(line, "\n\r");
+	strcat(line, "\r\n");
 	send_to_char(line, ch);
     }
     if (m > most)
 	most = m;
-    sprintf(line, "%s%d/%d active connections\n\r",
-	    (n % 2) ? "\n\r" : "", m, most);
+    sprintf(line, "%s%d/%d active connections\r\n",
+	    (n % 2) ? "\r\n" : "", m, most);
     if (IS_GOD(ch))
 	send_to_char(line, ch);
-#endif		/* UNUSED_CODE */ 
+#endif		/* UNUSED_CODE */
 
     t = 30 + time(0) - boottime;
-    sprintf(line, STRHAN("Running time:   %d:%02d\n\r", 
-	"현재  %d시간 %02d분 지났습니다.\n\r", ch), t / 3600, (t % 3600) / 60); 
-    send_to_char(line, ch); 
+    sprintf(line, STRHAN("Running time:   %d:%02d\r\n",
+	"현재  %d시간 %02d분 지났습니다.\r\n", ch), t / 3600, (t % 3600) / 60);
+    send_to_char(line, ch);
 }
 
-/* NOTE: NEW! list active user and thier connection.  
+/* NOTE: NEW! list active user and thier connection.
 	Merge common function of do_users() and recored_players_number(). */
 int list_users(struct char_data *ch, char *line )
 {
     char room[30], *buf;
     struct descriptor_data *d;
-    struct char_data *pl ; 
+    struct char_data *pl ;
     /* struct in_addr  addr;
     struct hostent  *h_ent; */
     static int most = 0;
@@ -269,8 +269,8 @@ int list_users(struct char_data *ch, char *line )
 
     for (d = descriptor_list; d; d = d->next) {
 	++m;
-	/* NOTE: Old was too wide. list one connection per line, not two. */ 
-	if ( d->original ) 
+	/* NOTE: Old was too wide. list one connection per line, not two. */
+	if ( d->original )
 	    pl = d->original;
 	else if ( d->character )
 	    pl = d->character;
@@ -289,13 +289,13 @@ int list_users(struct char_data *ch, char *line )
 		    strcpy( room, "No Where" );
 	    sprintf(buf, "%2d: < %c %2d > %-12s (%2d) %-24s ",
 		    d->descriptor, "UMCTWU"[GET_CLASS(pl)], GET_LEVEL(pl),
-		    ( d->connected == CON_PLYNG ) ? 
+		    ( d->connected == CON_PLYNG ) ?
 			GET_NAME(d->character) : "Not in game",
 		    pl->specials.timer, room );
 	}
-	else 
+	else
 	    sprintf(buf , "%2d: %5s    %-17s %-24s ",
-		d->descriptor, "UNDEF", connected_types[d->connected], ""); 
+		d->descriptor, "UNDEF", connected_types[d->connected], "");
 	buf += strlen(buf);
 
 #ifdef UNUSED_CODE
@@ -303,7 +303,7 @@ int list_users(struct char_data *ch, char *line )
 	/* NOTE: inet_makeaddr() is more portable than inet_aton().    */
 
 	addr = inet_makeaddr(inet_network(d->host),inet_addr(d->host));
-	if ( h_ent = gethostbyaddr((char*) &addr, sizeof(addr), AF_INET)) 
+	if ( h_ent = gethostbyaddr((char*) &addr, sizeof(addr), AF_INET))
 	    strcat(buf, h_ent->h_name );
 	else
 	    strcat(buf, d->host );
@@ -314,7 +314,7 @@ int list_users(struct char_data *ch, char *line )
 	strcat(buf, (ch ? "\r\n" : "\n"));
 
 	/* NOTE: Prevent buffer overflow */
-	buf += strlen(buf); 
+	buf += strlen(buf);
 	if ( (buf - line + 100 ) > MAX_STRING_LENGTH )  {
 	    strcat(buf, "And too many users to list....\r\n");
 	    buf += strlen(buf);
@@ -323,11 +323,11 @@ int list_users(struct char_data *ch, char *line )
 
 /* NOTE: Now, it is meaningless to distinguish foreign/domestic player */
 /*  if(is_korean(d)) in_d++; else out_d++; */
-    } 
+    }
     if (m > most)
 	most = m;
     if (ch && IS_DIVINE(ch))
-	sprintf( buf, "\nConnections:    Active: %d    Peak: %d", m, most); 
+	sprintf( buf, "\nConnections:    Active: %d    Peak: %d", m, most);
 
     return(m);
 }
@@ -338,7 +338,7 @@ char *how_good(int p1, int p2)
 
     sprintf(buf, "(%3d,%3d)", p1, p2);
     return (buf);
-} 
+}
 
 bool do_practice(struct char_data *ch, char *arg, int cmd)
 {
@@ -353,8 +353,8 @@ bool do_practice(struct char_data *ch, char *arg, int cmd)
 	arg = one_argument(arg, victim_name);
 	if (*victim_name) {
 	    victim = get_char_vis(ch, victim_name);
-	    if (victim) { 
-		sprintf(buf, "Practice of %s\n\r", victim->player.name);
+	    if (victim) {
+		sprintf(buf, "Practice of %s\r\n", victim->player.name);
 		buf += strlen(buf);
 	    }
 	    else {
@@ -401,18 +401,18 @@ bool do_practice(struct char_data *ch, char *arg, int cmd)
 void one_spell(struct char_data *ch, int no, char *buf)
 {
     /* Added your practice value display for easier cross refernce */
-    /* sprintf(buf,"%3d %-20s%3d%3d%3d%3d  %4d%4d%4d%4d%8d\n\r", */
-    sprintf(buf, "%3d %-20s%3d%3d%3d%3d  %4d%4d%4d%4d    %4d    %-9s%c\n\r",
-	    no, spells[no], 
+    /* sprintf(buf,"%3d %-20s%3d%3d%3d%3d  %4d%4d%4d%4d%8d\r\n", */
+    sprintf(buf, "%3d %-20s%3d%3d%3d%3d  %4d%4d%4d%4d    %4d    %-9s%c\r\n",
+	    no, spells[no],
 	spell_info[no].min_level[0], spell_info[no].min_level[1],
 	spell_info[no].min_level[2], spell_info[no].min_level[3],
 	spell_info[no].max_skill[0], spell_info[no].max_skill[1],
 	spell_info[no].max_skill[2], spell_info[no].max_skill[3],
 	spell_info[no].min_usesmana,
-	/* NOTE: Append player's learned, skill for that spell/skill. 
+	/* NOTE: Append player's learned, skill for that spell/skill.
 	 * Spell player can use/learn is marked with '*' */
 	how_good(ch->skills[no].learned, ch->skills[no].skilled),
-	((spell_info[no].min_level[GET_CLASS(ch) - 1] 
+	((spell_info[no].min_level[GET_CLASS(ch) - 1]
 	    <= GET_LEVEL(ch)) ? '*' : ' '));
 }
 
@@ -424,7 +424,7 @@ void do_spells(struct char_data *ch, char *argument, int cmd)
     if (IS_NPC(ch))
 	return;
     buf = buffer;
-    sprintf(buf, "NUM     SPELL NAME       MU CL TH WA    MU  CL  TH  WA  MIN_MANA  PRACTICE\n\r"); 
+    sprintf(buf, "NUM     SPELL NAME       MU CL TH WA    MU  CL  TH  WA  MIN_MANA  PRACTICE\r\n");
     buf += strlen(buf);
 
     while (isspace(*argument))
@@ -445,7 +445,7 @@ void do_spells(struct char_data *ch, char *argument, int cmd)
 	/* NOTE: Use search_block() instead of old_search_block()     */
 	no = search_block(argument, spells, FALSE);
 	if (no == -1 || spell_info[no].spell_pointer == 0 ) {
-	    send_to_char("There's no such skill.\n\r", ch);
+	    send_to_char("There's no such skill.\r\n", ch);
 	    return;
 	}
 	one_spell(ch, no, buf);
@@ -459,7 +459,7 @@ void do_levels(struct char_data *ch, char *argument, int cmd)
     char buf[MAX_STRING_LENGTH];
 
     if (IS_NPC(ch)) {
-	send_to_char("You ain't nothin' but a hound-dog.\n\r", ch);
+	send_to_char("You ain't nothin' but a hound-dog.\r\n", ch);
 	return;
     }
     *buf = '\0';
@@ -475,10 +475,10 @@ void do_levels(struct char_data *ch, char *argument, int cmd)
 	    strcat(buf, titles[GET_CLASS(ch) - 1][i].title_f);
 	    break;
 	default:
-	    send_to_char("Oh dear.\n\r", ch);
+	    send_to_char("Oh dear.\r\n", ch);
 	    break;
 	}
-	strcat(buf, "\n\r");
+	strcat(buf, "\r\n");
     }
     /* NOTE: Use paging */
     page_string(ch->desc, buf, 1);
@@ -488,7 +488,7 @@ void do_levels(struct char_data *ch, char *argument, int cmd)
 struct help_index_element {
     char *keyword;
         long pos;
-}; 
+};
 
 struct help_index_element *help_index = 0;
 int top_of_helpt = 0;		/* top of help index table	*/
@@ -496,7 +496,7 @@ int top_of_helpt = 0;		/* top of help index table	*/
 FILE *help_fl;			/* file for help texts (HELP <kwd>) */
 
 /* NOTE: Removed HELP_PAGE_FILE and help[]. */
-/* NOTE: Main help page "lib/help" file is inserted into beginning of 
+/* NOTE: Main help page "lib/help" file is inserted into beginning of
 	 "help_table" file itself under "MASTER HELP" keyword.  */
 void do_help(struct char_data *ch, char *argument, int cmd)
 {
@@ -509,9 +509,9 @@ void do_help(struct char_data *ch, char *argument, int cmd)
     for (; isspace(*argument); argument++) ;
     /* NOTE: If 'help' has no arg, search topic "MASTER HELP".	*/
     if (!*argument)
-	argument = "MASTER HELP"; 
+	argument = "MASTER HELP";
     if (!help_index) {
-	send_to_char("No help available.\n\r", ch);
+	send_to_char("No help available.\r\n", ch);
 	return;
     }
     bot = 0;
@@ -535,7 +535,7 @@ void do_help(struct char_data *ch, char *argument, int cmd)
 	    return;
 	}
 	else if (bot >= top) {
-	    send_to_char("There is no help on that word.\n\r", ch);
+	    send_to_char("There is no help on that word.\r\n", ch);
 	    return;
 	}
 	else if (chk > 0)
@@ -544,7 +544,7 @@ void do_help(struct char_data *ch, char *argument, int cmd)
 	    top = --mid;
     }
     return;
-} 
+}
 
 void build_help_index(void)
 {
@@ -552,7 +552,7 @@ void build_help_index(void)
     struct help_index_element *list = 0, mem;
     char buf[MAX_BUFSIZ], tmp[81], *scan;
     long pos;
-    FILE *fl;  
+    FILE *fl;
 
     /* NOTE: Now, help file is opened here, not in boot_db()  */
     if (!(help_fl = fopen(lookup_db("help"), "r"))) {
@@ -574,7 +574,7 @@ void build_help_index(void)
 		break;
 
 	    if (!list) {
-		CREATE(list, struct help_index_element, 1); 
+		CREATE(list, struct help_index_element, 1);
 		nr = 0;
 	    }
 	    else
@@ -609,7 +609,7 @@ void build_help_index(void)
     help_index = list;
 }
 
-/* NOTE: Commands 'credit', 'news', 'NEWS', 'plan', 'wizlist', 'version' 
+/* NOTE: Commands 'credit', 'news', 'NEWS', 'plan', 'wizlist', 'version'
 	are merged into single command 'show'. like 'show news', 'show credit'.
 	do_credit(), do_news(), do_plan(), do_wizards(), do_version()
 	are merged to do_show(). 	*/
@@ -619,13 +619,13 @@ void do_show(struct char_data *ch, char *argument, int cmd)
     char arg[100], *fs, *mark, *head, *tail;
     char file_str[MAX_STRING_LENGTH];
     int topic;
-    static char *show_list[] = { 
+    static char *show_list[] = {
 	"news", "NEWS", "oldnews", "plans", "wizards", "wizlists",
-       	"credits", "motd", "versions" , "help", "?", "", "\n" }; 
+       	"credits", "motd", "versions" , "help", "?", "", "\n" };
 #define TOPICS "help, news, old, plan, wizards, credits, motd and version"
     extern char motd[];			/* the messages of today	*/
 
-    one_argument(argument, arg ); 
+    one_argument(argument, arg );
 
     switch( topic = search_block(arg, show_list, 0 )) {
 	case 0:	case 1:    case 2:  case 3:
@@ -642,7 +642,7 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	else
 	    mark = "\n#NEWS\n";
 	head = strstr(fs, mark);
-	if ( !head ) 
+	if ( !head )
 	    return;
 	head += strlen(mark);
 	tail = strstr(head+1, "\n#");
@@ -651,17 +651,17 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 
 	page_string(ch->desc, head, 1);
 	free(fs);
-	break; 
+	break;
 
     case 4:	case 5:	    case 6:
-	/* NOTE: Wizard list/Credits page are merged to single "wizards" */ 
+	/* NOTE: Wizard list/Credits page are merged to single "wizards" */
 	/* NOTE:    files are separated by form-feed(^L) char	*/
 	if(!file_to_string(CREDITS_FILE, file_str))
 	    return;
 
 	mark = (topic == 6) ? "\n#WIZARDS\n" : "\n#CREDITS\n";
 	head = strstr(file_str, mark);
-	if ( !head ) 
+	if ( !head )
 	    return;
 	head += strlen(mark);
 	tail = strstr(head+1, "\n#");
@@ -669,17 +669,17 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	    *tail = '\0';
 
 	send_to_char( head, ch );
-	break; 
+	break;
 
     case 7:
 	send_to_char( motd, ch );
-	break; 
+	break;
 
     case 8:
 	if (IS_WIZARD(ch)) {
 	    send_to_char(version_id, ch);
 	    /* NOTE: show compile time */
-	    send_to_char("Compiled on : " __DATE__ "  " __TIME__ ".\r\n" , ch); 
+	    send_to_char("Compiled on : " __DATE__ "  " __TIME__ ".\r\n" , ch);
 	}
 	else
 	    send_to_char("This topic is for Immortals only.\r\n", ch);
@@ -689,7 +689,7 @@ void do_show(struct char_data *ch, char *argument, int cmd)
 	send_to_char( "Available topics: " TOPICS ".\r\n" , ch);
 	break;
     }
-} 
+}
 
 /* NOTE: Commands 'credit', 'news', 'NEWS', 'plan', 'wizlist' 'version' are
 	merged into single command 'show'. like 'show news', 'show credit'..
@@ -715,9 +715,9 @@ void do_wizards(struct char_data *ch, char *argument, int cmd)
 
 void do_version(struct char_data *ch, char *argument, int cmd)
 {
-    extern char fileid[]; 
+    extern char fileid[];
     send_to_char(fileid, ch);
-} 
+}
 */
 
 /* ************************************************************************
@@ -726,7 +726,7 @@ void do_version(struct char_data *ch, char *argument, int cmd)
    ************************************************************************* */
 
 struct time_info_data time_info;	/* the infomation about the time   */
-struct weather_data weather_info;	/* the infomation about the weather */ 
+struct weather_data weather_info;	/* the infomation about the weather */
 
 extern void send_to_outdoor(char *mesg);
 
@@ -763,17 +763,17 @@ void do_weather(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     if (OUTSIDE(ch)) {
-	sprintf(buf, "The sky is %s and %s.\n\r", sky_look[weather_info.sky],
+	sprintf(buf, "The sky is %s and %s.\r\n", sky_look[weather_info.sky],
 	     (weather_info.change >= 0 ? "you feel a warm wind from south" :
 	      "your foot tells you bad weather is due"));
-	sprintf(buf2, "%s %s.\n\r", sky_look_han[weather_info.sky],
+	sprintf(buf2, "%s %s.\r\n", sky_look_han[weather_info.sky],
 	 (weather_info.change >= 0 ? "서편하늘부터 구름이 개이고 있습니다" :
 	  "더 궂은 날이 되것 같습니다"));
 	send_to_char_han(buf, buf2, ch);
     }
     else
-	send_to_char_han("You have no feeling about the weather at all.\n\r",
-			 "여기선 날씨가 어떤지 알 수 없습니다.\n\r", ch);
+	send_to_char_han("You have no feeling about the weather at all.\r\n",
+			 "여기선 날씨가 어떤지 알 수 없습니다.\r\n", ch);
 }
 
 void do_time(struct char_data *ch, char *argument, int cmd)
@@ -792,7 +792,7 @@ void do_time(struct char_data *ch, char *argument, int cmd)
     weekday = ((35 * time_info.month) + time_info.day + 1) % 7;
 
     strcat(buf, weekdays[weekday]);
-    strcat(buf, "\n\r");
+    strcat(buf, "\r\n");
     send_to_char(buf, ch);
 
     day = time_info.day + 1;	/* day in [1..35] */
@@ -806,7 +806,7 @@ void do_time(struct char_data *ch, char *argument, int cmd)
     else if ((day % 10) == 3) suf = "rd";
     else suf = "th";
 
-    sprintf(buf, "The %d%s Day of the %s, Year %d.\n\r",
+    sprintf(buf, "The %d%s Day of the %s, Year %d.\r\n",
 	    day, suf, month_name[time_info.month], time_info.year);
 
     send_to_char(buf, ch);
@@ -816,7 +816,7 @@ void do_time(struct char_data *ch, char *argument, int cmd)
     ts = asctime(localtime(&tm));
     ts[16] = '\0';
     sprintf( buf, "But your broken wrist watch tells it's %s.\r\n", ts );
-    send_to_char(buf, ch); 
+    send_to_char(buf, ch);
 }
 
 void another_hour(int mode)
@@ -827,19 +827,19 @@ void another_hour(int mode)
 	switch (time_info.hours) {
 	case 5:
 		weather_info.sunlight = SUN_RISE;
-		send_to_outdoor("The sun rises in the east.\n\r");
+		send_to_outdoor("The sun rises in the east.\r\n");
 		break;
 	case 6:
 		weather_info.sunlight = SUN_LIGHT;
-		send_to_outdoor("The day has begun.\n\r");
+		send_to_outdoor("The day has begun.\r\n");
 		break;
 	case 21:
 		weather_info.sunlight = SUN_SET;
-		send_to_outdoor( "The sun slowly disappears in the west.\n\r");
+		send_to_outdoor( "The sun slowly disappears in the west.\r\n");
 		break;
 	case 22:
 		weather_info.sunlight = SUN_DARK;
-		send_to_outdoor("The night has begun.\n\r");
+		send_to_outdoor("The night has begun.\r\n");
 		break;
 	default:
 	    break;
@@ -913,7 +913,7 @@ void weather_change(int change)
 		    change = 5;
 		else if (weather_info.pressure > 1010)
 		    if (dice(1, 4) == 1)
-			change = 5; 
+			change = 5;
 		break;
 	case SKY_LIGHTNING:
 		if (weather_info.pressure > 1010)
@@ -923,7 +923,7 @@ void weather_change(int change)
 			change = 6;
 
 		break;
-	default: 
+	default:
 		change = 0;
 		weather_info.sky = SKY_CLOUDLESS;
 		break;
@@ -934,27 +934,27 @@ void weather_change(int change)
     case 0:
 	break;
     case 1:
-	    send_to_outdoor( "The sky is getting cloudy.\n\r");
+	    send_to_outdoor( "The sky is getting cloudy.\r\n");
 	    weather_info.sky = SKY_CLOUDY;
 	    break;
     case 2:
-	    send_to_outdoor( "It starts to rain.\n\r");
+	    send_to_outdoor( "It starts to rain.\r\n");
 	    weather_info.sky = SKY_RAINING;
 	    break;
     case 3:
-	    send_to_outdoor( "The clouds disappear.\n\r");
+	    send_to_outdoor( "The clouds disappear.\r\n");
 	    weather_info.sky = SKY_CLOUDLESS;
 	    break;
     case 4:
-	    send_to_outdoor( "Lightning starts to show in the sky.\n\r");
+	    send_to_outdoor( "Lightning starts to show in the sky.\r\n");
 	    weather_info.sky = SKY_LIGHTNING;
 	    break;
     case 5:
-	    send_to_outdoor( "The rain stopped.\n\r");
+	    send_to_outdoor( "The rain stopped.\r\n");
 	    weather_info.sky = SKY_CLOUDY;
 	    break;
     case 6:
-	    send_to_outdoor( "The lightning has stopped.\n\r");
+	    send_to_outdoor( "The lightning has stopped.\r\n");
 	    weather_info.sky = SKY_RAINING;
 	    break;
     default:
@@ -967,5 +967,5 @@ void weather_and_time(int mode)
     another_hour(mode);
     if (mode)
 	weather_change(0);
-} 
+}
 

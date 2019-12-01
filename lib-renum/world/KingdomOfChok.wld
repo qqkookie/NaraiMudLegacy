@@ -119,7 +119,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18312
@@ -141,7 +141,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18313
@@ -163,7 +163,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18314
@@ -185,7 +185,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18315
@@ -207,7 +207,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18316
@@ -229,7 +229,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18317
@@ -251,7 +251,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18318
@@ -323,7 +323,7 @@ The Chok field.~
     You are on the Chok field.
 ~
 183 1 2
-D0 
+D0
 ~
 ~
 0 -1 18322
@@ -580,7 +580,7 @@ The #2 room to secret room.~
     You are on the #2 room.
 ~
 183 4099 1
-D0 
+D0
 ~
 ~
 0 -1 18339
@@ -634,7 +634,7 @@ door~
 S
 #18344
 The king of chok room.~
-    The king of chok,Yubi is here. 
+    The king of chok,Yubi is here.
     He thinking about future of kingdom
 ~
 183 4099 1
@@ -642,7 +642,7 @@ D1
 ~
 door~
 4 18345 18345
-D3 
+D3
 ~
 door~
 4 18344 18343

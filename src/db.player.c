@@ -18,14 +18,14 @@
 #include "comm.h"
 #include "gamedb.h"
 
-// #define SAVE_DESC      /* NOTE: was OLD $(CC) -DSYPARK */ 
-#define RETURN_TO_QUIT /* NOTE: was OLD $(CC) -DRETURN_TO_QUIT */ 
+// #define SAVE_DESC      /* NOTE: was OLD $(CC) -DSYPARK */
+#define RETURN_TO_QUIT /* NOTE: was OLD $(CC) -DRETURN_TO_QUIT */
 
 #define KJHRENT      66666	/* kjh number to tell new rent format */
 
 extern void affect_total(struct char_data *ch);
 extern void affect_modify(struct char_data *ch, byte loc, short mod,
-			long bitv, bool add); 
+			long bitv, bool add);
 
 /**************************************************************************
 *  declarations of most of the 'global' variables                         *
@@ -33,7 +33,7 @@ extern void affect_modify(struct char_data *ch, byte loc, short mod,
 
 extern struct player_index_element *player_table ;/* index to player file */
 extern int top_of_p_table;		/* ref to top of table		*/
-extern int loglevel; 
+extern int loglevel;
 
 /* generate index table for the player file */
 void build_player_index(void)
@@ -52,7 +52,7 @@ void build_player_index(void)
 	if (!feof(fl)) {	/* new record */
 	    /* Create new entry in the list */
 	    if (index == -1) {
-		CREATE(player_table, struct player_index_element, 1); 
+		CREATE(player_table, struct player_index_element, 1);
 		index = 0;
 	    }
 	    else {
@@ -64,16 +64,16 @@ void build_player_index(void)
 		}
 	    }
 
-	    player_table[index].index = index; 
+	    player_table[index].index = index;
 
-	    player_table[index].name = strdup(dummy.name); 
+	    player_table[index].name = strdup(dummy.name);
 	    for (i = 0; (*(player_table[index].name + i) =
 		 LOWER(*(dummy.name + i))); i++) ;
 	}
     }
 
-    fclose(fl); 
-    top_of_p_table = index; 
+    fclose(fl);
+    top_of_p_table = index;
 }
 
 /*************************************************************************
@@ -89,7 +89,7 @@ int find_name(char *name)
 	    return (i);
     }
     return (-1);
-} 
+}
 
 
 /* Load a char, TRUE if loaded, FALSE if not */
@@ -127,13 +127,13 @@ void store_to_char(struct char_file_u *st, struct char_data *ch)
     ch->player.short_descr = 0;
     ch->player.long_descr = 0;
     if (*st->title) {
-	CREATE(GET_TITLE(ch), char, strlen(st->title) + 1); 
+	CREATE(GET_TITLE(ch), char, strlen(st->title) + 1);
 	strcpy(GET_TITLE(ch), st->title);
     }
-    else /* NOTE: Prevent nil title */ 
+    else /* NOTE: Prevent nil title */
 	GET_TITLE(ch) = strdup("");
     if (*st->description) {
-	CREATE(ch->player.description, char, strlen(st->description) + 1); 
+	CREATE(ch->player.description, char, strlen(st->description) + 1);
 	strcpy(ch->player.description, st->description);
     }
     else
@@ -346,7 +346,7 @@ void char_to_store(struct char_data *ch, struct char_file_u *st)
     st->pked_num = ch->player.pked_num;		/* by process */
     st->guild = ch->player.guild;	/* by process */
     for (i = 0; i < MAX_GUILD_SKILLS; i++)
-	st->guild_skills[i] = ch->player.guild_skills[i];	/* by process 
+	st->guild_skills[i] = ch->player.guild_skills[i];	/* by process
 								 */
 
     for (i = 0; i <= MAX_SKILLS - 1; i++) {
@@ -472,10 +472,10 @@ int remove_entry(struct char_data *ch)
     return 1;
 }
 
-/* write the vital data of a player to the player file */ 
+/* write the vital data of a player to the player file */
 /* NOTE: save_char() can works correctely for link-dead char. */
-/*	save_char_nocon is made for coin copy bug fixing by dsshin */ 
-/* NOTE: 2nd argument load_room is removed. 
+/*	save_char_nocon is made for coin copy bug fixing by dsshin */
+/* NOTE: 2nd argument load_room is removed.
     world[ch->in_room].number (virtual room number) is default load room. */
 /*	void save_char(struct char_data *ch, sh_int load_room) */
 void save_char(struct char_data *ch)
@@ -497,11 +497,11 @@ void save_char(struct char_data *ch)
     if (!(fl = fopen(PLAYER_FILE, "r+"))) {
 	perror("Error open player file(db.player.c, save_char)");
 	exit(2);
-    } 
+    }
     if ( ch->desc )
 	bzero(&st, sizeof(struct char_file_u));	 /* NOTE: clear store */
     else {
-	fseek(fl, (long) ( pos * sizeof(struct char_file_u)), SEEK_SET); 
+	fseek(fl, (long) ( pos * sizeof(struct char_file_u)), SEEK_SET);
 	fread(&st, sizeof(struct char_file_u), 1, fl);
     }
 
@@ -518,7 +518,7 @@ void save_char(struct char_data *ch)
 	st.page_len = ch->desc->page_len;
     }
     /* NOTE: Reposition and update */
-    fseek(fl, (long) ( pos * sizeof(struct char_file_u)), SEEK_SET); 
+    fseek(fl, (long) ( pos * sizeof(struct char_file_u)), SEEK_SET);
     fwrite(&st, sizeof(struct char_file_u), 1, fl);
 
     fclose(fl);
@@ -543,7 +543,7 @@ void delete_char(struct char_data *ch)
 	strcpy( oldname, PLAYER_FILE );
 
     if (!( old = fopen(oldname, "r")))
-	return; 
+	return;
     strcpy(fname, oldname);
     strcat(fname, ".tmp");
     if (!(new = fopen(fname, "w")))
@@ -553,15 +553,15 @@ void delete_char(struct char_data *ch)
 
     /* NOTE: top_of_p_table in already decremented in remove_entry() */
     for (i = 0; i <= (top_of_p_table+1); i++) {
-	fread(&element, sizeof(struct char_file_u), 1, old ); 
+	fread(&element, sizeof(struct char_file_u), 1, old );
 	if (i != skip)
 	    fwrite(&element, sizeof(struct char_file_u), 1, new);
     }
 
     fclose(old);
-    fclose(new); 
+    fclose(new);
     remove(oldname);
-    rename(fname, oldname); 
+    rename(fname, oldname);
 }
 
 void stash_char(struct char_data *ch)
@@ -724,7 +724,7 @@ void unstash_char(struct char_data *ch, char *stashname)
 
     for (;;) {
 	if (fscanf(fl, "%d", &n) <= 0)
-	    break; 
+	    break;
 
 	fscanf(fl, "%d", &where);
 	for (i = 0; i < 4; ++i)
@@ -824,7 +824,7 @@ void save_char_new( struct char_data *ch )
     FILE *fl;
 
     if ( !ch || IS_NPC(ch) || !ch->desc)
-	return; 
+	return;
 
     /* top_of_p_file++; */
     char_to_store(ch, &st);
@@ -839,7 +839,7 @@ void save_char_new( struct char_data *ch )
     fwrite(&st, sizeof(struct char_file_u), 1, fl);
 
     fclose(fl);
-} 
+}
 
 /* NOTE: Move stash is not used any more. Comment out */
 void move_stashfile(char *victim)
@@ -997,7 +997,7 @@ void unstash_char(struct char_data *ch, char *stashname)
     fclose(fp);
 }
 
-#endif		/* NEW_STASH */ 
+#endif		/* NEW_STASH */
 #endif		/* UNUSED_CODE */
 
 void do_checkrent(struct char_data *ch, char *argument, int cmd)
@@ -1015,7 +1015,7 @@ void do_checkrent(struct char_data *ch, char *argument, int cmd)
 	    name[i] = tolower(name[i]);
     sprintf(stashfile, "%s/%c/%s.%s", STASH, name[0], name, STASH_EXT);
     if (!(fl = fopen(stashfile, "r"))) {
-	sprintf(buf, "%s has nothing in rent.\n\r", name);
+	sprintf(buf, "%s has nothing in rent.\r\n", name);
 	send_to_char(buf, ch);
 	return;
     }
@@ -1039,7 +1039,7 @@ void do_checkrent(struct char_data *ch, char *argument, int cmd)
 	fgets(str, 255, fl);
     }
     fclose(fl);
-    strcat(buf, "\n\r");
+    strcat(buf, "\r\n");
     send_to_char(buf, ch);
     return;
 }
@@ -1052,7 +1052,7 @@ void do_extractrent(struct char_data *ch, char *argument, int cmd)
     if (!*name)
 	return;
     unstash_char(ch, name);
-    send_to_char("OK.\n\r", ch);
+    send_to_char("OK.\r\n", ch);
     sprintf(buf, "%s grabbed rent for %s", GET_NAME(ch), name);
     log(buf);
 }
@@ -1065,19 +1065,19 @@ void do_replacerent(struct char_data *ch, char *argument, int cmd)
     if (!*name)
 	return;
     stash_char(ch);
-    send_to_char("OK.\n\r", ch);
+    send_to_char("OK.\r\n", ch);
     sprintf(buf, "%s replaced rent for %s", GET_NAME(ch), name);
     log(buf);
 }
 
 /* NOTE: BUG FIX: Humm.. incorrect args */
 void do_rent(struct char_data *ch, char *arg, int cmd)
-{ 
+{
     if (IS_NPC(ch))
 	return;
     if (cmd) {
 	if (!IS_SET(world[ch->in_room].room_flags, RENT)) {
-	    send_to_char("You cannot rent here.\n\r", ch);
+	    send_to_char("You cannot rent here.\r\n", ch);
 	    return;
 	}
 	send_to_char("\r\nYou retire for the night.\r\n", ch);
@@ -1085,8 +1085,8 @@ void do_rent(struct char_data *ch, char *arg, int cmd)
     }
     save_char(ch);
     stash_char(ch);	/* clear file.x and save into file.x */
-    // NOTE: extract_char() wipes wearing/carrying items. 
-    extract_char(ch); 
+    // NOTE: extract_char() wipes wearing/carrying items.
+    extract_char(ch);
 
     /* NOTE: If idle char is forced to rent by check_idling() ,
     *       cmd and descriptor may be NULL  - check cmd by jhpark */
@@ -1094,7 +1094,7 @@ void do_rent(struct char_data *ch, char *arg, int cmd)
 	/* NOTE: leaving game code moved here from extract_char() (handler.c) */
 	ch->desc->connected = CON_RMOTD;
 	SEND_TO_Q("\r\n*** PRESS RETURN : ", ch->desc);
-    } 
+    }
     return;
 }
 

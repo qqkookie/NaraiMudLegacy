@@ -110,7 +110,7 @@ void cast_call_lightning(byte level, struct char_data *ch, char *arg, int type,
 	    spell_call_lightning(level, ch, victim, 0);
 	}
 	else {
-	    send_to_char("You fail to call upon the lightning from the sky!\n\r", ch);
+	    send_to_char("You fail to call upon the lightning from the sky!\r\n", ch);
 	}
 	break;
     case SPELL_TYPE_POTION:
@@ -343,21 +343,21 @@ void cast_energyflow(byte level, struct char_data *ch, char *arg, int type,
 void cast_full_fire(byte level, struct char_data *ch, char *arg, int type,
 		    struct char_data *victim, struct obj_data *tar_obj)
 {
-    /* 
+    /*
        if (!IS_NPC(victim) && PC_MORTAL(ch)) {
-       send_to_char("You can't use full fire to player!\n\r",ch); return; } */
+       send_to_char("You can't use full fire to player!\r\n",ch); return; } */
     switch (type) {
     case SPELL_TYPE_SPELL:
-	send_to_char("You are trying to concentrate your all energy\n\r", ch);
-	act("$n tries to concentrate your energy.\n\r", FALSE, ch, 0, 0, TO_ROOM);
-	send_to_char("You concentrated your energy to small bright sphere\n\r", ch);
-	act("$n concentrated energy to small bright sphere.\n\r",
+	send_to_char("You are trying to concentrate your all energy\r\n", ch);
+	act("$n tries to concentrate your energy.\r\n", FALSE, ch, 0, 0, TO_ROOM);
+	send_to_char("You concentrated your energy to small bright sphere\r\n", ch);
+	act("$n concentrated energy to small bright sphere.\r\n",
 	    FALSE, ch, 0, 0, TO_ROOM);
 	spell_full_fire(level, ch, victim, 0);
-	send_to_char("You throw your energy sphere. You see sudden brightness.\n\r", ch);
-	act("$n throws the energy sphere. You cannot see anything by sudden brghtness.\n\r"
+	send_to_char("You throw your energy sphere. You see sudden brightness.\r\n", ch);
+	act("$n throws the energy sphere. You cannot see anything by sudden brghtness.\r\n"
 	    ,FALSE, ch, 0, 0, TO_ROOM);
-	send_to_char("You are exhausted.\n\r", ch);
+	send_to_char("You are exhausted.\r\n", ch);
 	break;
     default:
 	log("Serious screw-up in full fire!");
@@ -368,9 +368,9 @@ void cast_full_fire(byte level, struct char_data *ch, char *arg, int type,
 void cast_throw(byte level, struct char_data *ch, char *arg, int type,
 		struct char_data *victim, struct obj_data *tar_obj)
 {
-    /* 
+    /*
        if (!IS_NPC(victim) && PC_MORTAL(ch)) {
-       send_to_char("You can't use throw to player!\n\r",ch); return; } */
+       send_to_char("You can't use throw to player!\r\n",ch); return; } */
     switch (type) {
     case SPELL_TYPE_SPELL:
 	spell_throw(level, ch, victim, 0);
@@ -451,7 +451,7 @@ void cast_harm(byte level, struct char_data *ch, char *arg, int type,
 	break;
 
     }
-} 
+}
 
 void cast_lightning_bolt(byte level, struct char_data *ch, char *arg, int type,
 			 struct char_data *victim, struct obj_data *tar_obj)
@@ -475,7 +475,7 @@ void cast_lightning_bolt(byte level, struct char_data *ch, char *arg, int type,
 	break;
 
     }
-} 
+}
 
 void cast_magic_missile(byte level, struct char_data *ch, char *arg, int type,
 			struct char_data *victim, struct obj_data *tar_obj)
@@ -511,7 +511,7 @@ void cast_clone(byte level, struct char_data *ch, char *arg, int type,
 /* ************************************************************************
    *  file: spells3.c , Implementation of magic.             Part of NARAIMUD*
    *  Usage : All the non-offensive magic handling routines.                 *
-   ************************************************************************* */ 
+   ************************************************************************* */
 
 /*
    cast 'spell block' victim
@@ -564,7 +564,7 @@ void cast_holy_shield(byte level, struct char_data *ch, char *arg,
     default:
 	break;
     }
-} 
+}
 /*
    cast 'mana transfer' victim
    by process
@@ -586,11 +586,11 @@ void cast_mana_transfer(byte level, struct char_data *ch, char *arg,
  */
 void cast_kiss_of_process(byte level, struct char_data *ch, char *arg,
 	       int type, struct char_data *tar_ch, struct obj_data *tar_obj)
-{ 
+{
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (GET_MANA(ch) < 30000) {
-	    send_to_char("You do not have enough mana\n\r", ch);
+	    send_to_char("You do not have enough mana\r\n", ch);
 	    return;
 	}
 	GET_HIT(ch) = 1;

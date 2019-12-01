@@ -46,7 +46,7 @@
 #define LEVGATE_CLUBSAFARI	3211	    // south
 #define LEVGATE_ARENA		3250	    // south
 #define LEVGATE_TB8TH		15135	    // south, TB 8th floor, chemist
-#define LEVGATE_EASTCASTLE	3444	    // west, East Castle 
+#define LEVGATE_EASTCASTLE	3444	    // west, East Castle
 #define LEVGATE_THALOS		17410	    // west, City of Thalos
 #define LEVGATE_SHIRE		16311	    // south, Shire (in Haondor light)
 #define LEVGATE_MAGETOWER	(MID_BASE+84)	    // south, Mage Tower
@@ -77,7 +77,7 @@
 // ----------------------------------------------------
 
 #define OBJ_BOARD		(MID_BASE+5)	// bulletin board
-#define OBJ_MAILBOX		(MID_BASE+6)	// mail box 
+#define OBJ_MAILBOX		(MID_BASE+6)	// mail box
 #define OBJ_SLOTMACHINE		(MID_BASE+7)
 #define OBJ_STRINGMACHINE	(MID_BASE+8)
 #define OBJ_REPAIRMACHINE
@@ -91,8 +91,8 @@
 #define WEAPON_BASIC_WARRIOR	(MID_BASE+25)	/* 1D8 slash long sword */
 #define WEAPON_BASIC_THIEF	(MID_BASE+26)	// 2D4 pierce short sword (dagger)
 
-#define OBJ_BIRD_FEATHER	14161		// Graveyard(Doghouse)
-#define OBJ_PEGASUS_WING	16613		// Galaxy
+// #define OBJ_BIRD_FEATHER	14161		// Graveyard(Doghouse)
+#define OBJ_PEGASUS_WINGS	16613		// Galaxy
 
 #define OBJ_LSS_BELT		17718		// DK
 
@@ -129,7 +129,7 @@
 #define BEAGLE		3092
 #define ROTTWEILER	3093
 #define WOLF		3094
-#define JUGGERNAUT	8006 
+#define JUGGERNAUT	8006
 
 if (mob_nr == KITTEN || mob_nr == PUPPY
     || mob_nr == BEAGLE || mob_nr == ROTTWEILER
@@ -168,7 +168,7 @@ if (mob_nr == KITTEN || mob_nr == PUPPY
 #define MOB_MORIA_SNAKE3	15563	    // brown snake
 #define MOB_MORIA_SNAKE4	15612	    // large green snake
 #define MOB_DESERT_WORM		17214	    // giant purple worm
-#define MOB_SNAKE_ERROR		1660	    // Missing snake 1660?	
+#define MOB_SNAKE_ERROR		1660	    // Missing snake 1660?
 
 #define MOB_SEWER_SNAKE		14414	    // slithering snake
 #define MOB_FOREST_SPIDER1	16423	    // poisonous spider
@@ -216,7 +216,7 @@ if (mob_nr == KITTEN || mob_nr == PUPPY
 #define GBI_MAGIC_PAPER2	(GBI_BASE+7)
 #define GBI_MAGIC_PAPER		(GBI_BASE+8)
 
-#define GBI_SEED_EVIL_POWER	(GBI_BASE+9) 
+#define GBI_SEED_EVIL_POWER	(GBI_BASE+9)
 #define GBI_BOTTLE		(GBI_BASE+12)
 
 /* --------------------------------------------------------- */

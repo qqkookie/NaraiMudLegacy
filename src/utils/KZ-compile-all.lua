@@ -181,7 +181,7 @@ function kz_openfile(fn, renumfn)
       end
       Renum_outfile = io.open( RENUMDIR .. renumfn, 'w')
       assert(Renum_outfile)
-    end 
+    end
 end
 
 function kz_closefile()
@@ -294,7 +294,7 @@ INDEX_OOB = 999999
 --{ zona_name, zone_base, zone_renum_base, renum_span }
 Zone_renum_tab = {}
 
--- { zone_name, renum_zonenum, zone_file, world_file, 
+-- { zone_name, renum_zonenum, zone_file, world_file,
 --    zone_base, zone_top, renum_base, renum_top}
 Zone_index = {}
 
@@ -401,8 +401,8 @@ function load_zone_index()
         span =  Zone_renum_tab[iz][4]
 
         -- if renum_base (Zone_renum_tab[3]) is not set, use zone top from the the .zon file
-        -- if span (Zone_renum_tab[4]) is not set or zero, dont create renumed world file.  
-        
+        -- if span (Zone_renum_tab[4]) is not set or zero, dont create renumed world file.
+
         renum_ztop = span and span > 0 and (renum_base + span-1) or nil
         -- { zone_name, renum_zonenum, zone_file, world_file,
         --    zone_base, zone_top, renum_base, renum_top }
@@ -611,7 +611,7 @@ function check_world(wf)
             rnr = entry_idnum(room)
             rmin = math.min(rmin, rnr)
             rmax = math.max(rmax, rnr)
-            
+
             -- #3500~3503 is special case
             if rnr < 3500 and rnr > 3510 then
               assert(not out_of_zone(rnr), 'out of zone room number')
@@ -619,13 +619,13 @@ function check_world(wf)
 
             room[RENUMINDEX] = renum_room(rnr)
             room_id = entry_id(room)
-            
+
 
             for ix, ex in ipairs(room[7]) do
                 local exdata = ex[2]
                 table.insert( Exit_index, room_id .. ' ' .. zone_number() .. ' '.. exdata )
                 local flag, key, to_room = exdata:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
-                
+
                 print_check_entry(key, 'KEY', room_id)
                 print_check_entry(to_room, 'EXIT', room_id, -1)  -- dont check oo zone exit
             end
@@ -672,11 +672,11 @@ function renum_world()
         renum_writeln(renum_zinfo)
 
         for ix, ex in ipairs(room[7]) do
-            
+
             renum_write (ex[1])
             local exdata = ex[2]
             local flag, key, to_room = exdata:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
-                            
+
             exdata = string.format('%s %d %d', flag, renum_obj(key), renum_room(to_room))
             renum_writeln (exdata)
         end
@@ -782,12 +782,12 @@ function check_zone(zoneinfo)
 
     local zf, zname, ztop, zinfo, zheader, zdata
     local renum_data, renum_zname, renum_zfile, filename
-    
+
     zf = zoneinfo[3]
 
     renum_info = Zone_renum_tab[zone_number()]
     filename = renum_info[5]
-    
+
     if G_renum and plusok(renum_info[4]) and filename then
 
         if strok(filename) then
@@ -797,10 +797,10 @@ function check_zone(zoneinfo)
         else
           zoneinfo[4] = 'world/' .. zoneinfo[3]:match('zone/(.+).zon') .. '.wld'
         end
-        
+
         renum_zname = renum_info[6]
     end
-      
+
     kz_openfile(zf, renum_zfile or zf)
 
     zname = getzstring()
@@ -820,7 +820,7 @@ function check_zone(zoneinfo)
     end
     G_last_ztop = ztop
     assert ( zname == zone_name(), 'zone name mismatch 2')
-    
+
     if G_renum then
         ztop = (Zone_index[zone_number()][8])
           or (ztop + renum_zone_offset(zone_number()))
@@ -906,7 +906,7 @@ function check_zone(zoneinfo)
         if com then
           ln = COMCHAR .. ln
         end
-        
+
         zdata = zdata .. ln .. '\n'
     ::continue::
     end
@@ -1227,26 +1227,26 @@ function renum_special_cases()
         { 1304, ORPHAN+2 },     -- immo mail UNREF: OBJ	#1304	immo vulcan mail
         { 1002, ORPHAN+3 },     -- champ belt UNREF: OBJ	#1002	champion belt
         { 1300, ORPHAN+4 },     -- immo UNREF: OBJ	#1300	immo gloves magic
-        
+
         { 7213, ORPHAN+11 },    -- large helmet  UNREF: OBJ	#7213	helmet large
         { 7214, ORPHAN+12 },    -- chaos helmet  UNREF: OBJ	#7214	helmet chaos
-        
+
         { 1312, ORPHAN+13 },    -- claw of faust  UNREF: OBJ	#1312	claws faust
         { 1321, ORPHAN+14 },    -- UNREF: OBJ	#1321	blade chaos
-        
+
         { 5050, ORPHAN+15 },    -- cloak blue -- -- UNREF: OBJ	#5050	cloak blue
         { 5051, ORPHAN+16 },    -- rifle assualt  -- UNREF: OBJ	#5051	rifle assualt
-        
-        { 1310, ORPHAN+21 },    -- nothing UNREF: OBJ	#1310	nothing        
-        { 1314, ORPHAN+22 },    -- white dove -  UNREF: OBJ	#1314	white dove      
+
+        { 1310, ORPHAN+21 },    -- nothing UNREF: OBJ	#1310	nothing
+        { 1314, ORPHAN+22 },    -- white dove -  UNREF: OBJ	#1314	white dove
         { 3300, ORPHAN+23 },    -- a metal key~     UNREF: OBJ	#3300	key metal
         { 3301, ORPHAN+24 },    -- a brass key~    UNREF: OBJ	#3301	key brass
-        
+
         -- silver epee (The tunnel)/halbard (shire) {to tunnel (7400)} TODO: CHECK
         { 1305, TUNNEL+1 },      -- silver epee TO The tunnel
 
         { 1309, DESERT+41 },    -- ancient plate (great eastern deset)
- 
+
         { 1318, DROW+21 },       -- banner bloody Drow City(5100)
         { 1319, DESERT+42 },       -- green cresent banner Great easten desert
 
@@ -1294,14 +1294,14 @@ UNREF: OBJ	#3427	cape dark black
 
         { 2700, GRAVE+51 },     -- #2700 깃털
         { 1325, GRAVE+52 },     -- Mauve stone to Grave (1300)
-        
+
 
         { 1327, HOUSE+1 },      -- magnolias garland~ (House)
 
         { 1335, ARACH+11 },     -- speckled potion to arachnos(9000)
         { 1462, LAND+31 },     -- red potion to the land (1900) ** check over**
         -- { 1911, LAND+11 },      -- Scott's belt leave it to LAND
-          
+
         { 6550, DWARVEN+25 },      -- Red and blue key
         { 6551, DWARVEN+26 },      -- trapdoor
 
@@ -1403,17 +1403,17 @@ UNREF: OBJ	#3427	cape dark black
         { 1871, SLUM+61 },      -- 88 light
         { 1872, SLUM+62 },      -- sky light
         { 1873, SLUM+63 },      -- drug
-        
+
         -- Southern MID
 
-        { 3132, SOUTH+5 },     --  gold con 10K  
+        { 3132, SOUTH+5 },     --  gold con 10K
         { 3136, SOUTH+6 },     -- small coin
-   
+
         --   {3133, city key
         { 3120, SOUTH+12 },     -- iron key
         { 3122, SOUTH+13 },     -- wooden key
         { 3123, SOUTH+14 },     -- brass key
-        
+
         { 3130, SOUTH+15 },     -- drawer desk
         { 3131, SOUTH+16 },     -- safe
         { 3134, SOUTH+17 },     -- bench
@@ -1441,9 +1441,9 @@ UNREF: OBJ	#3427	cape dark black
         { 3020, MID+22 },     --  dagger
         { 3023, MID+23 },     --  club wooden
         { 3024, MID+24 },     --  war hammer
-        
+
         { 3022, MID+25 },     --  sword long
-        { 7211, MID+26 },     -- sword short (dagger) 
+        { 7211, MID+26 },     -- sword short (dagger)
         -- { NEW, MID+27 },     --  dagger long
 
         { 1317, MID+31 },     --  anti-dc
@@ -1454,9 +1454,9 @@ UNREF: OBJ	#3427	cape dark black
         { 3060, MID+36 },     --  raft
         { 1313, MID+37 },     --  map
         { 1322, MID+38 },     --  align
-                
+
         { 3007, MID+41 },     --  coke
-        { 3006, MID+42 },     --  cheese 
+        { 3006, MID+42 },     --  cheese
 
         -- TICKET:  7991 7992, 7993 7994
         -- QUEST weapon armor 7997 7998
@@ -1473,7 +1473,7 @@ UNREF: OBJ	#3427	cape dark black
         { 3030, MID+65 },     --  torch
         { 3035, MID+66 },     --  paper
         { 3034, MID+67 },     --  pen
-        
+
         { 3026, MID+71 },     --  swod saurai
         { 3027, MID+72 },     --  sword bombard
         -- { XXX, MID+73 },      -- sowrd bombard minor.
@@ -1483,7 +1483,7 @@ UNREF: OBJ	#3427	cape dark black
         { 1320, MID+77 },     -- sunshade
         { 1330, MID+78 },     -- baseball cap
         { 1307, MID+79 },     --  carpenter hammer
-        
+
         { 1326, MID+81 },     --  pendant
         { 1302, MID+82 },     --  bagrd boot
         { 1622, MID+83 },     --  shotgun
@@ -1682,7 +1682,7 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
         { 3070, SLUM+11 },   -- crank lib
         { 3071, SLUM+12 },   -- furniture
         { 3072, SLUM+13 },   -- grand mage
-        
+
         { 9400, SLUM+21 },    -- rejected guard
         { 9405, SLUM+22 },    -- roland
         { 9410, SLUM+23 },    -- stringray
@@ -1698,14 +1698,14 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
 
         { 6999, TOJAIL },          -- Jail
         -- { 13799, }
-        
+
         { 7000, SEWER2+1 },  -- mudmonster
         { 7004, SEWER2+2 },  -- earth beetle
         { 7005, SEWER2+3 },  -- giant maggot
         { 7006, SEWER2+4 },  -- slithering snake
-        
+
         { 7011, MOKSHA+3 },   -- morkoth
-        
+
         { 7009, GKP+1 },      -- Grnd Knight Paladin to Redfrens Residance (7900)
 
         -- #4104   -- orc 4th in Moria 3-4 UNREF: MOB	#4104	orc
@@ -1713,7 +1713,7 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
         --  UNREF: MOB	#7008	homonculus homo
         --  UNREF: MOB	#7012	esther madam
         --  #7007     -- UNREF: MOB	#7007	wanderer
-  
+
 
         { 7040, TUNNEL+1 },     -- red dragon
         { 7010, TUNNEL+2 },     -- chr-eff'n chr
@@ -1732,7 +1732,7 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
         { 13601, EASY+71 },     -- UNREF: MOB	#13601	wang
         { 13602, EASY+72 },     -- UNREF: MOB	#13602	cap
         { 13603, EASY+73 },     -- UNREF: MOB	#13603	Mac
-        
+
         { 3143, SOUTH+1 },      -- mayor
         { 3142, SOUTH+2 },      -- secretary
         { 3144, SOUTH+4 },      -- town crier
@@ -1741,8 +1741,8 @@ UNREF: OBJ	#23309	seed evil power 악마 씨앗
         { 3140, SOUTH+7 },      -- chief
         { 3141, SOUTH+8 },      -- city gaurd
         { 3121, SOUTH+11 },     -- swan
-        { 3124, SOUTH+12 },     -- duck       
-        { 3122, SOUTH+13 },     -- duckling 
+        { 3124, SOUTH+12 },     -- duck
+        { 3122, SOUTH+13 },     -- duckling
         { 3123, SOUTH+14 },     -- sparrow
 
 ------------------------------------------------------------------------------
@@ -1860,7 +1860,7 @@ UNREF: MOB	#19999	super musashi
         { 3093, SLUM+14 },
 
         -- { 3020, SLUM+21 },     -- armory
-        
+
         -- Areana to SLUM
         { 9400, SLUM+20 },
         { 9405, SLUM+21 },
@@ -1940,29 +1940,29 @@ UNREF: MOB	#19999	super musashi
 
         -- turning point to River of MID +30
         { 3220, CROSS+18 },      -- The Ocean
-        
+
         { 3503, CROSS+31 },     -- city enternace
         { 3502, CROSS+32 },     -- turning point
         { 3501, CROSS+33 },
         { 3500, CROSS+34 },
 
         { 13427, EASY+41 },     -- the secret room
-        
+
         { 2720, GRAVE+60+10 },   -- NeverLand sand beach =   11280
         { 2721, GRAVE+60+11 },
         { 2722, GRAVE+60+12 },
         { 2723, GRAVE+60+13 },
         { 2724, GRAVE+60+14 },
-        
+
         -- Dwarven Mine #6542 : error, shift by one
         { 6555, DWARVEN+42 },   -- inside mine
-          
+
         { 6542, DWARVEN+43 },   -- Bottom of mine
         { 6543, DWARVEN+44 },
         { 6544, DWARVEN+45 },
         { 6545, DWARVEN+46 },
         { 6551, DWARVEN+47 },   -- Mining eq. room
-        
+
         { 6546, DWARVEN+50 },
         { 6547, DWARVEN+51 },
         { 6548, DWARVEN+52 },
@@ -1970,28 +1970,28 @@ UNREF: MOB	#19999	super musashi
         { 6550, DWARVEN+54 },
         { 6552, DWARVEN+55 },
         { 6553, DWARVEN+56 },
-        
+
         --[[TODO
             13799 Olypus key
         ]]
-        
+
         { 1799, SHIRE+59 },     -- last Shire
-        
+
         { 2690, TBLD+161 },
         { 2691, TBLD+162 },
         { 2692, TBLD+163 },     -- last TB
-        
+
         { 7099, SEWER1+79 },      -- last Sewer
         { 7190, SEWER2+37 },
-        { 7199, SEWER2+39 },      -- Last Second Sewer 
-        { 7301, SEWER3+88 }, 
+        { 7199, SEWER2+39 },      -- Last Second Sewer
+        { 7301, SEWER3+88 },
         { 7399, SEWER3+89 },      -- Last Sewer Maze
-        
+
         { 9090, ARACH+86 },
         { 9091, ARACH+87 },
         { 9092, ARACH+88 },
         { 9099, ARACH+89 },     -- last Arachnos
-        
+
         { 3001, MID+01 },     -- temple
         -- temple replace 3003
 
@@ -2064,14 +2064,14 @@ UNREF: MOB	#19999	super musashi
     for ix,  renum in ipairs(special_obj) do
       Object_index[renum[1]][RENUMINDEX] = renum[2]
     end
-    
+
     --[[
     -- unref'ed Graveyard items
     for ix in range(0, 17) do
       Object_index[3410+ix][RENUMINDEX] = ORPHAN + 41 + ix
     end
     ]]
-    
+
     for ix, renum in ipairs(special_mob) do
         Mobile_index[renum[1]][RENUMINDEX] = renum[2]
     end
@@ -2096,7 +2096,7 @@ UNREF: MOB	#19999	super musashi
             Room_index[renum[1]][RENUMINDEX] = renum[2]
         end
     end
-    
+
 end
 
 -- New Narai (partally renumbered)
@@ -2217,7 +2217,7 @@ Zone_renum_tab_legacy = {
     { "KAIST",                          30000, 19000 },
 --    { "Good-Bad-Island",                23300, 23300 },
 
-}  
+}
 
 main()
 
@@ -2239,51 +2239,51 @@ end
     { "LIMBO",                          0,     0 },
 
 2920-2999 Orphan Area
-    
+
 3000-3199
     { "Northern Midgaard Main City",    3000,  3000 },
 
 3200-3299
-    
+
    3200 (Slum /Street of Mid
  -- 3210 (30)
     { "Houses2",                         1450,  1400 },
 
-        
+
     3220-3229 (10){ Mage Tower 3090 ~ 3093  }
-    
-    3230-3239    
+
+    3230-3239
     { "Arena",                          9400,  9400 }
 
 
     3240-3259 (20) Unused
 
-     
+
     3260 (30)
     { "Village of Midgaard",            1850,  1800 },
-    
+
      3295 LOCKER
-     
+
     3299
     { "XXX Dwarven Jail",               6990,  6990
-    
+
 
 3300-3399
     { "Southern part of Midgaard",      3100,  3100 },
- 
+
  Midgaard Crossroads
  Aroud_Midgaard            3410 (30)
- 
+
 3400-3499
-  
+
 
    3410-3429
-    { "River of Midgaard",              3200,  3200 } 
+    { "River of Midgaard",              3200,  3200 }
 
      3440-3449 (10)
-    { "XXX Turning Point",              3500,  3500 },   
+    { "XXX Turning Point",              3500,  3500 },
 
-  
+
    3700-3799
 -- KIT School zone
 
@@ -2360,30 +2360,30 @@ WEST 16000
 
 16100-16199
     { "The lands",                      1900,  1900 },
-    
+
 16200-16299
     { "SHIRE",       1700,  1700 },
-    
+
 16300-16399
     { "HAON-DOR-LIGHT",                 6000,  6000 },
-    
+
 16400-16499
    { "HAON-DOR-DARK",                  6100,  6100 },
 
 16500-16599
     { "Arachnos",                       9000,  9000 },
-    
+
 16600-16699
     { "Galaxy",                         9700,  9700 },
-    
+
 16700-16799
     { "The Death Star",                 9800,  9800 },
-    
+
 16800-16899
     { "The Keep of Mahn-Tor",           2900,  2900 }
 
 ---------------------17000 -------
-SOUTH 17000 
+SOUTH 17000
 
 17100-17199
     { "The Wasteland",                  2100,  2100 },
@@ -2395,15 +2395,15 @@ SOUTH 17000
     { "drow city",                      5100,  5100 },
 17400-17499
     { "The City of Thalos",             5200,  5200 },
- 
+
 17500-17699
     { "The Wamphyri Aerie",             4200,  4200 }
-  
+
 17700-17899
     { "DeathKingdom",                   9500,  9500 },
 17900-17999
     { "Mount Olympus",                  13700, 13700 }
-    
+
 ------------- 18000 ---------------------
 
 18100-18199
@@ -2411,17 +2411,17 @@ SOUTH 17000
 
 18200-18299
     { "Good-Bad-Island",                23300, 23300 },
-    
-18300-18399  
+
+18300-18399
     { "Kingdom Of Chok",                15800, 15800 },
 18400-18599
     { "Kingdom of Wee",                 16000, 16000 },
 18600-18699
     { "o-kingdom",                      17000, 17000 },
-   
+
 18700-18899
     { "MooDang",                        18000, 18000 },
-    
+
 ----------- 19000
 
 19100-19399
@@ -2429,15 +2429,15 @@ SOUTH 17000
 
 19400-19599
     { "KAIST",                          19000, 19000 }
-    
+
 19600-19699
     { "Process' castle",                13800, 13800 }
 19700-19799
-   { "Easy zone",                       13400, 13400 }  
+   { "Easy zone",                       13400, 13400 }
 19800-19899
      { 아미대전 }
 
----------- 19000  
+---------- 19000
 
 
 --------------------------------------
@@ -2491,12 +2491,12 @@ SOUTH 17000
   47 MooDang                         18000  200 ( 151   0  18000 - 18150 )
   48 KAIST                           19000  200 ( 158   1  19001 - 19158 )
   49 Good-Bad-Island                 23300  100 (  90   1  23301 - 23390 )
-  
+
   mob 7005, 7006 -> 2nd sewer
   mob 7010 -> the unnels
-  mob 7011 -> dirks  
+  mob 7011 -> dirks
   mob 7012 -> orphan
-  
+
   obj 7090 -> GKP
   mob 7190 -> the unnels
   mob 7191 -> shire
@@ -2504,14 +2504,14 @@ SOUTH 17000
   obj 7207 -> GKP
   obj 7211 -> mid (small sword)
   obj 7212 -> bastard sw (GKP)
-  
+
   ROOM TO MOVE
   Shire
   The land XXX NO
   Waste XXX NO
   TB
   Mahantor  XXX NO
-  
+
   Sewer
   2nd Sewer OK
   Sewer Maze 200-> 100  (NO +10)

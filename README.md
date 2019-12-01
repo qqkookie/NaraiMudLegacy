@@ -26,12 +26,12 @@ There are few versions of the source.
 
 For current version and changes, see VERSION file.
 
-Source git respository is 
+Source git respository is
 https://github.com/qqkookie/NaraiMudLegacy
 ssh:git@github.com/qqkookie/NaraiMudLegacy
 
 Legacy 2003, 2010, 2019 versions are maintained
-as **`legacy`** branch in the **`git`** repository 
+as **`legacy`** branch in the **`git`** repository
 
 ### Legacy 2003
 
@@ -93,8 +93,8 @@ It is tagged as **newnarai-1998** in **master** branch of git repository.
 
 ### KIT Classic 2019
 
-I plan to restart new development based on New Narai 1998 version 
-and merge all the versions and forks above and 
+I plan to restart new development based on New Narai 1998 version
+and merge all the versions and forks above and
 make it definitive classic version of KIT MUD.
 
 ## Directories and contents
@@ -103,7 +103,7 @@ make it definitive classic version of KIT MUD.
 * `'utils'` contains source code of tools and scripts
   for operation and game development.
 * `'lib'` is directory where mud server actually run in,
-  containing all static game data like zone and mud resources. 
+  containing all static game data like zone and mud resources.
 * `'users'` is directory where logs, player info and item stashes are saved.
 * `'OLD'` contains unused code and data like old version,
   back up, and left-overs collected here for history.

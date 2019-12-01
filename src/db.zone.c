@@ -8,8 +8,8 @@
 #include "comm.h"
 #include "gamedb.h"
 
-/* NOTE: Check validity of world/zone file. for zone debugging only. 
-         *DON'T* define this for production version. */ 
+/* NOTE: Check validity of world/zone file. for zone debugging only.
+         *DON'T* define this for production version. */
 // #define ZONE_CHECK
 
 /* NOTE: Moved from db.h	*/
@@ -25,13 +25,13 @@ struct zone_data {
     int reset_mode;	/* conditions for reset (see below)   */
     struct reset_com *cmd;	/* command table for reset    */
 
-    /* 
+    /*
      *  Reset mode:
      *  0: Don't reset, and don't update age.
      *  1: Reset if no PC's are located in zone.
      *  2: Just reset.
      */
-}; 
+};
 
 /* structure for the reset commands */
 struct reset_com {
@@ -42,27 +42,27 @@ struct reset_com {
     int arg3;		/* */
 
     /*  Commands:
-     *  'M': Read a mobile     
+     *  'M': Read a mobile
      *  'O': Read an object
      *  'G': Give obj to mob
      *  'P': Put obj in obj
      *  'G': Obj to char
      *  'E': Obj to char equip
-     *  'D': Set state of door 
+     *  'D': Set state of door
      */
-}; 
+};
 
 /* for queueing zones for update   */
 struct reset_q_element {
     int zone_to_reset;	/* ref to zone_data */
     struct reset_q_element *next;
-}; 
+};
 
 /* structure for the update queue     */
 struct reset_q_type {
     struct reset_q_element *head;
     struct reset_q_element *tail;
-} reset_q; 
+} reset_q;
 
 
 extern struct zone_data *zone_table;	/* table of reset data		*/
@@ -79,7 +79,7 @@ extern struct obj_data *get_obj_num(int nr);
 void allocate_room(int new_top);
 void setup_dir(FILE * fl, int room, int dir);
 void reset_zone(int zone);
-int is_empty(int zone_nr); 
+int is_empty(int zone_nr);
 
 #define ALL_WORLD_FILE "world/world_files"
 
@@ -189,7 +189,7 @@ void boot_world(void)
     top_of_world = --room_nr;
 }
 
-#undef ALL_WORLD_FILE 
+#undef ALL_WORLD_FILE
 
 /* load the rooms */
 /*
@@ -242,7 +242,7 @@ void boot_world(void)
 	    world[room_nr].funct = 0;
 	    world[room_nr].contents = 0;
 	    world[room_nr].people = 0;
-	    world[room_nr].light = 0; 
+	    world[room_nr].light = 0;
 
 	    for (tmp = 0; tmp <= 5; tmp++)
 		world[room_nr].dir_option[tmp] = 0;
@@ -252,7 +252,7 @@ void boot_world(void)
 	    for (;;) {
 		fscanf(fl, " %s \n", chk);
 
-		if (*chk == 'D') 
+		if (*chk == 'D')
 		    setup_dir(fl, room_nr, atoi(chk + 1));
 		else if (*chk == 'E')  {
 		    CREATE(new_descr, struct extra_descr_data, 1);
@@ -261,7 +261,7 @@ void boot_world(void)
 		    new_descr->next = world[room_nr].ex_description;
 		    world[room_nr].ex_description = new_descr;
 		}
-		else if (*chk == 'S') 
+		else if (*chk == 'S')
 		    break;
 	    }
 
@@ -270,7 +270,7 @@ void boot_world(void)
 	zone++;
     } while (flag);
 
-    free(temp); 
+    free(temp);
 
     fclose(fl);
     top_of_world = --room_nr;
@@ -292,7 +292,7 @@ void allocate_room(int new_top)
 	CREATE(new_world, struct room_data, 1);
 
     world = new_world;
-} 
+}
 
 /* read direction data */
 void setup_dir(FILE * fl, int room, int dir)
@@ -323,16 +323,16 @@ void setup_dir(FILE * fl, int room, int dir)
 
     fscanf(fl, " %d ", &tmp);
     world[room].dir_option[dir]->to_room = tmp;
-} 
+}
 
 void renum_world(void)
 {
     register int room, door;
 
-    for (room = 0; room <= top_of_world; room++) 
+    for (room = 0; room <= top_of_world; room++)
 	for (door = 0; door <= 5; door++)
 	    if (world[room].dir_option[door])
-		if (world[room].dir_option[door]->to_room != NOWHERE) 
+		if (world[room].dir_option[door]->to_room != NOWHERE)
 		    world[room].dir_option[door]->to_room =
 			real_room(world[room].dir_option[door]->to_room);
 }
@@ -345,7 +345,7 @@ void check_mobile_and_object(void)
     struct obj_data *obj;
 
     extern int top_of_mobt;	/* top of mobile index table	*/
-    extern int top_of_objt;	/* top of object index table	*/ 
+    extern int top_of_objt;	/* top of object index table	*/
 
     for( i = 0; i <=top_of_mobt; i++) {
 	mob = read_mobile(i, REAL);
@@ -364,14 +364,15 @@ void check_mobile_and_object(void)
     for( i = 0; i <=top_of_objt; i++) {
 	obj = read_object(i, REAL);
 	if ((GET_ITEM_TYPE(obj) == ITEM_WEAPON)
-		&& obj->obj_flags.value[0] > 0 ) 
+		&& obj->obj_flags.value[0] > 0 )
 	    fprintf(stderr, "WEAPON #%06d [%-30s] MAGIC %d \n",
 		obj_index[i].virtual, obj->name, obj->obj_flags.value[0] );
-	if ( GET_ITEM_TYPE(obj)< ITEM_LIGHT || GET_ITEM_TYPE(obj) > ITEM_MONEY
-	    || GET_ITEM_TYPE(obj) ==  7 /* ITEM_MISSILE */
-	    || GET_ITEM_TYPE(obj) ==  ITEM_OTHER
-	    || GET_ITEM_TYPE(obj) ==  ITEM_TRASH
+	if ( GET_ITEM_TYPE(obj) < ITEM_LIGHT || GET_ITEM_TYPE(obj) > ITEM_WINGS
+	    || GET_ITEM_TYPE(obj) ==  13 // ITEM_TRASH
 	    || GET_ITEM_TYPE(obj) ==  14 /* ITEM_TRAP */
+	    || GET_ITEM_TYPE(obj) ==  21 /* ITEM_PEN */
+	    // || GET_ITEM_TYPE(obj) ==  23 /* ITEM_CIGA */
+	    // || GET_ITEM_TYPE(obj) ==  24 /* ITEM_DRUG */
 	    )
 	    fprintf(stderr, "ITEM TYPE = %2d #%06d [%s]  V0-3: %d,%d,%d,%d.\n",
 		GET_ITEM_TYPE(obj), obj_index[i].virtual, obj->name,
@@ -394,66 +395,66 @@ void check_world(void)
 	    if (world[room].dir_option[door])
 		if ((world[room].dir_option[door]->to_room != NOWHERE)
 		    /* NOTE: Check validity of door key object */
-		    && world[room].dir_option[door]->key > 0 
+		    && world[room].dir_option[door]->key > 0
 		    && real_object(world[room].dir_option[door]->key) < 0 ) {
 
 		    fprintf(stderr,"NO KEY!! %s (%d) %s KEY: %d.\n",
-			world[room].name, world[room].number, dirs[door], 
+			world[room].name, world[room].number, dirs[door],
 			world[room].dir_option[door]->key );
 
-		    sprintbit( world[room].dir_option[door]->exit_info, 
-			exit_bits, buf ) ; 
-		    fprintf(stderr, "    EXIT Flags: %s\n", buf ); 
+		    sprintbit( world[room].dir_option[door]->exit_info,
+			exit_bits, buf ) ;
+		    fprintf(stderr, "    EXIT Flags: %s\n", buf );
 		}
 	/* NOTE: Check validity of sector_type */
-	if( world[room].sector_type > SECT_SKY 
+	if( world[room].sector_type > SECT_SKY
 	    || world[room].sector_type < SECT_INSIDE )
 	    fprintf(stderr, "SECT TYPE!! Invalid. room %s (#%d) type = %d\n",
 		world[room].name, world[room].number, world[room].sector_type);
     }
-} 
+}
 
 /* NOTE: NEW! check validity of all zone reset command list.
-        Called by renum_zone_table(). */ 
+        Called by renum_zone_table(). */
 void check_zcmd(struct reset_com *zcmd, int zone, int comm)
 {
     struct char_data *mob;
     struct obj_data *obj;
-    struct room_direction_data *door; 
-    char buf[MAX_BUFSIZ]; 
+    struct room_direction_data *door;
+    char buf[MAX_BUFSIZ];
     extern char *exit_bits[];
 
     /* NOTE: Check validity of mobile/object/room */
-    if ( zone_table[zone].cmd[comm].arg1 < 0 
+    if ( zone_table[zone].cmd[comm].arg1 < 0
 	    || zone_table[zone].cmd[comm].arg3 < 0 )
 	fprintf(stderr,"Invalid Zcmd: zone %d, comm %d: "
-		" cmd %c, %d, %d, %d.\n", zone, comm, 
+		" cmd %c, %d, %d, %d.\n", zone, comm,
 		zcmd->command, zcmd->arg1, zcmd->arg2, zcmd->arg3 );
 
     /* NOTE: Check validity of mobile */
     else if( zcmd->command == 'M' ) {
 	mob = read_mobile(zone_table[zone].cmd[comm].arg1,REAL);
 	char_to_room(mob, zone_table[zone].cmd[comm].arg3);
-	extract_char(mob); 
+	extract_char(mob);
     }
     /* NOTE: Check validity object */
-    else if ( zcmd->command == 'O' || zcmd->command == 'G' 
-	    || zcmd->command == 'E' || zcmd->command == 'P' ) { 
+    else if ( zcmd->command == 'O' || zcmd->command == 'G'
+	    || zcmd->command == 'E' || zcmd->command == 'P' ) {
 	obj = read_object(zcmd->arg1,VIRTUAL);
 	extract_obj(obj);
     }
     /* NOTE: Check validity of key for locked door with key */
     else if( zcmd->command == 'D' && zcmd->arg2 == 2 ) {
-	door = world[zone_table[zone].cmd[comm].arg1].dir_option[zcmd->arg2];  
-	if ( door && door->key > 0 && real_object(door->key ) < 0 ) { 
+	door = world[zone_table[zone].cmd[comm].arg1].dir_option[zcmd->arg2];
+	if ( door && door->key > 0 && real_object(door->key ) < 0 ) {
 	    fprintf(stderr,"NO KEY!! %s (%d) %s KEY: %d.\n",
-		world[zone_table[zone].cmd[comm].arg1].name, 
+		world[zone_table[zone].cmd[comm].arg1].name,
 		zcmd->arg1, dirs[zcmd->arg2], zcmd->arg3 ) ;
 
-	    sprintbit( door->exit_info, exit_bits, buf ) ; 
-	    fprintf(stderr, "    EXIT Flags: %s\n", buf ); 
+	    sprintbit( door->exit_info, exit_bits, buf ) ;
+	    fprintf(stderr, "    EXIT Flags: %s\n", buf );
 	}
-    } 
+    }
 }
 
 void check_zone_data(void)
@@ -461,7 +462,7 @@ void check_zone_data(void)
 #ifdef  ZONE_CHECK
     check_world();
     check_mobile_and_object();
-#endif		/* ZONE_CHECK */ 
+#endif		/* ZONE_CHECK */
 }
 
 void renum_zone_table(void)
@@ -474,9 +475,9 @@ void renum_zone_table(void)
 	for (comm = 0; zone_table[zone].cmd[comm].command != 'S'; comm++) {
 	    ZCMD = zone_table[zone].cmd[comm];
 	    switch (ZCMD.command) {
-	    case 'M': 
+	    case 'M':
 		zone_table[zone].cmd[comm].arg1 = real_mobile(ZCMD.arg1);
-		zone_table[zone].cmd[comm].arg3 = real_room(ZCMD.arg3); 
+		zone_table[zone].cmd[comm].arg3 = real_room(ZCMD.arg3);
 		break;
 	    case 'O':
 		zone_table[zone].cmd[comm].arg1 = real_object(ZCMD.arg1);
@@ -499,7 +500,7 @@ void renum_zone_table(void)
 	    }
 #ifdef ZONE_CHECK
 	    check_zcmd(&ZCMD, zone, comm);
-#endif		/* ZONE_CHECK */ 
+#endif		/* ZONE_CHECK */
 	}
 }
 
@@ -706,7 +707,7 @@ void boot_zones(void) {
 	check = fread_string(fl);
 
 	if (*check == '$')
-	    break; 
+	    break;
 
 	if (!zon)
 	    CREATE(zone_table, struct zone_data, 1);
@@ -730,7 +731,7 @@ void boot_zones(void) {
 		    CREATE(zone_table[zon].cmd, struct reset_com, 1);
 		else
 		    if (!(zone_table[zon].cmd =
-			(struct reset_com *) realloc(zone_table[zon].cmd, 
+			(struct reset_com *) realloc(zone_table[zon].cmd,
 			(cmd_no + 1) * sizeof(struct reset_com)))) {
 			perror("reset command load");
 			exit(2);
@@ -829,13 +830,13 @@ void zone_update(void)
 		if (!update_u->next)
 		    reset_q.tail = temp;
 
-		temp->next = update_u->next; 
+		temp->next = update_u->next;
 	    }
 
 	    free(update_u);
 	    break;
 	}
-} 
+}
 
 
 #ifdef SPLIT_ZONE_SYSTEM
@@ -845,7 +846,7 @@ struct char_data *get_mobile_index(int index)
 {
     struct char_data *ch;
 
-    /* NOTE: BUG NOT FIXED!!  Some times, infinite loop on index == 0 . */ 
+    /* NOTE: BUG NOT FIXED!!  Some times, infinite loop on index == 0 . */
     /* NOTE: DEBUG: This was Temorary FIX */
     /* if( index == 0 ) return(NULL); */
 
@@ -853,7 +854,7 @@ struct char_data *get_mobile_index(int index)
 	if (IS_NPC(ch) && ch->nr == index) {
 	    return ch;
 	}
-    } 
+    }
     /* error */
     return NULL;
 }
@@ -913,7 +914,7 @@ void reset_zone(int zone)
 	    case 'O':	/* read an object */
 		/* if (obj_index[ZCMD.arg1].number < ZCMD.arg2) */
 		if (ZCMD.arg3 >= 0) {
-		    if (!get_obj_in_list_num(ZCMD.arg1, 
+		    if (!get_obj_in_list_num(ZCMD.arg1,
 		    		world[ZCMD.arg3].contents)) {
 			obj = read_object(ZCMD.arg1, REAL);
 			if ((obj->obj_flags.type_flag == ITEM_KEY) ||
@@ -1033,14 +1034,14 @@ void reset_zone(int zone)
 		    SET_BIT(world[ZCMD.arg1].dir_option[ZCMD.arg2]->exit_info,
 			    EX_LOCKED);
 		    SET_BIT(world[ZCMD.arg1].dir_option[ZCMD.arg2]->exit_info,
-			    EX_CLOSED); 
+			    EX_CLOSED);
 		    break;
 		}
 		last_cmd = 'D';
 		break;
 
 	    default:
-		sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\n\r",
+		sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\r\n",
 			zone, cmd_no);
 		log(buf);
 		exit(2);
@@ -1150,7 +1151,7 @@ void reset_zone(int zone)
 		break;
 
 	    default:
-		sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\n\r",
+		sprintf(buf, "Undefd cmd in reset table; zone %d cmd %d.\r\n",
 			zone, cmd_no);
 		log(buf);
 		exit(2);
@@ -1210,14 +1211,14 @@ void do_resetzone(struct char_data *ch, char *argument, int cmd)
     if (NOT_GOD(ch))
 	return;
     if (!argument || !*argument) {
-	send_to_char("Which zone do you want to reset?\n\r", ch);
+	send_to_char("Which zone do you want to reset?\r\n", ch);
 	return;
     }
     while (isspace(*argument))
 	argument++;
     if (strcmp(argument, "ALL") == 0) {
 	for (i = 0; i <= top_of_zone_table; i++) {
-	    sprintf(buf2, "Zone %s is now updating..\n\r",
+	    sprintf(buf2, "Zone %s is now updating..\r\n",
 		    zone_table[i].name);
 	    send_to_char(buf2, ch);
 	    reset_zone(i);
@@ -1227,7 +1228,7 @@ void do_resetzone(struct char_data *ch, char *argument, int cmd)
 
     if (strcmp(argument, "THIS") == 0) {
 	i = world[ch->in_room].zone;
-	sprintf(buf2, "Zone %s is now updating..\n\r",
+	sprintf(buf2, "Zone %s is now updating..\r\n",
 		zone_table[i].name);
 	send_to_char(buf2, ch);
 	reset_zone(i);
@@ -1236,7 +1237,7 @@ void do_resetzone(struct char_data *ch, char *argument, int cmd)
 
     for (i = 0; i <= top_of_zone_table; i++)
 	if (strncmp(zone_table[i].name, argument, strlen(argument)) == 0) {
-	    sprintf(buf2, "Zone %s is now updating..\n\r",
+	    sprintf(buf2, "Zone %s is now updating..\r\n",
 		    zone_table[i].name);
 	    send_to_char(buf2, ch);
 	    reset_zone(i);
@@ -1254,14 +1255,14 @@ void do_reloadzone(struct char_data *ch, char *argument, int cmd)
     if (NOT_GOD(ch))
 	return;
     if (!argument || !*argument) {
-	send_to_char("Which zone do you want to reset?\n\r", ch);
+	send_to_char("Which zone do you want to reset?\r\n", ch);
 	return;
     }
     while (isspace(*argument))
 	argument++;
     if (strcmp(argument, "ALL") == 0) {
 	for (i = 0; i <= top_of_zone_table; i++) {
-	    sprintf(buf2, "Zone %s is now reloading..\n\r",
+	    sprintf(buf2, "Zone %s is now reloading..\r\n",
 		    zone_table[i].name);
 	    send_to_char(buf2, ch);
 	    log(buf2);
@@ -1272,7 +1273,7 @@ void do_reloadzone(struct char_data *ch, char *argument, int cmd)
 
     if (strcmp(argument, "THIS") == 0) {
 	i = world[ch->in_room].zone;
-	sprintf(buf2, "Zone %s is now reloading..\n\r",
+	sprintf(buf2, "Zone %s is now reloading..\r\n",
 		zone_table[i].name);
 	send_to_char(buf2, ch);
 	log(buf2);
@@ -1282,7 +1283,7 @@ void do_reloadzone(struct char_data *ch, char *argument, int cmd)
 
     for (i = 0; i <= top_of_zone_table; i++)
 	if (strncmp(zone_table[i].name, argument, strlen(argument)) == 0) {
-	    sprintf(buf2, "Zone %s is now reloading..\n\r",
+	    sprintf(buf2, "Zone %s is now reloading..\r\n",
 		    zone_table[i].name);
 	    send_to_char(buf2, ch);
 	    log(buf2);

@@ -17,10 +17,10 @@
 
 /* Structures */
 struct char_data *combat_list = 0;	/* head of l-list of fighting chars */
-struct char_data *combat_next_dude = 0;		/* Next dude global trick */ 
+struct char_data *combat_next_dude = 0;		/* Next dude global trick */
 
-/* =================================================================== */ 
-/* NOTE:    Moved following type, defintion from "play.h" */ 
+/* =================================================================== */
+/* NOTE:    Moved following type, defintion from "play.h" */
 
 #define MAX_MESSAGES		61
 
@@ -37,7 +37,7 @@ struct message_type {
     struct msg_type sanctuary_msg;	/* messages when hit on sanctuary */
     struct msg_type god_msg;		/* messages when hit on god	  */
     struct message_type *next;		/* to next messages of this kind. */
-}; 
+};
 
 struct message_list {
     int a_type;				/* Attack type		*/
@@ -70,7 +70,7 @@ void set_fighting(struct char_data *ch, struct char_data *vict)
 
     ch->specials.fighting = vict;
     GET_POS(ch) = POS_FIGHTING;
-} 
+}
 
 /* remove a char from the list of fighting chars */
 void stop_fighting(struct char_data *ch)
@@ -112,7 +112,7 @@ void stop_fighting(struct char_data *ch)
 
 #define MAX_NPC_CORPSE_TIME 15
 #define MAX_PC_CORPSE_TIME 40
-  
+
 /* NOTE: Change of 2nd arg: OLD killer level -> char. who killed me */
 void make_corpse(struct char_data *ch, struct char_data *who)
 {
@@ -121,7 +121,7 @@ void make_corpse(struct char_data *ch, struct char_data *who)
     char buf[MAX_STRING_LENGTH];
     int i;
     extern void object_list_new_owner(struct obj_data *list,
-    		struct char_data *ch); 
+    		struct char_data *ch);
     extern struct obj_data *create_money(int amount);
     extern  void special_death(struct char_data *ch, struct char_data *who,
 	struct obj_data *corpse);
@@ -169,7 +169,7 @@ void make_corpse(struct char_data *ch, struct char_data *who)
     object_list = corpse;
 
     /* NOTE: special death/corpse processing in "spec_misc.c" 	*/
-    /* NOTE: After creating empty corpse and before unequip ch  */ 
+    /* NOTE: After creating empty corpse and before unequip ch  */
     special_death(ch, who, corpse);
 
     /* NOTE: Do light adjustment here. Not in extract_char(). */
@@ -180,7 +180,7 @@ void make_corpse(struct char_data *ch, struct char_data *who)
 	if (ch->equipment[i]) {
 #ifdef  UNUSED_CODE
 	    /* NOTE: Move this code to special_death() */
-	    /* 손오공 */ 
+	    /* 손오공 */
 	    if (mob_index[ch->nr].virtual == 11101 && i == WEAR_HEAD) {
 		otmp = unequip_char(ch, i);
 		extract_obj(otmp);
@@ -188,7 +188,7 @@ void make_corpse(struct char_data *ch, struct char_data *who)
 #endif		/* UNUSED_CODE */
 
 	    otmp = unequip_char(ch, i);
-	    obj_to_obj(otmp, corpse); 
+	    obj_to_obj(otmp, corpse);
 	}
     }
 
@@ -226,7 +226,7 @@ void make_corpse(struct char_data *ch, struct char_data *who)
     if (mob_index[ch->nr].virtual == 23301) {
 	o = read_object(23309, VIRTUAL);
 	obj_to_obj(o, corpse);
-    } 
+    }
 #endif		/* UNUSED_CODE */
 
     obj_to_room(corpse, ch->in_room);
@@ -243,7 +243,7 @@ void change_alignment(struct char_data *ch, struct char_data *victim)
 {
     int al, al_v;
 
-    /* 
+    /*
        al=(7*GET_ALIGNMENT(ch)-GET_ALIGNMENT(victim))/8;
        al=(al-GET_ALIGNMENT(ch))/10; */
     al_v = -GET_ALIGNMENT(victim);
@@ -267,7 +267,7 @@ void death_cry(struct char_data *ch)
     int door, was_in;
 
     acthan("Your blood freezes as you hear $n's death cry.",
-	   "$n님의 처절한 비명소리가 들립니다. 으 소름끼쳐 ~~", 
+	   "$n님의 처절한 비명소리가 들립니다. 으 소름끼쳐 ~~",
 	   FALSE, ch, 0, 0, TO_ROOM);
     was_in = ch->in_room;
 
@@ -301,7 +301,7 @@ void die(struct char_data *ch, int level, struct char_data *who)
     extern void wipe_stash(char *name);
 
     if (!ch)
-	return; 
+	return;
 
     if (IS_NPC(ch)) {
 	raw_kill(ch, who);
@@ -341,7 +341,7 @@ void die(struct char_data *ch, int level, struct char_data *who)
     GET_GOLD(ch) = 0;
 
     /* NOTE: when player died, player lose at least fixed amount of exp
-       according to level, minimum 1/10 of current exp  but not exceeding 
+       according to level, minimum 1/10 of current exp  but not exceeding
        half of current exp              */
     /* OLD: exp = GET_LEVEL(ch)*GET_LEVEL(ch)*level*200); */
     /* NEW: MAX(MIN(fixed exp according to levels,exp/2) exp /10 )   */
@@ -353,7 +353,7 @@ void die(struct char_data *ch, int level, struct char_data *who)
 
     /* killed number(no only pk) */
     /* if(who && !IS_NPC(who)) */
-    ch->player.pked_num++; 
+    ch->player.pked_num++;
 
     raw_kill(ch, who);
 
@@ -378,9 +378,9 @@ void die(struct char_data *ch, int level, struct char_data *who)
 }
 
 void update_pos(struct char_data *victim)
-{ 
+{
     int unit_hit;
-    
+
     /* NOTE: Extend range of dead, mortally wounded,.. etc */
     unit_hit = MIN(10000, GET_MAX_HIT(victim))/500 + 2 ;
     if ((GET_HIT(victim) > 0) && (GET_POS(victim) > POS_STUNNED))
@@ -394,8 +394,8 @@ void update_pos(struct char_data *victim)
     else if (GET_HIT(victim) <= -3 * unit_hit)
 	GET_POS(victim) = POS_INCAP;
     else
-	GET_POS(victim) = POS_STUNNED; 
-} 
+	GET_POS(victim) = POS_STUNNED;
+}
 
 void load_messages(void)
 {
@@ -538,7 +538,7 @@ void dam_message(int dam, struct char_data *ch, struct char_data *victim,
 /* NOTE: Weapon attack texts moved to "constants.c"
     struct attack_hit_type attack_hit_text[] =
     struct attack_hit_type attack_hit_han[] =
- */ 
+ */
 
 char *replace_string(char *str, char *weapon)
 {
@@ -654,7 +654,7 @@ void fight_message(int dam, struct char_data *ch, struct char_data *victim,
 
     /* NOTE: find matching message type */
     for (i = 0; i < MAX_MESSAGES; i++)
-	if (fight_messages[i].a_type == attacktype) 
+	if (fight_messages[i].a_type == attacktype)
 	    break;
     if( i >= MAX_MESSAGES ) {
 	char buf[MAX_BUFSIZ];
@@ -715,7 +715,7 @@ void damage(struct char_data *ch, struct char_data *victim,
 
     int die_special(struct char_data *ch, struct char_data *victim);
     extern void do_flee(struct char_data *ch, char *argument, int cmd);
-    extern void victory(struct char_data *ch, struct char_data *victim); 
+    extern void victory(struct char_data *ch, struct char_data *victim);
 
     if (!ch || !victim)
 	return;
@@ -736,17 +736,17 @@ void damage(struct char_data *ch, struct char_data *victim,
     /* can't hit same guild member */
     if (ch->player.guild == victim->player.guild &&
 	(ch->player.guild || victim->player.guild) && ch != victim ) {
-	send_to_char("Wanna hit your guild member?  CAN'T!\n\r", ch);
+	send_to_char("Wanna hit your guild member?  CAN'T!\r\n", ch);
 	return;
     }
     /* NOTE: Check victim's room */
     if( ch->in_room != victim->in_room && attack )
 	return;
-	
+
     /* NOTE: If victim is already dead position, give eternal peace to it. */
     if (GET_POS(victim) <= POS_DEAD) {
 	GET_HIT(victim) -= dam;
-	goto eternal_peace; 
+	goto eternal_peace;
     }
 
     if (IS_WIZARD(victim))
@@ -764,7 +764,7 @@ void damage(struct char_data *ch, struct char_data *victim,
 		set_fighting(ch, victim);
 
 	    /* forbid charmed person damage charmed person */
-	    /* 
+	    /*
 	    if (IS_AFFECTED(ch, AFF_CHARM) && IS_AFFECTED(victim,AFF_CHARM)) {
 		if(ch->specials.fighting)
 		   stop_fighting(ch); if(victim->specials.fighting)
@@ -808,9 +808,9 @@ void damage(struct char_data *ch, struct char_data *victim,
 	/* NOTE: Less exp from damage : dam*level/2 -> dam*level/10 */
 	gain_exp(ch, GET_LEVEL(victim) * dam / 10);
 
-    update_pos(victim); 
-eternal_peace: 
-    
+    update_pos(victim);
+eternal_peace:
+
     if (attacktype >= TYPE_HIT && attacktype < TYPE_SHOOT ) {
 	if (!ch->equipment[WIELD])
 	    dam_message(dam, ch, victim, TYPE_HIT);
@@ -876,17 +876,17 @@ eternal_peace:
 	if (victim->specials.fighting)
 	    stop_fighting(victim);
 
-    if (GET_POS(victim) == POS_DEAD) { 
+    if (GET_POS(victim) == POS_DEAD) {
 	if( die_special(ch, victim))
 	    return;
 	/* NOTE: Separate code for winner gain to victory() */
-	victory(ch, victim); 
+	victory(ch, victim);
 	die(victim, GET_LEVEL(ch), ch);
     }
 }
 
 /* NOTE: NEW! special death handing part separated from damage() */
-/* 	Return 0 for real and immediate death. Else 1 if rearaised. */ 
+/* 	Return 0 for real and immediate death. Else 1 if rearaised. */
 int die_special(struct char_data *ch, struct char_data *victim)
 {
     char buf[MAX_BUFSIZ];
@@ -903,16 +903,16 @@ int die_special(struct char_data *ch, struct char_data *victim)
             if (af->type == SPELL_DEATH)
                 break;
     }
-#endif		/* UNUSED_CODE*/ 
+#endif		/* UNUSED_CODE*/
 
     /* chase modified this for reraise */
     if (IS_AFFECTED(victim, AFF_RERAISE )) {
 
-	/* NOTE: for NPC with AFF_RERISE/AFF_DEATH flag set */ 
+	/* NOTE: for NPC with AFF_RERISE/AFF_DEATH flag set */
 	REMOVE_BIT(victim->specials.affected_by, AFF_RERAISE|AFF_DEATH);
 	/* NOTE: 1/10 probability to fail to reraise. */
-	/* NOTE: SPELL_DEATH / SPELL_CURSE will exert bad influence on it. */ 
-	if( number(1, (IS_AFFECTED(victim, AFF_CURSE) ? 5 : 10)) == 1 
+	/* NOTE: SPELL_DEATH / SPELL_CURSE will exert bad influence on it. */
+	if( number(1, (IS_AFFECTED(victim, AFF_CURSE) ? 5 : 10)) == 1
 	    || IS_AFFECTED(victim, AFF_DEATH)) {
 	    send_to_char("Alas! You FAILED to RERAISE!\r\n", victim);
 	    return 0;
@@ -956,8 +956,8 @@ int die_special(struct char_data *ch, struct char_data *victim)
     return 0;
 }
 
-/* NOTE: NEW! Sepaarated code for parry, mirror image and 
-	miss case from hit(). */ 
+/* NOTE: NEW! Sepaarated code for parry, mirror image and
+	miss case from hit(). */
 int hit_miss(struct char_data *ch, struct char_data *victim, int type)
 {
     int parry_num, prf, miss;
@@ -971,10 +971,10 @@ int hit_miss(struct char_data *ch, struct char_data *victim, int type)
 	parry_num += (GET_SKILLED(victim, SKILL_PARRY) << 1);
 	parry_num += (GET_DEX(victim) << 1);
 
-	if (GET_CLASS(victim) == CLASS_THIEF) 
+	if (GET_CLASS(victim) == CLASS_THIEF)
 	    parry_num += GET_LEVEL(victim);
 
-	if (number(0, parry_num) > 
+	if (number(0, parry_num) >
 	    (GET_HITROLL(ch) << 2) + GET_LEVEL(ch) - GET_LEVEL(victim) + 43) {
 	    prf = 1;
 	}
@@ -1014,12 +1014,12 @@ int hit_miss(struct char_data *ch, struct char_data *victim, int type)
 
     if ( prf ) {
 	if (prf == 1) {
-	    send_to_char("You parry successfully.\n\r", victim);
+	    send_to_char("You parry successfully.\r\n", victim);
 	    act("$N parries successfully.", FALSE, ch, 0, victim, TO_CHAR);
 	    INCREASE_SKILLED1(victim, ch, SKILL_PARRY);
 	}
 	else if (prf == 2) {
-	    send_to_char("You hit illusion. You are confused.\n\r", ch);
+	    send_to_char("You hit illusion. You are confused.\r\n", ch);
 	    act("$n hits illusion, looks confused.",
 		FALSE, ch, 0, victim, TO_VICT);
 	    INCREASE_SKILLED1(victim, ch, SPELL_MIRROR_IMAGE);
@@ -1034,11 +1034,11 @@ int hit_miss(struct char_data *ch, struct char_data *victim, int type)
     if (type == SKILL_BACKSTAB) {
 	miss -= (GET_LEVEL(ch) >> 2);
 	miss -= ((GET_LEVEL(ch) >> 2) + (GET_SKILLED(ch, SKILL_BACKSTAB) >> 2));
-    } 
+    }
     return ( miss > 0 ? 1 : 0 ) ;
 }
 
-/* NOTE: NEW! return damage type of weapon object (separated from hit()) */ 
+/* NOTE: NEW! return damage type of weapon object (separated from hit()) */
 int weapon_type(struct obj_data *weapon)
 {
 	switch (weapon->obj_flags.value[3]) {
@@ -1058,9 +1058,9 @@ int weapon_type(struct obj_data *weapon)
 }
 
 /* NOTE: Additional damage for warrior class: barehand dice and holding dice.
-        Separated code from hit(). */ 
+        Separated code from hit(). */
 int warrior_damage(struct char_data *ch )
-{ 
+{
     int add_dam;
     int limit_nodice, limit_sizedice;
 
@@ -1085,24 +1085,24 @@ int warrior_damage(struct char_data *ch )
 	    /* NOTE: For more balanced hand dice : number and size */
 	    if (number(0, 1)) {
 		if (ch->specials.damnodice < limit_nodice) {
-		    send_to_char("Your bare hand dice is added!!!\n\r", ch);
+		    send_to_char("Your bare hand dice is added!!!\r\n", ch);
 		    ch->specials.damnodice++;
 		}
 	    }
 	    else {
 		if (ch->specials.damsizedice < limit_sizedice) {
-		    send_to_char("Your bare hand dice is enlarged!!!\n\r", ch);
+		    send_to_char("Your bare hand dice is enlarged!!!\r\n", ch);
 		    ch->specials.damsizedice++;
 		}
 	    }
 	}
     }
-    else 
+    else
 	add_dam = 0;
 
     /* NOTE: Wielding dice and holding dice is independent. */
     if (ch->equipment[HOLD] && number(1, 10) > 4 &&
-	CAN_WEAR(ch->equipment[HOLD], ITEM_WIELD)) 
+	CAN_WEAR(ch->equipment[HOLD], ITEM_WIELD))
 	add_dam += dice(ch->equipment[HOLD]->obj_flags.value[1],
 		    ch->equipment[HOLD]->obj_flags.value[2]);
     return(add_dam);
@@ -1117,7 +1117,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     int miss, rn;
 
     extern byte backstab_mult[];
-    extern int special_damage(struct char_data *ch, 
+    extern int special_damage(struct char_data *ch,
     		struct char_data *victim, int damage );
 
     if (ch == NULL || victim == NULL)
@@ -1132,7 +1132,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 	    sprintf(buf2, " at ch = %d, vic = %d",
 		world[ch->in_room].number, world[victim->in_room].number );
 	else
-	    buf2[0] = 0 ; 
+	    buf2[0] = 0 ;
 	sprintf(buf1, "fight.c: hit(). (type = %d) ch = %s victim = %s %s\n",
 	    type, GET_NAME(ch), GET_NAME(victim), buf2);
 	log("DEBUG: NOT SAME ROOM WHEN FIGHTING!");
@@ -1141,7 +1141,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     }
     miss = hit_miss(ch, victim, type);
     if ( miss > 1  )
-	return; 
+	return;
     // if (ch->equipment[HOLD])
     //	    held = ch->equipment[HOLD];
 
@@ -1172,7 +1172,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 	dam += dice(wielded->obj_flags.value[1], wielded->obj_flags.value[2]);
 
     if (GET_CLASS(ch) == CLASS_WARRIOR)
-	dam += warrior_damage(ch); 
+	dam += warrior_damage(ch);
 
     /* lss belt sword */ /* 여의봉 */
     /* NOTE: code moved to special_damage()	*/
@@ -1239,7 +1239,7 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 
     dam = MAX(1, dam);
 
-#ifdef  UNUSED_CODE 
+#ifdef  UNUSED_CODE
     if (type == SKILL_BACKSTAB) {
 	if (IS_AFFECTED(ch, AFF_HIDE))
 	    dam <<= 1;
@@ -1292,18 +1292,18 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
     }
 #endif		/* UNUSED_CODE */
 
-    /* NOTE: Duplicative and confusing code, Clean up the code */ 
+    /* NOTE: Duplicative and confusing code, Clean up the code */
     if ( type == SKILL_BACKSTAB ) {
 	/* NOTE:  Same damage formular of backstab multipiler for PC/NPC.
 		More NPC backstab damage. Less PC backstab damage  */
 	/* NOTE: for PC: OLD : mult[] + skill/4 -> NEW: mult[] + skill/8. */
 	dam *= (backstab_mult[GET_LEVEL(ch)] + (GET_SKILLED(ch, SKILL_BACKSTAB)/8 ));
-	if (IS_AFFECTED(ch, AFF_HIDE)) 
+	if (IS_AFFECTED(ch, AFF_HIDE))
 	    dam  *= 2;
     }
 
     /* NOTE: Unified code for backstab/non-backstab reflect damage. */
-    if (IS_AFFECTED(victim, AFF_REFLECT_DAMAGE) 
+    if (IS_AFFECTED(victim, AFF_REFLECT_DAMAGE)
 	 && ((GET_LEARNED(victim, SPELL_REFLECT_DAMAGE) +
 	   GET_SKILLED(victim, SPELL_REFLECT_DAMAGE))/2 > number(1, 400))) {
 	INCREASE_SKILLED1(victim, ch, SPELL_REFLECT_DAMAGE);
@@ -1318,9 +1318,9 @@ void hit(struct char_data *ch, struct char_data *victim, int type)
 		ASSASSIN_SKILL_IMPROVED_REFLECT_DAMAGE]);
 	*/
 	damage(victim, ch, dam, w_type);
-    } 
+    }
     else if ( type == SKILL_BACKSTAB )
-	/* NOTE: No * 2 damage multiplication for backstab */ 
+	/* NOTE: No * 2 damage multiplication for backstab */
 	damage(ch, victim, dam, SKILL_BACKSTAB);
     else
 	damage(ch, victim, dam , w_type);
@@ -1350,11 +1350,11 @@ void perform_violence(void)
 		IS_SET(weapon->obj_flags.extra_flags, ITEM_MAGIC))
 		magic_weapon_hit(ch, ch->specials.fighting, weapon);
 	    held = ch->equipment[HOLD];
-	    if ((GET_CLASS(ch) == CLASS_WARRIOR)&& held && number(1, 10) > 5 
-		&& held->obj_flags.gpd > 0 && held->obj_flags.value[0] > 0 
-		&& IS_SET(held->obj_flags.extra_flags, ITEM_MAGIC) 
-		&& CAN_WEAR(held, ITEM_WIELD)) 
-		magic_weapon_hit(ch, ch->specials.fighting, held); 
+	    if ((GET_CLASS(ch) == CLASS_WARRIOR)&& held && number(1, 10) > 5
+		&& held->obj_flags.gpd > 0 && held->obj_flags.value[0] > 0
+		&& IS_SET(held->obj_flags.extra_flags, ITEM_MAGIC)
+		&& CAN_WEAR(held, ITEM_WIELD))
+		magic_weapon_hit(ch, ch->specials.fighting, held);
 
 	    hit(ch, ch->specials.fighting, TYPE_UNDEFINED);
 	    if (!IS_NPC(ch)) {
@@ -1374,14 +1374,14 @@ void perform_violence(void)
 		if (ch->skills[SKILL_QUADRUPLE_ATTACK].learned > 0) {
 		/* NOTE: Equal hit chance for all class.   */
 		/*
-		    if (GET_CLASS(ch) == CLASS_MAGIC_USER 
+		    if (GET_CLASS(ch) == CLASS_MAGIC_USER
 			|| GET_CLASS(ch) == CLASS_CLERIC)
-			if (number(1, 40) > 
+			if (number(1, 40) >
 			    20 + (GET_SKILLED(ch, SKILL_QUADRUPLE) >> 3))
 			    goto octa;
-		*/ 
+		*/
 		/* NOTE: OLD percent for octa and quadruple attack :
-		    percent = LEARNED + SKILLED << 1 + 6 * LEVEL; */ 
+		    percent = LEARNED + SKILLED << 1 + 6 * LEVEL; */
 
 		    percent = GET_LEARNED(ch, SKILL_QUADRUPLE_ATTACK)
 			+ (GET_SKILLED(ch, SKILL_QUADRUPLE_ATTACK))
@@ -1396,13 +1396,13 @@ void perform_violence(void)
 		if (ch->skills[SKILL_OCTA_ATTACK].learned > 0) {
 		/* NOTE: Equal hit chance for all class.  */
 		/*
-		    if (GET_CLASS(ch) == CLASS_MAGIC_USER 
+		    if (GET_CLASS(ch) == CLASS_MAGIC_USER
 			    || GET_CLASS(ch) == CLASS_CLERIC)
 			if (number(1, 40) > 10 + (GET_SKILLED(ch, SKILL_OCTA) >> 3))
 			    goto octa;  // NOTE: Should it be next ???
-		*/ 
+		*/
 		/* NOTE: OLD percent for octa and quadruple attack :
-		    percent = LEARNED + SKILLED << 1 + 6 * LEVEL; */ 
+		    percent = LEARNED + SKILLED << 1 + 6 * LEVEL; */
 
 		    percent = GET_LEARNED(ch, SKILL_OCTA_ATTACK)
 			+ (GET_SKILLED(ch, SKILL_OCTA_ATTACK))
@@ -1415,10 +1415,10 @@ void perform_violence(void)
 		}
 	    }
 /* next: */
-	    if (IS_NPC(ch)) { 
+	    if (IS_NPC(ch)) {
 		/* NOTE: Original formular for NPC octa attack. */
 		/*     dat = ( !ACT_CLERIC && !ACT_MAGE ) ? 7 : 15;
-		     for(i=dat;i<GET_LEVEL(ch);i+=dat) hit();  */ 
+		     for(i=dat;i<GET_LEVEL(ch);i+=dat) hit();  */
 
 		if (!IS_SET(ch->specials.act, ACT_CLERIC) &&
 		    !IS_SET(ch->specials.act, ACT_MAGE))
@@ -1439,8 +1439,8 @@ void perform_violence(void)
 		hit(ch, ch->specials.fighting, TYPE_UNDEFINED);
 	    }
 
-	    if (ch->equipment[WEAR_FEET] 
-		    && ch->equipment[WEAR_FEET]->item_number >= 0 
+	    if (ch->equipment[WEAR_FEET]
+		    && ch->equipment[WEAR_FEET]->item_number >= 0
 		    && GET_OBJ_VIRTUAL(ch->equipment[WEAR_FEET]) == 2012) {
 		    /* SPEED boots */
 		hit(ch, ch->specials.fighting, TYPE_UNDEFINED);

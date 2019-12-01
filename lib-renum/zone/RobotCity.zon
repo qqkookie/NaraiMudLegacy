@@ -9,7 +9,7 @@ E 1 19111 50 17       diamond key(for mine)
 M 0 19113 1 19113
 E 1 19112 50 17       sapphire key(for mine)
 M 0 19114 1 19114
-E 1 19113 50 17       ruby key 
+E 1 19113 50 17       ruby key
 M 0 19115 1 19115
 E 1 19114 50 17       gold key
 M 0 19116 1 19116
@@ -124,7 +124,7 @@ E 1 19325 1 17        2nd chip key (for electron room)
 *
 M 0 19202 1 19202
 M 0 19204 1 19204
-E 1 19204 50 17       fourth key     
+E 1 19204 50 17       fourth key
 M 0 19205 1 19205
 E 1 19205 50 17       third key
 M 0 19206 1 19206
@@ -134,9 +134,9 @@ E 1 19207 50 17       first key
 M 0 19208 1 19208
 E 1 19208 50 17       head key
 M 0 19209 1 19209
-E 1 19133 1 17        head robocop key(for dark dungeon 1st key)
-G 1 19302 1
-*
+E 1 19148 1 17        head robocop gun (OLD: 19133)
+G 1 19302 1	      dark dungeon 1st key
+G 1 19149 2	      robocop gun bullets
 M 0 19214 1 19214
 E 1 19141 1 9
 E 1 19263 1 17          golden chip key(for bed room:mazinga)
@@ -192,7 +192,7 @@ M 0 19335 1 19335
 E 1 19303 1 17           quantum key(for dark dungeon)
 M 0 19336 1 19336
 E 1 19292 1 17            human key (for sharon room)
-* 
+*
 D 0 19111 4 2
 D 0 19112 5 2
 D 0 19112 4 2

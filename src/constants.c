@@ -57,9 +57,9 @@ char *perhaps_words[] = {
 	"혼자 다니시지 말고 그룹으로 몰려 다니시면 더 재밌어요.",
 	"고수들은 초보들 좀 잘 가르쳐 주세요. 퀘스트만 도와주지말고...",
 	"KAIST 3호관은 문 좀 꼭꼭 닫고 다니세요. 연구에 지장이 많아요 :(",
-#ifdef MID_HELPER	
-	"어려운 일은 " MID_HELPER "님에게 부탁해 보셔요. 잘(?) 도와줄겁니다.", 
-#endif	    
+#ifdef MID_HELPER
+	"어려운 일은 " MID_HELPER "님에게 부탁해 보셔요. 잘(?) 도와줄겁니다.",
+#endif
 	"귀여운 희선이가 보고시포... 전화해서 만나자고 해야징.. :)",
 	"음.. 배고프다.. 신라면이나 끓여먹자..",
 	"...", "...", "END_OF_TIPS", "\n"
@@ -441,7 +441,7 @@ struct title_type titles[4][LEVEL_SIZE] =
 	{"the Mage Guru", "the Mage Guru", 50000000},
 	{"the Apparantice MageLord", "the Apparantice MageLord", 70000000},
 	{"the MageLord of Fire", "the MageLord of Fire", 85000000},
-	{"the MageLord of Water", "the MageLord of Water", 100000000},	/* 30 
+	{"the MageLord of Water", "the MageLord of Water", 100000000},	/* 30
 									 */
 	{"the MageLord of Earth", "the MageLord of Earth", 125000000},
 	{"the MageLord of Wind", "the MageLord of Wind", 150000000},
@@ -489,7 +489,7 @@ struct title_type titles[4][LEVEL_SIZE] =
 	{"the Chief Doctor", "the Chief Doctor", 9300000},
 	{"the Great Doctor", "the Great Doctor", 15000000},
 	{"the Doctor in Wind", "the Doctor in Wind", 30000000},
-	{"the Doctor in Fire", "the Doctor in Fire", 75000000},		/* 30 
+	{"the Doctor in Fire", "the Doctor in Fire", 75000000},		/* 30
 									 */
 	{"the Doctor of earth", "the Doctor of earth", 90000000},
 	{"the Doctor of Universe", "the Doctor of Universe", 105000000},
@@ -537,7 +537,7 @@ struct title_type titles[4][LEVEL_SIZE] =
 	{"the Stealer", "the Stealer", 30000000},
 	{"the Stealer of breath", "the Stealer of Breath", 45000000},
 	{"the Good Thief", "the Good Thief", 66000000},
-	{"the Lord of Thieves", "the Lady of Thieves", 90000000},	/* 30 
+	{"the Lord of Thieves", "the Lady of Thieves", 90000000},	/* 30
 									 */
 	{"the King of Thieves", "the Queen of Thieves", 115000000},
 	{"the Urchin in world", "the Urchin in world", 140000000},
@@ -612,13 +612,13 @@ char *item_types[] =
     "STAFF",
     "WEAPON",
     "FIRE WEAPON",
-    "UNDEFINED", /* "MISSILE",*/
+    "PROJECTILE", /* "MISSILE",*/
     "TREASURE",
     "ARMOR",
     "POTION",
     "WORN",
     "OTHER",
-    "TRASH", 
+    "UNDEFINED", /* "TRASH", */
     "UNDEFINED", /* "TRAP", */
     "CONTAINER",
     "NOTE",
@@ -627,7 +627,8 @@ char *item_types[] =
     "FOOD",
     "MONEY",
     "UNDEFINED", /* "PEN", */
-    "UNDEFINED", /* "BOAT", */
+    "BOAT",
+    "WINGS",
     "UNDEFINED", /* "CIGA", */
     "UNDEFINED", /* "DRUG", */
     "\n"
@@ -909,7 +910,7 @@ char *player_bits[] =
     "RSV4",
     "RSV5",
     "\n"
-}; 
+};
 
 char *position_types[] =
 {
@@ -1275,24 +1276,24 @@ byte saving_throws[4][5][LEVEL_SIZE] =
 #undef SAVING_RESERVED
 
 /* NOTE: NEW! Longer item description text */
-char *item_type_desc[] = { 
+char *item_type_desc[] = {
     "Item type 0: Invalid",
     "It is too bright to stare for long.",
     "A old and worn parchment with something scribed on it.",
     "The stick seems to bear arcane magic power.",
     "The stick seems to bear arcane magic power.",
-    "It looks like weapon crying for blood", 
+    "It looks like weapon crying for blood",
     "It looks like a gun with threatening barrel.",
     "Item type 7: Invalid",
     "It looks like something very valuable.",
     "You feel like wearing it. Try on.",
     "You can see strange fluid swirling in it.",
     "It looks like a ring fit for your finger.",
-    "Item type OTHER", 
-    "Item type 13: Invalid", 
-    "Item type 14: Invalid", 
+    "Item type OTHER",
+    "Item type 13: Invalid",
+    "Item type 14: Invalid",
     "It seems there are somthing in it.",
-    "It is yellowish worn paper", 
+    "It is yellowish worn paper",
     "It looks like a drink container.",
     "It seems an intricate key for some lock.",
     "Item type FOOD",
@@ -1306,7 +1307,7 @@ char *item_type_desc[] = {
 
 /* NOTE: NEW! Longer wepon type description text */
 char *weapon_type_desc[] = {
-    "It looks like weapon to hit.", 
+    "It looks like weapon to hit.",
     "The sword beams shimmering splendor from long blade.",
     "It has a short and slender blade thirsty for blood.",
     "It looks like axe or hammer with blood-stained heavy heads.",
@@ -1319,7 +1320,7 @@ char *weapon_type_desc[] = {
 };
 
 
-/* NOTE: moved from OLD fight.c */ 
+/* NOTE: moved from OLD fight.c */
 
 /* NOTE: Currently, all damages messages are brief. So no need of data below */
 #ifdef UNUSED_CODE
@@ -1677,7 +1678,7 @@ char *weapon_type_desc[] = {
 	{"$n, $N 님을 진공상태로.",
 	 "당신, $N 님을 진공상태로.",
 	 "$n, 당신을 진공상태로."}
-    }; 
+    };
 
 #ifdef OLD_DAM_MESSAGE
 

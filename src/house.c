@@ -115,7 +115,7 @@ struct obj_data *reverse_obj_list(struct obj_data *obj)
     obj->next_content = NULL;
     return(new_head);
 }
-    
+
 struct obj_data *Obj_from_store(FILE * fl)
 {
     struct obj_data *obj, object, *tobj, *obj_next;
@@ -128,7 +128,7 @@ struct obj_data *Obj_from_store(FILE * fl)
 
     if (real_object(object.item_number) > -1) {
 	obj = read_object(object.item_number, VIRTUAL);
-	/* 
+	/*
 	GET_OBJ_VAL(obj, 0) = object.value[0];
 	GET_OBJ_VAL(obj, 1) = object.value[1];
 	GET_OBJ_VAL(obj, 2) = object.value[2];
@@ -138,27 +138,27 @@ struct obj_data *Obj_from_store(FILE * fl)
 	GET_OBJ_TIMER(obj) = object.timer;
 	obj->obj_flags.bitvector =
 	object.bitvector;
-	*/ 
+	*/
     }
     else
-	return(NULL); 
+	return(NULL);
 
     /* NOTE: BUG FIX: Reported by JINNY. Weight restore and NORENT */
-    /* NOTE: Don't restore obj_flags of NORENT item. */ 
+    /* NOTE: Don't restore obj_flags of NORENT item. */
     if (!IS_SET(object.obj_flags.extra_flags, ITEM_NORENT)) {
 	/* NOTE: Restore original weight. */
 	object.obj_flags.weight = GET_OBJ_WEIGHT(obj);
 	obj->obj_flags = object.obj_flags;
 	for (j = 0; j < MAX_OBJ_AFFECT; j++)
 	    obj->affected[j] = object.affected[j];
-    } 
+    }
 
     if (GET_ITEM_TYPE(obj) == ITEM_CONTAINER && object.contains) {
 	tobj = Obj_from_store(fl);
 	tobj = reverse_obj_list(tobj);
 	for (; tobj; tobj = obj_next) {
 	    obj_next = tobj->next_content;
-	    obj_to_obj(tobj, obj); 
+	    obj_to_obj(tobj, obj);
 	}
     }
 
@@ -176,7 +176,7 @@ int Obj_to_store(struct obj_data *obj, FILE * fl)
 	return 0;
     object = *obj;
     object.item_number = GET_OBJ_VNUM(obj);
-    /* 
+    /*
     object.value[0] = GET_OBJ_VAL(obj, 0);
     object.value[1] = GET_OBJ_VAL(obj, 1);
     object.value[2] = GET_OBJ_VAL(obj, 2);
@@ -312,7 +312,7 @@ int House_load(int rnum)
 	}
     }
 
-    fclose(fl); 
+    fclose(fl);
     return 1;
 }
 
@@ -399,7 +399,7 @@ int find_house(int rnum, struct char_data *ch)
 	    return i;
 
     return -1;
-} 
+}
 
 /* Save the house control information */
 void House_save_control(void)
@@ -411,7 +411,7 @@ void House_save_control(void)
 	perror("SYSERR: Unable to open house control file");
 	return;
     }
-    /* write all the house control recs in one fell swoop.  Pretty nifty, eh? 
+    /* write all the house control recs in one fell swoop.  Pretty nifty, eh?
      */
     for (i = 0; i < num_of_houses; i++)
 	fwrite(house_control[i], sizeof(struct house_control_rec), 1, fl);
@@ -518,7 +518,7 @@ void hcontrol_list_houses(struct char_data *ch)
 	/* NOTE: New listing format */
 	sprintf(buf, "%7d  %-12s    %2d   %-10s  %s\r\n",
 		house_control[i]->vnum, CAP(own_name),
-		house_control[i]->num_of_guests, built_on, last_pay); 
+		house_control[i]->num_of_guests, built_on, last_pay);
 	send_to_char(buf, ch);
 
 	if (house_control[i]->num_of_guests) {
@@ -613,7 +613,7 @@ void hcontrol_build_house(struct char_data *ch, char *arg)
     world[real_house].funct = House_spec;
 
     SET_BIT(ROOM_FLAGS(real_house), ROOM_HOUSE | ROOM_PRIVATE);
-    House_save(real_house); 
+    House_save(real_house);
 
     send_to_char("House built.  Mazel tov!\r\n", ch);
     House_save_control();
@@ -701,12 +701,12 @@ void House_listrent(struct char_data *ch, char *arg)
     }
     while (!feof(fl)) {
 	if ((obj = Obj_from_store(fl)) != NULL) {
-	    sprintf(buf, " [%5d] (%5dau) %s\r\n", 
+	    sprintf(buf, " [%5d] (%5dau) %s\r\n",
 	      GET_OBJ_VNUM(obj), GET_OBJ_RENT(obj), obj->short_description);
 	    free_obj(obj);
 	}
 	send_to_char(buf, ch);
-    } 
+    }
     fclose(fl);
 }
 
@@ -978,7 +978,7 @@ int find_first_step(sh_int src, sh_int target)
 	    for (curr_dir = 0; curr_dir < NUM_OF_DIRS; curr_dir++)
 		if (VALID_EDGE(queue_head->room, curr_dir)) {
 		    MARK(TOROOM(queue_head->room, curr_dir));
-		    bfs_enqueue(TOROOM(queue_head->room, curr_dir), 
+		    bfs_enqueue(TOROOM(queue_head->room, curr_dir),
 				queue_head->dir);
 		}
 	    bfs_dequeue();
@@ -1024,7 +1024,7 @@ void do_track(struct char_data *ch, char *argument, int cmd)
     dir = find_first_step(ch->in_room, vict->in_room);
     /* NOTE: clear marks after search */
     for (curr_room = 0; curr_room <= top_of_world; curr_room++)
-	UNMARK(curr_room); 
+	UNMARK(curr_room);
 
     switch (dir) {
     case BFS_ERROR:
@@ -1043,8 +1043,8 @@ void do_track(struct char_data *ch, char *argument, int cmd)
 	/* NOTE: Cost: mana comsumption and full delay  */
 	GET_MANA(ch) -= 100 - GET_SKILLED(ch, SKILL_TRACK)/2;
 	WAIT_STATE(ch, PULSE_VIOLENCE );
-	
-	if ( num < ( 30 + GET_LEARNED(ch, SKILL_TRACK) 
+
+	if ( num < ( 30 + GET_LEARNED(ch, SKILL_TRACK)
 		+ GET_SKILLED(ch, SKILL_TRACK)) / 2 || IS_DIVINE(ch)) {
 	    INCREASE_SKILLED(ch, NULL, SKILL_TRACK);
 	}

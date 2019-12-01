@@ -169,13 +169,13 @@ struct char_data *get_char_num(int nr)
 	    return (i);
 
     return (0);
-} 
+}
 
 
 /* ***********************************************************************
    Here follows high-level versions of some earlier routines, ie functions
    which incorporate the actual player-data.
-   *********************************************************************** */ 
+   *********************************************************************** */
 
 struct char_data *get_char_room_vis(struct char_data *ch, char *name)
 {
@@ -204,24 +204,24 @@ struct char_data *get_char_room_vis(struct char_data *ch, char *name)
     if ( ch && !strcmp(name, "self") )
 	return (ch);
 
-/* NOTE: 'leader' is generic name refering player you follow. ( assist leader ) 
+/* NOTE: 'leader' is generic name refering player you follow. ( assist leader )
    This applies only when you are following PC player leader,
    can see him/her, and in same room. ( grouping not needed )    */
     if (ch->master && !strcmp(name, "leader") && !IS_NPC(ch->master)
 	&& (ch->in_room == ch->master->in_room) && CAN_SEE(ch, ch->master))
-	return (ch->master); 
+	return (ch->master);
 
-/* NOTE: 'target' is geneic name PC/NPC char you are fighting now. 
-	Or victim fleed while fighting you or you did 'lightning move'. 
-	If you are not fighting, 'target' is char you or your leader 
+/* NOTE: 'target' is geneic name PC/NPC char you are fighting now.
+	Or victim fleed while fighting you or you did 'lightning move'.
+	If you are not fighting, 'target' is char you or your leader
 	'pointed' last time. target is unset when target died. */
     if (!strcmp(name, "target")) {
 	struct char_data *target ;
 
-	target = ( GET_POS(ch) == POS_FIGHTING ) ? 
-	    ch->specials.fighting : ch->specials.hunting ; 
+	target = ( GET_POS(ch) == POS_FIGHTING ) ?
+	    ch->specials.fighting : ch->specials.hunting ;
 	if (target && (ch->in_room == target->in_room) && CAN_SEE(ch, target))
-	    return (target); 
+	    return (target);
     }
 
     return (NULL);
@@ -288,7 +288,7 @@ struct char_data *get_char_vis(struct char_data *ch, char *name)
 	    }
 
     return (0);
-} 
+}
 
 /* NOTE: char_specific()  is rewritten as get_char_wiz()                 */
 /* NOTE: 3rd arg (type) is bit vector, not bool        */
@@ -313,7 +313,7 @@ struct char_data *get_char_wiz(struct char_data *ch, char *name, int type)
 	    return (i);
 
     return (0);
-} 
+}
 
 struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 				     struct obj_data *list)
@@ -413,17 +413,17 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
     char name[256];
     bool found;
 
-    found = FALSE; 
+    found = FALSE;
 
     /* Eliminate spaces and "ignore" words */
-    while (*arg && !found) { 
+    while (*arg && !found) {
 	for (; *arg == ' '; arg++) ;
 
 	for (i = 0; (name[i] = *(arg + i)) && (name[i] != ' '); i++) ;
 	name[i] = 0;
 	arg += i;
 	if (search_block(name, ignore, TRUE) > -1)
-	    found = TRUE; 
+	    found = TRUE;
     }
 
     if (!name[0])
@@ -438,7 +438,7 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 	    return (FIND_CHAR_ROOM);
 
     if (IS_SET(bitvector, FIND_CHAR_WORLD)
-	&& (*tar_ch = get_char_vis(ch, name))) 
+	&& (*tar_ch = get_char_vis(ch, name)))
 	    return (FIND_CHAR_WORLD);
 
     if (IS_SET(bitvector, FIND_OBJ_EQUIP)) {
@@ -448,7 +448,7 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 		found = TRUE;
 	    }
 	}
-	if (found) 
+	if (found)
 	    return (FIND_OBJ_EQUIP);
     }
 
@@ -457,7 +457,7 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 	return (FIND_OBJ_INV);
 
     if (IS_SET(bitvector, FIND_OBJ_ROOM)
-	    && (*tar_obj = get_obj_in_list_vis(ch, name, world[ch->in_room].contents))) 
+	    && (*tar_obj = get_obj_in_list_vis(ch, name, world[ch->in_room].contents)))
 	return (FIND_OBJ_ROOM);
 
     if (IS_SET(bitvector, FIND_OBJ_WORLD) && (*tar_obj = get_obj_vis(ch, name)))
@@ -468,7 +468,7 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 
 /* NOTE: Function version of OLD CAN_SEE().
 	It was too complex macros to use time- and space-efficently */
-int CAN_SEE(struct char_data *ch, struct char_data *vic ) 
+int CAN_SEE(struct char_data *ch, struct char_data *vic )
 {
 // #define OMNI(sub) (!IS_NPC(sub) && IS_IMMORTAL(sub) )
 #define X99(sub, obj)   ( ((!IS_AFFECTED((obj),AFF_INVISIBLE) || \
@@ -491,8 +491,8 @@ int CAN_SEE(struct char_data *ch, struct char_data *vic )
    (CAN_WEAR((obj), ITEM_TAKE) && CAN_CARRY_OBJ((ch),(obj)) &&  \
     CAN_SEE_OBJ((ch),(obj)))
 
-int CAN_GET_OBJ(struct char_data *ch, struct obj_data *obj) 
-{ 
+int CAN_GET_OBJ(struct char_data *ch, struct obj_data *obj)
+{
 	return(CAN_GET_OBJ_MACRO(ch, obj));
 }
 
@@ -573,7 +573,7 @@ int old_isname(char *str, char *namelist)
 	return 0;
     for (;;) {
 	for (curstr = str;; curstr++, curname++) {
-	    /* 
+	    /*
 	       if (!*curstr && !isalpha(*curname)) */
 	    if (!*curstr)	/* SUCCESS */
 		return (1);
@@ -621,7 +621,7 @@ int isexactname(char *str, char *namelist)
 	    return (0);
 	curname++;	/* first char of new name */
     }
-} 
+}
 
 #endif				/* UNUSED_CODE */
 
@@ -724,7 +724,7 @@ int strn_cmp(char *arg1, char *arg2, int n)
     }
 
     return (0);
-} 
+}
 
 char *skip_spaces(char *string)
 {
@@ -753,7 +753,7 @@ void mudlog(char *str)
 	fprintf(stderr, "%s : %s\n", &tmstr[11], str);
     }
     fflush(stderr);
-} 
+}
 
 void sprintbit(long vektor, char *names[], char *result)
 {
@@ -778,7 +778,7 @@ void sprintbit(long vektor, char *names[], char *result)
 
     if (!*result)
 	strcat(result, "NOBITS");
-} 
+}
 
 
 void sprinttype(int type, char *names[], char *result)
@@ -811,7 +811,7 @@ struct time_info_data real_time_passed(time_t t2, time_t t1)
     now.year = -1;
 
     return now;
-} 
+}
 
 
 /* Calculate the MUD time passed over the last t2-t1 centuries (secs) */
@@ -893,7 +893,7 @@ char *monetary4(LONGLONG n)
    {
    int n = 136273879 ;
    printf(" %d, [%s] [%s] [%s]\n [%s] [%s] [%s]  \n",
-   n, monetary(n), monetary(10*n), monetary(-100*n), 
+   n, monetary(n), monetary(10*n), monetary(-100*n),
    monetary(-4* n) ,monetary(10*n) , monetary(n*8) );
 
    }
@@ -909,12 +909,12 @@ char *remove_eol(char *str)
 	return (str);
     look = scan = str + strlen(str);
     while (--scan >= str) {
-	if ((*look == '\n' && *scan == '\r') 
+	if ((*look == '\n' && *scan == '\r')
 	    || (*look == '\r' && *scan == '\n')) {
 		look = scan;
 		break;
 	    }
-	if ((*look == '\n') || (*look == '\r') 
+	if ((*look == '\n') || (*look == '\r')
 		|| (*scan != '\n' && *scan != '\r'))
 	    break;
 	look = scan;
@@ -949,8 +949,8 @@ int search_block(char *arg, char **list, int exact)
 	/* cyb   *(arg+l)=LOWER(*(arg+l)); */
 	/* cyb just iterate */ ;
 
-    /* NOTE: New! keyword-data pair list search for alias expansion. */  
-    /* Find exact match for keyword part and return its index. */  
+    /* NOTE: New! keyword-data pair list search for alias expansion. */
+    /* Find exact match for keyword part and return its index. */
     if (exact == 2) {
 	for (i = 0; **(list + i) != '\n'; i += 2 )
 	    if (!strcmp(arg, *(list + i)))
@@ -986,7 +986,7 @@ int old_search_block(char *argument, int begin, unsigned length, char **list, in
 	while (NOT found AND * (list[guess]) != '\n') {
 	    found = (length == strlen(list[guess]));
 	    for (search = 0; (search < length AND found); search++)
-		found = (*(argument + begin + search) 
+		found = (*(argument + begin + search)
 		    == *(list[guess] + search));
 	    guess++;
 	}
@@ -994,7 +994,7 @@ int old_search_block(char *argument, int begin, unsigned length, char **list, in
 	while (NOT found AND * (list[guess]) != '\n') {
 	    found = 1;
 	    for (search = 0; (search < length AND found); search++)
-		found = (*(argument + begin + search) 
+		found = (*(argument + begin + search)
 		    == *(list[guess] + search));
 	    guess++;
 	}
@@ -1006,7 +1006,7 @@ int old_search_block(char *argument, int begin, unsigned length, char **list, in
 /* #define ISLETTER(c)	( c  > ' ' || c < 0 ) */
 /* NOTE: Above may not work for Hangul char. on unsigned char  */
 /* #define ISLETTER(c)	(((c) & 0177) > ' ' ) */
-/* NOTE: Check c is ASCII non-blank char, excluding hangul  */ 
+/* NOTE: Check c is ASCII non-blank char, excluding hangul  */
 #define ISLETTER(c)	(((c)  > ' ' ) && ((c) < 0177 ))
 
 /* NOTE: New pointer version. Similar function but more simple code     */
@@ -1050,7 +1050,7 @@ void argument_interpreter(char *argument, char *first_arg, char *second_arg)
 		*(argument + begin + look_at);
 
 	*(first_arg + look_at) = '\0';
-	begin += look_at; 
+	begin += look_at;
     }
     while (fill_word(first_arg));
 
@@ -1199,5 +1199,5 @@ int is_number(char *str)
 	if ((*(str + look_at) < '0') || (*(str + look_at) > '9'))
 	    return (0);
     return (1);
-} 
+}
 

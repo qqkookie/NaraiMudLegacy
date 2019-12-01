@@ -5,7 +5,7 @@
 
 #ifndef __FreeBSD__
 #include <crypt.h>
-#endif 
+#endif
 #include <unistd.h>
 
 #include "char.h"
@@ -572,7 +572,7 @@ int do_show(char *str)
 	fprintf(stdout, "Load Room : %d, Exp: %lld, Bank : %lld\n",
 			ch.load_room, ch.points.exp, ch.bank);
 	fprintf(stdout, "Wimpyness : %d\n", ch.wimpyness);
-	fprintf(stdout, "Str: %d/%d Int:%d Wis %d Dex:%d Con:%d\n", 
+	fprintf(stdout, "Str: %d/%d Int:%d Wis %d Dex:%d Con:%d\n",
 			ch.abilities.str, ch.abilities.str_add, ch.abilities.intel,
 			ch.abilities.wis, ch.abilities.dex, ch.abilities.con);
 	fprintf(stdout, "Hitroll: %d, Damroll: %d\n",

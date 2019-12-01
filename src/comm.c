@@ -49,40 +49,40 @@
 
 #define OPT_USEC 200000	/* time delay corresponding to 4 passes/sec */
 #define MAXFDALLOWED 200
-/* #define MAXOCLOCK 1200 */ 
+/* #define MAXOCLOCK 1200 */
 #define MAXOCLOCK 720		/* NOTE: Auto save in 3 min */
 
 #define PULSE_MOBILE            39
-#define PULSE_MOBILE2           13 
+#define PULSE_MOBILE2           13
 
 #define PULSE_ZONE              240
 #define PULSE_VIOLENCE          12
 #define WAIT_SEC                4
-#define WAIT_ROUND              4 
+#define WAIT_ROUND              4
 
 /* --------------      Some Login banners    ----------------- */
 
-char login_banner[] = 
+char login_banner[] =
 "\r\n\r\n\
-                   -- * ---<--<--<@-@>-->-->-- * -- * --\r\n\
        -----===<< * * *    K I T   C L A S S I C    * * * >>===-----\r\n\
-                   -- * ---<--<--<@-@>-->-->-- * -- * --\r\n\r\n\
                    Land of Nostalgic, melangcolic memory.\r\n\r\n\
                       Continued from Old Narai MUD\r\n\
                     Derived from EVE-MUD and KIT-MUD\r\n\r\n\
-                       Started 2019. 11. 11. .....\r\n\r\n";
+                       Started 2020. 1. 1. .....\r\n\r\n";
 
-char login_welcome[] =  
-"-------------<< N-A-R-A-I >>-----------<< M-U-D >>---------------\n\r\
+char login_welcome[] =
+"-------------<< KIT CLASSIC MUD >>----------------\r\n\
 Welcome to the Living Nightmare. May your visit here be... Interesting.\r\n\r\n\
 Heavenly voice whisperes 'Your fate and destiny lies beyond this world...'.\r\n\
-Yo! poor Mortals... Worship the Great Old Goddess!\r\n\
+Yo! poor MORTALs... Worship the Great Old Goddess!\r\n\
 Fall on your knees and kiss on her feet.\r\n\
-Glory to the Goddess, Glory to Narai...\r\n\
-\r\n   -----===    GOLDEN RULES OF NARAI    ===-----\r\n\
-\r\n   **** PK is LEGAL for any time, any way and any reason!\r\n\
-\r\n   **** NO REIMBURSE !!!\r\n";
-// **** MULTI/ROBOT PLAYING is *NOT* allowed.\r\n"
+Glory to the Goddess, Glory to Narai...\r\n\r\n\
+    *** 오픈카톡방 : https://open.kakao.com/o/gAx75aN \r\n\
+    *** 틴틴 계정 드립니다. 카톡방에서 신청해주세요.\r\n\r\n\
+    -----===    GOLDEN RULES OF NARAI    ===-----\r\n\r\n\
+    **** PK is LEGAL for any time, any way and any reason!\r\n\r\n\
+    **** NO REIMBURSE !!!\r\n\
+    **** MULTI/ROBOT PLAYING is allowed.\r\n";
 
 char login_menu[] =
 "GOOD luck to you, Adventurous MUDDER.\r\n\r\n\
@@ -95,7 +95,7 @@ char login_menu[] =
 
 #define STORY     \
 "Once upon a time, long and long years ago...... Ummm...\r\n\
- ....Cookie doesn't say more. You'd better entering the Game.\r\n\r\n"
+ ....Cookie doesn't say more. You'd better entering the game.\r\n\r\n"
 
 /*********************************************************************/
 
@@ -104,7 +104,7 @@ char login_menu[] =
 struct descriptor_data *descriptor_list, *next_to_process;
 jmp_buf env;
 
-extern int errno; 
+extern int errno;
 extern int baddoms;
 extern char baddomain[][32];	/* NOTE: defined in "act.wizard.c"  */
 
@@ -116,7 +116,7 @@ int boottime;
 
 int no_echo = 0;
 
-/* reboot_time = 24 hour */
+/* reboot_time = defined in "include/globals.h */
 int reboot_time = REBOOT_TIME;
 
 int maxdesc, avail_descs;
@@ -131,31 +131,31 @@ int noenchantflag = 0;	/* noenchant!! */
 int regen_percent = 50;
 int regen_time_percent = 66;
 int regen_time = 200;
-/* NOTE: Logging level. 0..5 : See command_interpreter() in interpreter.c */ 
-/* NOTE: Default loglevel 1 -> 2 (include say, tell,.. ) */ 
+/* NOTE: Logging level. 0..5 : See command_interpreter() in interpreter.c */
+/* NOTE: Default loglevel 1 -> 2 (include say, tell,.. ) */
 int loglevel = 2;	/* NOTE: 1 = log chat/shout */
-int noplayingflag = 0;	/* NOTE: Prohibit entering game to play      */ 
+int noplayingflag = 0;	/* NOTE: Prohibit entering game to play      */
 
 struct descriptor_data *xo;
 
 int process_output(struct descriptor_data *t);
-int get_from_q(struct txt_q *queue, char *dest); 
+int get_from_q(struct txt_q *queue, char *dest);
 void close_socket(struct descriptor_data *d);
 
 /* ******************************************************************* */
-/* NOTE: Use ring buffer for output to improve performance by 
+/* NOTE: Use ring buffer for output to improve performance by
       saving up to 98% of malloc() and free() call for output queue buffer. */
 /* Additionally, it will reduce "down" due to queue malloc() failure.	*/
 
 #define TB_RING_MAX	128 	/* NOTE: Number of ring buffer elements */
 #define TB_BSIZ		MAX_LINE_LEN	/* NOTE: Size of each output text buffer.  */
-/* NOTE: 
-   TB_RING_MAX may needs performance tunning. More player, larger TB_RING_MAX. 
+/* NOTE:
+   TB_RING_MAX may needs performance tunning. More player, larger TB_RING_MAX.
      It is related to sum of output queue length average of all players.
      Watch ring 'hit ratio' in hourly user list log. Over 90%-95% is OK.
    TB_BSIZ will hardly need to adjust.
      It is related to upper size averge of each output text in queue.
- */ 
+ */
 /* NOTE: Output queue element + static buffer pair */
 struct txt_ring_st {
     struct txt_block block;
@@ -166,7 +166,7 @@ static struct txt_ring_st txt_pool[TB_RING_MAX];  /* ring element pool */
 static struct txt_block *txt_ring[TB_RING_MAX];	  /* real ring buffer  */
 static int    txt_ring_head, txt_ring_tail;
 /* NOTE: for ring hit ratio statistics only */
-static int    tb_pooled = 0 , tb_alloced = 0 ; 
+static int    tb_pooled = 0 , tb_alloced = 0 ;
 
 /* *********************************************************************
    *  main game loop and related stuff				       *
@@ -229,7 +229,7 @@ void run_the_game(int port)
 
     char pidname[MAX_NAME_LEN];
     sprintf(pidname, "mud-%d.pid", port);
-    
+
     // NOTE: Check pid file as port lock
     if (access(pidname, F_OK) == 0) {
 	log("Port busy: pid file already exists");
@@ -267,14 +267,14 @@ void run_the_game(int port)
     txt_ring_tail = TB_RING_MAX -1 ;
 
     log("Entering game loop.");
-    no_echo_local(s); 
+    no_echo_local(s);
     game_loop(s);
     log("DOWN??????????SAVE ALL CHARS???????");
     transall(MID_PORTAL);
     saveallplayers();
     close_sockets(s);
     shutdown(s, 2);
-    
+
     unlink(pidname);
     log("Normal termination of game.");
 }
@@ -289,7 +289,7 @@ void transall(int room)
 	    if (pt->character) {
 		char_from_room(pt->character);
 		char_to_room(pt->character, real_room(room));
-		send_to_char( "\n\r\n\r\n\r\n\rShutdown System has transferred you!\n\r\n\r", pt->character);
+		send_to_char( "\r\n\r\n\r\n\r\nShutdown System has transferred you!\r\n\r\n", pt->character);
 		process_output(pt);
 	    }
     }
@@ -389,13 +389,13 @@ void game_loop(int s)
 
 	/* kick out the freaky folks */
 	for (point = descriptor_list; point; point = point->next) {
-	    if (FD_ISSET(point->descriptor, &exc_set)) 
+	    if (FD_ISSET(point->descriptor, &exc_set))
 		freaky(point);
 	}
 	for (point = descriptor_list; point; point = point->next) {
 	    if (FD_ISSET(point->descriptor, &input_set))
 		if (process_input(point) < 0)
-		    freaky(point); 
+		    freaky(point);
 	}
 	/* process_commands; */
 	for (point = descriptor_list; point; point = next_to_process) {
@@ -438,7 +438,7 @@ void game_loop(int s)
 	    }
 	}
 	for (point = descriptor_list; point; point = point->next) {
-	    if (FD_ISSET(point->descriptor, &exc_set)) 
+	    if (FD_ISSET(point->descriptor, &exc_set))
 		freaky(point);
 	}
 	for (point = descriptor_list; point; point = point->next) {
@@ -451,7 +451,7 @@ void game_loop(int s)
 	    }
 	}
 	/* give the people some prompts */
-	for (point = descriptor_list; point; point = next_point) { 
+	for (point = descriptor_list; point; point = next_point) {
 	    /* NOTE: point may be freed in close_socket() */
 	    next_point = point->next;
 	    /* NOTE: freaky connection or leaving player done here. */
@@ -462,7 +462,7 @@ void game_loop(int s)
 		close_socket(point);
 		continue;
 	    }
-	    /* NOTE: Auto crash save moved to heart_beat()  */ 
+	    /* NOTE: Auto crash save moved to heart_beat()  */
 
 	    if (point->prompt_mode) {
 		if (point->str)
@@ -470,7 +470,7 @@ void game_loop(int s)
 		else if (!point->connected) {
 		    if (point->showstr_point)
 			write_to_descriptor(point->descriptor, "*** Press return ***");
-		    else { 
+		    else {
 
 #ifdef  DISPLAY_DAMAGE
     /* NOTE: Display damages in each turn of violence.
@@ -499,7 +499,7 @@ void game_loop(int s)
 		   !point->character->specials.fighting &&
 		   IS_SET(point->character->specials.act, PLR_AUTO_ASSIST)) {
 	       do_assist(point->character,"",0);
-	   } 
+	   }
  */
 		    }
 		}
@@ -518,7 +518,7 @@ void game_loop(int s)
 /* NOTE: NEW! handle heartbeat stuff. It was part of game_loop() */
 /* Note: pulse now changes every 1/4 sec  */
 void heart_beat(void)
-{ 
+{
     void record_player_number(void);
 
     extern void zone_update(void);
@@ -527,7 +527,7 @@ void heart_beat(void)
     extern void perform_violence(void);
     extern void weather_and_time(int mode);
     extern void affect_update(void);	/* In handler.c */
-    extern void point_update(void);	/* In point.c */ 
+    extern void point_update(void);	/* In point.c */
     extern void	House_save_all(void);
     static int pulse = 0;
     struct descriptor_data *point;
@@ -576,14 +576,14 @@ void zapper(void)
 
     t = time(0) - boottime;
     if (t > reboot_time + 60 && flag) {
-	send_to_all("SHUTDOWN MESSAGE FROM SYSTEM!!!!!!\n\r\n\r\n\r");
-	send_to_all("Shutdown immediately!\n\r");
+	send_to_all("SHUTDOWN MESSAGE FROM SYSTEM!!!!!!\r\n\r\n\r\n");
+	send_to_all("Shutdown immediately!\r\n");
 	shutdowngame = 1;
     }
     if (t > reboot_time && !flag) {
 	flag = 1;
-	send_to_all("SHUTDOWN MESSAGE FROM SYSTEM!!!!!!\n\r\n\r\n\r");
-	send_to_all("Shutdown after 1 minute!\n\r");
+	send_to_all("SHUTDOWN MESSAGE FROM SYSTEM!!!!!!\r\n\r\n\r\n");
+	send_to_all("Shutdown after 1 minute!\r\n");
     }
 }
 
@@ -604,7 +604,7 @@ int get_from_q(struct txt_q *queue, char *dest)
     queue->head = queue->head->next;
 
     /* NOTE:  If txt_block is from ring, return it to free ring  */
-    if ( tmp >= &(txt_pool[0].block) 
+    if ( tmp >= &(txt_pool[0].block)
 	    && tmp <= &(txt_pool[TB_RING_MAX-1].block) ){
 	txt_ring_tail = (txt_ring_tail+1) % TB_RING_MAX;
 	txt_ring[txt_ring_tail] = tmp;
@@ -612,7 +612,7 @@ int get_from_q(struct txt_q *queue, char *dest)
     }
 
 /* NOTE IMPORTANT : Debugging purpose: remove when done.
-   Next IF statement is to check run time behavior of get_from_q(). 
+   Next IF statement is to check run time behavior of get_from_q().
    I experinced some random segment violation error
    while creating brand-new player   */
     if (tmp->text)
@@ -758,10 +758,10 @@ int process_input(struct descriptor_data *t)
 	    if (t->snoop.snoop_by) {
 		write_to_q("% ", &t->snoop.snoop_by->desc->output);
 		write_to_q(tmp, &t->snoop.snoop_by->desc->output);
-		write_to_q("\n\r", &t->snoop.snoop_by->desc->output);
+		write_to_q("\r\n", &t->snoop.snoop_by->desc->output);
 	    }
 	    if (flag) {
-		sprintf(buffer, "Line too long. Truncated to:\n\r%s\n\r", tmp);
+		sprintf(buffer, "Line too long. Truncated to:\r\n%s\r\n", tmp);
 		if (write_to_descriptor(t->descriptor, buffer) < 0)
 		    return (-1);
 		/* skip the rest of the line */
@@ -815,7 +815,7 @@ int write_to_descriptor(int desc, char *txt)
 	return 0;
     sofar = 0;
     do {
-    /* 
+    /*
 	ioctl(desc,SIOCGPGRP,&w);
 	ioctl(desc,SIOCATMARK,&x);
 	ioctl(desc,SIOCGHIWAT,&y);
@@ -935,7 +935,7 @@ int new_descriptor(int s)
     int i;
     socklen_t size;
     struct sockaddr_in sock;
-    struct hostent  *h_ent; 
+    struct hostent  *h_ent;
 
     int unfriendly_domain(char *h);
 
@@ -953,7 +953,7 @@ int new_descriptor(int s)
 	/* strncpy(newd->host, (char *) inet_ntoa(sock.sin_addr), 16); */
 
 	/* NOTE: Show domain name instead of numeric IP addr, if possible.*/
-	if (( h_ent = gethostbyaddr((char*) &sock.sin_addr, 
+	if (( h_ent = gethostbyaddr((char*) &sock.sin_addr,
 		sizeof(struct in_addr), AF_INET)))
 	    strncpy(newd->host, h_ent->h_name, sizeof(newd->host )-1);
 	else
@@ -962,8 +962,8 @@ int new_descriptor(int s)
     }
 
     if ((maxdesc + 1) >= avail_descs) {
-	write_to_descriptor(desc, "Sorry.. The game is full...\n\r");
-	write_to_descriptor(desc, "Wait at least one minute before retrying.\n\r");
+	write_to_descriptor(desc, "Sorry.. The game is full...\r\n");
+	write_to_descriptor(desc, "Wait at least one minute before retrying.\r\n");
 	close(desc);
 	flush_queues(newd);
 	free((char *) newd);
@@ -973,7 +973,7 @@ int new_descriptor(int s)
 	maxdesc = desc;
     if (unfriendly_domain(newd->host)) {
 	write_to_descriptor(desc,
-		      "Sorry, the game is unavailable from your site.\n\r");
+		      "Sorry, the game is unavailable from your site.\r\n");
 	fprintf(stderr, "Reject from %s\n", newd->host);
 	close(desc);
 	flush_queues(newd);
@@ -982,10 +982,10 @@ int new_descriptor(int s)
     }
     /* cyb
     if(more_than_20(newd)) {
-	write_to_descriptor(desc, 
-	    "Sorry, the site for foreign players are full.\n\r");
+	write_to_descriptor(desc,
+	    "Sorry, the site for foreign players are full.\r\n");
 	    fprintf(stderr,"Reject from %s\n",newd->host);
-	    close(desc); 
+	    close(desc);
 	    flush_queues(newd);
 	    free((char *)newd);
 	    return(-1);
@@ -1018,7 +1018,7 @@ int new_descriptor(int s)
     newd->name[0] = 0;
     newd->scratch[0] = 0;
 
-    /* prepend to list */ 
+    /* prepend to list */
     newd->next = descriptor_list;
     descriptor_list = newd;
 
@@ -1026,8 +1026,8 @@ int new_descriptor(int s)
     SEND_TO_Q(login_banner, newd);
     SEND_TO_Q("\r\n", newd);
     if (nonewplayers) {
-	SEND_TO_Q("WARNING:\n\r", newd);
-	SEND_TO_Q("No NEW characters are being accepted right now.\n\r\n\r", newd);
+	SEND_TO_Q("WARNING:\r\n", newd);
+	SEND_TO_Q("No NEW characters are being accepted right now.\r\n\r\n", newd);
     }
     SEND_TO_Q("By what name do you wish to be known? ", newd);
 
@@ -1043,7 +1043,7 @@ void nonblock(int s)
 }
 
 void close_sockets(int s)
-{ 
+{
     log("Closing all sockets.");
     while (descriptor_list)
 	close_socket(descriptor_list);
@@ -1060,8 +1060,8 @@ void freaky(struct descriptor_data *d)
     /* NOTE: Stop log it at normal log level */
     if ( loglevel == 4 ) {
 	sprintf(buf, "Kicked out a freaky folk. %s (%d) st: %d." ,
-		d->name, d->descriptor, d->connected); 
-	log(buf); 
+		d->name, d->descriptor, d->connected);
+	log(buf);
     }
 
     if(d->character) {
@@ -1071,7 +1071,7 @@ void freaky(struct descriptor_data *d)
 	if( d->connected == CON_PLYNG ) {
 	    save_char(d->character);
 	    stash_char(d->character);
-	} 
+	}
 	else {
 	    free_char(d->character);
 	    d->character = 0;
@@ -1099,25 +1099,25 @@ void close_socket(struct descriptor_data *d)
     if (d->snoop.snooping)
 	d->snoop.snooping->desc->snoop.snoop_by = 0;
     if (d->snoop.snoop_by) {
-	send_to_char("Your victim is no longer among us.\n\r", d->snoop.snoop_by);
+	send_to_char("Your victim is no longer among us.\r\n", d->snoop.snoop_by);
 	d->snoop.snoop_by->desc->snoop.snooping = 0;
-    } 
+    }
 
-    /* NOTE: d->character is not freed here, but freaky() */ 
-    if ( d->character ) { 
+    /* NOTE: d->character is not freed here, but freaky() */
+    if ( d->character ) {
 	if (d->connected == CON_PLYNG)
-	{ 
-	    act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM); 
+	{
+	    act("$n has lost $s link.", TRUE, d->character, 0, 0, TO_ROOM);
 	    sprintf(buf, "Closing link to: %s.", GET_NAME(d->character));
 	}
-	else 
+	else
 	    sprintf(buf, "Losing player: %s.", GET_NAME(d->character));
 
-	d->character->desc = NULL; 
+	d->character->desc = NULL;
     }
     else if (*d->name)
-	sprintf(buf, "Losing descriptor and close connection to: %s.", d->name); 
-    else 	
+	sprintf(buf, "Losing descriptor and close connection to: %s.", d->name);
+    else
 	strcpy(buf, "Losing descriptor without char.");
 
     log(buf);
@@ -1140,7 +1140,7 @@ void close_socket(struct descriptor_data *d)
 	free(d->str);
 	d->str = NULL;
     }
-    
+
     if (d->showstr_head) {
 	free(d->showstr_head);
     }
@@ -1197,7 +1197,7 @@ int more_than_20(struct descriptor_data *d)
     else
 	return 0;
 }
-#endif				/* UNUSED_CODE */ 
+#endif				/* UNUSED_CODE */
 
 int unfriendly_domain(char *h)
 {
@@ -1214,15 +1214,15 @@ int unfriendly_domain(char *h)
 
 void record_player_number()
 {
-    char line[MAX_STRING_LENGTH]; 
-    static int lasttics = 0; 
+    char line[MAX_STRING_LENGTH];
+    static int lasttics = 0;
     char *tmstr;
     extern int list_users(struct char_data *ch, char *line );
 
     /* NOTE: do this *ONCE* on beginning of each hour,  */
-    if (((time(0) %3600) > 100 ) || ( tics < ( lasttics + 1000 ))) 
+    if (((time(0) %3600) > 100 ) || ( tics < ( lasttics + 1000 )))
 	return;
-    lasttics = tics ; 
+    lasttics = tics ;
 
     /* NOTE: Log current day and time.	*/
     time_t t = time(0);
@@ -1242,7 +1242,7 @@ void record_player_number()
     /* NOTE: For statistics only */
     sprintf(line, "Txt block: ring: %d,  malloc: %d. Hit ratio: %d%%",
 	    tb_pooled, tb_alloced, (100 * tb_pooled)/(tb_pooled+tb_alloced+1));
-    log(line); 
+    log(line);
 
 #ifdef REBOOT_WHEN
     // NOTE: sync reboot time to wall clock time
@@ -1261,9 +1261,9 @@ void record_player_number()
 #include <signal.h>
 static _Sigprocmask( int how, int mask )
 {
-    sigset_t newset=mask, oldset; 
+    sigset_t newset=mask, oldset;
     int ccode = sigprocmask( how, &newset, &oldset );
-    return ( ccode < 0 )? ccode : oldset; 
+    return ( ccode < 0 )? ccode : oldset;
 }
 
 #define sigmask(sig)   ( 1UL << ( (sig) % ( 8*sizeof(sigset_t) )))
@@ -1280,7 +1280,7 @@ int siginterrupt(int sig, int flag)
     sigset_t __sigintr;
     struct sigaction sa;
 
-    sigaction(sig, NULL, &sa); 
+    sigaction(sig, NULL, &sa);
     sigemptyset(& __sigintr);
     if (flag) {
         sigaddset(&__sigintr, sig);
@@ -1292,7 +1292,7 @@ int siginterrupt(int sig, int flag)
     return (sigaction(sig, &sa, NULL));
 }
 
-int sigsetmask(int mask) 
+int sigsetmask(int mask)
 {
     sigset_t set;
 
@@ -1339,7 +1339,7 @@ void signal_setup(void)
 }
 
 void checkpointing(int sig)
-{ 
+{
     struct char_data *ch, *t;
     int i, j ;
 
@@ -1353,19 +1353,19 @@ void checkpointing(int sig)
     log("checkpointing");
 
     /* NOTE: FOR DEBUGGING: Check validity of char list */
-    for( ch = character_list, i = 0 ; ch ; ch = ch->next, i++ ) 
+    for( ch = character_list, i = 0 ; ch ; ch = ch->next, i++ )
 	for( t = character_list, j = 0;  j < i ; t = t->next, j++ )
 	    if ( ch == t ) {
 		char buf[MAX_BUFSIZ];
 		log("FATAL: Loop in charter list!!");
-		sprintf(buf, " Char %p (%d-th and %d-th) %s ", 
-			ch, i, j, GET_NAME(ch)); 
-	    } 
+		sprintf(buf, " Char %p (%d-th and %d-th) %s ",
+			ch, i, j, GET_NAME(ch));
+	    }
 }
 
 void shutdown_request(int sig)
 {
-    send_to_all("Shut down signal has been received.\n\r");
+    send_to_all("Shut down signal has been received.\r\n");
     log("Received USR2 - shutdown request");
     shutdowngame = 1;
 }
@@ -1393,7 +1393,7 @@ void hupsig(int sig)
     /* NOTE: BSD signal don't restore sig handler */
     signal(sig, hupsig);
     longjmp(env, -1);
-} 
+}
 
 void logsig(int sig)
 {
@@ -1402,7 +1402,7 @@ void logsig(int sig)
 }
 
 /* NOTE: OLD WAIT_STATE() was macro. now use this function. */
-int WAIT_STATE(struct char_data *ch, int cycle) 
+int WAIT_STATE(struct char_data *ch, int cycle)
 {
 #define WAIT_STATE_MACRO(ch, cycle)  \
 	((ch)->desc ? (ch)->desc->wait = (cycle) : 0 )

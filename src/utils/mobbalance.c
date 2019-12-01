@@ -33,7 +33,7 @@
 #define AFF_HOLY_SHIELD			32768
 #define AFF_SPELL_BLOCK       65536 /* by process */
 #define AFF_SLEEP             131072
-#define AFF_SHADOW_FIGURE     262144 /* by process */ 
+#define AFF_SHADOW_FIGURE     262144 /* by process */
 #define AFF_SNEAK             524288
 #define AFF_HIDE              1048576
 #define AFF_DEATH			  2097152
@@ -125,7 +125,7 @@ struct {
 		{ 17099, "OKingdom" },
 		{ 18500, "MooDang" },
 		{ 33000, "KAIST" }
-/* 
+/*
 { 20200, "MooDang" },
 { 33000, "KAIST" }
 */
@@ -158,7 +158,7 @@ char *fread_string(FILE *fl)
       strcat(buf, tmp);
 
     for (point = buf + strlen(buf) - 2; point >= buf && isspace(*point);
-      point--);    
+      point--);
     if ((flag = (*point == '~')))
       if (*(buf + strlen(buf) - 3) == '\n')
       {
@@ -249,7 +249,7 @@ void PrintAffected(int affected)
 	if(IS_SET(affected, AFF_SNEAK)) strcat(buf, "SNEAK ");
 	if(IS_SET(affected, AFF_HIDE)) strcat(buf, "HIDE ");
 	if(IS_SET(affected, AFF_DEATH)) strcat(buf, "DEATH ");
-	/* 
+	/*
 	if(IS_SET(affected, AFF_CHARM)) strcat(buf, "CHARM ");
 	if(IS_SET(affected, AFF_FOLLOW)) strcat(buf, "FOLLOW ");
 	*/
@@ -389,7 +389,7 @@ void ReadIndex(int *index)
 
 		index[n] = 1;
 	}
-	
+
 	fclose(fp);
 }
 

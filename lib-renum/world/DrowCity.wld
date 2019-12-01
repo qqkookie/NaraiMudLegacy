@@ -54,7 +54,7 @@ City street~
      You walk along a highly ornate citystreet going east-west. A large house
 stands to the south.
 ~
-173 9 0 
+173 9 0
 D1
 ~
 ~
@@ -71,7 +71,7 @@ S
 #17314
 3rd House~
      You stand inside the 3rd house of the city; it is fairly well decorated
-by drow standards having a few statues, murals and such. A door leads to the 
+by drow standards having a few statues, murals and such. A door leads to the
 south.
 ~
 173 9 0
@@ -181,7 +181,7 @@ S
 #17321
 1st House~
      You stand in the inner courtyard of the 1st and largest house in the city.
-The room is extremely large and decorative. Mural and paintings hang on the 
+The room is extremely large and decorative. Mural and paintings hang on the
 walls depicting some battles and a spider queen.
 ~
 173 9 0
@@ -295,7 +295,7 @@ S
 #17329
 Entrance to the Temple of Lloth~
      The temple is the largest building in the city. Even it's doors are beyond
-imagination. Inside of the temple entrance, the walls are made of gold and 
+imagination. Inside of the temple entrance, the walls are made of gold and
 adamantite.
 ~
 173 9 0
@@ -378,7 +378,7 @@ D3
 S
 #17334
 4th house~
-    You stand inside the 4th house of the city. Its inner courtyard is rather 
+    You stand inside the 4th house of the city. Its inner courtyard is rather
 dull by drow standards and rather small as well.
 ~
 173 9 0
@@ -563,7 +563,7 @@ D3
 S
 #17345
 Grand Stairway~
-     You are standing at the bottpom of a giant obsidian and adamantite 
+     You are standing at the bottpom of a giant obsidian and adamantite
 stairway. The edges are trimmed with gold.
 ~
 173 9 0
@@ -578,7 +578,7 @@ D4
 S
 #17346
 Grand Hallway~
-     You are standing in the middle of a grand hallway. The walls are 
+     You are standing in the middle of a grand hallway. The walls are
 of the purest adamantite with gold trim. Mosiacs line the walls.
 ~
 173 9 0
@@ -610,7 +610,7 @@ S
 #17348
 Grand Hallway~
      You are walking down a grand hallway, heavily decorated with adamantite
-and gold. To the north the hall goes down a flight of stairs while a door is 
+and gold. To the north the hall goes down a flight of stairs while a door is
 too the west.
 ~
 173 9 0
@@ -630,7 +630,7 @@ S
 #17349
 Cleric's Barracks~
      The bed chamber is brightly decorated with spider shaped statues, murals
-and the like. Large beds line the floor making this a comfortable room to live 
+and the like. Large beds line the floor making this a comfortable room to live
 in.
 ~
 173 9 0
@@ -696,8 +696,8 @@ S
 #17353
 Sacrificial Pit~
 A you climb down into the pit thoughsands of spiders cover you tearing your
-body to shreds. 
- 
+body to shreds.
+
 Lloth thanks you for your sacrifice.
 ~
 173 6 0
@@ -719,8 +719,8 @@ D2
 S
 #17355
 The Altar~
-     You are standing infront of a highly and freshly bloodstained altar. 
-Engraved on the top of the altar is a giant spider witha human head. Looking 
+     You are standing infront of a highly and freshly bloodstained altar.
+Engraved on the top of the altar is a giant spider witha human head. Looking
 down from the altar you see a large sacrificial pit.
 ~
 173 9 0
@@ -743,7 +743,7 @@ D5
 S
 #17356
 Slave Cells~
-     This is the main room to the cell chambers for the slaves to be 
+     This is the main room to the cell chambers for the slaves to be
 sacrificed. You notice there are no guards around.
 ~
 173 9 0
@@ -758,7 +758,7 @@ D3
 S
 #17357
 Slave Pen~
-     Rotten meat and breads lie about the floor while shackles hang from the 
+     Rotten meat and breads lie about the floor while shackles hang from the
 walls. The room wreaks of death. You almost become nausious and ecide to leave
 the room since you were obviously too late to save the slave.
 ~
@@ -771,7 +771,7 @@ S
 #17358
 Dias~
      You stand upon a dias behind the altar. Above you is a enormous illusion
-of a female drow turning into a giant spider and back again. There is a door 
+of a female drow turning into a giant spider and back again. There is a door
 to the west.
 ~
 173 9 0
@@ -786,7 +786,7 @@ D3
 S
 #17359
 The Treasury~
-     This is obviously only a temporary storage place for the collected 
+     This is obviously only a temporary storage place for the collected
 treasure being rather bare.
 ~
 173 9 0
@@ -797,7 +797,7 @@ D1
 S
 #17360
 Weaponsmaster's Chamber~
-     This one person bedchamber is very elegant. The owner must be held in high 
+     This one person bedchamber is very elegant. The owner must be held in high
 to get this kind of treatment.
 ~
 173 9 0

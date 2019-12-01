@@ -123,7 +123,7 @@ bool delete_if_true( bool (*test)(char *argname, int argnum), bool del_stash )
 	{
 	    if ( del_stash && !delete_stash(name))
 		PRINT("Stash remove fail!\n");
-	    else 
+	    else
 		PRINT("Ok.\n");
 
 	    g_purged++;
@@ -201,7 +201,7 @@ int main()
     case 3 :
 	PRINT("\nPlayer NAME to COPY >>>> ");
 	GETINPUT;
-	if ( strlen(Buffer) > 2 ) 
+	if ( strlen(Buffer) > 2 )
 	    copy_player(Buffer);
 	break;
 

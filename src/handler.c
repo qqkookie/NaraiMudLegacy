@@ -16,7 +16,7 @@
 #include "etc.h"
 
 /* NOTE: char / object search funtions ( get_char_*(), get_obj_*(), ...)
-        are moved to "library.c" */ 
+        are moved to "library.c" */
 
 extern char *spell_wear_off_msg[];
 
@@ -135,7 +135,7 @@ void affect_total(struct char_data *ch)
 	    GET_STR(ch) = 18;
 	}
     }
-} 
+}
 
 /* Insert an affect_type in a char_data structure
    Automatically sets apropriate bits and apply's */
@@ -165,7 +165,7 @@ void affect_remove_special(struct char_data *ch, struct affected_type *af )
     char *tmp;
 
     if ( !ch || !af )
-	return; 
+	return;
     if (af->type == SPELL_CHARM_PERSON) {
 	tmp = strstr(ch->player.short_descr, " CHARMED BY");
 	tmp[0] = '\0';
@@ -178,7 +178,7 @@ void affect_remove_special(struct char_data *ch, struct affected_type *af )
 
 	strcpy(ch->player.short_descr, buf);
 
-	sprintf(buf, "Confused %s is standing here.\n\r",
+	sprintf(buf, "Confused %s is standing here.\r\n",
 		ch->player.short_descr);
 	if (ch->player.long_descr) {
 	    free(ch->player.long_descr);
@@ -209,12 +209,12 @@ void affect_remove_special(struct char_data *ch, struct affected_type *af )
 }
 
 /* Remove an affected_type structure from a char (called when duration
-   reaches zero). Pointer *af must never be NIL! Frees mem and calls 
+   reaches zero). Pointer *af must never be NIL! Frees mem and calls
    affect_location_apply         */
 /* NOTE: Warnning! Don't use af->next for ch->affected list traversal.
-	*af is free()'d in affect_remove(). 
+	*af is free()'d in affect_remove().
 	So af->next is invalid pointer after calling affect_remove(ch, af).
-	Save af->next before calling affect_remove() and use it for traversal.  
+	Save af->next before calling affect_remove() and use it for traversal.
 */
 void affect_remove(struct char_data *ch, struct affected_type *af)
 {
@@ -242,16 +242,16 @@ void affect_remove(struct char_data *ch, struct affected_type *af)
     }
 
     if (af != NULL) {
-	 /* NOTE: Separate code for special affect removal handling to 
-		 affect_remove_special(). */ 
-	affect_remove_special(ch, af); 
+	 /* NOTE: Separate code for special affect removal handling to
+		 affect_remove_special(). */
+	affect_remove_special(ch, af);
 
 	free(af);
 	af = NULL;
     }
 
     affect_total(ch);
-} 
+}
 
 /* Call affect_remove with every spell of spelltype "skill" */
 void affect_from_char(struct char_data *ch, byte skill)
@@ -263,11 +263,11 @@ void affect_from_char(struct char_data *ch, byte skill)
 	hjp_next = hjp->next;
 	if (hjp->type == skill)
 	    affect_remove(ch, hjp);
-    } 
+    }
 }
 
 
-/* Return if a char is affected by a spell (SPELL_XXX), NULL indicates 
+/* Return if a char is affected by a spell (SPELL_XXX), NULL indicates
    not affected                                                        */
 bool affected_by_spell(struct char_data *ch, byte skill)
 {
@@ -323,9 +323,9 @@ void affect_update(void)
 		/*  (af->next->duration > 0)) */
 		{
 		    send_to_char(spell_wear_off_msg[af->type], i);
-		    send_to_char("\n\r", i);
+		    send_to_char("\r\n", i);
 		}
-		/* NOTE: call affect_remove() when af->duration < 0 */ 
+		/* NOTE: call affect_remove() when af->duration < 0 */
 		affect_remove(i, af);
 	    }
 	}
@@ -339,7 +339,7 @@ void affect_remove_all(struct char_data *ch )
     for (hjp = ch->affected; hjp; hjp = hjp_next) {
 	hjp_next = hjp->next;
 	affect_remove(ch, hjp);
-    } 
+    }
 }
 
 /********************************************************************/
@@ -347,8 +347,8 @@ void affect_remove_all(struct char_data *ch )
 /* move a player out of a room */
 void char_from_room(struct char_data *ch)
 {
-    struct char_data *i; 
-    
+    struct char_data *i;
+
     if (ch->in_room == NOWHERE) {
 	log("NOWHERE char from room (handler.c, char_from_room)");
 	return;
@@ -370,7 +370,7 @@ void char_from_room(struct char_data *ch)
 
     else {		/* locate the previous element */
 	/* NOTE: make sure i is not NULL */
-	for (i = world[ch->in_room].people; i; i = i->next_in_room) { 
+	for (i = world[ch->in_room].people; i; i = i->next_in_room) {
 	    if ( i->next_in_room == ch ) {
 		i->next_in_room = ch->next_in_room;
 		break;
@@ -417,8 +417,8 @@ void extract_char(struct char_data *ch)
     void wipe_obj(struct obj_data *obj);
 
     extern void return_original(struct char_data *ch );
-    extern int loglevel; 
-    extern struct char_data *combat_list; 
+    extern int loglevel;
+    extern struct char_data *combat_list;
     extern void die_follower(struct char_data *ch);
 
     if (!ch)
@@ -440,7 +440,7 @@ void extract_char(struct char_data *ch)
     }
 
     if (ch->followers || ch->master)
-	die_follower(ch); 
+	die_follower(ch);
 
     if (ch->specials.fighting)
 	stop_fighting(ch);
@@ -462,7 +462,7 @@ void extract_char(struct char_data *ch)
     if (ch->carrying) {
 	wipe_obj(ch->carrying);
 	ch->carrying = 0;
-    } 
+    }
 
 #ifdef UNUSED_CODE
 /* NOTE: make_corpse() already transfered objects to corpse obj */
@@ -512,10 +512,10 @@ void extract_char(struct char_data *ch)
 	    mob_index[ch->nr].number--;
 	free_char(ch);
     }
-    else { 
+    else {
 	/* remove all affected by spell */
 	affect_remove_all(ch);
-#ifdef  UNUSED_CODE 
+#ifdef  UNUSED_CODE
 	/* NOTE: This list traversal is incorrect. SEGV error on do_rent()   */
 	/*    *af is free()'d in affect_remove(). So, af->next is invalid
 	      pointer. save af->next before free() and use it for traversal  */
@@ -565,7 +565,7 @@ void free_char(struct char_data *ch)
     bzero((void *)ch, sizeof(struct char_data));
 
     free(ch);
-} 
+}
 
 /* give an object to a char   */
 void obj_to_char(struct obj_data *object, struct char_data *ch)
@@ -680,19 +680,19 @@ void equip_char(struct char_data *ch, struct obj_data *obj, int pos)
     if ((IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && IS_EVIL(ch)) ||
 	(IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && IS_GOOD(ch)) ||
 	(IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && IS_NEUTRAL(ch)) ||
-	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_MAGE) 
+	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_MAGE)
 	&& (GET_CLASS(ch) == CLASS_MAGIC_USER)) ||
-	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_CLERIC) 
+	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_CLERIC)
 	&& (GET_CLASS(ch) == CLASS_CLERIC)) ||
-	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_WARRIOR) 
+	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_WARRIOR)
 	&& (GET_CLASS(ch) == CLASS_WARRIOR)) ||
-	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_THIEF) 
+	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_THIEF)
 	&& (GET_CLASS(ch) == CLASS_THIEF)) ||
-	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_POLICE) 
+	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_POLICE)
 	&& (GET_GUILD(ch) == POLICE || GET_GUILD(ch) == 0)) ||
-	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_OUTLAW) 
+	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_OUTLAW)
 	&& (GET_GUILD(ch) == OUTLAW || GET_GUILD(ch) == 0)) ||
-	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_ASSASSIN) 
+	(!IS_NPC(ch) && IS_OBJ_STAT(obj, ITEM_ANTI_ASSASSIN)
 	&& (GET_GUILD(ch) == ASSASSIN || GET_GUILD(ch) == 0))) {
 	if (ch->in_room != NOWHERE) {
 
@@ -729,7 +729,7 @@ struct obj_data *unequip_char(struct char_data *ch, int pos)
 
     obj = ch->equipment[pos];
     if (GET_ITEM_TYPE(obj) == ITEM_ARMOR)
-	GET_AC(ch) = GET_AC(ch) + (sh_int) apply_ac(ch, pos); 
+	GET_AC(ch) = GET_AC(ch) + (sh_int) apply_ac(ch, pos);
 
 /* NOTE:  Here is not correct place to adjusting light source no in room. */
 
@@ -932,7 +932,7 @@ void update_object(struct obj_data *obj, int use)
 }
 
 void update_char_objects(struct char_data *ch)
-{ 
+{
     int i;
 
     if (!ch)
@@ -948,7 +948,7 @@ void update_char_objects(struct char_data *ch)
 
     if (ch->carrying)
 	update_object(ch->carrying, 1);
-} 
+}
 
 void weight_change_object(struct obj_data *obj, int weight)
 {
@@ -971,7 +971,7 @@ void weight_change_object(struct obj_data *obj, int weight)
     else {
 	log("Unknown attempt to subtract weight from an object.");
     }
-} 
+}
 
 struct obj_data *create_money(int amount)
 {
@@ -1058,7 +1058,7 @@ void clear_object(struct obj_data *obj)
 
     obj->item_number = -1;
     obj->in_room = NOWHERE;
-} 
+}
 
 #ifdef UNUSED_CODE
 /* NOTE: NEW! remove all objects and equips from char and junk them. */
@@ -1079,14 +1079,14 @@ void wipe_obj_from_char(struct char_data *ch)
 
 /* NOTE: NEW! free char and obj and kick player out of game. */
 void purge_player(struct char_data *ch)
-{ 
+{
     if (IS_NPC(ch))
 	return;
     act("$n perishs in towering flame.", FALSE, ch, 0, 0, TO_ROOM);
-    extract_char(ch); 
+    extract_char(ch);
     if (ch->desc){
 	ch->desc->connected = CON_CLOSE;
-	ch->desc->character = 0; 
+	ch->desc->character = 0;
     }
     free_char(ch);
 }

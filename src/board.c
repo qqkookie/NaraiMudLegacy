@@ -51,7 +51,7 @@ void do_write(struct char_data *ch, char *argument, int cmd)
 {
     struct obj_data *paper = 0;		/* , *pen = 0; */
     char papername[MAX_NAME_LEN], penname[MAX_NAME_LEN];
-    char buf[MAX_LINE_LEN]; 
+    char buf[MAX_LINE_LEN];
 
     argument_interpreter(argument, papername, penname);
 
@@ -60,19 +60,19 @@ void do_write(struct char_data *ch, char *argument, int cmd)
 
     if (!*papername) {	/* nothing was delivered */
 	send_to_char(
-	  "Write? with what? ON what? what are you trying to do??\n\r", ch);
+	  "Write? with what? ON what? what are you trying to do??\r\n", ch);
 	return;
     }
 /* NOTE: Ignore pen, it has no useful meaning */
 #ifdef USE_PEN
     if (*penname) {	/* there were two arguments */
 	if (!(paper = get_obj_in_list_vis(ch, papername, ch->carrying))) {
-	    sprintf(buf, "You have no %s.\n\r", papername);
+	    sprintf(buf, "You have no %s.\r\n", papername);
 	    send_to_char(buf, ch);
 	    return;
 	}
 	if (!(pen = get_obj_in_list_vis(ch, penname, ch->carrying))) {
-	    sprintf(buf, "You have no %s.\n\r", penname);
+	    sprintf(buf, "You have no %s.\r\n", penname);
 	    send_to_char(buf, ch);
 	    return;
 	}
@@ -80,7 +80,7 @@ void do_write(struct char_data *ch, char *argument, int cmd)
     else {		/* there was one arg.let's see what we can find */
 #endif				/* USE_PEN */
 	if (!(paper = get_obj_in_list_vis(ch, papername, ch->carrying))) {
-	    sprintf(buf, "There is no %s in your inventory.\n\r", papername);
+	    sprintf(buf, "There is no %s in your inventory.\r\n", papername);
 	    send_to_char(buf, ch);
 	    return;
 	}
@@ -91,18 +91,18 @@ void do_write(struct char_data *ch, char *argument, int cmd)
 	    paper = 0;
 	}
 	else if (paper->obj_flags.type_flag != ITEM_NOTE) {
-	    send_to_char("That thing has nothing to do with writing.\n\r", ch);
+	    send_to_char("That thing has nothing to do with writing.\r\n", ch);
 	    return;
 	}
 
 	/* one object was found. Now for the other one. */
 	if (!ch->equipment[HOLD]) {
-	    sprintf(buf, "You can't write with a %s alone.\n\r", papername);
+	    sprintf(buf, "You can't write with a %s alone.\r\n", papername);
 	    send_to_char(buf, ch);
 	    return;
 	}
 	if (!CAN_SEE_OBJ(ch, ch->equipment[HOLD])) {
-	    send_to_char("The stuff in your hand is invisible! Yeech!!\n\r", ch);
+	    send_to_char("The stuff in your hand is invisible! Yeech!!\r\n", ch);
 	    return;
 	}
 
@@ -120,18 +120,18 @@ void do_write(struct char_data *ch, char *argument, int cmd)
     else if (paper->obj_flags.type_flag != ITEM_NOTE)
 	act("You can't write on $p.", FALSE, ch, paper, 0, TO_CHAR);
     else if (paper->action_description)
-	send_to_char("There's something written on it already.\n\r", ch);
+	send_to_char("There's something written on it already.\r\n", ch);
     else {
 	/* we can write - hooray! */
 
-	send_to_char("Ok.. go ahead and write.. end the note with a @.\n\r",
+	send_to_char("Ok.. go ahead and write.. end the note with a @.\r\n",
 		     ch);
 	act("$n begins to jot down a note.", TRUE, ch, 0, 0, TO_ROOM);
 	ch->desc->str = &paper->action_description;
 	ch->desc->max_str = MAX_NOTE_LENGTH;
 	ch->desc->scratch[0] = '\0';
     }
-} 
+}
 
 /* init one board and return its pointer */
 struct board_data *init_a_board(struct char_data *ch)
@@ -171,7 +171,7 @@ struct board_data *find_board(struct char_data *ch)
     return tmp_board;
 }
 
-/* load board from disk. 
+/* load board from disk.
    this routine is called once when board is initialized. */
 void load_board(struct board_data *cb)
 {
@@ -215,7 +215,7 @@ void load_board(struct board_data *cb)
 }
 
 /* save board on disk.
-   this routine is called when message is posted on board 
+   this routine is called when message is posted on board
    or message is removed from board.     */
 void save_board(struct board_data *cb)
 {
@@ -228,7 +228,7 @@ void save_board(struct board_data *cb)
 
     cb->fp = fopen(cb->bfile, "w");
     if (!cb->fp) {
-	log("unable to open board file.\n\r");
+	log("unable to open board file.\r\n");
 	return;
     }
 
@@ -257,7 +257,7 @@ int board(struct char_data *ch, int cmd, char *arg)
     if (!ch->desc)
 	return FALSE;
     /* if (cmd != 15 && cmd != 246 && cmd != 247 && cmd != 66 && cmd != 63) */
-    if (cmd != CMD_LOOK && cmd !=  CMD_WRITE && cmd !=  CMD_POST 
+    if (cmd != CMD_LOOK && cmd !=  CMD_WRITE && cmd !=  CMD_POST
 	    && cmd != CMD_REMOVE && cmd != CMD_READ)
 	return FALSE;
 
@@ -296,16 +296,16 @@ int show_board(struct char_data *ch, struct board_data *cb, char *arg)
 	return FALSE;
 
     act("$n studies the board.", TRUE, ch, 0, 0, TO_ROOM);
-    strcpy(buf, "This is a bulletin board.\n\r");
-    strcat(buf, "Usage: READ/REMOVE <messg #>, POST <paper> <header>\n\r");
+    strcpy(buf, "This is a bulletin board.\r\n");
+    strcat(buf, "Usage: READ/REMOVE <messg #>, POST <paper> <header>\r\n");
     if (!cb->m_num)
-	strcat(buf, "The board is empty.\n\r");
+	strcat(buf, "The board is empty.\r\n");
     else {
-	sprintf(tmp, "There are %d messages on the board.\n\r", cb->m_num);
+	sprintf(tmp, "There are %d messages on the board.\r\n", cb->m_num);
 	strcat(buf, tmp);
 	for (i = 0; i < cb->m_num; i++) {
 	    /* NOTE: Align board display  */
-	    sprintf(tmp, "%2d  %-8s :  %s \n\r",
+	    sprintf(tmp, "%2d  %-8s :  %s \r\n",
 		    i + 1, cb->writer[i], cb->head[i]);
 	    strcat(buf, tmp);
 	}
@@ -327,18 +327,18 @@ int remove_board(struct char_data *ch, struct board_data *cb, char *arg)
 	return FALSE;
 
     if (!cb->m_num) {
-	send_to_char("The board is empty!\n\r", ch);
+	send_to_char("The board is empty!\r\n", ch);
 	return TRUE;
     }
     if (msg < 1 || msg > cb->m_num) {
-	send_to_char("That message exists only in your imagination.\n\r", ch);
+	send_to_char("That message exists only in your imagination.\r\n", ch);
 	return TRUE;
     }
 
     if (strcmp(cb->writer[msg - 1], GET_NAME(ch))) {
 	if (IS_MORTAL(ch)) {
 	    send_to_char("Only Immortal can remove other player's ", ch);
-	    send_to_char("messages from board.\n\r", ch);
+	    send_to_char("messages from board.\r\n", ch);
 	    return TRUE;
 	}
     }
@@ -355,7 +355,7 @@ int remove_board(struct char_data *ch, struct board_data *cb, char *arg)
 	strcpy(cb->writer[ind], cb->writer[ind + 1]);
     }
 
-    send_to_char("Message is removed.\n\r", ch);
+    send_to_char("Message is removed.\r\n", ch);
     save_board(cb);
     return TRUE;
 }
@@ -372,15 +372,15 @@ int read_board(struct char_data *ch, struct board_data *cb, char *arg)
 	return FALSE;
 
     if (!cb->m_num) {
-	send_to_char("The board is empty!\n\r", ch);
+	send_to_char("The board is empty!\r\n", ch);
 	return TRUE;
     }
     if (msg < 1 || msg > cb->m_num) {
-	send_to_char("That message exists only in your imagination.\n\r", ch);
+	send_to_char("That message exists only in your imagination.\r\n", ch);
 	return TRUE;
     }
 
-    sprintf(buffer, "message %d : %s by %s\n\r\n\r%s",
+    sprintf(buffer, "message %d : %s by %s\r\n\r\n%s",
 	    msg, cb->head[msg - 1], cb->writer[msg - 1], cb->msgs[msg - 1]);
     page_string(ch->desc, buffer, 1);
     return TRUE;
@@ -406,7 +406,7 @@ int write_board(struct char_data *ch, struct board_data *cb, char *arg)
 
     /* no title */
     if (!*arg) {
-	send_to_char("No title?#@\n\r", ch);
+	send_to_char("No title?#@\r\n", ch);
 	return 1;
     }
 
@@ -444,22 +444,22 @@ int post_board(struct char_data *ch, struct board_data *cb, char *arg)
     paper = get_obj_in_list_vis(ch, papername, ch->carrying);
 
     if (!paper) {
-	sprintf(buf, "You can't find %s in your inventory.\n\r", papername);
+	sprintf(buf, "You can't find %s in your inventory.\r\n", papername);
     }
     else if (paper->obj_flags.type_flag != ITEM_NOTE) {
-	sprintf(buf, "You can't post %s on board.\n\r", papername);
+	sprintf(buf, "You can't post %s on board.\r\n", papername);
     }
     else if (paper->action_description == 0) {
-	sprintf(buf, "%s is empty.\n\r", papername);
+	sprintf(buf, "%s is empty.\r\n", papername);
     }
     else {
 	if (cb->m_num == MAX_MSGS) {
-	    send_to_char("Sorry...board is full.\n\r", ch);
+	    send_to_char("Sorry...board is full.\r\n", ch);
 	    return TRUE;
 	}
 	cb->head[cb->m_num] = (char *) malloc(strlen(header) + 1);
 	if (cb->head[cb->m_num] == 0) {
-	    sprintf(buf, "Your %s is fallen from board.\n\r", papername);
+	    sprintf(buf, "Your %s is fallen from board.\r\n", papername);
 	    send_to_char(buf, ch);
 	    return TRUE;
 	}
@@ -469,7 +469,7 @@ int post_board(struct char_data *ch, struct board_data *cb, char *arg)
 	paper->action_description = 0;
 	cb->m_num++;
 	extract_obj(paper);
-	sprintf(buf, "Ok. You posted %s on board.\n\r", papername);
+	sprintf(buf, "Ok. You posted %s on board.\r\n", papername);
 	/* send_to_char(buf, ch); */
 	save_board(cb);
     }
@@ -601,7 +601,7 @@ void load_mbox(struct mbox_data *cb)
 
     if ((cb->fp = fopen(cb->bfile, "r+")) == NULL) {
 	/* NOTE: if mbox is vanished, create new one */
-	mail_error_log("mbox file vanished. Will create new one.\n\r");
+	mail_error_log("mbox file vanished. Will create new one.\r\n");
 	save_mbox(cb);
 	if ((cb->fp = fopen(cb->bfile, "w+")))
 	    rewind(cb->fp);
@@ -614,7 +614,7 @@ void load_mbox(struct mbox_data *cb)
     cb->m_num = m_num;
     /* NOTE: m_num == 0 is valid state. i.e. empty mailbox */
     if (m_num < 0 || m_num > MAX_MAILS || feof(cb->fp)) {
-	mail_error_log("mbox msg file corrupt or nonexistent.\n\r");
+	mail_error_log("mbox msg file corrupt or nonexistent.\r\n");
 	cb->m_num = 0;
 	fclose(cb->fp);
 	return;
@@ -625,7 +625,7 @@ void load_mbox(struct mbox_data *cb)
 
 	cb->head[ind] = (char *) malloc(size + 1);
 	if (!cb->head[ind]) {
-	    mail_error_log("mbox malloc failure.\n\r");
+	    mail_error_log("mbox malloc failure.\r\n");
 	    cb->m_num = m_num = ind;
 	}
 	fread(cb->head[ind], sizeof(char), size, cb->fp);
@@ -637,7 +637,7 @@ void load_mbox(struct mbox_data *cb)
 
 	cb->msgs[ind] = (char *) malloc(size + 1);
 	if (!cb->msgs[ind]) {
-	    mail_error_log("mbox malloc failure.\n\r");
+	    mail_error_log("mbox malloc failure.\r\n");
 	    cb->m_num = m_num = ind;
 	}
 	fread(cb->msgs[ind], sizeof(char), size, cb->fp);
@@ -657,7 +657,7 @@ void save_mbox(struct mbox_data *cb)
 	return;
     cb->fp = fopen(cb->bfile, "r+");
     if (cb->fp == 0) {
-	mail_error_log("unable to open mbox file.\n\r");
+	mail_error_log("unable to open mbox file.\r\n");
 	return;
     }
 
@@ -690,7 +690,7 @@ int mbox(struct char_data *ch, int cmd, char *arg)
 
     cur_mbox = find_mbox(ch);
     if (cur_mbox == 0) {
-	mail_error_log(" mbox malloc failure\n\r.");
+	mail_error_log(" mbox malloc failure\r\n.");
 	return (FALSE);
     }
 
@@ -714,8 +714,8 @@ int show_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
     one_argument(arg, tmp);
     if (!*tmp || !isname(tmp, "mail mbox board"))
 	return (FALSE);
-    strcpy(buf, "This is a mail box.\n\r"
-	   "Usage: GET letter mbox, POST <receiver> <paper> <header>\n\r");
+    strcpy(buf, "This is a mail box.\r\n"
+	   "Usage: GET letter mbox, POST <receiver> <paper> <header>\r\n");
 
     /* NOTE: Algned mail list form (left justified) */
     for (i = 0; i < cb->m_num; i++) {
@@ -726,7 +726,7 @@ int show_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
 	}
     }
     if (!pm_num)
-	strcat(buf, "The mbox is empty.\n\r");
+	strcat(buf, "The mbox is empty.\r\n");
     page_string(ch->desc, buf, 0);
 
     return (TRUE);
@@ -764,7 +764,7 @@ int get_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
 
     for (i = 0; i < cb->m_num; i++) {
 	if (isname(GET_NAME(ch), cb->receiver[i])) {
-	    sprintf(buffer, "letter titled [%s] from %s\n\r\n\r%s",
+	    sprintf(buffer, "letter titled [%s] from %s\r\n\r\n%s",
 		    cb->head[i], cb->sender[i], cb->msgs[i]);
 	    pm_num++;
 	    if ((paper_num = real_object(paper_num)) < 0) {
@@ -777,12 +777,12 @@ int get_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
 	    // NOTE: BUG FIX!
 	    CREATE(letter->action_description, char, strlen(buffer)+1);
 	    strcpy(letter->action_description, buffer);
-	    send_to_char("You got letter from mail box.\n\r", ch);
+	    send_to_char("You got letter from mail box.\r\n", ch);
 	    return (TRUE);
 	}
     }
 
-    send_to_char("Your mail box is empty!\n\r", ch);
+    send_to_char("Your mail box is empty!\r\n", ch);
     return (TRUE);
 }
 
@@ -799,19 +799,19 @@ int post_mail(struct char_data *ch, struct mbox_data *cb, char *arg)
     paper = get_obj_in_list_vis(ch, papername, ch->carrying);
 
     if (!paper) {
-	sprintf(buf, "You can't find %s in your inventory.\n\r", papername);
+	sprintf(buf, "You can't find %s in your inventory.\r\n", papername);
     }
     else if (paper->obj_flags.type_flag != ITEM_NOTE) {
-	sprintf(buf, "You can't post %s on mbox.\n\r", papername);
+	sprintf(buf, "You can't post %s on mbox.\r\n", papername);
     }
     else if (paper->action_description == 0) {
-	sprintf(buf, "%s is empty.\n\r", papername);
+	sprintf(buf, "%s is empty.\r\n", papername);
     }
     else {
-	sprintf(buf, "Ok. You posted %s on mbox.\n\r", papername);
+	sprintf(buf, "Ok. You posted %s on mbox.\r\n", papername);
 	cb->head[cb->m_num] = (char *) malloc(strlen(header) + 1);
 	if (cb->head[cb->m_num] == 0) {
-	    sprintf(buf, "Your %s is fallen from mbox.\n\r", papername);
+	    sprintf(buf, "Your %s is fallen from mbox.\r\n", papername);
 	    send_to_char(buf, ch);
 	    return (TRUE);
 	}
@@ -858,10 +858,10 @@ int check_mail(struct char_data *ch)
 
 #define TP_MOB    0
 #define TP_OBJ     1
-#define TP_ERROR  2 
+#define TP_ERROR  2
 
 /* NOTE: field = 1 for name , 2 for short ... */
-char *string_fields[] = {   
+char *string_fields[] = {
     "",
     "name",
     "short",
@@ -899,7 +899,7 @@ int max_value[] = {
     255,
     10000,
     1
-}; 
+};
 */
 
 /* ************************************************************************
@@ -920,7 +920,7 @@ void string_add(struct descriptor_data *d, char *str)
 
     if (!(*d->str)) {
 	if ((int)strlen(str) > d->max_str) {
-	    send_to_char("String too long - Truncated.\n\r",
+	    send_to_char("String too long - Truncated.\r\n",
 			 d->character);
 	    *(str + d->max_str) = '\0';
 	    terminator = 1;
@@ -931,7 +931,7 @@ void string_add(struct descriptor_data *d, char *str)
     }
     else {
 	if ((int)(strlen(str) + strlen(*d->str)) > d->max_str) {
-	    send_to_char("String too long. Last line skipped.\n\r",
+	    send_to_char("String too long. Last line skipped.\r\n",
 			 d->character);
 	    terminator = 1;
 	}
@@ -957,7 +957,7 @@ void string_add(struct descriptor_data *d, char *str)
 
 	/* post paper */
 	/* NOTE: scratch is used as 'title' of board message */
-	if (!strncmp(d->scratch,"paper", 5)) { 
+	if (!strncmp(d->scratch,"paper", 5)) {
 	    cur_board = find_board(d->character);
 	    post_board(d->character, cur_board, d->scratch);
 #ifdef UNUSED_CODE
@@ -967,7 +967,7 @@ void string_add(struct descriptor_data *d, char *str)
 	}
     }
     else
-	strcat(*d->str, "\n\r");
+	strcat(*d->str, "\r\n");
 }
 
 
@@ -1023,19 +1023,19 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 
     if (type == TP_ERROR) {
 	send_to_char(
-	"Syntax: string ('obj'|'char') <name> <field> [<string>].\n\r", ch);
+	"Syntax: string ('obj'|'char') <name> <field> [<string>].\r\n", ch);
 	return;
     }
 
     if (!field) {
-	send_to_char("No field by that name. Try 'help string'.\n\r", ch);
+	send_to_char("No field by that name. Try 'help string'.\r\n", ch);
 	return;
     }
 
     if (type == TP_MOB) {
 	/* locate the beast */
 	if (!(mob = get_char_vis(ch, name))) {
-	    send_to_char("I don't know anyone by that name...\n\r", ch);
+	    send_to_char("I don't know anyone by that name...\r\n", ch);
 	    return;
 	}
 
@@ -1048,18 +1048,18 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 	    ch->desc->str = &GET_NAME(mob);
 	    if (!IS_NPC(mob))
 		send_to_char(
-		 "WARNING: You have changed the name of a player.\n\r", ch);
+		 "WARNING: You have changed the name of a player.\r\n", ch);
 	    break;
 	case 2:
 	    if (!IS_NPC(mob)) {
-		send_to_char( "That field is for monsters only.\n\r", ch);
+		send_to_char( "That field is for monsters only.\r\n", ch);
 		return;
 	    }
 	    ch->desc->str = &mob->player.short_descr;
 	    break;
 	case 3:
 	    if (!IS_NPC(mob)) {
-		send_to_char( "That field is for monsters only.\n\r", ch);
+		send_to_char( "That field is for monsters only.\r\n", ch);
 		return;
 	    }
 	    ch->desc->str = &mob->player.long_descr;
@@ -1068,14 +1068,14 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 	    ch->desc->str = &mob->player.description;
 	    break;
 	case 5:
-	    if (IS_NPC(mob)) { 
-		send_to_char("Monsters have no titles.\n\r", ch);
+	    if (IS_NPC(mob)) {
+		send_to_char("Monsters have no titles.\r\n", ch);
 		return;
 	    }
 	    ch->desc->str = &GET_TITLE(mob);
 	    break;
 	default:
-	    send_to_char( "That field is undefined for monsters.\n\r", ch);
+	    send_to_char( "That field is undefined for monsters.\r\n", ch);
 	    return;
 	    break;
 	}
@@ -1083,7 +1083,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
     else {		/* type == TP_OBJ */
 	/* locate the object */
 	if (!(obj = get_obj_vis(ch, name))) {
-	    send_to_char("Can't find such a thing here..\n\r", ch);
+	    send_to_char("Can't find such a thing here..\r\n", ch);
 	    return;
 	}
 	switch (field) {
@@ -1098,7 +1098,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 	    break;
 	case 4:
 	    if (!*string) {
-		send_to_char("You have to supply a keyword.\n\r", ch);
+		send_to_char("You have to supply a keyword.\r\n", ch);
 		return;
 	    }
 	    /* try to locate extra description */
@@ -1113,7 +1113,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 		    strcpy(ed->keyword, string);
 		    ed->description = 0;
 		    ch->desc->str = &ed->description;
-		    send_to_char("New field.\n\r", ch);
+		    send_to_char("New field.\r\n", ch);
 		    break;
 		}
 		else if (!str_cmp(ed->keyword, string)) {
@@ -1122,7 +1122,7 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 		    ed->description = 0;
 		    ch->desc->str = &ed->description;
 		    send_to_char(
-				    "Modifying description.\n\r", ch);
+				    "Modifying description.\r\n", ch);
 		    break;
 		}
 	    ch->desc->max_str = MAX_STRING_LENGTH;
@@ -1131,13 +1131,13 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 	    break;
 	case 6:
 	    if (!*string) {
-		send_to_char("You must supply a field name.\n\r", ch);
+		send_to_char("You must supply a field name.\r\n", ch);
 		return;
 	    }
 	    /* try to locate field */
 	    for (ed = obj->ex_description;; ed = ed->next)
 		if (!ed) {
-		    send_to_char("No field with that keyword.\n\r", ch);
+		    send_to_char("No field with that keyword.\r\n", ch);
 		    return;
 		}
 		else if (!str_cmp(ed->keyword, string)) {
@@ -1155,12 +1155,12 @@ void do_string(struct char_data *ch, char *arg, int cmd)
 		    }
 		    free(ed);
 
-		    send_to_char("Field deleted.\n\r", ch);
+		    send_to_char("Field deleted.\r\n", ch);
 		    return;
 		}
 	    break;
 	default:
-	    send_to_char( "That field is undefined for objects.\n\r", ch);
+	    send_to_char( "That field is undefined for objects.\r\n", ch);
 	    return;
 	    break;
 	}
@@ -1173,17 +1173,17 @@ void do_string(struct char_data *ch, char *arg, int cmd)
     if (*string) {	/* there was a string in the argument array */
 	/* NOTE: Max length of field 1 is length[1].. */
 	if ((int) strlen(string) > length[field]) {
-	    send_to_char("String too long - truncated.\n\r", ch);
+	    send_to_char("String too long - truncated.\r\n", ch);
 	    *(string + length[field]) = '\0';
 	}
 	CREATE(*ch->desc->str, char, strlen(string) + 1);
 
 	strcpy(*ch->desc->str, string);
 	ch->desc->str = 0;
-	send_to_char("Ok.\n\r", ch);
+	send_to_char("Ok.\r\n", ch);
     }
     else {		/* there was no string. enter string mode */
-	send_to_char("Enter string. terminate with '@'.\n\r", ch);
+	send_to_char("Enter string. terminate with '@'.\r\n", ch);
 	*ch->desc->str = 0;
 	ch->desc->max_str = length[field];
     }

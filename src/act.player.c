@@ -1,7 +1,7 @@
 /* ***************************************************************************
    *  file: act.player.c 	Player handling actions.		     *
    *  Usage: Entering / Leveing game. User settable player parameters	     *
-   ************************************************************************* */ 
+   ************************************************************************* */
 
 #include <stdio.h>
 #include <string.h>
@@ -35,7 +35,7 @@ void query_status(struct descriptor_data *d);
 int _parse_name(char *arg, char *name);
 int improve_status(struct char_data *ch, char arg);
 void reset_char(struct char_data *ch);
-void do_start(struct char_data *ch); 
+void do_start(struct char_data *ch);
 
 void nanny(struct descriptor_data *d, char *arg)
 {
@@ -43,7 +43,7 @@ void nanny(struct descriptor_data *d, char *arg)
     int player_i;
     struct char_file_u tmp_store;
     struct char_data *tmp_ch;
-    struct descriptor_data *k; 
+    struct descriptor_data *k;
     char improved_stat[2];
     int i;
 
@@ -65,7 +65,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	/* NOTE: enter "quit" to go away while wait for name */
 	for (; isspace(*arg); arg++) ;
 	if (!*arg || strcmp(arg, "quit") == 0) {
-	    /* NOTE: close_socket(d) at game_loop() */ 
+	    /* NOTE: close_socket(d) at game_loop() */
 	    STATE(d) = CON_CLOSE;
 	}
 	else {
@@ -91,7 +91,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	    }
 	    else {
 		/* player unknown gotta make a new */
-		strcpy(d->name, buf); 
+		strcpy(d->name, buf);
 		CAP(d->name);
 		sprintf(buf, "Did I get that right, %s (Y/N)? ", d->name);
 		SEND_TO_Q(buf, d);
@@ -137,7 +137,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	}		/* end of for */
 
 	for (tmp_ch = character_list; tmp_ch; tmp_ch = tmp_ch->next) {
-	    if (!IS_NPC(tmp_ch) && !tmp_ch->desc 
+	    if (!IS_NPC(tmp_ch) && !tmp_ch->desc
 		    && !str_cmp(d->name, GET_NAME(tmp_ch))) {
 		SEND_TO_Q("\r\nReconnecting.\r\n", d);
 		tmp_ch->desc = d;
@@ -147,7 +147,7 @@ void nanny(struct descriptor_data *d, char *arg)
 		/* NOTE: act() don't need CR+LF    */
 		act("$n has reconnected.", TRUE, tmp_ch, 0, 0, TO_ROOM);
 		sprintf(buf, "%s(%d)[%s] has reconnected.",
-		    GET_NAME(d->character), GET_LEVEL(d->character), d->host ); 
+		    GET_NAME(d->character), GET_LEVEL(d->character), d->host );
 		log(buf);
 		return;
 	    }
@@ -161,21 +161,21 @@ void nanny(struct descriptor_data *d, char *arg)
 			    ? h_ent->h_name : d->host ));
 #endif
 	/* NOTE: No char of mine to reconnect. Now, Let's do it. */
-	CREATE(d->character, struct char_data, 1); 
+	CREATE(d->character, struct char_data, 1);
 	clear_char(d->character);
 	d->character->desc = d;
-	player_i = load_char(d->name, &tmp_store); 
-	assert(player_i == d->pos ); 	/* NOTE: check d->pos */ 
-	    
-	store_to_char(&tmp_store, d->character); 
+	player_i = load_char(d->name, &tmp_store);
+	assert(player_i == d->pos ); 	/* NOTE: check d->pos */
+
+	store_to_char(&tmp_store, d->character);
 
 	/* NOTE: d->host is set to DNS name in new_descriptor() in comm.c */
 	sprintf(buf, "%s(%d)[%s] has connected.",
 		GET_NAME(d->character), GET_LEVEL(d->character),  d->host );
 	log(buf);
-	/* FALL THRU */ 
+	/* FALL THRU */
 
-    case CON_NEWCON: 
+    case CON_NEWCON:
 	SEND_TO_Q("\r\n----------------   Message from The Great GOD   -------------------\r\n", d);
 	SEND_TO_Q(motd, d);
 	SEND_TO_Q("\r\n*** PRESS RETURN : ", d);
@@ -237,21 +237,21 @@ void nanny(struct descriptor_data *d, char *arg)
 	    STATE(d) = CON_PWDGET;
 	    break;
 	}
-	strncpy(d->pwd, crypt(arg, d->name), 10); 
+	strncpy(d->pwd, crypt(arg, d->name), 10);
 	d->pwd[10] = '\0';
 
 	/* NOTE: allocate char for NEW player now... */
-	CREATE(d->character, struct char_data, 1); 
+	CREATE(d->character, struct char_data, 1);
 	clear_char(d->character);
 	d->character->desc = d;
-	GET_NAME(d->character) = strdup(d->name); 
+	GET_NAME(d->character) = strdup(d->name);
 
 	SEND_TO_Q("\r\nWhat is your sex (M/F) ? ", d);
 	STATE(d) = CON_QSEX;
 	break;
 
     case CON_QSEX:	/* query sex of new user */
-	/* echo_telnet(d); */ 
+	/* echo_telnet(d); */
 	for (; isspace(*arg); arg++) ;
 	CAP(arg);
 	if ( *arg == 'M' )
@@ -326,7 +326,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	    }
 	}
 	for (i = 0; i < 2; i++) {
-	    if ( strchr("swidc", improved_stat[i]) != NULL) 
+	    if ( strchr("swidc", improved_stat[i]) != NULL)
 		if (!improve_status(d->character, improved_stat[i]))
 		    SEND_TO_Q("\r\nAlas! you lost chance...\r\n", d);
 	}
@@ -360,7 +360,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	for (; isspace(*arg); arg++) ;
 	switch (*arg) {
 	case '0':
-	    /* NOTE: close_socket() will not free_char() */ 
+	    /* NOTE: close_socket() will not free_char() */
 	    free_char(d->character);
 	    d->character = 0;
 	    STATE(d) = CON_CLOSE;
@@ -449,9 +449,9 @@ void nanny(struct descriptor_data *d, char *arg)
 
 	/* NOTE: Additional pause time after CON_SLCT / select 1 for read
 	   welcome messgae, mail check, which was scrolled away. */
-    case CON_ENTER:	/* Entering game. Showed welcom, mail message */ 
-	    
-	/* NOTE: Move char to room after getting last CR */ 
+    case CON_ENTER:	/* Entering game. Showed welcom, mail message */
+
+	/* NOTE: Move char to room after getting last CR */
 	d->character->next = character_list;
 	character_list = d->character;
 	char_to_room(d->character,d->character->in_room);
@@ -501,7 +501,7 @@ void nanny(struct descriptor_data *d, char *arg)
 
     case CON_PWDNCNF:
 	for (; isspace(*arg); arg++) ;
-	if (strcmp( d->scratch, arg)) 
+	if (strcmp( d->scratch, arg))
 	    SEND_TO_Q("\r\nPassword doesn't match!\r\n", d);
 	else {
 	    strncpy(d->pwd, crypt(arg, d->pwd), 10);
@@ -510,7 +510,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	    /* NOTE: No need to enter game to finalize change. */
 	    /* NOTE: Here, d->character->in_room is NOWHERE.   */
 	    save_char(d->character);
-	    SEND_TO_Q("\n\rDone.\n\r", d);
+	    SEND_TO_Q("\r\nDone.\r\n", d);
 	}
 	SEND_TO_Q("\r\n*** PRESS RETURN : ", d);
 	STATE(d) = CON_RMOTD;
@@ -518,9 +518,9 @@ void nanny(struct descriptor_data *d, char *arg)
 
     case CON_DELCNF:
 	/* check passwd */
-	while (*arg && isspace(*arg)) arg++; 
+	while (*arg && isspace(*arg)) arg++;
 	if (strncmp( crypt(arg, d->pwd), d->pwd, 10)) {
-	    SEND_TO_Q("\n\rWrong Password\r\n", d);
+	    SEND_TO_Q("\r\nWrong Password\r\n", d);
 	    SEND_TO_Q("\r\n*** PRESS RETURN : ", d);
 	    STATE(d) = CON_RMOTD;
 	}
@@ -581,7 +581,7 @@ int _parse_name(char *arg, char *name)
 	return (1);
 
     return (0);
-} 
+}
 
 void query_status(struct descriptor_data *d)
 {
@@ -660,7 +660,7 @@ void roll_abilities(struct char_data *ch)
 	break;
     }
     ch->tmpabilities = ch->abilities;
-} 
+}
 
 int improve_status(struct char_data *ch, char arg)
 {
@@ -859,7 +859,7 @@ void reset_char(struct char_data *ch)
 	GET_MOVE(ch) = 1;
     if (GET_MANA(ch) <= 0)
 	GET_MANA(ch) = 1;
-} 
+}
 
 void do_title(struct char_data *ch, char *argument, int cmd);
 
@@ -870,33 +870,33 @@ void set_title(struct char_data *ch)
     titles[GET_CLASS(ch)-1][GET_LEVEL(ch)].title_f)
 
 
-    do_title( ch, READ_TITLE(ch), 0 ); 
+    do_title( ch, READ_TITLE(ch), 0 );
     /* NOTE: do_title() will do same thing */
     /*
     if (GET_TITLE(ch))
-	RECREATE(GET_TITLE(ch), char, strlen(READ_TITLE(ch)) + 1); 
+	RECREATE(GET_TITLE(ch), char, strlen(READ_TITLE(ch)) + 1);
     else
 	CREATE(GET_TITLE(ch), char, strlen(READ_TITLE(ch))+1);
 
     strcpy(GET_TITLE(ch), READ_TITLE(ch));
     */
-} 
+}
 
 void do_start(struct char_data *ch)
 {
     extern void advance_level(struct char_data *ch, int level_up);
 
-    /* send_to_char("Welcome. This is now your character in MUD.\n\r", ch); */
+    /* send_to_char("Welcome. This is now your character in MUD.\r\n", ch); */
 
     GET_LEVEL(ch) = 1;
     GET_EXP(ch) = 1;
     set_title(ch);
 
-    /* 
-    switch (GET_CLASS(ch)) { 
+    /*
+    switch (GET_CLASS(ch)) {
     case CLASS_MAGIC_USER: break;
     case CLASS_CLERIC: break;
-    case CLASS_THIEF: 
+    case CLASS_THIEF:
 	ch->skills[SKILL_SNEAK].learned = 10;
 	ch->skills[SKILL_HIDE].learned = 5;
 	ch->skills[SKILL_STEAL].learned = 15;
@@ -928,7 +928,7 @@ void do_save(struct char_data *ch, char *argument, int cmd)
 
     if (IS_NPC(ch) || !ch->desc)
 	return;
-    sprintf(buf, "Saving %s.\n\r", GET_NAME(ch));
+    sprintf(buf, "Saving %s.\r\n", GET_NAME(ch));
     send_to_char(buf, ch);
     save_char(ch);
     stash_char(ch);
@@ -936,7 +936,7 @@ void do_save(struct char_data *ch, char *argument, int cmd)
 
 /* NOTE: NEW! undo switch and forget snoop.
 	Code separated from extract_char()	*/
-void return_original(struct char_data *ch ) 
+void return_original(struct char_data *ch )
 {
     struct descriptor_data *t_desc;
     extern void do_return(struct char_data *ch, char *argument, int cmd);
@@ -944,13 +944,13 @@ void return_original(struct char_data *ch )
     /* NOTE: This is not needed for mobile */
     if (IS_MOB(ch) )
 	return;
-    
+
     if( ch->desc) {
 	/* Forget snooping */
 	if (ch->desc->snoop.snooping)
 	    ch->desc->snoop.snooping->desc->snoop.snoop_by = 0;
 	if (ch->desc->snoop.snoop_by) {
-	    send_to_char("Your victim is no longer among us.\n\r",
+	    send_to_char("Your victim is no longer among us.\r\n",
 			 ch->desc->snoop.snoop_by);
 	    ch->desc->snoop.snoop_by->desc->snoop.snooping = 0;
 	}
@@ -964,7 +964,7 @@ void return_original(struct char_data *ch )
 	    if (t_desc->original == ch)
 		do_return(t_desc->character, "", 0);
     }
-} 
+}
 
 void do_quit(struct char_data *ch, char *argument, int cmd)
 {
@@ -980,11 +980,11 @@ void do_quit(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     if (GET_POS(ch) == POS_FIGHTING) {
-	send_to_char("No way! You are fighting.\n\r", ch);
+	send_to_char("No way! You are fighting.\r\n", ch);
 	return;
-    } 
+    }
     if (GET_POS(ch) < POS_STUNNED) {
-	send_to_char("You die before your time!\n\r", ch);
+	send_to_char("You die before your time!\r\n", ch);
 	die(ch, GET_LEVEL(ch), NULL);	/* cyb :do not know who killed him */
 	return;
     }
@@ -1002,7 +1002,7 @@ void do_quit(struct char_data *ch, char *argument, int cmd)
     }
 }
 
-/* ------------------------------------------------------------ */ 
+/* ------------------------------------------------------------ */
 /* NOTE: 'title' command is replaced by 'set title <title>'.  */
 /* NOTE: do_title() is called by do_set() and set_title(). */
 
@@ -1010,10 +1010,10 @@ void do_title(struct char_data *ch, char *argument, int cmd)
 {
     char buf[MAX_BUFSIZ];
 
-    argument = skip_spaces(argument); 
+    argument = skip_spaces(argument);
     if (*argument) {
 	if (GET_TITLE(ch))
-	    RECREATE(GET_TITLE(ch), char, strlen(argument)+1); 
+	    RECREATE(GET_TITLE(ch), char, strlen(argument)+1);
 	else
 	    CREATE(GET_TITLE(ch), char, strlen(argument)+1);
 
@@ -1022,9 +1022,9 @@ void do_title(struct char_data *ch, char *argument, int cmd)
     /* BUG FIX: Prevent (null) title */
     if (!GET_TITLE(ch) || !(GET_TITLE(ch)[0]))
 	GET_TITLE(ch) = strdup("None");
-    sprintf(buf, "You are %s %s\n\r", GET_NAME(ch), GET_TITLE(ch));
+    sprintf(buf, "You are %s %s\r\n", GET_NAME(ch), GET_TITLE(ch));
     send_to_char(buf, ch);
-} 
+}
 
 /* NOTE: Called by do_set() to set wimpy time value.  */
 void do_wimpy(struct char_data *ch, char *argument, int cmd)
@@ -1051,11 +1051,11 @@ void do_wimpy(struct char_data *ch, char *argument, int cmd)
 	    wimpy_limit = GET_PLAYER_MAX_HIT(ch) * 60 / 100;
 
 	if (wimpyness > wimpy_limit)
-	    send_to_char("All that you can do is fleeing?\n\r", ch);
+	    send_to_char("All that you can do is fleeing?\r\n", ch);
 	else {
 	    /* NOTE: wimpy 0 means flee at 1/10 of max hit by default */
 	    /* And wimpy time will be incresed as max hit increase. */
-	    sprintf(buf, "Set your wimpy time to %d, now.\n\r",
+	    sprintf(buf, "Set your wimpy time to %d, now.\r\n",
 		    (wimpyness ? wimpyness : GET_MAX_HIT(ch) / 10));
 	    send_to_char(buf, ch);
 	    ch->specials.wimpyness = wimpyness;
@@ -1065,27 +1065,27 @@ void do_wimpy(struct char_data *ch, char *argument, int cmd)
     }
     else {
 	if (IS_SET(ch->specials.act, PLR_WIMPY)) {
-	    send_to_char("You are not wimpy now.\n\r", ch);
+	    send_to_char("You are not wimpy now.\r\n", ch);
 	    REMOVE_BIT(ch->specials.act, PLR_WIMPY);
 	}
 	else {
-	    send_to_char("You are wimpy now.\n\r", ch);
+	    send_to_char("You are wimpy now.\r\n", ch);
 	    SET_BIT(ch->specials.act, PLR_WIMPY);
 	}
     }
 }
 
 /* NOTE: NEW! mortal player command 'set' will replace OLD commands
-    'nochat', 'noshout', 'notell', 'compact', 'brief', 'hangul', 
+    'nochat', 'noshout', 'notell', 'compact', 'brief', 'hangul',
     'solo', 'wimpy', 'title' and will set 'pagelength' of display.
     Old wizard command 'set' is renamed 'wizset'.
 
-    'chat', 'shout', ... , 'solo' is binary keyword which will take 
-	one argument: 'yes', 'no', 'on', 'off'.  
+    'chat', 'shout', ... , 'solo' is binary keyword which will take
+	one argument: 'yes', 'no', 'on', 'off'.
     'title' keyword will take string arg as new title.
     'pagelength' keyword will take page length arg between 10 - 50.
     'wimpy' keyword will take binary arg or wimpy time value arg.
-	Ex) set tell off; set hangul no ; set wimpy 2000 
+	Ex) set tell off; set hangul no ; set wimpy 2000
 
     If there is no arg but keyword, it will print current value of that attrib.
 */
@@ -1095,38 +1095,38 @@ void do_set(struct char_data *ch, char *argument, int cmd)
     char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
     int para, attrib, val ;
     extern int is_number(char *str);
-    static char *set_list[] = { "", 
+    static char *set_list[] = { "",
 	"chat", "shout", "tell", "compact", "brief",
 	"hangul", "solo", "wimpy", "door", "pagelength", "title", "\n" };
 
 #define SET_ATTRS "chat, shout, tell, compact, brief, hangul, solo, door\r\n" \
     "        [yes/no/on/off]   wimpy yes/no/<value>, \r\n" \
-    "        pagelength <n>, title <title> \r\n" 
+    "        pagelength <n>, title <title> \r\n"
 
     static int attrib_list[] = { -1 , PLR_NOCHAT, PLR_NOSHOUT, PLR_NOTELL,
-    	PLR_COMPACT, PLR_BRIEF, PLR_KOREAN, PLR_SOLO, PLR_WIMPY, 
+    	PLR_COMPACT, PLR_BRIEF, PLR_KOREAN, PLR_SOLO, PLR_WIMPY,
 	PLR_AUTOOPEN, 0 };
     static char *yn[] = { "", "yes", "no", "on", "off", "\n" };
 
     static char *(msg[])[2] =  { {"",""},
-	{ "You can now hear chats again.\n\r", 
-	  "From now on, you won't hear chats.\n\r" },
-	{ "You can now hear shouts again.\n\r",
-	  "From now on, you won't hear shouts.\n\r" }, 
-	{ "You can now hear tells again.\n\r",
-	  "From now on, you won't hear tells.\n\r" },
-	{ "You are now in the uncompacted mode.\n\r",
-	  "You are now in compact mode.\n\r" }, 
-	{ "Brief mode off.\n\r",
-	  "Brief mode on.\n\r" }, 
-	{ "English command message mode.\n\r",
-	  "You can now see hangul command messages.\n\r" },
+	{ "You can now hear chats again.\r\n",
+	  "From now on, you won't hear chats.\r\n" },
+	{ "You can now hear shouts again.\r\n",
+	  "From now on, you won't hear shouts.\r\n" },
+	{ "You can now hear tells again.\r\n",
+	  "From now on, you won't hear tells.\r\n" },
+	{ "You are now in the uncompacted mode.\r\n",
+	  "You are now in compact mode.\r\n" },
+	{ "Brief mode off.\r\n",
+	  "Brief mode on.\r\n" },
+	{ "English command message mode.\r\n",
+	  "You can now see hangul command messages.\r\n" },
 	{ "Now, others can follow you.\r\n",
 	  "Now, others cannot follow you.\r\n" },
-	{ "You are not wimpy now.\n\r",
-	    "You are wimpy now.\n\r" }, 
-	{ "You will not open door when a door is unlocked.\n\r",
-	    "You will open door when a door is unlocked.\n\r" }, }; 
+	{ "You are not wimpy now.\r\n",
+	    "You are wimpy now.\r\n" },
+	{ "You will not open door when a door is unlocked.\r\n",
+	    "You will open door when a door is unlocked.\r\n" }, };
 
     if (IS_NPC(ch)) return;
 
@@ -1134,38 +1134,38 @@ void do_set(struct char_data *ch, char *argument, int cmd)
 
     if( !*arg1 || (para = search_block(arg1, set_list, 0)) <= 0 || para > 11 )
 	send_to_char("Set parameter: " SET_ATTRS, ch );
-    else if( para ==  11 ) 
-	do_title( ch, arg2, 0 ); 
-    else if( para == 10 ) { 
+    else if( para ==  11 )
+	do_title( ch, arg2, 0 );
+    else if( para == 10 ) {
 	val = atoi(arg2); 	/* NOTE: Set page length */
 	if ( val >= 10  && val <= 50)
-	    ch->desc->page_len = val; 
+	    ch->desc->page_len = val;
 	sprintf(arg1, "Current page length is %d.\r\n", ch->desc->page_len );
 	send_to_char(arg1, ch);
     }
-    else if( para ==  9 && is_number(arg2)) 
+    else if( para ==  9 && is_number(arg2))
 	do_wimpy( ch, arg2, 0 );
     else  {
 	attrib =  attrib_list[para];
 	if ( *arg2 && ( val = search_block(arg2, yn, 1 )) > 0 ) {
-	    if( ((val == 1 || val == 3 ) == ( para > 3 ))) 
+	    if( ((val == 1 || val == 3 ) == ( para > 3 )))
 		SET_BIT( GET_ACT(ch), attrib );
 	    else
-		REMOVE_BIT( GET_ACT(ch), attrib ); 
+		REMOVE_BIT( GET_ACT(ch), attrib );
 	}
 	send_to_char(msg[para][(IS_ACTPLR( ch, attrib)? 1:0)], ch );
     }
-} 
+}
 
 void do_bank(struct char_data *ch, char *argument, int cmd)
 {
-    send_to_char_han("You can only do that at the bank.\n\r",
+    send_to_char_han("You can only do that at the bank.\r\n",
 		     "그것은 은행에서만 가능한 일이에요.", ch);
-} 
+}
 
 void do_post(struct char_data *ch, char *argument, int cmd)
 {
-    send_to_char("You can only post on board.\n\r", ch);
+    send_to_char("You can only post on board.\r\n", ch);
 }
 
 #ifdef UNUSED_CODE
@@ -1183,5 +1183,5 @@ void do_solo(struct char_data *ch, char *argument, int cmd)
 	send_to_char("Now, others cannot follow you.", ch);
 	SET_BIT(ch->specials.act, PLR_SOLO);
     }
-} 
+}
 #endif		/* UNUSED_CODE */

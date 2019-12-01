@@ -57,7 +57,7 @@ Madam Esther~
 Madam Esther is standing here, trying to sell dust.
 ~
 She is very big standing here, smiling to you. She looks like the
-mother of the town, sometimes playing with the children, sometimes 
+mother of the town, sometimes playing with the children, sometimes
 helping the old people, with their daily work. All this in spite of
 her own hard work.
 ~
@@ -72,7 +72,7 @@ A hard-eyed cowboy is here, going about his business.
 He is dressed in jeans, boots, a hat that shades his face so that it
 is hard to see, where he's looking. He is walking around purposefully,
 as if searching for something, occasionally getting down to one knee,
-making strange passes in the air, then picking up pieces of the ground 
+making strange passes in the air, then picking up pieces of the ground
 that are apparently not so solid now.
 ~
 8 0 400
@@ -335,7 +335,7 @@ W 35 11 9 8 13
 #3041
 Massacre~
 The Massacre~
-A Massacre is here. 
+A Massacre is here.
 ~
 Massacre hit you with massacre power !.
 ~
@@ -609,11 +609,11 @@ juggernaut~
 the Juggernaut~
 A Juggernaut a working its way methodically through this area.
 ~
-It is _very_ large, some 10 yds in length, walking on several hundred 
-tiny legs. It is metallic-looking, with large spots of corrosion 
-marring its angular skin. On its sides are large signs, written in an 
-incomprehensible language. On its top, a small eye cluster swivels back 
-and forth continually. A number of tentacles sweeps the ground around 
+It is _very_ large, some 10 yds in length, walking on several hundred
+tiny legs. It is metallic-looking, with large spots of corrosion
+marring its angular skin. On its sides are large signs, written in an
+incomprehensible language. On its top, a small eye cluster swivels back
+and forth continually. A number of tentacles sweeps the ground around
 it.
 ~
 92 0 400
@@ -674,9 +674,9 @@ cranky librarian~
 The Cranky Librarian~
 A Cranky Librarian snoozes with a copy of Mein Kampf.
 ~
-Stretched out at her desk, before you snoozes the librarian feared most by 
+Stretched out at her desk, before you snoozes the librarian feared most by
 scholars everywhere!  She is the epitome of all the mean-spirited librarians
-you have know since childhood.  Wake her and suffer her wrath!  
+you have know since childhood.  Wake her and suffer her wrath!
 ~
 42 128 0
 M 28 7 14 18 13
@@ -995,7 +995,7 @@ The small bat~
 The small fierce-looking bat is hanging from the ceiling, obviously sleeping.
 ~
 You have never in your entire life seen such a mean looking small creature,
-though it looks rather peaceful, hanging there, sleeping. The thought of 
+though it looks rather peaceful, hanging there, sleeping. The thought of
 arousing this cruel creaturedoesn'
 ~
 104 524288 -500
@@ -1025,7 +1025,7 @@ The horrifying Mudmonster~
 A horrifying Mudmonster is slowly evolving from the mud ...
 ~
 It sure looks like something out of a horrormovie. It strongly resembles
-a huge figure made up from mud alone, and it sure looks like it had human 
+a huge figure made up from mud alone, and it sure looks like it had human
 flesh for breakfast and is strongly intent on having the same for dinner
 - Perhaps you?
 ~
@@ -1089,7 +1089,7 @@ The junior mindflayer~
 The junior mindflayer is here, watching you carefully from the corner.
 ~
 This mindflayer is six foot high. It has a small mace in its belt, and is
-dressed in purple and black cloth. It has four small tentacles in the 
+dressed in purple and black cloth. It has four small tentacles in the
 center of its head.
 ~
 140 8 -350
@@ -1231,8 +1231,8 @@ slave human~
 A Human Slave~
 A Human Slave stands here drooling and calling mindlessly for his master.
 ~
-A creature that once human stands here. He is gibbering incoherently and 
-calling for Githyanki master. He turns a blank stare upon you and drools on 
+A creature that once human stands here. He is gibbering incoherently and
+calling for Githyanki master. He turns a blank stare upon you and drools on
 his chest.
 ~
 108 0 10
@@ -1243,8 +1243,8 @@ acolyte~
 An Acolyte of Yunin~
 An Acolyte of Yunin is here acting silly (like her goddess).
 ~
-An Acolyte of Yunin is wondering why the HELL Yunin put her here. She runs 
-up to you and rubs against you asking for help, she seems to be carrying a 
+An Acolyte of Yunin is wondering why the HELL Yunin put her here. She runs
+up to you and rubs against you asking for help, she seems to be carrying a
 bag full of snowballs.
 ~
 12 0 1000
@@ -1307,9 +1307,9 @@ githyanki child~
 A Githyanki Child~
 A child is here screaming its head off WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
 ~
-A small creature with an oversized mouth and throat is here. It 
+A small creature with an oversized mouth and throat is here. It
 wails in torment...
-                   
+
               WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!
 ~
 108 1048600 1000
@@ -1320,7 +1320,7 @@ githyanki citizen~
 A Githyanki Citizen~
 A Githyanki Citizen is here going about his business.
 ~
-A Githyanki Citizen walks about minding his own business, like buying 
+A Githyanki Citizen walks about minding his own business, like buying
 slaves, buying humans for dinner, pieces of mindflayers as jewelry etc.
 ~
 204 0 -500
@@ -1342,8 +1342,8 @@ githyanki sergeant~
 A Githyanki Sergeant~
 A Githyanki Sergeant stands here watching over his underlings.
 ~
-A Githyanki Sergeant, known throughout the world and planes as the most 
-viscious creatures to ever exist, stands here glaring at you. Before you 
+A Githyanki Sergeant, known throughout the world and planes as the most
+viscious creatures to ever exist, stands here glaring at you. Before you
 can even think he screams "DIE ADVENTURER SCUM!!" and attacks you...
 ~
 108 524312 -650
@@ -1354,7 +1354,7 @@ githyanki guard~
 A Githyanki Royal Guard~
 A Githyanki Royal Guard Stands here watching diligently.
 ~
-The guard is dressed in what appears to be the finest Githyanki armor 
+The guard is dressed in what appears to be the finest Githyanki armor
 bearing the symbol of Lofwick.
 ~
 108 24 -351
@@ -1365,8 +1365,8 @@ githyanki lord~
 The GITHYANKI lord~
 As you enter the room, the Lord raises his sword to attack !
 ~
-A figure that can only be described as impressive, the Githyanki Lord is 
-truly frightening. He licks his lips as he looks at you with hunger in his 
+A figure that can only be described as impressive, the Githyanki Lord is
+truly frightening. He licks his lips as he looks at you with hunger in his
 eyes.
 ~
 4142 152 -1000
@@ -1377,8 +1377,8 @@ githyanki warlock~
 A Warlock~
 A Githyanki Warlock is here making strange gestures in your direction.
 ~
-A Githyanki Warlock the most feared of all Githyanki stands here. He is 
-dressed in strange garb covered with arcane runes. As you enter his domain 
+A Githyanki Warlock the most feared of all Githyanki stands here. He is
+dressed in strange garb covered with arcane runes. As you enter his domain
 he looks at you and begins gesturing....
 ~
 46 1048730 -1000
@@ -1389,8 +1389,8 @@ githyanki priest~
 A Priest~
 A Githyanki Priest is here praying to Sinat for his blessings.
 ~
-A Githyanki Priest wearing the symbols of Sinat and Karn prays for someone 
-to work his ministrations of Magic, Mayhem, Chaos, Destruction, and Death 
+A Githyanki Priest wearing the symbols of Sinat and Karn prays for someone
+to work his ministrations of Magic, Mayhem, Chaos, Destruction, and Death
 on. When you enter he states simply..."My prayers have been answered!".
 ~
 46 1048730 -1000
@@ -1414,7 +1414,7 @@ mirissa wife~
 Mirissa Redferne~
 Mirissa the undead wife of Loftwick is sleeping here in eternal torment.
 ~
-A beautiful female lies here on the bed. When she turns over you are 
+A beautiful female lies here on the bed. When she turns over you are
 horrified to see that one half of her face has been ritually and
 methodically burned away, leaving horrible scars.
 ~
@@ -1426,7 +1426,7 @@ dark creeper~
 A Dark Creeper~
 A Dark Creeper is here trying to hide in the shadows.
 ~
-A small creature about the size of the dwarf is skulking here. He is 
+A small creature about the size of the dwarf is skulking here. He is
 dressed from head to toe in dark and somber clothes.
 ~
 76 524288 -500
@@ -1702,7 +1702,7 @@ Merlin~
 Merlin~
 Merlin is standing here, hard at work on his magic.
 ~
-Merlin is the powerful wizard in the land.  It is rumored that he can 
+Merlin is the powerful wizard in the land.  It is rumored that he can
 woop Looney's butt any day.
 ~
 10 136 550
@@ -1743,7 +1743,7 @@ O 15 3 11 10 13
 #15316
 royal clergyman~
 The royal clergyman~
-The royal clergyman is here, deep in thought.          
+The royal clergyman is here, deep in thought.
 ~
 A Royal Clergyman stands here, dressed in simple robes.
 ~
@@ -1756,7 +1756,7 @@ The King~
 The king is here, basking in his riches.
 ~
 The king sits here on a golden throne.  He looks as though he is content, as he
-is being fed grapes. 
+is being fed grapes.
 ~
 14 136 0
 W 29 5 14 3 4
@@ -1787,7 +1787,7 @@ guard castle~
 The castle guard~
 A castle guard stands here on the alert.
 ~
-Obviously this man takes pride in his job, as you notice 
+Obviously this man takes pride in his job, as you notice
 his armor and equipment are very clean and organized.
 From the looks of his muscles, you can see why he was chosen
 to be a guard.
@@ -1851,7 +1851,7 @@ gobind singh guru sikhu~
 Gobind Singh~
 Gobind Singh, last of the Sikhu Gurus, is here meditating....
 ~
-  Yes it is Gobind Singu, last guru of the Sikhism religion of 
+  Yes it is Gobind Singu, last guru of the Sikhism religion of
 northern India.  He is a very fit and strong man with long dark hair
 dangling about his body.  Though he is a holy man in search of
 moksha, he is also a very powerful looking warrior.
@@ -2021,7 +2021,7 @@ O 8 9 17 10 19
 mage~
 the Mage~
 A small intelligent looking mage is standing here. It looks like he
-knows his way with the magic. 
+knows his way with the magic.
 ~
 His IQ makes almost any dikumud player look stupid..
 ~
@@ -2114,8 +2114,8 @@ draconian~
 The Draconian~
 The Draconian is standing here.
 ~
-This horrible creature is a bizarre cross between a man and a dragon.  He 
-has black scales and a seven foot wingspan.  He scowls at you and hefts his 
+This horrible creature is a bizarre cross between a man and a dragon.  He
+has black scales and a seven foot wingspan.  He scowls at you and hefts his
 spear as you enter the room.
 ~
 8238 8 -900
@@ -2146,10 +2146,10 @@ M 38 6 15 4 15
 #15714
 cleric draconian~
 The Holy Draconian~
-A Draconian is here, deep in thought.          
+A Draconian is here, deep in thought.
 ~
-A Draconian stands here, dressed in simple robes.  Around his neck you 
-notice a golden medallion in the shape of a five headed dragon.  
+A Draconian stands here, dressed in simple robes.  Around his neck you
+notice a golden medallion in the shape of a five headed dragon.
 ~
 46 136 -900
 C 35 5 18 5 16
@@ -2157,11 +2157,11 @@ C 35 5 18 5 16
 #15715
 king draconian~
 The Draconian King~
-A Draconian wearing fine clothes is here, pondering his greatness.          
+A Draconian wearing fine clothes is here, pondering his greatness.
 ~
-The king of the draconians sits here on a golden throne.  He looks as 
-though he could crush your head with a single blow.  Yet, you sense that he 
-is controlled by a greater power. 
+The king of the draconians sits here on a golden throne.  He looks as
+though he could crush your head with a single blow.  Yet, you sense that he
+is controlled by a greater power.
 ~
 8206 136 -900
 W 40 5 12 9 16
@@ -2169,11 +2169,11 @@ W 40 5 12 9 16
 #15716
 concubine draconian~
 A Concubine~
-A concubine is resting here. 
+A concubine is resting here.
 ~
-This is a concubine of the king.  She is lounging here, wearing nothing at 
-all.  You find yourself strangely repulsed as she draws a knife and 
-prepares to defend herself. 
+This is a concubine of the king.  She is lounging here, wearing nothing at
+all.  You find yourself strangely repulsed as she draws a knife and
+prepares to defend herself.
 ~
 8202 0 -500
 W 25 10 13 9 13
@@ -2181,7 +2181,7 @@ W 25 10 13 9 13
 #15717
 bodyguard draconian~
 A bodyguard~
-A bodyguard is here, staring at you menacingly. 
+A bodyguard is here, staring at you menacingly.
 ~
 This creature has devoted its life to defending the king.  Your intrusion has
 not pleased it.
@@ -2203,10 +2203,10 @@ W 41 17 7 13 13
 #15731
 dragon red~
 The Great Red Dragon~
-A Red Dragon is here, contemplating your existence. 
+A Red Dragon is here, contemplating your existence.
 ~
 This huge red dragon dominates the chamber.  As you turn to flee, he grins at
-you and invites you to stay...forever! 
+you and invites you to stay...forever!
 ~
 8238 520 -1000
 W 39 5 11 16 4
@@ -2214,7 +2214,7 @@ W 39 5 11 16 4
 #15732
 dragon black~
 The Great Black Dragon~
-A Black Dragon is here, laughing at your insolence. 
+A Black Dragon is here, laughing at your insolence.
 ~
 This huge black wyrm laughs at your puny weapons.  You realize that he is not
 going to roll over and die for you.
@@ -2225,7 +2225,7 @@ W 39 5 11 18 9
 #15733
 dragon white~
 The Great White Dragon~
-A White Dragon is here, waiting for you. 
+A White Dragon is here, waiting for you.
 ~
 This dragon towers over you.  Recalling your previous experiences with white
 dragons, you are not afraid.  It smiles at you and says 'I think you will find
@@ -2237,10 +2237,10 @@ W 39 6 14 5 16
 #15735
 dragon green~
 The Ancient Green Dragon~
-A Green Dragon is here, looking distraught. 
+A Green Dragon is here, looking distraught.
 ~
-This huge beast appears to be the most directly related to the draconians. 
-It looks at you with sorrow in its eyes and says 'You have slaughtered my 
+This huge beast appears to be the most directly related to the draconians.
+It looks at you with sorrow in its eyes and says 'You have slaughtered my
 children.  Prepare to die.'
 ~
 8238 520 -1000
@@ -2249,7 +2249,7 @@ W 39 16 9 6 5
 #15736
 hydra~
 A large hydra~
-A Hydra is here, blocking the doorway. 
+A Hydra is here, blocking the doorway.
 ~
 A hydra is here, guarding the entrance to a sealed vault.  You have the feeling
 it isn't happy to see you.
@@ -2260,7 +2260,7 @@ W 37 7 15 7 9
 #15737
 slave human~
 A human slave~
-A Human slave is here, hard at work.          
+A Human slave is here, hard at work.
 ~
 He looks like he's under a lot of stress.  He would probably like it if you
 left him alone.
@@ -2282,9 +2282,9 @@ W 26 10 12 13 17
 #15751
 dragon phase~
 the phase dragon~
-A Phase Dragon is darting around the room.          
+A Phase Dragon is darting around the room.
 ~
-This small dragon looks like he's up to no good. 
+This small dragon looks like he's up to no good.
 ~
 8392 524288 -300
 W 27 9 13 10 11
@@ -2292,10 +2292,10 @@ W 27 9 13 10 11
 #15752
 fool draconian~
 the draconian fool~
-A Fool is here, making fun of you.          
+A Fool is here, making fun of you.
 ~
-This dragon man looks VERY foolish, dressed in a green and blue striped 
-suit.  As you enter the room, he points at you and laughs. 
+This dragon man looks VERY foolish, dressed in a green and blue striped
+suit.  As you enter the room, he points at you and laughs.
 ~
 8264 0 0
 W 25 13 10 10 14
@@ -2303,10 +2303,10 @@ W 25 13 10 10 14
 #15753
 queen draconian~
 the Draconian Queen~
-A Female Draconian sits, here, looking very important.          
+A Female Draconian sits, here, looking very important.
 ~
-This draconian looks VERY busy as she orders her slaves around.  You think 
-it might be a good idea to leave her alone. 
+This draconian looks VERY busy as she orders her slaves around.  You think
+it might be a good idea to leave her alone.
 ~
 14 0 -600
 W 40 5 16 16 3
@@ -2525,7 +2525,7 @@ guard zyekian~
 The Zyekian guard~
 A Zyekian guard stands here on the alert.
 ~
-Obviously this man takes pride in his job, as you notice 
+Obviously this man takes pride in his job, as you notice
 his armor and equipment are very clean and organized.
 From the looks of his muscles, you can see why he was chosen
 to be a guard.
@@ -2582,8 +2582,8 @@ orak~
 Orak~
 Orak is here, feeding on small fish.
 ~
-He has very large tusks protruding from his mouth, making you 
-feel a little uneasy, yet you find yourself facinated by this 
+He has very large tusks protruding from his mouth, making you
+feel a little uneasy, yet you find yourself facinated by this
 beast.
 ~
 74 8 -200
@@ -2604,7 +2604,7 @@ zyekian mage~
 The Zyekian mage~
 A Zyekian mage is here carving something into his staff.
 ~
-He is covered only by a simple robe.  
+He is covered only by a simple robe.
 ~
 74 10 450
 M 22 4 18 9 7
@@ -2616,7 +2616,7 @@ The King is here, sitting on his throne.
 ~
 He is dressed in fine clothing.  Clean shaven and well mannered, he
 looks at you with all knowing eyes.  A broad smile covers his
-face as he greets you.  He is the last survivor of the great 
+face as he greets you.  He is the last survivor of the great
 Jiran race.
 ~
 74 136 1000
@@ -2627,7 +2627,7 @@ giant leech~
 The giant leech~
 A giant leech jumps from beneath the water at you.
 ~
-You see large needle-like fangs come from an opening 
+You see large needle-like fangs come from an opening
 underneath its bulging eyes.
 ~
 108 1048584 -1000
@@ -2679,7 +2679,7 @@ cook~
 The cook~
 The castle cook is here preparing some gourmet foods.
 ~
-He is very short and bald.  The only hair on his head is a 
+He is very short and bald.  The only hair on his head is a
 long mustache which curves upwards.  He claps his hands
 and a few servants start running in different directions.
 ~
@@ -2703,7 +2703,7 @@ blue conger~
 The blue conger~
 A blue conger grabs onto your leg and starts gnawing away.
 ~
-It is long and thin.  This eel-like creature loves the taste 
+It is long and thin.  This eel-like creature loves the taste
 of blood.
 ~
 40 8 -1000
@@ -2806,7 +2806,7 @@ Kalten~
 kalten~
 Kalten the Necromancer is resting here at his table.
 ~
-Kalten is tall and old.  Staring at him, you become awed at the 
+Kalten is tall and old.  Staring at him, you become awed at the
 knowledge he must possess.  Kalten is the Kings' advisor.
 ~
 10 8 900
@@ -2817,8 +2817,8 @@ brontosaurus bronto~
 Brontosaurus~
 An enormous lizard munches peacefully on ferns.
 ~
-Huge and ancient, before you is the last Brontosaurus in existence.  
-Possibly the most magnificent specimen ever, this one weighs in at close to 
+Huge and ancient, before you is the last Brontosaurus in existence.
+Possibly the most magnificent specimen ever, this one weighs in at close to
 60 tons!  WATCH THOSE FEET, HE'S MOVING!!!
 ~
 1052698 5310464 0
@@ -3685,7 +3685,7 @@ W 15 9 11 13 17
 #16616
 white dwarf~
 A white dwarf~
-A tiny white dwarf is trying to sneak away from duty. 
+A tiny white dwarf is trying to sneak away from duty.
 ~
 Like the red giant,he is also appointed to stand guard for the galaxy.
 But somehow he manages to escape. Though tiny, it can take a lot of hits!
@@ -3741,7 +3741,7 @@ Orion the hunter~
 Orion is still hunting for Scorpio.
 ~
 He is the lengendary hunter who almost defeated Taurus the bull, but got killed by Scorpio. The gods put them both up as constellations but one appears on one
-side of the sky and the other the other side so they will never meet. 
+side of the sky and the other the other side so they will never meet.
 ~
 74 128 300
 W 31 9 15 5 8
@@ -3762,8 +3762,8 @@ head draco~
 The Head of the Draco~
 The gigantic Head of Draco lurks out from beneath and prepares to roast you.
 ~
-This evil-looking head is even larger than a giant. He is the last guardian 
-before entering the inner galaxy. His neck is flexing in a random fashion so 
+This evil-looking head is even larger than a giant. He is the last guardian
+before entering the inner galaxy. His neck is flexing in a random fashion so
 hitting the head is certainly not easy.
 ~
 8298 136 -1000
@@ -3784,7 +3784,7 @@ aries zodiac~
 Aries~
 Aries is sitting here, welcoming you.
 ~
-You see a white goat here, the first guardian of the Zodiac, 
+You see a white goat here, the first guardian of the Zodiac,
 also the ruler of Spring. He looks as if he is expecting you.
 ~
 74 128 700
@@ -3795,7 +3795,7 @@ taurus zodiac~
 Taurus~
 Taurus wants to leave,but has been forced to stay as a guardian here.
 ~
-You see a wild-looking bull with a bad temper. He is well-built and looks like 
+You see a wild-looking bull with a bad temper. He is well-built and looks like
 he can fight well..Indeed he has fought with Orion before and survived.
 ~
 106 136 -100
@@ -3806,7 +3806,7 @@ gemini zodiac~
 Gemini~
 Gemini is looking for his brother, have you seen him?
 ~
-As soon as you see him you know that he is the most perfect man you have seen. 
+As soon as you see him you know that he is the most perfect man you have seen.
 You can't find any imperfections on him.
 ~
 74 128 1000
@@ -3828,8 +3828,8 @@ cancer zodiac~
 Cancer~
 Cancer the crab is here,hoarding the treasure away from you.
 ~
-You see a gigantic crab(YES, it is bigger than you!) with a crushed shell. 
-Legend is that he was crushed by Hercules when he was sent by Hera to kill him. So Hera made Cancer a constellation for his work. 
+You see a gigantic crab(YES, it is bigger than you!) with a crushed shell.
+Legend is that he was crushed by Hercules when he was sent by Hera to kill him. So Hera made Cancer a constellation for his work.
 ~
 74 128 0
 W 32 8 11 4 4
@@ -3839,8 +3839,8 @@ leo zodiac~
 Leo~
 Leo the lion is roaring at you, he is ready for a strike!
 ~
-His metallic skin means that he could be the one which was killed by Hercules 
-during his first Labour. His skin is so weapon-proof that Hercules had to use 
+His metallic skin means that he could be the one which was killed by Hercules
+during his first Labour. His skin is so weapon-proof that Hercules had to use
 his bare hands to tear the lion into two from its mouth!
 ~
 106 136 -100
@@ -3872,7 +3872,7 @@ scorpio zodiac~
 Scorpio~
 Scorpio is moving his tail towards you, waiting to put an end to some mortals.
 ~
-Ever since he killed Orion in the myths, he has been punished by having 
+Ever since he killed Orion in the myths, he has been punished by having
 Sagittarius' arrow aimed at his heart forever.
 ~
 106 136 -200
@@ -3881,11 +3881,11 @@ W 32 4 7 12 7
 #16634
 sagittarius zodiac~
 Sagittarius~
-Sagittarius the centaur is waiting to let go of his well aimed arrow...  
+Sagittarius the centaur is waiting to let go of his well aimed arrow...
 ~
 He is a centaur and a well trained archer. Noone can escape his arrows.
 ~
-74 128 1000
+74 32896 1000
 W 33 7 12 4 5
 1000 8 8 M
 #16635
@@ -3893,8 +3893,8 @@ capricon zodiac~
 Capricon~
 Capricon is here, feeling bored..He wants a fight!
 ~
-You see a mean-looking ram here. He used to be a fierce fighter in the ancient 
-war but now the gods have decided to put him here, to live out the rest of his 
+You see a mean-looking ram here. He used to be a fierce fighter in the ancient
+war but now the gods have decided to put him here, to live out the rest of his
 days in peace.
 ~
 74 128 700
@@ -3905,8 +3905,8 @@ aquarius zodiac~
 Aquarius~
 The beautiful Aquarius is standing here, holding THE vessel.
 ~
-The pretty Water Bearer is smiling at you, you think you'd better give her a 
-hand with holding the vessel. 
+The pretty Water Bearer is smiling at you, you think you'd better give her a
+hand with holding the vessel.
 ~
 74 128 1000
 W 32 7 5 6 12
@@ -3916,7 +3916,7 @@ pisces mermaid zodiac~
 Pisces the mermaid~
 Pisces the mermaid is sitting here, waiting for your help.
 ~
-She has been forced to serve her husband, who had been cursed to turn into a 
+She has been forced to serve her husband, who had been cursed to turn into a
 fish and she deserves your pity.
 ~
 74 128 1000
@@ -3937,7 +3937,7 @@ bear ursa major~
 Ursa Major the bear~
 Ursa Major the bear is the last defence against any intruders..
 ~
-The Huge Bear which resides in the northern skies is here. 
+The Huge Bear which resides in the northern skies is here.
 You think you'd better turn back. At least you have got a chance of survival.
 ~
 106 136 0
@@ -3968,9 +3968,9 @@ polaris polar star~
 Polaris, the polar star~
 Polaris,the polar star, who commands the whole Universe, stands before you!
 ~
-He is the Master of the Universe, (NOT He-Man!), the most powerful!  
-Even the King and the Queen obey him. As you look at him you notice he is 
-actually a STAR, with dazzling bright light... 
+He is the Master of the Universe, (NOT He-Man!), the most powerful!
+Even the King and the Queen obey him. As you look at him you notice he is
+actually a STAR, with dazzling bright light...
 Maybe you shouldn't have come here at all?
 ~
 74 138 1000
@@ -4101,7 +4101,7 @@ The Old Treant~
 A huge, gnarled tree stands here, battered by age and nature.
 ~
 The old tree looks as though the wind has battered and torn at it for years.
-Very few leaves remain. Its limbs are crooked and gnarled. It moans as the 
+Very few leaves remain. Its limbs are crooked and gnarled. It moans as the
 wind pushes it back and forth.
 ~
 10 0 250
@@ -5122,7 +5122,7 @@ W 30 16 3 3 7
 #17411
 lamia beast~
 The lamia~
-A strange lamia stands here waiting for her next meal. 
+A strange lamia stands here waiting for her next meal.
 ~
 This is a creature with the upper torso of a beautiful woman, but the lower
 body of a four-legged beast. She licks her lips as she looks at you greedily.
@@ -5560,7 +5560,7 @@ sura~
 The sura~
 A tough sura stands here training his own skills.
 ~
-The sura looks very tough. he has his own skills for handling weapon. 
+The sura looks very tough. he has his own skills for handling weapon.
 he won many fights.
 ~
 104 8 999
@@ -5569,7 +5569,7 @@ W 33 4 7 7 7
 #17712
 guru~
 The guru~
-A guru stands here advancing his own skills. 
+A guru stands here advancing his own skills.
 ~
 The guru is training for becoming sura.
 ~
@@ -5702,7 +5702,7 @@ micro quadruplets quadruplet~
 Micro~
 Micro, fourth quadruplets, stands here dancing with his micro sword.
 ~
-He is fourth brother of quadruplets of Geron. He is using very sharp micro sword. 
+He is fourth brother of quadruplets of Geron. He is using very sharp micro sword.
 ~
 42 136 1000
 W 28 5 15 6 12
@@ -5812,7 +5812,7 @@ geron najang~
 Geron~
 Geron,The third najang, sits on his uncomfortable throne.
 ~
-He is third najang. baborer shaves him now. 
+He is third najang. baborer shaves him now.
 ~
 1048618 136 1000
 W 40 9 13 8 7
@@ -5910,7 +5910,7 @@ grand gatekeeper~
 The Grand Gatekeeper~
 A Grand Gatekeeper is guarding the gate.
 ~
-He is best gatekeeper. Grand Gatekeeper he is. he is selected from many first class sura. 
+He is best gatekeeper. Grand Gatekeeper he is. he is selected from many first class sura.
 ~
 42 136 1000
 W 32 4 9 5 7
@@ -7256,7 +7256,7 @@ king sonkwun~
 SonKwun~
 King sonkwun 손권이 잠시 명상에 젖은듯 지긋이 눈을 감고 있습니다.
 ~
-그는 오나라의 왕입니다.형인 손책의 뒤를 이어 오나라를 이끌어 나가고 
+그는 오나라의 왕입니다.형인 손책의 뒤를 이어 오나라를 이끌어 나가고
 있으나 그에겐 위나라와 촉나라의 존재가 무척신경이 쓰이나 봅니다.
 ~
 1052714 33556616 0
@@ -7627,7 +7627,7 @@ The 2nd apprenciate mudang SongCheongSeo is standing here.
 ~
 무당파의 앞날을 이끌고갈 송청서가 2대제자들의 앞에서서
 그들을 지도하고 있습니다. 그의 눈에선 희망찬 내일의 모습을
-볼수가 있군요. 
+볼수가 있군요.
 ~
 104 33556632 450
 W 40 6 10 3 13
@@ -7696,7 +7696,7 @@ guest~
 Guest~
 The Guest of mudang is walking through training hall.
 ~
-무당파를 구경하러 온 손님이 무당의 후기지수들이 수련하는 
+무당파를 구경하러 온 손님이 무당의 후기지수들이 수련하는
 모습을 바라보고 있습니다. 무당의 젊은 인재들의 모습에서
 매우 강렬한 인상을 받았나 봅니다.
 ~
@@ -8143,7 +8143,7 @@ W 39 7 12 14 15
 #19214
 factory president robot~
 President robot~
-The factory president robot stands here. 
+The factory president robot stands here.
 ~
 ~
 42 16777368 500
@@ -8206,7 +8206,7 @@ W 35 5 14 13 9
 #19238
 electro magnet~
 Electro magnet~
-A electro magnet suffers from lack of electric power..He finds electric 
+A electro magnet suffers from lack of electric power..He finds electric
 socket.
 ~
 ~
@@ -8506,7 +8506,7 @@ W 40 5 17 16 13
 #19428
 lover of id queen~
 Lover of id queen~
-He loves id queen so guarding id queen.  
+He loves id queen so guarding id queen.
 ~
 ~
 1572874 17827992 500

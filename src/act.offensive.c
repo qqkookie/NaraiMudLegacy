@@ -41,56 +41,56 @@ struct char_data *get_victim(struct char_data *ch, char *argument, int cmd)
     if ((!name[0] || !(victim = get_char_room_vis(ch, name)))
 	    && !(victim = ch->specials.fighting )) {
 	if (cmd == CMD_KICK )
-	    send_to_char("Kick who?\n\r", ch);
+	    send_to_char("Kick who?\r\n", ch);
 	else if (cmd == CMD_BACKSTAB )
-	    send_to_char("backstab who?\n\r", ch);
+	    send_to_char("backstab who?\r\n", ch);
 	else if (cmd == CMD_BASH )
-	    send_to_char("Bash who?\n\r", ch);
+	    send_to_char("Bash who?\r\n", ch);
 	else if (cmd == CMD_PUNCH )
-	    send_to_char("punch who?\n\r", ch);
+	    send_to_char("punch who?\r\n", ch);
 	else if (cmd == CMD_FLASH )
-	    send_to_char("flash who?\n\r", ch);
+	    send_to_char("flash who?\r\n", ch);
 	else if (cmd == CMD_SHOOT )
-	    send_to_char("Shoot whom?\n\r", ch);
+	    send_to_char("Shoot whom?\r\n", ch);
 	else if (cmd == CMD_SPIN_BIRD_KICK )
-	    send_to_char_han("Kick who?", "누굴 때려요?\n\r", ch);
+	    send_to_char_han("Kick who?", "누굴 때려요?\r\n", ch);
 	else if (cmd == CMD_SHOURYUKEN )
-	    send_to_char("누굴 때려?\n\r", ch);
+	    send_to_char("누굴 때려?\r\n", ch);
 	else if (cmd == CMD_THROW )
-	    send_to_char("throw what to whom?\n\r", ch);
+	    send_to_char("throw what to whom?\r\n", ch);
 	else
-	    send_to_char("Attack who?\n\r", ch);
+	    send_to_char("Attack who?\r\n", ch);
 	return NULL;
-    } 
+    }
     else if (victim == ch) {
 	if (cmd == CMD_BACKSTAB )
-	    send_to_char("How can you sneak up on yourself?\n\r", ch);
+	    send_to_char("How can you sneak up on yourself?\r\n", ch);
 	else if (!IS_NPC(ch) && cmd == CMD_SHOOT)
-	    send_to_char("Shoot yourself? Nah...\n\r", ch);
+	    send_to_char("Shoot yourself? Nah...\r\n", ch);
 	else if ( cmd == CMD_SPIN_BIRD_KICK || cmd == CMD_SHOURYUKEN )
-	    send_to_char("앗! 나의 실수 ~~~ ...\n\r", ch);
+	    send_to_char("앗! 나의 실수 ~~~ ...\r\n", ch);
 	else if (cmd == CMD_THROW )
-	    send_to_char("Come on now, that's rather stupid!\n\r", ch);
+	    send_to_char("Come on now, that's rather stupid!\r\n", ch);
 	else
-	    send_to_char("Aren't we funny today...\n\r", ch);
+	    send_to_char("Aren't we funny today...\r\n", ch);
 	return NULL;
-    } 
+    }
     else if (!IS_NPC(victim) && !(victim->desc)) {
 	if (cmd == CMD_THROW)
-	    send_to_char("throw something to ghost? No way!\n\r",ch);
+	    send_to_char("throw something to ghost? No way!\r\n",ch);
 	else
-	    send_to_char_han("Attack ghost? No way!\n\r", 
-		"유령을 치겠다고? 미친소리!\n\r", ch); 
+	    send_to_char_han("Attack ghost? No way!\r\n",
+		"유령을 치겠다고? 미친소리!\r\n", ch);
 	return NULL;
     }
     else if ((cmd == CMD_SHOOT) && IS_WIZARD(victim)) {
 	if (!IS_NPC(ch))
-	    send_to_char("Shoot an immortal?  Never.\n\r", ch);
+	    send_to_char("Shoot an immortal?  Never.\r\n", ch);
 	return NULL;
     }
 
     return victim;
-} 
+}
 
 void do_hit(struct char_data *ch, char *argument, int cmd)
 {
@@ -100,20 +100,20 @@ void do_hit(struct char_data *ch, char *argument, int cmd)
 
     one_argument(argument, arg);
 
-    // OLD: if ((GET_LEVEL(ch) == LEV_IMMO) && (!IS_NPC(ch))) 
+    // OLD: if ((GET_LEVEL(ch) == LEV_IMMO) && (!IS_NPC(ch)))
     if(prohibit_violence(ch))
 	return;
     if (!*arg) {
-	send_to_char("Hit whom?\n\r", ch);
+	send_to_char("Hit whom?\r\n", ch);
 	return;
-    } 
+    }
     victim = get_char_room_vis(ch, arg);
     if (!victim) {
-	send_to_char("They aren't here.\n\r", ch);
+	send_to_char("They aren't here.\r\n", ch);
 	return;
     }
     if (victim == ch) {
-	send_to_char("You hit yourself..OUCH!.\n\r", ch);
+	send_to_char("You hit yourself..OUCH!.\r\n", ch);
 	act("$n hits $mself, and says OUCH!",
 	    FALSE, ch, 0, victim, TO_ROOM);
 	return;
@@ -133,7 +133,7 @@ void do_hit(struct char_data *ch, char *argument, int cmd)
     /* NOTE: Prevent hitting player in same group   */
     /* NOTE: Hitting grouped mob permited           */
     if (!IS_NPC(ch) && !IS_NPC(victim)
-	&& IS_AFFECTED(ch, AFF_GROUP) 
+	&& IS_AFFECTED(ch, AFF_GROUP)
 	&& IS_AFFECTED(victim, AFF_GROUP)) {
 	struct char_data *ch_group, *vic_group;
 
@@ -166,7 +166,7 @@ void do_hit(struct char_data *ch, char *argument, int cmd)
 	    /* HVORFOR DET?? */
     }
     else
-	send_to_char("You do the best you can!\n\r", ch);
+	send_to_char("You do the best you can!\r\n", ch);
 }
 
 void do_kill(struct char_data *ch, char *argument, int cmd)
@@ -186,13 +186,13 @@ void do_kill(struct char_data *ch, char *argument, int cmd)
     }
     one_argument(argument, arg);
     if (!*arg) {
-	send_to_char("Kill who?\n\r", ch);
+	send_to_char("Kill who?\r\n", ch);
     }
     else {
 	if (!(victim = get_char_room_vis(ch, arg)))
-	    send_to_char("They aren't here.\n\r", ch);
+	    send_to_char("They aren't here.\r\n", ch);
 	else if (ch == victim)
-	    send_to_char("Your mother would be so sad.. :(\n\r", ch);
+	    send_to_char("Your mother would be so sad.. :(\r\n", ch);
 	else {
 	    if (NOT_GOD(ch) && IS_GOD(victim))
 		return;
@@ -215,20 +215,20 @@ void do_backstab(struct char_data *ch, char *argument, int cmd)
 	return;
 
     if (!IS_NPC(ch)) {
-	if (!ch->equipment[WIELD]) 
+	if (!ch->equipment[WIELD])
 	    send_to_char(
-		"You need to wield a weapon, to make it a succes.\n\r", ch); 
-	else if (ch->equipment[WIELD]->obj_flags.value[3] != 11) 
+		"You need to wield a weapon, to make it a succes.\r\n", ch);
+	else if (ch->equipment[WIELD]->obj_flags.value[3] != 11)
 	    send_to_char(
-		"Only piercing weapons can be used for backstabbing.\n\r", ch);
-	else if (ch->specials.fighting) 
+		"Only piercing weapons can be used for backstabbing.\r\n", ch);
+	else if (ch->specials.fighting)
 	    send_to_char(
-		"You can't backstab while fighting, too alert!\n\r", ch);
+		"You can't backstab while fighting, too alert!\r\n", ch);
 	/* NOTE: check mana and move */
 	else if (GET_MOVE(ch) <= 0 || GET_MANA(ch) <= 0)
-		send_to_char("You are too exhausted to backstab.\n\r", ch);
+		send_to_char("You are too exhausted to backstab.\r\n", ch);
 	/* NOTE: Doubious code. Removed */
-	/* else if (GET_CLASS(ch) <= 20) return; */ 
+	/* else if (GET_CLASS(ch) <= 20) return; */
 	else
 	    goto ok;
 	return;
@@ -246,7 +246,7 @@ ok:
 	damage(ch, victim, 0, SKILL_BACKSTAB);
     }
     else {
-	/* NOTE: similar MANA, MOVE consumption as shouryuken */ 
+	/* NOTE: similar MANA, MOVE consumption as shouryuken */
 	GET_MOVE(ch) -= 400 - GET_SKILLED(ch, SKILL_BACKSTAB);
 	GET_MANA(ch) -= 250 - GET_SKILLED(ch, SKILL_BACKSTAB);
 	/* NOTE: Add full deley on backstab success. */
@@ -267,7 +267,7 @@ void do_bash(struct char_data *ch, char *argument, int cmd)
     if ( !victim )
 	return;
 
-/* NOTE: Dyaus and Tido thinks 
+/* NOTE: Dyaus and Tido thinks
      mob (e.g. jangkak ) shoud not bash player without wielding weapon.   */
 //      if (/* !IS_NPC(ch) && */ !ch->equipment[WIELD]) {
 /* NOTE: Cookie thinks PC/NPC should be able to bash without wielding weapon. */
@@ -275,7 +275,7 @@ void do_bash(struct char_data *ch, char *argument, int cmd)
     if (IS_NPC(ch) && !ch->equipment[WIELD])
 	return;
     if (!IS_NPC(ch) && !ch->equipment[WIELD]) {
-	send_to_char("You need to wield a weapon to bash.\n\r", ch);
+	send_to_char("You need to wield a weapon to bash.\r\n", ch);
 	return;
     }
 */
@@ -309,15 +309,15 @@ void do_multi_kick(struct char_data *ch, char *argument, int cmd)
 
     victim = ch->specials.fighting;
     if (!victim) {
-	send_to_char("This skill can be used only in fighting!\n\r", ch);
+	send_to_char("This skill can be used only in fighting!\r\n", ch);
 	return;
     }
     else if (GET_MOVE(ch) < 100) {
-	send_to_char("You are too exhausted!\n\r", ch);
+	send_to_char("You are too exhausted!\r\n", ch);
 	return;
     }
     else if (victim == ch) {
-	send_to_char("Aren't we funny today...\n\r", ch);
+	send_to_char("Aren't we funny today...\r\n", ch);
 	return;
     }
 
@@ -337,13 +337,13 @@ void do_multi_kick(struct char_data *ch, char *argument, int cmd)
 
 	/* NOTE: Check victim location */
 	if ( ch->in_room != victim->in_room )
-	    break; 
+	    break;
 	if (percent > GET_LEARNED(ch, SKILL_MULTI_KICK))
 	    damage(ch, victim, 0, SKILL_MULTI_KICK);
-	else 
+	else
 	    damage(ch, victim, dam, SKILL_MULTI_KICK);
     }
-    WAIT_STATE(ch, PULSE_VIOLENCE); 
+    WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
 void do_kick(struct char_data *ch, char *argument, int cmd)
@@ -384,13 +384,13 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
 	return;
 
     if (GET_MANA(ch) < 200) {
-	send_to_char("You do not have enough mana!!!\n\r", ch);
+	send_to_char("You do not have enough mana!!!\r\n", ch);
 	return;
     }
     /* NOTE: Now, you can 'punch' while wielding weapon. */
     /*
     if (!IS_NPC(ch) && ch->equipment[WIELD]) {
-	send_to_char("You must unwield to make it success!!!\n\r", ch);
+	send_to_char("You must unwield to make it success!!!\r\n", ch);
 	return;
     }
     */
@@ -412,7 +412,7 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
         /* NOTE: To print punch damage message, use fight_message() in damage() */
 	// punch message in in "lib/messages" #109
 	/*
-	send_to_char("You failed to punch him WHAT a DAMN!!!!!\n\r", ch);
+	send_to_char("You failed to punch him WHAT a DAMN!!!!!\r\n", ch);
 	act("$n failed to punch down $N!!!", TRUE, ch, 0, victim, TO_ROOM);
 	*/
 	damage(ch, victim, 0, SKILL_PUNCH);
@@ -421,7 +421,7 @@ void do_punch(struct char_data *ch, char *argument, int cmd)
     else {
 	INCREASE_SKILLED(ch, victim, SKILL_PUNCH);
 	/*
-	send_to_char("You send a big punch ORURURURURURURURURU!!!!!!\n\r", ch);
+	send_to_char("You send a big punch ORURURURURURURURURU!!!!!!\r\n", ch);
 	act("$n sends a POWERFUL PUNCH!!! ORURURURURURURURU!!!!!",
 	    TRUE, ch, 0, 0, TO_ROOM);
 	*/
@@ -468,7 +468,7 @@ void do_flash(struct char_data *ch, char *argument, int cmd)
 
     /*
     if (!IS_NPC(victim) && PC_MORTAL(ch)) {
-        send_to_char("You can't use flash to player\n\r",ch);
+        send_to_char("You can't use flash to player\r\n",ch);
 	return;
     }
     */
@@ -481,30 +481,30 @@ void do_flash(struct char_data *ch, char *argument, int cmd)
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 
     if (percent > ch->skills[SKILL_FLASH].learned) {
-    /* NOTE: To print flash damage message, use fight_message() in damage() */ 
+    /* NOTE: To print flash damage message, use fight_message() in damage() */
 	/*
-	send_to_char("You can't get chance ...\n\r", ch);
+	send_to_char("You can't get chance ...\r\n", ch);
 	act("$n try flash attack $N, but failed."
 	    ,FALSE, ch, 0, victim, TO_NOTVICT);
 	*/
 	damage(ch, victim, 0, SKILL_FLASH);
     }
-    else { 
+    else {
 	/* NOTE: Easier INCREASE_SKILLED() */;
 	INCREASE_SKILLED2(ch, victim, SKILL_FLASH);
 
 	/* flash is enhenced by about 3.1 times of old */
-	/* NOTE: OLD: d = GET_MOVE(ch) * 
+	/* NOTE: OLD: d = GET_MOVE(ch) *
 			(2 + (GET_SKILLED(ch, SKILL_FLASH) >> 5)) / 5; */
-	d = GET_MOVE(ch) 
-	    * (GET_SKILLED(ch, SKILL_FLASH) / 2 + GET_DEX(ch) * 2 + 16 ) / 32; 
+	d = GET_MOVE(ch)
+	    * (GET_SKILLED(ch, SKILL_FLASH) / 2 + GET_DEX(ch) * 2 + 16 ) / 32;
 	ch->points.move = 0;
 
 	/* messages */
-	/* send_to_char("You attack like flash ...\n\r", ch); */
+	/* send_to_char("You attack like flash ...\r\n", ch); */
 	/*
 	send_to_char("You can see star above your head ?!? , you are confused!\r\n",
-		     victim); 
+		     victim);
 	act("$n moves like flash and attack with flash power!!! ",
 	    FALSE, ch, 0, victim, TO_NOTVICT);
 	*/
@@ -528,12 +528,12 @@ void shoot(struct char_data *ch, struct char_data *victim, int type)
     if (!ch->equipment[HOLD] ||		/* Perhaps modified */
 	GET_ITEM_TYPE(ch->equipment[HOLD]) != ITEM_FIREWEAPON) {
 	if (!IS_NPC(ch))
-	    send_to_char("To shoot, you need to HOLD a firing weapon.\n\r", ch);
+	    send_to_char("To shoot, you need to HOLD a firing weapon.\r\n", ch);
 	return;
     }
     if (ch->equipment[HOLD]->obj_flags.value[0] <= 0) {
 	if (!IS_NPC(ch))
-	    send_to_char("Oops.  Nothing to shoot.\n\r", ch);
+	    send_to_char("Oops.  Nothing to shoot.\r\n", ch);
 	act("Hmmm.  $n fires an empty $p.",
 	    FALSE, ch, ch->equipment[HOLD], 0, TO_ROOM);
 	return;
@@ -553,12 +553,24 @@ void shoot(struct char_data *ch, struct char_data *victim, int type)
 	act("Thwapp! $n shoots $N with $p.",
 	    FALSE, ch, ch->equipment[HOLD], victim, TO_NOTVICT);
 	dam = ch->equipment[HOLD]->obj_flags.value[2];
-	if ((!IS_NPC(ch)) 
+	if ((!IS_NPC(ch))
 	    && (GET_GUILD(ch) == OUTLAW || GET_GUILD(ch) == POLICE))
 	    dam = dam * 2;
 	if (!IS_NPC(victim))
 	    WAIT_STATE(victim, PULSE_VIOLENCE * 2);
 	damage(ch, victim, dam, TYPE_SHOOT);
+
+	// NOTE: add magic bullet spell damage
+	struct obj_data *firearm = ch->equipment[HOLD];
+	if (OBJ_VALUE3(firearm) > 0) {
+	    extern struct obj_data *get_obj_num(int nr);
+	    struct obj_data *ammo = get_obj_num(GET_OBJ_VIRTUAL(firearm)+1);
+	    if (ammo && GET_ITEM_TYPE(ammo) == ITEM_PROJECTILE) {
+		(*spell_info[OBJ_VALUE0(ammo)].spell_pointer)
+		    (OBJ_VALUE3(ammo), ch, "", SPELL_TYPE_WAND, victim, NULL);
+	    }
+	}
+
 	if ( !IS_NPC(ch) && NOT_GOD(ch))
 	    WAIT_STATE(ch, PULSE_VIOLENCE * 2);
     }
@@ -584,8 +596,8 @@ void do_shoot(struct char_data *ch, char *argument, int cmd)
 }
 
 
-/* NOTE: NEW! Calculate single hit damage dice of warrior. 
-This is used to calculate shouryuken/spin bird kick damage. */ 
+/* NOTE: NEW! Calculate single hit damage dice of warrior.
+This is used to calculate shouryuken/spin bird kick damage. */
 int warrior_total_damage(struct char_data *ch)
 {
     int dam;
@@ -595,10 +607,10 @@ int warrior_total_damage(struct char_data *ch)
 
     dam = str_app[STRENGTH_APPLY_INDEX(ch)].todam;
     dam += GET_DAMROLL(ch);
-    if (wielded) 
+    if (wielded)
 	dam += dice(wielded->obj_flags.value[1], wielded->obj_flags.value[2]);
     else
-	dam += dice(ch->specials.damnodice, ch->specials.damsizedice); 
+	dam += dice(ch->specials.damnodice, ch->specials.damsizedice);
 
     if ( held && CAN_WEAR( held, ITEM_WIELD) && number(1, 10) > 4 )
 	dam += dice(held->obj_flags.value[1], held->obj_flags.value[2]);
@@ -614,35 +626,35 @@ void do_spin_bird_kick(struct char_data *ch, char *argument, int cmd)
     int level_plus;
 
     if (GET_SEX(ch) != SEX_FEMALE) {
-	send_to_char("여자 전용 스킬입니다. 성전환을 하는게 어떨지~~\n\r", ch); 
+	send_to_char("여자 전용 스킬입니다. 성전환을 하는게 어떨지~~\r\n", ch);
 	return;
     }
-    
+
     victim = get_victim(ch, argument, cmd);
     if ( !victim )
-	return; 
+	return;
     else if (GET_MANA(ch) < 100) {
-	send_to_char("You do not have enough mana.\n\r", ch); 
+	send_to_char("You do not have enough mana.\r\n", ch);
 	return;
     }
     else if (GET_MOVE(ch) < 0) {
-	send_to_char("당신은 너무 지쳐서 시도할 수 가 없군요!\n\r", ch);
-	do_say(ch, "학학학...난 너무 지쳤어!!!\n\r", 0);
+	send_to_char("당신은 너무 지쳐서 시도할 수 가 없군요!\r\n", ch);
+	do_say(ch, "학학학...난 너무 지쳤어!!!\r\n", 0);
 	return;
     }
 
     do_say(ch, "스핀~~~버드~~~킥!!!", 0);
     if (!AWAKE(victim)) {
-	send_to_char("자는 사람을 치다니 비겁한 년!!\n\r", ch);
+	send_to_char("자는 사람을 치다니 비겁한 년!!\r\n", ch);
 	/* NOTE: You can attack shouryuken/spin bird kick sleeping victim  */
 	/* return; */
     }
 
     /* NOTE: Equal base dam value to shouryuken */
     /* NOTE: OLD base damage about 1100,   NEW base : 992 */
-    /*  dam = (GET_LEVEL(ch) * (number(13,18) 
+    /*  dam = (GET_LEVEL(ch) * (number(13,18)
 		+ (GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK) >> 3))) */
-    dam = (GET_LEVEL(ch) * (number(13,18) + (GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK) >> 3)) 
+    dam = (GET_LEVEL(ch) * (number(13,18) + (GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK) >> 3))
 	+ warrior_total_damage(ch))/2;
 
     if (saves_spell(victim, SAVING_HIT_SKILL))
@@ -654,10 +666,10 @@ void do_spin_bird_kick(struct char_data *ch, char *argument, int cmd)
 	    2 * (GET_LEVEL(victim) + GET_DEX(victim))
 	    - (GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK) >> 3); */
 
-    percent = number(1,101) - ( GET_AC(victim) + GET_HITROLL(ch))/16 
-		- (GET_LEVEL(ch) + 2*GET_DEX(ch)) - 10 
+    percent = number(1,101) - ( GET_AC(victim) + GET_HITROLL(ch))/16
+		- (GET_LEVEL(ch) + 2*GET_DEX(ch)) - 10
 		+ 2 * (GET_LEVEL(victim) + 2*GET_DEX(victim))
-		- GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK) / 6; 
+		- GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK) / 6;
 
     if (percent < GET_LEARNED(ch, SKILL_SPIN_BIRD_KICK)) {
 	INCREASE_SKILLED(ch, victim, SKILL_SPIN_BIRD_KICK);
@@ -666,7 +678,7 @@ void do_spin_bird_kick(struct char_data *ch, char *argument, int cmd)
 	/* NOTE: Reduce point consumption: MANA: 300->250, MOVE 600 -> 400  */
 	GET_MOVE(ch) -= 400 - GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK);
 	GET_MANA(ch) -= 250 - GET_SKILLED(ch, SKILL_SPIN_BIRD_KICK);
-	/* NOTE: Avrge damage = 36 dam(24-48): similar to shouryuken */  
+	/* NOTE: Avrge damage = 36 dam(24-48): similar to shouryuken */
 	for (i = 0; i < tmp; i++) {
 	    switch (number(1, 9)) {
 	    case 1: act("차차차차찻~~~~", TRUE, ch, 0, 0, TO_ROOM); break;
@@ -690,12 +702,12 @@ void do_spin_bird_kick(struct char_data *ch, char *argument, int cmd)
 	    if(ch->in_room != victim->in_room)
 		break;
 	}
-	send_to_char("하하...내 치맛바람 맛이 어떠냐!!!\n\r", ch);
+	send_to_char("하하...내 치맛바람 맛이 어떠냐!!!\r\n", ch);
 	WAIT_STATE(ch, PULSE_VIOLENCE);  /* NOTE: Full deley on success */
     }
     else {
 	damage(ch, victim, dam, TYPE_HIT);
-	send_to_char("잉~~~괜히 속옷만 보여줬다...\n\r", ch);
+	send_to_char("잉~~~괜히 속옷만 보여줬다...\r\n", ch);
 	WAIT_STATE(ch, PULSE_VIOLENCE/2); /* NOTE: Half-deley on failure */
     }
     /* WAIT_STATE(ch, PULSE_VIOLENCE/3); */
@@ -711,33 +723,33 @@ void do_shouryuken(struct char_data *ch, char *argument, int cmd)
     int level_plus;
 
     if (GET_SEX(ch) != SEX_MALE) {
-	send_to_char("남자 전용 스킬입니다.성전환을 하는게 어떨지~~\n\r", ch);
-	return; 
+	send_to_char("남자 전용 스킬입니다.성전환을 하는게 어떨지~~\r\n", ch);
+	return;
     }
     victim = get_victim(ch, argument, cmd);
     if ( !victim )
-	return; 
+	return;
     else if (GET_MANA(ch) < 100) {
-	send_to_char("You do not have enough mana.\n\r",ch);
+	send_to_char("You do not have enough mana.\r\n",ch);
 	return;
     }
     else if (GET_MOVE(ch) < 0) {
-	send_to_char("당신은 너무 지쳐서 시도할 수 가 없군요!\n\r", ch);
-	do_say(ch, "헥헥헥...난 너무 지쳤어!!!\n\r", 0);
+	send_to_char("당신은 너무 지쳐서 시도할 수 가 없군요!\r\n", ch);
+	do_say(ch, "헥헥헥...난 너무 지쳤어!!!\r\n", 0);
 	return;
     }
 
-    do_say(ch, "쇼~~~류~~켄~", 0); 
+    do_say(ch, "쇼~~~류~~켄~", 0);
     if (!AWAKE(victim)) {
-	send_to_char("자는 사람을 치다니 비겁한 놈!!\n\r", ch);
+	send_to_char("자는 사람을 치다니 비겁한 놈!!\r\n", ch);
 	/* NOTE: You can attack shouryuken/spin bird kick sleeping victim  */
 	/* return; */
-    } 
+    }
     /* NOTE: OLD base damage about 1100,   NEW base : 992 */
-    /*  dam = (GET_LEVEL(ch) * (number(13, 18) + 
+    /*  dam = (GET_LEVEL(ch) * (number(13, 18) +
 		(GET_SKILLED(ch, SKILL_SHOURYUKEN) >> 3))   */
     dam = (GET_LEVEL(ch) * (number(13, 18) + (GET_SKILLED(ch, SKILL_SHOURYUKEN) >> 3))
-	+ warrior_total_damage(ch))/2;  
+	+ warrior_total_damage(ch))/2;
 
     if (saves_spell(victim, SAVING_HIT_SKILL))
 	dam >>= 1;
@@ -759,7 +771,7 @@ void do_shouryuken(struct char_data *ch, char *argument, int cmd)
 	level_plus = 10 + (GET_LEVEL(ch) + GET_SKILLED(ch, SKILL_SHOURYUKEN)) / 8;
 	tmp = number(10, level_plus);
 	*/
-	/* NOTE: Av damage = 26 dam -> 26 dam + 9 dam  */ 
+	/* NOTE: Av damage = 26 dam -> 26 dam + 9 dam  */
 	level_plus = (GET_LEVEL(ch)- 25 + GET_SKILLED(ch, SKILL_SHOURYUKEN))/8;
 	tmp = number(0, level_plus/3);
 	/* NOTE: Reduce point consumption: MANA: 300->250, MOVE 600 -> 400  */
@@ -777,35 +789,35 @@ void do_shouryuken(struct char_data *ch, char *argument, int cmd)
 	    }
 	    /*
 	    if(!(tmp_vic=get_char_room_vis(ch,victim_name))) {
-		if (ch->specials.fighting) 
+		if (ch->specials.fighting)
 		    tmp_vic = ch->specials.fighting;
-		} 
+		}
 	    */
 	    damage(ch, victim, dam, TYPE_HIT);
 	    /* NOTE: Check victim's location */
-	    if (ch->in_room != victim->in_room) goto end; 
-	} 
+	    if (ch->in_room != victim->in_room) goto end;
+	}
 
 	act("쇼오오오~~", TRUE, ch, 0, 0, TO_ROOM);
 	damage(ch, victim, dam, TYPE_HIT);
 
 	/* NOTE: Check victim's location */
-	if (ch->in_room != victim->in_room) goto end; 
+	if (ch->in_room != victim->in_room) goto end;
 	dam *= number(2, 3);
 	act("류우우우~~", TRUE, ch, 0, 0, TO_ROOM);
 	damage(ch, victim, dam, TYPE_HIT);
 
-	if (ch->in_room != victim->in_room) goto end; 
+	if (ch->in_room != victim->in_room) goto end;
 	dam *= number(5, 7 + (GET_SKILLED(ch, SKILL_SHOURYUKEN) >> 4));
 	act("켄!!!!!!!!", TRUE, ch, 0, 0, TO_ROOM);
 	damage(ch, victim, dam, TYPE_HIT);
 end:
-	send_to_char("빠샤!!!!!!\n\r", ch);
+	send_to_char("빠샤!!!!!!\r\n", ch);
 	WAIT_STATE(ch, PULSE_VIOLENCE);  /* NOTE: Full-deley on failure */
     }
     else {
 	damage(ch, victim, dam, TYPE_HIT);
-	send_to_char("당신은 승룡권을 실패해서 몹시 지칩니다.\n\r", ch);
+	send_to_char("당신은 승룡권을 실패해서 몹시 지칩니다.\r\n", ch);
 	WAIT_STATE(ch, PULSE_VIOLENCE/2);  /* NOTE: Half-deley on failure */
     }
     /* WAIT_STATE(ch, PULSE_VIOLENCE/3); */
@@ -823,23 +835,23 @@ void do_throw_object(struct char_data *ch, char *argument, int cmd)
     argument = one_argument(argument, obj_name);
     victim = get_victim(ch, argument, cmd);
     if ( !victim )
-	return; 
+	return;
 
     else if (GET_CLASS(ch) != CLASS_THIEF && IS_MORTAL(ch)) {
-	send_to_char("This skill is for thieves only.\n\r", ch);
+	send_to_char("This skill is for thieves only.\r\n", ch);
 	return;
-    } 
+    }
     else if (ch && GET_MANA(ch) < 100) {
-	send_to_char("You do not have enough mana!\n\r", ch);
+	send_to_char("You do not have enough mana!\r\n", ch);
 	return;
     }
     else if (!ch->carrying
 	    || !(obj = get_obj_in_list_vis(ch, obj_name, ch->carrying))) {
-	send_to_char("You do not have that item.\n\r", ch);
+	send_to_char("You do not have that item.\r\n", ch);
 	return;
     }
     else if (IS_SET(obj->obj_flags.extra_flags, ITEM_NODROP)) {
-	send_to_char("You can't throw it, it must be CURSED!\n\r", ch);
+	send_to_char("You can't throw it, it must be CURSED!\r\n", ch);
 	return;
     }
 
@@ -861,7 +873,7 @@ void do_throw_object(struct char_data *ch, char *argument, int cmd)
 	- (GET_SKILLED(ch, SKILL_THROW_OBJECT) >> 2);
 
     /* NOTE: Some skill message change. */
-    send_to_room( "하이야~~~~압~~~\r\n이야야~~~~합~~~\r\n", ch->in_room); 
+    send_to_room( "하이야~~~~압~~~\r\n이야야~~~~합~~~\r\n", ch->in_room);
     do_say(ch, "받아랏~~~~!!!@!#@!", 0);
     act( "$n님이 $N님에게 $p을 던집니다!!!", TRUE, ch, obj, victim, TO_NOTVICT);
 
@@ -882,7 +894,7 @@ void do_throw_object(struct char_data *ch, char *argument, int cmd)
 	extract_obj(obj);
     if (!IS_NPC(ch))
 	WAIT_STATE(ch, PULSE_VIOLENCE);
-} 
+}
 
 void do_assist(struct char_data *ch, char *argument, int cmd)
 {
@@ -894,45 +906,45 @@ void do_assist(struct char_data *ch, char *argument, int cmd)
     one_argument(argument, arg);
 
     if (!*arg) {
-	send_to_char("Assist who?\n\r", ch);
+	send_to_char("Assist who?\r\n", ch);
 	return;
-    } 
+    }
     victim = get_char_room_vis(ch, arg);
     if (!victim && strcmp(arg, "master") == 0) {
 	if (ch->master)
 	    victim = ch->master;
     }
     if (!victim) {
-	send_to_char("They aren't here.\n\r", ch);
+	send_to_char("They aren't here.\r\n", ch);
 	return;
     }
     else if (victim == ch) {
-	send_to_char("Can you assist your self?\n\r", ch);
-	act("$n tries to help $mself, and says YAHA!", 
+	send_to_char("Can you assist your self?\r\n", ch);
+	act("$n tries to help $mself, and says YAHA!",
 	    FALSE, ch, 0, victim, TO_ROOM);
 	return;
-    } 
+    }
     else if (nokillflag && !IS_NPC(ch) && IS_NPC(victim)) {
-	send_to_char("You can't help MOB.\n\r", ch);
-	return; 
-    } 
+	send_to_char("You can't help MOB.\r\n", ch);
+	return;
+    }
     /* block indirect player killing */
     else if (IS_AFFECTED(ch, AFF_CHARM) && (IS_NPC(victim)))
 	return;
 
-    else if ((GET_POS(ch) != POS_STANDING) 
+    else if ((GET_POS(ch) != POS_STANDING)
 	|| (victim == ch->specials.fighting)) {
-	send_to_char("You do the best you can!\n\r", ch);
+	send_to_char("You do the best you can!\r\n", ch);
 	return;
     }
     else if (!(victim->specials.fighting)) {
-	send_to_char("Who do you think fight ?\n\r", ch);
+	send_to_char("Who do you think fight ?\r\n", ch);
 	return;
     }
 
-    sprintf(cyb, "%s assist you !!\n\r", GET_NAME(ch));
+    sprintf(cyb, "%s assist you !!\r\n", GET_NAME(ch));
     send_to_char(cyb, victim);
-    sprintf(cyb, "You assist %s !!\n\r", GET_NAME(victim));
+    sprintf(cyb, "You assist %s !!\r\n", GET_NAME(victim));
     send_to_char(cyb, ch);
     act("$n ASSIST $N !", FALSE, ch, 0, victim, TO_NOTVICT);
     hit(ch, victim->specials.fighting, TYPE_UNDEFINED);

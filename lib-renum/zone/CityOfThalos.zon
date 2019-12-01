@@ -75,7 +75,7 @@ E 1 17431 5 16                 (2-handed sword)
 O 0 17435 1 17441             curved desk
 P 1 17425 1 17435                (scroll of enchant weapon)
 P 1 17426 2 17435                (scroll of detection)
-* 
+*
 O 0 17437 1 17443             glass cabinet
 P 1 17411 1 17437               (iron helm)
 P 1 17412 1 17437               (iron gauntlets)
@@ -83,7 +83,7 @@ P 1 17413 1 17437               (iron sleeves)
 P 1 17414 1 17437               (iron boots)
 P 1 17415 1 17437               (iron leggings)
 P 1 17416 1 17437               (iron girth)
-*    
+*
 O 0 17438 10 17452            rotten arm
 O 0 17429 5 17427             venison
 O 0 17430 1 17444             cracked fountain

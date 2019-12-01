@@ -33,10 +33,10 @@ void do_group(struct char_data *ch, char *argument, int cmd)
 
     if (!*name) {
 	if (ch && !IS_AFFECTED(ch, AFF_GROUP)) {
-	    send_to_char("But you are a member of no group?!\n\r", ch);
+	    send_to_char("But you are a member of no group?!\r\n", ch);
 	}
 	else {
-	    send_to_char("Your group consists of:\n\r", ch);
+	    send_to_char("Your group consists of:\r\n", ch);
 	    if (ch->master)
 		k = ch->master;
 	    else
@@ -63,7 +63,7 @@ void do_group(struct char_data *ch, char *argument, int cmd)
     }
 
     if (!(victim = get_char_room_vis(ch, name))) {
-	send_to_char("No one here by that name.\n\r", ch);
+	send_to_char("No one here by that name.\r\n", ch);
     }
     else {
 
@@ -81,7 +81,7 @@ void do_group(struct char_data *ch, char *argument, int cmd)
 
 	found = FALSE;
 /*
-   if (victim == ch) 
+   if (victim == ch)
    found = TRUE;
  */
 	/* NOTE: Now, you can't group/ungroup yourself. And no need to do so */
@@ -133,7 +133,7 @@ void do_group(struct char_data *ch, char *argument, int cmd)
 		    FALSE, ch, 0, victim, TO_CHAR);
 	}
     }
-} 
+}
 
 /* NOTE: Confusing code, I clean it up! */
 void do_follow(struct char_data *ch, char *argument, int cmd)
@@ -148,13 +148,13 @@ void do_follow(struct char_data *ch, char *argument, int cmd)
 
     /* NOTE: cleaned up confusing code for clarity. */
     if (!*name) {
-	send_to_char("Who do you wish to follow?\n\r", ch);
+	send_to_char("Who do you wish to follow?\r\n", ch);
     }
     else if (!(leader = get_char_room_vis(ch, name))) {
-	send_to_char("I see no person by that name here!\n\r", ch);
+	send_to_char("I see no person by that name here!\r\n", ch);
     }
     else if (IS_SET(leader->specials.act, PLR_SOLO)) {
-	send_to_char("The leader is a solo player.\n\r", ch);
+	send_to_char("The leader is a solo player.\r\n", ch);
     }
     else if (IS_AFFECTED(ch, AFF_CHARM) && (ch->master)) {
 	act("But you only feel like following $N!",
@@ -163,7 +163,7 @@ void do_follow(struct char_data *ch, char *argument, int cmd)
     /* Not Charmed follow person */
     else if (leader == ch) {
 	if (!ch->master)
-	    send_to_char("You are already following yourself.\n\r", ch);
+	    send_to_char("You are already following yourself.\r\n", ch);
 	else
 	    stop_follower(ch);
     }
@@ -188,15 +188,15 @@ void do_follow(struct char_data *ch, char *argument, int cmd)
 	add_follower(ch, leader);
     }
     return;
-} 
+}
 
 /* NOTE: die_follower() does equal job to stop_group() */
 void do_ungroup(struct char_data *ch, char *argument, int cmd)
 {
     die_follower(ch);
     REMOVE_BIT(ch->specials.affected_by, AFF_GROUP);
-    send_to_char("Your group is dismissed.\n\r", ch);
-} 
+    send_to_char("Your group is dismissed.\r\n", ch);
+}
 
 /* NOTE: Check if char is still a leader.                       */
 /*      If no one except leader is grouped, disband this group  */
@@ -204,7 +204,7 @@ int check_leadership(struct char_data *leader)
 {
     struct follow_type *f;
 
-    /* NOTE: BUG FIX : If ch is not leader, don't check leadership. 
+    /* NOTE: BUG FIX : If ch is not leader, don't check leadership.
 	A followed B. But B doesn't group A and followed C.
 	If A stop following B, asset(!ch->master) will fail. */
 
@@ -228,7 +228,7 @@ bool circle_follow(struct char_data *ch, struct char_data *victim)
     for (k = victim; k; k = k->master) {
 	if (k == ch)
 	    return (TRUE);
-    } 
+    }
     return (FALSE);
 }
 
@@ -251,7 +251,7 @@ void stop_group(struct char_data *ch)
     /* NOTE: DEBUG: my master has no follower?   */
     ASSERT(ch->master->followers );
 
-    if ( ch->master->followers->follower == ch) {   
+    if ( ch->master->followers->follower == ch) {
 	/* Head of follower-list? */
 	j = ch->master->followers;
 	ch->master->followers = j->next;
@@ -261,7 +261,7 @@ void stop_group(struct char_data *ch)
 	/* NOTE: check validity of k->next before comparing */
 	for (k = ch->master->followers; k->next ; k = k->next )
 	    if ( k->next->follower == ch) {
-		j = k->next; 
+		j = k->next;
 		k->next = j->next;
 		free(j);
 		break;
@@ -272,7 +272,7 @@ void stop_group(struct char_data *ch)
 
     ch->master = 0;
     REMOVE_BIT(ch->specials.affected_by, AFF_GROUP);
-} 
+}
 #endif		/* UNUSED_CODE */
 
 /* NOTE: Merged functionality of OLD stop_group() */
@@ -303,7 +303,7 @@ void stop_follower(struct char_data *ch)
 	act("You stop following $N.", FALSE, ch, 0, ch->master, TO_CHAR);
 	act("$n stops following $N.", FALSE, ch, 0, ch->master, TO_NOTVICT);
 	act("$n stops following you.", FALSE, ch, 0, ch->master, TO_VICT);
-    } 
+    }
 
     j = NULL;
 
@@ -330,13 +330,13 @@ void stop_follower(struct char_data *ch)
 		k->next = j->next;
 		free(j);
 		break;
-	    } 
+	    }
     }
     /* NOTE: DEBUG: OOPS! ch is not in follower list of leader. */
     ASSERT(j) ;
-	
+
     /* NOTE: BIG FIX:  assert failed on check_leadership()	*/
-    /*   check leadership only when you are member of any group.*/ 
+    /*   check leadership only when you are member of any group.*/
     /* NOTE: Call check_leadership() after removing follower */
     if (IS_AFFECTED( ch, AFF_CHARM | AFF_GROUP))
 	/* NOTE: update leadership of your leader      */
@@ -344,7 +344,7 @@ void stop_follower(struct char_data *ch)
     REMOVE_BIT(ch->specials.affected_by, AFF_CHARM | AFF_GROUP);
     /* REMOVE_BIT(ch->specials.affected_by, AFF_GROUP); */
 
-    ch->master = 0; 
+    ch->master = 0;
 }
 
 /* Called when a character that follows/is followed dies */
@@ -359,7 +359,7 @@ void die_follower(struct char_data *ch)
 	j = k->next;
 	stop_follower(k->follower);
     }
-} 
+}
 
 /* Do NOT call this before having checked if a circle of followers */
 /* will arise. CH will follow leader                               */
@@ -395,29 +395,29 @@ void do_order(struct char_data *ch, char *argument, int cmd)
     half_chop(argument, name, message);
 
     if (!*name || !*message) {
-	send_to_char("Order who to do what?\n\r", ch);
+	send_to_char("Order who to do what?\r\n", ch);
 	return;
     }
     else if (!(victim = get_char_room_vis(ch, name)) &&
 	     str_cmp("follower", name) && str_cmp("followers", name))
-	send_to_char("That person isn't here.\n\r", ch);
+	send_to_char("That person isn't here.\r\n", ch);
     else if (ch == victim)
-	send_to_char("You decline to do it.\n\r", ch);
+	send_to_char("You decline to do it.\r\n", ch);
     else {
 	if (ch && IS_AFFECTED(ch, AFF_CHARM)) {
-	    send_to_char("Your superior would not approve.\n\r", ch);
+	    send_to_char("Your superior would not approve.\r\n", ch);
 	    return;
 	}
 	if (victim) {
 	    sprintf(buf, "$N orders you to '%s'", message);
 	    act(buf, FALSE, victim, 0, ch, TO_CHAR);
 	    act("$n gives $N an order.", FALSE, ch, 0, victim, TO_ROOM);
-	    if ((victim->master != ch) 
+	    if ((victim->master != ch)
 		    || (victim && !IS_AFFECTED(victim, AFF_CHARM)))
 		act("$n has an indifferent look.",
 		    FALSE, victim, 0, 0, TO_ROOM);
 	    else {
-		send_to_char("Ok.\n\r", ch);
+		send_to_char("Ok.\r\n", ch);
 		if (!IS_NPC(victim))
 		    WAIT_STATE(victim, PULSE_VIOLENCE);
 		command_interpreter(victim, message);
@@ -439,19 +439,19 @@ void do_order(struct char_data *ch, char *argument, int cmd)
 		    }
 	    }
 	    if (found)
-		send_to_char("Ok.\n\r", ch);
+		send_to_char("Ok.\r\n", ch);
 	    else
 		send_to_char(
-		    "Nobody here are loyal subjects of yours!\n\r", ch);
+		    "Nobody here are loyal subjects of yours!\r\n", ch);
 	}
     }
-} 
+}
 
 /* NOTE: NEW! Specify target for forthcoming violent action.  */
 /*	'point' will set 'target' name to who is pointed to.
-	If group leader points target, target of group members 
+	If group leader points target, target of group members
 	in same room will be set, too.
-	If pointed char cannot be found, fall back to old social action.   */  
+	If pointed char cannot be found, fall back to old social action.   */
 void do_point(struct char_data *ch, char *argument, int cmd)
 {
     char victim_name[100];
@@ -460,7 +460,7 @@ void do_point(struct char_data *ch, char *argument, int cmd)
     extern void do_action(struct char_data *ch, char *argument, int cmd);
 
     one_argument(argument, victim_name);
-    if ( *victim_name && 
+    if ( *victim_name &&
 	( victim = get_char_room_vis(ch, victim_name)) && ( ch != victim )) {
 
 	act("You point at $N as target.", 0, ch, 0, victim, TO_CHAR );
@@ -468,26 +468,26 @@ void do_point(struct char_data *ch, char *argument, int cmd)
 		FALSE, ch, 0, victim, TO_VICT);
 	act("$n points $N as target for violence.",
 		TRUE, ch, 0, victim, TO_ROOM);
-	
-	ch->specials.hunting = victim; 
+
+	ch->specials.hunting = victim;
 	/*  NOTE: Skipped CAN_SEE(f->follower, victim) check   */
 	if( ch->followers && IS_AFFECTED(ch, AFF_GROUP))
-	    for( f = ch->followers ; f ; f = f->next ) 
-		if( IS_AFFECTED(f->follower, AFF_GROUP) 
+	    for( f = ch->followers ; f ; f = f->next )
+		if( IS_AFFECTED(f->follower, AFF_GROUP)
 		    && (f->follower->in_room == ch->in_room))
-			f->follower->specials.hunting = victim; 
+			f->follower->specials.hunting = victim;
     }
     else
 	/* NOTE: Old behavior. harmless social action. 	*/
 	do_action( ch, argument, cmd);
-} 
+}
 
 void do_sneak(struct char_data *ch, char *argument, int cmd)
 {
     struct affected_type af;
     byte percent;
 
-    send_to_char("Ok, you'll try to move silently for a while.\n\r", ch);
+    send_to_char("Ok, you'll try to move silently for a while.\r\n", ch);
     if (ch && IS_AFFECTED(ch, AFF_SNEAK))
 	affect_from_char(ch, SKILL_SNEAK);
     percent = number(1, 101);	/* 101% is a complete failure */
@@ -507,7 +507,7 @@ void do_hide(struct char_data *ch, char *argument, int cmd)
 {
     byte percent;
 
-    send_to_char("You attempt to hide yourself.\n\r", ch);
+    send_to_char("You attempt to hide yourself.\r\n", ch);
     if (ch && IS_AFFECTED(ch, AFF_HIDE))
 	REMOVE_BIT(ch->specials.affected_by, AFF_HIDE);
     percent = number(1, 101);	/* 101% is a complete failure */
@@ -534,11 +534,11 @@ void do_steal(struct char_data *ch, char *argument, int cmd)
     one_argument(argument, victim_name);
 
     if (!(victim = get_char_room_vis(ch, victim_name))) {
-	send_to_char("Steal what from who?\n\r", ch);
+	send_to_char("Steal what from who?\r\n", ch);
 	return;
     }
     else if (victim == ch) {
-	send_to_char("Come on now, that's rather stupid!\n\r", ch);
+	send_to_char("Come on now, that's rather stupid!\r\n", ch);
 	return;
     }
     if ((!IS_NPC(victim)) && (nostealflag)) {
@@ -548,7 +548,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     if (!IS_NPC(victim) && !(victim->desc)) {
-	send_to_char("Steal something from the ghost? No way!\n\r", ch);
+	send_to_char("Steal something from the ghost? No way!\r\n", ch);
 	return;
     }
     /* 101% is a complete failure */
@@ -572,7 +572,7 @@ void do_steal(struct char_data *ch, char *argument, int cmd)
 		return;
 	    }
 	    else {	/* It is equipment */
-		send_to_char("Steal the equipment? Impossible!\n\r", ch);
+		send_to_char("Steal the equipment? Impossible!\r\n", ch);
 		return;
 	    }
 	}
@@ -591,17 +591,17 @@ void do_steal(struct char_data *ch, char *argument, int cmd)
 			< CAN_CARRY_W(ch)) {
 			obj_from_char(obj);
 			obj_to_char(obj, ch);
-			send_to_char("Got it!\n\r", ch);
+			send_to_char("Got it!\r\n", ch);
 			INCREASE_SKILLED(ch, victim, SKILL_STEAL);
 			if (!IS_NPC(victim))
 			    act("$n robbed you!", TRUE, ch, 0, victim, TO_VICT);
 		    }
 		    else
-			send_to_char("You cannot carry that much weight.\n\r",
+			send_to_char("You cannot carry that much weight.\r\n",
 				     ch);
 		}
 		else
-		    send_to_char("You cannot carry that much.\n\r", ch);
+		    send_to_char("You cannot carry that much.\r\n", ch);
 	    }
 	}
     }
@@ -620,13 +620,13 @@ void do_steal(struct char_data *ch, char *argument, int cmd)
 		INCREASE_SKILLED(ch, victim, SKILL_STEAL);
 		GET_GOLD(ch) += gold;
 		GET_GOLD(victim) -= gold;
-		sprintf(buf, "Bingo! You got %d gold coins.\n\r", gold);
+		sprintf(buf, "Bingo! You got %d gold coins.\r\n", gold);
 		send_to_char(buf, ch);
 		if (!IS_NPC(victim))
 		    act("$n robbed you.", TRUE, ch, 0, victim, TO_VICT);
 	    }
 	    else {
-		send_to_char("You couldn't get any gold...\n\r", ch);
+		send_to_char("You couldn't get any gold...\r\n", ch);
 	    }
 	}
     }
@@ -639,7 +639,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd)
 {
     int i, attempt, loose, die;
     struct char_data *tmp_victim, *temp;
-    int level_dif; 
+    int level_dif;
 
     /* when not fighting */
     if (!(ch->specials.fighting)) {
@@ -650,7 +650,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd)
 		    TRUE, ch, 0, 0, TO_ROOM);
 		if ((die = do_simple_move(ch, attempt, FALSE)) == 1) {
 		    /* The escape has succeded */
-		    send_to_char("You flee head over heels.\n\r", ch);
+		    send_to_char("You flee head over heels.\r\n", ch);
 		}
 		else {
 		    if (!die)
@@ -661,7 +661,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd)
 	    }
 	}		/* for */
 	/* No exits was found */
-	send_to_char("PANIC! You couldn't escape!\n\r", ch);
+	send_to_char("PANIC! You couldn't escape!\r\n", ch);
 	return;
     }
 
@@ -690,7 +690,7 @@ void do_flee(struct char_data *ch, char *argument, int cmd)
 		loose = MIN(1000000, loose);
 		if (!IS_NPC(ch))
 		    gain_exp(ch, -loose);
-		send_to_char("You flee head over heels.\n\r", ch);
+		send_to_char("You flee head over heels.\r\n", ch);
 		/* Insert later when using huntig system        */
 		ch->specials.fighting->specials.hunting = ch;
 
@@ -716,29 +716,29 @@ void do_flee(struct char_data *ch, char *argument, int cmd)
     }			/* for */
 
     /* No exits was found */
-    send_to_char("PANIC! You couldn't escape!\n\r", ch);
-} 
+    send_to_char("PANIC! You couldn't escape!\r\n", ch);
+}
 
 void do_rescue(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *victim, *tmp_ch;
     int percent;
     char victim_name[240];
-    extern void set_fighting(struct char_data *ch, struct char_data *victim); 
+    extern void set_fighting(struct char_data *ch, struct char_data *victim);
 
     one_argument(argument, victim_name);
 
     if (!(victim = get_char_room_vis(ch, victim_name))) {
-	send_to_char("Who do you want to rescue?\n\r", ch);
+	send_to_char("Who do you want to rescue?\r\n", ch);
 	return;
     }
     if (victim == ch) {
-	send_to_char("What about fleeing instead?\n\r", ch);
+	send_to_char("What about fleeing instead?\r\n", ch);
 	return;
     }
 
     if (ch->specials.fighting == victim) {
-	send_to_char("How can you rescue your foe?\n\r", ch);
+	send_to_char("How can you rescue your foe?\r\n", ch);
 	return;
     }
     for (tmp_ch = world[ch->in_room].people; tmp_ch &&
@@ -750,7 +750,7 @@ void do_rescue(struct char_data *ch, char *argument, int cmd)
 
     /* check same guild member, jhpark      */
     if (victim->specials.fighting)
-	if ((!IS_NPC(victim->specials.fighting) && !IS_NPC(ch)) 
+	if ((!IS_NPC(victim->specials.fighting) && !IS_NPC(ch))
 	    && (victim->specials.fighting->player.guild == ch->player.guild)) {
 	    act("You cannot rescue $M!", FALSE, ch, 0, victim, TO_CHAR);
 	    return;
@@ -758,12 +758,12 @@ void do_rescue(struct char_data *ch, char *argument, int cmd)
 
     percent = number(1, 111) - (GET_SKILLED(ch, SKILL_RESCUE) >> 3);
     if (percent > ch->skills[SKILL_RESCUE].learned) {
-	send_to_char("You fail the rescue.\n\r", ch);
+	send_to_char("You fail the rescue.\r\n", ch);
 	return;
     }
 
     INCREASE_SKILLED(ch, victim, SKILL_RESCUE);
-    send_to_char("Yaho! To the rescue...\n\r", ch);
+    send_to_char("Yaho! To the rescue...\r\n", ch);
     act("You are rescued by $N, you are confused!",
 	FALSE, victim, 0, ch, TO_CHAR);
     act("$n heroically rescues $N.", FALSE, ch, 0, victim, TO_NOTVICT);
@@ -814,7 +814,7 @@ void do_light_move(struct char_data *ch, char *argument, int cmd)
 	}
     }
     else {
-	send_to_char("this skill can used only in fighting.\n\r", ch);
+	send_to_char("this skill can used only in fighting.\r\n", ch);
     }
 }
 
@@ -830,18 +830,18 @@ void do_temptation(struct char_data *ch, char *argument, int cmd)
 
     half_chop(argument, name, message);
     if (IS_NPC(ch) || (!(GET_SEX(ch) == SEX_FEMALE) && IS_MORTAL(ch))) {
-	send_to_char("You cannot seduce anyone as you are not female.\n\r", ch);
+	send_to_char("You cannot seduce anyone as you are not female.\r\n", ch);
 	return;
     }
     else if (!*name || !*message) {
-	send_to_char("temptation who to do what????\n\r", ch);
+	send_to_char("temptation who to do what????\r\n", ch);
 	return;
     }
     else if (!(victim = get_char_room_vis(ch, name))) {
-	send_to_char("That person isn't here.\n\r", ch);
+	send_to_char("That person isn't here.\r\n", ch);
     }
     else if (ch == victim) {
-	send_to_char("Are you babo????\n\r", ch);
+	send_to_char("Are you babo????\r\n", ch);
     }
     else if (victim) {
 	percent = number(1, 151)
@@ -851,7 +851,7 @@ void do_temptation(struct char_data *ch, char *argument, int cmd)
 
 	if ((ch->skills[SKILL_TEMPTATION].learned > percent
 	     && GET_SEX(victim) == SEX_MALE && GET_LEVEL(victim) < 34)) {
-	    /* 
+	    /*
 	       GET_LEVEL(victim)<GET_LEVEL(ch))) { */
 	    INCREASE_SKILLED(ch, victim, SKILL_TEMPTATION);
 	    do_say(ch, "HOHOHOHOHOHO!!!!!!", 0);
@@ -877,10 +877,10 @@ void do_temptation(struct char_data *ch, char *argument, int cmd)
 	if (GET_MANA(ch) > 200)
 	    GET_MANA(ch) -= 200;
     }
-} 
+}
 
-/* 
-   Chase written 
+/*
+   Chase written
    Description: Disarms other player's wielding weapon
  */
 void do_disarm(struct char_data *ch, char *argument, int cmd)
@@ -894,11 +894,11 @@ void do_disarm(struct char_data *ch, char *argument, int cmd)
     one_argument(argument, victim_name);
 
     if (!(victim = get_char_room_vis(ch, victim_name))) {
-	send_to_char("Disarm who?\n\r", ch);
+	send_to_char("Disarm who?\r\n", ch);
 	return;
     }
     else if (victim == ch) {
-	send_to_char("You stupid! How about using remove instead of disarm?\n\r", ch);
+	send_to_char("You stupid! How about using remove instead of disarm?\r\n", ch);
 	return;
     }
     if (IS_WIZARD(victim) && HIGHER_LEV(victim, ch))
@@ -910,7 +910,7 @@ void do_disarm(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     if (!IS_NPC(victim) && !(victim->desc)) {
-	send_to_char("Disarm the ghost? No way!\n\r", ch);
+	send_to_char("Disarm the ghost? No way!\r\n", ch);
 	return;
     }
     percent = number(1, 100) - GET_LEVEL(ch) + 2 * GET_LEVEL(victim)
@@ -953,17 +953,17 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
     one_argument(argument, name);
 
     if (!(victim = get_char_room_vis(ch, name))) {
-	send_to_char("Consider killing who?\n\r", ch);
+	send_to_char("Consider killing who?\r\n", ch);
 	return;
-    } 
+    }
     if (victim == ch) {
-	send_to_char("Easy! Very easy indeed!\n\r", ch);
+	send_to_char("Easy! Very easy indeed!\r\n", ch);
 	return;
     }
     /* NOTE: Now, you can 'consider' PC player *evil grin*  */
     /*
     if (!IS_NPC(victim)) {
-	send_to_char("Would you like to borrow a cross and a shovel?\n\r", ch);
+	send_to_char("Would you like to borrow a cross and a shovel?\r\n", ch);
 	return;
     }
     */
@@ -971,34 +971,34 @@ void do_consider(struct char_data *ch, char *argument, int cmd)
     diff = (GET_LEVEL(victim) - GET_LEVEL(ch));
 
     if (diff <= -10)
-	send_to_char("Now where did that chicken go?\n\r", ch);
+	send_to_char("Now where did that chicken go?\r\n", ch);
     else if (diff <= -5)
-	send_to_char("You could do it with a needle!\n\r", ch);
+	send_to_char("You could do it with a needle!\r\n", ch);
     else if (diff <= -2)
-	send_to_char("Easy.\n\r", ch);
+	send_to_char("Easy.\r\n", ch);
     else if (diff <= -1)
-	send_to_char("Fairly easy.\n\r", ch);
+	send_to_char("Fairly easy.\r\n", ch);
     else if (diff == 0)
-	send_to_char("The perfect match!\n\r", ch);
+	send_to_char("The perfect match!\r\n", ch);
     else if (diff <= 1)
-	send_to_char("You would need some luck!\n\r", ch);
+	send_to_char("You would need some luck!\r\n", ch);
     else if (diff <= 2)
-	send_to_char("You would need a lot of luck!\n\r", ch);
+	send_to_char("You would need a lot of luck!\r\n", ch);
     else if (diff <= 3)
-	send_to_char("You would need a lot of luck and great equipment!\n\r", ch);
+	send_to_char("You would need a lot of luck and great equipment!\r\n", ch);
     else if (diff <= 5)
-	send_to_char("Do you feel lucky, punk?\n\r", ch);
+	send_to_char("Do you feel lucky, punk?\r\n", ch);
     else if (diff <= 10)
-	send_to_char("Are you mad!?\n\r", ch);
+	send_to_char("Are you mad!?\r\n", ch);
     else if ( IS_NPC(victim) || diff < 15 )
-	send_to_char("You ARE mad!\n\r", ch);
-    else { 
+	send_to_char("You ARE mad!\r\n", ch);
+    else {
 	/* NOTE: Victim is PC and diff >= 15, dig your grave...  */
-	send_to_char("Would you like to borrow a cross and a shovel?\n\r", ch);
+	send_to_char("Would you like to borrow a cross and a shovel?\r\n", ch);
 	act("$n asks you to borrow a cross and a shovel.",
 	    TRUE, ch, 0, victim, TO_VICT);
 	act("$n asks $N to borrow a cross and a shovel.",
 	    TRUE, ch, 0, victim, TO_NOTVICT);
     }
-} 
+}
 

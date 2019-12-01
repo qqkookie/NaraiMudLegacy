@@ -12,7 +12,7 @@
 #include "global.h"
 #include "comm.h"
 #include "play.h"
-#include "spells.h" 
+#include "spells.h"
 
 
 void cast_armor(byte level, struct char_data *ch, char *arg, int type,
@@ -21,7 +21,7 @@ void cast_armor(byte level, struct char_data *ch, char *arg, int type,
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (affected_by_spell(tar_ch, SPELL_ARMOR)) {
-	    send_to_char("Nothing seems to happen.\n\r", ch);
+	    send_to_char("Nothing seems to happen.\r\n", ch);
 	    return;
 	}
 	if (ch != tar_ch)
@@ -83,7 +83,7 @@ void cast_teleport(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in teleport!");
 	break;
     }
-} 
+}
 
 void cast_damage_up(byte level, struct char_data *ch, char *arg, int type,
 		    struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -92,7 +92,7 @@ void cast_damage_up(byte level, struct char_data *ch, char *arg, int type,
     case SPELL_TYPE_SPELL:
 	if (affected_by_spell(tar_ch, SPELL_DAMAGE_UP) ||
 	    (GET_POS(tar_ch) == POS_FIGHTING)) {
-	    send_to_char("Nothing seems to happen.\n\r", ch);
+	    send_to_char("Nothing seems to happen.\r\n", ch);
 	    return;
 	}
 	spell_damage_up(level, ch, tar_ch, 0);
@@ -116,7 +116,7 @@ void cast_crush_armor(byte level, struct char_data *ch, char *arg, int type,
     case SPELL_TYPE_SPELL:
 	if (affected_by_spell(tar_ch, SPELL_DAMAGE_UP) ||
 	    (GET_POS(tar_ch) == POS_FIGHTING)) {
-	    send_to_char("Nothing seems to happen.\n\r", ch);
+	    send_to_char("Nothing seems to happen.\r\n", ch);
 	    return;
 	}
 	spell_crush_armor(level, ch, tar_ch, 0);
@@ -134,7 +134,7 @@ void cast_bless(byte level, struct char_data *ch, char *arg, int type,
     case SPELL_TYPE_SPELL:
 	if (tar_obj) {	/* It's an object */
 	    if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS)) {
-		send_to_char("Nothing seems to happen.\n\r", ch);
+		send_to_char("Nothing seems to happen.\r\n", ch);
 		return;
 	    }
 	    spell_bless(level, ch, 0, tar_obj);
@@ -144,7 +144,7 @@ void cast_bless(byte level, struct char_data *ch, char *arg, int type,
 
 	    if (affected_by_spell(tar_ch, SPELL_BLESS) ||
 		(GET_POS(tar_ch) == POS_FIGHTING)) {
-		send_to_char("Nothing seems to happen.\n\r", ch);
+		send_to_char("Nothing seems to happen.\r\n", ch);
 		return;
 	    }
 	    spell_bless(level, ch, tar_ch, 0);
@@ -160,9 +160,9 @@ void cast_bless(byte level, struct char_data *ch, char *arg, int type,
 	if (tar_obj) {	/* It's an object */
 	    if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_BLESS))
 		return;
-	    spell_bless(level, ch, 0, tar_obj); 
+	    spell_bless(level, ch, 0, tar_obj);
 	}
-	else {		/* Then it is a PC | NPC */ 
+	else {		/* Then it is a PC | NPC */
 	    if (!tar_ch)
 		tar_ch = ch;
 
@@ -179,7 +179,7 @@ void cast_bless(byte level, struct char_data *ch, char *arg, int type,
 	    spell_bless(level, ch, 0, tar_obj);
 
 	}
-	else {		/* Then it is a PC | NPC */ 
+	else {		/* Then it is a PC | NPC */
 	    if (affected_by_spell(tar_ch, SPELL_BLESS) ||
 		(GET_POS(tar_ch) == POS_FIGHTING))
 		return;
@@ -198,7 +198,7 @@ void cast_blindness(byte level, struct char_data *ch, char *arg, int type,
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (IS_AFFECTED(tar_ch, AFF_BLIND)) {
-	    send_to_char("Nothing seems to happen.\n\r", ch);
+	    send_to_char("Nothing seems to happen.\r\n", ch);
 	    return;
 	}
 	spell_blindness(level, ch, tar_ch, 0);
@@ -265,7 +265,7 @@ void cast_create_water(byte level, struct char_data *ch, char *arg, int type,
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (tar_obj->obj_flags.type_flag != ITEM_DRINKCON) {
-	    send_to_char("It is unable to hold water.\n\r", ch);
+	    send_to_char("It is unable to hold water.\r\n", ch);
 	    return;
 	}
 	spell_create_water(level, ch, 0, tar_obj);
@@ -274,7 +274,7 @@ void cast_create_water(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in create water!");
 	break;
     }
-} 
+}
 
 void cast_create_nectar(byte level, struct char_data *ch, char *arg, int type,
 			struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -282,7 +282,7 @@ void cast_create_nectar(byte level, struct char_data *ch, char *arg, int type,
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (tar_obj->obj_flags.type_flag != ITEM_DRINKCON) {
-	    send_to_char("It is unable to hold nectar.\n\r", ch);
+	    send_to_char("It is unable to hold nectar.\r\n", ch);
 	    return;
 	}
 	spell_create_nectar(level, ch, 0, tar_obj);
@@ -299,7 +299,7 @@ void cast_create_golden_nectar(byte level, struct char_data *ch, char *arg, int 
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (tar_obj->obj_flags.type_flag != ITEM_DRINKCON) {
-	    send_to_char("It is unable to hold golden_nectar.\n\r", ch);
+	    send_to_char("It is unable to hold golden_nectar.\r\n", ch);
 	    return;
 	}
 	spell_create_golden_nectar(level, ch, 0, tar_obj);
@@ -434,7 +434,7 @@ void cast_cure_critic(byte level, struct char_data *ch, char *arg, int type,
 	break;
 
     }
-} 
+}
 
 void cast_cause_light(byte level, struct char_data *ch, char *arg, int type,
 		      struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -456,7 +456,7 @@ void cast_cause_light(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in cause light!");
 	break;
     }
-} 
+}
 
 void cast_cure_light(byte level, struct char_data *ch, char *arg, int type,
 		     struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -478,7 +478,7 @@ void cast_cure_light(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in cure light!");
 	break;
     }
-} 
+}
 
 void cast_curse(byte level, struct char_data *ch, char *arg, int type,
 		struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -513,7 +513,7 @@ void cast_curse(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in curse!");
 	break;
     }
-} 
+}
 
 void cast_detect_align(byte level, struct char_data *ch, char *arg, int type,
 		      struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -521,7 +521,7 @@ void cast_detect_align(byte level, struct char_data *ch, char *arg, int type,
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (affected_by_spell(tar_ch, SPELL_DETECT_ALIGN)) {
-	    send_to_char("Nothing seems to happen.\n\r", tar_ch);
+	    send_to_char("Nothing seems to happen.\r\n", tar_ch);
 	    return;
 	}
 	spell_detect_align(level, ch, tar_ch, 0);
@@ -542,7 +542,7 @@ void cast_detect_align(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in detect align!");
 	break;
     }
-} 
+}
 
 void cast_detect_invisible(byte level, struct char_data *ch, char *arg,
 		int type, struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -550,7 +550,7 @@ void cast_detect_invisible(byte level, struct char_data *ch, char *arg,
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (affected_by_spell(tar_ch, SPELL_DETECT_INVISIBLE)) {
-	    send_to_char("Nothing seems to happen.\n\r", tar_ch);
+	    send_to_char("Nothing seems to happen.\r\n", tar_ch);
 	    return;
 	}
 	spell_detect_invisible(level, ch, tar_ch, 0);
@@ -588,7 +588,7 @@ void cast_preach(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in preach!");
 	break;
     }
-} 
+}
 
 void cast_dispel_evil(byte level, struct char_data *ch, char *arg, int type,
 		      struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -622,7 +622,7 @@ void cast_dispel_evil(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in dispel evil!");
 	break;
     }
-} 
+}
 
 void cast_recharger(byte level, struct char_data *ch, char *arg, int type,
 		    struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -645,7 +645,7 @@ void cast_recharger(byte level, struct char_data *ch, char *arg, int type,
 	    sprintf( buf, "CAST_RECHARGE: type  %d, arg = %s CMDLINE=[%s]",
 		    type, arg, CMD_LINE);
 	    log(buf);
-	} 
+	}
 #endif 	/* UNUSED_CODE */
 	log("Serious screw-up in recharger!");
 	break;
@@ -854,13 +854,13 @@ void cast_invisible(byte level, struct char_data *ch, char *arg, int type,
     case SPELL_TYPE_SPELL:
 	if (tar_obj) {
 	    if (IS_SET(tar_obj->obj_flags.extra_flags, ITEM_INVISIBLE))
-		send_to_char("Nothing new seems to happen.\n\r", ch);
+		send_to_char("Nothing new seems to happen.\r\n", ch);
 	    else
 		spell_invisible(level, ch, 0, tar_obj);
 	}
 	else {		/* tar_ch */
 	    if (IS_AFFECTED(tar_ch, AFF_INVISIBLE))
-		send_to_char("Nothing new seems to happen.\n\r", ch);
+		send_to_char("Nothing new seems to happen.\r\n", ch);
 	    else
 		spell_invisible(level, ch, tar_ch, 0);
 	}
@@ -903,7 +903,7 @@ void cast_invisible(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in invisible!");
 	break;
     }
-} 
+}
 
 void cast_locate_object(byte level, struct char_data *ch, char *arg, int type,
 			struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -916,7 +916,7 @@ void cast_locate_object(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in locate object!");
 	break;
     }
-} 
+}
 
 void cast_poison(byte level, struct char_data *ch, char *arg, int type,
 		 struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -1025,7 +1025,7 @@ void cast_improved_haste(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in improved haste!");
 	break;
     }
-} 
+}
 
 void cast_remove_curse(byte level, struct char_data *ch, char *arg, int type,
 		       struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -1056,7 +1056,7 @@ void cast_remove_curse(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in remove curse!");
 	break;
     }
-} 
+}
 
 void cast_remove_poison(byte level, struct char_data *ch, char *arg, int type,
 			struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -1218,11 +1218,11 @@ void cast_reraise(byte level, struct char_data *ch, char *arg, int type,
     switch (type) {
     case SPELL_TYPE_SPELL:
 	if (IS_AFFECTED(ch, AFF_DEATH)) {
-	    send_to_char("No way! You must die!\n\r", ch);
+	    send_to_char("No way! You must die!\r\n", ch);
 	    return;
 	}
 	if (GET_MANA(ch) < GET_PLAYER_MAX_HIT(ch) / 5) {
-	    send_to_char("You does not have enough mana.\n\r", ch);
+	    send_to_char("You does not have enough mana.\r\n", ch);
 	    return;
 	}
 	GET_MANA(ch) -= GET_PLAYER_MAX_HIT(ch) / 5;
@@ -1292,7 +1292,7 @@ void cast_sleep(byte level, struct char_data *ch, char *arg, int type,
 	log("Serious screw-up in sleep!");
 	break;
     }
-} 
+}
 
 void cast_strength(byte level, struct char_data *ch, char *arg, int type,
 		   struct char_data *tar_ch, struct obj_data *tar_obj)
@@ -1341,19 +1341,19 @@ void cast_phase(byte level, struct char_data *ch, char *arg, int type,
     case 's': case 'S': direction = 2; break;
     case 'd': case 'D': direction = 5; break;
     case 'u': case 'U': direction = 4; break;
-    case ' ': case '\0': 
-	send_to_char("Phase to where?\n\r", ch);
+    case ' ': case '\0':
+	send_to_char("Phase to where?\r\n", ch);
 	return;
     default:
-	send_to_char("ashgjklasdghiaudsgthl\n\r", ch);
+	send_to_char("ashgjklasdghiaudsgthl\r\n", ch);
 	return;
     }
     if (!world[ch->in_room].dir_option[direction]) {
-	send_to_char("You cannot phase there...\n\r", ch);
+	send_to_char("You cannot phase there...\r\n", ch);
 	return;
     }
     if (IS_SET(world[ch->in_room].dir_option[direction]->exit_info, EX_NOPHASE)) {
-	send_to_char("You feel it's too solid.\n\r", ch);
+	send_to_char("You feel it's too solid.\r\n", ch);
 	return;
     }
 
@@ -1384,17 +1384,17 @@ void cast_ventriloquate(byte level, struct char_data *ch, char *arg, int type,
     }
     for (; *arg && (*arg == ' '); arg++) ;
     if (tar_obj) {
-	sprintf(buf1, "The %s says '%s'\n\r", fname(tar_obj->name), arg);
-	sprintf(buf2, "Someone makes it sound like the %s says '%s'.\n\r",
+	sprintf(buf1, "The %s says '%s'\r\n", fname(tar_obj->name), arg);
+	sprintf(buf2, "Someone makes it sound like the %s says '%s'.\r\n",
 		fname(tar_obj->name), arg);
     }
     else {
-	sprintf(buf1, "%s says '%s'\n\r", GET_NAME(tar_ch), arg);
-	sprintf(buf2, "Someone makes it sound like %s says '%s'\n\r",
+	sprintf(buf1, "%s says '%s'\r\n", GET_NAME(tar_ch), arg);
+	sprintf(buf2, "Someone makes it sound like %s says '%s'\r\n",
 		GET_NAME(tar_ch), arg);
     }
 
-    sprintf(buf3, "Someone says, '%s'\n\r", arg);
+    sprintf(buf3, "Someone says, '%s'\r\n", arg);
 
     for (tmp_ch = world[ch->in_room].people; tmp_ch;
 	 tmp_ch = tmp_ch->next_in_room) {
@@ -1483,7 +1483,7 @@ void cast_charm_person(byte level, struct char_data *ch, char *arg, int type,
 
     /* NOTE: not !IS_NPC(tar_ch) */
     if (!IS_MOB(tar_ch) && NOT_GOD(ch)) {
-	send_to_char("You cannot charm player!\n\r", ch);
+	send_to_char("You cannot charm player!\r\n", ch);
 	return;
     }
     switch (type) {
@@ -1491,14 +1491,14 @@ void cast_charm_person(byte level, struct char_data *ch, char *arg, int type,
 	spell_charm_person(level, ch, tar_ch, 0);
 	break;
     case SPELL_TYPE_SCROLL:
-	/* 
+	/*
 	   if(!tar_ch) return; spell_charm_person(level, ch, tar_ch, 0); */
 	break;
     case SPELL_TYPE_STAFF:
 /*
-   for (tar_ch = world[ch->in_room].people ; 
+   for (tar_ch = world[ch->in_room].people ;
    tar_ch ; tar_ch = tar_ch->next_in_room)
-   if (tar_ch != ch) 
+   if (tar_ch != ch)
    spell_charm_person(level,ch,tar_ch,0); */
 	break;
     default:

@@ -19,7 +19,7 @@ extern struct char_data *choose_victim(struct char_data *mob, int fmode,
 
 /* ************************************************************************
   *  file:  from fight.c: hit() and make_corpse()			  *
-  ************************************************************************* */ 
+  ************************************************************************* */
 
 /* NOTE: NEW! Calculate addintional damage dice by special equipment like
 	'lss belt sword' or '여의봉'.		*/
@@ -31,7 +31,7 @@ int special_damage(struct char_data *ch, struct char_data *victim,
     /* 여의봉 */
     /* NOTE: You can wield or hold 여의봉	*/
     /* NOTE:  Sepcial damages of wielded 여의봉(bong) and held bong
-                 are added independently.   */ 
+                 are added independently.   */
     if ( (ch->equipment[WIELD]
 	    && ch->equipment[WIELD]->item_number >= 0
 	    && GET_OBJ_VIRTUAL(ch->equipment[WIELD]) == DRS_SON_OGONG_BONG))
@@ -40,7 +40,7 @@ int special_damage(struct char_data *ch, struct char_data *victim,
 			ch->equipment[WIELD]->obj_flags.value[2]);
      if ((ch->equipment[HOLD]
 	    && ch->equipment[HOLD]->item_number >= 0
-	    && GET_OBJ_VIRTUAL(ch->equipment[HOLD]) == DRS_SON_OGONG_BONG)) 
+	    && GET_OBJ_VIRTUAL(ch->equipment[HOLD]) == DRS_SON_OGONG_BONG))
 	if (number(1, 10) >= 5)
 	    dam_add += dice(ch->equipment[HOLD]->obj_flags.value[1],
 			ch->equipment[HOLD]->obj_flags.value[2]);
@@ -56,11 +56,11 @@ int special_damage(struct char_data *ch, struct char_data *victim,
 }
 
 /* NOTE: NEW! Special death/corpse proceesing when mob died.	*/
-/* NOTE: Called from make_corpse() after creating empty corpse 
-	and before unequip char.  */ 
+/* NOTE: Called from make_corpse() after creating empty corpse
+	and before unequip char.  */
 void special_death(struct char_data *ch, struct char_data *who,
 	    struct obj_data *corpse)
-{ 
+{
     struct obj_data *otmp;
 
     if (!IS_NPC(ch)) /* NOTE: currently, no spcial for PC daeth */
@@ -91,10 +91,10 @@ void special_death(struct char_data *ch, struct char_data *who,
     }
 
     /* KAALM(12201) */
-    else if (GET_MOB_VIRTUAL(ch) == GBI_KAALM) { 
+    else if (GET_MOB_VIRTUAL(ch) == GBI_KAALM) {
 	otmp = read_object( GBI_SEED_EVIL_POWER , VIRTUAL);
 	obj_to_obj(otmp, corpse);
-    } 
+    }
 }
 
 int neverland(struct char_data *ch, int cmd, char *arg)
@@ -108,8 +108,8 @@ int neverland(struct char_data *ch, int cmd, char *arg)
 
     location = real_room(loc_nr);
     act("$n씨가 지금 내려 갔나요 ??", FALSE, ch, 0, 0, TO_NOTVICT);
-    send_to_char("악.\n\n악..\n\n 악...\n\n\n떨어지고 있습니다..\n\n\r", ch);
-    send_to_char("여기가 어딜까 ??\n\r", ch);
+    send_to_char("악.\n\n악..\n\n 악...\n\n\n떨어지고 있습니다..\n\r\n", ch);
+    send_to_char("여기가 어딜까 ??\r\n", ch);
     char_from_room(ch);
     char_to_room(ch, location);
     do_look(ch, "", 0);		/* NOTE: look around */
@@ -128,11 +128,11 @@ int electric_shock(struct char_data *ch, int cmd, char *arg)
     if (!IS_NPC(ch) && number(0, 9) < 5 ) {
 	switch (weather) {
 	case SKY_RAINING:
-	    send_to_char("ZZirrrr... 비가 오니까 찌릿 합니다.\n\r", ch);
+	    send_to_char("ZZirrrr... 비가 오니까 찌릿 합니다.\r\n", ch);
 	    shock = 50;
 	    break;
 	case SKY_LIGHTNING:
-	    send_to_char("ZZirk ZZirk .. 이런 날씨에는 감전되어 죽겠습니다.\n\r", ch);
+	    send_to_char("ZZirk ZZirk .. 이런 날씨에는 감전되어 죽겠습니다.\r\n", ch);
 	    shock = number(200, 400); /* NOTE: was dice(5,7) */
 	    break;
 	case SKY_CLOUDLESS:
@@ -166,7 +166,7 @@ int great_mazinga(struct char_data *ch, int cmd, char *arg)
 	    act("$n utters the words '로케트 주먹'.", 1, ch, 0, 0, TO_ROOM);
 	    mob_punch_drop(ch, vict);
 	    if ((tmp = GET_MOVE(vict)) > 0) {
-		send_to_char("주먹에 맞아 체력이 떨어집니다.\n\r", vict);
+		send_to_char("주먹에 맞아 체력이 떨어집니다.\r\n", vict);
 		GET_MOVE(vict) = tmp * 7 / 10;
 	    }
 	}
@@ -178,7 +178,7 @@ int great_mazinga(struct char_data *ch, int cmd, char *arg)
 	    if (vict) {
 		act("$n utters the words 'ecuder evom'.", 1, ch, 0, 0, TO_ROOM);
 		if ((tmp = GET_MOVE(vict)) > 0) {
-		    send_to_char("갑자기 힘이 빠집니다.\n\r", vict);
+		    send_to_char("갑자기 힘이 빠집니다.\r\n", vict);
 		    GET_MOVE(vict) = tmp / 3 + dice(3, tmp / 10);
 		}
 	    }
@@ -188,7 +188,7 @@ int great_mazinga(struct char_data *ch, int cmd, char *arg)
 	    if (vict) {
 		act("$n utters the words 'ecuder anam'.", 1, ch, 0, 0, TO_ROOM);
 		if ((tmp = GET_MANA(vict)) > 0) {
-		    send_to_char("갑자기 힘이 빠집니다.\n\r", vict);
+		    send_to_char("갑자기 힘이 빠집니다.\r\n", vict);
 		    GET_MANA(vict) = tmp / 3 + dice(3, tmp / 10);
 		}
 	    }
@@ -200,11 +200,11 @@ int great_mazinga(struct char_data *ch, int cmd, char *arg)
 
 /* ************************************************************************
   *  file: Special module for Daerimsa. 				  *
-  ************************************************************************* */ 
+  ************************************************************************* */
 
 #define MOB_STEP(ch)		((ch)->quest.solved)
 
-/* NOTE: FIXED son_ogong quest. */ 
+/* NOTE: FIXED son_ogong quest. */
 int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 {
     struct obj_data *i, *obj;
@@ -259,7 +259,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    action = cmd;	/* NOTE: remember PC action */
 	    return FALSE;
 	}
-	    
+
 	switch (MOB_STEP(ch)) {
 	case 0:
 	    if (action != CMD_WEAR) {
@@ -306,7 +306,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
 	    }
 	    break;
 	}
-    } 
+    }
 /*
    sprintf(buf, "son_special : %s(%d)\n", GET_NAME(ch), cmd);
    log(buf);
@@ -316,7 +316,7 @@ int son_ogong_func(struct char_data *ch, int cmd, char *arg)
     return done;
 }
 
-/* NOTE: FIXED fourth jangro quest. */ 
+/* NOTE: FIXED fourth jangro quest. */
 int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 {
     int done = 0;
@@ -324,7 +324,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
     static int action = 0;
     static long gold;
 
-    if ( cmd ) { 
+    if ( cmd ) {
 	action = cmd; 	/* NOTE: remember PC action */
 	return FALSE;
     }
@@ -336,7 +336,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 	    acthan( "4th jangro says \"I need money... some money\".",
 	       "4 장로가 \"돈이 필요해... 돈이...\" 라고 중얼거립니다.",
 		  FALSE, ch, 0, 0, TO_ROOM);
-	    gold = GET_GOLD(ch); 
+	    gold = GET_GOLD(ch);
 	    done++ ;
 	    MOB_STEP(ch) = 1;
 	}
@@ -348,7 +348,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 		acthan( "fourth jangro says 'Not enough gold!!! Need more!!!'",
 		     "4 장로가 '흠. 아직 부족해!!! 좀 더 많은 돈이 필요한데...'"
 		     " 라고 말합니다.", FALSE, ch, 0, 0, TO_ROOM);
-		gold = GET_GOLD(ch); 
+		gold = GET_GOLD(ch);
 		done++ ;
 	    }
 	    /* 돈을 받는다 */
@@ -364,7 +364,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 	else if ( action )
 	    MOB_STEP(ch) = 0;
 
-	/*FALLTHRU*/ 
+	/*FALLTHRU*/
 	/* NOTE: FALL THRU*/
     case 2:
 	if ( action == CMD_ASK) {	/* ask */
@@ -376,7 +376,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 		    FALSE, ch, 0, 0, TO_ROOM);
 	    acthan( "Give me a pen and a paper! I'll make it.",
 		    "붓과 종이를 주세요... 할 수 없지.",
-		    FALSE, ch, 0, 0, TO_ROOM); 
+		    FALSE, ch, 0, 0, TO_ROOM);
 	    MOB_STEP(ch) = 3 ;
 	    done++;
 	}
@@ -399,7 +399,7 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
 
 		MOB_STEP(ch) = 4;
 	    }
-	    else 
+	    else
 		acthan( "Give me a pen and a paper!", "붓과 종이를 주세요...",
 			FALSE, ch, 0, 0, TO_ROOM);
 	    done++;
@@ -436,14 +436,14 @@ int fourth_jangro_func(struct char_data *ch, int cmd, char *arg)
     case 5:
 
 	if (number(1, 5) == 1) {
-	    acthan( "4th jangro murmurs 'NamuAmitabul!!!'", 
+	    acthan( "4th jangro murmurs 'NamuAmitabul!!!'",
 		    "4 장로가 '나무아미타불!!!' 이라고 중얼거립니다.",
 		      FALSE, ch, 0, 0, TO_ROOM);
 	    done++;
 	}
 	break;
     }
-    if(done) 
+    if(done)
 	action = 0;
 
     return done;
@@ -543,18 +543,18 @@ int saint_water(struct char_data *ch, int cmd, char *arg)
     if (GET_OBJ_VIRTUAL(obj) != DRS_SAINT_WATER)
 	return FALSE;
 
-    GET_ALIGNMENT(ch) = 999; 
+    GET_ALIGNMENT(ch) = 999;
     send_to_room("흠. 조금 찝찝한 맛이군...", ch->in_room);
-    send_to_char("갑자기 성인이 된 듯한 기분이 듭니다.\n\r", ch);
+    send_to_char("갑자기 성인이 된 듯한 기분이 듭니다.\r\n", ch);
 
     extract_obj(obj);
 
     return TRUE;
-} 
+}
 
 /* ************************************************************************
   *  file: Special module for GoodBad Island. 				  *
-  ************************************************************************* */ 
+  ************************************************************************* */
 
 void gbisland_move_seashore(struct char_data *ch)
 {
@@ -569,41 +569,41 @@ void gbisland_move_seashore(struct char_data *ch)
     need_movement = movement_loss[world[ch->in_room].sector_type];
 
     if (GET_MOVE(ch) < need_movement && PC_MORTAL(ch)) {
-	send_to_char("You are too exhausted.\n\r", ch);
+	send_to_char("You are too exhausted.\r\n", ch);
 	return;
     }
 
-    send_to_char("\n\r", ch);
-    send_to_char("갑자기 하늘이 먹구름으로 가득찹니다.\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char("빗방울이 굵어 지더니 배가 심하게 흔들립니다.\n\r", ch);
-    send_to_char("당신은 배의 난간을 잡고 힘껏 버티어 봅니다.\n\r", ch);
-    send_to_char("난간이 부서져 나가고 당신은 배의 반대쪽으로 쓰러져 갑니다.\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char("설상가상으로 멀리 소용돌이가 보입니다.\n\r", ch);
-    send_to_char("당신은 당신의 배와 함께 소용돌이로 빨려들어갑니다.\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char("소용돌이의 힘에 배가 부서지고, 당신은 바다로 내동댕이 쳐 집니다.\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char("헤엄을 잘치는 당신이지만 소용돌이의 힘에서는 어쩔수 없습니다.\n\r", ch);
-    send_to_char("당신은 점차로 의식을 일어갑니다.\n\r", ch);
-    send_to_char(".........\n\r", ch);
-    send_to_char("으~~~\n\r", ch);
-    send_to_char("으~~\n\r", ch);
-    send_to_char("으~\n\r", ch);
-    send_to_char("~\n\r", ch);
-    send_to_char("\n\r", ch);
-    send_to_char("\n\r", ch);
-    send_to_char("\n\r", ch);
-    send_to_char("\n\r", ch);
-    send_to_char("\n\r", ch);
-    send_to_char("\n\r", ch);
-    send_to_char("\n\r", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("갑자기 하늘이 먹구름으로 가득찹니다.\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char("빗방울이 굵어 지더니 배가 심하게 흔들립니다.\r\n", ch);
+    send_to_char("당신은 배의 난간을 잡고 힘껏 버티어 봅니다.\r\n", ch);
+    send_to_char("난간이 부서져 나가고 당신은 배의 반대쪽으로 쓰러져 갑니다.\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char("설상가상으로 멀리 소용돌이가 보입니다.\r\n", ch);
+    send_to_char("당신은 당신의 배와 함께 소용돌이로 빨려들어갑니다.\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char("소용돌이의 힘에 배가 부서지고, 당신은 바다로 내동댕이 쳐 집니다.\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char("헤엄을 잘치는 당신이지만 소용돌이의 힘에서는 어쩔수 없습니다.\r\n", ch);
+    send_to_char("당신은 점차로 의식을 일어갑니다.\r\n", ch);
+    send_to_char(".........\r\n", ch);
+    send_to_char("으~~~\r\n", ch);
+    send_to_char("으~~\r\n", ch);
+    send_to_char("으~\r\n", ch);
+    send_to_char("~\r\n", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("\r\n", ch);
 
     char_from_room(ch);
 
@@ -624,8 +624,8 @@ void gbisland_move_seashore(struct char_data *ch)
 
     /* check - remortal */
     if (!IS_ALL_REMOED(ch) && IS_MORTAL(ch)) {
-	send_to_char("당신은 소용돌이에 휘말려 정신을 차리지 못합니다.\n\r", ch);
-	send_to_char("당신은 죽습니다.\n\r", ch);
+	send_to_char("당신은 소용돌이에 휘말려 정신을 차리지 못합니다.\r\n", ch);
+	send_to_char("당신은 죽습니다.\r\n", ch);
 
 	/* NOTE: Use simpler die(), not raw_kill() */
 #ifdef	UNUSED_CODE
@@ -672,7 +672,7 @@ int gbisland_sea(struct char_data *ch, int cmd, char *arg)
 	    if ((was_in == k->follower->in_room) &&
 		(GET_POS(k->follower) >= POS_STANDING)) {
 		act("You follow $N.", FALSE, k->follower, 0, ch, TO_CHAR);
-		send_to_char("\n\r", k->follower);
+		send_to_char("\r\n", k->follower);
 
 		gbisland_move_seashore(k->follower);
 	    }
@@ -754,7 +754,7 @@ void gbisland_go_out_barrier(struct char_data *ch)
 	    if ((was_in == k->follower->in_room) &&
 		(GET_POS(k->follower) >= POS_STANDING)) {
 		act("You follow $N.", FALSE, k->follower, 0, ch, TO_CHAR);
-		send_to_char("\n\r", k->follower);
+		send_to_char("\r\n", k->follower);
 
 		if (!IS_AFFECTED(ch, AFF_SNEAK)) {
 		    sprintf(tmp, "$n leaves %s.", dirs[dir - 1]);
@@ -892,7 +892,7 @@ int gbisland_saint_mirror(struct char_data *ch, int cmd, char *arg)
 	}
     }
     else if (cmd == CMD_ASK) {	/* ask */
-	send_to_char("Ok.\n\r", ch);
+	send_to_char("Ok.\r\n", ch);
 	ask = TRUE;
     }
     else if (cmd == CMD_GIVE) {
@@ -980,23 +980,23 @@ int gbisland_carpie(struct char_data *ch, int cmd, char *arg)
 
     room = ch->in_room;
     for (victim = character_list; victim; victim = victim->next) {
-	if ((victim->in_room == room) 
+	if ((victim->in_room == room)
 		&& GET_POS(victim) == POS_SLEEPING) {
 	    /* NOTE: af->next is invalid. See affect_remove()*/
 	    /*
 	    for (af = victim->affected; af; af = af_next) {
 		af_next = af->next;
-		if (af->type == SPELL_SLEEP) 
-		    affect_remove(victim, af); 
+		if (af->type == SPELL_SLEEP)
+		    affect_remove(victim, af);
 	    }
 	    */
 	    /* NOTE: Simpler code, Same effect.  */
 	    affect_from_char(victim, SPELL_SLEEP);
 
-	    send_to_char("누군가 당신의 허벅지를 꼬집습니다.\n\r", victim);
+	    send_to_char("누군가 당신의 허벅지를 꼬집습니다.\r\n", victim);
 	    GET_POS(victim) = POS_STANDING;
 
-	    if (IS_NPC(victim)) 
+	    if (IS_NPC(victim))
 		SET_BIT(victim->specials.act, ACT_AGGRESSIVE);
 	}
     }
@@ -1027,7 +1027,7 @@ int gbisland_magic_paper(struct char_data *ch, int cmd, char *arg)
 
     act("성스러운 기운이 방안에 가득히 넘쳐 흐릅니다.",
 	FALSE, ch, 0, 0, TO_ROOM);
-    send_to_char("성스러운 기운이 방안에 가득히 넘쳐 흐릅니다.\n\r", ch);
+    send_to_char("성스러운 기운이 방안에 가득히 넘쳐 흐릅니다.\r\n", ch);
 
     room = ch->in_room;
     for (victim = character_list; victim; victim = victim->next) {
@@ -1062,11 +1062,11 @@ int gbisland_magic_paper(struct char_data *ch, int cmd, char *arg)
 
 	    if (GET_ALIGNMENT(victim) > 0) {
 		/* good */
-		send_to_char("성스러운 기운이 당신에게 힘을 줍니다.\n\r", victim);
+		send_to_char("성스러운 기운이 당신에게 힘을 줍니다.\r\n", victim);
 	    }
 	    else {
 		/* evil */
-		send_to_char("성스러운 기운에 당신은 힘이 빠집니다.\n\r", victim);
+		send_to_char("성스러운 기운에 당신은 힘이 빠집니다.\r\n", victim);
 	    }
 	}
     }
@@ -1101,11 +1101,11 @@ int gbisland_seed_evil_power(struct char_data *ch, int cmd, char *arg)
 	ch->skills[skno].skilled = MIN(skilled, 100);
     }
 
-    send_to_char("당신은 갑자기 사악한 기분이 듭니다.\n\r", ch);
-    send_to_char("당신은 악마가 됩니다...\n\r", ch);
+    send_to_char("당신은 갑자기 사악한 기분이 듭니다.\r\n", ch);
+    send_to_char("당신은 악마가 됩니다...\r\n", ch);
     GET_ALIGNMENT(ch) = -999;
 
     extract_obj(obj);
-    send_to_char("OK.\n\r", ch);
+    send_to_char("OK.\r\n", ch);
     return TRUE;
 }

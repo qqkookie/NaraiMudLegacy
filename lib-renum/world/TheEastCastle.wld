@@ -19,7 +19,7 @@ S
 The entryway to the castle~
   You are standing just past the castle gates in the courtyard.  Before you
 stands the draw bridge of an enormous castle, while the courtyard continues to
-the east and west.  The sunlight is shining down on the castle in such a way 
+the east and west.  The sunlight is shining down on the castle in such a way
 that it appears to glow.
 ~
 153 8 0
@@ -581,7 +581,7 @@ hallway
 S
 #15341
 Hallway~
-  You are in a hallway.  The kitchen is to the west, and there are servants 
+  You are in a hallway.  The kitchen is to the west, and there are servants
 quarters to the south and east.
 ~
 153 8 0
@@ -657,7 +657,7 @@ hall of armor
 S
 #15345
 Throne room~
-  You are in the magnificant throne room.  Talk about riches!  The floor is 
+  You are in the magnificant throne room.  Talk about riches!  The floor is
 solid gold, as is the throne.  You are really beginning to drool over all the
 material posessions.  There is a huge throne set against the western wall.
 ~
@@ -769,7 +769,7 @@ hallway
 0 -1 15364
 E
 mirror~
-  Looking in the mirror, you realize that you are one ugly dude.  You also 
+  Looking in the mirror, you realize that you are one ugly dude.  You also
 notice that you can almost see through it, like there was another dimension
 on the other side.
 ~
@@ -877,7 +877,7 @@ stairway
 S
 #15371
 Dungeon~
-     You are in the Dungeon.  There are cells to the north, west, and east. 
+     You are in the Dungeon.  There are cells to the north, west, and east.
 From the east and west, you hear guttural noises.  From the north, nothing...
 ~
 153 8 0

@@ -7,24 +7,24 @@
 ************************************************************************* */
 
 #include <stdio.h>
-#include <string.h> 
+#include <string.h>
 #include <stdlib.h>
 #include <time.h>
 
 #include "char.h"
 #include "object.h"
 #include "global.h"
-#include "comm.h" 
-#include "actions.h" 
+#include "comm.h"
+#include "actions.h"
 
 /* Locals */
-/* NOTE: Now symbolic constant. LASTCHAT_SIZE */ 
+/* NOTE: Now symbolic constant. LASTCHAT_SIZE */
 #define LASTCHAT_SIZE 40
 static char history[LASTCHAT_SIZE][MAX_LINE_LEN];
 static int his_start = 0, his_end = 0;
 
 void do_lastchat(struct char_data *ch, char *argument, int cmd);
-void chat_history(char *str); 
+void chat_history(char *str);
 
 int is_dumb(struct char_data *ch)
 {
@@ -44,9 +44,9 @@ void do_say(struct char_data *ch, char *argument, int cmd)
     for (i = 0; *(argument + i) == ' '; i++) ;
 
     if (!*(argument + i))
-	send_to_char("Yes, but WHAT do you want to say?\n\r", ch);
+	send_to_char("Yes, but WHAT do you want to say?\r\n", ch);
     else {
-	sprintf(buf, "You say '%s'\n\r", argument + i);
+	sprintf(buf, "You say '%s'\r\n", argument + i);
 	send_to_char(buf, ch);
 	sprintf(buf, "$n says '%s'", argument + i);
 	act(buf, FALSE, ch, 0, 0, TO_ROOM);
@@ -61,14 +61,14 @@ void do_say(struct char_data *ch, char *argument, int cmd)
 
     if ( is_dumb(ch)) return;
 
-    argument = skip_spaces(argument); 
+    argument = skip_spaces(argument);
     if (!*argument)
-	send_to_char(STRHAN("Yes, but WHAT do you want to say?\n\r",
-			 "예? 뭐라고 말해요 ?\n\r", ch), ch );
+	send_to_char(STRHAN("Yes, but WHAT do you want to say?\r\n",
+			 "예? 뭐라고 말해요 ?\r\n", ch), ch );
     else {
 	/* English - Korean display act() , english text first.. */
-	sprintf(buf, 
-	    STRHAN("You say '%s'\n\r", "'%s' 라고 말합니다\n\r", ch), argument);
+	sprintf(buf,
+	    STRHAN("You say '%s'\r\n", "'%s' 라고 말합니다\r\n", ch), argument);
 	send_to_char(buf, ch);
 
 	sprintf(buf, "$n says '%s'", argument);
@@ -76,7 +76,7 @@ void do_say(struct char_data *ch, char *argument, int cmd)
 	/* English - Korean display act() , english text first.. */
 	acthan(buf, buf2, FALSE, ch, 0, 0, TO_ROOM);
     }
-} 
+}
 
 void do_chat(struct char_data *ch, char *argument, int cmd)
 {
@@ -86,18 +86,18 @@ void do_chat(struct char_data *ch, char *argument, int cmd)
     extern int nochatflag;
 
     if (IS_NPC(ch))
-	return; 
+	return;
     /* NOTE: Did little code clean up */
     cp = skip_spaces(argument);
     if (is_dumb(ch) || ( nochatflag && IS_MORTAL(ch)))
-	send_to_char("chat is forbiddened now.\n\r", ch);
+	send_to_char("chat is forbiddened now.\r\n", ch);
     /* NOTE: Player forbidden shouting by wizard can't chat, too. */
     else if (IS_SET(ch->specials.act, PLR_SHUTUP))
-	send_to_char("Shut up your mouth!!\n\r", ch); 
-    /* NOTE: "chat" with blank argument is same as "chat /last" */ 
+	send_to_char("Shut up your mouth!!\r\n", ch);
+    /* NOTE: "chat" with blank argument is same as "chat /last" */
     else if (*cp == '\0' || strncmp(cp, "/last", 5) == 0)
-	do_lastchat(ch, argument, cmd); 
-    else { 
+	do_lastchat(ch, argument, cmd);
+    else {
 	sprintf(buf, "%s > %s\r\n", GET_NAME(ch), argument);
 	for (i = descriptor_list; i; i = i->next)
 	    if ((i->connected == CON_PLYNG) && (!i->original)
@@ -115,27 +115,27 @@ void do_shout(struct char_data *ch, char *argument, int cmd)
     struct descriptor_data *i;
     extern int noshoutflag;
 
-    /*  NOTE:  NPC shoud not shout too laudly. Ex) Archmage's SUNFIRE!.  */ 
+    /*  NOTE:  NPC shoud not shout too laudly. Ex) Archmage's SUNFIRE!.  */
     if (IS_NPC(ch)) {
 	sprintf(buf, "$n shouts '%s'", argument);
-	act(buf, 0, ch, 0, 0, TO_ROOM); 
+	act(buf, 0, ch, 0, 0, TO_ROOM);
 	return;
     }
 
-    argument = skip_spaces(argument); 
+    argument = skip_spaces(argument);
     if (is_dumb(ch) || ( noshoutflag && IS_MORTAL(ch)))
-	send_to_char("I guess you can't shout now?\n\r", ch);
+	send_to_char("I guess you can't shout now?\r\n", ch);
     else if (IS_SET(ch->specials.act, PLR_SHUTUP))
-	send_to_char("Shut up your mouth!!\n\r", ch);
+	send_to_char("Shut up your mouth!!\r\n", ch);
     else if (!*argument)
-	send_to_char("Shout? Yes! Fine! Shout we must, but WHAT??\n\r", ch);
+	send_to_char("Shout? Yes! Fine! Shout we must, but WHAT??\r\n", ch);
     else {
-	/* send_to_char("Ok.\n\r", ch);*/
+	/* send_to_char("Ok.\r\n", ch);*/
 	sprintf(buf, "%s shouts '%s'\r\n", GET_NAME(ch), argument);
 
 	for (i = descriptor_list; i; i = i->next)
 	    /* NOTE: I'd like to hear my own shout. */
-	    if ( /* i->character != ch && */ 
+	    if ( /* i->character != ch && */
 		/* NOTE: Sleeping people can't hear shout. */
 		!i->connected && i->character && AWAKE(ch)
 		    && !IS_SET(i->character->specials.act, PLR_NOSHOUT))
@@ -165,7 +165,7 @@ void chat_history(char *str)
     if ((his_end % LASTCHAT_SIZE) == (his_start % LASTCHAT_SIZE)) {
 	his_end = his_start % LASTCHAT_SIZE;
 	his_start = (his_start + 1) % LASTCHAT_SIZE;
-    } 
+    }
 
 #ifdef	CHATLOG
     // NOTE: log chat and shout
@@ -198,11 +198,11 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
     if (is_dumb(ch)) return;
     half_chop(argument, name, message);
     if (!*name || !*message) {
-	send_to_char("Who do you wish to tell what??\n\r", ch);
+	send_to_char("Who do you wish to tell what??\r\n", ch);
 	return;
     }
 
-    /* NOTE: "!" as listener name means telling to whom you told  or replied 
+    /* NOTE: "!" as listener name means telling to whom you told  or replied
        last time. This applies to telling to mob, too      */
     if (!strcmp(name, "!") && strlen(ch->specials.reply_who) > 1)
 	strncpy(name, ch->specials.reply_who, 19);
@@ -210,9 +210,9 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
 	strncpy(ch->specials.reply_who, name, 19);
 
     if (!(vict = get_char_vis(ch, name)))
-	send_to_char(MSGSTR("No-one by that name here..\n\r", ch), ch);
+	send_to_char(MSGSTR("No-one by that name here..\r\n", ch), ch);
     else if (ch == vict)
-	send_to_char("You try to tell yourself something.\n\r", ch);
+	send_to_char("You try to tell yourself something.\r\n", ch);
 
     else if (GET_POS(vict) == POS_SLEEPING && IS_MORTAL(ch)) {
 	/* NOTE: Identify listener you tell even when it is sleeping.  */
@@ -229,22 +229,22 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
 	     (IS_WIZARD(ch) && HIGHER_LEV(ch, vict))) {
 	if (IS_NPC(ch)) {
 	    s = ch->player.short_descr;
-	    sprintf(buf, "%s tells you '%s'\n\r", s, message);
+	    sprintf(buf, "%s tells you '%s'\r\n", s, message);
 	}
 	else {
 	    s = CAN_SEE(vict, ch) ? GET_NAME(ch) : "Someone";
 	    /* NOTE: Distinguish PC player tell from Shopkeeper tell   */
-	    sprintf(buf, "%s tells YOU '%s'\n\r", s, message);
+	    sprintf(buf, "%s tells YOU '%s'\r\n", s, message);
 	}
 	/* NOTE: If message starts with '!' char, beep bell on terminal */
 	if (message[0] == '!' )
 	    send_to_char("\a\a** BEEP ** " , vict);
 	send_to_char(buf, vict);
 	sprintf(vict->specials.reply_who, "%s", GET_NAME(ch));
-	sprintf(buf, "You tell %s '%s'\n\r", GET_NAME(vict), message);
+	sprintf(buf, "You tell %s '%s'\r\n", GET_NAME(vict), message);
 	send_to_char(buf, ch);
     }
-    else 
+    else
 	act("$E isn't listening now.", FALSE, ch, 0, vict, TO_CHAR);
 }
 
@@ -260,38 +260,38 @@ void do_reply(struct char_data *ch, char *argument, int cmd)
 void do_send(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *vict;
-    char *s, name[MAX_NAME_LEN], message[MAX_NAME_LEN], paint_name[MAX_LINE_LEN]; 
+    char *s, name[MAX_NAME_LEN], message[MAX_NAME_LEN], paint_name[MAX_LINE_LEN];
     char  buf[MAX_LINE_LEN], paint[MAX_STR_LEN];
 
     if (is_dumb(ch)) return;
     half_chop(argument, name, message);
-    /* NOTE: Fix potential security hole. Prevent going up directory.	*/ 
+    /* NOTE: Fix potential security hole. Prevent going up directory.	*/
     /*		Imagine command like "send cookie ../../../../etc/passwd"  */
     if (strstr( message, ".." ))
-    	return; 
+    	return;
 
     if (!*name || !*message)
-	send_to_char("Who do you wish to tell what??\n\r", ch);
+	send_to_char("Who do you wish to tell what??\r\n", ch);
     else if (!(vict = get_char_vis(ch, name)))
-	send_to_char("No-one by that name here..\n\r", ch);
+	send_to_char("No-one by that name here..\r\n", ch);
     else {
 	/* NOTE: get name of file to send from db.c module */
-	sprintf(paint_name, "%s/%s", lookup_db("paints") , message); 
+	sprintf(paint_name, "%s/%s", lookup_db("paints") , message);
 	if (file_to_string(paint_name, paint) == NULL)
-	    send_to_char("No such paint prepared.\n\r", ch);
+	    send_to_char("No such paint prepared.\r\n", ch);
 	else if ((IS_SET(vict->specials.act, PLR_NOTELL))  &&
 		(IS_MORTAL(ch) || !HIGHER_LEV (ch, vict)))
 	    act("$E isn't listening now.", FALSE, ch, 0, vict, TO_CHAR);
 	else {
 	    send_to_char("\r\n", vict);
 	    send_to_char(paint, vict);
-	    sprintf(buf, "You send %s %s\n\r", GET_NAME(vict), message);
+	    sprintf(buf, "You send %s %s\r\n", GET_NAME(vict), message);
 	    send_to_char(buf, ch);
 	    if (IS_NPC(ch))
 		s = ch->player.short_descr;
 	    else
 		s = CAN_SEE(vict, ch) ? GET_NAME(ch) : "Someone";
-	    sprintf(buf, "%s sends you '%s'\n\r", s, message);
+	    sprintf(buf, "%s sends you '%s'\r\n", s, message);
 	    send_to_char(buf, vict);
 	}
      }
@@ -314,8 +314,8 @@ void do_gtell(struct char_data *ch, char *argument, int cmd)
 	s = ch->player.short_descr;
     else
 	s = GET_NAME(ch);
-    sprintf(buf, "** %s ** '%s'\n\r", s, argument);
-    /* NOTE: if (k && IS_AFFECTED(k, AFF_GROUP))  	*/ 
+    sprintf(buf, "** %s ** '%s'\r\n", s, argument);
+    /* NOTE: if (k && IS_AFFECTED(k, AFF_GROUP))  	*/
     if (k)
 	send_to_char(buf, k);
     /* NOTE: make sure leader is grouped */
@@ -323,43 +323,43 @@ void do_gtell(struct char_data *ch, char *argument, int cmd)
 	for (f = k->followers; f; f = f->next)
 	    if (f->follower && IS_AFFECTED(f->follower, AFF_GROUP))
 		send_to_char(buf, f->follower);
-    /* send_to_char("Ok.\n\r", ch); */
+    /* send_to_char("Ok.\r\n", ch); */
 }
 
 /* NOTE: do_whisper() and do_ask() does essentially same function
-	except action messages. Merge two function in do_whisper().  */ 
+	except action messages. Merge two function in do_whisper().  */
 /* 속삭이기 */
 void do_whisper(struct char_data *ch, char *argument, int cmd)
 {
     struct char_data *vict;
     char name[100], message[MAX_LINE_LEN], buf[MAX_LINE_LEN];
-    char **actstr ; 
+    char **actstr ;
 
-    static char  *ask_str[] = { 
-	"Who do you want to ask something.. and what??\n\r",
+    static char  *ask_str[] = {
+	"Who do you want to ask something.. and what??\r\n",
 	"$n quietly asks $mself a question.",
-	"You think about it for a while...\n\r",
+	"You think about it for a while...\r\n",
 	"$n asks you '%s'",
 	"$n asks $N a question.",
-    }; 
+    };
     static char  *whisper_str[] = {
-	"Who do you want to whisper to.. and what??\n\r",
+	"Who do you want to whisper to.. and what??\r\n",
 	"$n whispers quietly to $mself.",
-	"You can't seem to get your mouth close enough to your ear...\n\r",
+	"You can't seem to get your mouth close enough to your ear...\r\n",
 	"$n whispers to you, '%s'",
 	"$n whispers something to $N.",
     };
 
     if (is_dumb(ch)) return;
     /* NOTE:  Select as do_whisper() or do_ask() */
-    actstr = ( cmd == CMD_ASK ) ? ask_str : whisper_str ; 
+    actstr = ( cmd == CMD_ASK ) ? ask_str : whisper_str ;
 
     half_chop(argument, name, message);
 
     if (!*name || !*message)
 	send_to_char( actstr[0], ch);
     else if (!(vict = get_char_room_vis(ch, name)))
-	send_to_char(MSGSTR("No-one by that name here..\n\r", ch), ch);
+	send_to_char(MSGSTR("No-one by that name here..\r\n", ch), ch);
     else if (vict == ch) {
 	act( actstr[1], FALSE, ch, 0, 0, TO_ROOM);
 	send_to_char( actstr[2], ch);
@@ -367,7 +367,7 @@ void do_whisper(struct char_data *ch, char *argument, int cmd)
     else {
 	sprintf(buf, actstr[3], message);
 	act(buf, FALSE, ch, 0, vict, TO_VICT);
-	/*    send_to_char("Ok.\n\r", ch); */
+	/*    send_to_char("Ok.\r\n", ch); */
 	act( actstr[4], FALSE, ch, 0, vict, TO_NOTVICT);
     }
 }
@@ -385,17 +385,17 @@ void do_ask(struct char_data *ch, char *argument, int cmd)
     half_chop(argument, name, message);
 
     if (!*name || !*message)
-	send_to_char("Who do you want to ask something.. and what??\n\r", ch);
+	send_to_char("Who do you want to ask something.. and what??\r\n", ch);
     else if (!(vict = get_char_room_vis(ch, name)))
-	send_to_char("No-one by that name here..\n\r", ch);
+	send_to_char("No-one by that name here..\r\n", ch);
     else if (vict == ch) {
 	act("$n quietly asks $mself a question.", FALSE, ch, 0, 0, TO_ROOM);
-	send_to_char("You think about it for a while...\n\r", ch);
+	send_to_char("You think about it for a while...\r\n", ch);
     }
     else {
 	sprintf(buf, "$n asks you '%s'", message);
 	act(buf, FALSE, ch, 0, vict, TO_VICT);
-	/*    send_to_char("Ok.\n\r", ch); */
+	/*    send_to_char("Ok.\r\n", ch); */
 	act("$n asks $N a question.", FALSE, ch, 0, vict, TO_NOTVICT);
     }
 }
@@ -411,29 +411,29 @@ void do_emote(struct char_data *ch, char *argument, int cmd)
     /* if (IS_NPC(ch)) return; */
     argument = skip_spaces(argument);
     if (!*argument)
-	send_to_char("Yes.. But what?\n\r", ch);
+	send_to_char("Yes.. But what?\r\n", ch);
     else {
 	sprintf(buf, "$n %s", argument);
 	act(buf, FALSE, ch, 0, 0, TO_ROOM);
 
-	sprintf(buf, "You %s.\n\r", argument);
+	sprintf(buf, "You %s.\r\n", argument);
 	send_to_char(buf, ch);
     }
-} 
+}
 
 void do_echo(struct char_data *ch, char *argument, int cmd)
 {
-    struct descriptor_data *i; 
+    struct descriptor_data *i;
     char buf[MAX_BUFSIZ];
 
     if (IS_NPC(ch))
 	return;
 
-    argument = skip_spaces(argument); 
+    argument = skip_spaces(argument);
     if (!*argument )
-	send_to_char("That must be a mistake...\n\r", ch);
+	send_to_char("That must be a mistake...\r\n", ch);
     else {
-	sprintf(buf, "%s\n\r", argument);
+	sprintf(buf, "%s\r\n", argument);
 	/* NOTE: God and Demi-God's echo will be heard by all players       */
 	/* NOTE: Don't use send_to_except()   */
 	if ( GET_LEVEL(ch) >= LEV_DEMI ) {
@@ -443,7 +443,7 @@ void do_echo(struct char_data *ch, char *argument, int cmd)
 	}
 	else
 	    send_to_room_except(buf, ch->in_room, ch);
-	send_to_char("Ok.\n\r", ch);
+	send_to_char("Ok.\r\n", ch);
     }
 }
 
@@ -454,9 +454,9 @@ void do_wall(struct char_data *ch, char *argument, int cmd)
     argument = skip_spaces(argument);
     if (IS_NPCLEV(ch) || (!*argument))
 	return;
-    sprintf(buf, "%s\n\r", argument);
+    sprintf(buf, "%s\r\n", argument);
     send_to_all(buf);
-    /* send_to_char("Ok.\n\r", ch); */
+    /* send_to_char("Ok.\r\n", ch); */
 }
 
 void do_wiznet(struct char_data *ch, char *argument, int cmd)
@@ -467,7 +467,7 @@ void do_wiznet(struct char_data *ch, char *argument, int cmd)
 
     if (IS_NPC(ch))
 	return;
-    sprintf(buf, "%s: %s\n\r", ch->player.name, argument);
+    sprintf(buf, "%s: %s\r\n", ch->player.name, argument);
     for (i = descriptor_list; i; i = i->next)
 	if (!i->connected) {
 	    if (i->original)
@@ -476,10 +476,10 @@ void do_wiznet(struct char_data *ch, char *argument, int cmd)
 	    if (IS_WIZARD(victim))
 		send_to_char(buf, victim);
 	}
-    send_to_char("Ok.\n\r", ch);
-} 
+    send_to_char("Ok.\r\n", ch);
+}
 
-#ifdef UNUSED_CODE 
+#ifdef UNUSED_CODE
 /* NOTE: do_nochat(), do_notell() are replaced by NEW do_set(). */
 /*	Command 'nochat' etc. is now 'set chat <yes/no>'. etc.  */
 void do_nochat(struct char_data *ch, char *argument, int cmd)
@@ -488,11 +488,11 @@ void do_nochat(struct char_data *ch, char *argument, int cmd)
 	return;
 
     if (IS_SET(ch->specials.act, PLR_NOCHAT)) {
-	send_to_char("You can now hear chats again.\n\r", ch);
+	send_to_char("You can now hear chats again.\r\n", ch);
 	REMOVE_BIT(ch->specials.act, PLR_NOCHAT);
     }
     else {
-	send_to_char("From now on, you won't hear chats.\n\r", ch);
+	send_to_char("From now on, you won't hear chats.\r\n", ch);
 	SET_BIT(ch->specials.act, PLR_NOCHAT);
     }
 }
@@ -503,11 +503,11 @@ void do_notell(struct char_data *ch, char *argument, int cmd)
 	return;
 
     if (IS_SET(ch->specials.act, PLR_NOTELL)) {
-	send_to_char("You can now hear tells again.\n\r", ch);
+	send_to_char("You can now hear tells again.\r\n", ch);
 	REMOVE_BIT(ch->specials.act, PLR_NOTELL);
     }
     else {
-	send_to_char("From now on, you won't hear tells.\n\r", ch);
+	send_to_char("From now on, you won't hear tells.\r\n", ch);
 	SET_BIT(ch->specials.act, PLR_NOTELL);
     }
 }
@@ -515,8 +515,8 @@ void do_notell(struct char_data *ch, char *argument, int cmd)
 #endif		/* UNUSED_CODE */
 
 /* ************************************************************************
-   *  OLD file: act.social.c ,   Usage : Social action commands.  
-   ************************************************************************* */ 
+   *  OLD file: act.social.c ,   Usage : Social action commands.
+   ************************************************************************* */
 
 #define MAX_SOC_MESS 150
 
@@ -546,8 +546,8 @@ struct social_messg {
 };
 
 /* NOTE:  soc_mess_list is now table of pointers to struct social_messg  */
-struct social_messg *soc_mess_list[MAX_SOC_MESS]; 
-static int list_top  = 0 ; 
+struct social_messg *soc_mess_list[MAX_SOC_MESS];
+static int list_top  = 0 ;
 
 /* NOTE: cmd arg has index to messge table, not regular command number. */
 void do_action(struct char_data *ch, char *argument, int cmd)
@@ -558,13 +558,13 @@ void do_action(struct char_data *ch, char *argument, int cmd)
 
 /*
     if ((act_nr = find_action(cmd)) < 0) {
-	send_to_char("That action is not supported.\n\r", ch);
+	send_to_char("That action is not supported.\r\n", ch);
 	return;
     }
 */
     /* NOTE : soc_mess[] table was searched in command_interpreter(). */
     if ( cmd <= 0 || cmd >= MAX_SOC_MESS ) {
-	send_to_char("That action is not supported.\n\r", ch);
+	send_to_char("That action is not supported.\r\n", ch);
 	return;
     }
     action = soc_mess_list[cmd];
@@ -576,18 +576,18 @@ void do_action(struct char_data *ch, char *argument, int cmd)
 
     if (!*buf) {
 	send_to_char(action->char_no_arg, ch);
-	send_to_char("\n\r", ch);
+	send_to_char("\r\n", ch);
 	act(action->others_no_arg, action->hide, ch, 0, 0, TO_ROOM);
 	return;
     }
 
     if (!(vict = get_char_room_vis(ch, buf))) {
 	send_to_char(action->not_found, ch);
-	send_to_char("\n\r", ch);
+	send_to_char("\r\n", ch);
     }
     else if (vict == ch) {
 	send_to_char(action->char_auto, ch);
-	send_to_char("\n\r", ch);
+	send_to_char("\r\n", ch);
 	act(action->others_auto, action->hide, ch, 0, 0, TO_ROOM);
     }
     else {
@@ -597,12 +597,12 @@ void do_action(struct char_data *ch, char *argument, int cmd)
 		FALSE, ch, 0, vict, TO_CHAR);
 	}
 	else {
-	    act(action->char_found, 0, ch, 0, vict, TO_CHAR); 
-	    act(action->others_found, action->hide, ch, 0, vict, TO_NOTVICT); 
+	    act(action->char_found, 0, ch, 0, vict, TO_CHAR);
+	    act(action->others_found, action->hide, ch, 0, vict, TO_NOTVICT);
 	    act(action->vict_found, action->hide, ch, 0, vict, TO_VICT);
 	}
     }
-} 
+}
 
 /*
 int find_action(int cmd)
@@ -628,7 +628,7 @@ int find_action(int cmd)
 	else
 	    bot = ++mid;
     }
-} 
+}
 */
 
 /* NOTE: Used in command_interpreter. Searches for action_name.
@@ -636,7 +636,7 @@ int find_action(int cmd)
 	and will set value of min_level min_pos. 	 */
 /* NOTE: pmin_lev, pmin_pos are not iput args, it is output args  */
 int find_action(char *action_name, int *pmin_lev, int *pmin_pos )
-{ 
+{
     int i, len;
     if (list_top <= 0)
 	return (-1);
@@ -645,17 +645,17 @@ int find_action(char *action_name, int *pmin_lev, int *pmin_pos )
     if (len == 0 ) len = 1;
 
     /* NOTE: sequencial search. inexact match to name string */
-    for (i = 1; i <= list_top; i++) 
+    for (i = 1; i <= list_top; i++)
 	if (!strncmp( action_name, (soc_mess_list[i])->action_name, len )){
 	    /* NOTE: To check ch's min level and position */
-	    if ( pmin_lev ) 
+	    if ( pmin_lev )
 		*pmin_lev = soc_mess_list[i]->min_level;
-	    if ( pmin_pos ) 
+	    if ( pmin_pos )
 		*pmin_pos = soc_mess_list[i]->min_char_position;
 	    return (i);
-	} 
+	}
     return (-1);
-} 
+}
 
 char *fread_action(FILE * fl)
 {
@@ -676,7 +676,7 @@ char *fread_action(FILE * fl)
 	    return (rslt);
 	}
     }
-} 
+}
 
 void boot_social_messages(void)
 {
@@ -689,7 +689,7 @@ void boot_social_messages(void)
     if (!(fl = fopen(lookup_db("social"), "r"))) {
 	perror("boot_social_messages");
 	exit(2);
-    } 
+    }
 
     for (;;) {
 	fscanf(fl, " %s ", action_name);
@@ -709,14 +709,14 @@ void boot_social_messages(void)
 
 	/* read the stuff */
 	action->hide = hide;
-	action->min_level = min_lev; 
-	action->min_char_position = min_ch_pos; 
-	action->min_victim_position = min_vic_pos; 
+	action->min_level = min_lev;
+	action->min_char_position = min_ch_pos;
+	action->min_victim_position = min_vic_pos;
 
-	action->action_name = strdup(action_name); 
+	action->action_name = strdup(action_name);
 
 	action->char_no_arg = fread_action(fl);
-	action->others_no_arg = fread_action(fl); 
+	action->others_no_arg = fread_action(fl);
 	action->char_found = fread_action(fl);
 
 	/* if no char_found, the rest is to be ignored */
@@ -724,9 +724,9 @@ void boot_social_messages(void)
 	    continue;
 
 	action->others_found = fread_action(fl);
-	action->vict_found = fread_action(fl); 
-	action->not_found = fread_action(fl); 
-	action->char_auto = fread_action(fl); 
+	action->vict_found = fread_action(fl);
+	action->not_found = fread_action(fl);
+	action->char_auto = fread_action(fl);
 	action->others_auto = fread_action(fl);
 
     }
@@ -751,20 +751,20 @@ void do_insult(struct char_data *ch, char *argument, int cmd)
 
     one_argument(argument, buf);
 
-    if (!*buf) { 
-	send_to_char("Sure you don't want to insult everybody.\n\r", ch);
+    if (!*buf) {
+	send_to_char("Sure you don't want to insult everybody.\r\n", ch);
 	return;
     }
     if (!(victim = get_char_room_vis(ch, buf))) {
-	send_to_char("Can't hear you!\n\r", ch);
+	send_to_char("Can't hear you!\r\n", ch);
 	return;
     }
     if (victim == ch) {
-	send_to_char("You feel insulted.\n\r", ch);
+	send_to_char("You feel insulted.\r\n", ch);
 	return;
     }
     /* ch != victim */
-    sprintf(buf, "You insult %s.\n\r", GET_NAME(victim));
+    sprintf(buf, "You insult %s.\r\n", GET_NAME(victim));
     send_to_char(buf, ch);
 
     msg = *insult_msg ;
@@ -773,9 +773,9 @@ void do_insult(struct char_data *ch, char *argument, int cmd)
     case 1:
 	msg += 4 ; /* NOTE: more damaging insult */
 	/* FALL THRU */
-    case 0: 
+    case 0:
 	if (GET_SEX(ch) == SEX_FEMALE )
-	    msg += 2; 
+	    msg += 2;
 	if (GET_SEX(victim) == SEX_FEMALE)
 	    msg ++ ;
 	act( buf, FALSE, ch, 0, victim, TO_VICT);
@@ -796,7 +796,7 @@ void do_insult(struct char_data *ch, char *argument, int cmd)
    **************************************************************** */
 
 void send_to_char(char *messg, struct char_data *ch)
-{ 
+{
     if (ch->desc && messg && *messg)
 	write_to_q(messg, &ch->desc->output);
 }
@@ -844,7 +844,7 @@ void send_to_except(char *messg, struct char_data *ch)
 	    if (ch->desc != i && !i->connected)
 		write_to_q(messg, &i->output);
 }
-*/ 
+*/
 
 void send_to_room(char *messg, int room)
 {
@@ -854,7 +854,7 @@ void send_to_room(char *messg, int room)
 	for (i = world[room].people; i; i = i->next_in_room)
 	    if (i->desc)
 		write_to_q(messg, &i->desc->output);
-} 
+}
 
 void send_to_room_except(char *messg, int room, struct char_data *ch)
 {
@@ -886,14 +886,14 @@ char * MSGSTR(char *msg, struct char_data *ch)
     char buf[MAX_BUFSIZ];
 
     static char *catalog[] = { "", "",
-	"No-one by that name here..\n\r", "그런 이름은 없는데요?\r\n",
+	"No-one by that name here..\r\n", "그런 이름은 없는데요?\r\n",
 	"\n", "\n",
     };
 
     if (!IS_ACTPLR(ch, PLR_KOREAN))
 	return(msg);
     if ((find = search_block(msg, catalog, 2)) >= 0 ) /* pair-wise match */
-	return(catalog[find+1]); 
+	return(catalog[find+1]);
     sprintf(buf, "MSGSTR: %s", msg); /* No translation */
     log(buf);
     return(msg);
@@ -913,7 +913,7 @@ char * MSGSTR(char *msg, struct char_data *ch)
 
 #define SANA(obj) (index("aeiouyAEIOUY", *(obj)->name) ? "an" : "a")
 
-/* char name/short_desc(for mobs) or someone?  */ 
+/* char name/short_desc(for mobs) or someone?  */
 #define PERS(ch, vict)   ( CAN_SEE(vict, ch) ? \
     (!IS_NPC(ch) ? (ch)->player.name : (ch)->player.short_descr) : "someone" )
 
@@ -930,8 +930,8 @@ char * MSGSTR(char *msg, struct char_data *ch)
 
 /* higher-level communication */
 
-void expand_actvar( char *buf, char *str, struct char_data *ch, 
-    struct obj_data *obj, void *vict_obj, struct char_data *to); 
+void expand_actvar( char *buf, char *str, struct char_data *ch,
+    struct obj_data *obj, void *vict_obj, struct char_data *to);
 
 /* NOTE: act(), act_han() do same macro expansion. */
 void act(char *str, int hide_invisible, struct char_data *ch,
@@ -999,8 +999,8 @@ void acthan(char *streng, char *strhan, int hide_invisible,
 }
 
 /* NOTE: Type of 5th arg : From struct char_data * to void *   */
-void expand_actvar(char *buf, char *str, struct char_data *ch, 
-	struct obj_data *obj, void *vict_obj, struct char_data *to) 
+void expand_actvar(char *buf, char *str, struct char_data *ch,
+	struct obj_data *obj, void *vict_obj, struct char_data *to)
 {
     register char *point, *i;
 
@@ -1071,7 +1071,7 @@ void expand_actvar(char *buf, char *str, struct char_data *ch,
     *(point) = '\0';
 }
 
-#ifdef UNUSED_CODE 
+#ifdef UNUSED_CODE
 void acthan(char *streng, char *strhan, int hide_invisible,
 	struct char_data *ch, struct obj_data *obj, void *vict_obj, int type)
 {
@@ -1181,7 +1181,7 @@ void acthan(char *streng, char *strhan, int hide_invisible,
     }
 }
 
-#endif		/* UNUSED_CODE */ 
+#endif		/* UNUSED_CODE */
 
 void show_string(struct descriptor_data *d, char *input)
 {
@@ -1190,7 +1190,7 @@ void show_string(struct descriptor_data *d, char *input)
     int lines = 0, toggle = 1;
     int pl;	/* NOTE: page length */
 
-    one_argument(input, buf); 
+    one_argument(input, buf);
     if (*buf) {
 	if (d->showstr_head) {
 	    free(d->showstr_head);
@@ -1202,7 +1202,7 @@ void show_string(struct descriptor_data *d, char *input)
 
     /* NOTE: Reduced defaukt page length from 22 to 21 lines per page */
     /* NOTE: Now! varible page length set by user ('set pagelength 30') */
-    pl = ( d->page_len < 10 || d->page_len > 50 ) ? 21 : d->page_len; 
+    pl = ( d->page_len < 10 || d->page_len > 50 ) ? 21 : d->page_len;
 
     /* show a chunk */
     for (scan = buffer;; scan++, d->showstr_point++)
@@ -1224,7 +1224,7 @@ void show_string(struct descriptor_data *d, char *input)
 	    }
 	    return;
 	}
-} 
+}
 
 void page_string(struct descriptor_data *d, char *str, int keep_internal)
 {

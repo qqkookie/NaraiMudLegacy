@@ -27,7 +27,7 @@ int guild(struct char_data *ch, int cmd, char *arg)
     char buf3[MAX_STRING_LENGTH * MAX_SKILLS];
     char tmp[MAX_STRING_LENGTH];
     int number, i, percent, nlist;
-    int lev, cla; 
+    int lev, cla;
     extern int level_quest[];
     extern void advance_level(struct char_data *ch, int level_up);
     extern char *how_good(int p1, int p2);
@@ -42,22 +42,22 @@ int guild(struct char_data *ch, int cmd, char *arg)
 	if (!IS_NPC(ch)) {
 	    for (i = 0; titles[GET_CLASS(ch) - 1][i].exp <= GET_EXP(ch); i++) {
 		if (i > LEVEL_LIMIT) {
-		    send_to_char_han("Immortality cannot be gained here.\n\r",
-				   "여기서는 신이 될 수 없습니다.\n\r", ch);
+		    send_to_char_han("Immortality cannot be gained here.\r\n",
+				   "여기서는 신이 될 수 없습니다.\r\n", ch);
 		    return (TRUE);
 		}
-		if ((i > GET_LEVEL(ch)) && 
+		if ((i > GET_LEVEL(ch)) &&
 			(ch->quest.solved >= level_quest[GET_LEVEL(ch)])) {
-		    send_to_char_han("You raise a level\n\r",
-				     "레벨을 올렸습니다\n\r", ch);
+		    send_to_char_han("You raise a level\r\n",
+				     "레벨을 올렸습니다\r\n", ch);
 		    GET_LEVEL(ch) = i;
 		    advance_level(ch, 1);
 		    set_title(ch);
 		    return (TRUE);
 		}
 	    }
-	    send_to_char_han("You need more experience.\n\r",
-			     "경험이 더 필요합니다.\n\r", ch);
+	    send_to_char_han("You need more experience.\r\n",
+			     "경험이 더 필요합니다.\r\n", ch);
 	    return (TRUE);
 	}
     }
@@ -65,18 +65,18 @@ int guild(struct char_data *ch, int cmd, char *arg)
     cla = GET_CLASS(ch) - 1;
     for (; *arg == ' '; arg++) ;
     if (!*arg) {
-	send_to_char_han("You can practice any of these skills:\n\r",
-		     "당신은 다음과 같은 기술을 익힐 수 있습니다:\n\r", ch);
+	send_to_char_han("You can practice any of these skills:\r\n",
+		     "당신은 다음과 같은 기술을 익힐 수 있습니다:\r\n", ch);
 	/* NOTE: spells index starts from 1, not zero.   */
-	/* Perhaps modified  for(i=1; *spells[i] != '\n'; i++){ if(*spells[i] 
+	/* Perhaps modified  for(i=1; *spells[i] != '\n'; i++){ if(*spells[i]
 	   && (spell_info[i+1].min_level[cla] <= lev)) {
 	   send_to_char(spells[i], ch);
 	   send_to_char(how_good(ch->skills[i+1].learned,
-	   ch->skills[i+1].skilled), ch); send_to_char("\n\r", ch); } } */
+	   ch->skills[i+1].skilled), ch); send_to_char("\r\n", ch); } } */
 	/* NOTE: Show practice number also with pager not to be scrolled out */
-	sprintf(buf, "You have %d practices left.\n\r",
+	sprintf(buf, "You have %d practices left.\r\n",
 		ch->specials.spells_to_learn);
-	sprintf(buf2, "지금 %d 번 기술을 연마(practice)할 수 있습니다. \n\r",
+	sprintf(buf2, "지금 %d 번 기술을 연마(practice)할 수 있습니다. \r\n",
 		ch->specials.spells_to_learn);
 	/* send_to_char_han(buf,buf2,ch); */
 	strcpy(buf3, STRHAN(buf, buf2, ch));
@@ -104,27 +104,27 @@ int guild(struct char_data *ch, int cmd, char *arg)
     /* NOTE: use serch_block() instead of old_search_block()    */
     number = search_block(arg, spells, FALSE);
     if (number == -1) {
-	send_to_char_han("You do not know of this spell...\n\r",
-			 "그런 기술은 모르는데요 ...\n\r", ch);
+	send_to_char_han("You do not know of this spell...\r\n",
+			 "그런 기술은 모르는데요 ...\r\n", ch);
 	return (TRUE);
     }
     if (lev < spell_info[number].min_level[cla]) {
-	send_to_char_han("Your level is too low.\n\r",
-			 "아직은 레벨이 낮아 안됩니다...\n\r", ch);
+	send_to_char_han("Your level is too low.\r\n",
+			 "아직은 레벨이 낮아 안됩니다...\r\n", ch);
 	return (TRUE);
     }
     if (ch->specials.spells_to_learn <= 0) {
-	send_to_char_han("You do not seem to be able to practice now.\n\r",
-			 "지금은 더이상 배울 수 없습니다.\n\r", ch);
+	send_to_char_han("You do not seem to be able to practice now.\r\n",
+			 "지금은 더이상 배울 수 없습니다.\r\n", ch);
 	return (TRUE);
     }
     if (ch->skills[number].learned >= spell_info[number].max_skill[cla]) {
-	send_to_char_han("You know this area as well as possible.\n\r",
-			 "그 분야는 배울 수 있는만큼 배웠습니다.\n\r", ch);
+	send_to_char_han("You know this area as well as possible.\r\n",
+			 "그 분야는 배울 수 있는만큼 배웠습니다.\r\n", ch);
 	return (TRUE);
     }
-    send_to_char_han("You Practice for a while...\n\r",
-		     "기술이 늘고 있습니다...\n\r", ch);
+    send_to_char_han("You Practice for a while...\r\n",
+		     "기술이 늘고 있습니다...\r\n", ch);
     ch->specials.spells_to_learn--;
     percent = ch->skills[number].learned + 1 +
 	((int) int_app[GET_INT(ch)].learn
@@ -132,12 +132,12 @@ int guild(struct char_data *ch, int cmd, char *arg)
     ch->skills[number].learned =
 	MIN(spell_info[number].max_skill[cla], percent);
     if (ch->skills[number].learned >= spell_info[number].max_skill[cla]) {
-	send_to_char_han("You're now as proficient as possible.\n\r",
-			 "이 분야에는 이미 배울만큼 다 배웠습니다.\n\r", ch);
+	send_to_char_han("You're now as proficient as possible.\r\n",
+			 "이 분야에는 이미 배울만큼 다 배웠습니다.\r\n", ch);
 	return (TRUE);
     }
     return TRUE;
-} 
+}
 
 int remortal(struct char_data *ch, int cmd, char *arg)
 {
@@ -160,10 +160,10 @@ int remortal(struct char_data *ch, int cmd, char *arg)
 
 /* furfuri modify ... under if .. && >>> || */
 /*
-   if(ch->points.exp<500000000 || ch->player.level!=40) 
+   if(ch->points.exp<500000000 || ch->player.level!=40)
  */
     if (GET_LEVEL(ch) != 40) {
-	send_to_char("You are not enough to remortal.!!!\n\r", ch);
+	send_to_char("You are not enough to remortal.!!!\r\n", ch);
 	return 0;
     }
 
@@ -178,7 +178,7 @@ int remortal(struct char_data *ch, int cmd, char *arg)
 
     if (all_done) {
 	if (ch->points.exp < 500000000) {
-	    send_to_char("You are not enough to remortal.!!!\n\r", ch);
+	    send_to_char("You are not enough to remortal.!!!\r\n", ch);
 	    return 0;
 	}
     }
@@ -189,13 +189,13 @@ int remortal(struct char_data *ch, int cmd, char *arg)
     case '?':
 	/* show remortal */
 	if (ch->player.remortal & REMORTAL_MAGIC_USER)
-	    send_to_char("You did a magic user.!!!\n\r", ch);
+	    send_to_char("You did a magic user.!!!\r\n", ch);
 	if (ch->player.remortal & REMORTAL_CLERIC)
-	    send_to_char("You did a cleric.!!!\n\r", ch);
+	    send_to_char("You did a cleric.!!!\r\n", ch);
 	if (ch->player.remortal & REMORTAL_THIEF)
-	    send_to_char("You did a thief.!!!\n\r", ch);
+	    send_to_char("You did a thief.!!!\r\n", ch);
 	if (ch->player.remortal & REMORTAL_WARRIOR)
-	    send_to_char("You did a warrior.!!!\n\r", ch);
+	    send_to_char("You did a warrior.!!!\r\n", ch);
 	return TRUE;
     case 'W':
     case 'w':
@@ -281,36 +281,36 @@ int bank(struct char_data *ch, int cmd, char *arg)
     if (IS_NPC(ch))
 	return (FALSE);
     if (cmd == CMD_LIST) {	/* List */
-	send_to_char("At the bank you may:\n\r\n\r", ch);
-	send_to_char("list - get this list\n\r", ch);
-	send_to_char("balance - check your balance\n\r", ch);
-	send_to_char("deposit <amount>, or\n\r", ch);
-	send_to_char("withdraw <amount>\n\r\n\r", ch);
+	send_to_char("At the bank you may:\r\n\r\n", ch);
+	send_to_char("list - get this list\r\n", ch);
+	send_to_char("balance - check your balance\r\n", ch);
+	send_to_char("deposit <amount>, or\r\n", ch);
+	send_to_char("withdraw <amount>\r\n\r\n", ch);
 	return (TRUE);
     }
     else if (cmd == CMD_BALANCE) {	/* Balance */
-	sprintf(buf, "You have %s coins in the bank.\n\r", monetary(ch->bank));
+	sprintf(buf, "You have %s coins in the bank.\r\n", monetary(ch->bank));
 	send_to_char(buf, ch);
 	return (TRUE);
     }
     else if ((cmd == CMD_DEPOSIT) || (cmd == CMD_WITHDRAW)) {	/* deposit or withdraw */
 	if (!*arg) {
-	    send_to_char("The banker says 'Specify an amount.'\n\r", ch);
+	    send_to_char("The banker says 'Specify an amount.'\r\n", ch);
 	    return (TRUE);
 	}
 	arg = one_argument(arg, buf);
 	amt = atoll(buf);
 	if (amt <= 0) {
-	    send_to_char("The banker says 'Amount must be positive.'\n\r", ch);
+	    send_to_char("The banker says 'Amount must be positive.'\r\n", ch);
 	    return (TRUE);
 	}
 	if (cmd == CMD_DEPOSIT) {
 	    if (amt > GET_GOLD(ch)) {
-		send_to_char("The banker says 'You don't have that much.'\n\r", ch);
+		send_to_char("The banker says 'You don't have that much.'\r\n", ch);
 		return (TRUE);
 	    }
 	    if (ch->bank + amt < ch->bank) {
-		send_to_char("Too much money! I can't afford so much money.\n\r", ch);
+		send_to_char("Too much money! I can't afford so much money.\r\n", ch);
 		return (TRUE);
 	    }
 	    GET_GOLD(ch) -= amt;
@@ -318,18 +318,18 @@ int bank(struct char_data *ch, int cmd, char *arg)
 	}
 	else {
 	    if (amt > ch->bank) {
-		send_to_char("The banker says 'We don't make loans.'\n\r", ch);
+		send_to_char("The banker says 'We don't make loans.'\r\n", ch);
 		return (TRUE);
 	    }
 	    /* NOTE: prevent purse (coin you carry) overflow */
 	    if (GET_GOLD(ch) + amt < GET_GOLD(ch)) {
-		send_to_char("The banker says 'Your wallet will burst.'\n\r", ch);
+		send_to_char("The banker says 'Your wallet will burst.'\r\n", ch);
 		return (TRUE);
 	    }
 	    GET_GOLD(ch) += amt;
 	    ch->bank -= amt;
 	}
-	send_to_char("The banker says 'Have a nice day.'\n\r", ch);
+	send_to_char("The banker says 'Have a nice day.'\r\n", ch);
 	return (TRUE);
     }
     return (FALSE);
@@ -345,7 +345,7 @@ int dump(struct char_data *ch, int cmd, char *arg)
     void do_drop(struct char_data *ch, char *argument, int cmd);
 
     for (k = world[ch->in_room].contents; k; k = world[ch->in_room].contents) {
-	sprintf(buf, "The %s vanish in a puff of smoke.\n\r", fname(k->name));
+	sprintf(buf, "The %s vanish in a puff of smoke.\r\n", fname(k->name));
 	for (tmp_char = world[ch->in_room].people; tmp_char;
 	     tmp_char = tmp_char->next_in_room)
 	    if (CAN_SEE_OBJ(tmp_char, k))
@@ -357,7 +357,7 @@ int dump(struct char_data *ch, int cmd, char *arg)
     do_drop(ch, arg, cmd);
     value = 0;
     for (k = world[ch->in_room].contents; k; k = world[ch->in_room].contents) {
-	sprintf(buf, "The %s vanish in a puff of smoke.\n\r", fname(k->name));
+	sprintf(buf, "The %s vanish in a puff of smoke.\r\n", fname(k->name));
 	for (tmp_char = world[ch->in_room].people; tmp_char;
 	     tmp_char = tmp_char->next_in_room) {
 	    if (CAN_SEE_OBJ(tmp_char, k))
@@ -367,8 +367,8 @@ int dump(struct char_data *ch, int cmd, char *arg)
 	/* NOTE: Hard currency is more valuable than item  */
 	if( k->obj_flags.type_flag == ITEM_MONEY )
 	    value += k->obj_flags.cost*2 ;
-	else 
-	    value += k->obj_flags.cost; 
+	else
+	    value += k->obj_flags.cost;
 	extract_obj(k);
     }
     if (value > 0) {
@@ -380,10 +380,10 @@ int dump(struct char_data *ch, int cmd, char *arg)
 	ch->points.exp += value/3;
     }
     return TRUE;
-} 
+}
 
 int safe_house(struct char_data *ch, int cmd, char *arg)
-{ 
+{
     if (GET_LEVEL(ch) >= LEV_DEMI)
 	return FALSE;
     switch (cmd) {
@@ -417,9 +417,9 @@ int safe_house(struct char_data *ch, int cmd, char *arg)
     case CMD_POWER_BASH:
     case CMD_EVIL_STRIKE:
     case CMD_SPIN_BIRD_KICK:		/* spin bird kick */
-	send_to_char("You cannot do that here.\n\r", ch);
+	send_to_char("You cannot do that here.\r\n", ch);
 	/*
-	sprintf(buf, "%s attempts to misbehave here.\n\r", ch->player.name);
+	sprintf(buf, "%s attempts to misbehave here.\r\n", ch->player.name);
 	send_to_room_except(buf, ch->in_room, ch);
 	*/
 	/* NOTE: Hide misbehavior to whom cannot see it. */
@@ -470,13 +470,13 @@ int jail_room(struct char_data *ch, int cmd, char *arg)
 
     case CMD_SHOUT:		/* shout  */
     case CMD_CHAT:		/* chat  */
-	send_to_char("Shut up!!! You are a PRISONER.\n\r", ch);
+	send_to_char("Shut up!!! You are a PRISONER.\r\n", ch);
 	return (TRUE);
     case CMD_NORTH:
     case CMD_EAST:
     case CMD_WEST:
     case CMD_SOUTH:
-	/* NOTE: Freed player can simply walk away from jail */ 
+	/* NOTE: Freed player can simply walk away from jail */
 	/* simple movement (north, south, ...)  */
 	if (dismiss && !IS_SET(ch->specials.act, PLR_BANISHED)) {
 	    act("The heavy door opened slowly and $n walks way.. smiling..",
@@ -489,13 +489,13 @@ int jail_room(struct char_data *ch, int cmd, char *arg)
 	    return (TRUE);
 	}
 	else
-	    send_to_char("Freeeeeze!!! You are under ARREST.\n\r", ch);
+	    send_to_char("Freeeeeze!!! You are under ARREST.\r\n", ch);
 	return (TRUE);
     case CMD_QUAFF:		/* quaff  */
 	/* NOTE: Prohibit quaffing murky-grey vail (teleport potion)
 	    for banished prosoner. But not for ordinary player.  */
 	if(IS_SET(ch->specials.act, PLR_BANISHED)) {
-	    send_to_char("He he he. Drug is illegal substances here..\n\r", ch);
+	    send_to_char("He he he. Drug is illegal substances here..\r\n", ch);
 	    return(TRUE);
 	}
 	break;
@@ -514,41 +514,41 @@ int change_player_name(struct char_data *ch, char *arg)
 {
 /* by ares */
     int i;
-    char *newname; 
-    extern int find_name(char *name); 
+    char *newname;
+    extern int find_name(char *name);
 
     /* skip white space */
     newname = skip_spaces(arg);
     /* check illegal name */
     for (i = 0; newname[i]; i++) {
 	if ((newname[i] < 0) || !isalpha(newname[i]) || i > 15) {
-	    send_to_char("That's Illegal name!\n\r", ch);
+	    send_to_char("That's Illegal name!\r\n", ch);
 	    return FALSE;
 	}
     }
     if (i < 2) {
-	send_to_char("That's too short name!\n\r", ch);
+	send_to_char("That's too short name!\r\n", ch);
 	return FALSE;
     }
 
 #ifdef  UNUSED_CODE
     /* NOTE: find_name(newname) will check all player name, playing or not. */
 
-    /* check if already playing */ 
+    /* check if already playing */
     /* stolen from interpreter.c */
     for (k = descriptor_list; k; k = k->next) {
 	if ((k->character != ch) && k->character) {
 	    if (k->original) {
 		if (GET_NAME(k->original) &&
 		    (str_cmp(GET_NAME(k->original), newname) == 0)) {
-		    send_to_char("That name already exist!\n\r", ch);
+		    send_to_char("That name already exist!\r\n", ch);
 		    return FALSE;	/* jhpark 설명 필요없죠? */
 		}
 	    }
 	    else {	/* No switch has been made */
 		if (GET_NAME(k->character) &&
 		    (str_cmp(GET_NAME(k->character), newname) == 0)) {
-		    send_to_char("That name already exist!\n\r", ch);
+		    send_to_char("That name already exist!\r\n", ch);
 		    return FALSE;	/* jhpark */
 		}
 	    }
@@ -559,13 +559,13 @@ int change_player_name(struct char_data *ch, char *arg)
     /* check player index table. You don't need to check player file */
     /* for detail, see load_char() and find_name() */
     if ((i = find_name(newname)) != -1) {
-	send_to_char("That name already used by another player!\n\r", ch);
+	send_to_char("That name already used by another player!\r\n", ch);
 	return FALSE;
     }
     i = find_name(ch->player.name);
     if (i == -1) {
 	log("이럴 수가!!!");
-	send_to_char("ING? Then, how can i be here?\n\r", ch);
+	send_to_char("ING? Then, how can i be here?\r\n", ch);
 	return FALSE;
     }
     /* NOTE: Remove stash instead of rename it */
@@ -573,7 +573,7 @@ int change_player_name(struct char_data *ch, char *arg)
 
     /* now, name can be changed! */
     /* but u must update not only ch's name but also player_table */
-    /* and rename item file, and force save */ 
+    /* and rename item file, and force save */
     CAP(newname);
     free(player_table[i].name);
     player_table[i].name = strdup(newname);
@@ -586,20 +586,20 @@ int change_player_name(struct char_data *ch, char *arg)
     /* NOTE: BEWARE! This can be source of stash copy BUG!! Reported by Yun */
     stash_char(ch);
 
-    send_to_char("\n\r", ch);
-    send_to_char("이름을 바꾸기 위해 당신은 ARES님에게 갑니다.\n\r", ch);
-    send_to_char("흠...그래, 이름을 바꾸시겠다고?\n\r", ch);
+    send_to_char("\r\n", ch);
+    send_to_char("이름을 바꾸기 위해 당신은 ARES님에게 갑니다.\r\n", ch);
+    send_to_char("흠...그래, 이름을 바꾸시겠다고?\r\n", ch);
     send_to_char("잘 생각했네! 자네가 지금 쓰는 이름은 딱 ", ch);
-    send_to_char("비명횡사하기 좋지...\n\r", ch);
-    send_to_char("자, 그럼 뭘로 할텐가?\n\r\n\r", ch);
+    send_to_char("비명횡사하기 좋지...\r\n", ch);
+    send_to_char("자, 그럼 뭘로 할텐가?\r\n\r\n", ch);
     do_say(ch, newname, 0);
-    send_to_char("\n\r", ch);
+    send_to_char("\r\n", ch);
     send_to_char(newname, ch);
-    send_to_char("? 그것도 제 명에 살기는 틀린 이름인데?\n\r", ch);
-    send_to_char("허허..거참..허나 자네가 좋다니 별수 없지 뭐...\n\r", ch);
-    send_to_char("당신이 가고 난 후 ARES님이 이렇게 중얼거립니다.\n\r", ch);
-    send_to_char("하! 이름 바꾼다고 잘 살수 있을거 같지?\n\r", ch);
-    send_to_char("어림 반 푼어치도 없다!!!!!!!!!!!!!!\n\r", ch);
+    send_to_char("? 그것도 제 명에 살기는 틀린 이름인데?\r\n", ch);
+    send_to_char("허허..거참..허나 자네가 좋다니 별수 없지 뭐...\r\n", ch);
+    send_to_char("당신이 가고 난 후 ARES님이 이렇게 중얼거립니다.\r\n", ch);
+    send_to_char("하! 이름 바꾼다고 잘 살수 있을거 같지?\r\n", ch);
+    send_to_char("어림 반 푼어치도 없다!!!!!!!!!!!!!!\r\n", ch);
 
     return TRUE;
 }
@@ -607,7 +607,7 @@ int change_player_name(struct char_data *ch, char *arg)
 int hospital(struct char_data *ch, int cmd, char *arg)
 {
     char buf[MAX_STRING_LENGTH];
-    /* NOTE: BUG FIX cost[6] is too short. */ 
+    /* NOTE: BUG FIX cost[6] is too short. */
     int opt, cost[8];
 
     /* NOTE: Hospital fee lowered for level < 20, raised for level > 20 */
@@ -622,46 +622,46 @@ int hospital(struct char_data *ch, int cmd, char *arg)
     cost[6] = 500000000;
 
     if (cmd == CMD_LIST) {	/* List */
-	sprintf(buf, "1 - Hit points restoration (%d coins)\n\r", cost[1]);
+	sprintf(buf, "1 - Hit points restoration (%d coins)\r\n", cost[1]);
 	send_to_char(buf, ch);
-	sprintf(buf, "2 - Mana restoration (%d coins)\n\r", cost[2]);
+	sprintf(buf, "2 - Mana restoration (%d coins)\r\n", cost[2]);
 	send_to_char(buf, ch);
-	sprintf(buf, "3 - Move restoration (%d coins)\n\r", cost[3]);
+	sprintf(buf, "3 - Move restoration (%d coins)\r\n", cost[3]);
 	send_to_char(buf, ch);
-	sprintf(buf, "4 - Poison cured (%d coins)\n\r", cost[4]);
+	sprintf(buf, "4 - Poison cured (%d coins)\r\n", cost[4]);
 	send_to_char(buf, ch);
-	sprintf(buf, "5 - Change Your Sex(toggle) (%d coins)\n\r", cost[5]);
+	sprintf(buf, "5 - Change Your Sex(toggle) (%d coins)\r\n", cost[5]);
 	send_to_char(buf, ch);
-	sprintf(buf, "6 - Change Your name (%d coins)\n\r", cost[6]);
+	sprintf(buf, "6 - Change Your name (%d coins)\r\n", cost[6]);
 	send_to_char(buf, ch);
-	sprintf(buf, "To change name, TYPE \"buy 5 <NAME>\"\n\r");
+	sprintf(buf, "To change name, TYPE \"buy 5 <NAME>\"\r\n");
 	send_to_char(buf, ch);
 	return (TRUE);
     }
     else if (cmd != CMD_BUY) 	/* Buy */
 	return (FALSE);
-    
+
     if (!arg || !*arg) {
-	send_to_char("Buy what?\n\r", ch);
+	send_to_char("Buy what?\r\n", ch);
 	return (TRUE);
     }
     arg = one_argument(arg, buf);
     if ((opt = atoi(buf)) > 6) {
-	send_to_char("Huh?\n\r", ch);
+	send_to_char("Huh?\r\n", ch);
 	return (TRUE);
     }
     /* opt의 value가 1보다 작을수도 있으므로 아래의 routine을 넣었습니다. */
     if (opt < 1) {
-	send_to_char("Huh?\n\r", ch);
+	send_to_char("Huh?\r\n", ch);
 	return (TRUE);
     }
     if (cost[opt] > GET_GOLD(ch)) {
 	if (IS_WIZARD(ch)) {
-	    send_to_char("쩝...당신한테만 외상으로 해드리는 거에요...\n\r", ch);
+	    send_to_char("쩝...당신한테만 외상으로 해드리는 거에요...\r\n", ch);
 	    cost[opt] = 0;
 	}
 	else {
-	    send_to_char("외상은 안됩니다.\n\r", ch);
+	    send_to_char("외상은 안됩니다.\r\n", ch);
 	    return (TRUE);
 	}
     }
@@ -669,42 +669,42 @@ int hospital(struct char_data *ch, int cmd, char *arg)
     case 1:
 	GET_HIT(ch) = GET_MAX_HIT(ch);
 	GET_GOLD(ch) -= cost[1];
-	send_to_char("You feel magnificent!\n\r", ch);
+	send_to_char("You feel magnificent!\r\n", ch);
 	break;
     case 2:
 	GET_MANA(ch) = GET_MAX_MANA(ch);
 	GET_GOLD(ch) -= cost[2];
-	send_to_char("You feel marvelous!\n\r", ch);
+	send_to_char("You feel marvelous!\r\n", ch);
 	break;
     case 3:
 	GET_MOVE(ch) = GET_MAX_MOVE(ch);
 	GET_GOLD(ch) -= cost[3];
-	send_to_char("You feel The GOD!\n\r", ch);
+	send_to_char("You feel The GOD!\r\n", ch);
 	break;
     case 4:
 	if (affected_by_spell(ch, SPELL_POISON)) {
 	    affect_from_char(ch, SPELL_POISON);
 	    GET_GOLD(ch) -= cost[4];
-	    send_to_char("You feel stupendous!\n\r", ch);
+	    send_to_char("You feel stupendous!\r\n", ch);
 	}
-	else 
-	    send_to_char("Nothing wrong with you.\n\r", ch);
-	break; 
+	else
+	    send_to_char("Nothing wrong with you.\r\n", ch);
+	break;
 
     case 5:
-	send_to_char("프로세스 라는 의사가 당신에게 물어봅니다.\n\r", ch);
-	send_to_char("\"왜 성전환을 하려고 합니까?\"\n\r", ch);
+	send_to_char("프로세스 라는 의사가 당신에게 물어봅니다.\r\n", ch);
+	send_to_char("\"왜 성전환을 하려고 합니까?\"\r\n", ch);
 	switch (GET_SEX(ch)) {
 	case SEX_NEUTRAL:
-	    do_say(ch, "그냥요,왜 떫으요?\n\r", 0);
+	    do_say(ch, "그냥요,왜 떫으요?\r\n", 0);
 	    break;
 	case SEX_MALE:
-	    do_say(ch, "전요, 여자랑 그짓만 할 생각하는 남자가 싫어요!!!\n\r", 0);
-	    send_to_char("프로세스는 멍텅해서 거시기를 잘라버린다!\n\r", ch);
+	    do_say(ch, "전요, 여자랑 그짓만 할 생각하는 남자가 싫어요!!!\r\n", 0);
+	    send_to_char("프로세스는 멍텅해서 거시기를 잘라버린다!\r\n", ch);
 	    GET_SEX(ch) = SEX_FEMALE;
 	    break;
 	case SEX_FEMALE:
-	    do_say(ch, "전 당신같은 멋진 남자가 되고 싶었어요....\n\r", 0);
+	    do_say(ch, "전 당신같은 멋진 남자가 되고 싶었어요....\r\n", 0);
 	    send_to_char("프로세스는 그녀를 보고 안타까워 하면서 오이를 심어줍니다.\r\n", ch);
 	    GET_SEX(ch) = SEX_MALE;
 	    break;
@@ -718,7 +718,7 @@ int hospital(struct char_data *ch, int cmd, char *arg)
 	break;
 
     default:
-	send_to_char("뭐요?\n\r", ch);
+	send_to_char("뭐요?\r\n", ch);
 	return TRUE;
     }
     save_char(ch);
@@ -749,16 +749,16 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 	return (FALSE);
 
     if (cmd == CMD_LIST) {	/* List */
-	send_to_char("1 - Hit points inflator(NO LIMIT)\n\r", ch);
-	send_to_char("2 - Mana increase(NO LIMIT)\n\r", ch);
-	send_to_char("3 - Movement increase(NO LIMIT)\n\r", ch);
-	send_to_char("4 - Increase your practice number (+2)(small exp depend on level)\n\r", ch);
+	send_to_char("1 - Hit points inflator(NO LIMIT)\r\n", ch);
+	send_to_char("2 - Mana increase(NO LIMIT)\r\n", ch);
+	send_to_char("3 - Movement increase(NO LIMIT)\r\n", ch);
+	send_to_char("4 - Increase your practice number (+2)(small exp depend on level)\r\n", ch);
 /*
-   send_to_char("5 - Change exp to gold(3:2)\n\r",ch);
-   send_to_char("6 - Freedom from hunger and thirsty(100M exp)\n\r",ch);
+   send_to_char("5 - Change exp to gold(3:2)\r\n",ch);
+   send_to_char("6 - Freedom from hunger and thirsty(100M exp)\r\n",ch);
  */
-	send_to_char("1,2,3,4 of these for some experience points\n\r", ch);
-	send_to_char("use tickets for meta\n\r", ch);
+	send_to_char("1,2,3,4 of these for some experience points\r\n", ch);
+	send_to_char("use tickets for meta\r\n", ch);
 	return (TRUE);
     }
     else if (cmd == CMD_BUY) {	/* Buy */
@@ -766,7 +766,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 	opt = atoi(buf);
 	// mult = 1;
 
-	/* 
+	/*
 	   if (1 <= opt && opt <= 6) { */
 	/* remove 5, 6 */
 	if (1 <= opt && opt <= 4) {
@@ -777,12 +777,12 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		cost = number(cost, cost << 1);
 		cost = MIN(50000000, cost);
 		if (k >= 15000 && 40 > GET_LEVEL(ch)) {
-		    send_to_char("Come back when you attain to Dangun(40 lvl).\n\r", ch);
+		    send_to_char("Come back when you attain to Dangun(40 lvl).\r\n", ch);
 		    return (TRUE);
 		}
 		if (cost <= 0 || cost > GET_EXP(ch)) {
 		    send_to_char("Come back when you are ", ch);
-		    send_to_char("more experienced.\n\r", ch);
+		    send_to_char("more experienced.\r\n", ch);
 		    return (TRUE);
 		}
 		if (k > 3000000) {
@@ -792,7 +792,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		}
 		else {
 		    ch->points.max_hit += dice(3, 5) + ch->abilities.con / 6;
-		    send_to_char("@>->->--\n\r", ch);
+		    send_to_char("@>->->--\r\n", ch);
 		    break;
 		}
 	    case 2:
@@ -801,12 +801,12 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		cost = number(cost, cost << 1);
 		cost = MIN(50000000, cost);
 		if (k >= 15000 && 40 > GET_LEVEL(ch)) {
-		    send_to_char("Come back when you attain to Dangun(40 lvl).\n\r", ch);
+		    send_to_char("Come back when you attain to Dangun(40 lvl).\r\n", ch);
 		    return (TRUE);
 		}
 		if (cost <= 0 || cost > GET_EXP(ch)) {
 		    send_to_char("Come back when you are ", ch);
-		    send_to_char("more experienced.\n\r", ch);
+		    send_to_char("more experienced.\r\n", ch);
 		    return (TRUE);
 		}
 		if (k > 3000000) {
@@ -817,7 +817,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		else {
 		    ch->points.max_mana += dice(2, 4)
 			+ (GET_INT(ch) + GET_WIS(ch)) / 6;
-		    send_to_char("<,,,,,,,>\n\r", ch);
+		    send_to_char("<,,,,,,,>\r\n", ch);
 		    break;
 		}
 	    case 3:
@@ -826,12 +826,12 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		cost = number(cost, cost << 1);
 		cost = MIN(50000000, cost);
 		if (k >= 15000 && 40 > GET_LEVEL(ch)) {
-		    send_to_char("Come back when you attain to Dangun(40 lvl).\n\r", ch);
+		    send_to_char("Come back when you attain to Dangun(40 lvl).\r\n", ch);
 		    return (TRUE);
 		}
 		if (cost <= 0 || cost > GET_EXP(ch)) {
 		    send_to_char("Come back when you are ", ch);
-		    send_to_char("more experienced.\n\r", ch);
+		    send_to_char("more experienced.\r\n", ch);
 		    return (TRUE);
 		}
 		if (k > 3000000) {
@@ -841,7 +841,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		}
 		else {
 		    ch->points.max_move += dice(3, 5) + ch->abilities.dex / 6;
-		    send_to_char("<xxxxx>\n\r", ch);
+		    send_to_char("<xxxxx>\r\n", ch);
 		    break;
 		}
 	    case 4:
@@ -849,25 +849,25 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		cost *= GET_LEVEL(ch);
 		cost *= GET_LEVEL(ch);
 		if (cost > GET_EXP(ch)) {
-		    send_to_char("Come back when you are more experienced.\n\r", ch);
+		    send_to_char("Come back when you are more experienced.\r\n", ch);
 		    return (TRUE);
 		}
 		ch->specials.spells_to_learn += (int) (ch->abilities.wis / 3);
-		send_to_char("Aaaaaaarrrrrrrrggggg\n\r", ch);
+		send_to_char("Aaaaaaarrrrrrrrggggg\r\n", ch);
 		break;
 	    case 5:
 		cost = 30000;
 		cost *= GET_LEVEL(ch);
 		cost = number(cost, cost << 1);
 		if (cost > GET_EXP(ch)) {
-		    send_to_char("Come back when you are more experienced.\n\r", ch);
+		    send_to_char("Come back when you are more experienced.\r\n", ch);
 		    return (TRUE);
 		}
 		ch->points.gold += cost * 2 / 3;
 		break;
 	    case 6:
 		if (GET_EXP(ch) < 100000000) {
-		    send_to_char("Come back when you are more experienced.\n\r", ch);
+		    send_to_char("Come back when you are more experienced.\r\n", ch);
 		    return (TRUE);
 		}
 		ch->specials.conditions[0] = -1;
@@ -875,9 +875,9 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		ch->specials.conditions[2] = -1;
 		cost = 100000000;
 		send_to_char_han( "You are free from hunger and thirsty "
-			"from now on!!!\n\r     Worship the God!\n\r",
-			"당신은 이제 배고픔과 목마름으로부터 해방입니다.\n\r"
-			"신께 경배드리십시요.\n\r", ch);
+			"from now on!!!\r\n     Worship the God!\r\n",
+			"당신은 이제 배고픔과 목마름으로부터 해방입니다.\r\n"
+			"신께 경배드리십시요.\r\n", ch);
 		break;
 	    default:
 		break;
@@ -885,7 +885,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 	    ch->points.exp -= cost;
 	}
 	else {
-	    send_to_char("예?\n\r", ch);
+	    send_to_char("예?\r\n", ch);
 	}
 	return (TRUE);
     }
@@ -906,19 +906,19 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		}
 		if ( ch->quest.solved < (GET_LEVEL(ch) < 40 ? 70 : 30 )) {
 		/* NOTE: Dangun can not use ticket if quest is less than 30,
-			   This is to prevent negative quest.  */   
+			   This is to prevent negative quest.  */
 		    send_to_char("Come back when you solve more quest.", ch);
 		    return TRUE;
 		}
 
  		/* NOTE:  Reduced Quest to use ticket:
-		    AC: 30 -> 20  DR: 30 -> 20  HR: 20 -> 10. */ 
+		    AC: 30 -> 20  DR: 30 -> 20  HR: 20 -> 10. */
 		/* use meta ticket */
 		switch (GET_OBJ_VIRTUAL(tmp_obj)) {
 		case 7991:	/* ticket for AC */
 		    GET_AC(ch) -= number(2, 3);
 		    GET_EXP(ch) -= 200000000;
-		    if (GET_AC(ch) < -120) 
+		    if (GET_AC(ch) < -120)
 			ch->quest.solved  -= 20;
 		    else
 			ch->quest.solved -= 7;
@@ -932,7 +932,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 			ch->quest.solved -= 6;
 		    break;
 		case 7993:	/* ticket for DR */
-		    /* 
+		    /*
 		       GET_DAMROLL(ch) += number(1, 2); */
 		    GET_DAMROLL(ch)++;
 		    GET_EXP(ch) -= 250000000;
@@ -942,14 +942,14 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 			ch->quest.solved -= 8;
 		    break;
 		default:
-		    send_to_char("I cannot understand your ticket.\n\r", ch);
+		    send_to_char("I cannot understand your ticket.\r\n", ch);
 		    return TRUE;
 		}
 
 		extract_obj(tmp_obj);
 	    }
 	    else {
-		send_to_char("You do not have that item.\n\r", ch);
+		send_to_char("You do not have that item.\r\n", ch);
 	    }
 	    return TRUE;
 	}
@@ -966,8 +966,8 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 char *msg_for_taxi[] =
 {
     "NOT-DEFINED",
-    "Welcome to KAIST!!!\n\r",
-    "Welcome to Process' house\n\r"
+    "Welcome to KAIST!!!\r\n",
+    "Welcome to Process' house\r\n"
 };
 
 char *taxi_name[] =
@@ -1024,12 +1024,12 @@ int taxi(struct char_data *ch, int cmd, char *arg)
 
     arg = one_argument(arg, buf);
 
-    if ( strcasecmp(buf, "kaist") ==0 ) 
-	taxi_num = 1; 
+    if ( strcasecmp(buf, "kaist") ==0 )
+	taxi_num = 1;
     else if ( strcasecmp(buf, "process") == 0)
 	taxi_num = 2;
     else  {
-	send_to_char("To where? 'taxi kaist' or 'taxi process'.\n\r", ch);
+	send_to_char("To where? 'taxi kaist' or 'taxi process'.\r\n", ch);
 	return TRUE;
     }
     where_to =  where_to_taxi[taxi_num];
@@ -1041,19 +1041,19 @@ int taxi(struct char_data *ch, int cmd, char *arg)
 	send_to_char("You cannot ride this taxi. Sorry", ch);
 	return TRUE;
     }
-    sprintf(buf, "Welcome to %s!!!\n\r", where_to);
+    sprintf(buf, "Welcome to %s!!!\r\n", where_to);
     send_to_char(buf, ch);
-    send_to_char("Sit down on your seat, and wait for a while\n\r", ch);
+    send_to_char("Sit down on your seat, and wait for a while\r\n", ch);
     sprintf(buf, "The taxi with %s starts to leave for %s.", GET_NAME(ch), where_to);
     act(buf, TRUE, ch, 0, 0, TO_ROOM);
     char_from_room(ch);
-    sprintf(buf, "OK. Here is %s.\n\r", where_to);
+    sprintf(buf, "OK. Here is %s.\r\n", where_to);
     send_to_char(buf, ch);
-    sprintf(buf, "The charge is %d.\n\r", charge);
+    sprintf(buf, "The charge is %d.\r\n", charge);
     send_to_char(buf, ch);
     if (GET_GOLD(ch) < charge_taxi[taxi_num]) {
-	send_to_char("The taxi driver slaps you!!!\n\r", ch);
-	send_to_char("Get the fuck out!!\n\r", ch);
+	send_to_char("The taxi driver slaps you!!!\r\n", ch);
+	send_to_char("Get the fuck out!!\r\n", ch);
 	GET_HIT(ch) = 1;
 	GET_MOVE(ch) = 1;
 	/* NOTE: taxi driver takes away all the money you have */
@@ -1080,12 +1080,12 @@ int pet_shops(struct char_data *ch, int cmd, char *arg)
 	return (FALSE);
     pet_room = ch->in_room + 1;
     if (cmd == 59) {	/* List */
-	send_to_char("애완동물 이 이런 것이 있습니다:\n\r", ch);
+	send_to_char("애완동물 이 이런 것이 있습니다:\r\n", ch);
 	for (pet = world[pet_room].people; pet; pet = pet->next_in_room) {
 	    /* can't buy PC */
 	    if (!IS_NPC(pet))
 		continue;
-	    sprintf(buf, "%8lld - %s\n\r", 10 * GET_EXP(pet), pet->player.short_descr);
+	    sprintf(buf, "%8lld - %s\r\n", 10 * GET_EXP(pet), pet->player.short_descr);
 	    send_to_char(buf, ch);
 	}
 	return (TRUE);
@@ -1097,22 +1097,22 @@ int pet_shops(struct char_data *ch, int cmd, char *arg)
 	/* NOTE: Don't use obsoleted get_char_room() */
 	/* if (!(pet = get_char_room(buf, pet_room))) */
 	if (!(pet = get_char_room_vis(world[pet_room].people , buf))) {
-	    send_to_char("아 그런 동물은 없는데요 ?\n\r", ch);
+	    send_to_char("아 그런 동물은 없는데요 ?\r\n", ch);
 	    return (TRUE);
 	}
 	if (!IS_MOB(pet)) {
-	    send_to_char("사람은 안파는데요 ?\n\r", ch);
+	    send_to_char("사람은 안파는데요 ?\r\n", ch);
 	    return (TRUE);
 	}
 	for (k = 0, j = ch->followers; (j) && (k < 5); ++k) {
 	    j = j->next;
 	}
 	if (k >= 3) {
-	    send_to_char("당신은 지금 데리고 있는 동물로 충분할 것 같은데요.\n\r", ch);
+	    send_to_char("당신은 지금 데리고 있는 동물로 충분할 것 같은데요.\r\n", ch);
 	    return (TRUE);
 	}
 	if (GET_GOLD(ch) < (GET_EXP(pet) * 10)) {
-	    send_to_char("돈 더 가져오세요!\n\r", ch);
+	    send_to_char("돈 더 가져오세요!\r\n", ch);
 	    return (TRUE);
 	}
 	GET_GOLD(ch) -= GET_EXP(pet) * 10;
@@ -1124,7 +1124,7 @@ int pet_shops(struct char_data *ch, int cmd, char *arg)
 	    free(pet->player.name);
 	    pet->player.name = strdup(buf);
 
-	    sprintf(buf, "%sA small sign on a chain around the neck says 'My Name is %s'\n\r",
+	    sprintf(buf, "%sA small sign on a chain around the neck says 'My Name is %s'\r\n",
 		    pet->player.description, pet_name);
 	    free(pet->player.description);
 	    pet->player.description = strdup(buf);
@@ -1140,7 +1140,7 @@ int pet_shops(struct char_data *ch, int cmd, char *arg)
    GET_CARRYING_W(pet) = 1000;
    GET_CARRYING_N(pet) = 100;
  */
-	send_to_char("애완동물이 마음에 드실껍니다.\n\r", ch);
+	send_to_char("애완동물이 마음에 드실껍니다.\r\n", ch);
 	act("$n님이 $N 을 데리고 갑니다.", FALSE, ch, 0, pet, TO_ROOM);
 
 	return (TRUE);
@@ -1163,18 +1163,18 @@ int portal(struct char_data *ch, int cmd, char *arg)
     else if (IS_SET(world[location].room_flags, PRIVATE))
 	ok = FALSE;
     if (!ok) {
-	send_to_char("You bump into something, and go nowhere.\n\r", ch);
+	send_to_char("You bump into something, and go nowhere.\r\n", ch);
 	act("$n seems to bump into nothing??", FALSE, ch, 0, 0, TO_NOTVICT);
     }
     else {
 	act("$n님이 없어진것 같네요 ??", FALSE, ch, 0, 0, TO_NOTVICT);
-	send_to_char("You are momentarily disoriented.\n\r", ch);
+	send_to_char("You are momentarily disoriented.\r\n", ch);
 	char_from_room(ch);
 	char_to_room(ch, location);
 	do_look(ch, "", 15);
     }
     return (TRUE);
-} 
+}
 
 int level_gate(struct char_data *ch, int cmd, char *arg)
 {
@@ -1182,8 +1182,8 @@ int level_gate(struct char_data *ch, int cmd, char *arg)
     int f, r;
 
     if (cmd == CMD_CAST) {
-	send_to_char("You cannot do that here.\n\r", ch);
-	sprintf(buf, "%s attempts to misbehave here.\n\r", ch->player.name);
+	send_to_char("You cannot do that here.\r\n", ch);
+	sprintf(buf, "%s attempts to misbehave here.\r\n", ch->player.name);
 	send_to_room_except(buf, ch->in_room, ch);
 	return TRUE;
     }
@@ -1198,7 +1198,7 @@ int level_gate(struct char_data *ch, int cmd, char *arg)
 	if (r == LEVGATE_CLUBSAFARI)		    // Club Safari
 	    f = (GET_LEVEL(ch) < 12);
 	else if (r == LEVGATE_MAGETOWER)	    // To Mage Tower
-	    f = (GET_LEVEL(ch) < 25);	
+	    f = (GET_LEVEL(ch) < 25);
 	else if (r == LEVGATE_TB8TH)	    // TB floor 8
 	    f = (GET_LEVEL(ch) > 15);
 	else if (r == LEVGATE_SHIRE)	    // To SHIRE
@@ -1220,7 +1220,7 @@ int level_gate(struct char_data *ch, int cmd, char *arg)
 
     if ((f) && IS_MORTAL(ch)) {
 	act("$n attempts go to where $e is not welcome.", FALSE, ch, 0, 0, TO_ROOM);
-	send_to_char("People of your level may not enter.\n\r", ch);
+	send_to_char("People of your level may not enter.\r\n", ch);
 	return TRUE;
     }
     return FALSE;
@@ -1262,7 +1262,7 @@ int string_machine(struct char_data *ch, int cmd, char *arg)
 
     GET_GOLD(ch) -= 10000000;
 
-    act("STRING Service DONE.\n\r", FALSE, ch, 0, 0, TO_CHAR);
+    act("STRING Service DONE.\r\n", FALSE, ch, 0, 0, TO_CHAR);
 
     return 1;
 }
@@ -1308,10 +1308,10 @@ int slot_machine(struct char_data *ch, int cmd, char *arg)
 	gain_gold(ch, 2000000);		/* NOTE: check overflow */
     }
     else {
-	sprintf(buf, "Excellent!!! %s made JACKPOT!!!\n\r", GET_NAME(ch));
+	sprintf(buf, "Excellent!!! %s made JACKPOT!!!\r\n", GET_NAME(ch));
 	act(buf, FALSE, ch, 0, 0, TO_ROOM);
 	act(buf, FALSE, ch, 0, 0, TO_CHAR);
-	/* 
+	/*
 	   send_to_all(buf); */
 	/* GET_GOLD(ch) += 20000000; */
 	gain_gold(ch, 20000000);	/* NOTE: check overflow */
@@ -1324,7 +1324,7 @@ int totem(struct char_data *ch, int cmd, char *arg)
 {
     int rm;
     struct obj_data *obj;
-    extern void list_all_in_room(int room, struct char_data *ch); 
+    extern void list_all_in_room(int room, struct char_data *ch);
 
     if (cmd != CMD_LOOK)
 	return (FALSE);
@@ -1337,7 +1337,7 @@ int totem(struct char_data *ch, int cmd, char *arg)
 	return (FALSE);
     rm = ch->followers->follower->in_room;
     send_to_char(world[rm].name, ch);
-    send_to_char("\n\r", ch);
+    send_to_char("\r\n", ch);
     if (!IS_SET(ch->specials.act, PLR_BRIEF))
 	send_to_char(world[rm].description, ch);
     /* NOTE:   same as list_obj_to_char() + list_char_to_char()    */
@@ -1370,7 +1370,7 @@ int magicseed(struct char_data *ch, int cmd, char *arg)
 	skno = number(0, MAX_SKILLS - 1);
 	if (ch->skills[skno].learned > 50 && ch->skills[skno].learned < 99) {
 	    ch->skills[skno].learned = 99;
-	    send_to_char("자욱한 연기가 눈앞을 가립니다.\n\r", ch);
+	    send_to_char("자욱한 연기가 눈앞을 가립니다.\r\n", ch);
 	    if (GET_COND(ch, FULL) >= 0)
 		GET_COND(ch, FULL)++;
 	    break;
@@ -1378,6 +1378,6 @@ int magicseed(struct char_data *ch, int cmd, char *arg)
     } while (number(0, 10));
 
     extract_obj(obj);
-    send_to_char("OK.\n\r", ch);
+    send_to_char("OK.\r\n", ch);
     return TRUE;
-} 
+}

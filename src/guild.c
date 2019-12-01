@@ -137,19 +137,19 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
 	switch (guild_number) {
 	case POLICE:
 	    if ((GET_LEVEL(ch) < 15) && IS_MORTAL(ch)) {
-		send_to_char("당신은 경찰이 될만한 자격이 없군요.\n\r", ch);
+		send_to_char("당신은 경찰이 될만한 자격이 없군요.\r\n", ch);
 		return TRUE;
 	    }
 	    break;
 	case OUTLAW:
 	    if ((GET_LEVEL(ch) < 20) && IS_MORTAL(ch)) {
-		send_to_char("당신은 깡패가 될만한 자격이 없군요.\n\r", ch);
+		send_to_char("당신은 깡패가 될만한 자격이 없군요.\r\n", ch);
 		return TRUE;
 	    }
 	    break;
 	case ASSASSIN:
 	    if ((GET_LEVEL(ch) < 25) && IS_MORTAL(ch)) {
-		send_to_char("당신은 암살자가 될만한 자격이 없군요.\n\r", ch);
+		send_to_char("당신은 암살자가 될만한 자격이 없군요.\r\n", ch);
 		return TRUE;
 	    }
 	    break;
@@ -196,7 +196,7 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
     }
     else if (cmd == CMD_NORTH) {	/* north */
 	if ((guild_number != ch->player.guild) && IS_MORTAL(ch)) {
-	    sprintf(buf, "The guild guard humiliates you,and block your way.\n\r");
+	    sprintf(buf, "The guild guard humiliates you,and block your way.\r\n");
 	    sprintf(buf2, "The guard humilates $n,and blocks $s way.");
 	    send_to_char(buf, ch);
 	    act(buf2, FALSE, ch, 0, 0, TO_ROOM);
@@ -205,7 +205,7 @@ int guild_entry(struct char_data *ch, int cmd, char *arg)
     }
     else if (cmd == CMD_CAST) {	/* to prevent cast 'phase' */
 	if ((guild_number != ch->player.guild) && IS_MORTAL(ch)) {
-	    sprintf(buf, "The guild guard screams, SHUT UP~~!!\n\r");
+	    sprintf(buf, "The guild guard screams, SHUT UP~~!!\r\n");
 	    send_to_char(buf, ch);
 	    return TRUE;
 	}
@@ -269,8 +269,8 @@ int locker_room(struct char_data *ch, int cmd, char *arg)
 
 	/* only allow to save equiped item */
 	if (ch->carrying) {
-	    send_to_char("You can SAVE only equiped item.\n\r", ch);
-	    send_to_char("Drop all carrying item!\n\r", ch);
+	    send_to_char("You can SAVE only equiped item.\r\n", ch);
+	    send_to_char("Drop all carrying item!\r\n", ch);
 	    return TRUE;
 	}
 	/* only allow to save container which DOSEN'T contain something */
@@ -279,36 +279,36 @@ int locker_room(struct char_data *ch, int cmd, char *arg)
 		equiped_something = 1;
 		if (ch->equipment[i]->contains) {
 		    send_to_char("You can't SAVE container which ", ch);
-		    send_to_char("contains something.\n\r", ch);
+		    send_to_char("contains something.\r\n", ch);
 		    return TRUE;
 		}
 	    }
 	}
 	/* But, need not to save! what a waste of coins! */
 	if (!equiped_something) {
-	    send_to_char("But, you don't have anything to save!\n\r", ch);
+	    send_to_char("But, you don't have anything to save!\r\n", ch);
 	    return TRUE;
 	}
 
 	GET_GOLD(ch) = GET_GOLD(ch) - (GET_LEVEL(ch) * GET_LEVEL(ch) * COST);
 	stash_char(ch);
-	send_to_char("Ok. When you want to LOAD items, type LOAD.\n\r", ch);
+	send_to_char("Ok. When you want to LOAD items, type LOAD.\r\n", ch);
 	return TRUE;
     }
     else if (cmd == CMD_LOAD ) {	/* LOAD */
 	/* only allow 1 load per reboot */
 	for (i = 0; i < count; i++) {
 	    if (strcmp(load_names[i], GET_NAME(ch)) == 0) {
-		send_to_char("You already used ONE chance of LOAD!!\n\r", ch);
+		send_to_char("You already used ONE chance of LOAD!!\r\n", ch);
 		return TRUE;
 	    }
 	}
 	/* limit number of LOAD in guild */
 	if (count >= LIMIT_LOAD) {
-	    send_to_char("All Lockers already used by other persons!\n\r", ch);
-	    send_to_char("The following persons used locker!!\n\r", ch);
+	    send_to_char("All Lockers already used by other persons!\r\n", ch);
+	    send_to_char("The following persons used locker!!\r\n", ch);
 	    for (i = 0; i < LIMIT_LOAD; i++) {
-		sprintf(buf, "%s\n\r", load_names[i]);
+		sprintf(buf, "%s\r\n", load_names[i]);
 		send_to_char(buf, ch);
 	    }
 	    return TRUE;
@@ -317,18 +317,18 @@ int locker_room(struct char_data *ch, int cmd, char *arg)
 	strcpy(load_names[i], GET_NAME(ch));
 
 	if (ch->carrying) {
-	    send_to_char("You must carry nothing to LOAD!!\n\r", ch);
+	    send_to_char("You must carry nothing to LOAD!!\r\n", ch);
 	    return TRUE;
 	}
 	for (i = 0; i < MAX_WEAR; i++) {
 	    if (ch->equipment[i]) {
-		send_to_char("You must equip nothing to LOAD!!\n\r", ch);
+		send_to_char("You must equip nothing to LOAD!!\r\n", ch);
 		return TRUE;
 	    }
 	}
 	count++;
 	unstash_char(ch, NULL);
-	send_to_char("Ok. Your items restored...\n\r", ch);
+	send_to_char("Ok. Your items restored...\r\n", ch);
 	return TRUE;
     }
     return FALSE;
@@ -359,34 +359,34 @@ int guild_practice_yard(struct char_data *ch, int cmd, char *arg)
 	return FALSE;
     }
     if (guild_number != GET_GUILD(ch) && IS_MORTAL(ch)) {
-	send_to_char("But you are not a member of this guild.\n\r", ch);
+	send_to_char("But you are not a member of this guild.\r\n", ch);
 	return FALSE;
     }
     if (cmd == CMD_TRAIN ) {	/* train */
 	number = atoi(arg) - 1;
 	if (number >= guild_skill_nums[guild_number - 1] ||
 	    number < 0) {
-	    send_to_char("There's no such skill\n\r", ch);
+	    send_to_char("There's no such skill\r\n", ch);
 	    return TRUE;
 	}
 	if ((GET_GUILD_SKILL(ch, number)) >= 90) {
-	    send_to_char("You trained enough!!!\n\r", ch);
+	    send_to_char("You trained enough!!!\r\n", ch);
 	    return TRUE;
 	}
 	switch (guild_number) {
 	case POLICE:
 	    cost = police_skill_costs[number] * ((GET_GUILD_SKILL(ch, number) / 10) + 1) * GET_LEVEL(ch);
-	    sprintf(buf, "You train %s.\n\r", police_skills[number]);
+	    sprintf(buf, "You train %s.\r\n", police_skills[number]);
 	    send_to_char(buf, ch);
 	    break;
 	case OUTLAW:
 	    cost = outlaw_skill_costs[number] * ((GET_GUILD_SKILL(ch, number) / 10) + 1) * GET_LEVEL(ch);
-	    sprintf(buf, "You train %s.\n\r", outlaw_skills[number]);
+	    sprintf(buf, "You train %s.\r\n", outlaw_skills[number]);
 	    send_to_char(buf, ch);
 	    break;
 	case ASSASSIN:
 	    cost = assasin_skill_costs[number] * ((GET_GUILD_SKILL(ch, number) / 10) + 1) * GET_LEVEL(ch);
-	    sprintf(buf, "You train %s.\n\r", assasin_skills[number]);
+	    sprintf(buf, "You train %s.\r\n", assasin_skills[number]);
 	    send_to_char(buf, ch);
 	    break;
 	default:
@@ -398,21 +398,21 @@ int guild_practice_yard(struct char_data *ch, int cmd, char *arg)
 	    GET_GUILD_SKILL(ch, number) = MIN(GET_GUILD_SKILL(ch, number) + 10, 90);
 	}
 	else {
-	    sprintf(buf, "You need %d exp.\n\r", cost);
+	    sprintf(buf, "You need %d exp.\r\n", cost);
 	    send_to_char(buf, ch);
 	}
 	return TRUE;
     }
     else if (cmd == CMD_LIST) {	/* list */
 	if (guild_skill_nums[guild_number - 1] < 1) {
-	    send_to_char("There's no skill now\n\r", ch);
+	    send_to_char("There's no skill now\r\n", ch);
 	}
-	send_to_char("You can train skills by typing 'train #'\n\r", ch);
+	send_to_char("You can train skills by typing 'train #'\r\n", ch);
 	switch (guild_number) {
 	case POLICE:
 	    for (i = 0; i < guild_skill_nums[guild_number - 1]; i++) {
 	/* NOTE: '%' char in sprintf format string should be noted as %%. */
-		sprintf(buf, "%d: %s %d(now %d%%)\n\r", i + 1, police_skills[i],
+		sprintf(buf, "%d: %s %d(now %d%%)\r\n", i + 1, police_skills[i],
 		 police_skill_costs[i] * ((GET_GUILD_SKILL(ch, i) / 10) + 1)
 			* GET_LEVEL(ch),
 			GET_GUILD_SKILL(ch, i));
@@ -421,7 +421,7 @@ int guild_practice_yard(struct char_data *ch, int cmd, char *arg)
 	    break;
 	case OUTLAW:
 	    for (i = 0; i < guild_skill_nums[guild_number - 1]; i++) {
-		sprintf(buf, "%d: %s %d(now %d%%)\n\r", i + 1, outlaw_skills[i],
+		sprintf(buf, "%d: %s %d(now %d%%)\r\n", i + 1, outlaw_skills[i],
 		 outlaw_skill_costs[i] * ((GET_GUILD_SKILL(ch, i) / 10) + 1)
 			* GET_LEVEL(ch),
 			GET_GUILD_SKILL(ch, i));
@@ -430,7 +430,7 @@ int guild_practice_yard(struct char_data *ch, int cmd, char *arg)
 	    break;
 	case ASSASSIN:
 	    for (i = 0; i < guild_skill_nums[guild_number - 1]; i++) {
-		sprintf(buf, "%d: %s %d(now %d%%)\n\r", i + 1, assasin_skills[i],
+		sprintf(buf, "%d: %s %d(now %d%%)\r\n", i + 1, assasin_skills[i],
 		assasin_skill_costs[i] * ((GET_GUILD_SKILL(ch, i) / 10) + 1)
 			* GET_LEVEL(ch),
 			GET_GUILD_SKILL(ch, i));
@@ -464,7 +464,7 @@ void do_cant(struct char_data *ch, char *argument, int cmd)
 	return;
     }
     if (ch->player.guild < 1 || ch->player.guild > MAX_GUILD_LIST) {
-	send_to_char("You must join any guild first.\n\r", ch);
+	send_to_char("You must join any guild first.\r\n", ch);
 	return;
     }
     /* NOTE: "cant" command without argument is same as "cant /who"   */
@@ -475,10 +475,10 @@ void do_cant(struct char_data *ch, char *argument, int cmd)
 		if (i->original)
 		    continue;
 		victim = i->character;
-		if (ch->player.guild == victim->player.guild 
+		if (ch->player.guild == victim->player.guild
 			&& IS_MORTAL(victim)) {
 		    j++;
-		    sprintf(buf, "<%2d> %s <%5d,%5d,%5d> %s \n\r", GET_LEVEL(victim),
+		    sprintf(buf, "<%2d> %s <%5d,%5d,%5d> %s \r\n", GET_LEVEL(victim),
 			    GET_NAME(victim), GET_PLAYER_MAX_HIT(victim),
 		    GET_PLAYER_MAX_MANA(victim), GET_PLAYER_MAX_MOVE(victim),
 			    world[victim->in_room].name
@@ -486,12 +486,12 @@ void do_cant(struct char_data *ch, char *argument, int cmd)
 		    send_to_char(buf, ch);
 		}
 	    }
-	sprintf(buf, "You can see %d member(s) of %s guild.\n\r",
+	sprintf(buf, "You can see %d member(s) of %s guild.\r\n",
 		j, guild_names[ch->player.guild]);
 	send_to_char(buf, ch);
     }
     else {
-	sprintf(buf, "(%s) %s >>> %s\n\r", guild_names[ch->player.guild],
+	sprintf(buf, "(%s) %s >>> %s\r\n", guild_names[ch->player.guild],
 		ch->player.name, argument);
 	for (i = descriptor_list; i; i = i->next)
 	    if (!i->connected) {
@@ -514,63 +514,63 @@ void do_query(struct char_data *ch, char *argument, int cmd)
     one_argument(argument, victim_name);
 
     if (!(victim = get_char_room_vis(ch, victim_name))) {
-	send_to_char("QUERY who?\n\r", ch);
+	send_to_char("QUERY who?\r\n", ch);
 	return;
     }
     else if (victim == ch) {
-	send_to_char("The better idea is to type \"sc\".\n\r", ch);
+	send_to_char("The better idea is to type \"sc\".\r\n", ch);
 	return;
     }
     if ( victim->player.guild <= MAX_GUILD_LIST) {
-	sprintf(buf, "%s(%d) is a member of %s guild\n\r", GET_NAME(victim), GET_LEVEL(victim),
+	sprintf(buf, "%s(%d) is a member of %s guild\r\n", GET_NAME(victim), GET_LEVEL(victim),
 		guild_names[victim->player.guild]);
 	send_to_char(buf, ch);
     }
 
     /* modified by ares */
     if (GET_LEVEL(ch) >= GET_LEVEL(victim))
-	sprintf(buf, "%s's hit is %d.\n\r", GET_NAME(victim),
+	sprintf(buf, "%s's hit is %d.\r\n", GET_NAME(victim),
 		GET_HIT(victim));
     else if (GET_HIT(victim) > GET_HIT(ch))
-	sprintf(buf, "%s's hit is higher than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's hit is higher than you.\r\n", GET_NAME(victim));
     else
-	sprintf(buf, "%s's hit is lower than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's hit is lower than you.\r\n", GET_NAME(victim));
     send_to_char(buf, ch);
 
     if (GET_LEVEL(ch) >= GET_LEVEL(victim))
-	sprintf(buf, "%s's mana is %d.\n\r", GET_NAME(victim),
+	sprintf(buf, "%s's mana is %d.\r\n", GET_NAME(victim),
 		GET_MANA(victim));
     else if (GET_MANA(victim) > GET_MANA(ch))
-	sprintf(buf, "%s's mana is higher than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's mana is higher than you.\r\n", GET_NAME(victim));
     else
-	sprintf(buf, "%s's mana is lower than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's mana is lower than you.\r\n", GET_NAME(victim));
     send_to_char(buf, ch);
 
     if (GET_LEVEL(ch) >= GET_LEVEL(victim))
-	sprintf(buf, "%s's move is %d.\n\r", GET_NAME(victim),
+	sprintf(buf, "%s's move is %d.\r\n", GET_NAME(victim),
 		GET_MOVE(victim));
     else if (GET_MOVE(victim) > GET_MOVE(ch))
-	sprintf(buf, "%s's move is higher than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's move is higher than you.\r\n", GET_NAME(victim));
     else
-	sprintf(buf, "%s's move is lower than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's move is lower than you.\r\n", GET_NAME(victim));
     send_to_char(buf, ch);
 
     if (GET_LEVEL(ch) >= GET_LEVEL(victim))
-	sprintf(buf, "%s's hitroll is %d.\n\r", GET_NAME(victim),
+	sprintf(buf, "%s's hitroll is %d.\r\n", GET_NAME(victim),
 		GET_HITROLL(victim));
     else if (GET_HITROLL(victim) > GET_HITROLL(ch))
-	sprintf(buf, "%s's hitroll is higher than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's hitroll is higher than you.\r\n", GET_NAME(victim));
     else
-	sprintf(buf, "%s's hitroll is lower than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's hitroll is lower than you.\r\n", GET_NAME(victim));
     send_to_char(buf, ch);
 
     if (GET_LEVEL(ch) >= GET_LEVEL(victim))
-	sprintf(buf, "%s's damroll is %d.\n\r", GET_NAME(victim),
+	sprintf(buf, "%s's damroll is %d.\r\n", GET_NAME(victim),
 		GET_DAMROLL(victim));
     else if (GET_DAMROLL(victim) > GET_DAMROLL(ch))
-	sprintf(buf, "%s's damroll is higher than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's damroll is higher than you.\r\n", GET_NAME(victim));
     else
-	sprintf(buf, "%s's damroll is lower than you.\n\r", GET_NAME(victim));
+	sprintf(buf, "%s's damroll is lower than you.\r\n", GET_NAME(victim));
     send_to_char(buf, ch);
 
     act("$n QUERYS $N.", TRUE, ch, 0, victim, TO_ROOM);
@@ -618,7 +618,7 @@ void do_power_bash(struct char_data *ch, char *argument, int cmd)
 	    victim = ch->specials.fighting;
 	}
 	else {
-	    send_to_char("power-bash who?\n\r", ch);
+	    send_to_char("power-bash who?\r\n", ch);
 	    return;
 	}
     }
@@ -671,7 +671,7 @@ void do_whistle(struct char_data *ch, char *argument, int cmd)
 	    victim = ch->specials.fighting;
 	}
 	else {
-	    send_to_char("whistle who?\n\r", ch);
+	    send_to_char("whistle who?\r\n", ch);
 	    return;
 	}
     }
@@ -679,7 +679,7 @@ void do_whistle(struct char_data *ch, char *argument, int cmd)
     if (IS_NPC(victim) || victim == ch)
 	return;
 
-    sprintf(buf, "%s>>>>Emergency!!! %s(%s) is in %s(%d)!!!!!\n\r", 
+    sprintf(buf, "%s>>>>Emergency!!! %s(%s) is in %s(%d)!!!!!\r\n",
 	    GET_NAME(ch), GET_NAME(victim), guild_names[ GET_GUILD(victim)],
 	    world[victim->in_room].name, world[victim->in_room].number);
     for (d = descriptor_list; d; d = d->next) {
@@ -692,7 +692,7 @@ void do_whistle(struct char_data *ch, char *argument, int cmd)
     }
     if (!IS_SET(victim->specials.act, PLR_CRIMINAL) && GET_MANA(ch) > 1000) {
 	SET_BIT(victim->specials.act, PLR_CRIMINAL);
-	send_to_char("flag set!!\n\r", ch);
+	send_to_char("flag set!!\r\n", ch);
 	GET_MANA(ch) -= 1000;
     }
 }
@@ -717,7 +717,7 @@ void do_simultaneous(struct char_data *ch, char *argument, int cmd)
 	    victim = ch->specials.fighting;
 	}
 	else {
-	    send_to_char("simultaneous who?\n\r", ch);
+	    send_to_char("simultaneous who?\r\n", ch);
 	    return;
 	}
     }
@@ -725,9 +725,9 @@ void do_simultaneous(struct char_data *ch, char *argument, int cmd)
 	return;
     for (vict = world[ch->in_room].people; vict; vict = tmp_victim) {
 	tmp_victim = vict->next_in_room;
-	if ((vict && !IS_NPC(vict) && GET_GUILD(vict) == POLICE 
+	if ((vict && !IS_NPC(vict) && GET_GUILD(vict) == POLICE
 	    && GET_GUILD_SKILL(vict, POLICE_SKILL_SIMULTANEOUS) > number(1, 99)
-	    && GET_MANA(vict) > 180) 
+	    && GET_MANA(vict) > 180)
 	    || (IS_WIZARD(vict))) {
 	    dam = GET_INT(vict) * GET_GUILD_SKILL(vict, POLICE_SKILL_SIMULTANEOUS);
 	    if (victim)
@@ -766,7 +766,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
 	    victim = ch->specials.fighting;
 	}
 	else {
-	    send_to_char("arrest who?\n\r", ch);
+	    send_to_char("arrest who?\r\n", ch);
 	    return;
 	}
     }
@@ -775,11 +775,11 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
 /* #define ROOM_POLICE_JALE    3295    */
     if (victim == ch)
 	return;
-    if ((GET_GUILD_SKILL(ch, POLICE_SKILL_ARREST) < number(1, 99) || 
-	  (GET_HIT(victim) >= GET_PLAYER_MAX_HIT(victim) / 8) 
+    if ((GET_GUILD_SKILL(ch, POLICE_SKILL_ARREST) < number(1, 99) ||
+	  (GET_HIT(victim) >= GET_PLAYER_MAX_HIT(victim) / 8)
 	  || GET_MANA(ch) < 500) && IS_MORTAL(ch)) {
 	GET_MANA(ch) -= 100;
-	send_to_char("You failed to arrest him!!!\n\r", ch);
+	send_to_char("You failed to arrest him!!!\r\n", ch);
 	return;
     }
     do_say(ch, "YOU MUST SUFFER IN THE JAIL!!!!", 0);
@@ -788,7 +788,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
     char_from_room(victim);
     char_to_room(victim, real_room(ROOM_POLICE_JAIL));
     if (!IS_NPC(victim)) {
-	sprintf(buf, "%s was sent to the JAIL room!!!!\n\r", GET_NAME(victim));
+	sprintf(buf, "%s was sent to the JAIL room!!!!\r\n", GET_NAME(victim));
 	send_to_all(buf);
 	af.type = SKILL_ARREST;
 	af.duration = 44;
@@ -801,7 +801,7 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
     }
     else {
 #ifdef UNUSED_CODE
-	sprintf(buf, "%s died in the JAIL room!!!!\n\r", GET_NAME(victim));
+	sprintf(buf, "%s died in the JAIL room!!!!\r\n", GET_NAME(victim));
 	send_to_all(buf);
 	if (IS_AFFECTED(ch, AFF_GROUP))
 	    group_gain(ch, victim);
@@ -815,15 +815,15 @@ void do_arrest(struct char_data *ch, char *argument, int cmd)
 	}
 	die(victim, GET_LEVEL(ch), ch);
 #endif		/* UNUSED_CODE*/
-	sprintf(buf, "%s died in the JAIL room!!!!\n\r", GET_NAME(victim));
+	sprintf(buf, "%s died in the JAIL room!!!!\r\n", GET_NAME(victim));
 	send_to_room(buf, ch->in_room);;
 	/* NOTE: indirect way to kill victim and get exp from it. */
-	GET_HIT(victim) = 0; 
+	GET_HIT(victim) = 0;
 	GET_POS(victim) = POS_MORTALLYW;
 	/* NOTE: TYPE_SUFFERING: char and victim is not in same room */
 	damage(ch, victim, 1000, TYPE_SUFFERING);
     }
-    /* NOTE: Why look here? */ 
+    /* NOTE: Why look here? */
     /*  do_look(ch, "", 15); */
     GET_HIT(ch) -=  GET_HIT(ch)/10;
 }
@@ -847,7 +847,7 @@ void do_charge(struct char_data *ch, char *argument, int cmd)
 	    victim = ch->specials.fighting;
 	}
 	else {
-	    send_to_char("Charge who?\n\r", ch);
+	    send_to_char("Charge who?\r\n", ch);
 	    return;
 	}
     }
@@ -857,7 +857,7 @@ void do_charge(struct char_data *ch, char *argument, int cmd)
     }
 
     if (!IS_NPC(victim) && PC_MORTAL(ch)) {
-	send_to_char("You can't use charge to player\n\r", ch);
+	send_to_char("You can't use charge to player\r\n", ch);
 	return;
     }
     level_dif = GET_LEVEL(victim) - GET_LEVEL(ch);
@@ -912,7 +912,7 @@ void do_angry_yell(struct char_data *ch, char *argument, int cmd)
 	    victim = ch->specials.fighting;
 	}
 	else {
-	    send_to_char("yell at who?\n\r", ch);
+	    send_to_char("yell at who?\r\n", ch);
 	    return;
 	}
     }
@@ -938,7 +938,7 @@ void do_angry_yell(struct char_data *ch, char *argument, int cmd)
 	WAIT_STATE(ch, PULSE_VIOLENCE);
     }
     else {
-	send_to_char("Get the fuck out!!!\n\r", ch);
+	send_to_char("Get the fuck out!!!\r\n", ch);
 	GET_HIT(ch) -= dam >> 1;
 	GET_MANA(ch) -= dam;
     }
@@ -961,11 +961,11 @@ void do_shadow(struct char_data *ch, char *argument, int cmd)
     return;
 
     if (GET_GUILD(ch) != ASSASSIN && IS_MORTAL(ch)) {
-	send_to_char("You are not assasin!!!\n\r", ch);
+	send_to_char("You are not assasin!!!\r\n", ch);
 	return;
     }
     if (GET_MANA(ch) < 1000 && IS_MORTAL(ch)) {
-	send_to_char("Your mana isn't enough to make a shadow!!!\n\r", ch);
+	send_to_char("Your mana isn't enough to make a shadow!!!\r\n", ch);
 	return;
     }
     if (!affected_by_spell(ch, SPELL_SHADOW_FIGURE)) {
@@ -1000,7 +1000,7 @@ void do_solace(struct char_data *ch, char *argument, int cmd)
 	}
     }
     if ((location == top_of_world) || !found) {
-	send_to_char("You cannot get the chance!!!\n\r", ch);
+	send_to_char("You cannot get the chance!!!\r\n", ch);
 	return;
     }
     if ((GET_GUILD_SKILL(ch, ASSASSIN_SKILL_SOLACE) > number(0, 100) &&
@@ -1019,7 +1019,7 @@ void do_solace(struct char_data *ch, char *argument, int cmd)
 	GET_MOVE(ch) = 0;
     }
     else {
-	send_to_char("But,You are healthy enought to fight!!!\n\r", ch);
+	send_to_char("But,You are healthy enought to fight!!!\r\n", ch);
 	GET_MOVE(ch) -= 100;
     }
 }
@@ -1042,7 +1042,7 @@ void do_evil_strike(struct char_data *ch, char *argument, int cmd)
 	    victim = ch->specials.fighting;
 	}
 	else {
-	    send_to_char("evil strike who?\n\r", ch);
+	    send_to_char("evil strike who?\r\n", ch);
 	    return;
 	}
     }
@@ -1100,28 +1100,28 @@ void do_assault(struct char_data *ch, char *argument, int cmd)
     int location;
 
     if (GET_GUILD(ch) != OUTLAW && IS_MORTAL(ch)) {
-	send_to_char("How about join outlaws???\n\r", ch);
+	send_to_char("How about join outlaws???\r\n", ch);
 	return;
     }
     one_argument(argument, victim_name);
 
     if (!(victim = get_char_room_vis(ch, victim_name))) {
-	send_to_char("who do you wanna assault?\n\r", ch);
+	send_to_char("who do you wanna assault?\r\n", ch);
 	return;
     }
 
     if (!IS_NPC(victim) && !(victim->desc)) {
-	send_to_char("You cannot assault him or her.\n\r", ch);
+	send_to_char("You cannot assault him or her.\r\n", ch);
 	return;
     }
 
     if (GET_SEX(victim) == GET_SEX(ch)) {
 	switch (GET_SEX(ch)) {
 	case SEX_MALE:
-	    send_to_char("너 호모냐?\n\r", ch);
+	    send_to_char("너 호모냐?\r\n", ch);
 	    break;
 	case SEX_FEMALE:
-	    send_to_char("너 레즈비언이냐?\n\r", ch);
+	    send_to_char("너 레즈비언이냐?\r\n", ch);
 	    break;
 	}
 	return;
@@ -1138,23 +1138,23 @@ void do_assault(struct char_data *ch, char *argument, int cmd)
 	    switch (GET_SEX(victim)) {
 	    case SEX_MALE:
 	    case SEX_NEUTRAL:
-		do_say(ch, "아하아~~~~너무 좋아\n\r", 0);
-		do_say(victim, "아~~~나도 좋아요~~~\n\r", 0);
-		do_say(victim, "아...기막히다....한 번 더하고 싶다~~\n\r", 0);
+		do_say(ch, "아하아~~~~너무 좋아\r\n", 0);
+		do_say(victim, "아~~~나도 좋아요~~~\r\n", 0);
+		do_say(victim, "아...기막히다....한 번 더하고 싶다~~\r\n", 0);
 		break;
 	    case SEX_FEMALE:
-		do_say(ch, "아하아~~~~너무 좋아\n\r", 0);
-		do_say(victim, "아~~~나도 좋아요~~~\n\r", 0);
-		do_say(victim, "이제 진정한 여자가 된 기분이에요~~~\n\r", 0);
+		do_say(ch, "아하아~~~~너무 좋아\r\n", 0);
+		do_say(victim, "아~~~나도 좋아요~~~\r\n", 0);
+		do_say(victim, "이제 진정한 여자가 된 기분이에요~~~\r\n", 0);
 		break;
 	    }
 
 	}
 	else {
-	    send_to_char("바보....거긴 안 입었다..:)\n\r", ch);
+	    send_to_char("바보....거긴 안 입었다..:)\r\n", ch);
 	}
     }
     else {
-	send_to_char("먼 챙피? 하하하...\n\r", ch);
+	send_to_char("먼 챙피? 하하하...\r\n", ch);
     }
 }

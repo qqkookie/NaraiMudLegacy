@@ -66,7 +66,7 @@ for ( j = 0 ; list[j] != -1 ; j++ ) {
 	    2 * (lev_vic + dex_vic) - (skilled >> 3);
 	new_percent = number(1,101) - ( ac_vic + hr_ch )/16 -10
 		    - ( lev_ch + 2* dex_ch )
-		    + 2 * ( lev_vic + 2*dex_vic) - skilled / 6; 
+		    + 2 * ( lev_vic + 2*dex_vic) - skilled / 6;
     */
 
 /*

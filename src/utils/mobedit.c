@@ -22,10 +22,10 @@ int main()
 	printf("Enter the mob number: ");
         scanf("%d", &mob_data.vnum);
 	getc(stdin);
-	
+
 	printf("Mob Name-64 characters(ex: Second Sand Sura):\n");
 	mob_data.mob_name = fgets(buff_name, 64, stdin);
-	
+
         printf("Short Description(128 characters):\n");
 	mob_data.short_descr = fgets(buff_short, 128, stdin);
 
@@ -61,7 +61,7 @@ int main()
         	printf("Select the class(W/C/T/M): ");
 		scanf("%c", &mob_data.class);
 		getc(stdin);
-		mob_data.class = toupper(mob_data.class); 
+		mob_data.class = toupper(mob_data.class);
 	}while((mob_data.class != 'C') && (mob_data.class != 'W')
 		&& (mob_data.class != 'T') && (mob_data.class != 'M'));
 
@@ -156,7 +156,7 @@ int main()
 	{
 		scanf("%c", &mob_data.sex);
 		getc(stdin);
-		mob_data.sex = toupper(mob_data.sex); 
+		mob_data.sex = toupper(mob_data.sex);
 	}while((mob_data.sex != 'M') && (mob_data.sex != 'F'));
 
 	mobfile = fopen("mobfile.mob", "w");
@@ -206,14 +206,14 @@ int main()
 
 	fprintf(mobfile, "~\n");
 
-	fprintf(mobfile, "%ld %ld %d\n", mob_data.special_act, mob_data.affected_by, mob_data.alignment); 
+	fprintf(mobfile, "%ld %ld %d\n", mob_data.special_act, mob_data.affected_by, mob_data.alignment);
 
 	fprintf(mobfile, "%c %d %d %d %d %d\n", mob_data.class, mob_data.level, mob_data.hitpoint,
 			mob_data.armor, mob_data.hr, mob_data.dr);
 	fprintf(mobfile, "%lld %lld %d %c\n", mob_data.gold, mob_data.xp, mob_data.position, mob_data.sex);
 
         fclose(mobfile);
-} 
+}
 
 
 long set_affected_by()
@@ -427,7 +427,7 @@ long set_special_act()
         answer = ask_question();
         if(answer)
                 special_act = special_act | ACT_RESCUER;
-	
+
 	printf("SPELL BLOCKER? ");
         answer = ask_question();
         if(answer)

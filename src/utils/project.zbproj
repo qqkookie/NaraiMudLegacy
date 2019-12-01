@@ -13,7 +13,7 @@ local _interpreter = "luadeb53"
 
 package {
     onAppLoad=
-        function() 
+        function()
             ide:GetProjectTree():SetStartFile(_startfile)
             ide:SetCommandLineParameters(_params)
             ide:SetInterpreter(_interpreter)

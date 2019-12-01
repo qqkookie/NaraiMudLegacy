@@ -2,7 +2,7 @@
 *  file: act.look.c 							  *
 *  Usage : Informative commands.  looking char , object or status.        *
 * 	OLD File: Part of OLD act.informative.c 			  *
-************************************************************************* */ 
+************************************************************************* */
 
 #include <stdio.h>
 #include <string.h>
@@ -12,8 +12,8 @@
 #include "object.h"
 #include "global.h"
 #include "comm.h"
-#include "play.h" 
-#include "actions.h" 
+#include "play.h"
+#include "actions.h"
 
 /* internal functions */
 
@@ -23,7 +23,7 @@
 int list_equips_buf(struct char_data *ch, struct char_data *viewer,
 		    char *buffer);
 
-/* extern's */ 
+/* extern's */
 extern char *where[];
 
 /* NOTE: Symbolic defintion of mode arg of list_obj_buf(), show_obj_buf(). */
@@ -53,7 +53,7 @@ int look_argument(char *argument, char *arg1)
 	"north", "east", "south", "west",
 	"up", 	 "down",  "in",    "at",
 	"",			/* Look at '' case */
-	"\n"}; 
+	"\n"};
 
     arg1[0] = '\0';
     word = strtok(argument, " \t\r\n");		/* find first word */
@@ -113,13 +113,13 @@ char *find_ex_description(char *word, struct extra_descr_data *list)
 
 /* NOTE: OLD show_obj_char() is modified to NEW show_obj_to_buf().  */
 /* NOTE: It sees one and only one object, not objects in container.
-   It store output to buffer, not sending to char       
+   It store output to buffer, not sending to char
    It checks visibility of obj to char and returns it.    */
 int show_obj_to_buf(struct obj_data *object, struct char_data *ch, int mode,
 		    char *buffer)
 {
     char *mp;
-    extern char *item_type_desc[]; 
+    extern char *item_type_desc[];
 
     buffer[0] = '\0';
     /* NOTE: Check visibility here. If char can't see obj, return 0   */
@@ -133,8 +133,8 @@ int show_obj_to_buf(struct obj_data *object, struct char_data *ch, int mode,
     else if (object->short_description &&
 	     (mode == LOOK_CONT || mode == LOOK_EQUIP
 		|| mode == LOOK_BAG || mode == LOOK_INV))
-	strcpy(buffer, object->short_description); 
-    else if (mode == LOOK_AT) 
+	strcpy(buffer, object->short_description);
+    else if (mode == LOOK_AT)
     /* NOTE: Move item type description to string array item_type_desc[]
 	    defined in "constants.c" */
     /* NOTE: Move weapon type description to do_examine() */
@@ -142,11 +142,11 @@ int show_obj_to_buf(struct obj_data *object, struct char_data *ch, int mode,
     /* NOTE: no "You see nothing special.."; */
 
     if (mode != LOOK_EXTRA) {
-	int len; 
-	
+	int len;
+
 	if (IS_OBJ_STAT(object, ITEM_INVISIBLE))
 	    strcat(buffer, "(invisible)");
-	if (IS_OBJ_STAT(object, ITEM_EVIL) && ch 
+	if (IS_OBJ_STAT(object, ITEM_EVIL) && ch
 		&& IS_AFFECTED(ch, AFF_DETECT_EVIL))
 	    strcat(buffer, "  ..It glows red!");
 	/* NOTE: Shorten ITEM_GLOW/ITEM_HUM descr. to single line, if possible*/
@@ -184,12 +184,12 @@ int show_obj_to_buf(struct obj_data *object, struct char_data *ch, int mode,
 
 	strcat(buffer, mp);
     }
-    strcat(buffer, "\n\r");
+    strcat(buffer, "\r\n");
     return (1);
 }
 
 /* NOTE: Now, it send output to char through page_string() for long output.
-   It will mitigate problem that disconnecting player due to 
+   It will mitigate problem that disconnecting player due to
    long and rapid output when too many object is in single room.
    Can list contents of bag in bag. (for one level only, not recursively)
  */
@@ -209,7 +209,7 @@ void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode)
 	found++;
 	/* NOTE: List contents of bag in bag when LOOK_BAG mode */
 	if ((mode == LOOK_BAG) && (GET_ITEM_TYPE(i) == ITEM_CONTAINER)) {
-	    sprintf(buf, "The %s contains:\n\r", fname(i->name));
+	    sprintf(buf, "The %s contains:\r\n", fname(i->name));
 	    buf += strlen(buf);
 	    for (j = i->contains; j; j = j->next_content) {
 		if (!CAN_SEE_OBJ(ch, j))
@@ -223,7 +223,7 @@ void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode)
 	}
 	/* NOTE: check buffer overflow */
 	if ( buf > buffer + sizeof(buffer) -100) {
-	    strcat(buf, "AND many other things too numerous to list....\r\n"); 
+	    strcat(buf, "AND many other things too numerous to list....\r\n");
 	    break;
 	}
     }
@@ -243,7 +243,7 @@ void list_obj_to_char(struct obj_data *list, struct char_data *ch, int mode)
 void show_char_to_char(struct char_data *i, struct char_data *ch)
 {
     char buffer[MAX_BUFSIZ];
-    extern char *remove_eol(char *line); 
+    extern char *remove_eol(char *line);
 
     static char *position[] = {
 	" is lying here, dead.",
@@ -269,13 +269,13 @@ void show_char_to_char(struct char_data *i, struct char_data *ch)
 
     /* Code cleanup */
     if (IS_AFFECTED(i, AFF_SHADOW_FIGURE)) {
-	send_to_char("A shadow figure is here.\n\r", ch);
+	send_to_char("A shadow figure is here.\r\n", ch);
 	return;
     }
     if (IS_AFFECTED(i, AFF_HIDE) || !CAN_SEE(ch, i)) {
 	if (IS_AFFECTED(ch, AFF_SENSE_LIFE) && (GET_LEVEL(i) < LEV_DEMI))
-	    send_to_char_han("You sense a hidden life in the room.\n\r",
-			     "방에 숨어있는 생명을 감지합니다.\n\r", ch);
+	    send_to_char_han("You sense a hidden life in the room.\r\n",
+			     "방에 숨어있는 생명을 감지합니다.\r\n", ch);
 	return;
     }
     if (!(i->player.long_descr) || (GET_POS(i) != i->specials.default_pos)) {
@@ -315,10 +315,10 @@ void show_char_to_char(struct char_data *i, struct char_data *ch)
 	    else	/* NIL fighting pointer */
 		strcat(buffer, " is here struggling with thin air.");
 	}
-	/* NOTE: Use position[] string array instead of switch statment. */ 
-	else if (GET_POS(i) <= POS_STANDING) 
+	/* NOTE: Use position[] string array instead of switch statment. */
+	else if (GET_POS(i) <= POS_STANDING)
 	    strcat(buffer, position[GET_POS(i)]);
-	else 
+	else
 	    strcat(buffer, " is floating here.");
     }
     else {		/* npc with long */
@@ -390,21 +390,21 @@ void look_char_to_char(struct char_data *i, struct char_data *ch)
 	strcat(buffer, GET_NAME(i));
 
     if (percent >= 100)
-	strcat(buffer, " is in an excellent condition.\n\r");
+	strcat(buffer, " is in an excellent condition.\r\n");
     else if (percent >= 90)
-	strcat(buffer, " has a few scratches.\n\r");
+	strcat(buffer, " has a few scratches.\r\n");
     else if (percent >= 75)
-	strcat(buffer, " has some small wounds and bruises.\n\r");
+	strcat(buffer, " has some small wounds and bruises.\r\n");
     else if (percent >= 50)
-	strcat(buffer, " has quite a few wounds.\n\r");
+	strcat(buffer, " has quite a few wounds.\r\n");
     else if (percent >= 30)
-	strcat(buffer, " has some big nasty wounds and scratches.\n\r");
+	strcat(buffer, " has some big nasty wounds and scratches.\r\n");
     else if (percent >= 15)
-	strcat(buffer, " looks pretty hurt.\n\r");
+	strcat(buffer, " looks pretty hurt.\r\n");
     else if (percent >= 0)
-	strcat(buffer, " is in an awful condition.\n\r");
+	strcat(buffer, " is in an awful condition.\r\n");
     else
-	strcat(buffer, " is bleeding awfully from big wounds.\n\r");
+	strcat(buffer, " is bleeding awfully from big wounds.\r\n");
 
     /* send_to_char(buffer, ch); */
 
@@ -418,18 +418,18 @@ void look_char_to_char(struct char_data *i, struct char_data *ch)
 		found = TRUE;
 
     if (found) {
-	/* NOTE: act("\n\r$n is using:", FALSE, i, 0, ch, TO_VICT); */
-	sprintf(buf, "\n\r%s is using: \r\n", GET_NAME(i));
+	/* NOTE: act("\r\n$n is using:", FALSE, i, 0, ch, TO_VICT); */
+	sprintf(buf, "\r\n%s is using: \r\n", GET_NAME(i));
 	buf += strlen(buf);
 	list_equips_buf(i, ch, buf);
 	buf += strlen(buf);
     }
 
-    if (((GET_CLASS(ch) == CLASS_THIEF) && (ch != i)) 
+    if (((GET_CLASS(ch) == CLASS_THIEF) && (ch != i))
 	|| IS_WIZARD(ch)) {
 	found = FALSE;
-	strcat(buf, STRHAN("\n\rYou attempt to peek at the inventory:\n\r",
-			   "\n\r장비와 물건을 엿보려고 합니다.\n\r", ch));
+	strcat(buf, STRHAN("\r\nYou attempt to peek at the inventory:\r\n",
+			   "\r\n장비와 물건을 엿보려고 합니다.\r\n", ch));
 	buf += strlen(buf);
 	for (tmp_obj = i->carrying; tmp_obj;
 	     tmp_obj = tmp_obj->next_content) {
@@ -443,10 +443,10 @@ void look_char_to_char(struct char_data *i, struct char_data *ch)
 	    }
 	}
 	if (!found)
-	    strcat(buf, STRHAN("You can't see anything.\n\r",
-			       "아무 것도 없군요.\n\r", ch));
-    } 
-    page_string(ch->desc, buffer, 1); 
+	    strcat(buf, STRHAN("You can't see anything.\r\n",
+			       "아무 것도 없군요.\r\n", ch));
+    }
+    page_string(ch->desc, buffer, 1);
 }
 
 /* NOTE: NEW! list equiped items on char to buffer */
@@ -472,7 +472,7 @@ int list_equips_buf(struct char_data *ch, struct char_data *viewer,
 }
 
 /* NOTE: New! list all objects and all character in the room.
- *    list_obj_to_char() + OLD list_char_to_char()  */ 
+ *    list_obj_to_char() + OLD list_char_to_char()  */
 void list_all_in_room(int room, struct char_data *ch)
 {
     struct char_data *i;
@@ -488,31 +488,31 @@ void look_dir(struct char_data *ch, int dir )
 {
     char buffer[MAX_STRING_LENGTH];
 
-    if (EXIT(ch, dir)) { 
-	if (EXIT(ch, dir)->general_description) 
+    if (EXIT(ch, dir)) {
+	if (EXIT(ch, dir)->general_description)
 	    send_to_char(EXIT(ch, dir)->general_description, ch);
 	else
-	    send_to_char_han("You see nothing special.\n\r",
-			     "별다른 것이 없습니다.\n\r", ch);
+	    send_to_char_han("You see nothing special.\r\n",
+			     "별다른 것이 없습니다.\r\n", ch);
 
 	if (IS_SET(EXIT(ch, dir)->exit_info, EX_CLOSED) &&
 	    (EXIT(ch, dir)->keyword)) {
-	    sprintf(buffer, "The %s is closed.\n\r",
+	    sprintf(buffer, "The %s is closed.\r\n",
 		    fname(EXIT(ch, dir)->keyword));
 	    send_to_char(buffer, ch);
 	}
 	else {
 	    if (IS_SET(EXIT(ch, dir)->exit_info, EX_ISDOOR) &&
 		EXIT(ch, dir)->keyword) {
-		sprintf(buffer, "The %s is open.\n\r",
+		sprintf(buffer, "The %s is open.\r\n",
 			fname(EXIT(ch, dir)->keyword));
 		send_to_char(buffer, ch);
 	    }
 	}
     }
-    else 
-	send_to_char_han("Nothing special there...\n\r",
-			 "거기엔 특별한 것이 없습니다 ... \n\r", ch);
+    else
+	send_to_char_han("Nothing special there...\r\n",
+			 "거기엔 특별한 것이 없습니다 ... \r\n", ch);
 }
 
 /* NOTE: look_in() was part of do_look(). */
@@ -527,15 +527,15 @@ void look_in(struct char_data *ch, char *arg, int recurse)
     extern char *color_liquid[];
 
     if (!*arg) {	/* no argument */
-	send_to_char_han("Look in what?!\n\r",
-			 "무엇의 안을 들여다 본다구요?\n\r", ch);
+	send_to_char_han("Look in what?!\r\n",
+			 "무엇의 안을 들여다 본다구요?\r\n", ch);
 	return;
-    } 
+    }
     /* NOTE: Item carried or item in room */
     bits = generic_find(arg, FIND_OBJ_INV | FIND_OBJ_ROOM |
-			FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object); 
+			FIND_OBJ_EQUIP, ch, &tmp_char, &tmp_object);
     if (!bits) {	/* wrong argument */
-	send_to_char_han("You do not see that item here.\n\r",
+	send_to_char_han("You do not see that item here.\r\n",
 			 "그런 아이템은 없어요.", ch);
 	return;
     }
@@ -549,26 +549,26 @@ void look_in(struct char_data *ch, char *arg, int recurse)
 	else {
 	    temp = ((tmp_object->obj_flags.value[1] * 3)
 		    / tmp_object->obj_flags.value[0]);
-	    sprintf(buffer, "It's %sfull of a %s liquid.\n\r",
-		    fullness[temp], 
+	    sprintf(buffer, "It's %sfull of a %s liquid.\r\n",
+		    fullness[temp],
 		    color_liquid[tmp_object->obj_flags.value[2]]);
 	    send_to_char(buffer, ch);
 	}
     }
     else if (GET_ITEM_TYPE(tmp_object) != ITEM_CONTAINER)
-	send_to_char_han("That is not a container.\n\r",
-		     "이것은 물건을 담을 용기가 아니군요.\n\r", ch);
+	send_to_char_han("That is not a container.\r\n",
+		     "이것은 물건을 담을 용기가 아니군요.\r\n", ch);
     else if (IS_SET(tmp_object->obj_flags.value[1], CONT_CLOSED))
-	    send_to_char_han("It is closed.\n\r", "닫혔군요", ch);
-    else { 
+	    send_to_char_han("It is closed.\r\n", "닫혔군요", ch);
+    else {
 	send_to_char(fname(tmp_object->name), ch);
 	switch (bits) {
 	case FIND_OBJ_INV:
-	    send_to_char(" (carried) : \n\r", ch); break;
+	    send_to_char(" (carried) : \r\n", ch); break;
 	case FIND_OBJ_ROOM:
-	    send_to_char(" (here) : \n\r", ch); break;
+	    send_to_char(" (here) : \r\n", ch); break;
 	case FIND_OBJ_EQUIP:
-	    send_to_char(" (used) : \n\r", ch); break;
+	    send_to_char(" (used) : \r\n", ch); break;
 	}
 	if ( recurse )
 	    list_obj_to_char(tmp_object->contains, ch, LOOK_BAG);
@@ -640,12 +640,12 @@ struct obj_data *look_at_obj(struct char_data *ch, char *arg)
 	return object;
     }
     else /* wrong argument */
-	send_to_char_han("You do not see that here.\n\r",
-			 "그런 것은 여기에 없습니다.\n\r", ch);
+	send_to_char_han("You do not see that here.\r\n",
+			 "그런 것은 여기에 없습니다.\r\n", ch);
     return NULL;
 }
 
-/* NOTE:  do_look() is divided into do_look(), look_dir(), 
+/* NOTE:  do_look() is divided into do_look(), look_dir(),
 	look_in(), look_at_obj(). */
 void do_look(struct char_data *ch, char *argument, int cmd)
 {
@@ -661,18 +661,18 @@ void do_look(struct char_data *ch, char *argument, int cmd)
 	return;
 
     if (GET_POS(ch) < POS_SLEEPING)
-	send_to_char_han("You can't see anything but stars!\n\r",
-			 "별들이 아름답게 빛나고 있습니다.\n\r", ch);
+	send_to_char_han("You can't see anything but stars!\r\n",
+			 "별들이 아름답게 빛나고 있습니다.\r\n", ch);
     else if (GET_POS(ch) == POS_SLEEPING)
-	send_to_char_han("You can't see anything, you're sleeping!\n\r",
-			 "아마도 지금 꿈을 꾸는게 아닌지요 ??\n\r", ch);
+	send_to_char_han("You can't see anything, you're sleeping!\r\n",
+			 "아마도 지금 꿈을 꾸는게 아닌지요 ??\r\n", ch);
     else if (ch && IS_AFFECTED(ch, AFF_BLIND))
-	send_to_char_han("You can't see a damn thing, you're blinded!\n\r",
-		     "앞을 볼 수가 없습니다! 눈이 멀었습니다!\n\r", ch);
+	send_to_char_han("You can't see a damn thing, you're blinded!\r\n",
+		     "앞을 볼 수가 없습니다! 눈이 멀었습니다!\r\n", ch);
     else if ( ch && IS_MORTAL(ch) && IS_DARK(ch->in_room)
 	    && !IS_AFFECTED(ch, AFF_INFRAVISION))
-	send_to_char_han("It is pitch black...\n\r",
-			 "너무 깜깜합니다..\n\r", ch);
+	send_to_char_han("It is pitch black...\r\n",
+			 "너무 깜깜합니다..\r\n", ch);
     else
 	goto ok;
     return;
@@ -682,7 +682,7 @@ ok:
     switch (keyword_no) {
     case 0: case 1: case 2: case 3: case 4: case 5:
 	/* look <dir> */
-	look_dir(ch, keyword_no); 
+	look_dir(ch, keyword_no);
 	break;
 
     case 6: /* look 'in'  */
@@ -691,8 +691,8 @@ ok:
 
     case 7: /* look 'at'  */
 	if (!*arg1) {	/* no argument */
-	    send_to_char_han("Look at what?\n\r",
-			     "무엇을 바라보라고요 ?\n\r", ch);
+	    send_to_char_han("Look at what?\r\n",
+			     "무엇을 바라보라고요 ?\r\n", ch);
 	    break;
 	}
 
@@ -706,7 +706,7 @@ ok:
 		       TRUE, ch, 0, tmp_char, TO_NOTVICT);
 	    }
 	}
-	else 
+	else
 	    look_at_obj(ch, arg1);
 	break;
 
@@ -718,10 +718,10 @@ ok:
 			world[ch->in_room].number);
 		sprintbit((long) world[ch->in_room].room_flags, room_bits,
 			  buffer + strlen(buffer));
-		strcat(buffer, "]\n\r");
+		strcat(buffer, "]\r\n");
 	    }
 	    else
-		sprintf(buffer, "%s\n\r", world[ch->in_room].name);
+		sprintf(buffer, "%s\r\n", world[ch->in_room].name);
 	    send_to_char(buffer, ch);
 	    if (!IS_SET(ch->specials.act, PLR_BRIEF))
 		send_to_char(world[ch->in_room].description, ch);
@@ -732,7 +732,7 @@ ok:
 	    if (EXIT(ch, 3)) strcat(buffer, "W ");
 	    if (EXIT(ch, 4)) strcat(buffer, "U ");
 	    if (EXIT(ch, 5)) strcat(buffer, "D ");
-	    strcat(buffer, " ]\n\r");
+	    strcat(buffer, " ]\r\n");
 	    send_to_char(buffer, ch);
 
 	    list_all_in_room(ch->in_room, ch);
@@ -745,32 +745,32 @@ ok:
 
 	/* wrong arg  */
     case -1:
-	send_to_char_han("Sorry, I didn't understand that!\n\r",
-			 "미안합니다. 이해를 못하겠네요.\n\r", ch);
+	send_to_char_han("Sorry, I didn't understand that!\r\n",
+			 "미안합니다. 이해를 못하겠네요.\r\n", ch);
 	break;
     }
 }
-/* end of look */ 
+/* end of look */
 
 void do_examine(struct char_data *ch, char *argument, int cmd)
 {
     char arg[MAX_INPUT_LENGTH], buf[MAX_BUFSIZ];
     struct obj_data *object;
 
-    extern int weapon_type(struct obj_data *weapon); 
+    extern int weapon_type(struct obj_data *weapon);
     extern char *weapon_type_desc[];
 
     /* NOTE: Redundant errer msg on null arg. Check arg number first. */
     one_argument(argument, arg);
 
     if (!*arg) {
-	send_to_char_han("Examine what?\n\r", "무엇을 조사하시려구요?\n\r", ch);
+	send_to_char_han("Examine what?\r\n", "무엇을 조사하시려구요?\r\n", ch);
 	return;
     }
 
-    /*	NOTE: Use look_at_obj() and look_in() directly, not via do_look(). */ 
-    object = look_at_obj(ch, arg); 
-    if (!object) 
+    /*	NOTE: Use look_at_obj() and look_in() directly, not via do_look(). */
+    object = look_at_obj(ch, arg);
+    if (!object)
 	return;
 
     if ((GET_ITEM_TYPE(object) == ITEM_CONTAINER )
@@ -779,10 +779,10 @@ void do_examine(struct char_data *ch, char *argument, int cmd)
 			 "안을 들여다 보니 이런 것이 있군요.\r\n", ch);
 	look_in(ch, arg, FALSE );
     }
-    /* NOTE: Move looking wrtings on 'note' from do_look() to here. */ 
+    /* NOTE: Move looking wrtings on 'note' from do_look() to here. */
     else if (GET_ITEM_TYPE(object) == ITEM_NOTE ) {
 	if (object->action_description) {
-	    strcpy(buf, "There is something written upon it:\n\r\n\r");
+	    strcpy(buf, "There is something written upon it:\r\n\r\n");
 	    strcat(buf, object->action_description);
 	}
 	else
@@ -793,10 +793,10 @@ void do_examine(struct char_data *ch, char *argument, int cmd)
     else if (GET_ITEM_TYPE(object) == ITEM_WEAPON ) {
 	/* NOTE: gives more specific info about WEAPON TYPE */
 	sprinttype(weapon_type(object) - TYPE_HIT, weapon_type_desc, buf);
-	strcat(buf, "\r\n"); 
+	strcat(buf, "\r\n");
     }
     else if (GET_ITEM_TYPE(object) == ITEM_FIREWEAPON) {
-	sprintf(buf, "There are %d shots left.\n\r",
+	sprintf(buf, "There are %d shots left.\r\n",
 		object->obj_flags.value[0]);
 	send_to_char(buf, ch);
     }
@@ -808,11 +808,11 @@ void do_read(struct char_data *ch, char *argument, int cmd)
     /* NOTE: Use look_at_obj() directly, not via do_look(). */
 
     look_at_obj(ch, argument);
-} 
+}
 
 void do_inventory(struct char_data *ch, char *argument, int cmd)
 {
-    send_to_char_han("You are carrying:\n\r", "가지고 있는 물건들:\n\r", ch);
+    send_to_char_han("You are carrying:\r\n", "가지고 있는 물건들:\r\n", ch);
     list_obj_to_char(ch->carrying, ch, LOOK_INV);
 }
 
@@ -821,73 +821,73 @@ void do_equipment(struct char_data *ch, char *argument, int cmd)
     int found;
     char buffer[MAX_STRING_LENGTH];
 
-    send_to_char_han("You are using:\n\r", "쓰고 있는 물건들:\n\r", ch);
+    send_to_char_han("You are using:\r\n", "쓰고 있는 물건들:\r\n", ch);
     found = list_equips_buf(ch, ch, buffer);
 
     if (found)
 	send_to_char(buffer, ch);
     else
-	send_to_char_han(" Nothing.\n\r", " 아무것도 없네요.\n\r", ch);
-} 
+	send_to_char_han(" Nothing.\r\n", " 아무것도 없네요.\r\n", ch);
+}
 
 /*
    static char ac_msg[13][44] = {
-   "You are naked.\n\r",
-   "You are almost naked.\n\r",
-   "You are barely covered.\n\r",
-   "You are somewhat covered.\n\r",
-   "You are pretty covered.\n\r",
-   "You are pretty well covered.\n\r",
-   "You are pretty well armored.\n\r",
-   "You are heavily armored.\n\r",
-   "You are very heavily armored.\n\r",
-   "You are extremely heavily armored.\n\r",
-   "You are almost an armored tank.\n\r",
-   "You are an armored tank.\n\r",
-   "You are a walking fortress.\n\r"
+   "You are naked.\r\n",
+   "You are almost naked.\r\n",
+   "You are barely covered.\r\n",
+   "You are somewhat covered.\r\n",
+   "You are pretty covered.\r\n",
+   "You are pretty well covered.\r\n",
+   "You are pretty well armored.\r\n",
+   "You are heavily armored.\r\n",
+   "You are very heavily armored.\r\n",
+   "You are extremely heavily armored.\r\n",
+   "You are almost an armored tank.\r\n",
+   "You are an armored tank.\r\n",
+   "You are a walking fortress.\r\n"
    };
  */
 
 static char *align_msg[13] = {
-    "You are a saint.\n\r",
-    "You feel like being a saint.\n\r",
-    "You are good.\n\r",
-    "You are slightly good.\n\r",
-    "You are almost good.\n\r",
-    "You are going to be good.\n\r",
-    "You are neutral.\n\r",
-    "You are going to be evil.\n\r",
-    "You are almost evil.\n\r",
-    "You are slightly evil.\n\r",
-    "You are evil.\n\r",
-    "You feel like being a devil.\n\r",
-    "You are a devil.\n\r"
+    "You are a saint.\r\n",
+    "You feel like being a saint.\r\n",
+    "You are good.\r\n",
+    "You are slightly good.\r\n",
+    "You are almost good.\r\n",
+    "You are going to be good.\r\n",
+    "You are neutral.\r\n",
+    "You are going to be evil.\r\n",
+    "You are almost evil.\r\n",
+    "You are slightly evil.\r\n",
+    "You are evil.\r\n",
+    "You feel like being a devil.\r\n",
+    "You are a devil.\r\n"
 };
 
 static char *align_msg_han[13] = {
-    "당신은 성인 군자십니다.\n\r",
-    "당신은 성이 군자가 되어가고 있습니다.\n\r",
-    "당신은 선하십니다.\n\r",
-    "당신은 약간 선합니다.\n\r",
-    "당신은 거의 선한 경지에 이르렀습니다.\n\r",
-    "당신은 선한쪽으로 변하고 있습니다.\n\r",
-    "당신은 아주 평범한 성향입니다.\n\r",
-    "당신은 악한 쪽으로 변해가고 있습니다.\n\r",
-    "당신은 거의 악해졌습니다.\n\r",
-    "당신은 약간 악한 성향을 띄고 있습니다.\n\r",
-    "당신은 악하십니다.\n\r",
-    "당신은 거의 악마가 되어갑니다.\n\r",
-    "당신은 악마가 되셨습니다.\n\r"
-}; 
+    "당신은 성인 군자십니다.\r\n",
+    "당신은 성이 군자가 되어가고 있습니다.\r\n",
+    "당신은 선하십니다.\r\n",
+    "당신은 약간 선합니다.\r\n",
+    "당신은 거의 선한 경지에 이르렀습니다.\r\n",
+    "당신은 선한쪽으로 변하고 있습니다.\r\n",
+    "당신은 아주 평범한 성향입니다.\r\n",
+    "당신은 악한 쪽으로 변해가고 있습니다.\r\n",
+    "당신은 거의 악해졌습니다.\r\n",
+    "당신은 약간 악한 성향을 띄고 있습니다.\r\n",
+    "당신은 악하십니다.\r\n",
+    "당신은 거의 악마가 되어갑니다.\r\n",
+    "당신은 악마가 되셨습니다.\r\n"
+};
 
 /* NOTE: NEW! position description string array */
 static char *position[] = {
-    "You are DEAD!", 
+    "You are DEAD!",
     "You are mortally wounded!, you should seek help!",
     "You are incapacitated, slowly fading away.",
     "You are stunned! You can't move.",
-    "You are sleeping.", 
-    "You are resting.", 
+    "You are sleeping.",
+    "You are resting.",
     "You are sitting.",
     "!FIGHTING!",
     "You are standing.",
@@ -895,10 +895,10 @@ static char *position[] = {
 };
 
 static char *position_han[] = {
-    "당신은 죽으셨습니다.", 
-    "당신은 치명적으로 다쳤습니다. 죽음이 다가오고 있습니다.", 
-    "당신은 심하게 다쳐서 정신이 흐려지고 있습니다.", 
-    "당신은 기절해서 움직일 수 없습니다.", 
+    "당신은 죽으셨습니다.",
+    "당신은 치명적으로 다쳤습니다. 죽음이 다가오고 있습니다.",
+    "당신은 심하게 다쳐서 정신이 흐려지고 있습니다.",
+    "당신은 기절해서 움직일 수 없습니다.",
     "당신은 자고 있습니다.",
     "당신은 쉬고 있습니다.",
     "당신은 앉아 있습니다.",
@@ -931,7 +931,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	    if ((tmpch = get_char_vis(ch, buf))) {
 		ch = tmpch ; 	/* NOTE: See player/mob's score */
 		sprintf(buf, "Looking for score of %s.\r\n", GET_NAME(ch));
-		send_to_char(buf, to); 
+		send_to_char(buf, to);
 	    }
 	    else {
 		send_to_char("score who?\r\n", to );
@@ -939,7 +939,7 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	    }
 	}
     }
-	
+
     /* alignment message */
     tmp = GET_ALIGNMENT(ch) / 50;
     if (tmp > 17) align = 0;
@@ -962,14 +962,14 @@ void do_score(struct char_data *ch, char *argument, int cmd)
     send_to_char(buf, to);
 
     sprintf(buf,
-     STRHAN("You have  %d(%d) hit, %d(%d) mana and %d(%d) move points.\n\r",
-       "당신은  %d(%d) hit, %d(%d) mana와 %d(%d) move가 있습니다.\n\r", ch),
+     STRHAN("You have  %d(%d) hit, %d(%d) mana and %d(%d) move points.\r\n",
+       "당신은  %d(%d) hit, %d(%d) mana와 %d(%d) move가 있습니다.\r\n", ch),
 	    GET_HIT(ch), GET_PLAYER_MAX_HIT(ch),
 	    GET_MANA(ch), GET_PLAYER_MAX_MANA(ch),
 	    GET_MOVE(ch), GET_PLAYER_MAX_MOVE(ch));
     send_to_char(buf, to);
 
-/*  
+/*
    tmp = ch->points.armor/10;
    switch( tmp )
    { case 10: send_to_char( ac_msg[0], ch ); break;
@@ -997,31 +997,31 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	send_to_char( ac_msg[11], ch ); break;
    default:
 	send_to_char( ac_msg[12], ch ); break;
-   } 
+   }
  */
 
     if (GET_LEVEL(ch) > 12) {
 	if( !brief ) {
 	    send_to_char_han("Your stat:", "당신의  체질:", to);
-	    sprintf(buf, "  str %d/%d wis %d int %d dex %d con %d.\n\r",
+	    sprintf(buf, "  str %d/%d wis %d int %d dex %d con %d.\r\n",
 		    GET_STR(ch), GET_ADD(ch), GET_WIS(ch), GET_INT(ch),
 		    GET_DEX(ch), GET_CON(ch));
 	    send_to_char(buf, to);
 	}
 
 	sprintf(buf, STRHAN( "Your hitroll is %d , and damroll is %d."
-			     "   Bare Hand Dice is  %dd%d.\n\r",
+			     "   Bare Hand Dice is  %dd%d.\r\n",
 			     "당신의  hitroll은 %d , damroll은 %d."
-			     "  맨손 위력은  %dd%d 입니다.\n\r", ch),
+			     "  맨손 위력은  %dd%d 입니다.\r\n", ch),
 			     GET_HITROLL(ch), GET_DAMROLL(ch),
 		ch->specials.damnodice, ch->specials.damsizedice);
 	send_to_char(buf, to);	/* changed by shin won dong */
 
 	sprintf(buf, STRHAN(
 	      "You save para: %d, hit skill: %d, breath: %d, spell: %d."
-			       "  Regeneration: %d.\n\r",
+			       "  Regeneration: %d.\r\n",
 	  "마법면역도는 para: %d, hit skill: %d, breath: %d, spell: %d."
-			       "  회복도: %d.\n\r", ch),
+			       "  회복도: %d.\r\n", ch),
 		IS_NPC(ch) ? ch->specials.apply_saving_throw[SAVING_PARA] :
 		ch->specials.apply_saving_throw[SAVING_PARA] +
 	   saving_throws[GET_CLASS(ch) - 1][SAVING_PARA][GET_LEVEL(ch) - 1],
@@ -1039,45 +1039,45 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	    send_to_char(buf, to);
     }
 
-    sprintf(buf,STRHAN("You have scored  %s exp and have  %s gold coins.\n\r",
-	   "당신은  %s 의 경험치와  %s 원의 돈을 가지고 있습니다.\n\r", ch),
+    sprintf(buf,STRHAN("You have scored  %s exp and have  %s gold coins.\r\n",
+	   "당신은  %s 의 경험치와  %s 원의 돈을 가지고 있습니다.\r\n", ch),
 	    monetary(GET_EXP(ch)), monetary(GET_GOLD(ch)));
     send_to_char(buf, to);
 
     playing_time = real_time_passed((time(0) - ch->player.time.logon) +
 				    ch->player.time.played, 0);
     sprintf(buf, STRHAN(
-   "You are %d years old, and have been playing for %d days and %d hours.\n\r",
-      "당신은  %d 살이고, 이 안에서 %d 일 %d 시간동안 있었습니다.\n\r", ch),
+   "You are %d years old, and have been playing for %d days and %d hours.\r\n",
+      "당신은  %d 살이고, 이 안에서 %d 일 %d 시간동안 있었습니다.\r\n", ch),
 	    age(ch).year, playing_time.day, playing_time.hours);
     if ( !brief )
 	send_to_char(buf, to);
 
     /* NOTE: Add class, too */
-    sprintf(buf, STRHAN("This ranks you as  %s  %s (level %c %2d).\n\r",
-			"당신은  %s  %s (레벨 %c %2d) 입니다.\n\r", ch),
-	    GET_NAME(ch), (GET_TITLE(ch) ? GET_TITLE(ch) : "No Title"), 
+    sprintf(buf, STRHAN("This ranks you as  %s  %s (level %c %2d).\r\n",
+			"당신은  %s  %s (레벨 %c %2d) 입니다.\r\n", ch),
+	    GET_NAME(ch), (GET_TITLE(ch) ? GET_TITLE(ch) : "No Title"),
 	    "UMCTWU"[GET_CLASS(ch)], GET_LEVEL(ch));
     if ( !brief )
 	send_to_char(buf, to);
     if (IS_MORTAL(ch)) {
 	if (titles[GET_CLASS(ch) - 1][GET_LEVEL(ch) + 1].exp < GET_EXP(ch))
-	    strcpy(buf, STRHAN("You have enough experience to advance.\n\r",
-		    "레벨을 올릴만큼 충분한 경험치가 쌓였습니다.\n\r", ch));
+	    strcpy(buf, STRHAN("You have enough experience to advance.\r\n",
+		    "레벨을 올릴만큼 충분한 경험치가 쌓였습니다.\r\n", ch));
 	else
-	    sprintf(buf, STRHAN("You need  %s experience to advance.\n\r",
-		   "다음 레벨까지  %s 만큼의 경험치가 필요합니다.\n\r", ch),
+	    sprintf(buf, STRHAN("You need  %s experience to advance.\r\n",
+		   "다음 레벨까지  %s 만큼의 경험치가 필요합니다.\r\n", ch),
 		    monetary(titles[GET_CLASS(ch) - 1][GET_LEVEL(ch) + 1].exp - GET_EXP(ch)));
 	send_to_char(buf, to);
     }
 
     if (GET_COND(ch, DRUNK) > 10)
-	send_to_char_han("You are intoxicated.\n\r",
-			 "당신은 취해 있습니다.\n\r", to);
+	send_to_char_han("You are intoxicated.\r\n",
+			 "당신은 취해 있습니다.\r\n", to);
 
     if (GET_POS(ch) == POS_FIGHTING ) {
 	if (ch->specials.fighting) {
-	    sprintf(buf, STRHAN("You are fighting %s.", 
+	    sprintf(buf, STRHAN("You are fighting %s.",
 	"당신은 %s님과 싸우고 있습니다.", ch), GET_NAME(ch->specials.fighting));
 	   send_to_char(buf, to);
 	}
@@ -1085,27 +1085,27 @@ void do_score(struct char_data *ch, char *argument, int cmd)
 	   send_to_char("You are fighting thin air." , to);
     }
     else if ( GET_POS(ch) <= POS_STANDING ) {
-	/* NOTE: Use string array position[] and position_han[] 
-		to print my position instead of switch statement. */ 
+	/* NOTE: Use string array position[] and position_han[]
+		to print my position instead of switch statement. */
 	send_to_char_han(position[GET_POS(ch)], position_han[GET_POS(ch)], to);
     }
     else
 	send_to_char("Hmmm.. You are in odd position", to);
 
-    /* NOTE: Show whom you are following *after* position printing. */ 
+    /* NOTE: Show whom you are following *after* position printing. */
     if(!brief && ch->master  && GET_NAME(ch->master)) {
-	sprintf(buf, STRHAN( "    You are following %s.", 
+	sprintf(buf, STRHAN( "    You are following %s.",
 	    "    당신은 %s 님을 따르고 있습니다.", to), GET_NAME(ch->master));
 	send_to_char(buf, to);
     }
     send_to_char("\r\n", to);
-	
+
     if (ch->affected) {
-	send_to_char(STRHAN("Affecting Spells:\n\r",
-		"걸려있는 마법들:\n\r", ch), to );
+	send_to_char(STRHAN("Affecting Spells:\r\n",
+		"걸려있는 마법들:\r\n", ch), to );
 	for (aff = ch->affected; aff; aff = aff->next) {
 	    /* NOTE:  spells index starts from 1, not zero.   */
-	    sprintf(buf, STRHAN("%s: %d hrs\n\r", "%s: %d 시간\n\r", ch),
+	    sprintf(buf, STRHAN("%s: %d hrs\r\n", "%s: %d 시간\r\n", ch),
 		    spells[aff->type], aff->duration);
 	    send_to_char(buf, to);
 	}
@@ -1142,7 +1142,7 @@ void do_report(struct char_data *ch, char *argument, int cmd)
     act(buf, TRUE, ch, 0, 0, TO_ROOM);
     /* NOTE: Report to myself, too */
     act(buf, FALSE, ch, 0, 0, TO_CHAR);
-    /* send_to_char("ok.\n\r",ch); */
+    /* send_to_char("ok.\r\n",ch); */
 }
 
 #ifdef UNUSED_CODE
@@ -1153,40 +1153,40 @@ void do_attribute(struct char_data *ch, char *argument, int cmd)
     struct affected_type *aff;
 
     sprintf(buf,
-	"You are %d years and %d months, %d cms, and you weigh %d lbs.\n\r",
+	"You are %d years and %d months, %d cms, and you weigh %d lbs.\r\n",
 	    age(ch).year, age(ch).month, ch->player.height, ch->player.weight);
 
     send_to_char(buf, ch);
 
-    sprintf(buf, "You are carrying %d lbs of equipment.\n\r",
+    sprintf(buf, "You are carrying %d lbs of equipment.\r\n",
 	    GET_CARRYING_W(ch));
     send_to_char(buf, ch);
 
-    /*  sprintf(buf,"Your armor is %d (-100 to 100).\n\r",ch->points.armor);
+    /*  sprintf(buf,"Your armor is %d (-100 to 100).\r\n",ch->points.armor);
 	send_to_char(buf,ch); */
 
     /* if ((GET_LEVEL(ch) > 15) || (GET_CLASS(ch))) {    cyb */
     if ((GET_LEVEL(ch) > 15)) {
 	if ((GET_STR(ch) == 18) && (GET_CLASS(ch))) {
-	    sprintf(buf, "You have %d/%d STR, %d INT, %d WIS, %d DEX, %d CON\n\r",
+	    sprintf(buf, "You have %d/%d STR, %d INT, %d WIS, %d DEX, %d CON\r\n",
 		    GET_STR(ch), GET_ADD(ch), GET_INT(ch), GET_WIS(ch),
 		    GET_DEX(ch), GET_CON(ch));
 	    send_to_char(buf, ch);
 	}
 	else {
-	    sprintf(buf, "You have %d STR, %d INT, %d WIS, %d DEX, %d CON\n\r",
+	    sprintf(buf, "You have %d STR, %d INT, %d WIS, %d DEX, %d CON\r\n",
 	    GET_STR(ch), GET_INT(ch), GET_WIS(ch), GET_DEX(ch), GET_CON(ch));
 	    send_to_char(buf, ch);
 	}
     }
 
-    sprintf(buf, "Your hitroll and damroll are %d and %d respectively.\n\r",
+    sprintf(buf, "Your hitroll and damroll are %d and %d respectively.\r\n",
 	    GET_HITROLL(ch), GET_DAMROLL(ch));
     send_to_char(buf, ch);
 
     /* **   by popular demand -- affected stuff */
     if (ch->affected) {
-	send_to_char("\n\rAffecting Spells:\n\r--------------\n\r", ch);
+	send_to_char("\r\nAffecting Spells:\r\n--------------\r\n", ch);
 	for (aff = ch->affected; aff; aff = aff->next) {
 	    switch (aff->type) {
 	    /* NOTE: show affection by sneak, poision or curse. */
@@ -1198,7 +1198,7 @@ void do_attribute(struct char_data *ch, char *argument, int cmd)
 		break;
 	    default:
 		/* NOTE:  spells index starts from 1, not zero.   */
-		sprintf(buf, "Spell : '%s'\n\r", spells[aff->type]);
+		sprintf(buf, "Spell : '%s'\r\n", spells[aff->type]);
 		send_to_char(buf, ch);
 		break;
 	    }
@@ -1206,7 +1206,7 @@ void do_attribute(struct char_data *ch, char *argument, int cmd)
     }
 }
 
-/* end of Attribute Module... */ 
+/* end of Attribute Module... */
 #endif		/* UNUSED_CODE */
 
 void do_data(struct char_data *ch, char *argument, int cmd)
@@ -1220,7 +1220,7 @@ void do_data(struct char_data *ch, char *argument, int cmd)
 	"exp", "hit", "gold", "armor", "age",
 	"time", "flags", "bank", "des", "level",
     };
-#define KEYS 	"exp hit gold armor age time flags bank des level" 
+#define KEYS 	"exp hit gold armor age time flags bank des level"
 
     one_argument(argument, name);
     /* NOTE: Use search_block() instead of nested if strcmp() */
@@ -1250,7 +1250,7 @@ void do_data(struct char_data *ch, char *argument, int cmd)
 	    case 3: n = victim->points.gold; break;
 	    case 4: n = victim->points.armor; break;
 	    case 5: n = (time(0) - victim->player.time.birth) / 86400; break;
-	    case 6: n = (60 * victim->desc->ncmds) 
+	    case 6: n = (60 * victim->desc->ncmds)
 		    / (1 + time(0) - victim->desc->contime); break;
 	    case 7: n = victim->specials.act; break;
 	    case 8: n = victim->bank; break;
@@ -1259,10 +1259,10 @@ void do_data(struct char_data *ch, char *argument, int cmd)
 	    default:
 		n = -1;
 	    }
-	    sprintf(buf, fmt, GET_NAME(victim), n, (i % nc) ? "|" : "\n\r");
+	    sprintf(buf, fmt, GET_NAME(victim), n, (i % nc) ? "|" : "\r\n");
 	    send_to_char(buf, ch);
 	}
     }
     if (i % nc)
-	send_to_char("\n\r", ch);
+	send_to_char("\r\n", ch);
 }

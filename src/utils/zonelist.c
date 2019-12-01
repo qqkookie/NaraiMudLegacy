@@ -5,7 +5,7 @@
 #define MAX_ITEMS 1000
 
 #pragma GCC diagnostic ignored "-Wunused-result"
-#pragma GCC diagnostic ignored "-Wunused-parameter" 
+#pragma GCC diagnostic ignored "-Wunused-parameter"
 
 static int com_func(i,j)
 int *i,*j;
@@ -51,7 +51,7 @@ int main(int argc,char *argv[])
 			fgets(buf,80,fp);
 			continue;
 		}
-		else 
+		else
 		{
 			fscanf(fp," %d %d %d",&flag,&a1,&a2);
 			if(chk=='M'||chk=='O'||chk=='E'||chk=='P'||chk=='D')
@@ -61,7 +61,7 @@ int main(int argc,char *argv[])
 			{
 			case 'M':
 				old_chk='M';
-				break;		
+				break;
 			case 'G':
 				if(old_chk=='M'||old_chk=='G'||old_chk=='E')
 				{
@@ -74,13 +74,13 @@ int main(int argc,char *argv[])
 				{
 					fprintf(stderr,"GIVE ERROR in line %d!\n",line);
 				}
-				break;		
+				break;
 			case 'O':
 /*				printf("OBJ(%d) in %d limit(%d),flag(%d)\n",
 					a1,a3,a2,flag);*/
 				old_chk='O';
 				items[no_item++]=a1;
-				break;		
+				break;
 			case 'P':
 				if( old_chk=='O' || old_chk=='P' )
 				{
@@ -94,7 +94,7 @@ int main(int argc,char *argv[])
 				fprintf(stderr,"ERROR in line %d!\n",line);
 				old_chk=' ';
 				}
-				break;		
+				break;
 			case 'D':
 				old_chk='D';
 				break;
@@ -111,7 +111,7 @@ int main(int argc,char *argv[])
 				fprintf(stderr,"ERROR in line %d!\n",line);
 				old_chk=' ';
 				}
-				break;		
+				break;
 			default:
 				fprintf(stderr,"ERROR in line %d!\n",line);
 				break;

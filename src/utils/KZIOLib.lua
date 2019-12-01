@@ -175,7 +175,7 @@ function kz_openfile(fn, renumfn)
       end
       Renum_outfile = io.open( RENUMDIR .. renumfn, 'w')
       assert(Renum_outfile)
-    end 
+    end
 end
 
 function kz_closefile()

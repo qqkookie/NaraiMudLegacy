@@ -30,7 +30,7 @@ void spell_magic_missile(byte level, struct char_data *ch,
 	dam >>= 1;
 
     damage(ch, victim, dam, SPELL_MAGIC_MISSILE);
-} 
+}
 
 void spell_chill_touch(byte level, struct char_data *ch,
 		       struct char_data *victim, struct obj_data *obj)
@@ -56,15 +56,15 @@ void spell_chill_touch(byte level, struct char_data *ch,
 	affect_join(victim, &af, TRUE, FALSE);
 
 	chilled = TRUE;
-	if ( number(1, 101) < 
+	if ( number(1, 101) <
 		GET_LEVEL(ch) + GET_SKILLED(ch, SPELL_CHILL_TOUCH)/2 ) {
 	    /* NOTE: Chill touch will remove 'improved haste' spell */
 	    if ( IS_AFFECTED( victim, AFF_IMPROVED_HASTE )) {
 		if (affected_by_spell(victim, SPELL_IMPROVED_HASTE)) {
 		    affect_from_char(victim, SPELL_IMPROVED_HASTE);
-		    act( spell_wear_off_msg[SPELL_IMPROVED_HASTE], 
+		    act( spell_wear_off_msg[SPELL_IMPROVED_HASTE],
 			FALSE, victim, 0, 0, TO_CHAR);
-		} 
+		}
 		if ( IS_AFFECTED( victim, AFF_IMPROVED_HASTE ))
 		    REMOVE_BIT( victim->specials.affected_by,
 			    AFF_IMPROVED_HASTE );
@@ -73,11 +73,11 @@ void spell_chill_touch(byte level, struct char_data *ch,
 	    else if ( IS_AFFECTED( victim, AFF_HASTE )) {
 		if (affected_by_spell(victim, SPELL_HASTE)) {
 		    affect_from_char(victim, SPELL_HASTE);
-		    act( spell_wear_off_msg[SPELL_HASTE], 
+		    act( spell_wear_off_msg[SPELL_HASTE],
 			FALSE, victim, 0, 0, TO_CHAR);
-		} 
+		}
 		if ( IS_AFFECTED( victim, AFF_HASTE ))
-		    REMOVE_BIT( victim->specials.affected_by, AFF_HASTE ); 
+		    REMOVE_BIT( victim->specials.affected_by, AFF_HASTE );
 	    }
 	    /* NOTE: Chill touch will lower victim's dextirity */
 	    else if ( GET_DEX(victim) > 5 ) {
@@ -99,7 +99,7 @@ void spell_chill_touch(byte level, struct char_data *ch,
 
     /* NOTE: Show messge if victim is successfully chilled */
     if ( chilled ) {
-	send_to_char("Chilling! Your body gets stiffened.\n\r", victim);
+	send_to_char("Chilling! Your body gets stiffened.\r\n", victim);
 	act("$n seems less vigorous from your chilling.",
 	    TRUE, victim, 0, 0, TO_ROOM);
     }
@@ -122,7 +122,7 @@ void spell_burning_hands(byte level, struct char_data *ch,
 	dam >>= 1;
 
     damage(ch, victim, dam, SPELL_BURNING_HANDS);
-} 
+}
 
 void spell_shocking_grasp(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj)
@@ -143,7 +143,7 @@ void spell_shocking_grasp(byte level, struct char_data *ch,
 	GET_POS(victim) = POS_STUNNED;
 
     damage(ch, victim, dam, SPELL_SHOCKING_GRASP);
-} 
+}
 
 void spell_lightning_bolt(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj)
@@ -169,7 +169,7 @@ void spell_lightning_bolt(byte level, struct char_data *ch,
 	GET_POS(victim) = POS_STUNNED;
 
     damage(ch, victim, dam, SPELL_LIGHTNING_BOLT);
-} 
+}
 
 void spell_color_spray(byte level, struct char_data *ch,
 		       struct char_data *victim, struct obj_data *obj)
@@ -188,7 +188,7 @@ void spell_color_spray(byte level, struct char_data *ch,
 	dam >>= 1;
 
     damage(ch, victim, dam, SPELL_COLOR_SPRAY);
-} 
+}
 
 /* Drain XP, MANA, HP - caster gains HP and MANA */
 void spell_energy_drain(byte level, struct char_data *ch,
@@ -225,7 +225,7 @@ void spell_energy_drain(byte level, struct char_data *ch,
 	    GET_HIT(ch) += dam;
 	    GET_MANA(ch) = MIN(GET_MANA(ch), mana_limit(ch));
 	    GET_HIT(ch) = MIN(GET_HIT(ch), hit_limit(ch));
-	    send_to_char("Your life energy is drained!\n\r", victim);
+	    send_to_char("Your life energy is drained!\r\n", victim);
 	    damage(ch, victim, dam, SPELL_ENERGY_DRAIN);
 	}
     }
@@ -258,7 +258,7 @@ void spell_fireball(byte level, struct char_data *ch,
 	dam >>= 1;
 
     if (OUTSIDE(ch) && (weather_info.sky == SKY_CLOUDLESS)) {
-	send_to_char("Your fireball works excellent!!\n\r", ch);
+	send_to_char("Your fireball works excellent!!\r\n", ch);
 	act("$n suffers from hot ball.", FALSE, victim, 0, 0, TO_ROOM);
 	dam *= GET_INT(ch);
     }
@@ -344,7 +344,7 @@ void spell_energyflow(byte level, struct char_data *ch,
 	dam = dice(level, (level >> 1) + GET_SKILLED(ch, SPELL_ENERGY_FLOW));
 	dam <<= (1 + (GET_SKILLED(ch, SPELL_ENERGY_FLOW) >> 5));
 
-	send_to_char("Energyflow which is made of your Exp Quaaaaaaa!\n\r", ch);
+	send_to_char("Energyflow which is made of your Exp Quaaaaaaa!\r\n", ch);
 
 	exp = level * level * level * (20 - (GET_SKILLED(ch, SPELL_ENERGY_FLOW) >> 3));
 	GET_EXP(ch) -= exp;
@@ -355,7 +355,7 @@ void spell_energyflow(byte level, struct char_data *ch,
 	damage(ch, victim, dam, SPELL_ENERGY_FLOW);
     }
     else
-	send_to_char("You have too little experience...\n\r", ch);
+	send_to_char("You have too little experience...\r\n", ch);
 }
 
 void spell_full_fire(byte level, struct char_data *ch,
@@ -370,7 +370,7 @@ void spell_full_fire(byte level, struct char_data *ch,
 
     // OLD: if (!IS_NPC(ch) && GET_LEVEL(ch) == LEV_IMMO)
     if (prohibit_violence(ch)) {
-	send_to_char("You cannot use this spell.\n\r", ch);
+	send_to_char("You cannot use this spell.\r\n", ch);
 	return;
     }
 
@@ -379,7 +379,7 @@ void spell_full_fire(byte level, struct char_data *ch,
     dam = dice(level, GET_INT(ch) + (GET_SKILLED(ch, SPELL_FULL_FIRE) >> 4));
 
     if (saves_spell(victim, SAVING_SPELL)) {
-	send_to_char("But, You couldn't concentrate enough\n\r", ch);
+	send_to_char("But, You couldn't concentrate enough\r\n", ch);
 	GET_MANA(ch) -= dam;
     }
     else {
@@ -387,8 +387,8 @@ void spell_full_fire(byte level, struct char_data *ch,
 	for (; i; i--) {
 	    dam += dice(level, level);
 	}
-	/* 
-	limit = level * number(200, 300); 
+	/*
+	limit = level * number(200, 300);
 	i = GET_MANA(ch) > limit ?
 	GET_MANA(ch) : 0;
 	step = (300 - (level << 2)) << 1;
@@ -418,7 +418,7 @@ void spell_throw(byte level, struct char_data *ch,
     else {
 	if (saves_spell(victim, SAVING_SPELL)) {
 	    dam = number(level, (GET_HIT(ch) / 5));
-	    send_to_char("You Couldn't concentrate enough\n\r", ch);
+	    send_to_char("You Couldn't concentrate enough\r\n", ch);
 	    GET_HIT(ch) /= 2;
 	}
 	else {
@@ -428,16 +428,16 @@ void spell_throw(byte level, struct char_data *ch,
     }
 
     damage(ch, victim, dam, SPELL_THROW);
-    send_to_char("Light Solar  guooooooooroorooorooorooooaaaaaaaaaaa!\n\r", ch);
+    send_to_char("Light Solar  guooooooooroorooorooorooooaaaaaaaaaaa!\r\n", ch);
 }
 
-/* NOTE: NEW! Is victim is safe from casters room-wide spell like 
+/* NOTE: NEW! Is victim is safe from casters room-wide spell like
 	'earthquake', 'firestorm', 'hand of god'.
-	Char. of same PC/NPC kind, caster's master, mob charmed by caster 
+	Char. of same PC/NPC kind, caster's master, mob charmed by caster
 	is considered safe. It doesn't check victim's room. */
 int safe_from_room_spell( struct char_data *ch, struct char_data *victim,
 			    int spell)
-{ 
+{
     return( ch == victim || IS_NPC(ch) == IS_NPC(victim)
 	|| (victim->master && (victim->master == ch))
 	|| (ch->master && (ch->master == victim)));
@@ -459,8 +459,8 @@ void spell_earthquake(byte level, struct char_data *ch,
 
     dam = dice(level, (level >> 2) + GET_SKILLED(ch, SPELL_EARTHQUAKE));
     /* dam = dam_each[level] + number(level, level << 1); */
-    send_to_char("The earth trembles beneath your feet!\n\r", ch);
-    act("$n makes the earth tremble and shiver\n\rYou fall, and hit yourself!",
+    send_to_char("The earth trembles beneath your feet!\r\n", ch);
+    act("$n makes the earth tremble and shiver\r\nYou fall, and hit yourself!",
 	FALSE, ch, 0, 0, TO_ROOM);
     for (tmp_victim = character_list; tmp_victim; tmp_victim = temp) {
 	temp = tmp_victim->next;
@@ -478,8 +478,8 @@ void spell_earthquake(byte level, struct char_data *ch,
 	    }
 	}
 	else if (world[ch->in_room].zone == world[tmp_victim->in_room].zone)
-	    send_to_char("The earth trembles and shivers.\n\r", tmp_victim);
-    } 
+	    send_to_char("The earth trembles and shivers.\r\n", tmp_victim);
+    }
     /*  WAIT_STATE(ch, PULSE_VIOLENCE); */
 }
 
@@ -496,7 +496,7 @@ void spell_all_heal(byte level, struct char_data *ch,
     /* NOTE: Slow down align change : level/4 -> level/10 */
     GET_ALIGNMENT(ch) += GET_LEVEL(ch) /10;
 
-    send_to_char("You feel some saintness!\n\r", ch);
+    send_to_char("You feel some saintness!\r\n", ch);
     act("$n is glowing with saintly aura!", FALSE, ch, 0, 0, TO_ROOM);
 
     for (tmp_victim = character_list; tmp_victim; tmp_victim = temp) {
@@ -516,9 +516,9 @@ void spell_hand_of_god(byte level, struct char_data *ch,
     INCREASE_SKILLED2(ch, ch, SPELL_HAND_OF_GOD);
 
     dam = dice(level, level + GET_SKILLED(ch, SPELL_HAND_OF_GOD));
-    send_to_char("Thousand hands are filling all your sight.\n\r", ch);
-    act("$n summoned unnumerable hands.\n\r", FALSE, ch, 0, 0, TO_ROOM);
-    act("Your face is slapped by hands. BLOOD ALL OVER!\n\r",
+    send_to_char("Thousand hands are filling all your sight.\r\n", ch);
+    act("$n summoned unnumerable hands.\r\n", FALSE, ch, 0, 0, TO_ROOM);
+    act("Your face is slapped by hands. BLOOD ALL OVER!\r\n",
 	FALSE, ch, 0, 0, TO_ROOM);
     for (tmp_victim = character_list; tmp_victim; tmp_victim = temp) {
 	temp = tmp_victim->next;
@@ -530,7 +530,7 @@ void spell_hand_of_god(byte level, struct char_data *ch,
 	}
 	else if (world[ch->in_room].zone == world[tmp_victim->in_room].zone) {
 	    send_to_char("Dirty hands with long nail is ", tmp_victim);
-	    send_to_char("going and coming all over sky.\n\r", tmp_victim);
+	    send_to_char("going and coming all over sky.\r\n", tmp_victim);
 	}
     }
 }
@@ -544,8 +544,8 @@ void spell_firestorm(byte level, struct char_data *ch,
     INCREASE_SKILLED2(ch, ch, SPELL_FIRESTORM);
 
     dam = dice(level, (level >> 1) + GET_SKILLED(ch, SPELL_FIRESTORM));
-    send_to_char("The fire storm is flowing in the air!\n\r", ch);
-    act("$n makes the fire storm flowing in the air.\n\rYou can't see anything!",
+    send_to_char("The fire storm is flowing in the air!\r\n", ch);
+    act("$n makes the fire storm flowing in the air.\r\nYou can't see anything!",
 	    FALSE, ch, 0, 0, TO_ROOM);
     for (tmp_victim = character_list; tmp_victim; tmp_victim = temp) {
 	temp = tmp_victim->next;
@@ -556,7 +556,7 @@ void spell_firestorm(byte level, struct char_data *ch,
 	    damage(ch, tmp_victim, dam, TYPE_MISC);
 	}
 	else if (world[ch->in_room].zone == world[tmp_victim->in_room].zone)
-	    send_to_char("The fire storm is flowing in the atmosphere.\n\r",
+	    send_to_char("The fire storm is flowing in the atmosphere.\r\n",
 			 tmp_victim);
     }
 }
@@ -589,7 +589,7 @@ void spell_trick(byte level, struct char_data *ch,
 	}
     }
     else
-	send_to_char("Only monster!\n\r", ch);
+	send_to_char("Only monster!\r\n", ch);
 }
 
 void spell_dispel_evil(byte level, struct char_data *ch,
@@ -618,7 +618,7 @@ void spell_dispel_evil(byte level, struct char_data *ch,
     else {
 	act("Hmm....nothing...", FALSE, ch, 0, victim, TO_CHAR);
     }
-} 
+}
 
 /* modified by atre */
 void spell_call_lightning(byte level, struct char_data *ch,
@@ -635,7 +635,7 @@ void spell_call_lightning(byte level, struct char_data *ch,
 
     if (OUTSIDE(ch) && (weather_info.sky >= SKY_RAINING)) {
 	dam = dice(level, level + GET_SKILLED(ch, SPELL_CALL_LIGHTNING));
-	/* 
+	/*
 	   dam = dice(level, level); */
 	dam <<= (weather_info.sky - 1);
 	damage(ch, victim, dam, SPELL_CALL_LIGHTNING);
@@ -686,7 +686,7 @@ void spell_harm(byte level, struct char_data *ch,
 /* ************************************************************************
    *  file: magic3.c , Implementation of spells.             Part of NARAIMUD*
    *  Usage : The actual effect of magic.                                    *
-   ************************************************************************* */ 
+   ************************************************************************* */
 
 /*
    cast 'spell block' victim
@@ -721,7 +721,7 @@ void spell_spell_block(byte level, struct char_data *ch,
 	af.bitvector = AFF_SPELL_BLOCK;
 	affect_to_char(victim, &af);
     }
-    send_to_char("ok\n\r", ch);
+    send_to_char("ok\r\n", ch);
 }
 void spell_reflect_damage(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj)
@@ -780,7 +780,7 @@ void spell_holy_shield(byte level, struct char_data *ch,
 	af.bitvector = AFF_HOLY_SHIELD;
 	affect_to_char(victim, &af);
     }
-    send_to_char("OK!\n\r", ch);
+    send_to_char("OK!\r\n", ch);
 }
 /*
    cast 'mana transfer' victim
@@ -805,14 +805,14 @@ void spell_kiss_of_process(byte level, struct char_data *ch,
     struct char_data *tmp_victim, *temp;
     extern void do_shout(struct char_data *ch, char *str, int cmd);
 
-    assert(ch); 
+    assert(ch);
     do_shout(ch, "HEAL THE WORLD!!!", 0);
     for (tmp_victim = character_list; tmp_victim; tmp_victim = temp) {
 	temp = tmp_victim->next;
 
 	if (!IS_NPC(tmp_victim)) {
 	    GET_HIT(tmp_victim) = tmp_victim->points.max_hit;
-	    send_to_char("Michael Jackson kisses you in your lips.\n\r", tmp_victim);
+	    send_to_char("Michael Jackson kisses you in your lips.\r\n", tmp_victim);
 	    do_say(tmp_victim, "Heal the world!!", 0);
 	}
     }
@@ -891,7 +891,7 @@ void spell_sanctuary_cloud(byte level, struct char_data *ch,
 
     INCREASE_SKILLED2(ch, ch, SPELL_SANCTUARY_CLOUD);
 
-    send_to_char("You feel some saintness!\n\r", ch);
+    send_to_char("You feel some saintness!\r\n", ch);
     act("$n makes a bloody cloud!", FALSE, ch, 0, 0, TO_ROOM);
 
     for (tmp_victim = character_list; tmp_victim; tmp_victim = temp) {

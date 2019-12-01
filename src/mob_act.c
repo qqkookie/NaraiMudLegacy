@@ -9,13 +9,13 @@
 #include <string.h>
 
 #include "char.h"
-#include "object.h" 
+#include "object.h"
 #include "global.h"
 #include "comm.h"
 #include "play.h"
 #include "spells.h"
-#include "actions.h" 
-#include "etc.h" 
+#include "actions.h"
+#include "etc.h"
 
 int thief(struct char_data *ch, int cmd, char *arg);
 int dragon(struct char_data *ch, int cmd, char *arg);
@@ -29,7 +29,7 @@ int cityguard(struct char_data *ch, int cmd, char *arg);
 int superguard(struct char_data *ch, int cmd, char *arg);
 int rescuer(struct char_data *ch, int cmd, char *arg);
 int helper(struct char_data *ch, int cmd, char *arg);
-int finisher(struct char_data *ch, int cmd, char *arg); 
+int finisher(struct char_data *ch, int cmd, char *arg);
 int warrior(struct char_data *ch, int cmd, char *arg);
 
 int scarvenger(struct char_data *ch, int cmd, char *arg);
@@ -46,7 +46,7 @@ int check_stat(struct char_data *ch)
     char buf[80];
 
     /* NOTE: Return zero at any failure to heal */
-    if (GET_LEVEL(ch) < 20 
+    if (GET_LEVEL(ch) < 20
 	|| ((10 * GET_HIT(ch)) > (5 * hit_limit(ch)))  /* check hit < 50% */
 	|| ( number(1, 100) > (GET_WIS(ch)*2 + GET_INT(ch) + GET_LEVEL(ch))))
 /* OLD: || ( number(1, 100) > (GET_WIS(ch) + GET_INT(ch) + GET_LEVEL(ch)))) */
@@ -63,7 +63,7 @@ int check_stat(struct char_data *ch)
     case CLASS_THIEF:
 	sprintf(buf, " 'self heal' %s", GET_NAME(ch));
 	break;
-    } 
+    }
     do_cast(ch, buf, 0);
     return 1;
 }
@@ -75,7 +75,7 @@ void mobile_activity2(void)
     for (ch = character_list; ch ; ch = ch->next) {
 	if (IS_NPC(ch) && GET_CLASS(ch) > 30) {
 	    if (check_stat(ch))
-		continue; 
+		continue;
 	    if (GET_POS(ch) != POS_FIGHTING )
 		continue;
 	    /* fighting */
@@ -96,8 +96,8 @@ void mobile_activity2(void)
 void mobile_activity(void)
 {
     register struct char_data *ch;
-    char buf[100]; 
-    extern int no_specials; 
+    char buf[100];
+    extern int no_specials;
 
     for (ch = character_list; ch; ch = ch->next) {
 	if (!IS_MOB(ch) || ch->nr < 0 ) 	/* NOTE: not !IS_NPC(ch) */
@@ -120,14 +120,14 @@ void mobile_activity(void)
 		(*mob_index[ch->nr].func) (ch, 0, "");
 	    }
 	}
-	if (AWAKE(ch) && !(ch->specials.fighting)) { 
+	if (AWAKE(ch) && !(ch->specials.fighting)) {
 	    /* NOTE: NEW! Separate scarvenger(), sentinel(), aggressive() */
 	    if (IS_SET(ch->specials.act, ACT_SCAVENGER)) {
 		scarvenger(ch, 0, "");
 	    }
 	    if (!IS_SET(ch->specials.act, ACT_SENTINEL)) {
 		sentinel(ch, 0, "");
-	    }	
+	    }
 	    if (IS_SET(ch->specials.act, ACT_AGGRESSIVE)) {
 		aggressive(ch, 0, "");
 	    }
@@ -145,10 +145,10 @@ void mobile_activity(void)
 	case CLASS_WARRIOR:
 	    warrior(ch, 0, ""); break;
 	}
-	/* 
+	/*
 	if(IS_SET(ch->specials.act, ACT_THIEF))
-	    thief(ch,0,""); 
-	if(IS_SET(ch->specials.act, ACT_MAGE)) 
+	    thief(ch,0,"");
+	if(IS_SET(ch->specials.act, ACT_MAGE))
 	    magic_user(ch,0,"");
 	if(IS_SET(ch->specials.act, ACT_CLERIC))
 	cleric(ch,0,"");
@@ -174,7 +174,7 @@ void mobile_activity(void)
 	if (IS_SET(ch->specials.act, ACT_FINISH_BLOW))
 	    finisher(ch, 0, "");
     }			/* for.. */
-} 
+}
 
 /* NOTE: NEW! scarvenger() code separated from mobile_activity() */
 int scarvenger(struct char_data *ch, int cmd, char *arg)
@@ -208,7 +208,7 @@ int sentinel(struct char_data *ch, int cmd, char *arg)
 {
     int door;
 
-    if ( (GET_POS(ch) >= POS_STANDING ) 
+    if ( (GET_POS(ch) >= POS_STANDING )
 	    && ((door = number(0, 45)) <= 5) && CAN_GO(ch, door) &&
 	    !IS_SET(world[EXIT(ch, door)->to_room].room_flags, NO_MOB)) {
 	if (ch->specials.last_direction == door)
@@ -218,10 +218,10 @@ int sentinel(struct char_data *ch, int cmd, char *arg)
 		ch->specials.last_direction = door;
 		do_move(ch, "", ++door);
 	    }
-	    else if (world[EXIT(ch, door)->to_room].zone 
+	    else if (world[EXIT(ch, door)->to_room].zone
 		    == world[ch->in_room].zone) {
 		ch->specials.last_direction = door;
-		do_move(ch, "", ++door); 
+		do_move(ch, "", ++door);
 	    }
 	}
     }
@@ -238,18 +238,18 @@ int aggressive(struct char_data *ch, int cmd, char *arg)
 	 tmp_ch = tmp_ch->next_in_room) {
 	if (IS_NPC(tmp_ch) || !CAN_SEE(ch, tmp_ch) || IS_WIZARD(tmp_ch))
 	    continue;
-	if (IS_SET(ch->specials.act, ACT_WIMPY) && AWAKE(tmp_ch)) 
-	    continue; 
+	if (IS_SET(ch->specials.act, ACT_WIMPY) && AWAKE(tmp_ch))
+	    continue;
 	if (IS_AFFECTED(tmp_ch, AFF_HOLY_SHIELD))
-	    continue; 
+	    continue;
 	/* NOTE: Spread probablilty to be a victim among all PC's in the room */
 	if (number(1, 6) < ( 2 + (++count) ))
 	    continue;
-	/* NOTE: SPELL_PROTECT_EVIL will work for evil player against 
+	/* NOTE: SPELL_PROTECT_EVIL will work for evil player against
 	    good mobile, as well as good player against evil mobile. */
 	if ( IS_AFFECTED(tmp_ch, AFF_PROTECT_EVIL)
 		&& GET_LEVEL(ch) < GET_LEVEL(tmp_ch)
-		&& ((IS_EVIL(ch) && IS_GOOD(tmp_ch)) 
+		&& ((IS_EVIL(ch) && IS_GOOD(tmp_ch))
 		    || (IS_GOOD(ch) && IS_EVIL(tmp_ch)))
 		&& !saves_spell(ch, SAVING_PARA)) {
 	    act("$n tries to attack, but failed miserably.",
@@ -257,7 +257,7 @@ int aggressive(struct char_data *ch, int cmd, char *arg)
 	    continue;
 	}
 	first_attack(ch, tmp_ch);
-	break; 
+	break;
     }	/* for */
     return TRUE;
 }
@@ -280,8 +280,8 @@ void mob_spell_fire_storm(byte level, struct char_data *ch,
     assert((level >= 15) && (level <= 55));
 
     dam = dice(level, 4);
-    send_to_char("The fire storm is flowing in the air!\n\r", ch);
-    act("$n makes the fire storm flowing in the air.\n\rYou can't see anything!\n\r"
+    send_to_char("The fire storm is flowing in the air!\r\n", ch);
+    act("$n makes the fire storm flowing in the air.\r\nYou can't see anything!\r\n"
 	,FALSE, ch, 0, 0, TO_ROOM);
     for (tmp_victim = character_list; tmp_victim; tmp_victim = temp) {
 	temp = tmp_victim->next;
@@ -290,7 +290,7 @@ void mob_spell_fire_storm(byte level, struct char_data *ch,
 	    damage(ch, tmp_victim, dam, SPELL_FIRE_STORM);
 	}
 	else if (world[ch->in_room].zone == world[tmp_victim->in_room].zone)
-	    send_to_char("The fire storm is flowing in the atmosphere.\n\r",
+	    send_to_char("The fire storm is flowing in the atmosphere.\r\n",
 			 tmp_victim);
     }
 }
@@ -343,11 +343,11 @@ void mob_punch_drop(struct char_data *ch, struct char_data *victim)
 	    /* obj is removed form player */
 	    tmp_object = unequip_char(victim, i);
 	    if (CAN_SEE_OBJ(victim, tmp_object)) {
-		sprintf(buffer, "%s is punched out.\n\r", fname(tmp_object->name));
+		sprintf(buffer, "%s is punched out.\r\n", fname(tmp_object->name));
 		send_to_char(buffer, victim);
 	    }
 	    else {
-		send_to_char("Something is punched out.\n\r", victim);
+		send_to_char("Something is punched out.\r\n", victim);
 	    }
 	    act("$n's $p flies in the sky for a while and falls.", 1, victim,
 		tmp_object, 0, TO_ROOM);
@@ -361,11 +361,11 @@ void mob_punch_drop(struct char_data *ch, struct char_data *victim)
 	if (GET_LEVEL(ch) > number(10, 160)) {
 	    /* item nodrop.. but.. can be punched also.. */
 	    if (CAN_SEE_OBJ(victim, tmp_object)) {
-		sprintf(buffer, "%s is punched out.\n\r", fname(tmp_object->name));
+		sprintf(buffer, "%s is punched out.\r\n", fname(tmp_object->name));
 		send_to_char(buffer, victim);
 	    }
 	    else {
-		send_to_char("Something is punched out.\n\r", victim);
+		send_to_char("Something is punched out.\r\n", victim);
 	    }
 	    act("$n's $p flies in the sky for a while and falls.", 1, victim,
 		tmp_object, 0, TO_ROOM);
@@ -407,7 +407,7 @@ struct char_data *choose_victim(struct char_data *mob, int fightmode, int mode)
 	}
     }
 
-    if (count == 0) 
+    if (count == 0)
 	return NULL;
 
     /* now choose min or max.. */
@@ -527,7 +527,7 @@ struct char_data *choose_rescue_mob(struct char_data *mob)
     else
 	return NULL;
 }
-#undef NUMBER_OF_MAX_MOB 
+#undef NUMBER_OF_MAX_MOB
 
 void npc_tornado(struct char_data *ch)
 {
@@ -556,7 +556,7 @@ void npc_steal(struct char_data *ch, struct char_data *victim)
 
 /* NOTE: - Suggestions by Tido.  */
 /*    Sleeping or dying mob or mob who can't see victim (blind, invisible,
-   dark room and no light... ) should not steal victim's gold.  
+   dark room and no light... ) should not steal victim's gold.
    Charmed mob should not steal its master's gold.                      */
 
     /* NOTE: Wrong! assert(!IS_AFFECTED(ch, AFF_CHARM )||(ch->master)); */
@@ -566,7 +566,7 @@ void npc_steal(struct char_data *ch, struct char_data *victim)
 	return;
 
     /* NOTE: Enhence odd of discover pickpocketing. */
-    if (AWAKE(victim) && 
+    if (AWAKE(victim) &&
     	(number(0, GET_LEVEL(ch)+8) <= (GET_LEVEL(victim)/5+1))) {
 	acthan("You discover that $n has $s hands in your wallet.",
 	       "앗! $n님이 당신의 지갑에 손을 넣습니다.",
@@ -608,26 +608,26 @@ void first_attack(struct char_data *ch, struct char_data *victim)
     }
     /* NOTE: If char has Solar flare, quaff it before attack */
     if (get_obj_in_list_vis(ch, "solar flare", ch->carrying))
-	do_quaff(ch, "solar flare", 0 ); 
-	
+	do_quaff(ch, "solar flare", 0 );
+
     if ( number(0, 99) < 33 ) {
 	hit(ch, victim, TYPE_UNDEFINED);
 	return;
     }
     else if ( MAGIC_CLASS(ch)) {
 	/* NOTE: Prefered spell for first attack is
-		'mana boost', 'chill touch', 'energy drain'.   */ 
+		'mana boost', 'chill touch', 'energy drain'.   */
 
-        /* NOTE: Min. level to use 'mana boost' : 15 -> 20. */  
-	if ( GET_LEVEL(ch) > 20 && GET_MOVE(victim) > 100 && 
+        /* NOTE: Min. level to use 'mana boost' : 15 -> 20. */
+	if ( GET_LEVEL(ch) > 20 && GET_MOVE(victim) > 100 &&
 	    number(0,99) < (MAGIC_CLASS(victim) ? 15 : 30 ))
 	    sprintf(sbuf, " 'mana boost' %s", buf);
 	else if ( number(0,99) < (MAGIC_CLASS(victim) ? 15 : 20 ))
 	    sprintf(sbuf, " 'chill touch' %s", buf);
 	/* NOTE: energy drain is perfered for mage char, magic class victim */
-	else if ( GET_LEVEL(ch) > 15 && 
+	else if ( GET_LEVEL(ch) > 15 &&
 	    (((GET_CLASS(ch) == CLASS_MAGIC_USER) ?
-		(MAGIC_CLASS(victim) ? 40 : 20 ) : 10 ) > number(0, 99))) 
+		(MAGIC_CLASS(victim) ? 40 : 20 ) : 10 ) > number(0, 99)))
 	    sprintf(sbuf, " 'energy drain' %s", buf);
 	else
 	    goto ok;
@@ -649,38 +649,38 @@ ok:
 	    sprintf(sbuf, " 'throw' %s", buf);
 	else if (num > 15)
 	    sprintf(sbuf, " 'energy drain' %s", buf);
-	else 
+	else
 	    sprintf(sbuf, " 'lightning bolt' %s", buf);
 	do_cast(ch, sbuf, 0);
 	break;
 
     case CLASS_CLERIC:
-	if (num > 35) 
+	if (num > 35)
 	    sprintf(sbuf, " 'throw' %s", buf);
 	else if (num > 25)
 	    sprintf(sbuf, " 'sunburst' %s", buf);
 	else if (num > 15)
 	    sprintf(sbuf, " 'harm' %s", buf);
-	else 
+	else
 	    sprintf(sbuf, " 'call lightning' %s", buf);
 	do_cast(ch, sbuf, 0);
 	break;
 
-    case CLASS_THIEF: 
+    case CLASS_THIEF:
 	/* NOTE: Chill touch will reduces victim's hit chance */
 	if ( num %5 == 0  && num > 15 ) {
 	    sprintf(sbuf, " 'chill touch' %s", buf);
 	    do_cast(ch, sbuf, 0);
-	} 
+	}
 	else if ( num %2 == 0  && num > 15 )
 	    do_backstab(ch, buf, 0);
 	else if (num > 30)
 	    do_punch(ch, buf, 0);
-	else 
+	else
 	    do_flash(ch, buf, 0);
 	break;
 
-    case CLASS_WARRIOR: 
+    case CLASS_WARRIOR:
 	if (num > 30) {
 	    if (GET_SEX(ch) == SEX_MALE)    /* male */
 		do_shouryuken(ch, buf, 0);
@@ -691,7 +691,7 @@ ok:
 	    do_punch(ch, buf, 0);
 	else if ( ch->equipment[WIELD] )
 	    do_bash(ch, buf, 0);
-	else 
+	else
 	    hit(ch, victim, TYPE_UNDEFINED);
     }
 }
@@ -719,7 +719,7 @@ int warrior(struct char_data *ch, int cmd, char *arg)
 #define PUNCH		25	/* From level 25 */
 #define SHOUR		30 	/* From level 30 */
 
-    /* NOTE: Use 'disarm', too */ 
+    /* NOTE: Use 'disarm', too */
     static u_char do_what_cmd[] = {
 	BASH, KICK, BASH, KICK, KICK, BASH, KICK, BASH, KICK, BASH,
 	DISARM, KICK, BASH, KICK, BASH, BASH, KICK, MULTI, MULTI, MULTI,
@@ -728,19 +728,19 @@ int warrior(struct char_data *ch, int cmd, char *arg)
 	SHOUR, SHOUR, SHOUR, SHOUR, SHOUR, };
 
     if (cmd)
-	return FALSE; 
+	return FALSE;
     if (GET_POS(ch) != POS_FIGHTING)
 	return FALSE;
 
     /* select victim */
     if(!(victim = select_victim(ch)))
-	return FALSE; 
+	return FALSE;
     vicname = GET_NAME(victim);
 
     do {
-	do_what = do_what_cmd[number(GET_LEVEL(ch) / 2, GET_LEVEL(ch))]; 
+	do_what = do_what_cmd[number(GET_LEVEL(ch) / 2, GET_LEVEL(ch))];
 
-    /* NOTE: Retry until mobile can perform that command. */ 
+    /* NOTE: Retry until mobile can perform that command. */
     } while ( (do_what > GET_LEVEL(ch))
 		/* NOTE: || ( do_what == BASH && !ch->equipment[WIELD]) */
 		|| ( do_what == DISARM && !victim->equipment[WIELD]));
@@ -751,14 +751,14 @@ int warrior(struct char_data *ch, int cmd, char *arg)
     case MULTI : 	do_multi_kick( ch, vicname, 0 ); break;
     case PUNCH :	do_punch( ch, vicname, 0 ); break;
     case DISARM :	do_disarm( ch, vicname, 0 ); break;
-    case SHOUR :	
+    case SHOUR :
 	/* NOTE: Select skill according to sexuality */
 	if (GET_SEX(ch) == SEX_MALE )
 	    do_shouryuken( ch, vicname, 0 );
 	else if (GET_SEX(ch) == SEX_FEMALE )
 	    do_spin_bird_kick( ch, vicname, 0 );
 	break;
-	/* ((*cmd_info[do_what_cmd[do_what]].command_pointer) 
+	/* ((*cmd_info[do_what_cmd[do_what]].command_pointer)
 		(ch, GET_NAME(victim), 0)); */
 
     default: return FALSE; break;
@@ -783,7 +783,7 @@ int thief(struct char_data *ch, int cmd, char *arg)
 
 	/* NOTE: More intelligent behavior */
 	do_what = number(1, GET_LEVEL(ch)/2);
-	switch (do_what) { 
+	switch (do_what) {
 	case 17: case 19: case 20:
 	    do_punch(ch, GET_NAME(victim), 0);	/* 30 */
 	    break;
@@ -791,36 +791,36 @@ int thief(struct char_data *ch, int cmd, char *arg)
 	case 13: case 16:
 	    sprintf( buf, "'energy drain' %s",  GET_NAME(victim)); /* 25 */
 	    do_cast( ch, buf, 0);
-	    break; 
+	    break;
 
 	case 10: case 14:
 	    npc_tornado(ch);			/* 20 */
 	    break;
 
-	case 7: case 12: 
+	case 7: case 12:
 	    sprintf( buf, "'chill touch' %s",  GET_NAME(victim)); /* 13 */
 	    do_cast( ch, buf, 0);
 	    break;
 
-	case 1: case 2: case 6: case 9: case 18: case 21: case 22: 
+	case 1: case 2: case 6: case 9: case 18: case 21: case 22:
 	    if ( ch->equipment[WIELD]) {
 		do_backstab(ch, GET_NAME(victim), 0); /* 1 */
 		break;
 	    }
-	    /* FALL THRU */ 
+	    /* FALL THRU */
 	case 3: case 8:
 	    if ( GET_MOVE(ch) * 3 > GET_MAX_MOVE(ch)) {
 		do_flash(ch, GET_NAME(victim), 0);	/* 5 */
 		break;
-	    } 
-	    /* FALL THRU */ 
-	case 4: case 15:  
+	    }
+	    /* FALL THRU */
+	case 4: case 15:
 	    if ( victim->equipment[WIELD] ) {
 		do_disarm(ch, GET_NAME(victim), 0); /* 1 */
 		break;
 	    }
-	    /* FALL THRU */ 
-	case 5: case 11: 
+	    /* FALL THRU */
+	case 5: case 11:
 	    do_light_move(ch, "", 0);
 	    break;
 	default:
@@ -837,7 +837,7 @@ int thief(struct char_data *ch, int cmd, char *arg)
 	    if (PC_MORTAL(cons) &&
 		!HIGHER_LEV(ch, cons)) {
 		do_what = number(1, 6);
-		if ( do_what <= 2 ) { 
+		if ( do_what <= 2 ) {
 		    npc_steal(ch, cons);
 		    return TRUE;
 		}
@@ -847,13 +847,13 @@ int thief(struct char_data *ch, int cmd, char *arg)
 			&& cons->carrying
 			&& GET_ITEM_TYPE(cons->carrying) == ITEM_WEAPON ) {
 
-		    steal = cons->carrying; 
-		    sprintf(buf, " %s %s", steal->name, GET_NAME(cons)); 
-		    do_steal(cons, buf, 0 ); 
+		    steal = cons->carrying;
+		    sprintf(buf, " %s %s", steal->name, GET_NAME(cons));
+		    do_steal(cons, buf, 0 );
 
 		    if ( steal != ch->carrying ) {
 			if( do_what == 5 || ch->equipment[WIELD] )
-			    do_junk(ch, steal->name, 0); 
+			    do_junk(ch, steal->name, 0);
 			else
 			    wear(ch, steal, 12 );  /* wield it */
 		    }
@@ -905,21 +905,21 @@ int cleric(struct char_data *ch, int cmd, char *arg)
     case 20:
 	sprintf(buf, " 'blindness' %s", GET_NAME(victim));
 	break;
-    case 21: case 22: 
+    case 21: case 22:
 	sprintf(buf, " 'call lightning' %s", GET_NAME(victim));
 	break;
     case 23: case 24:
 	sprintf(buf, " 'curse' %s", GET_NAME(victim));
 	break;
-    case 25: case 26: 
+    case 25: case 26:
 	sprintf(buf, " 'poison' %s", GET_NAME(victim));
 	break;
-    case 27: case 28: case 29: 
+    case 27: case 28: case 29:
 	sprintf(buf, " 'fireball' %s", GET_NAME(victim));
 	break;
 	sprintf( buf, "'energy drain' %s",  GET_NAME(victim));
 	break;
-    case 30: 
+    case 30:
 	sprintf(buf, " 'firestorm' %s", GET_NAME(victim));
 	break;
     case 31: case 32:
@@ -928,10 +928,10 @@ int cleric(struct char_data *ch, int cmd, char *arg)
     case 33: case 34: case 35: case 36:
 	sprintf(buf, " 'harm' %s", GET_NAME(victim));
 	break;
-    case 37: 
+    case 37:
 	sprintf(buf, " 'mana boost' %s", GET_NAME(victim));
 	break;
-    case 38: case 39: 
+    case 38: case 39:
 	sprintf(buf, " 'sunburst' %s", GET_NAME(victim));
 	break;
     case 40: case 41: case 42: case 43:
@@ -996,7 +996,7 @@ int magic_user(struct char_data *ch, int cmd, char *arg)
     case 31: case 32: case 33: case 34:
 	sprintf(buf, " 'throw' %s", GET_NAME(victim));
 	break;
-    case 35: case 36: 
+    case 35: case 36:
 	sprintf(buf, " 'cone of ice' %s", GET_NAME(victim));
 	break;
     case 37: case 38:
@@ -1498,7 +1498,7 @@ int rescuer(struct char_data *ch, int cmd, char *arg)
 	if (!tmp_ch)
 	    return FALSE;
 
-	send_to_char("Yaho! To the rescue...\n\r", ch);
+	send_to_char("Yaho! To the rescue...\r\n", ch);
 	act("$n screams 'PROTECT THE INNOCENT!'", FALSE, ch, 0, 0, TO_ROOM);
 	act("You are rescued by $N, you are confused!", FALSE, vict, 0, ch, TO_CHAR);
 	act("$n heroically rescues $N.", FALSE, ch, 0, vict, TO_NOTVICT);
@@ -1620,7 +1620,7 @@ int kickbasher(struct char_data *ch, int cmd, char *arg)
 	sprintf(buf, "%s", GET_NAME(vict));
     if (cmd)
 	return (FALSE);
-    if ((vict = ch->specials.fighting)) { 
+    if ((vict = ch->specials.fighting)) {
 	/* NOTE: Simplified code to decide kick/bash number */
 	for( j = 0; GET_LEVEL(ch) > levels[j] ; j++)
 	    if (number(1, 2) == 1)
@@ -1628,7 +1628,7 @@ int kickbasher(struct char_data *ch, int cmd, char *arg)
 	    else
 		do_bash(ch, buf, 0);
 
-	return (TRUE); 
+	return (TRUE);
     }
     return (FALSE);
 }
@@ -1722,7 +1722,7 @@ int helper(struct char_data *ch, int cmd, char *arg)
 	cast_full_heal(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL, vict, 0);
     }
     return TRUE;
-} 
+}
 
 int cityguard(struct char_data *ch, int cmd, char *arg)
 {
@@ -1748,14 +1748,14 @@ int cityguard(struct char_data *ch, int cmd, char *arg)
 	return (TRUE);
     }
     return (FALSE);
-} 
+}
 
 /* NOTE: NEW! Make newly regened better prepared and combat-ready. */
 void regened_mobile(struct char_data *mob)
 {
     struct obj_data *obj;
 
-    ASSERT( mob->regened == 1 ); 
+    ASSERT( mob->regened == 1 );
     /* NOTE: Give 'Solar Flare' potion to high level aggressive mobile */
     if ( GET_LEVEL(mob) >= 35 && (number(33, 43 ) < GET_LEVEL(mob) )
 	&& IS_ACTPLR(mob, ACT_AGGRESSIVE) && !IS_AFFECTED(mob, AFF_SANCTUARY)) {
@@ -1765,20 +1765,20 @@ void regened_mobile(struct char_data *mob)
 
     /* NOTE: Give 'dagger' to thief mobile for backstab.    */
     /* 	     Give 'sword' to warrior mobile for bash.	    */
-    if ( !MAGIC_CLASS(mob) && !mob->equipment[WIELD] 
+    if ( !MAGIC_CLASS(mob) && !mob->equipment[WIELD]
 	    && (number(10, 30) < GET_LEVEL(mob) ) ) {
 	if ( GET_CLASS(mob) == CLASS_THIEF ) {
 	    obj = read_object(WEAPON_BASIC_THIEF, VIRTUAL); /* 2D4 dagger */
 #ifdef  UNUSED_CODE
-        /* NOTE: Warrior mobile can 'bash' without wielding sword. */ 
-	else 
+        /* NOTE: Warrior mobile can 'bash' without wielding sword. */
+	else
 	    obj = read_object(WEAPON_BASIC_WARRIOR, VIRTUAL);  /* 1D8 sword */
 #endif		/* UNUSED_CODE */
-	
+
 	    if (obj) {
 		obj_to_char( obj, mob );
 		wear(mob, obj, 12);	/* NOTE: 12 == wield it */
-	    } 
+	    }
 	}
     }
 

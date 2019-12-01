@@ -1,6 +1,6 @@
 #15711
 The Tower Gates~
-You are at the entrance to a tall tower.  Lightning flashes 
+You are at the entrance to a tall tower.  Lightning flashes
 periodically and it is raining.  You think it might be a good idea to head back
 to Midgaard.
 ~
@@ -22,55 +22,55 @@ S
 #15712
 The Foyer~
    This is the entrance to the Tower.  The hallway continues to the north,
-leading towards a staircase.  You notice a grim painting on the wall,  and 
+leading towards a staircase.  You notice a grim painting on the wall,  and
 quickly look away.
 ~
 157 4110 0
 D0
-You see a long hallway. 
+You see a long hallway.
 ~
 ~
 0 -1 15713
-D2 
-You see the gate. 
+D2
+You see the gate.
 ~
 ~
 0 -1 15711
 E
 painting~
-This painting depicts the grisly death of a foolish human.  You hope you do 
+This painting depicts the grisly death of a foolish human.  You hope you do
 not share his fate.
 ~
 S
 #15713
 Hallway~
-   This hallway seems to stretch on forever.  You notice a stairway in  
-the distance. 
+   This hallway seems to stretch on forever.  You notice a stairway in
+the distance.
 ~
-157 4106 0 
-D2 
-You see the foyer. 
+157 4106 0
+D2
+You see the foyer.
 ~
 ~
 0 -1 15712
-D0 
-The hall continues. 
+D0
+The hall continues.
 ~
 ~
 0 -1 15714
 S
 #15714
 Hallway~
-   You trudge down the hallway.  You notice doors to the east and west. 
+   You trudge down the hallway.  You notice doors to the east and west.
 ~
-157 4106 0 
+157 4106 0
 D0
-The hall continues. 
+The hall continues.
 ~
 ~
 0 -1 15717
 D1
-You see a door.  You notice a sign. 
+You see a door.  You notice a sign.
 ~
 door~
 1 -1 15715
@@ -80,13 +80,13 @@ The hall continues.
 ~
 0 -1 15713
 D3
-You see an oak door.  There is an inscription on it. 
+You see an oak door.  There is an inscription on it.
 ~
 oak~
 1 -1 15716
-E 
+E
 sign~
-The sign says "NURSERY" in bold letters.     
+The sign says "NURSERY" in bold letters.
 ~
 E
 inscription~
@@ -95,13 +95,13 @@ It says "STORAGE"
 S
 #15715
 Nursery~
-   It looks like a tornado has been through here.  Toys are scattered 
-everywhere, and a small group of dragon hatchlings are fighting over a 
-bone. 
+   It looks like a tornado has been through here.  Toys are scattered
+everywhere, and a small group of dragon hatchlings are fighting over a
+bone.
 ~
 157 4106 1
-D3 
-You see the hallway. 
+D3
+You see the hallway.
 ~
 ~
 1 -1 15714
@@ -113,33 +113,33 @@ door stone~
 S
 #15716
 Storage Room~
-   This room is covered with dust, it looks as if no one has been here in 
+   This room is covered with dust, it looks as if no one has been here in
 ages.
 ~
-157 4106 1 
-D1 
-You see the hallway. 
+157 4106 1
+D1
+You see the hallway.
 ~
 ~
 1 -1 15714
-D5 
-You see nothing special. 
+D5
+You see nothing special.
 ~
 trapdoor~
 1 -1 15718
 E
 dust~
-As you look closely at the dust, you notice the outline of a trapdoor!       
+As you look closely at the dust, you notice the outline of a trapdoor!
 ~
 S
 #15717
 End of the Hallway~
-   You have finally reached the end of the hallway.  A huge staircase leads 
-up.  You see a sign at the base of the staircase. 
+   You have finally reached the end of the hallway.  A huge staircase leads
+up.  You see a sign at the base of the staircase.
 ~
 157 4106 0
-D2 
-The hall continues. 
+D2
+The hall continues.
 ~
 ~
 0 -1 15714
@@ -148,23 +148,23 @@ The second floor.
 ~
 ~
 0 -1 15720
-E 
+E
 sign~
 The sign reads:
-       This area is kind of tough.  You probably shouldn't go up these stairs 
-         alone if you are under 18th level, or at all if you under 14th level.  
+       This area is kind of tough.  You probably shouldn't go up these stairs
+         alone if you are under 18th level, or at all if you under 14th level.
          Have fun!
-                - Wench 
+                - Wench
 ~
 S
 #15718
 Guardian's Room~
-   You climb down the rickety stairs and find yourself face to face with a 
-gargantuan hydra.  How fast can you climb UP stairs? 
+   You climb down the rickety stairs and find yourself face to face with a
+gargantuan hydra.  How fast can you climb UP stairs?
 ~
-157 4106 1 
-D4 
-You see the storage room. 
+157 4106 1
+D4
+You see the storage room.
 ~
 door trap trapdoor~
 1 -1 15716
@@ -176,13 +176,13 @@ grey~
 S
 #15719
 The Treasure Room~
-   You have made it past the hydra into the vault.  You are astounded by 
+   You have made it past the hydra into the vault.  You are astounded by
 the treasure here.  Not only are you now rich, you can probably rest here
 safely.  The west wall seems to have a large door made entirely of ruby.
 ~
-157 4110 1 
-D0 
-You see nothing special. 
+157 4110 1
+D0
+You see nothing special.
 ~
 grey~
 4 15727 15718
@@ -226,7 +226,7 @@ You see the court.
 ~
 0 -1 15723
 D1
-You see a wooden door. 
+You see a wooden door.
 ~
 door wooden~
 1 -1 15722
@@ -234,7 +234,7 @@ S
 #15722
 Hall O' Pleasure~
     You stop dead in your tracks as you enter this ornately decorated room - it
-is populated with the king's harem.  
+is populated with the king's harem.
 ~
 157 4106 1
 D3
@@ -343,7 +343,7 @@ S
 #15729
 Crypt~
     You are in a large room which continues to the west.  You notice many
-coffins here.  Open coffins reveal remains of something other than man.  
+coffins here.  Open coffins reveal remains of something other than man.
 The smell of reptile is very strong here.
 ~
 157 4106 1
@@ -384,7 +384,7 @@ You the cave opening.
 S
 #15732
 The Crypt Ends~
-    You have come to the end of the Crypt.  It seems deserted.  There is a 
+    You have come to the end of the Crypt.  It seems deserted.  There is a
 strange coffin lying against the wall.
 ~
 157 4106 1
@@ -409,12 +409,12 @@ beautiful tapestries depicting a great battle between dragons and men.  The
 dragons appear to be the victors.
 ~
 157 4106 1
-D3  
+D3
 You see the Nursery.
 ~
 door stone~
 1 15728 15715
-D1 
+D1
 The Hall continues.
 ~
 ~
@@ -530,7 +530,7 @@ door great golden~
 E
 sign~
           Congratulations on making it this far!  Watch out, it gets a little
-              nasty here...:)                                               
+              nasty here...:)
                         - Wench
 ~
 S
@@ -593,7 +593,7 @@ A tunnel
 S
 #15744
 Tunnel~
-   The tunnel goes on and on and on.  You feel like you have be walking 
+   The tunnel goes on and on and on.  You feel like you have be walking
 forever.  A branch of the tunnel lies off to the north.  This tunnel
 goes east and west.
 ~
@@ -658,7 +658,7 @@ bridge
 S
 #15747
 The Bridge~
-   You are walking along an old wooden bridge.  Its not that secure.  You 
+   You are walking along an old wooden bridge.  Its not that secure.  You
 might want to hurry along.  To the south, on the other side of the bridge,
 lies a small opening.
 ~
@@ -694,7 +694,7 @@ clearing
 S
 #15749
 Clearing~
-   You stand out in a clearing.  Mountains are all around you.  There is a 
+   You stand out in a clearing.  Mountains are all around you.  There is a
 well in the middle of the clearing.  Lying against the well is a sign.  A
 path leads up the mountain.  The small opening is back to the north.
 ~
@@ -723,7 +723,7 @@ E
 sign~
   The sign reads:
          This is a bottomless pit cleverly disguised as a well.  Peope have
-fallen in and never been heard from again.  Trust me, you dont want to go 
+fallen in and never been heard from again.  Trust me, you dont want to go
 down there.
                       Looney the God of Laughs
 ~
@@ -753,7 +753,7 @@ S
 #15751
 A cave opening~
    You stand before a huge cave opening.  You hearing heavy breathing from
-within the cave.  There are a few skeletons lying about.  The cave lies to 
+within the cave.  There are a few skeletons lying about.  The cave lies to
 the south.  The path is back to the east.
 ~
 157 4098 2
@@ -790,9 +790,9 @@ The top of the mountain~
    You are standing at the top of the mountain.  It feels more like the top of
 the world.  To your north lies a huge platinum door.  You hear very pronounced
 grumbling from behind the doors.  It sounds like something huge and its hungry.
-But if you dont have the key you dont have to worry because you cant get it.  
+But if you dont have the key you dont have to worry because you cant get it.
 If you do have the key I would suggest not going in.  Some believe the Five
-Headed dragon Tiamat was imprisoned here by the gods.  But who believes in 
+Headed dragon Tiamat was imprisoned here by the gods.  But who believes in
 fairy tales.  Well if your scared you can always go down the mountain.
 ~
 157 4098 2

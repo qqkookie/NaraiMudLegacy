@@ -16,7 +16,7 @@ Following topics are available. To see, type "help <topic>".
 	command list, skill list, spell list, shops, social actions,
 	class, magic user, cleric, thief, warrior, savings, inn, god,
 	dice, guild, assassin, outlaw, police, experience, ac,
-	community 
+	community
 #
 "COMMAND LIST"
 
@@ -268,10 +268,10 @@ EXAMPLE :
 
 You can use ' as a shorthand for say.
 
-gtell is abbreviation of group tell. if you gtell <something>, all your 
+gtell is abbreviation of group tell. if you gtell <something>, all your
 group will hear what you told.
 
-Chat is abbreviation of MUD World. if you chat <something>, all player 
+Chat is abbreviation of MUD World. if you chat <something>, all player
 will hear what you told except nochat player.
 you can chat even when you are sleeping, but.. if you want chat, then you
 must get level higher than 15.  Good luck to you.
@@ -383,7 +383,7 @@ See also : LIGHTNING MOVE
 
 >> SKILL : THIEF
 
-Thief can move like lightning during fight with this skill so monsters 
+Thief can move like lightning during fight with this skill so monsters
 can't find who was hitting themselves. This skill make attacker stop fighting
 this skill is useful for thief.
 
@@ -998,7 +998,7 @@ tells you who's logged on to the game, and where they are playing from.
 LEVELS
 
 >> COMMAND
-Lists the levels of your class. 
+Lists the levels of your class.
 #
 BRIEF
 
@@ -1066,7 +1066,7 @@ Things you should know about experience points:
 
   * When you are in group, group's gaining XP is calculated like this.
       mob's exp
-    + (number of "equivalent" level players in same room - 1) * mob's half exp 
+    + (number of "equivalent" level players in same room - 1) * mob's half exp
     --------------------------------------------------------------------------
     = total exp
 
@@ -1081,7 +1081,7 @@ Things you should know about experience points:
     -------------
     = exp gained
 
-    "equivalent" level means difference with highest level is smaller than 5. 
+    "equivalent" level means difference with highest level is smaller than 5.
 
 We encourage killing of other players, but the choice is yours.
 
@@ -1405,7 +1405,7 @@ DURATION     : 7 hours, permanent on objects.
 
 Curse cast on a person that fails the saving para, will reduce the
 hitroll by caster's level / 2, and reduce the saving spell by caster's
-level / 2. 
+level / 2.
 #
 "DETECT EVIL"
 
@@ -1451,7 +1451,7 @@ But you may lose your max hit, max mana, max move points also.
 #
 "ENCHANT ARMOR"
 
->> SPELL : MAGIC USER 
+>> SPELL : MAGIC USER
 
 USAGE        : cast 'enchant armor' <armor>
 ACCUMULATIVE : No
@@ -1611,7 +1611,7 @@ Will remove a curse on carried objects or any persons in the room.
 
 >> SPELL : CLERIC, THIEF
 
-USAGE        : cast 'remove poison' <victim | food | drink> 
+USAGE        : cast 'remove poison' <victim | food | drink>
 ACCUMULATIVE : No
 DURATION     : Instantaneous
 
@@ -1743,7 +1743,7 @@ IDENTIFY
 
 >> SPELL : MAGIC USER, CLERIC, THIEF, WARRIOR
 
-USAGE        : cast 'identify' <self | object> 
+USAGE        : cast 'identify' <self | object>
 ACCUMULATIVE : -
 DURATION     : Instantaneous
 
@@ -1781,7 +1781,7 @@ ACCUMULATIVE : -
 DURATION     : Instantaneous
 
 Will transport you to the player or monster in same zone. You can't always
-success to relocate. 
+success to relocate.
 #
 "CHARM PERSON"
 
@@ -1820,7 +1820,7 @@ USAGE        : cast 'improved haste' <victim>
 ACCUMULATIVE : No
 DURATION     : 3 hours
 
-If you are affected by improved haste, you will get three chances to 
+If you are affected by improved haste, you will get three chances to
 hit your enemy.
 
 See also : HASTE
@@ -2192,7 +2192,7 @@ This spell crushes victim's armor magically.
 USAGE        : cast 'mana boost' <victim>
 ACCUMULATIVE : -
 DURATION     : Instantaneous
- 
+
 Using victim's move, restore victim's mana points.
 #
 "VITALIZE"

@@ -21,20 +21,24 @@ struct obj_flag_data {
 
 /* For 'type_flag' */
 /* NOTE: REMOVED rarely used ITEMTYPE */
+// NOTE: Revive ITEM_MISSILE, ITEM_BOAT
+// Add ITEM_WINGS, Remove ITEM_TRASH to ITEM_OTHER
 #define ITEM_LIGHT		1
 #define ITEM_SCROLL		2
 #define ITEM_WAND		3
 #define ITEM_STAFF		4
 #define ITEM_WEAPON		5
 #define ITEM_FIREWEAPON 	6
-/* NOTE: #define ITEM_MISSILE		7 */
+// NOTE: it was ITEM_MISSILE
+#define ITEM_PROJECTILE		7
 #define ITEM_TREASURE		8
 #define ITEM_ARMOR		9
 #define ITEM_POTION		10
 #define ITEM_WORN		11
 #define ITEM_OTHER		12
-#define ITEM_TRASH		13
-/* NOTE: #define ITEM_TRAP		14 */
+// NOTE: ITEM_TRASH, ITEM_TRAP, ITEM_PEN, ITEM_CIGA/DRUG MOVED TO ITEM_OTHER
+// #define ITEM_TRASH		13
+// #define ITEM_TRAP		14 */
 #define ITEM_CONTAINER 		15
 #define ITEM_NOTE		16
 #define ITEM_DRINKCON		17
@@ -42,13 +46,14 @@ struct obj_flag_data {
 #define ITEM_FOOD		19
 #define ITEM_MONEY		20
 /* NOTE: #define ITEM_PEN		21 */
-/* NOTE: #define ITEM_BOAT		22 */
+#define ITEM_BOAT		22
+#define ITEM_WINGS		23
 /* NOTE: #define ITEM_CIGA		23 */
 /* NOTE: #define ITEM_DRUG		24 */
 
-/* NOTE: sub item type (obj->value[0]) of ITEM_OTHER */
-#define ITEMSUB_BOAT 		7
-#define ITEMSUB_WING 		8
+// NOTE: sub item type (obj->value[0]): No longer used
+// #define ITEMSUB_BOAT 		7
+// #define ITEMSUB_WING 		8
 
 /* Bitvector For 'wear_flags' */
 
@@ -164,9 +169,9 @@ struct obj_data {
 
     struct obj_data *next_content;	/* For 'contains' lists		    */
     struct obj_data *next;		/* For the object list		    */
-}; 
+};
 
-/* ---------------------------------------------------------------- */ 
+/* ---------------------------------------------------------------- */
 /* Object And Carry related macros */
 
 #define X98(sub, obj)  \
@@ -190,13 +195,18 @@ struct obj_data {
 /* NOTE: OLD IS_CARRYING_W() is renamed as GET_CARRYING_W()  */
 #define GET_CARRYING_W(ch) ((ch)->specials.carry_weight)
 
-/* NOTE: OLD IS_CARRYING_N() is renamed as GET_CARRYING_N()  */ 
+/* NOTE: OLD IS_CARRYING_N() is renamed as GET_CARRYING_N()  */
 #define GET_CARRYING_N(ch) ((ch)->specials.carry_items)
 
 #define IS_OBJ_STAT(obj,stat) (IS_SET((obj)->obj_flags.extra_flags,stat))
 
 /* NOTE: NEW! macro to get VIRUAL number of the object */
 #define GET_OBJ_VIRTUAL(obj) (obj_index[(obj)->item_number].virtual)
+
+#define OBJ_VALUE0(obj) ((obj)->obj_flags.value[0])
+#define OBJ_VALUE1(obj) ((obj)->obj_flags.value[1])
+#define OBJ_VALUE2(obj) ((obj)->obj_flags.value[2])
+#define OBJ_VALUE3(obj) ((obj)->obj_flags.value[3])
 
 #ifdef UNUSED_CODE
 /* NOTE: Remove hardly used macro */
@@ -207,7 +217,7 @@ struct obj_data {
 #define CAN_GET_OBJ(ch, obj)   \
    (CAN_WEAR((obj), ITEM_TAKE) && CAN_CARRY_OBJ((ch),(obj)) &&  \
     CAN_SEE_OBJ((ch),(obj)))
-#endif 		/* UNUSED_CODE */ 
+#endif 		/* UNUSED_CODE */
 
 /* ========================= Structure for room ========================== */
 /*  NOTE: Room exit direction	info 				*/
@@ -247,7 +257,7 @@ struct room_data {
 
     struct obj_data *contents;	/* List of items in room	*/
     struct char_data *people;	/* List of NPC / PC in room	*/
-}; 
+};
 
 /* ======================================================================= */
 
@@ -272,7 +282,7 @@ struct room_data {
 #define NORELOCATE		4096
 #define EVERYZONE		8192	/* tar char to all zone */
 // #define JAIL			16384	/* added by process */ /* NOTE: Removed */
-#define ROOM_NOTRACK		16384	/* NOTE: Track won't go through    */ 
+#define ROOM_NOTRACK		16384	/* NOTE: Track won't go through    */
 #define RESTROOM		32768	/* added by process */
 
 /* NOTE: Additional room_flags bits for "house.c"  */
@@ -317,12 +327,12 @@ struct room_data {
 #define CAN_GO(ch, door) (EXIT(ch,door) && (EXIT(ch,door)->to_room != NOWHERE)\
                           && !IS_SET(EXIT(ch, door)->exit_info, EX_CLOSED))
 
-/* NOTE: from "house.c" */ 
+/* NOTE: from "house.c" */
 #define ROOM_FLAGS(rn)		(world[(rn)].room_flags)
 #define ROOM_FLAGGED(loc, flag) (IS_SET(ROOM_FLAGS(loc), (flag)))
 
 #define TOROOM(room, dir) (world[room].dir_option[dir] ? \
-			    world[room].dir_option[dir]->to_room : NOWHERE) 
+			    world[room].dir_option[dir]->to_room : NOWHERE)
 
 #define	NUM_OF_DIRS		6
 

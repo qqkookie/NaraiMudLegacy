@@ -10,7 +10,7 @@ INDEX_OOB = 999999
 --{ zona_name, zone_base, zone_renum_base, renum_span }
 Zone_renum_tab = {}
 
--- { zone_name, renum_zonenum, zone_file, world_file, 
+-- { zone_name, renum_zonenum, zone_file, world_file,
 --    zone_base, zone_top, renum_base, renum_top}
 Zone_index = {}
 
@@ -117,8 +117,8 @@ function load_zone_index()
         span =  Zone_renum_tab[iz][4]
 
         -- if renum_base (Zone_renum_tab[3]) is not set, use zone top from the the .zon file
-        -- if span (Zone_renum_tab[4]) is not set or zero, dont create renumed world file.  
-        
+        -- if span (Zone_renum_tab[4]) is not set or zero, dont create renumed world file.
+
         renum_ztop = span and span > 0 and (renum_base + span-1) or nil
         -- { zone_name, renum_zonenum, zone_file, world_file,
         --    zone_base, zone_top, renum_base, renum_top }
@@ -327,7 +327,7 @@ function check_world(wf)
             rnr = entry_idnum(room)
             rmin = math.min(rmin, rnr)
             rmax = math.max(rmax, rnr)
-            
+
             -- #3500~3503 is special case
             if rnr < 3500 and rnr > 3510 then
               assert(not out_of_zone(rnr), 'out of zone room number')
@@ -335,13 +335,13 @@ function check_world(wf)
 
             room[RENUMINDEX] = renum_room(rnr)
             room_id = entry_id(room)
-            
+
 
             for ix, ex in ipairs(room[7]) do
                 local exdata = ex[2]
                 table.insert( Exit_index, room_id .. ' ' .. zone_number() .. ' '.. exdata )
                 local flag, key, to_room = exdata:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
-                
+
                 print_check_entry(key, 'KEY', room_id)
                 print_check_entry(to_room, 'EXIT', room_id, -1)  -- dont check oo zone exit
             end
@@ -388,11 +388,11 @@ function renum_world()
         renum_writeln(renum_zinfo)
 
         for ix, ex in ipairs(room[7]) do
-            
+
             renum_write (ex[1])
             local exdata = ex[2]
             local flag, key, to_room = exdata:match('(%d+)%s+(%-?%d+)%s+(%-?%d+)')
-                            
+
             exdata = string.format('%s %d %d', flag, renum_obj(key), renum_room(to_room))
             renum_writeln (exdata)
         end
@@ -498,12 +498,12 @@ function check_zone(zoneinfo)
 
     local zf, zname, ztop, zinfo, zheader, zdata
     local renum_data, renum_zname, renum_zfile, filename
-    
+
     zf = zoneinfo[3]
 
     renum_info = Zone_renum_tab[zone_number()]
     filename = renum_info[5]
-    
+
     if G_renum and plusok(renum_info[4]) and filename then
 
         if strok(filename) then
@@ -513,10 +513,10 @@ function check_zone(zoneinfo)
         else
           zoneinfo[4] = 'world/' .. zoneinfo[3]:match('zone/(.+).zon') .. '.wld'
         end
-        
+
         renum_zname = renum_info[6]
     end
-      
+
     kz_openfile(zf, renum_zfile or zf)
 
     zname = getzstring()
@@ -536,7 +536,7 @@ function check_zone(zoneinfo)
     end
     G_last_ztop = ztop
     assert ( zname == zone_name(), 'zone name mismatch 2')
-    
+
     if G_renum then
         ztop = (Zone_index[zone_number()][8])
           or (ztop + renum_zone_offset(zone_number()))
@@ -622,7 +622,7 @@ function check_zone(zoneinfo)
         if com then
           ln = COMCHAR .. ln
         end
-        
+
         zdata = zdata .. ln .. '\n'
     ::continue::
     end

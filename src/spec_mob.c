@@ -63,13 +63,13 @@ int perhaps(struct char_data *ch, int cmd, char *arg)
 	    "%s님에게 신의 은총이 내리기를..." ,
     };
     while(*arg==' ') arg++;
-    if (cmd == CMD_BOW && strcasecmp(arg, MID_HELPER)==0 	// bow narai 
-	    && strcasecmp(GET_NAME(ch), MID_HELPER) != 0) { 
-	cast_sanctuary(GET_LEVEL(perhaps), perhaps, NULL, 
+    if (cmd == CMD_BOW && strcasecmp(arg, MID_HELPER)==0 	// bow narai
+	    && strcasecmp(GET_NAME(ch), MID_HELPER) != 0) {
+	cast_sanctuary(GET_LEVEL(perhaps), perhaps, NULL,
 	    SPELL_TYPE_SPELL, ch, NULL);
-	cast_haste(GET_LEVEL(perhaps), perhaps, NULL, 
+	cast_haste(GET_LEVEL(perhaps), perhaps, NULL,
 	    SPELL_TYPE_SPELL, ch, NULL);
-	
+
 	char *msg =  blessings[number(0,2)];
 	sprintf(buf, msg , GET_NAME(ch));
 	do_say(perhaps, buf, 0);
@@ -146,7 +146,7 @@ int mayor(struct char_data *ch, int cmd, char *arg)
     void do_open(struct char_data *ch, char *argument, int cmd);
     void do_lock(struct char_data *ch, char *argument, int cmd);
     void do_unlock(struct char_data *ch, char *argument, int cmd);
-    void do_close(struct char_data *ch, char *argument, int cmd); 
+    void do_close(struct char_data *ch, char *argument, int cmd);
 
     if (!move) {
 	if (time_info.hours == 6) {
@@ -273,7 +273,7 @@ int Quest_bombard(struct char_data *ch, int cmd, char *arg)
 	    maxnum++;
     }
     if (maxnum >= 7) {
-	while ((list = ch->carrying)) 
+	while ((list = ch->carrying))
 	    extract_obj(list);
 	if ((newnum = real_object(newnum)) >= 0) {
 	    list = read_object(newnum, REAL);
@@ -302,7 +302,7 @@ int Quest_bombard(struct char_data *ch, int cmd, char *arg)
     if ( ch->in_room != vict->in_room)
 	return(FALSE);
     switch(number(1,11)) {
-    case 1: 
+    case 1:
 	if ( GET_LEVEL(ch) < 40) {
 	    act("$n	get experience .", 1, ch, 0, 0, TO_ROOM);
 	    act("$n	LEVEL UP !.", 1, ch, 0, 0, TO_ROOM);
@@ -315,21 +315,21 @@ int Quest_bombard(struct char_data *ch, int cmd, char *arg)
 	dam = GET_HIT(vict)/3 - number(1, GET_HIT(vict)/8 + GET_LEVEL(vict)/2);
 	/* NOTE: Use damage() of BOMBARD type */
 	damage(ch, vict, dam, WEAPON_BOMBARD);
-	send_to_char("당신은 꽈당 넘어집니다.\n\r", vict);
-	send_to_char("크으으아아아아 . .  .  . \n\r", vict);
-	break; 
+	send_to_char("당신은 꽈당 넘어집니다.\r\n", vict);
+	send_to_char("크으으아아아아 . .  .  . \r\n", vict);
+	break;
     case 4:
 	act("$n utters the words 'frost'.", 1, ch, 0, 0, TO_ROOM);
 	spell_cone_of_ice(GET_LEVEL(ch), ch, vict, 0);
-	break; 
+	break;
     case 5:
 	act("$n utters the words 'sunburst'.", 1, ch, 0, 0, TO_ROOM);
 	spell_sunburst(GET_LEVEL(ch), ch, vict, 0);
-	break; 
+	break;
     case 6:
 	act("$n utters the words 'fireball'.", 1, ch, 0, 0, TO_ROOM);
 	spell_fireball(GET_LEVEL(ch), ch, vict, 0);
-	break; 
+	break;
     case 7:
 	do_bash(ch, GET_NAME(vict), 0);
 	break;
@@ -357,7 +357,7 @@ int mud_message(struct char_data *ch, int cmd, char *arg)
     if (vict && !IS_NPC(vict) && (vict->in_room == ch->in_room)) {
 	act("$n annihilate you with his full power.", 1, ch, 0, 0, TO_ROOM);
 	/* NOTE: Damage type changed to check victim's location.
-		TYPE_UNDEFINED -> TYPE_HIT   */ 
+		TYPE_UNDEFINED -> TYPE_HIT   */
 	if (vict->points.hit >= 500 && vict->points.hit < 1000)
 	    damage(ch, vict, dice(20, GET_LEVEL(ch)), TYPE_HIT);
 	else if (vict->points.hit >= 1000 && vict->points.hit < 2000)
@@ -554,15 +554,15 @@ int musashi(struct char_data *ch, int cmd, char *arg)
     if (cmd)
 	return (0);
 
-    if( GET_HIT(ch) < GET_MAX_HIT(ch)/2) 
-	cast_full_heal(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL,  ch, 0); 
+    if( GET_HIT(ch) < GET_MAX_HIT(ch)/2)
+	cast_full_heal(GET_LEVEL(ch), ch, "", SPELL_TYPE_SPELL,  ch, 0);
     else if (! ch->specials.fighting ) {
 	/* cyb  vict=world[ch->in_room].people; */
 	vict = choose_victim(ch, VIC_ALL, MODE_HIGH_LEVEL);
 
 	/* high level victim is already selected */
 	if (vict && number(0, LEVEL_LIMIT - GET_LEVEL(vict)) < 4) {
-	    send_to_char("I CHALLENGE YOU.\n\r", vict);
+	    send_to_char("I CHALLENGE YOU.\r\n", vict);
 	    hit(ch, vict, TYPE_UNDEFINED);
 	    return (TRUE);
 	}
@@ -582,7 +582,7 @@ int musashi(struct char_data *ch, int cmd, char *arg)
 	}
     }
 
-    vict = ch->specials.fighting; 
+    vict = ch->specials.fighting;
     if (!vict || ch->in_room != vict->in_room)
 	return (FALSE);
     switch (number(0, 25)) {
@@ -605,7 +605,7 @@ int musashi(struct char_data *ch, int cmd, char *arg)
     case 7:
 	do_say(ch, "A cha cha cha cha ..", 0);
 	act("$n tornado fire with miracle speed .", 1, ch, 0, 0, TO_ROOM);
-	for (i = 0; ch->specials.fighting && i < number(5, 8); i++) 
+	for (i = 0; ch->specials.fighting && i < number(5, 8); i++)
 	    spell_sunburst(GET_LEVEL(ch), ch, ch->specials.fighting, 0);
 	return(1);
     case 8:
@@ -622,7 +622,7 @@ int musashi(struct char_data *ch, int cmd, char *arg)
     case 10:
 	do_say(ch, "Heau Heau Heau Heau Heau..", 0);
 	act("$n use hundreds bash .", 1, ch, 0, 0, TO_ROOM);
-	for (i = 0; i < number(3, 6); i++) 
+	for (i = 0; i < number(3, 6); i++)
 	    do_bash(ch, GET_NAME(vict), 0 );
 	WAIT_STATE(vict, i * PULSE_VIOLENCE/2);
 	break;
@@ -647,9 +647,9 @@ int musashi(struct char_data *ch, int cmd, char *arg)
 	if (!affected_by_spell(vict, SPELL_CRUSH_ARMOR)) {
 	    do_say(ch, "Crush Armor    ..", 0);
 	    spell_crush_armor(GET_LEVEL(ch)+10, ch, vict, 0 );
-	    send_to_char("You feel shrink.\n\r", vict);
+	    send_to_char("You feel shrink.\r\n", vict);
 	}
-	else 
+	else
 	    spell_chill_touch(GET_LEVEL(ch), ch, vict, 0 );
 	break;
     case 16:
@@ -664,13 +664,13 @@ int musashi(struct char_data *ch, int cmd, char *arg)
 	dam =  vict->points.hit / 3
 		- number(1, vict->points.hit / 8 + GET_LEVEL(vict) / 2);
 	damage(ch, vict, dam , TYPE_HIT);
-	send_to_char("You are falling down.\n\r", vict);
-	send_to_char("Quuu aaaa rrrrrrrr . .  .  . \n\r", vict);
+	send_to_char("You are falling down.\r\n", vict);
+	send_to_char("Quuu aaaa rrrrrrrr . .  .  . \r\n", vict);
 	break;
     default:
-	return (FALSE); 
+	return (FALSE);
     }
-    return (TRUE); 
+    return (TRUE);
 }
 
 int super_musashi(struct char_data *ch, int cmd, char *arg)
@@ -791,7 +791,7 @@ int super_musashi(struct char_data *ch, int cmd, char *arg)
 		break;
 	    if (!affected_by_spell(vict, SPELL_CRUSH_ARMOR)) {
 		do_say(ch, "Crush Armor    ..", 0);
-		send_to_char("You feel shrink.\n\r", vict);
+		send_to_char("You feel shrink.\r\n", vict);
 
 		af.type = SPELL_CRUSH_ARMOR;
 		af.duration = 20;
@@ -814,8 +814,8 @@ int super_musashi(struct char_data *ch, int cmd, char *arg)
 	    do_say(ch, "Shou Ryu Ken..", 0);
 	    damage(ch, vict, GET_HIT(vict) / 3 - number(1, GET_HIT(vict) / 15
 					+ GET_LEVEL(vict) / 2), SKILL_BASH);
-	    send_to_char("You are falling down.\n\r", vict);
-	    send_to_char("Quuu aaaa rrrrrrrr . .  .  . \n\r", vict);
+	    send_to_char("You are falling down.\r\n", vict);
+	    send_to_char("Quuu aaaa rrrrrrrr . .  .  . \r\n", vict);
 	    return (1);
 	}
 	return (1);
@@ -825,7 +825,7 @@ int super_musashi(struct char_data *ch, int cmd, char *arg)
 
     /* high level victim is already selected */
     if (vict && number(0, LEVEL_LIMIT - GET_LEVEL(vict)) < 4) {
-	send_to_char("I CHALLENGE YOU.\n\r", vict);
+	send_to_char("I CHALLENGE YOU.\r\n", vict);
 	hit(ch, vict, TYPE_UNDEFINED);
 	return (1);
     }
@@ -843,7 +843,7 @@ int mom(struct char_data *ch, int cmd, char *arg)
     vict = ch->specials.fighting;
     if (vict) {
 	if ((GET_MOVE(vict) > 50)) {	/* cyb : reduce move point  */
-	    send_to_char("으라차아  !\n\r", vict);
+	    send_to_char("으라차아  !\r\n", vict);
 	    GET_MOVE(vict) -= dice(10, 10);
 	}
 	h = GET_HIT(ch);
@@ -921,7 +921,7 @@ int singer(struct char_data *ch, int cmd, char *arg)
 }
 
 int fido(struct char_data *ch, int cmd, char *arg)
-{ 
+{
     struct obj_data *i, *temp, *next_obj;
 
     if (cmd || !AWAKE(ch))
@@ -964,7 +964,7 @@ int janitor(struct char_data *ch, int cmd, char *arg)
 }
 
 int snake(struct char_data *ch, int cmd, char *arg)
-{ 
+{
     if (cmd)
 	return FALSE;
     if (GET_POS(ch) != POS_FIGHTING)

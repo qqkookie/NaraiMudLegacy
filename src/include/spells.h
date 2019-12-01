@@ -141,18 +141,18 @@
 #define MAXSPELL 		150
 
 /* NOTE: #define MAX_SPL_LIST	200 : to accomodate TYPE_SUFFERING */
-#define MAX_SPL_LIST		210 
+#define MAX_SPL_LIST		210
 
 /* NOTE: Damage type order rearrangement */
 #define TYPE_HIT		    150
 #define TYPE_SLASH		    151
 #define TYPE_PIERCE		    152
 #define TYPE_BLUDGEON		    153
-#define TYPE_CRUSH		    154	/* NO MESSAGES WRITTEN YET! */ 
+#define TYPE_CRUSH		    154	/* NO MESSAGES WRITTEN YET! */
 #define TYPE_WHIP		    155	/* EXAMPLE */
 #define TYPE_BITE		    156	/* NO MESSAGES WRITTEN YET! */
 #define TYPE_STING		    157	/* NO MESSAGES WRITTEN YET! */
-#define TYPE_SHOOT		    158	/* NO MESSAGES  */ 
+#define TYPE_SHOOT		    158	/* NO MESSAGES  */
 
 /* #define WEAPON_*		    (170-179) */
 /****************************************************************/
@@ -171,12 +171,12 @@
 #define WEAPON_ANTI_GOOD_WEAPON 	178
 #define WEAPON_ANTI_ALIGN	 	179
 
-/* NOTE: NO MESSAGES (will replace TYPE_UNDEFINED in damage().)  */ 
-#define TYPE_MISC		    191	/* NO MESSAGES  */ 
-#define TYPE_NOATTACK		    199	/* NO MESSAGES  */ 
-#define TYPE_SUFFERING              200 
+/* NOTE: NO MESSAGES (will replace TYPE_UNDEFINED in damage().)  */
+#define TYPE_MISC		    191	/* NO MESSAGES  */
+#define TYPE_NOATTACK		    199	/* NO MESSAGES  */
+#define TYPE_SUFFERING              200
 
-/* More anything but spells and weapontypes can be inserted here! */ 
+/* More anything but spells and weapontypes can be inserted here! */
 
 /* #define MAX_TYPES		70 */
 
@@ -225,7 +225,7 @@ void cast_curse(byte level, struct char_data *ch, char *arg, int si,
 		struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_detect_align(byte level, struct char_data *ch, char *arg, int si,
 		      struct char_data *tar_ch, struct obj_data *tar_obj);
-void cast_detect_invisible(byte level, struct char_data *ch, char *arg, 
+void cast_detect_invisible(byte level, struct char_data *ch, char *arg,
 		int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_recharger(byte level, struct char_data *ch, char *arg, int si,
 		    struct char_data *tar_ch, struct obj_data *tar_obj);
@@ -276,13 +276,13 @@ void cast_word_of_recall(byte level, struct char_data *ch, char *arg, int si,
 void cast_remove_poison(byte level, struct char_data *ch, char *arg, int si,
 			struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_sense_life(byte level, struct char_data *ch, char *arg, int si,
-		     struct char_data *tar_ch, struct obj_data *tar_obj); 
+		     struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_sunburst(byte level, struct char_data *ch, char *arg, int si,
-		   struct char_data *tar_ch, struct obj_data *tar_obj); 
+		   struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_clone(byte level, struct char_data *ch, char *arg, int si,
-		struct char_data *tar_ch, struct obj_data *tar_obj); 
+		struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_damage_up(byte level, struct char_data *ch, char *arg, int si,
-		    struct char_data *tar_ch, struct obj_data *tar_obj); 
+		    struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_energyflow(byte level, struct char_data *ch, char *arg, int si,
 		     struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_mana_boost(byte level, struct char_data *ch, char *arg, int si,
@@ -324,13 +324,13 @@ void cast_create_nectar(byte level, struct char_data *ch, char *arg, int si,
 void cast_create_golden_nectar(byte level, struct char_data *ch, char *arg,
 		int si, struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_cone_of_ice(byte level, struct char_data *ch, char *arg, int si,
-		      struct char_data *tar_ch, struct obj_data *tar_obj); 
+		      struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_disintegrate(byte level, struct char_data *ch, char *arg, int si,
 		       struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_phase(byte level, struct char_data *ch, char *arg, int si,
 		struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_mirror_image(byte level, struct char_data *ch, char *arg, int si,
-		       struct char_data *tar_ch, struct obj_data *tar_obj); 
+		       struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_hand_of_god(byte level, struct char_data *ch, char *arg, int si,
 		      struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_cause_critic(byte level, struct char_data *ch, char *arg, int si,
@@ -343,17 +343,17 @@ void cast_love(byte level, struct char_data *ch, char *arg, int si,
 	       struct char_data *tar_ch, struct obj_data *tar_obj);
 		/* LOVE spell perhaps written */
 void cast_reraise(byte level, struct char_data *ch, char *arg, int si,
-		  struct char_data *tar_ch, struct obj_data *tar_obj); 
-		/* reraise spell chase written */ 
+		  struct char_data *tar_ch, struct obj_data *tar_obj);
+		/* reraise spell chase written */
 void cast_death(byte level, struct char_data *ch, char *arg, int si,
 		struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_enchant_person(byte level, struct char_data *ch, char *arg, int si,
-			 struct char_data *tar_ch, struct obj_data *tar_obj); 
+			 struct char_data *tar_ch, struct obj_data *tar_obj);
 void cast_spell_block(byte level, struct char_data *ch, char *arg, int si,
 		      struct char_data *tar_ch, struct obj_data *tar_obj);
 
 /*  void cast_shadow_figure(byte level, struct char_data *ch, char *arg, int si,
-		    struct char_data *tar_ch, struct obj_data *tar_obj); */ 
+		    struct char_data *tar_ch, struct obj_data *tar_obj); */
 
 void cast_mana_transfer(byte level, struct char_data *ch, char *arg, int si,
 			struct char_data *tar_ch, struct obj_data *tar_obj);
@@ -390,11 +390,11 @@ void spell_blindness(byte level, struct char_data *ch,
 void spell_burning_hands(byte level, struct char_data *ch,
 			 struct char_data *victim, struct obj_data *obj);
 void spell_call_lightning(byte level, struct char_data *ch,
-			  struct char_data *victim, struct obj_data *obj); 
+			  struct char_data *victim, struct obj_data *obj);
 void spell_charm_person(byte level, struct char_data *ch,
 			struct char_data *victim, struct obj_data *obj);
 void spell_chill_touch(byte level, struct char_data *ch,
-		       struct char_data *victim, struct obj_data *obj); 
+		       struct char_data *victim, struct obj_data *obj);
 void spell_reanimate(byte level, struct char_data *ch,
 		     struct char_data *victim, struct obj_data *obj);
 void spell_color_spray(byte level, struct char_data *ch,
@@ -418,13 +418,13 @@ void spell_detect_align(byte level, struct char_data *ch,
 void spell_detect_invisible(byte level, struct char_data *ch,
 			    struct char_data *victim, struct obj_data *obj);
 void spell_recharger(byte level, struct char_data *ch,
-		     struct char_data *victim, struct obj_data *obj); 
+		     struct char_data *victim, struct obj_data *obj);
 void spell_preach(byte level, struct char_data *ch,
 		  struct char_data *victim, struct obj_data *obj);
 void spell_dispel_evil(byte level, struct char_data *ch,
 		       struct char_data *victim, struct obj_data *obj);
 void spell_earthquake(byte level, struct char_data *ch,
-		      struct char_data *victim, struct obj_data *obj); 
+		      struct char_data *victim, struct obj_data *obj);
 void spell_enchant_weapon(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj);
 void spell_energy_drain(byte level, struct char_data *ch,
@@ -440,7 +440,7 @@ void spell_invisible(byte level, struct char_data *ch,
 void spell_lightning_bolt(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj);
 void spell_locate_object(byte level, struct char_data *ch,
-			 struct char_data *victim, struct obj_data *obj); 
+			 struct char_data *victim, struct obj_data *obj);
 void spell_magic_missile(byte level, struct char_data *ch,
 			 struct char_data *victim, struct obj_data *obj);
 void spell_poison(byte level, struct char_data *ch,
@@ -452,7 +452,7 @@ void spell_remove_curse(byte level, struct char_data *ch,
 void spell_sanctuary(byte level, struct char_data *ch,
 		     struct char_data *victim, struct obj_data *obj);
 void spell_shocking_grasp(byte level, struct char_data *ch,
-			  struct char_data *victim, struct obj_data *obj); 
+			  struct char_data *victim, struct obj_data *obj);
 void spell_sleep(byte level, struct char_data *ch,
 		 struct char_data *victim, struct obj_data *obj);
 void spell_strength(byte level, struct char_data *ch,
@@ -460,7 +460,7 @@ void spell_strength(byte level, struct char_data *ch,
 void spell_summon(byte level, struct char_data *ch,
 		  struct char_data *victim, struct obj_data *obj);
 void spell_ventriloquate(byte level, struct char_data *ch,
-			 struct char_data *victim, struct obj_data *obj); 
+			 struct char_data *victim, struct obj_data *obj);
 void spell_word_of_recall(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj);
 void spell_remove_poison(byte level, struct char_data *ch,
@@ -516,7 +516,7 @@ void spell_enchant_armor(byte level, struct char_data *ch,
 void spell_pray_for_armor(byte level, struct char_data *ch,
 			  struct char_data *victim, struct obj_data *obj);
 void spell_infravision(byte level, struct char_data *ch,
-		       struct char_data *victim, struct obj_data *obj); 
+		       struct char_data *victim, struct obj_data *obj);
 void spell_create_nectar(byte level, struct char_data *ch,
 			 struct char_data *victim, struct obj_data *obj);
 void spell_create_golden_nectar(byte level, struct char_data *ch,
@@ -524,7 +524,7 @@ void spell_create_golden_nectar(byte level, struct char_data *ch,
 void spell_cone_of_ice(byte level, struct char_data *ch,
 		       struct char_data *victim, struct obj_data *obj);
 void spell_disintegrate(byte level, struct char_data *ch,
-			struct char_data *victim, struct obj_data *obj); 
+			struct char_data *victim, struct obj_data *obj);
 void spell_phase(byte level, struct char_data *ch,
 		 struct char_data *victim, struct obj_data *obj);
 void spell_mirror_image(byte level, struct char_data *ch,
@@ -551,13 +551,13 @@ void spell_mana_transfer(byte level, struct char_data *ch,
 			struct char_data *tar_ch, struct obj_data *tar_obj);
 void spell_self_heal(byte level, struct char_data *ch,
 		     struct char_data *victim, struct obj_data *obj);
-void spell_holy_shield(byte level, struct char_data *ch, 
+void spell_holy_shield(byte level, struct char_data *ch,
 			struct char_data *tar_ch, struct obj_data *tar_obj);
 void spell_restore_move(byte level, struct char_data *ch,
-			struct char_data *victim, struct obj_data *obj); 
-void spell_kiss_of_process(byte level, struct char_data *ch, 
+			struct char_data *victim, struct obj_data *obj);
+void spell_kiss_of_process(byte level, struct char_data *ch,
 			struct char_data *tar_ch, struct obj_data *tar_obj);
-void spell_reflect_damage(byte level, struct char_data *ch, 
+void spell_reflect_damage(byte level, struct char_data *ch,
 			struct char_data *tar_ch, struct obj_data *tar_obj);
 void spell_dumb(byte level, struct char_data *ch, struct char_data *tar_ch,
 		struct obj_data *tar_obj);

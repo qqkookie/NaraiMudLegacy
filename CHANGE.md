@@ -15,7 +15,7 @@ Check 4th jangro give_gold
 
 o Add typo or talk to imple command
 o
-정시 사용자 리스트 출력에서 
+정시 사용자 리스트 출력에서
 list user Room title  깨지는 문제 해결
 Process or any where?
 
@@ -52,14 +52,14 @@ Process or any where?
 
 =====================================================================
 
-CHANGE : 2019. 10. 03. (금) 
+CHANGE : 2019. 10. 03. (금)
 
--Wall -Wextra -Werror  관련 에러 수정 
-ex) FALLTHRU, 
-    
+-Wall -Wextra -Werror  관련 에러 수정
+ex) FALLTHRU,
+
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 
-MUD user directory :  $mudhome/lib -> $mudhone/users 
+MUD user directory :  $mudhome/lib -> $mudhone/users
 
 chdir fail -> not error
 
@@ -81,7 +81,7 @@ CHANGES : 2019. 10. 06. (일) 08:45:26 KST
 
 lib/zone/zone_files:
 
-Import Legacy version utils 
+Import Legacy version utils
 
 --- a/lib/zone/DragonTower.zon
 +++ b/lib/zone/DragonTower.zon
@@ -117,7 +117,7 @@ Added from legacy
 
 chcheck			<- player_check.c
 zoneprint		<- zone_print
-mobbalance		<- mob_balance 
+mobbalance		<- mob_balance
 mobcreate		<- mob_create
 mobedit			<- mob_edit
 dodtashform		<- chstashform
@@ -126,7 +126,7 @@ undostashform		<- unchstashform
 Removed dupname.c
 
 Makefile dependancy update
- 
+
 Remove IMO=41 macro
 
 Check for NPC && level > IMO +3 -> ISNPCLEV()
@@ -158,11 +158,11 @@ Add REBOOT_TIME
 
 Add REBOOT_WHEN
 
-Add spell name like full-heal full_heal 
+Add spell name like full-heal full_heal
 
 src/utils
 
-chpass.c: Add password check menu 
+chpass.c: Add password check menu
 
 chdelete: Add empty name delete
 
@@ -174,7 +174,7 @@ Remove IMO
 
 IMO + 3		-> LEV_GOD
 IMO + 2		-> LEV_DEMI
-IMO + 1		-> LEV_LESSER 
+IMO + 1		-> LEV_LESSER
 level < IMO	-> IS_MORTAL()
 level >= IMO	-> IS_IMMORTAL()
 
@@ -182,7 +182,7 @@ LEVEL_LIMIT	= IMO -1
 LEVEL_SIZE
 
 LEV_GOD, LEV_DEMI, LEV_LESSER, LEV_IMMO
-LEVEL_MAX, LEVEL_LIMIT, 
+LEVEL_MAX, LEVEL_LIMIT,
 
 NEW: IS_GOD  level == LEV_GOD
      NOT_GOD  level < LEV_GOD
@@ -211,9 +211,9 @@ zone renumbering restored to old (pre-1998) zone numbering
 
 lib/mob.quest is revert to old mob.quest
 
-lib/tinyworld.mob lib/tineyworld.obj renumbered 
+lib/tinyworld.mob lib/tineyworld.obj renumbered
 
-CHANGE lib/tinyword.obj: 
+CHANGE lib/tinyword.obj:
 
 Weapon magic (val[0]) restored to 1-9,1000
 TRASH (obj type =13 ) restored
@@ -231,7 +231,7 @@ chest -> chest treasure box
 daggers 21d{1~3}, 18d4
 
 
-CHANGE lib/tinyword.mob: 
+CHANGE lib/tinyword.mob:
 
 DK Mob  revert to old (pre-1998) levels
 May be need to upgrade to Lecacy 2003 levels
