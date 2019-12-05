@@ -132,6 +132,8 @@ function renum_special_cases()
     AERIE = 17510
     MUNCIE = 14710
     EASY = 19710        -- Easyland
+    GALAXY = 16610
+    ROBOCITY = 19110
 
     TOJAIL = SLUM+89      -- Realm of the Dead (to 3299)
 
@@ -296,7 +298,13 @@ UNREF: OBJ	#3427	cape dark black
         { 7224, GKP+39 },    -- a sparkling ring of innocence
 
         { 7903, DESERT +61 },    -- 'new key' to desert(5000) brass dragon
-
+        
+        -- exchange order of bow and arrow 
+        { 9715, GALAXY+16 }, -- arrow sagittarius
+        { 9716, GALAXY+15 }, -- bow sagittarius
+        -- make space to add bulllet for the gun
+        { 15023, ROBOCITY+38 },  -- head robocop gun
+        
         ----------------------------------------------
 
         { 1461, SLUM+1 },      -- solar flair
@@ -815,7 +823,7 @@ UNREF: MOB	#19999	super musashi
         { 1882, SLUM+76 },    -- assassin locker
         -- { 1885, GUILD+78 },    -- assassin new room
 
-        { 1841, SLUM+85 },     -- locker room
+        { 1841, SLUM+87 },     -- locker room
 
         { 6999, TOJAIL },       -- Jail to Slum
 
@@ -934,16 +942,16 @@ UNREF: MOB	#19999	super musashi
         -- game room
 
         { 3033, MID+31 },     -- magic shop
-        { 3011, MID+32 },     -- weapon store
+        { 3011, MID+32 },     -- Weapon Shop
         { 3020, MID+33 },     -- armory
-        { 3010, MID+34 },     -- gen store
+        { 3027, MID+34 },     -- MacDonalds
         { 3009, MID+35 },     -- bakery
         { 3006, MID+36 },     -- ent inn
         { 3007, MID+37 },     -- inn
         { 3017, MID+38 },     -- enter pr
         { 3018, MID+39 },     -- guild bar
 
-        { 3027, MID+41 },     -- Mac
+        { 3010, MID+41 },     -- gen store
         { 3049, MID+42 },     -- Levee
         { 3051, MID+43 },     -- on the bridge
         { 3048, MID+44 },     -- groovy inn
@@ -1162,7 +1170,7 @@ end
 3200-3299
 
    3200 (Slum /Street of Mid
- -- 3210-30 (20)
+ -- 3210-29 (20)
     { "Houses2",                         1450,  1400 },
     + Robert Bell Building
 
@@ -1176,7 +1184,7 @@ end
     3260 (30)
     { "Village of Midgaard",            1850,  1800 },
 
-     3295 LOCKER
+     3297 LOCKER
 
     3299
     { "XXX Dwarven Jail",               6990,  6990
@@ -1196,7 +1204,6 @@ end
 
      3440-3449 (10)
     { "XXX Turning Point",              3500,  3500 },
-
 
    3700-3799
 -- KIT School zone

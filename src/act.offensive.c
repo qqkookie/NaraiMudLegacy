@@ -562,12 +562,12 @@ void shoot(struct char_data *ch, struct char_data *victim, int type)
 
 	// NOTE: add magic bullet spell damage
 	struct obj_data *firearm = ch->equipment[HOLD];
-	if (OBJ_VALUE3(firearm) > 0) {
+	if (firearm->obj_flags.gpd > 0) {
 	    extern struct obj_data *get_obj_num(int nr);
 	    struct obj_data *ammo = get_obj_num(GET_OBJ_VIRTUAL(firearm)+1);
-	    if (ammo && GET_ITEM_TYPE(ammo) == ITEM_PROJECTILE) {
-		(*spell_info[OBJ_VALUE0(ammo)].spell_pointer)
-		    (OBJ_VALUE3(ammo), ch, "", SPELL_TYPE_WAND, victim, NULL);
+	    if (ammo && GET_ITEM_TYPE(ammo) == ITEM_PROJECTILE && OBJ_VALUE3(ammo) > 0 ) {
+		(*spell_info[OBJ_VALUE3(ammo)].spell_pointer)
+		    (OBJ_VALUE0(ammo), ch, "", SPELL_TYPE_WAND, victim, NULL);
 	    }
 	}
 

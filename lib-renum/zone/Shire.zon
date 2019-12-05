@@ -5,9 +5,10 @@ M 0 16228 1 16215  	General Store Shopkeeper
 G 1 3062 999		bags
 G 1 16314 999		lanterns
 M 0 16230 1 16217		Blacksmith
-G 1 14611 5		Halberd
+*G 1 16111 10            backpack
 G 1 16231 5		gold ring
-G 1 16111 10             backpack
+G 1 17212 5		Halberd
+G 1 14611 5             Silver epee
 M 0 16214 2 16218		Nursemaids
 M 0 16214 2 16218
 M 0 16213 6 16218		Toddlers
@@ -29,9 +30,9 @@ E 1 16218 5 13
 M 0 16238 4 16224		Country bumpkin
 M 0 16238 4 16225		Country bumpkin
 M 0 16223 1 16226		Innkeeper - Ivy Bush
-G 1 16220 999		eggs
 G 1 3113 999		ale
 G 1 3310 999		cups
+G 1 16220 999		eggs
 M 0 16233 4 16226		Seasoned adventurers
 M 0 16233 4 16226
 M 0 16234 2 16226		Gossips
@@ -112,9 +113,9 @@ G 1 16220 110
 M 0 16217 6 16253
 G 1 16220 110
 M 0 16240 1 16254		Innkeeper - Green Dragon
-G 1 16220 999		eggs
 G 1 3113 999		ale
 G 1 3310 999		tea
+G 1 16220 999		eggs
 M 0 16241 1 16267         receptionist - green dragon
 M 0 16233 6 16254		Seasoned adventurers
 M 0 16233 6 16254

@@ -97,7 +97,7 @@ Al says '또 왔구나'
 ~
 10 136 900
 M 40 11 4 5 15
-20000 9 8 M
+500000 9 8 M
 #3012
 weaponsmith walter smith~
 Walter Smith~
@@ -107,7 +107,7 @@ Walter says '잘 있었니'
 ~
 10 136 900
 W 40 14 10 6 19
-20000 15 8 M
+500000 15 8 M
 #3013
 armourer fred wilson~
 Fred Wilson~
@@ -117,7 +117,7 @@ Fred says '안녕'
 ~
 10 136 900
 W 40 12 18 8 17
-2000 15 8 M
+500000 15 8 M
 #3014
 guildmaster Martha Smith~
 Martha Smith~
@@ -137,7 +137,7 @@ Jed says '안녕'
 ~
 10 136 900
 C 40 12 17 4 15
-20000 12 8 M
+100000 12 8 M
 #3016
 baker bob wilson~
 Bob Wilson~
@@ -147,7 +147,7 @@ Bob says '안녕'
 ~
 10 136 900
 C 40 15 7 3 6
-2000 9 8 M
+100000 9 8 M
 #3017
 kid clerk waiter~
 A high school kid~
@@ -166,7 +166,7 @@ Captain John says '좋은 날인데?'
 ~
 10 0 900
 W 40 11 8 8 17
-2000 15 8 M
+10000 15 8 M
 #3019
 sailor~
 the Sailor~
@@ -638,7 +638,7 @@ he seems very greedy and rude. he has infinite power.
 ~
 4194378 136 1000
 C 40 6 15 9 17
-1000 11 8 M
+500000 11 8 M
 #3212
 Bob Dylan~
 Bob Dylan~
@@ -1674,8 +1674,8 @@ The Salesclerk is here, ready to buy or sell.
 ~
 ~
 74 0 0
-O 12 12 17 12 11
-10000 4 8 M
+O 30 12 17 12 11
+100000 4 8 M
 #15172
 chemist~
 The Chemist~
@@ -2350,7 +2350,7 @@ The storekeeper is very rotund, but looks like a sharp guy.
 ~
 10 0 900
 W 35 6 12 3 7
-15000 9 8 M
+100000 9 8 M
 #15814
 baker~
 Granite Head the baker~
@@ -2790,7 +2790,7 @@ would be a harsh foe in battle.
 ~
 10 8 800
 W 33 4 13 11 7
-10000 13 8 M
+100000 13 8 M
 #16133
 zyekian warder lorin~
 Lorin~
@@ -3093,7 +3093,7 @@ and armour would certainly help him in any fight against riff-raff like you.
 ~
 74 0 600
 W 40 5 6 10 6
-2000 4 8 M
+100000 4 8 M
 #16231
 battle master~
 the battle master~
@@ -6232,7 +6232,7 @@ storekeeper monkey 가게 주인~
 ~
 1048586 16777352 600
 W 38 12 12 10 17
-1000000 15 6 M
+100000 15 6 M
 #18103
 gorilla 고릴라~
 고릴라~
@@ -6980,7 +6980,7 @@ The mysterious cleric hwata is here..He is making something.
 ~
 10 33556632 700
 C 41 7 12 7 6
-1000 9 8 M
+100000 9 8 M
 #18346
 secret guard~
 Secret guard~

@@ -63,15 +63,15 @@
 /* --------------      Some Login banners    ----------------- */
 
 char login_banner[] =
-"\r\n\r\n\
+"\r\n\
        -----===<< * * *    K I T   C L A S S I C    * * * >>===-----\r\n\
                    Land of Nostalgic, melangcolic memory.\r\n\r\n\
                       Continued from Old Narai MUD\r\n\
-                    Derived from EVE-MUD and KIT-MUD\r\n\r\n\
+                    Derived from EVE-MUD and KIT-MUD\r\n\
                        Started 2020. 1. 1. .....\r\n\r\n";
 
 char login_welcome[] =
-"-------------<< KIT CLASSIC MUD >>----------------\r\n\
+"-----------------------<< KIT CLASSIC MUD >>-----------------------\r\n\
 Welcome to the Living Nightmare. May your visit here be... Interesting.\r\n\r\n\
 Heavenly voice whisperes 'Your fate and destiny lies beyond this world...'.\r\n\
 Yo! poor MORTALs... Worship the Great Old Goddess!\r\n\
@@ -80,7 +80,7 @@ Glory to the Goddess, Glory to Narai...\r\n\r\n\
     *** 오픈카톡방 : https://open.kakao.com/o/gAx75aN \r\n\
     *** 틴틴 계정 드립니다. 카톡방에서 신청해주세요.\r\n\r\n\
     -----===    GOLDEN RULES OF NARAI    ===-----\r\n\r\n\
-    **** PK is LEGAL for any time, any way and any reason!\r\n\r\n\
+    **** PK is LEGAL for any time, any way and any reason!\r\n\
     **** NO REIMBURSE !!!\r\n\
     **** MULTI/ROBOT PLAYING is allowed.\r\n";
 

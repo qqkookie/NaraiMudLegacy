@@ -918,7 +918,7 @@ void reset_zone(int zone)
 		    		world[ZCMD.arg3].contents)) {
 			obj = read_object(ZCMD.arg1, REAL);
 			if ((obj->obj_flags.type_flag == ITEM_KEY) ||
-			(!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
+			// (!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
 			    (regen == 1))
 			    /* (number(1,100) <= regen_percent ) ) */
 			{
@@ -932,7 +932,7 @@ void reset_zone(int zone)
 		else {
 		    obj = read_object(ZCMD.arg1, REAL);
 		    if ((obj->obj_flags.type_flag == ITEM_KEY) ||
-			(!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
+			// (!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
 			(regen == 1))
 			/* ( number(1,100) <= regen_percent ) ) */
 		    {
@@ -951,7 +951,7 @@ void reset_zone(int zone)
 			last_cmd == 'E' || last_cmd == 'G')) {
 		    obj = read_object(ZCMD.arg1, REAL);
 		    if ((obj->obj_flags.type_flag == ITEM_KEY) ||
-			(!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
+			// (!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
 			(regen == 1))
 			/* (number(1,100) <= regen_percent ) ) */
 		    {
@@ -973,10 +973,11 @@ void reset_zone(int zone)
 		if ( (last_cmd == 'M' || last_cmd == 'G' || last_cmd == 'E')) {
 		    obj = read_object(ZCMD.arg1, REAL);
 		    if ((obj->obj_flags.type_flag == ITEM_KEY) ||
-			(!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)))
+			// (!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
+			real_load || (regen == 1))
 			/* (number(1,100) <= regen_percent ) ) */
 		    {
-			if (mob && real_load) {
+			if (mob) {
 			    obj_to_char(obj, mob);
 			    last_cmd = 'G';
 			}
@@ -992,18 +993,11 @@ void reset_zone(int zone)
 		/* if (obj_index[ZCMD.arg1].number < ZCMD.arg2 && */
 		if ( (last_cmd == 'M' || last_cmd == 'G' || last_cmd == 'E')) {
 		    obj = read_object(ZCMD.arg1, REAL);
-		    if (obj->obj_flags.type_flag == ITEM_KEY)
-			/* ( !IS_SET(obj->obj_flags.extra_flags,ITEM_NOLOAD) )
-			   ) ( number(1,100) <= regen_percent ) ) */
+		    if ((obj->obj_flags.type_flag == ITEM_KEY) ||
+			// (!IS_SET(obj->obj_flags.extra_flags,ITEM_NOLOAD)) ||
+			real_load || (regen == 1))
+			// ( number(1,100) <= regen_percent ) ) */
 		    {
-			if (mob && real_load) {
-			    equip_char(mob, obj, ZCMD.arg3);
-			    last_cmd = 'E';
-			}
-			else
-			    extract_obj(obj);
-		    }
-		    else if (regen == 1) {
 			if (mob) {
 			    equip_char(mob, obj, ZCMD.arg3);
 			    last_cmd = 'E';

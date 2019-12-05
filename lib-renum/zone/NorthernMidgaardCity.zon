@@ -78,16 +78,18 @@ M 0 3054 24 3033
 *
 M 0 3015 1 3041     The grocer
 *G 1 3067 100
-*G 1 3065 100
-G 1 3037 500           a map
 G 1 3066 100
+G 1 3065 100
 G 1 3064 100
+G 1 3063 100
 G 1 3062 100
 *E 1 3025 100 16       wields a longsword
 M 0 3054 24 3041
 *
 M 0 3016 1 3035      The baker
 *G 1 3037 500           a map
+G 1 3112 100
+G 1 3111 100
 G 1 3119 500
 G 1 3118 500
 *E 1 3025 100 16        wields a longsword
@@ -97,6 +99,7 @@ M 0 3063 1 3008       Doris
 E 1 3025 100 16         wields a smallsword
 *
 M 0 3018 1 3042       A Captain (selling boats) at Levee
+G 1 3037 500           a map
 G 1 3036 50              Give a raft to the captain
 G 1 3035 50              Give canoe to Captain
 M 0 3054 24 3042
@@ -104,8 +107,8 @@ M 0 3054 24 3042
 M 0 3019 1 3045       Sailor selling stuff in the warehouse
 *
 M 0 3028 1 3037       The bartender
-G 1 3112 100
-G 1 3111 100
+*G 1 3112 100
+*G 1 3111 100
 *E 1 3025 100 16            wields a longsword
 *
 M 0 3029 1 3039       The Adeventuers bar Waiter
@@ -122,8 +125,9 @@ M 0 3065 2 3075       A Carpenter
 E 1 3079 2 16            wields a hammer
 *
 M 0 3017 1 3034       The High School Kid
-G 1 3042 100            cheeseburger
-G 1 3041 100            large coke
+G 1 3043 100            cheeseburger
+G 1 3042 100            coke lemonade
+G 1 3041 100            soylent cup
 M 0 3054 24 3034
 *
 M 0 3027 1 3044       Filthy (bartender) in Grubby Inn

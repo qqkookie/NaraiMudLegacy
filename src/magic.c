@@ -280,6 +280,7 @@ void magic_weapon_hit(struct char_data *ch, struct char_data *victim,
 
     if (!ch || !victim || !weapon)
 	return;
+    // 1/gpd is magic hit probability : 1 == always
     d = (weapon->obj_flags.gpd == 1) ? 1 : number(1, weapon->obj_flags.gpd);
     if (d == 1 && (ch ) && (victim )) {		/* By Knife */
 	switch (weapon->obj_flags.value[0]) {
@@ -373,11 +374,13 @@ void magic_weapon_hit(struct char_data *ch, struct char_data *victim,
 		weapon->obj_flags.value[0],
 		weapon->name, GET_OBJ_VIRTUAL(weapon));
 
+#ifdef UNUSED_CODE	    
 	    /* NOTE: REMOVE THIS CODE AFTER JAN '98 */
 	    if ( weapon->obj_flags.value[0] > 0 && weapon->obj_flags.value[0] <= 9 )
 		weapon->obj_flags.value[0] += 170;
 	    if ( weapon->obj_flags.value[0] == 14 )
 		weapon->obj_flags.value[0] = 30;
+#endif
 
 	    log(buf);
 	}

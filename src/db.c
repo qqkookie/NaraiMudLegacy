@@ -1215,16 +1215,18 @@ char *fread_string(FILE * fl)
 
 	for (point = buf + strlen(buf) - 2; point >= buf && isspace(*point);
 	     point--) ;
-	if ((flag = (*point == '~')))
-	    if (*(buf + strlen(buf) - 3) == '\n') {
-		*(buf + strlen(buf) - 2) = '\r';
+	if ((flag = (*point == '~'))) {
+	    if (*(buf + strlen(buf) - 3) == '\r') {
+		*(buf + strlen(buf) - 2) = '\n';
 		*(buf + strlen(buf) - 1) = '\0';
 	    }
 	    else
 		*(buf + strlen(buf) - 2) = '\0';
+	}
 	else {
-	    *(buf + strlen(buf) + 1) = '\0';
-	    *(buf + strlen(buf)) = '\r';
+	    // *(buf + strlen(buf) + 1) = '\0';
+	    // *(buf + strlen(buf)) = '\r';
+	    *(buf + strlen(buf)) = '\0';
 	}
     }
     while (!flag);

@@ -92,7 +92,7 @@
 #define WEAPON_BASIC_THIEF	(MID_BASE+26)	// 2D4 pierce short sword (dagger)
 
 // #define OBJ_BIRD_FEATHER	14161		// Graveyard(Doghouse)
-#define OBJ_PEGASUS_WINGS	16613		// Galaxy
+// #define OBJ_PEGASUS_WINGS	16613		// Galaxy
 
 #define OBJ_LSS_BELT		17718		// DK
 

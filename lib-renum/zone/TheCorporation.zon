@@ -192,6 +192,7 @@ E 1 15119 5 6     cashmere hat
 E 1 15124 5 7     cashmere pants
 E 1 15129 5 8     corfam shoes
 E 1 15134 5 9     corfam gloves
+G 1 15168 10      xerox box
 *
 M 0 15161 4 15261   Board Member
 M 0 15161 4 15261   Board Member
@@ -223,6 +224,11 @@ M 0 15170 1 15272   Paperboy
 G 1 15187 50         newspaper
 *
 M 0 15171 1 15273   Polyester Salesclerk
+G 1 15130 10
+G 1 15125 10
+G 1 15120 10
+G 1 15115 10
+G 1 15110 10
 *
 M 0 15172 1 15148   Chemist
 E 1 15182 3 17

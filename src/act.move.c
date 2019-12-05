@@ -69,9 +69,8 @@ int do_simple_move(struct char_data *ch, int cmd, int following)
 	for (obj = ch->carrying; obj; obj = obj->next_content) {
 	    // obj_number = GET_OBJ_VIRTUAL(obj);
 	    // if (obj_number == OBJ_PEGASUS_WINGS || obj_number == OBJ_BIRD_FEATHER)
-	    if ( GET_ITEM_TYPE(obj) == ITEM_WINGS
-		    || GET_OBJ_VIRTUAL(obj) == OBJ_PEGASUS_WINGS)
-		/* Wings of Pegasus  and feather */
+	    if ( GET_ITEM_TYPE(obj) == ITEM_WINGS)
+		/* Wings of Pegasus and feather */
 		has_wing = TRUE;
 	}
 	if (!has_wing && NOT_GOD(ch)) {

@@ -1,214 +1,12 @@
-#0~
-3118
-3119
--1
--1
--1
-1.1
-1.0
-0
-0
-0
-0
-0
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Oups - %d a minor bug - please report!~
-0
-0
-3016
-0
-3035
-0
-28
-0
-0
-#1~
-3111
-3112
--1
--1
--1
-1.1
-1.0
-0
-0
-0
-0
-0
-%s It's very noisy in here, what did you say you wanted to buy?~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s Are you drunk or what ?? - NO CREDIT!~
-%s That'll be - say %d coins.~
-%s Oups - %d a minor bug - please report!~
-0
-0
-3028
-0
-3037
-0
-28
-0
-0
-#2~
-3021
-3022
-3023
-3024
-3025
-1.3
-0.4
-5
-6
-7
-0
-0
-%s I haven't got that kind of a weapon~
-%s You don't carry that weapon~
-%s I only buy weapons.~
-%s I can't afford such a great weapon~
-%s sorry, but NO CREDIT~
-%s That just costs %d coins.~
-%s Here you have %d coins for that.~
-0
-0
-3012
-0
-3032
-0
-28
-0
-0
-#3~
-3037
-3062
-3064
-3066
--1
-1.5
-0.4
-1
-8
-13
-15
-19
-%s Haven't got that on storage - try list!~
-%s You don't seem to have that.~
-%s I don't buy THAT,... Try another shop.~
-%s I can't afford such a treasure.~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
-0
-0
-3015
-0
-3041
-0
-28
-0
-0
-#4~
-3135
-3137
-3138
-3145
-3149
-1.0
-0.5
-9
-0
-0
-0
-0
-%s Haven't got that on storage - try list!~
-%s You don't seem to have that.~
-%s I only buy armours.. Go away!~
-%s That is too expensive for me - Try a wizard!~
-%s You can't afford it!~
-%s That'll be %d coins, please.~
-%s You'll get %d coins for it!~
-0
-0
-3013
-0
-3033
-0
-28
-0
-0
-#5~
-3015
-3114
-3115
-3116
-3117
-1.0
-1.0
-0
-0
-0
-0
-0
-%s Haven't got that on storage - try list!~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, you'll have to go!~
-%s That'll be %d coins.~
-%s Oops - %d a minor bug - please report!~
-0
-0
-3029
-0
-3039
-0
-28
-0
-0
-#6~
-3041
-3042
--1
--1
--1
-1.7
-1.0
-0
-0
-0
-0
-0
-%s This McDonalds does not sell that.~
-%s I don't buy!~
-%s I don't buy!~
-%s I don't buy!~
-%s If you have no money, have a nice day!~
-%s That'll be %d coins.~
-%s Oups - %d a minor bug - please report!~
-0
-0
-3017
-0
-3034
-0
-28
-0
-0
-#7~
+#3
+magic shop (Legacy:#7)~
 3011
 3012
 3013
 3014
 3016
-1.05
-0.15
+1.5
+0.7
 2
 3
 4
@@ -230,16 +28,197 @@
 28
 0
 0
-#8~
+#4
+weapon store (#2)~
+3021
+3022
+3023
+3024
+3025
+1.5
+0.7
+5
+6
+7
+0
+0
+%s I haven't got that kind of a weapon~
+%s You don't carry that weapon~
+%s I only buy weapons.~
+%s I can't afford such a great weapon~
+%s sorry, but NO CREDIT~
+%s That just costs %d coins.~
+%s Here you have %d coins for that.~
+0
+0
+3012
+0
+3032
+0
+28
+0
+0
+#5
+armoury (#4)~
+3140
+3141
+3142
+3143
+3144
+1.5
+0.7
+9
+11
+0
+0
+0
+%s Haven't got that on storage - try list!~
+%s You don't seem to have that.~
+%s I only buy armours.. Go away!~
+%s That is too expensive for me - Try a wizard!~
+%s You can't afford it!~
+%s That'll be %d coins, please.~
+%s You'll get %d coins for it!~
+0
+0
+3013
+0
+3033
+0
+28
+0
+0
+#6
+grocery (#3)~
+3062
+3063
+3064
+3065
+3066
+1.5
+0.7
+1
+8
+12
+15
+20
+%s Haven't got that on storage - try list!~
+%s You don't seem to have that.~
+%s I don't buy THAT,... Try another shop.~
+%s I can't afford such a treasure.~
+%s You can't afford it!~
+%s That'll be %d coins, please.~
+%s You'll get %d coins for it!~
+0
+0
+3015
+0
+3041
+0
+28
+0
+0
+#7
+McDonald (#6)~
+3041
+3042
+-1
+-1
+-1
+1.5
+0.7
+0
+0
+0
+0
+0
+%s This McDonalds does not sell that.~
+%s I don't buy!~
+%s I don't buy!~
+%s I don't buy!~
+%s If you have no money, have a nice day!~
+%s That'll be %d coins.~
+%s Oups - %d a minor bug - please report!~
+0
+0
+3017
+0
+3034
+0
+28
+0
+0
+#8
+bakery (#0)~
+3111
+3112
+3118
+3119
+-1
+1.5
+0.7
+17
+19
+0
+0
+0
+%s Haven't got that on storage - try list!~
+%s I don't buy!~
+%s I don't buy!~
+%s I don't buy!~
+%s If you have no money, you'll have to go!~
+%s That'll be %d coins.~
+%s Oups - %d a minor bug - please report!~
+0
+0
+3016
+0
+3035
+0
+28
+0
+0
+#9
+adv bar (#5)~
+3015
+3114
+3115
+3116
+3117
+1.5
+0.7
+17
+0
+0
+0
+0
+%s Haven't got that on storage - try list!~
+%s I don't buy!~
+%s I don't buy!~
+%s I don't buy!~
+%s If you have no money, you'll have to go!~
+%s That'll be %d coins.~
+%s Oops - %d a minor bug - please report!~
+0
+0
+3029
+0
+3039
+0
+28
+0
+0
+#10
+levee (#8)~
 3035
 3036
+3037
 -1
 -1
--1
-1.2
-0.9
+1.5
+0.7
 22
-0
+23
 0
 0
 0
@@ -259,43 +238,45 @@
 22
 6
 22
-#9~
-3310
-3311
-3312
--1
--1
-1.1
-0.9
-0
-0
-0
-0
-0
-%s I got no such drink.~
-%s I see no such thing.~
-%s I do not buy, would you like a drink?~
-%s BUG, Please report~
-%s You can't afford such a fine drink, try the Grubby Inn.~
-%s Fine, that'll be %d gold pieces.~
-%s Bug, please report (%d).~
-0
-0
-3315
-0
-3316
-6
-23
-23
-24
-#10~
+#11
+mid bar (#1)~
 -1
 -1
 -1
 -1
 -1
-1.0
-1.0
+1.5
+0.7
+0
+0
+0
+0
+0
+%s It's very noisy in here, what did you say you wanted to buy?~
+%s I don't buy!~
+%s I don't buy!~
+%s I don't buy!~
+%s Are you drunk or what ?? - NO CREDIT!~
+%s That'll be - say %d coins.~
+%s Oups - %d a minor bug - please report!~
+0
+0
+3028
+0
+3037
+0
+28
+0
+0
+#12
+grubby inn (#10)~
+-1
+-1
+-1
+-1
+-1
+1.5
+0.7
 0
 0
 0
@@ -317,19 +298,20 @@
 28
 0
 0
-#11~
+#15
+safari club (#11)~
 3084
 3211
 3212
 3215
 16434
-1.0
-0.8
-0
-0
-0
-0
-0
+1.5
+0.7
+5
+6
+7
+8
+9
 %s Not here - try list!~
 %s You selling what?~
 %s I don't buy that.~
@@ -346,188 +328,45 @@
 28
 0
 0
-#12~
-3217
-16105
-16113
-16121
-16125
-1.2
-0.8
-3
-4
-10
-17
-19
-%s I'm afraid I am all out of those!~
-%s Maybe you have misplaced that item, you don't have it now.~
-%s Sorry, I just can't buy that type of item.~
-%s I'm sorry, I can't afford that.~
-%s You don't seem to have the funds for that.~
-%s That's gonna cost you %d coins, thanks.~
-%s I'll give you %d coins for that!~
-0
-0
-16132
-0
-16161
-0
-28
-0
-0
-#17~
-3062
-16314
--1
--1
--1
-1.1
-0.95
-1
-15
-17
-19
-0
-%s I've never heard of that.~
-%s I've never heard of that.~
-%s Please, this is a general store, not a flea market.~
-%s I'll take it for free - I can't give you enough gold.~
-%s Hmmm...you'd better check your wallet.~
-%s That costs %d. There you are!~
-%s Here's %d coins.~
-1
-0
-16228
-0
-16215
-0
-24
-0
-24
-#18~
-16111
-16231
-17212
-17440
--1
-9.0
-0.5
-5
-9
-12
-0
-0
-%s Are you trying to pull the wool over my eyes?~
-%s Scram kid!~
-%s I don't deal in that kind of merchandise.~
-%s Do I look like a bank to you?~
-%s Pay up or get out!~
-%s Give me %d coins.  Now beat it!~
-%s Fine, here's %d coins.  Thanks for nothing.~
-0
-0
-16230
-0
-16217
-0
-24
-0
-24
-#19~
-16213
--1
--1
--1
--1
-1.0
-1.0
-0
-0
-0
-0
-0
-%s You must be having a bad day.~
-%s I've never heard of that.  Tell me more about it.~
-%s I'm sorry - I don't buy that sort of thing.~
-%s Looks like I don't have enough gold.~
-%s Come back when you get some more money.~
-%s That will be %d coins.  Enjoy.~
-%s Bug.  Please report.~
-1
-0
-16229
-0
-16231
-0
-24
-0
-24
-#20~
-3113
+#16
+cafe (#9)~
 3310
-16220
+3311
+3312
 -1
 -1
-1.0
-1.0
+1.5
+0.7
 0
 0
 0
 0
 0
-%s Say what?~
-%s Say what?~
-%s I don't buy.~
-%s I can't afford that.~
-%s You can't afford that.~
-%s Your total is %d coins.~
-%s Bug.  Please report.~
-1
+%s I got no such drink.~
+%s I see no such thing.~
+%s I do not buy, would you like a drink?~
+%s BUG, Please report~
+%s You can't afford such a fine drink, try the Grubby Inn.~
+%s Fine, that'll be %d gold pieces.~
+%s Bug, please report (%d).~
 0
-16223
 0
-16226
+3315
 0
+3316
+6
+23
+23
 24
-0
-24
-#21~
-3310
-3113
-16220
--1
--1
-1.0
-1.0
-0
-0
-0
-0
-0
-%s Speak halfling, I can't understand you.~
-%s Speak halfling, I can't understand you.~
-%s Listen - I don't trade!~
-%s You're out of luck today - I don't have enough gold.~
-%s You're out of luck today - you don't have enough gold.~
-%s Your total comes to %d coins.~
-%s Bug.  Please report.~
-1
-0
-16240
-0
-16254
-0
-24
-0
-24
-#22~
+#21
+TB news (#22)~
 15187
 -1
 -1
 -1
 -1
-1.0
-1.0
+1.5
+0.7
 0
 0
 0
@@ -549,14 +388,15 @@
 24
 0
 24
-#23~
+#22
+TB armory (#23)~
 15110
 15115
 15120
 15125
 15130
-1.1
-0.9
+1.5
+0.7
 9
 0
 0
@@ -578,18 +418,19 @@
 24
 0
 24
-#24~
-3025
+#25
+(dwarven armory/weapon #24)~
 15814
 15815
 15820
+15821
 15822
-1.9
-0.3
+2.0
+0.7
 1
 5
 9
-15
+11
 0
 %s We don't have any in storage, sorry!~
 %s Check your possessions, you don't have that.~
@@ -607,14 +448,15 @@
 23
 23
 28
-#25~
+#26
+dwarven grocery (#25)~
+16314
 3111
-3114
 3118
-3119
-3064
-1.9
-0.2
+-1
+-1
+2.0
+0.7
 1
 8
 15
@@ -636,72 +478,195 @@
 24
 24
 28
-#26~
-18346
-18347
--1
--1
--1
-1.0
-0.8
+#27
+zyekian shop (#12)~
+3217
+16105
+16113
+16121
+16125
+2.0
+0.7
+3
+4
 10
+17
+19
+%s I'm afraid I am all out of those!~
+%s Maybe you have misplaced that item, you don't have it now.~
+%s Sorry, I just can't buy that type of item.~
+%s I'm sorry, I can't afford that.~
+%s You don't seem to have the funds for that.~
+%s That's gonna cost you %d coins, thanks.~
+%s I'll give you %d coins for that!~
 0
 0
+16132
 0
-0
-%s Not here - try list!~
-%s You selling what?~
-%s I don't buy that.~
-%s I can't afford that.~
-%s No credit given, none taken.~
-%s That'll be %d coins, meathead.~
-%s Here's your %d coins, bozo.~
-0
-0
-18345
-0
-18345
+16161
 0
 28
 0
 0
-#28~
-18610
+#31
+shire general (#17)~
+3062
+16314
 -1
 -1
 -1
--1
-1.0
-0.5
+2.0
+0.7
+1
+15
 17
 19
 0
+%s I've never heard of that.~
+%s I've never heard of that.~
+%s Please, this is a general store, not a flea market.~
+%s I'll take it for free - I can't give you enough gold.~
+%s Hmmm...you'd better check your wallet.~
+%s That costs %d. There you are!~
+%s Here's %d coins.~
+1
+0
+16228
+0
+16215
+0
+24
+0
+24
+#32
+shire blacksmith (#18)~
+14611
+16231
+17212
+-1
+-1
+2.0
+0.7
+5
+9
+12
 0
 0
-%s Not here - try list!~
-%s You selling what?~
-%s I don't buy that.~
+%s Are you trying to pull the wool over my eyes?~
+%s Scram kid!~
+%s I don't deal in that kind of merchandise.~
+%s Do I look like a bank to you?~
+%s Pay up or get out!~
+%s Give me %d coins.  Now beat it!~
+%s Fine, here's %d coins.  Thanks for nothing.~
+0
+0
+16230
+0
+16217
+0
+24
+0
+24
+#33
+shire bakery (#19)~
+16213
+-1
+-1
+-1
+-1
+2.0
+0.7
+0
+0
+0
+0
+0
+%s You must be having a bad day.~
+%s I've never heard of that.  Tell me more about it.~
+%s I'm sorry - I don't buy that sort of thing.~
+%s Looks like I don't have enough gold.~
+%s Come back when you get some more money.~
+%s That will be %d coins.  Enjoy.~
+%s Bug.  Please report.~
+1
+0
+16229
+0
+16231
+0
+24
+0
+24
+#34
+shire dragon inn (#20)~
+3113
+3310
+16220
+-1
+-1
+2.0
+0.7
+0
+0
+0
+0
+0
+%s Say what?~
+%s Say what?~
+%s I don't buy.~
 %s I can't afford that.~
-%s No credit given, none taken.~
-%s That'll be %d coins, meathead.~
-%s Here's your %d coins, bozo.~
+%s You can't afford that.~
+%s Your total is %d coins.~
+%s Bug.  Please report.~
+1
+0
+16223
+0
+16226
+0
+24
+0
+24
+#35
+shire ivy inn (#21)~
+3113
+3310
+16220
+-1
+-1
+2.0
+0.7
 0
 0
-18628
-0
-18639
-0
-28
 0
 0
-#29~
+0
+%s Speak halfling, I can't understand you.~
+%s Speak halfling, I can't understand you.~
+%s Listen - I don't trade!~
+%s You're out of luck today - I don't have enough gold.~
+%s You're out of luck today - you don't have enough gold.~
+%s Your total comes to %d coins.~
+%s Bug.  Please report.~
+1
+0
+16240
+0
+16254
+0
+24
+0
+24
+#41
+daerimsa (#29)~
 18121
 18122
 18123
 18124
 -1
-1.1
-1.0
+2.0
+0.7
 0
 0
 0
@@ -719,6 +684,66 @@
 18102
 0
 18195
+0
+28
+0
+0
+#42
+chok hwata (#26)~
+18346
+18347
+-1
+-1
+-1
+2.0
+0.7
+3
+4
+10
+0
+0
+%s Not here - try list!~
+%s You selling what?~
+%s I don't buy that.~
+%s I can't afford that.~
+%s No credit given, none taken.~
+%s That'll be %d coins, meathead.~
+%s Here's your %d coins, bozo.~
+0
+0
+18345
+0
+18345
+0
+28
+0
+0
+#44
+o-kingdom jumak (#28)~
+18610
+-1
+-1
+-1
+-1
+2.0
+0.7
+17
+19
+0
+0
+0
+%s Not here - try list!~
+%s You selling what?~
+%s I don't buy that.~
+%s I can't afford that.~
+%s No credit given, none taken.~
+%s That'll be %d coins, meathead.~
+%s Here's your %d coins, bozo.~
+0
+0
+18628
+0
+18639
 0
 28
 0
