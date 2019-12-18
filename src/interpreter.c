@@ -56,7 +56,7 @@ char *command[] =
  "inventory",
  "qui",			/* 21 */
  /* "bounce", */
- /* "smile", */
+ "smile",		// social special 
  /* "dance", */
  "kill",
  /* "cackle", */
@@ -131,7 +131,7 @@ char *command[] =
  "advance",
  /* "accuse", */
  /* "grin", */
- /* "bow", */
+ "bow",		// social special
  "open",
  "close",
  "lock",		/* 101 */
@@ -412,9 +412,11 @@ char *alias[] = {
     "\n",	"\n",
 };
 
+extern int find_social(char *action_name, int *min_lev, int *min_pos );
 /* internal proc's */
 int special(struct char_data *ch, int cmd, char *arg );
 void log_command(struct char_data *ch, char *argument, int cmd);
+void do_social_special(struct char_data *ch, char *argument, int cmd);
 
 /* NOTE: NEW! Break from hide state after executing command.
     This needs much refinement like determine breaking hide depending
@@ -432,7 +434,6 @@ int command_interpreter(struct char_data *ch, char *argument)
     char *args, *to, *msg ;
     char cmdbuf[MAX_BUFSIZ] ;
     extern int no_specials;
-    extern int find_action(char *action_name, int *min_lev, int *min_pos );
 
     /* NOTE: Break from hide state *after* executing command. */
 
@@ -481,10 +482,10 @@ int command_interpreter(struct char_data *ch, char *argument)
 	}
     }
     /* NOTE: if not found in command list, it may be social action */
-    /* NOTE: If it is social action, find_action will return
+    /* NOTE: If it is social action, find_social will return
 	positive index to soc_mess[] table, and set req_level, req_pos.	*/
-    cmd_nr = find_action( cmdbuf, &req_level, &req_pos );
-    cmd_proc = do_action;
+    cmd_nr = find_social( cmdbuf, &req_level, &req_pos );
+    cmd_proc = do_social;
 
 found:
     if ( cmd_nr <= 0) {
@@ -526,8 +527,8 @@ found:
 	    msg = "You are not proper position to do that!\r\n";
 	}
     }
-    else if ( cmd_proc == do_action ) {
-	do_action( ch, args, cmd_nr );
+    else if ( cmd_proc == do_social ) {
+	do_social( ch, args, cmd_nr );
 
 	/* NOTE: BUG: char is still hided after action command : fixed it. */
 	return (1);
@@ -620,6 +621,16 @@ int special(struct char_data *ch, int cmd, char *arg )
     return (0);
 }
 
+void do_social_special(struct char_data *ch, char *arg, int cmd_nr )
+{
+    if( cmd_nr == CMD_SMILE )
+	cmd_nr = find_social("smile", NULL, NULL);
+    else if( cmd_nr == CMD_BOW )
+	cmd_nr = find_social("bow", NULL, NULL);
+
+    do_social(ch, arg, cmd_nr);
+}
+
 /* NOTE: subst_show() will notify do_show() will substitute
 	do_news(), do_credits(), do_wizards(), do_plan(), do_version(). */
 void subst_show(struct char_data *ch, char *argument, int cmd)
@@ -709,7 +720,7 @@ void assign_command_pointers(void)
     COMMANDO( "tell", CMD_TELL, POS_RESTING, do_tell, 0, 0, 0, 0);
     COMMANDO( "inventory", CMD_INVENTORY, POS_DEAD, do_inventory, 0, 0, 0, 0);
     /* COMMANDO( "bounce", ACTN_BOUNCE,  POS_STANDING, do_action, 0, 0, 0, 0); */
-    /* COMMANDO( "smile", ACTN_SMILE,  POS_RESTING, do_action, 0, 0, 0, 0); */
+    COMMANDO( "smile", CMD_SMILE,  POS_RESTING, do_social_special, 0, 0, 0, 0);
     /* COMMANDO( "dance", ACTN_DANCE,  POS_STANDING, do_action, 0, 0, 0, 0); */
     COMMANDO( "kill", CMD_KILL, POS_FIGHTING, do_kill, 0, 0, 0, 0);
     /* COMMANDO( "cackle", ACTN_CACKLE,  POS_RESTING, do_action, 0, 0, 0, 0); */
@@ -798,7 +809,7 @@ void assign_command_pointers(void)
     COMMANDO( "advance", CMD_ADVANCE, POS_DEAD, do_advance, 1, 1, 1, 1);
     /* COMMANDO( "accuse", ACTN_ACCUSE,  POS_SITTING, do_action, 0, 0, 0, 0); */
     /* COMMANDO( "grin", ACTN_GRIN,  POS_RESTING, do_action, 0, 0, 0, 0); */
-    /* COMMANDO( "bow", ACTN_BOW,  POS_STANDING, do_action, 0, 0, 0, 0); */
+    COMMANDO( "bow", CMD_BOW,  POS_STANDING, do_social_special, 0, 0, 0, 0);
     COMMANDO( "open", CMD_OPEN, POS_SITTING, do_open, 0, 0, 0, 0);
 
 /* ------------------------------------------------------------------------- */

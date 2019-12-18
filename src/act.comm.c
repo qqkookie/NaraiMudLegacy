@@ -204,10 +204,10 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
 
     /* NOTE: "!" as listener name means telling to whom you told  or replied
        last time. This applies to telling to mob, too      */
-    if (!strcmp(name, "!") && strlen(ch->specials.reply_who) > 1)
-	strncpy(name, ch->specials.reply_who, 19);
+    if (!strcmp(name, "!") && strlen(ch->player.reply_who) > 1)
+	strncpy(name, ch->player.reply_who, 19);
     else
-	strncpy(ch->specials.reply_who, name, 19);
+	strncpy(ch->player.reply_who, name, 19);
 
     if (!(vict = get_char_vis(ch, name)))
 	send_to_char(MSGSTR("No-one by that name here..\r\n", ch), ch);
@@ -222,7 +222,7 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
 	    sprintf(buf, "%s has something to tell you. Wake up!\r\n",
 		    GET_NAME(ch));
 	    send_to_char(buf, vict);
-	    strncpy(vict->specials.reply_who, GET_NAME(ch), 19);
+	    strncpy(vict->player.reply_who, GET_NAME(ch), 19);
 	}
     }
     else if (!IS_ACTPLR(ch, PLR_NOTELL) ||
@@ -240,7 +240,7 @@ void do_tell(struct char_data *ch, char *argument, int cmd)
 	if (message[0] == '!' )
 	    send_to_char("\a\a** BEEP ** " , vict);
 	send_to_char(buf, vict);
-	sprintf(vict->specials.reply_who, "%s", GET_NAME(ch));
+	sprintf(vict->player.reply_who, "%s", GET_NAME(ch));
 	sprintf(buf, "You tell %s '%s'\r\n", GET_NAME(vict), message);
 	send_to_char(buf, ch);
     }
@@ -252,7 +252,7 @@ void do_reply(struct char_data *ch, char *argument, int cmd)
 {
     char buf[MAX_BUFSIZ];
 
-    sprintf(buf, "%s %s", ch->specials.reply_who, argument);
+    sprintf(buf, "%s %s", ch->player.reply_who, argument);
     do_tell(ch, buf, 0);
 }
 
@@ -550,7 +550,7 @@ struct social_messg *soc_mess_list[MAX_SOC_MESS];
 static int list_top  = 0 ;
 
 /* NOTE: cmd arg has index to messge table, not regular command number. */
-void do_action(struct char_data *ch, char *argument, int cmd)
+void do_social(struct char_data *ch, char *argument, int cmd)
 {
     char buf[MAX_LINE_LEN];
     struct social_messg *action;
@@ -635,7 +635,7 @@ int find_action(int cmd)
 	If the action  is found, returns index (> 0) to soc_mess table
 	and will set value of min_level min_pos. 	 */
 /* NOTE: pmin_lev, pmin_pos are not iput args, it is output args  */
-int find_action(char *action_name, int *pmin_lev, int *pmin_pos )
+int find_social(char *action_name, int *pmin_lev, int *pmin_pos )
 {
     int i, len;
     if (list_top <= 0)

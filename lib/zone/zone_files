@@ -3,6 +3,7 @@ zone/NorthernMidgaardCity.zon
 zone/SlumOfMidgaard.zon
 zone/SouthernMidgaard.zon
 zone/MidgaardCrossroads.zon
+zone/KITMudSchool.zon
 zone/TownHouse.zon
 zone/Graveyard.zon
 zone/GrandKnight.zon
@@ -43,4 +44,5 @@ zone/RobotCity.zon
 zone/KAIST.zon
 zone/ProcessCastle.zon
 zone/EasyLand.zon
+zone/AMiDaeJun.zon
 $

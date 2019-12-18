@@ -97,25 +97,6 @@ void special_death(struct char_data *ch, struct char_data *who,
     }
 }
 
-int neverland(struct char_data *ch, int cmd, char *arg)
-{
-    int location, loc_nr;
-
-    if (cmd != CMD_DOWN)  /* specific to Room 2707. cmd 6 is move down */
-	return (FALSE);
-    /* NOTE: to Room 2720-2724. (2724 is no exit room) */
-    loc_nr = NEVERLAND_SANDBEACH + number(0, 4);
-
-    location = real_room(loc_nr);
-    act("$n씨가 지금 내려 갔나요 ??", FALSE, ch, 0, 0, TO_NOTVICT);
-    send_to_char("악.\n\n악..\n\n 악...\n\n\n떨어지고 있습니다..\n\r\n", ch);
-    send_to_char("여기가 어딜까 ??\r\n", ch);
-    char_from_room(ch);
-    char_to_room(ch, location);
-    do_look(ch, "", 0);		/* NOTE: look around */
-    return (TRUE);
-}
-
 int electric_shock(struct char_data *ch, int cmd, char *arg)
 {
    /* extern struct weather_data weather_info; */

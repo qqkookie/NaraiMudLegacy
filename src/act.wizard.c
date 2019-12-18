@@ -378,7 +378,7 @@ void stat_char(struct char_data *ch, struct char_data *kch)
     /* NOTE: Show guild, quest, too */
     if (!IS_NPC(kch)) {
 	sprintf(buf2, "    Practice: %d    Guild %s   quest #: %d\r\n",
-	kch->specials.spells_to_learn, guild_names[GET_GUILD(kch)],
+	kch->player.spells_to_learn, guild_names[GET_GUILD(kch)],
 	kch->quest.solved );
 	strcpy(buf+strlen(buf)-2, buf2); /* NOTE: Append */
     }
@@ -431,9 +431,9 @@ void stat_char(struct char_data *ch, struct char_data *kch)
 	strcat(page_buffer, buf);
 
 	sprintf(buf, "Thirst: %d, Hunger: %d, Drunk: %d\r\n",
-		kch->specials.conditions[THIRST],
-		kch->specials.conditions[FULL],
-		kch->specials.conditions[DRUNK]);
+		GET_COND(kch, THIRST),
+		GET_COND(kch, FULL),
+		GET_COND(kch, DRUNK));
 	strcat(page_buffer, buf);
     }
 
@@ -723,16 +723,16 @@ void do_wizset(struct char_data *ch, char *argument, int cmd)
 	else if (strcmp("int", buf3) == 0)
 	    victim->abilities.intel = k;
 	else if (strcmp("prac", buf3) == 0)
-	    victim->specials.spells_to_learn = k;
+	    victim->player.spells_to_learn = k;
 	/* NOTE: 'hungry', 'thirst' and 'drunk' keywords are merged to
 	    single 'cond' which will take 3 more args for 3 conditions.
 	    Drunk is first.
 	    EX) wizset <char> cond <drunk> <hungry> <thirst>   */
 	else if (strcmp("cond", buf3) == 0) {
 	    sscanf(buf4, " %d %d %d ", &i, &j, &k );
-	    victim->specials.conditions[DRUNK] = i;
-	    victim->specials.conditions[FULL] = j;
-	    victim->specials.conditions[THIRST] = k;
+	    GET_COND(victim, DRUNK)  = i;
+	    GET_COND(victim, FULL)  = j;
+	    GET_COND(victim, THIRST)  = k;
 	}
 	else if (strcmp("dr", buf3) == 0)
 	    victim->points.damroll = k;
@@ -1583,7 +1583,7 @@ void do_advance(struct char_data *ch, char *argument, int cmd)
 	    victim->player.level = newlevel;
 	    if (newlevel <= LEVEL_LIMIT) {
 		for (i = 0; i < 3; ++i)
-		    victim->specials.conditions[i] = 0;
+		    GET_COND(victim, i) = 0;
 	    }
 	    victim->tmpabilities = victim->abilities;
 	    send_to_char("The poor soul...\r\n", ch);
@@ -1704,7 +1704,7 @@ OK:
 	one_argument(next, buf);
 	if (!*buf || (term = atof(buf)) < 0.02)
 	    term = 24.0;	/* default 24 hours */
-	vict->specials.jail_time
+	vict->player.jail_time
 	    = time(0) + (time_t) ((long) (term * 60.0) * 60);
 
 	/* NOTE: Notify to me, victim, players in the room */

@@ -851,16 +851,16 @@ eternal_peace:
 	if (dam > max_hit / 10)
 	    act("That Really did HURT!", FALSE, victim, 0, 0, TO_CHAR);
 	if (IS_NPC(victim) && IS_SET(victim->specials.act, ACT_WIMPY) &&
-	    GET_HIT(victim) < max_hit / 30) {
+	    GET_HIT(victim) < (30 + max_hit / 5)) {
 	    /* NOTE: NPC don't need wishing flee message */
 	    /* act("You wish that your wounds would stop BLEEDING that
 	       much!", FALSE, victim, 0, 0, TO_CHAR); */
 	    do_flee(victim, "", 0);
 	}
 	else if (!IS_NPC(victim) && IS_SET(victim->specials.act, PLR_WIMPY))
-	    /* NOTE: wimpiness == 0 means PC flee at max_hit/10  */
+	    /* NOTE: wimpiness == 0 means PC flee at max_hit/5  */
 	    if (GET_HIT(victim) < (victim->specials.wimpyness
-		 ? victim->specials.wimpyness : GET_MAX_HIT(victim) / 10)) {
+		 ? victim->specials.wimpyness : (30 + GET_MAX_HIT(victim) / 5))) {
 		act("You wish that your wounds would stop BLEEDING that much!",
 		    FALSE, victim, 0, 0, TO_CHAR);
 		do_flee(victim, "", 0);

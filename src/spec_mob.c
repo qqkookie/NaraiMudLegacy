@@ -942,7 +942,6 @@ int fido(struct char_data *ch, int cmd, char *arg)
     return (FALSE);
 }
 
-
 int janitor(struct char_data *ch, int cmd, char *arg)
 {
     struct obj_data *i;

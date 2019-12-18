@@ -226,6 +226,7 @@ void run_the_game(int port)
     void transall(int room);
     void close_sockets(int s);
     extern void boot_db(void);
+    extern void init_const();
 
     char pidname[MAX_NAME_LEN];
     sprintf(pidname, "mud-%d.pid", port);
@@ -241,6 +242,8 @@ void run_the_game(int port)
     signal_setup();
     log("Opening mother connection.");
     s = init_socket(port);
+
+    init_const();
     boot_db();
 
     /* NOTE: write out my pid to "lib/mud-port#.pid" file */
@@ -268,6 +271,7 @@ void run_the_game(int port)
 
     log("Entering game loop.");
     no_echo_local(s);
+
     game_loop(s);
     log("DOWN??????????SAVE ALL CHARS???????");
     transall(MID_PORTAL);

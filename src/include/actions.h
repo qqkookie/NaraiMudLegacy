@@ -24,6 +24,7 @@
 #define CMD_SHOUT 		18
 #define CMD_TELL 		19
 #define CMD_INVENTORY 		20
+#define CMD_SMILE 		22
 #define CMD_KILL 		25
 #define CMD_INSULT 		33
 #define CMD_HELP 		38
@@ -317,7 +318,7 @@ extern void do_noshout(struct char_data *ch, char *argument, int cmd);
 extern void do_wizhelp(struct char_data *ch, char *argument, int cmd);
 /*  extern void do_credits(struct char_data *ch, char *argument, int cmd);  */
 /* extern void do_compact(struct char_data *ch, char *argument, int cmd); */
-extern void do_action(struct char_data *ch, char *arg, int cmd);
+extern void do_social(struct char_data *ch, char *arg, int cmd);
 extern void do_practice(struct char_data *ch, char *arg, int cmd);
 extern void do_flick(struct char_data *ch, char *arg, int cmd);
 extern void do_wall(struct char_data *ch, char *arg, int cmd);

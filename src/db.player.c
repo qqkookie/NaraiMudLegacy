@@ -158,7 +158,7 @@ void store_to_char(struct char_file_u *st, struct char_data *ch)
 	ch->skills[i].skilled = st->skills[i].skilled;
 	ch->skills[i].recognise = st->skills[i].recognise;
     }
-    ch->specials.spells_to_learn = st->spells_to_learn;
+    ch->player.spells_to_learn = st->spells_to_learn;
     ch->specials.alignment = st->alignment;
     ch->specials.act = st->act;
     ch->specials.carry_weight = 0;
@@ -172,6 +172,7 @@ void store_to_char(struct char_file_u *st, struct char_data *ch)
     ch->quest.type = st->quest.type;
     ch->quest.data = st->quest.data;
     ch->quest.solved = st->quest.solved;
+    ch->quest.flag = st->quest.flag;
 
     /* hand dice */
 #ifdef INIT_BARE_HAND
@@ -185,7 +186,7 @@ void store_to_char(struct char_file_u *st, struct char_data *ch)
     /* wimpyness */
     ch->specials.wimpyness = st->wimpyness;
     /* NOTE: New. Time to be released from jail   */
-    ch->specials.jail_time = st->jail_time;
+    ch->player.jail_time = st->jail_time;
 
     /* remortal */
     ch->player.remortal = st->remortal;
@@ -251,7 +252,7 @@ void store_to_char_for_transform(struct char_file_u *st, struct char_data *ch)
     ch->points = st->points;
     for (i = 0; i <= MAX_SKILLS - 1; i++)
 	ch->skills[i] = st->skills[i];
-    ch->specials.spells_to_learn = st->spells_to_learn;
+    ch->player.spells_to_learn = st->spells_to_learn;
     ch->specials.alignment = st->alignment;
     ch->specials.act = st->act;
     ch->specials.carry_weight = 0;
@@ -329,7 +330,7 @@ void char_to_store(struct char_data *ch, struct char_file_u *st)
     st->abilities = ch->abilities;
     st->points = ch->points;
     st->alignment = ch->specials.alignment;
-    st->spells_to_learn = ch->specials.spells_to_learn;
+    st->spells_to_learn = ch->player.spells_to_learn;
     st->act = ch->specials.act;
     st->points.armor = ch->points.armor;
     st->points.hitroll = ch->points.hitroll;
@@ -359,6 +360,7 @@ void char_to_store(struct char_data *ch, struct char_file_u *st)
     st->quest.type = ch->quest.type;
     st->quest.data = ch->quest.data;
     st->quest.solved = ch->quest.solved;
+    st->quest.flag = ch->quest.flag;
 
     /* bare hand dice */
     st->damnodice = ch->specials.damnodice;
@@ -366,7 +368,7 @@ void char_to_store(struct char_data *ch, struct char_file_u *st)
 
     st->wimpyness = ch->specials.wimpyness;
     /* NOTE: New. Time to be released from jail   */
-    st->jail_time = ch->specials.jail_time;
+    st->jail_time = ch->player.jail_time;
 
     /* remortal */
     st->remortal = ch->player.remortal;

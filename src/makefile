@@ -48,7 +48,7 @@ SRCS    = \
        	cast1.c cast2.c comm.c constants.c db.c db.player.c db.zone.c \
 	fight.c guild.c handler.c house.c interpreter.c library.c \
        	magic.c mob_act.c mob_bal.c point.c spec_mid.c spec_misc.c \
-       	spec_mob.c special.c spell1.c spell2.c spell_parser.c
+       	spec_mob.c special.c spell1.c spell2.c spell_parser.c spec_misc2.c
 
 UTILS       = chpass checkchar purgechar listchar zoneitem zonelist zoneprint \
 	      mobbalance mobcreate mobedit testskill dostashform undostashform

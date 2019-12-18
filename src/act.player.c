@@ -388,7 +388,7 @@ void nanny(struct descriptor_data *d, char *arg)
 	    if (IS_SET(d->character->specials.act, PLR_BANISHED)
 		&& IS_MORTAL(d->character)) {
 		/* NOTE: check jail term and release */
-		if (d->character->specials.jail_time > time(0))
+		if (d->character->player.jail_time > time(0))
 		    d->character->in_room = real_room(ROOM_JAIL);
 		else {
 		    REMOVE_BIT(d->character->specials.act, PLR_BANISHED);
@@ -400,8 +400,11 @@ void nanny(struct descriptor_data *d, char *arg)
 	    }
 
 	    if (d->character->in_room <= NOWHERE ) {
-		d->character->in_room = IS_MORTAL(d->character) ?
-		    real_room(ROOM_RECEPTION) : real_room(ROOM_WIZ_LOUNGE);
+		d->character->in_room =
+		    (is_solved_quest(d->character, QUEST_SCHOOL)
+			&& GET_LEVEL(d->character) <= 1) ? real_room(SCHOOL_ROOM_ENTRY) :
+		    (IS_WIZARD(d->character) ? real_room(ROOM_WIZ_LOUNGE)
+			: real_room(ROOM_RECEPTION) );
 	    }
 
 	    /* NOTE: Additional pause time for read welcome messgae, mail
@@ -525,16 +528,15 @@ void nanny(struct descriptor_data *d, char *arg)
 	    STATE(d) = CON_RMOTD;
 	}
 	else {
-	    SEND_TO_Q("\r\nReally want to DELETE your character? ", d);
+	    SEND_TO_Q("\r\nReally want to DELETE your character? Type 'YES' ", d);
 	    STATE(d) = CON_DELCNF2;
 	}
 	break;
 
     case CON_DELCNF2:
 	/* skip whitespaces */
-	for (; isspace(*arg); arg++) ;
 
-	if (*arg == 'y' || *arg == 'Y') {
+	if (strcmp(arg, "YES" ) == 0 )  {
 	    if (remove_entry(d->character)) {
 		delete_char(d->character);
 		/* NOTE: close_socket() will not free_char() */
@@ -778,9 +780,9 @@ void init_player(struct char_data *ch)
    break;
    }
  */
-    GET_HIT(ch) = GET_PLAYER_MAX_HIT(ch) = 0;
-    GET_MANA(ch) = GET_PLAYER_MAX_MANA(ch) = 0;
-    GET_MOVE(ch) = GET_PLAYER_MAX_MOVE(ch) = 0;
+    GET_HIT(ch) = GET_PLAYER_MAX_HIT(ch) = 100;
+    GET_MANA(ch) = GET_PLAYER_MAX_MANA(ch) = 100;
+    GET_MOVE(ch) = GET_PLAYER_MAX_MOVE(ch) = 100;
 
     /* make favors for sex */
     if (ch->player.sex == SEX_MALE) {
@@ -796,6 +798,7 @@ void init_player(struct char_data *ch)
     ch->quest.type = 0;
     ch->quest.data = 0;
     ch->quest.solved = 0;
+    ch->quest.flag = 0;
 
     /* wimpyness */
     /* NOTE: wimpyness == 0 means default max_hit/10 */
@@ -827,7 +830,7 @@ void init_player(struct char_data *ch)
     }
 
     ch->specials.affected_by = 0;
-    ch->specials.spells_to_learn = 0;
+    ch->player.spells_to_learn = 0;
     for (i = 0; i < 5; i++)
 	ch->specials.apply_saving_throw[i] = 0;
     for (i = 0; i < 3; i++)
@@ -917,7 +920,7 @@ void do_start(struct char_data *ch)
     GET_COND(ch, FULL) = 24;
     GET_COND(ch, DRUNK) = 0;
 
-    ch->specials.spells_to_learn = 3;
+    ch->player.spells_to_learn = 3;
     ch->player.time.played = 0;
     ch->player.time.logon = time(0);
 }
@@ -1053,10 +1056,10 @@ void do_wimpy(struct char_data *ch, char *argument, int cmd)
 	if (wimpyness > wimpy_limit)
 	    send_to_char("All that you can do is fleeing?\r\n", ch);
 	else {
-	    /* NOTE: wimpy 0 means flee at 1/10 of max hit by default */
+	    // NOTE: wimpy 0 means flee at 1/5 of max hit by default
 	    /* And wimpy time will be incresed as max hit increase. */
 	    sprintf(buf, "Set your wimpy time to %d, now.\r\n",
-		    (wimpyness ? wimpyness : GET_MAX_HIT(ch) / 10));
+		    (wimpyness ? wimpyness : GET_MAX_HIT(ch) / 5));
 	    send_to_char(buf, ch);
 	    ch->specials.wimpyness = wimpyness;
 	    /* NOTE: if you set any wimpy value, you become wimpy by default */

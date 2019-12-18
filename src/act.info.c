@@ -969,3 +969,15 @@ void weather_and_time(int mode)
 	weather_change(0);
 }
 
+int is_solved_quest(struct char_data *ch, int quest)
+{
+    return (ch->quest.flag & (0x1 << quest));
+}
+
+void set_solved_quest(struct char_data *ch, int quest)
+{
+	assert( (ch->quest.flag & (0x1 << quest)) == 0 );
+	ch->quest.flag |= (0x1 << quest);
+}
+
+

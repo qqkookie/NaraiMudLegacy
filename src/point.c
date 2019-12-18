@@ -345,12 +345,12 @@ void advance_level(struct char_data *ch, int level_up)
 	ch->points.max_mana += add_mana;
 	ch->points.max_move += add_move;
 
-	if (ch->specials.spells_to_learn < SPELL_LEARN_MAX) {
+	if (ch->player.spells_to_learn < SPELL_LEARN_MAX) {
 	    if (GET_CLASS(ch) == CLASS_MAGIC_USER ||
 		GET_CLASS(ch) == CLASS_CLERIC)
-		ch->specials.spells_to_learn += wis_app[GET_WIS(ch)].bonus;
+		ch->player.spells_to_learn += wis_app[GET_WIS(ch)].bonus;
 	    else
-		ch->specials.spells_to_learn +=
+		ch->player.spells_to_learn +=
 		    number(1, wis_app[GET_WIS(ch)].bonus);
 	}
     }
@@ -361,13 +361,13 @@ void advance_level(struct char_data *ch, int level_up)
 	ch->points.max_hit -= add_hp << 1;
 	ch->points.max_mana -= add_mana << 1;
 	ch->points.max_move -= add_move << 1;
-	ch->specials.spells_to_learn -= number(3, 7);
-	ch->specials.spells_to_learn = MAX(0, ch->specials.spells_to_learn);
+	ch->player.spells_to_learn -= number(3, 7);
+	ch->player.spells_to_learn = MAX(0, ch->player.spells_to_learn);
     }
 
     if (IS_DIVINE(ch))
 	for (i = 0; i < 3; i++)
-	    ch->specials.conditions[i] = -1;
+	    GET_COND(ch, i) = -1;
 }
 
 void gain_gold(struct char_data *ch, LONGLONG money)
@@ -540,7 +540,7 @@ void point_update(void)
 	update_char_objects(i);
 
 	/* auto level up by Perhaps */
-	if ((titles[GET_CLASS(i) - 1][GET_LEVEL(i) + 1].exp + 1000) < GET_EXP(i)
+	if ((titles[GET_CLASS(i) - 1][GET_LEVEL(i) + 1].exp) < GET_EXP(i)
 		&& !IS_NPC(i) && (GET_LEVEL(i) < 40)
 		&& ((i->quest.solved) >= level_quest[GET_LEVEL(i)])) {
 	    GET_LEVEL(i)++;
@@ -640,7 +640,7 @@ void check_idling(struct char_data *ch)
 	    act("$n disappears into the void.", TRUE, ch, 0, 0, TO_ROOM);
 	    send_to_char("You have been idle, and are pulled into a void.\r\n", ch);
 	    char_from_room(ch);
-	    char_to_room(ch, ROOM_VOID);	/* Into room number 0 */
+	    char_to_room(ch, real_room(ROOM_VOID));	/* Into room number 0 */
 	}
 	else if (ch->specials.timer >= 35) {
 	    /* NOTE: do_rent(), extract_char() and free_char(). */

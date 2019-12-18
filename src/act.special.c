@@ -457,7 +457,7 @@ void do_point(struct char_data *ch, char *argument, int cmd)
     char victim_name[100];
     struct char_data *victim = NULL;
     struct follow_type *f;
-    extern void do_action(struct char_data *ch, char *argument, int cmd);
+    extern void do_social(struct char_data *ch, char *argument, int cmd);
 
     one_argument(argument, victim_name);
     if ( *victim_name &&
@@ -479,7 +479,7 @@ void do_point(struct char_data *ch, char *argument, int cmd)
     }
     else
 	/* NOTE: Old behavior. harmless social action. 	*/
-	do_action( ch, argument, cmd);
+	do_social( ch, argument, cmd);
 }
 
 void do_sneak(struct char_data *ch, char *argument, int cmd)

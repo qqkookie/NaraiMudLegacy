@@ -919,7 +919,7 @@ void reset_zone(int zone)
 			obj = read_object(ZCMD.arg1, REAL);
 			if ((obj->obj_flags.type_flag == ITEM_KEY) ||
 			// (!IS_SET(obj->obj_flags.extra_flags, ITEM_NOLOAD)) ||
-			    (regen == 1))
+			    (regen == 1 || regen == 0 ))
 			    /* (number(1,100) <= regen_percent ) ) */
 			{
 			    obj_to_room(obj, ZCMD.arg3);

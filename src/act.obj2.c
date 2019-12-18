@@ -873,7 +873,7 @@ int shopping_buy(char *arg, struct char_data *ch,
     struct obj_data *temp1;
     extern void do_action(struct char_data *ch, char *arg, int cmd);
     extern void do_emote(struct char_data *ch, char *arg, int cmd);
-    extern int find_action(char *action_name, int *pmin_lev, int *pmin_pos );
+    extern int find_social(char *action_name, int *pmin_lev, int *pmin_pos );
 
     if (!(is_ok(keeper, ch, shop_nr)))
 	return -1;
@@ -906,8 +906,8 @@ int shopping_buy(char *arg, struct char_data *ch,
 
 	switch (shop_index[shop_nr].temper1) {
 	case 0:
-	    /* NOTE: Use find_action() to get cmd arg to do_action */
-	    do_action(keeper, GET_NAME(ch), find_action("puke", 0, 0 ));
+	    /* NOTE: Use find_social() to get cmd arg to do_action */
+	    do_social(keeper, GET_NAME(ch), find_social("puke", 0, 0 ));
 	    return -1;
 	case 1:
 	    do_emote(keeper, "smokes on his joint", CMD_EMOTE);

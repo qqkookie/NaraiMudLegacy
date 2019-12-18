@@ -11,7 +11,7 @@
 #define MAX_SKILLS		200	/* Used in CHAR_FILE_U DO NOT CHANGE */
 #define MAX_WEAR    		22
 #define MAX_AFFECT		32	/* Used in CHAR_FILE_U *DO*NOT*CHANGE */
-#define MAX_GUILD_SKILLS 	30
+#define MAX_GUILD_SKILLS 	5
 #define MAX_GUILD_LIST		3
 
 struct time_data {
@@ -26,20 +26,38 @@ struct char_player_data {
     char *long_descr;
     char *description;
     char *title;
+    ubyte class;			/* PC s class or NPC alignment */
+    ubyte level;			/* PC / NPC s level*/
+    ubyte sex;
+    struct time_data time;	/* PC s AGE in days */
+    ubyte weight;
+    ubyte height;
+    ubyte remortal;		/* remortal to class */
+    sbyte spells_to_learn;	/* How many can you learn yet this level   */
+    sbyte conditions[3];	/* Drunk full etc.			  */
+
+    time_t jail_time;	/* NOTE: Now used. Time to be released from jail  */
+    /* int jail_time ; */
+    sh_int pk_num;			/* how many did you kill assholes! */
+    sh_int pked_num;		/* how many have you been killed!! */
     ubyte guild;			/* which guild you are joining */
     /* NOTE: Not used member. */
     /* ubyte no_of_change_guild; */
     /* int skilled; */
     ubyte guild_skills[MAX_GUILD_SKILLS];	/* by process */
-    sh_int pk_num;			/* how many did you kill assholes! */
-    sh_int pked_num;		/* how many have you been killed!! */
-    ubyte sex;
-    ubyte class;			/* PC s class or NPC alignment */
-    ubyte level;			/* PC / NPC s level*/
-    struct time_data time;	/* PC s AGE in days */
-    ubyte weight;
-    ubyte height;
-    ubyte remortal;		/* remortal to class */
+    /* char reply_who[30]; */
+    /* NOTE: sizeof( struct char_file_u.name ) == 20 */
+    char reply_who[20];
+    //char *reply_who;
+#ifdef UNUSED_CODE
+    /* belows are for future use */
+    int arena;		/* arena flag */
+    int arena_move;
+    int arena_mana;
+    int arena_hits;
+    struct char_data *arrest_by;
+    struct char_data *arrest_link;
+#endif
 };
 
 /* 'class' for PC's */
@@ -101,41 +119,26 @@ struct char_point_data {
 
 /* ---------------     struct char_special_data     --------------- */
 
+
 struct char_special_data {
     struct char_data *fighting;
     struct char_data *hunting;
-    /* NOTE: Now used. Set by pointing or target flee while fighting */
+    /* NOTE: hunting Now used. Set by pointing or target flee while fighting */
     long affected_by;
     ubyte position;
     ubyte default_pos;
     unsigned long act;
-    sbyte spells_to_learn;	/* How many can you learn yet this level   */
     sh_int carry_weight;
     byte carry_items;
     int timer;		/* Timer for update			  */
     sh_int was_in_room;	/* storage of location for linkdead people */
     sbyte apply_saving_throw[5];
-    sbyte conditions[3];	/* Drunk full etc.			  */
     ubyte damnodice;	/* The number of damage dice's		  */
     ubyte damsizedice;	/* The size of the damage dice's	  */
     ubyte last_direction;	/* The last direction the monster went    */
     ubyte attack_type;	/* The Attack Type Bitvector for NPC's    */
     sh_int alignment;	/* +-1000 for alignments		  */
-    /* char reply_who[30]; */
-    /* NOTE: sizeof( struct char_file_u.name ) == 20 */
-    char reply_who[20];
-    time_t jail_time;	/* NOTE: Now used. Time to be released from jail  */
-    /* int jail_time ; */
     int wimpyness;
-#ifdef UNUSED_CODE
-    /* belows are for future use */
-    int arena;		/* arena flag */
-    int arena_move;
-    int arena_mana;
-    int arena_hits;
-    struct char_data *arrest_by;
-    struct char_data *arrest_link;
-#endif
 };
 
 #define SAVING_PARA   		0
@@ -316,6 +319,7 @@ struct quest_data {
     int type;
     int data;
     int solved;
+    LONGLONG flag;
 };
 
 struct follow_type {
@@ -383,7 +387,7 @@ struct char_data {
 
 #define GET_POS(ch)     ((ch)->specials.position)
 
-#define GET_COND(ch, i) ((ch)->specials.conditions[(i)])
+#define GET_COND(ch, i) ((ch)->player.conditions[(i)])
 
 #define GET_NAME(ch)    ((ch)->player.name)
 
@@ -522,5 +526,10 @@ extern int hit_limit(struct char_data *ch);
 extern int move_limit(struct char_data *ch);
 
 extern struct time_info_data age(struct char_data *ch);
+
+extern int is_solved_quest(struct char_data *ch, int quest);
+extern void set_solved_quest(struct char_data *ch, int quest);
+
+#define QUEST_SCHOOL 1
 
 /* ----------------------------------------------------------------- */

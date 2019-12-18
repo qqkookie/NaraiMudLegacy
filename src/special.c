@@ -52,6 +52,9 @@ void assign_mobiles(void)
     int archmage(struct char_data *ch, int cmd, char *arg);
     int helper(struct char_data *ch, int cmd, char *arg);
     int great_mazinga(struct char_data *ch, int cmd, char *arg);
+    int school_cold(struct char_data *ch, int cmd, char *arg);
+    int school_gracia(struct char_data *ch, int cmd, char *arg);
+    int school_nara(struct char_data *ch, int cmd, char *arg);
 
     /* DaeRimSa */
     int son_ogong_func(struct char_data *ch, int cmd, char *arg);
@@ -62,6 +65,8 @@ void assign_mobiles(void)
     int gbisland_saint_mirror(struct char_data *ch, int cmd, char *arg);
     int gbisland_lanessa(struct char_data *ch, int cmd, char *arg);
     int gbisland_carpie(struct char_data *ch, int cmd, char *arg);
+
+    int teleport_demon(struct char_data *ch, int cmd, char *arg);
 
     mob_index[real_mobile(MOB_LIMBO_PUFF)].func = puff;
 
@@ -97,6 +102,11 @@ void assign_mobiles(void)
 
     /* Perhaps */
     mob_index[real_mobile(MOB_MID_HELPER)].func = perhaps;
+
+    /* Mud School : big cyb */
+    mob_index[real_mobile(SCHOOL_MOB_COLD)].func = school_cold ;   /* Cold */
+    mob_index[real_mobile(SCHOOL_MOB_GRACIA)].func = school_gracia ; /* Gracia */
+    mob_index[real_mobile(SCHOOL_MOB_NARA)].func = school_nara ;   /* Nara */
 
     /* MORIA */
     mob_index[real_mobile(MOB_MORIA_SNAKE1)].func = snake;
@@ -134,6 +144,8 @@ void assign_mobiles(void)
     mob_index[real_mobile(GBI_SAINT_MIRROR)].func = gbisland_saint_mirror;
     mob_index[real_mobile(GBI_LANESSA)].func = gbisland_lanessa;
     mob_index[real_mobile(GBI_CARPIE)].func = gbisland_carpie;
+
+    mob_index[real_mobile(MOB_TELEPORT_DEMON) ].func = teleport_demon;
 }
 
 /* assign special procedures to objects */
@@ -184,6 +196,7 @@ void assign_rooms(void)
     extern int bank(struct char_data *ch, int cmd, char *arg);
     extern int portal(struct char_data *ch, int cmd, char *arg);
     extern int neverland(struct char_data *ch, int cmd, char *arg);
+    extern int dark_sand(struct char_data *ch, int cmd, char *arg);
     extern int electric_shock(struct char_data *ch, int cmd, char *arg);
     extern int guild_entry(struct char_data *ch, int cmd, char *arg);
     extern int locker_room(struct char_data *ch, int cmd, char *arg);
@@ -210,7 +223,7 @@ void assign_rooms(void)
     world[real_room(ROOM_MID_PETSHOP)].funct = pet_shops;
 
     world[real_room(WASTELAND_LABORATORY)].funct = portal;
-    world[real_room(NEVERLAND_CLOUD)].funct = neverland;
+
     world[real_room(ROOM_MID_BANK)].funct = bank;
     world[real_room(ROOM_MID_DUMP)].funct = dump;
 
@@ -256,13 +269,18 @@ void assign_rooms(void)
     world[real_room(ROOM_JAIL)].funct = jail_room;
 
     int RC_elecfield[] = {
-	125, 135, 138, 148, 116, 117, 126, 127, 128, 129,
-	136, 140, 139, 149, 150, 151, 152, 162, -1
+        125, 135, 138, 148, 116, 117, 126, 127, 128, 129,
+        136, 140, 139, 149, 150, 151, 152, 162, -1
     };
 
     for ( int ii = 0; RC_elecfield[ii] > 0 ; ii++)
-	world[real_room(ROBOCITY_BASE + RC_elecfield[ii])].funct = electric_shock;
+        world[real_room(ROBOCITY_BASE + RC_elecfield[ii])].funct = electric_shock;
 
+    // Neverland and sand beach
+    world[real_room(NEVERLAND_CLOUD)].funct = neverland;
+
+    for ( int ii = 5; ii <= 14; ii++) // NOTE: #14175 ~ 14184
+        world[real_room(NEVERLAND_SANDBEACH+ii)].funct = dark_sand;
     /*
     world[real_room(15125)].funct = electric_shock;
     world[real_room(15135)].funct = electric_shock;
@@ -282,6 +300,20 @@ void assign_rooms(void)
     world[real_room(15151)].funct = electric_shock;
     world[real_room(15152)].funct = electric_shock;
     world[real_room(15162)].funct = electric_shock;
+
+    world[real_room(2710)].funct = dark_sand;
+    world[real_room(2711)].funct = dark_sand;
+    world[real_room(2712)].funct = dark_sand;
+    world[real_room(2713)].funct = dark_sand;
+    world[real_room(2714)].funct = dark_sand;
+    world[real_room(2715)].funct = dark_sand;
+    world[real_room(2716)].funct = dark_sand;
+    world[real_room(2720)].funct = dark_sand;
+    world[real_room(2721)].funct = dark_sand;
+    world[real_room(2722)].funct = dark_sand;
+    world[real_room(2723)].funct = dark_sand;
+    world[real_room(2724)].funct = dark_sand;
+
     */
 }
 /* ================================================================ */
@@ -328,7 +360,8 @@ static struct {
     { 3299,	"Slum of Midgaard" },
     { 3399,	"Southern Midgaard" },
     { 3499,	"Midgaard Crossroads" },
-    { 3899,	"TownHouse" },
+    { 3799,	"KIT-MUD School" },
+    { 3899,	"Town House" },
     { 14199,	"Graveyard" },
     { 14299,	"Knight's Residence" },
     { 14399,	"Sewer" },
@@ -368,6 +401,7 @@ static struct {
     { 19599,	"KAIST" },
     { 19699,	"Process' Castle" },
     { 19799,	"Easy Land" },
+    { 19899,	"A Mi Dae Jun" },
     // { 1499,	"the Houses" },
     // { 1899,	"Village of Midgaard" },
     // { 1399,	"the Mel's Dog-House" },
@@ -813,7 +847,7 @@ int quest_room(struct char_data *ch, int cmd, char *arg)
 	    if (tmp_obj) {
 		if (IS_ALL_REMOED(ch))
 		    send_to_char("You can't use that ticket .\r\n", ch);
-		else if (obj_index[tmp_obj->item_number].virtual == 7994) {
+		else if (obj_index[tmp_obj->item_number].virtual == OBJ_TICKET_REQUEST) {
 		    ch->quest.type = 0;
 		    do_quest(ch, arg, 302);
 		    extract_obj(tmp_obj);

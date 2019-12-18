@@ -75,9 +75,9 @@ int guild(struct char_data *ch, int cmd, char *arg)
 	   ch->skills[i+1].skilled), ch); send_to_char("\r\n", ch); } } */
 	/* NOTE: Show practice number also with pager not to be scrolled out */
 	sprintf(buf, "You have %d practices left.\r\n",
-		ch->specials.spells_to_learn);
+		ch->player.spells_to_learn);
 	sprintf(buf2, "지금 %d 번 기술을 연마(practice)할 수 있습니다. \r\n",
-		ch->specials.spells_to_learn);
+		ch->player.spells_to_learn);
 	/* send_to_char_han(buf,buf2,ch); */
 	strcpy(buf3, STRHAN(buf, buf2, ch));
 
@@ -113,7 +113,7 @@ int guild(struct char_data *ch, int cmd, char *arg)
 			 "아직은 레벨이 낮아 안됩니다...\r\n", ch);
 	return (TRUE);
     }
-    if (ch->specials.spells_to_learn <= 0) {
+    if (ch->player.spells_to_learn <= 0) {
 	send_to_char_han("You do not seem to be able to practice now.\r\n",
 			 "지금은 더이상 배울 수 없습니다.\r\n", ch);
 	return (TRUE);
@@ -125,7 +125,7 @@ int guild(struct char_data *ch, int cmd, char *arg)
     }
     send_to_char_han("You Practice for a while...\r\n",
 		     "기술이 늘고 있습니다...\r\n", ch);
-    ch->specials.spells_to_learn--;
+    ch->player.spells_to_learn--;
     percent = ch->skills[number].learned + 1 +
 	((int) int_app[GET_INT(ch)].learn
 	 * (int) spell_info[number].max_skill[cla]) / FUDGE;
@@ -439,7 +439,7 @@ int jail_room(struct char_data *ch, int cmd, char *arg)
 	return FALSE;
 
     if (IS_SET(ch->specials.act, PLR_BANISHED)
-	&& (time(0) > ch->specials.jail_time)) {
+	&& (time(0) > ch->player.jail_time)) {
 	char buf[256];
 
 	sprintf(buf, "A pierce-looking prison warden open small window"
@@ -852,7 +852,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		    send_to_char("Come back when you are more experienced.\r\n", ch);
 		    return (TRUE);
 		}
-		ch->specials.spells_to_learn += (int) (ch->abilities.wis / 3);
+		ch->player.spells_to_learn += (int) (ch->abilities.wis / 3);
 		send_to_char("Aaaaaaarrrrrrrrggggg\r\n", ch);
 		break;
 	    case 5:
@@ -870,9 +870,9 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		    send_to_char("Come back when you are more experienced.\r\n", ch);
 		    return (TRUE);
 		}
-		ch->specials.conditions[0] = -1;
-		ch->specials.conditions[1] = -1;
-		ch->specials.conditions[2] = -1;
+		GET_COND(ch, DRUNK) = -1;
+		GET_COND(ch, FULL) = -1;
+		GET_COND(ch, THIRST) = -1;
 		cost = 100000000;
 		send_to_char_han( "You are free from hunger and thirsty "
 			"from now on!!!\r\n     Worship the God!\r\n",
@@ -915,7 +915,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		    AC: 30 -> 20  DR: 30 -> 20  HR: 20 -> 10. */
 		/* use meta ticket */
 		switch (GET_OBJ_VIRTUAL(tmp_obj)) {
-		case 7991:	/* ticket for AC */
+		case OBJ_TICKET_AC:	/* ticket for AC */
 		    GET_AC(ch) -= number(2, 3);
 		    GET_EXP(ch) -= 200000000;
 		    if (GET_AC(ch) < -120)
@@ -923,7 +923,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		    else
 			ch->quest.solved -= 7;
 		    break;
-		case 7992:	/* ticket for HR */
+		case OBJ_TICKET_HR:	/* ticket for HR */
 		    GET_HITROLL(ch) += number(1, 2);
 		    GET_EXP(ch) -= 150000000;
 		    if (GET_HITROLL(ch) > 100)
@@ -931,7 +931,7 @@ int metahospital(struct char_data *ch, int cmd, char *arg)
 		    else
 			ch->quest.solved -= 6;
 		    break;
-		case 7993:	/* ticket for DR */
+		case OBJ_TICKET_DR:	/* ticket for DR */
 		    /*
 		       GET_DAMROLL(ch) += number(1, 2); */
 		    GET_DAMROLL(ch)++;

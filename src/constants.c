@@ -441,15 +441,14 @@ struct title_type titles[4][LEVEL_SIZE] =
 	{"the Mage Guru", "the Mage Guru", 50000000},
 	{"the Apparantice MageLord", "the Apparantice MageLord", 70000000},
 	{"the MageLord of Fire", "the MageLord of Fire", 85000000},
-	{"the MageLord of Water", "the MageLord of Water", 100000000},	/* 30
-									 */
+	{"the MageLord of Water", "the MageLord of Water", 100000000},	/* 30 */
 	{"the MageLord of Earth", "the MageLord of Earth", 125000000},
 	{"the MageLord of Wind", "the MageLord of Wind", 150000000},
 	{"the MageLord of Moon", "the MageLord of Moon", 175000000},
 	{"the MageLord of Sun", "the MageLord of Sun", 200000000},
 	{"the MageLord of Galaxy", "the MageLord of Galaxy", 225000000},
 	{"the MageLord of Universe", "the MageLord of Universe", 250000000},
-  {"the MageLord of Metaphysics", "the MageLord of Metaphysics", 275000000},
+	{"the MageLord of Metaphysics", "the MageLord of Metaphysics", 275000000},
 	{"the Metaphysician", "the Metaphysicians", 300000000},
 	{"the Master of MageLord", "the Master of MageLord", 325000000},
 	{"the Dangun", "the Dangun", 350000000},	/* 40 */
@@ -1847,4 +1846,29 @@ struct attack_hit_type attack_hit_han[] =
 };
 
 #endif	/* OLD_DAM_MESSAGE */
+
+void init_const()
+{
+    // KIT Classic overall exp, mob stat adjust by Cookie (2019.12)
+    // in "mob_bal.c"
+    extern int mob_bal_hit[][20];
+    extern int mob_bal_ac[][20];
+    extern int mob_bal_hr[][20];
+    extern int mob_bal_dr[][20];
+    extern int mob_bal_exp[][20];
+
+
+    for(int cl= 0; cl<4 ;cl++)
+	for(int lv= 2; lv<=11 ;lv++)
+	    titles[cl][lv].exp += 10000*(12-lv)/12;
+
+    for (int lv=1; lv <= 43; lv++)
+        for (int i=0; i < 20; i++){
+            mob_bal_hit[lv-1][i] += 300 + i*30;
+            mob_bal_exp[lv-1][i] += 200 + i*10;
+            mob_bal_dr[lv-1][i] += 8 + i;
+            mob_bal_hr[lv-1][i] += 20 + i;
+            mob_bal_ac[lv-1][i] -= 100 + i*3;
+        }
+}
 

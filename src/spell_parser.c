@@ -21,6 +21,7 @@ struct spell_info_type spell_info[MAX_SPL_LIST];
 char *spells[MAX_SPL_LIST] ;
 
 #ifdef UNUSED_CODE
+
 char *spells[MAX_SPL_LIST] =
 {   "", 		/* NOTE: spells[] index starts from 1, not zero.   */
     "armor",		/* 1 */
@@ -151,7 +152,8 @@ char *spells[MAX_SPL_LIST] =
     "track",
     "\n"
 };
-#endif 		/*  UNUSED_CODE */
+
+#endif	//  UNUSED_CODE
 
 char *spell_alias[] = {
     "",		"",
@@ -191,8 +193,8 @@ void say_spell(struct char_data *ch, int si)
 
 
     struct syllable {
-	char org[10];
-	char new[10];
+	char *org;
+	char *new;
     };
 
     static struct syllable syls[] =
@@ -248,18 +250,16 @@ void say_spell(struct char_data *ch, int si)
 	{"", ""}
     };
 
-
-    strcpy(buf, "");
     /* NOTE: spells index starts from 1, not zero.   */
     strcpy(splwd, spells[si]);
-
+    strcpy(obfus, "");
     offs = 0;
 
-    while (*(splwd + offs)) {
-	for (j = 0; *(syls[j].org); j++)
-	    if (strncmp(syls[j].org, splwd + offs, strlen(syls[j].org)) == 0) {
+    while (splwd[offs]) {
+	for (j = 0; syls[j].org[0]; j++)
+	    if (strncmp(syls[j].org, &splwd[offs], strlen(syls[j].org)) == 0) {
 		strcat(obfus, syls[j].new);
-		if (strlen(syls[j].org))
+		if (strlen(syls[j].org) > 0)
 		    offs += strlen(syls[j].org);
 		else
 		    ++offs;

@@ -890,6 +890,118 @@ The sparrow looks like it is enjoying life.
 200 0 1000
 O 1 12 10 9 10
 0 9 8 N
+#3711
+monster normal~
+Monster E~
+Monster is standing here.
+~
+This monster is normal
+~
+2 0 0
+W 1 3 3 3 3
+500 3 8 M
+#3712
+monster aggressive~
+Monster N~
+Monster is standing here.
+~
+This monster is aggressive
+~
+34 0 0
+W 1 3 3 3 3
+500 3 8 M
+#3713
+monster wimpy~
+Monster W~
+Monster is singing a song.
+~
+This monster is wimpy
+~
+130 0 0
+C 1 3 3 3 3
+500 3 8 M
+#3714
+monster wimpy aggressive~
+Monster S~
+Monster looks at you.
+~
+This monster is wimpy+aggressive
+~
+162 0 0
+M 1 3 3 3 3
+500 3 8 M
+#3715
+monster invisible~
+Monster U~
+Monster is trying to hide his body.
+~
+This monster is invisible
+~
+2 2 0
+C 1 3 3 3 3
+500 3 8 M
+#3721
+belokan~
+Belokan~
+Belokan peers at you.
+~
+I have a dream.
+~
+2 0 0
+W 5 18 18 10 10
+500 10 8 M
+#3722
+parthenon~
+Parthenon~
+Parthenon is making strange potions
+~
+Don't touch me!!..I'm very sensitive..:P
+~
+2 0 0
+M 5 18 18 10 10
+500 10 8 M
+#3723
+gracia~
+Gracia~
+Gracia watchs what you are doing.
+~
+She is mother of this world.If you meet her(real gracia),you
+can get more fortune!!.
+~
+3 136 0
+O 40 10 10 10 10
+500 10 8 F
+#3724
+cold~
+Cold~
+Cold will help you.
+~
+Cold is very kind and bright man.
+~
+3 136 0
+C 40 10 10 10 10
+500 10 8 M
+#3725
+nara~
+Nara~
+Nara is Nara of baram.
+~
+Do you know baram? Do you know Nara what is these? ask him!
+He is boss of this mud..great boss!!
+~
+3 136 0
+O 40 10 10 10 10
+2000 10 8 M
+#3726
+uncle juniper~
+Uncle Juniper~
+Uncle Juniper is thinking about his dream.
+~
+I am a real MUD mania!!!
+~
+2 136 0
+W 40 10 10 10 10
+100000 10 8 M
 #3813
 Cinnamon~
 Cinnamon~
@@ -977,6 +1089,38 @@ bird 새~
 8 8 1000
 W 15 7 17 15 17
 2000 12 8 N
+
+#14125
+dark seraphim~
+Dark Seraphim~
+Dark Seraphim is standing here.
+~
+Dark Seraphim, the messenger of dark empire, is standing here.
+~
+AFJHTMKT DHY -1000
+W 41 4 11 4 15
+39000 13 8 M
+8 8 2
+#14126
+dark warrior~
+Dark warrior~
+Dark warrior attacks you.
+~
+~
+524640 0 800
+W 24 7 15 10 18
+1000 15 6 M
+8 8 1
+#14127
+daemon demon teleport~
+Teleport daemon~
+Teleport daemon look for the places to teleport.
+~
+Teleport daemon looks like a smoke.
+~
+4099 136 -200
+C 17 6 11 10 13
+100000 10 8 N
 #14211
 grand knight paladin~
 The Grand Knight of Paladins~
@@ -8842,5 +8986,189 @@ Mac Comicky~
 10 33556632 700
 C 41 9 12 7 14
 1000 14 8 M
+#19830
+JuJiYak~
+주지약~
+주지약이 당신의 침입에 놀라며 공격합니다.
+~
+주지약이 장무기의 상처를 걱정스러운 눈빛으로 보고 있습니다.
+~
+1048938 100679864 -850
+W 43 17 16 13 15
+9 13 5 F
+#19831
+무림지존 JangMuGi~
+지존 장무기~
+장무기가 자리에서 벌떡 일어나 당신을 공격합니다.
+~
+장무기가 막 내상을 치유하고 형형한 안광으로 당신을 노려봅니다.
+~
+362 117459128 999
+W 43 13 15 19 19
+9 19 8 M
+#19832
+MyulJulSaTae~
+멸절사태~
+멸절사태가 애제자인 주지약을 잃어버리고 걱정하고 있습니다.
+~
+"아미파를 침입하다니."
+"용서할수 없다."
+~
+1048938 100665528 -850
+W 43 12 8 9 19
+17 17 5 F
+#19833
+JungHyunSaTae~
+정현사태~
+멸절사태의 수제자인 정현사태입니다.
+~
+~
+1048938 100729016 -350
+W 43 12 13 19 18
+9 14 8 F
+#19834
+JiSulSaTae~
+지설사태~
+멸절사태의 두번째 제자인 지설사태입니다.
+~
+~
+4138 33556632 400
+W 42 4 15 17 15
+10000 16 8 F
+#19835
+1st apprenciate Ami~
+1대 아미제자~
+1대 아미제자가 당신의 앞을 막아섭니다.
+~
+~
+362 100663480 100
+W 42 6 11 9 18
+11 13 8 F
+#19836
+2nd apprenciate Ami~
+2대 아미제자~
+2대 아미제자가 당신에게 달려듭니다.
+~
+~
+362 100663480 -650
+W 41 14 6 6 17
+7 17 8 F
+#19837
+Ami Pupil~
+아미 속가제자~
+아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
+~
+~
+360 83886136 -650
+W 42 13 7 8 19
+5 15 8 F
+#19838
+TaeSang jangro~
+아미 태상 장로~
+아미 태상장로가 아미파의 보물을 뒤로 숨기며 당신을 바라봅니다.
+~
+~
+1048586 50333832 850
+W 43 19 19 19 19
+1100 14 6 F
+#19839
+Doctor Ami~
+아미 의사~
+아미파의 의사가 응급 처치할 준비를 하고 사태를 바라보고 있습니다.
+~
+~
+1572874 16777224 780
+W 40 13 12 10 13
+1100 13 6 F
+#19840
+1st apprenciate Ami~
+1대 아미제자~
+1대 아미제자가 당신의 앞을 막아섭니다.
+~
+~
+362 100663480 100
+W 42 6 11 9 18
+11 13 8 F
+#19841
+1st apprenciate Ami~
+1대 아미제자~
+1대 아미제자가 당신의 앞을 막아섭니다.
+~
+~
+362 100663480 100
+W 42 6 11 9 18
+11 13 8 F
+#19842
+1st apprenciate Ami~
+1대 아미제자~
+1대 아미제자가 당신의 앞을 막아섭니다.
+~
+~
+362 100663480 100
+W 42 6 11 9 18
+11 13 8 F
+#19843
+1st apprenciate Ami~
+1대 아미제자~
+1대 아미제자가 당신의 앞을 막아섭니다.
+~
+~
+362 100663480 100
+W 42 6 11 9 18
+11 13 8 F
+#19844
+2nd apprenciate Ami~
+2대 아미제자~
+2대 아미제자가 당신에게 달려듭니다.
+~
+~
+362 100663480 -650
+W 41 14 6 6 17
+7 17 8 F
+#19845
+2nd apprenciate Ami~
+2대 아미제자~
+2대 아미제자가 당신에게 달려듭니다.
+~
+~
+362 100663480 -650
+W 41 14 6 6 17
+7 17 8 F
+#19846
+2nd apprenciate Ami~
+2대 아미제자~
+2대 아미제자가 당신에게 달려듭니다.
+~
+~
+362 100663480 -650
+W 41 14 6 6 17
+7 17 8 F
+#19847
+Ami Pupil~
+아미 속가제자~
+아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
+~
+~
+360 83886136 -650
+W 42 13 7 8 19
+5 15 8 F
+#19848
+Ami Pupil~
+아미 속가제자~
+아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
+~
+~
+360 83886136 -650
+W 42 13 7 8 19
+5 15 8 F
+#19849
+Ami Pupil~
+아미 속가제자~
+아미 속가제자가 당신을 에워싸고는 공격할 태세를 갖춥니다.
+~
+~
+360 83886136 -650
+W 42 13 7 8 19
+5 15 8 F
 #99999
 $~

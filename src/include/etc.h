@@ -34,8 +34,8 @@
 #define TAXI_STOP_KAIST		19411	// NOTE: KAIST zone renumber 31001->19411
 #define TAXI_STOP_PROCESS	19600	// 2000
 
-#define NEVERLAND_CLOUD		14177	    // 섬이 보이는 구름 위
-#define NEVERLAND_SANDBEACH	14180	    // 모래밭
+#define NEVERLAND_CLOUD		14167	    // 섬이 보이는 구름 위
+#define NEVERLAND_SANDBEACH	14170	    // 모래밭
 
 #define WASTELAND_LABORATORY	17158	    // Wasteland, Large laboratory
 
@@ -82,23 +82,31 @@
 #define OBJ_STRINGMACHINE	(MID_BASE+8)
 #define OBJ_REPAIRMACHINE
 
-#define OBJ_UNKNOWNSEED		17161
-#define OBJ_TOTEM		17162
 #define OBJ_ANTI_DEATHCURE	(MID_BASE+31)
 
+#define SCROLL_RECALL		(MID_BASE+11)
 #define POTION_SOLAR		3211
 
 #define WEAPON_BASIC_WARRIOR	(MID_BASE+25)	/* 1D8 slash long sword */
 #define WEAPON_BASIC_THIEF	(MID_BASE+26)	// 2D4 pierce short sword (dagger)
 
-// #define OBJ_BIRD_FEATHER	14161		// Graveyard(Doghouse)
-// #define OBJ_PEGASUS_WINGS	16613		// Galaxy
-
-#define OBJ_LSS_BELT		17718		// DK
+#define OBJ_TICKET_REQUEST  (MID_BASE+54)
+#define OBJ_TICKET_AC       (MID_BASE+55)
+#define OBJ_TICKET_DR       (MID_BASE+56)
+#define OBJ_TICKET_HR       (MID_BASE+57)
 
 #define OBJ_SWORD_BOMBARD	(MID_BASE+72)
 #define OBJ_BOMBARD_MINOR	(MID_BASE+73)
 #define OBJ_SWORD_PARTICLE	(MID_BASE+74)
+
+// #define OBJ_BIRD_FEATHER	14161		// Graveyard(Doghouse)
+// #define OBJ_PEGASUS_WINGS	16613		// Galaxy
+
+#define OBJ_UNKNOWNSEED		17161
+#define OBJ_TOTEM		    17162
+
+#define OBJ_LSS_BELT		17718		// DK
+
 
 // ----------------------------------------------------
 
@@ -150,6 +158,8 @@ if (mob_nr == KITTEN || mob_nr == PUPPY
 #define MOB_DK_YURIA		17772	    // DK Yuria
 
 // misc.
+#define MOB_TELEPORT_DEMON  14127       // Neverland
+
 #define MOB_RC_GREAT_MAZINGA	19292	    // Great Mazinga
 #define MOB_LARGE_HOUND		17123	    // larger hound of hades
 
@@ -173,6 +183,7 @@ if (mob_nr == KITTEN || mob_nr == PUPPY
 #define MOB_SEWER_SNAKE		14414	    // slithering snake
 #define MOB_FOREST_SPIDER1	16423	    // poisonous spider
 #define MOB_FOREST_SPIDER2	16424	    // Queen spider
+
 
 /* -------------    for 대림사    ------------------------- */
 #define DRS_BASE			18100
@@ -221,3 +232,10 @@ if (mob_nr == KITTEN || mob_nr == PUPPY
 
 /* --------------------------------------------------------- */
 
+// KIT School
+#define SCHOOL_MOB_GRACIA	3723
+#define SCHOOL_MOB_COLD		3724
+#define SCHOOL_MOB_NARA		3725
+
+#define SCHOOL_ROOM_ENTRY	3711
+#define SCHOOL_OBJ_DIPLOMA	3740
